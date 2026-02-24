@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ku" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>فرۆشگای ئێمە</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Background -->
+    <div class="bg-container">
+        <div class="gradient-bg"></div>
+        <div class="floating-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+        <div class="particles" id="particles"></div>
+    </div>
+
+    <!-- Loading -->
+    <div class="loader" id="loader">
+        <div class="loader-content">
+            <div class="loader-icon"><i class="fas fa-store"></i></div>
+            <div class="loader-text">کۆگای ڕاستی</div>
+            <div class="loader-bar">
+                <div class="loader-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <div class="logo-icon"><i class="fas fa-store"></i></div>
+                <div class="logo-text">
+                    <span class="logo-title">کۆگای ڕاستی</span>
+                    <span class="logo-subtitle">فرۆشگای تایبەت</span>
+                </div>
+            </div>
+            <div class="nav-search">
+                <i class="fas fa-search"></i>
+                <input type="text" id="searchInput" placeholder="گەڕان...">
+            </div>
+            <button class="cart-btn" onclick="toggleCart()">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-text">سەبەتە</span>
+                <span class="cart-count" id="cartCount">0</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- گەڕانی موبایل -->
+    <div class="mobile-search">
+        <div class="mobile-search-inner">
+            <i class="fas fa-search"></i>
+            <input type="text" id="searchInputMobile" placeholder="گەڕان لە کاڵاکان...">
+        </div>
+    </div>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <i class="fas fa-star"></i>
+                <span>باشترین کوالیتی</span>
+            </div>
+            <h1 class="hero-title">
+                <span class="title-line">کۆگای</span>
+                <span class="title-highlight">ڕاستی</span>
+            </h1>
+            <p class="hero-subtitle">باشترین کاڵاکان هەڵبژێرە و داواکاریەکەت بنێرە</p>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number">200+</span>
+                    <span class="stat-label">بەرهەم</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number">6</span>
+                    <span class="stat-label">بەش</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number">24/7</span>
+                    <span class="stat-label">خزمەت</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-decoration">
+            <div class="floating-card card-1"><i class="fas fa-cake-candles"></i><span>کێک</span></div>
+            <div class="floating-card card-2"><i class="fas fa-cookie-bite"></i><span>گەز</span></div>
+            <div class="floating-card card-3"><i class="fas fa-bowl-food"></i><span>چیپس</span></div>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="categories-section">
+        <div class="section-header">
+            <h2 class="section-title"><i class="fas fa-grid-2"></i> بەشەکان</h2>
+        </div>
+        <div class="categories-container" id="categoriesContainer">
+            <button class="category-card active" onclick="showCategory('cake', this)">
+                <div class="category-icon"><i class="fas fa-cake-candles"></i></div>
+                <div class="category-info">
+                    <span class="category-name">کێک</span>
+                    <span class="category-count">0 کاڵا</span>
+                </div>
+            </button>
+            <button class="category-card" onclick="showCategory('gaz', this)">
+                <div class="category-icon"><i class="fas fa-cookie-bite"></i></div>
+                <div class="category-info">
+                    <span class="category-name">گەز و بسکیت</span>
+                    <span class="category-count">0 کاڵا</span>
+                </div>
+            </button>
+            <button class="category-card" onclick="showCategory('drink', this)">
+                <div class="category-icon"><i class="fas fa-glass-water"></i></div>
+                <div class="category-info">
+                    <span class="category-name">خواردنەوە</span>
+                    <span class="category-count">0 کاڵا</span>
+                </div>
+            </button>
+            <button class="category-card" onclick="showCategory('chips', this)">
+                <div class="category-icon"><i class="fas fa-bowl-food"></i></div>
+                <div class="category-info">
+                    <span class="category-name">چیپس</span>
+                    <span class="category-count">0 کاڵا</span>
+                </div>
+            </button>
+            <button class="category-card" onclick="showCategory('baby', this)">
+                <div class="category-icon"><i class="fas fa-baby"></i></div>
+                <div class="category-info">
+                    <span class="category-name">مناڵان</span>
+                    <span class="category-count">0 کاڵا</span>
+                </div>
+            </button>
+            <button class="category-card" onclick="showCategory('family', this)">
+                <div class="category-icon"><i class="fas fa-users"></i></div>
+                <div class="category-info">
+                    <span class="category-name">عایلەی</span>
+                    <span class="category-count">0 کاڵا</span>
+                </div>
+            </button>
+        </div>
+    </section>
+
+    <!-- Products -->
+    <section class="products-section">
+        <div class="section-header">
+            <h2 class="section-title" id="categoryTitle"><i class="fas fa-cake-candles"></i> کێک</h2>
+            <span class="products-count" id="productsCount">0 کاڵا</span>
+        </div>
+        <div class="products-grid" id="productsGrid"></div>
+        <div class="empty-state" id="emptyState" style="display:none;">
+            <div class="empty-icon"><i class="fas fa-box-open"></i></div>
+            <h3>هیچ کاڵایەک نەدۆزرایەوە</h3>
+            <p>هەوڵ بدە بە گەڕانی دیکە</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <div class="footer-icon"><i class="fas fa-store"></i></div>
+                <span>کۆگای ڕاستی</span>
+            </div>
+            <p class="footer-text">© 2025 فرۆشگای ئێمە — هەموو مافەکان پارێزراون</p>
+            <div class="footer-social">
+                <a href="https://www.facebook.com/share/1DetrL6pvc/?mibextid=wwXIfr" target="_blank" class="social-link"
+                    title="فەیسبووک"><i class="fab fa-facebook"></i></a>
+                <a href="https://wa.me/9647518959614" target="_blank" class="social-link" title="واتساپ"><i
+                        class="fab fa-whatsapp"></i></a>
+                <a href="tel:+9647518959614" class="social-link" title="تەلەفۆن"><i class="fas fa-phone"></i></a>
+            </div>
+            <p class="footer-text" style="margin-top:10px; font-size:13px;">
+                <i class="fas fa-phone" style="color:#f97316; margin-left:6px;"></i>
+                <a href="tel:+9647518959614"
+                    style="color:rgba(255,255,255,0.6); text-decoration:none; direction:ltr; display:inline-block;">+964
+                    751 895 9614</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Cart -->
+    <div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+    <aside class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <div class="cart-title">
+                <div class="cart-title-icon"><i class="fas fa-shopping-bag"></i></div>
+                <div>
+                    <h3>سەبەتە</h3>
+                    <span id="cartItemsCount">0 کاڵا</span>
+                </div>
+            </div>
+            <button class="close-btn" onclick="toggleCart()"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <div class="cart-empty">
+                <div class="empty-cart-icon"><i class="fas fa-shopping-cart"></i></div>
+                <h4>سەبەتە بەتاڵە</h4>
+                <p>کاڵای دڵخوازت زیاد بکە</p>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-summary">
+                <div class="summary-row">
+                    <span>کۆی کاڵاکان:</span>
+                    <span id="totalItems">0</span>
+                </div>
+                <div class="summary-row total">
+                    <span>کۆی گشتی:</span>
+                    <span class="total-amount" id="totalPrice">0 IQD</span>
+                </div>
+            </div>
+            <div class="customer-form">
+                <h4><i class="fas fa-user"></i> زانیاری کڕیار</h4>
+                <div class="form-group">
+                    <input type="text" id="customerName" placeholder="ناوت بنووسە...">
+                    <i class="fas fa-user input-icon"></i>
+                </div>
+                <div class="form-group">
+                    <input type="tel" id="customerPhone" placeholder="ژمارە تەلەفۆن...">
+                    <i class="fas fa-phone input-icon"></i>
+                </div>
+            </div>
+            <button class="checkout-btn" onclick="sendWhatsApp()">
+                <i class="fab fa-whatsapp"></i>
+                <span>ناردن بە WhatsApp</span>
+            </button>
+        </div>
+    </aside>
+
+    <!-- مۆدالی سوپاس -->
+    <div class="success-modal" id="successModal">
+        <div class="success-modal-box">
+            <div class="success-icon"><i class="fab fa-whatsapp"></i></div>
+            <h3>سوپاس! 🎉</h3>
+            <p>داواکاریەکەت بە سەرکەوتوویی نێردرا<br>بەم زووانەیە پەیوەندیت پێوە دەکرێت</p>
+            <button class="success-close-btn" onclick="closeSuccessModal()">باشە، سوپاس!</button>
+        </div>
+    </div>
+
+    <!-- Toast -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- Scroll Top -->
+    <button class="scroll-top" id="scrollTop" onclick="scrollToTop()">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
