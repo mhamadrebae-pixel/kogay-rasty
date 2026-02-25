@@ -2248,5 +2248,14 @@
     "image": "aylay/photo_18_2026-02-20_22-54-38.jpg",
     "category": "family",
     "hidden": false
+  },
+  {
+    "id": "cake-1772060353602",
+    "name": "gggg",
+    "description": "55",
+    "price": 1500,
+    "image": "placeholder.jpg",
+    "category": "cake",
+    "hidden": false
   }
 ]
