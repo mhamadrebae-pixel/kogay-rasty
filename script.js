@@ -1,5 +1,5 @@
 // ==========================================
-// فرۆشگای ئێمە - v4 Global Search + Reminder
+// ÙØ±ÛØ´Ú¯Ø§Û Ø¦ÛÙÛ - v4 Global Search + Reminder
 // ==========================================
 // script.js
 (function hideLoaderSafe() {
@@ -16,22 +16,21 @@
 })();
 
 // ==========================================
-// بەشەکان
+// Ø¨ÛØ´ÛÚ©Ø§Ù
 // ==========================================
 const categories = {
-    cake: { name: 'کێک', icon: 'fa-cake-candles', count: 0 },
-    gaz: { name: 'گەز و بسکیت', icon: 'fa-cookie-bite', count: 0 },
-    drink: { name: 'خواردنەوە', icon: 'fa-glass-water', count: 0 },
-    chips: { name: 'چیپس', icon: 'fa-bowl-food', count: 0 },
-    baby: { name: 'مناڵان', icon: 'fa-baby', count: 0 },
-    family: { name: 'عایلەی', icon: 'fa-users', count: 0 }
+    cake: { name: 'Ú©ÛÚ©', icon: 'fa-cake-candles', count: 0 },
+    gaz: { name: 'Ú¯ÛØ² Ù Ø¨Ø³Ú©ÛØª', icon: 'fa-cookie-bite', count: 0 },
+    drink: { name: 'Ø®ÙØ§Ø±Ø¯ÙÛÙÛ', icon: 'fa-glass-water', count: 0 },
+    chips: { name: 'ÚÛÙ¾Ø³', icon: 'fa-bowl-food', count: 0 },
+    baby: { name: 'ÙÙØ§ÚµØ§Ù', icon: 'fa-baby', count: 0 },
+    family: { name: 'Ø¹Ø§ÛÙÛÛ', icon: 'fa-users', count: 0 }
 };
 
 // ==========================================
-// کاڵاکان — ئەدمین پانێل بەڕێوەیان دەبات
+// Ú©Ø§ÚµØ§Ú©Ø§Ù â Ø¦ÛØ¯ÙÛÙ Ù¾Ø§ÙÛÙ Ø¨ÛÚÛÙÛÛØ§Ù Ø¯ÛØ¨Ø§Øª
 // ==========================================
 const _hardcodedProducts = [
-    // ========== 🎂 کێک ==========
     { id: 'cake-001', name: 'نەزەری دووقول', description: '24 عەدەد', price: 5250, image: 'kek/IMG_0214.jpeg', category: 'cake' },
     { id: 'cake-002', name: 'کولیچەی دوانی', description: '60 عەدەد', price: 5500, image: 'kek/IMG_0211.jpeg', category: 'cake' },
     { id: 'cake-003', name: 'کێکی ئادرین', description: '24 عەدەد', price: 5000, image: 'kek/IMG_0212.jpeg', category: 'cake' },
@@ -64,8 +63,6 @@ const _hardcodedProducts = [
     { id: 'cake-030', name: 'کێک تایگەر', description: '12 عەدەد', price: 2500, image: 'kek/photo_28_2026-02-20_22-41-44.jpg', category: 'cake' },
     { id: 'cake-031', name: 'کێک رۆز جەلی', description: '24 عەدەد', price: 4750, image: 'kek/photo_29_2026-02-20_22-41-44.jpg', category: 'cake' },
     { id: 'cake-032', name: 'تۆپ کێک', description: '24 عەدەد', price: 4750, image: 'kek/photo_30_2026-02-20_22-41-44.jpg', category: 'cake' },
-
-    // ========== 🍪 گەز و بسکیت ==========
     { id: 'gaz-001', name: 'ویتان', description: '24 عەدەد', price: 5250, image: 'gaz/IMG_0215.jpeg', category: 'gaz' },
     { id: 'gaz-002', name: 'تایکۆی شەسی', description: '24 عەدەد', price: 4500, image: 'gaz/IMG_0216.jpeg', category: 'gaz' },
     { id: 'gaz-003', name: 'دایجستۆ', description: '24 عەدەد', price: 5000, image: 'gaz/IMG_0217.jpeg', category: 'gaz' },
@@ -99,8 +96,6 @@ const _hardcodedProducts = [
     { id: 'gaz-031', name: 'ستاکی شەفاف 500', description: '40 عەدەد', price: 10000, image: 'gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (18).jpeg', category: 'gaz' },
     { id: 'gaz-032', name: 'پاڵشتی دوانی', description: '80 عەدەد', price: 7500, image: 'gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (18).jpeg', category: 'gaz' },
     { id: 'gaz-033', name: 'مەڕەکان', description: '24 عەدەد', price: 4750, image: 'gaz/WhatsApp Image 2026-02-20 at 10.03.27 PM.jpeg', category: 'gaz' },
-
-    // ========== 🥤 خواردنەوە ==========
     { id: 'drink-001', name: 'ئاوی دەبە', description: '12 عەدەد', price: 750, image: 'sardy/IMG_0188.jpeg', category: 'drink' },
     { id: 'drink-002', name: 'ئاوی کارتۆن', description: '60 عەدەد', price: 1500, image: 'sardy/IMG_0189.jpeg', category: 'drink' },
     { id: 'drink-003', name: 'پیپسی سلڤەر', description: '30 عەدەد', price: 6500, image: 'sardy/IMG_6192.jpeg', category: 'drink' },
@@ -197,8 +192,6 @@ const _hardcodedProducts = [
     { id: 'drink-094', name: 'دۆی بچوک', description: '16 عەدەد', price: 3000, image: 'sardy/IMG_6285.jpeg', category: 'drink' },
     { id: 'drink-095', name: 'شەربەتی بۆبۆتۆ', description: '24 عەدەد', price: 4500, image: 'sardy/IMG_6286.jpeg', category: 'drink' },
     { id: 'drink-096', name: 'شیر کاڵەکی دەبە', description: '24 عەدەد', price: 4500, image: 'sardy/IMG_6287.jpeg', category: 'drink' },
-
-    // ========== 🍟 چیپس ==========
     { id: 'chips-001', name: 'کیش تەماتە 500', description: '24 عەدەد', price: 9250, image: 'jbs/IMG_0223.jpeg', category: 'chips' },
     { id: 'chips-002', name: 'کیش سرکە 500', description: '24 عەدەد', price: 9250, image: 'jbs/IMG_0224.jpeg', category: 'chips' },
     { id: 'chips-003', name: 'کیش بیبەر 500', description: '24 عەدەد', price: 9250, image: 'jbs/IMG_0225.jpeg', category: 'chips' },
@@ -247,8 +240,6 @@ const _hardcodedProducts = [
     { id: 'chips-046', name: 'من من پیتزا', description: '40 عەدەد', price: 7500, image: 'jbs/photo_35_2026-02-20_22-38-05.jpg', category: 'chips' },
     { id: 'chips-047', name: 'بوشاری بانوو', description: '40 عەدەد', price: 4500, image: 'jbs/photo_36_2026-02-20_22-38-05.jpg', category: 'chips' },
     { id: 'chips-048', name: 'لابوبو دوانی', description: '48 عەدەد', price: 9000, image: 'jbs/photo_2026-02-20_22-39-15.jpg', category: 'chips' },
-
-    // ========== 🍬 مناڵان ==========
     { id: 'baby-001', name: 'تەمەرندی پاکان', description: '24 عەدەد', price: 1000, image: 'mnalan/photo_1_2026-02-21_00-54-52.jpg', category: 'baby' },
     { id: 'baby-002', name: 'پەشمەک سپی', description: '24 عەدەد', price: 4750, image: 'mnalan/photo_2_2026-02-21_00-54-52.jpg', category: 'baby' },
     { id: 'baby-003', name: 'قاوەی زۆۆ', description: '24 عەدەد', price: 3500, image: 'mnalan/photo_3_2026-02-21_00-54-52.jpg', category: 'baby' },
@@ -275,8 +266,6 @@ const _hardcodedProducts = [
     { id: 'baby-024', name: 'نەوقڵی ئاناتا قاوە', description: '24 عەدەد', price: 5000, image: 'mnalan/photo_28_2026-02-21_00-54-52.jpg', category: 'baby' },
     { id: 'baby-025', name: 'تەمەرندی سرنج', description: '24 عەدەد', price: 4500, image: 'mnalan/photo_29_2026-02-21_00-54-52.jpg', category: 'baby' },
     { id: 'baby-026', name: 'نەستەلەی بستە', description: '24 عەدەد', price: 5000, image: 'mnalan/photo_30_2026-02-21_00-54-52.jpg', category: 'baby' },
-
-    // ========== 👨‍👩‍👧 عایلەی ==========
     { id: 'family-001', name: 'جکلیتی پۆپۆ', description: '8 عەدەد', price: 12000, image: 'aylay/photo_1_2026-02-20_22-54-38.jpg', category: 'family' },
     { id: 'family-002', name: 'نوقولی ورد', description: '20 عەدەد', price: 18000, image: 'aylay/photo_2_2026-02-20_22-54-38.jpg', category: 'family' },
     { id: 'family-003', name: 'وایفەر عایلە قاوە', description: '12 عەدەد', price: 10000, image: 'aylay/photo_3_2026-02-20_22-54-38.jpg', category: 'family' },
@@ -295,18 +284,18 @@ const _hardcodedProducts = [
 ];
 
 // ==========================================
-// 🔗 پەیوەندیکردن بە ئەدمین پانێل
-// ئەگەر ئەدمین گۆڕانکاری کردبێت، ئەوا لە
-// localStorage بخوێنەرەوە — بەبێ ئەپلۆد
+// ð Ù¾ÛÛÙÛÙØ¯ÛÚ©Ø±Ø¯Ù Ø¨Û Ø¦ÛØ¯ÙÛÙ Ù¾Ø§ÙÛÙ
+// Ø¦ÛÚ¯ÛØ± Ø¦ÛØ¯ÙÛÙ Ú¯ÛÚØ§ÙÚ©Ø§Ø±Û Ú©Ø±Ø¯Ø¨ÛØªØ Ø¦ÛÙØ§ ÙÛ
+// localStorage Ø¨Ø®ÙÛÙÛØ±ÛÙÛ â Ø¨ÛØ¨Û Ø¦ÛÙ¾ÙÛØ¯
 // ==========================================
 (function loadAdminProducts() {
     try {
         const saved = localStorage.getItem('adminProducts_v1');
         if (saved) {
             const adminList = JSON.parse(saved);
-            // تەنها کاڵاکانی نیشاندراو بنیشاندە (hidden=false)
+            // ØªÛÙÙØ§ Ú©Ø§ÚµØ§Ú©Ø§ÙÛ ÙÛØ´Ø§ÙØ¯Ø±Ø§Ù Ø¨ÙÛØ´Ø§ÙØ¯Û (hidden=false)
             const visible = adminList.filter(p => !p.hidden);
-            // جێگاکردنەوەی لیستی سەرەکی
+            // Ø¬ÛÚ¯Ø§Ú©Ø±Ø¯ÙÛÙÛÛ ÙÛØ³ØªÛ Ø³ÛØ±ÛÚ©Û
             _hardcodedProducts.length = 0;
             visible.forEach(p => _hardcodedProducts.push(p));
         }
@@ -315,11 +304,11 @@ const _hardcodedProducts = [
     }
 })();
 
-// ئەمە هەمیشە بەکار دێت — ئەدمین گۆڕی یان نەگۆڕی
+// Ø¦ÛÙÛ ÙÛÙÛØ´Û Ø¨ÛÚ©Ø§Ø± Ø¯ÛØª â Ø¦ÛØ¯ÙÛÙ Ú¯ÛÚÛ ÛØ§Ù ÙÛÚ¯ÛÚÛ
 const products = _hardcodedProducts;
 
 // ==========================================
-// گلۆبال
+// Ú¯ÙÛØ¨Ø§Ù
 // ==========================================
 let cart = [];
 let currentCategory = 'cake';
@@ -352,8 +341,8 @@ function openImageModal(productId) {
     const img = document.getElementById('imageModalImg');
     img.src = product.image;
     img.alt = product.name;
-    document.getElementById('imageModalName').textContent = product.name + ' — ' + product.description;
-    document.getElementById('imageModalPrice').textContent = product.price > 0 ? product.price.toLocaleString() + ' IQD' : 'پرسیار بکە';
+    document.getElementById('imageModalName').textContent = product.name + ' â ' + product.description;
+    document.getElementById('imageModalPrice').textContent = product.price > 0 ? product.price.toLocaleString() + ' IQD' : 'Ù¾Ø±Ø³ÛØ§Ø± Ø¨Ú©Û';
     modal.style.visibility = 'visible';
     modal.style.opacity = '1';
     setTimeout(() => { img.style.transform = 'scale(1)'; }, 10);
@@ -430,7 +419,7 @@ function updateCategoryCounts() {
         const m = (card.getAttribute('onclick') || '').match(/showCategory\('(\w+)'/);
         if (m && categories[m[1]]) {
             const el = card.querySelector('.category-count');
-            if (el) el.textContent = categories[m[1]].count + ' کاڵا';
+            if (el) el.textContent = categories[m[1]].count + ' Ú©Ø§ÚµØ§';
         }
     });
 }
@@ -492,7 +481,7 @@ function buildProductCard(product, index) {
     const imgAttr = isEager
         ? `src="${product.image}" loading="eager"`
         : `src="${PLACEHOLDER}" data-src="${product.image}" loading="lazy"`;
-    const priceText = product.price > 0 ? product.price.toLocaleString() + ' IQD' : 'پرسیار بکە';
+    const priceText = product.price > 0 ? product.price.toLocaleString() + ' IQD' : 'Ù¾Ø±Ø³ÛØ§Ø± Ø¨Ú©Û';
     return `
     <div class="product-card" style="animation-delay:${index * 0.04}s">
         <div class="product-image" onclick="openImageModal('${product.id}')" style="cursor:zoom-in;">
@@ -507,7 +496,7 @@ function buildProductCard(product, index) {
             <p class="product-desc">${product.description}</p>
             <div class="product-footer">
                 <div class="product-price">
-                    <span class="price-label">نرخ</span>
+                    <span class="price-label">ÙØ±Ø®</span>
                     <span class="price-value">${priceText}</span>
                 </div>
                 <button class="add-btn" onclick="addToCart('${product.id}')">
@@ -524,7 +513,7 @@ function renderProducts() {
     const emptyState = document.getElementById('emptyState');
     const filtered = products.filter(p => p.category === currentCategory);
     const countEl = document.getElementById('productsCount');
-    if (countEl) countEl.textContent = filtered.length + ' کاڵا';
+    if (countEl) countEl.textContent = filtered.length + ' Ú©Ø§ÚµØ§';
     if (filtered.length === 0) {
         grid.innerHTML = '';
         if (emptyState) emptyState.style.display = 'block';
@@ -542,8 +531,8 @@ function renderGlobalSearch(query) {
     const countEl = document.getElementById('productsCount');
     const q = query.toLowerCase();
     const filtered = products.filter(p => p.name.toLowerCase().includes(q) || p.description.toLowerCase().includes(q));
-    if (titleEl) titleEl.innerHTML = `<i class="fas fa-search"></i> ئەنجامی گەڕان: "${query}"`;
-    if (countEl) countEl.textContent = filtered.length + ' کاڵا';
+    if (titleEl) titleEl.innerHTML = `<i class="fas fa-search"></i> Ø¦ÛÙØ¬Ø§ÙÛ Ú¯ÛÚØ§Ù: "${query}"`;
+    if (countEl) countEl.textContent = filtered.length + ' Ú©Ø§ÚµØ§';
     if (filtered.length === 0) {
         grid.innerHTML = '';
         if (emptyState) emptyState.style.display = 'block';
@@ -559,7 +548,7 @@ function renderGlobalSearch(query) {
             <div style="display:flex;align-items:center;gap:8px;padding:8px 4px;border-bottom:1px solid rgba(255,255,255,0.1);margin-bottom:8px;">
                 <div style="width:32px;height:32px;background:rgba(249,115,22,0.2);border-radius:10px;display:flex;align-items:center;justify-content:center;color:#f97316;font-size:14px;"><i class="fas ${catInfo.icon}"></i></div>
                 <span style="color:white;font-weight:700;font-size:15px;">${catInfo.name}</span>
-                <span style="color:rgba(255,255,255,0.4);font-size:12px;">${grouped[cat].length} کاڵا</span>
+                <span style="color:rgba(255,255,255,0.4);font-size:12px;">${grouped[cat].length} Ú©Ø§ÚµØ§</span>
             </div></div>`;
         grouped[cat].forEach((product, index) => { html += buildProductCard(product, index); });
     });
@@ -568,7 +557,7 @@ function renderGlobalSearch(query) {
 }
 
 // ==========================================
-// یادەوەری سەبەتە
+// ÛØ§Ø¯ÛÙÛØ±Û Ø³ÛØ¨ÛØªÛ
 // ==========================================
 function initCartReminder() {
     document.addEventListener('visibilitychange', () => {
@@ -599,12 +588,12 @@ function showCartReminder() {
     reminder.style.cssText = `position:fixed;bottom:80px;left:16px;right:16px;z-index:2500;background:linear-gradient(135deg,rgba(249,115,22,0.95),rgba(244,63,94,0.95));backdrop-filter:blur(20px);border-radius:20px;padding:16px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px;box-shadow:0 8px 32px rgba(249,115,22,0.4);animation:reminderSlideUp 0.4s ease forwards;border:1px solid rgba(255,255,255,0.2);`;
     reminder.innerHTML = `<style>@keyframes reminderSlideUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}</style>
         <div style="display:flex;align-items:center;gap:12px;flex:1;">
-            <div style="width:44px;height:44px;background:rgba(255,255,255,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;">🛒</div>
-            <div><div style="color:white;font-weight:700;font-size:14px;">${totalItems} کاڵات لە سەبەتەدایە!</div><div style="color:rgba(255,255,255,0.8);font-size:12px;margin-top:2px;">داواکاریەکەت تەواو بکە</div></div>
+            <div style="width:44px;height:44px;background:rgba(255,255,255,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;">ð</div>
+            <div><div style="color:white;font-weight:700;font-size:14px;">${totalItems} Ú©Ø§ÚµØ§Øª ÙÛ Ø³ÛØ¨ÛØªÛØ¯Ø§ÛÛ!</div><div style="color:rgba(255,255,255,0.8);font-size:12px;margin-top:2px;">Ø¯Ø§ÙØ§Ú©Ø§Ø±ÛÛÚ©ÛØª ØªÛÙØ§Ù Ø¨Ú©Û</div></div>
         </div>
         <div style="display:flex;gap:8px;flex-shrink:0;">
-            <button onclick="toggleCart();document.getElementById('cartReminder')?.remove();" style="padding:8px 16px;background:white;color:#f97316;border:none;border-radius:12px;font-weight:700;font-size:13px;cursor:pointer;font-family:inherit;">بینین</button>
-            <button onclick="document.getElementById('cartReminder')?.remove();" style="width:34px;height:34px;background:rgba(255,255,255,0.15);border:none;border-radius:50%;color:white;font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;">✕</button>
+            <button onclick="toggleCart();document.getElementById('cartReminder')?.remove();" style="padding:8px 16px;background:white;color:#f97316;border:none;border-radius:12px;font-weight:700;font-size:13px;cursor:pointer;font-family:inherit;">Ø¨ÛÙÛÙ</button>
+            <button onclick="document.getElementById('cartReminder')?.remove();" style="width:34px;height:34px;background:rgba(255,255,255,0.15);border:none;border-radius:50%;color:white;font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;">â</button>
         </div>`;
     document.body.appendChild(reminder);
     setTimeout(() => {
@@ -623,7 +612,7 @@ function createGlobalSearchBtn() {
     btn.className = 'cart-btn';
     btn.style.cssText = 'background:rgba(255,255,255,0.1);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,0.15);';
     btn.innerHTML = `<i class="fas fa-search"></i>`;
-    btn.title = 'گەڕانی گشتی';
+    btn.title = 'Ú¯ÛÚØ§ÙÛ Ú¯Ø´ØªÛ';
     btn.onclick = () => {
         const input = document.getElementById('searchInputMobile') || document.getElementById('searchInput');
         if (input) { input.focus(); window.scrollTo({ top: 100, behavior: 'smooth' }); }
@@ -632,7 +621,7 @@ function createGlobalSearchBtn() {
 }
 
 // ==========================================
-// سەبەتە
+// Ø³ÛØ¨ÛØªÛ
 // ==========================================
 function loadCart() {
     try { cart = JSON.parse(localStorage.getItem('myShopCart')) || []; } catch (e) { cart = []; }
@@ -650,7 +639,7 @@ function addToCart(productId) {
     if (existing) existing.quantity++;
     else cart.push({ id: product.id, name: product.name, price: product.price, quantity: 1 });
     saveCart(); updateCartUI();
-    showToast(product.name + ' زیادکرا ✓', 'success');
+    showToast(product.name + ' Ø²ÛØ§Ø¯Ú©Ø±Ø§ â', 'success');
     const btn = document.querySelector('.cart-btn');
     if (btn) { btn.style.transform = 'scale(1.15)'; setTimeout(() => btn.style.transform = '', 200); }
 }
@@ -660,13 +649,13 @@ function updateCartUI() {
     const totalPrice = cart.reduce((s, i) => s + i.price * i.quantity, 0);
     const g = id => document.getElementById(id);
     if (g('cartCount')) g('cartCount').textContent = totalItems;
-    if (g('cartItemsCount')) g('cartItemsCount').textContent = totalItems + ' کاڵا';
+    if (g('cartItemsCount')) g('cartItemsCount').textContent = totalItems + ' Ú©Ø§ÚµØ§';
     if (g('totalItems')) g('totalItems').textContent = totalItems;
     if (g('totalPrice')) g('totalPrice').textContent = totalPrice.toLocaleString() + ' IQD';
     const cartItemsEl = g('cartItems');
     if (!cartItemsEl) return;
     if (cart.length === 0) {
-        cartItemsEl.innerHTML = `<div class="cart-empty"><div class="empty-cart-icon"><i class="fas fa-shopping-cart"></i></div><h4>سەبەتە بەتاڵە</h4><p>کاڵای دڵخوازت زیاد بکە</p></div>`;
+        cartItemsEl.innerHTML = `<div class="cart-empty"><div class="empty-cart-icon"><i class="fas fa-shopping-cart"></i></div><h4>Ø³ÛØ¨ÛØªÛ Ø¨ÛØªØ§ÚµÛ</h4><p>Ú©Ø§ÚµØ§Û Ø¯ÚµØ®ÙØ§Ø²Øª Ø²ÛØ§Ø¯ Ø¨Ú©Û</p></div>`;
         return;
     }
     cartItemsEl.innerHTML = cart.map((item, i) => `
@@ -681,14 +670,14 @@ function updateCartUI() {
                     <span class="cart-item-qty">${item.quantity}</span>
                     <button class="qty-btn" onclick="increaseQty(${i})">+</button>
                 </div>
-                <span class="cart-item-price">${item.price > 0 ? (item.price * item.quantity).toLocaleString() + ' IQD' : 'پرسیار بکە'}</span>
+                <span class="cart-item-price">${item.price > 0 ? (item.price * item.quantity).toLocaleString() + ' IQD' : 'Ù¾Ø±Ø³ÛØ§Ø± Ø¨Ú©Û'}</span>
             </div>
         </div>`).join('');
 }
 
 function increaseQty(i) { cart[i].quantity++; saveCart(); updateCartUI(); }
 function decreaseQty(i) { if (cart[i].quantity > 1) cart[i].quantity--; else cart.splice(i, 1); saveCart(); updateCartUI(); }
-function removeFromCart(i) { cart.splice(i, 1); saveCart(); updateCartUI(); showToast('کاڵا لابرا', 'info'); }
+function removeFromCart(i) { cart.splice(i, 1); saveCart(); updateCartUI(); showToast('Ú©Ø§ÚµØ§ ÙØ§Ø¨Ø±Ø§', 'info'); }
 
 function toggleCart() {
     const sidebar = document.getElementById('cartSidebar');
@@ -710,37 +699,37 @@ function closeSuccessModal() {
 }
 
 function sendWhatsApp() {
-    if (cart.length === 0) { showToast('سەبەتە بەتاڵە!', 'error'); return; }
+    if (cart.length === 0) { showToast('Ø³ÛØ¨ÛØªÛ Ø¨ÛØªØ§ÚµÛ!', 'error'); return; }
     const name = (document.getElementById('customerName')?.value || '').trim();
     const phone = (document.getElementById('customerPhone')?.value || '').trim();
-    if (!name || !phone) { showToast('ناو و ژمارە بنووسە', 'error'); return; }
+    if (!name || !phone) { showToast('ÙØ§Ù Ù ÚÙØ§Ø±Û Ø¨ÙÙÙØ³Û', 'error'); return; }
 
     const now = new Date();
     const timeStr = now.toLocaleString('ar-IQ');
 
-    let msg = `🛒 *داواکاری نوێ*\n`;
-    msg += `━━━━━━━━━━━━━━━\n`;
-    msg += `👤 *ناو:* ${name}\n`;
-    msg += `📱 *تەلەفۆن:* ${phone}\n`;
-    msg += `━━━━━━━━━━━━━━━\n`;
-    msg += `📦 *کاڵاکان:*\n`;
-    msg += `───────────────\n`;
+    let msg = `ð *Ø¯Ø§ÙØ§Ú©Ø§Ø±Û ÙÙÛ*\n`;
+    msg += `âââââââââââââââ\n`;
+    msg += `ð¤ *ÙØ§Ù:* ${name}\n`;
+    msg += `ð± *ØªÛÙÛÙÛÙ:* ${phone}\n`;
+    msg += `âââââââââââââââ\n`;
+    msg += `ð¦ *Ú©Ø§ÚµØ§Ú©Ø§Ù:*\n`;
+    msg += `âââââââââââââââ\n`;
 
     cart.forEach((item, i) => {
         if (item.price > 0) {
             msg += `${i + 1}. ${item.name}\n`;
-            msg += `   ${item.quantity} × ${item.price.toLocaleString()} = ${(item.price * item.quantity).toLocaleString()} IQD\n`;
+            msg += `   ${item.quantity} Ã ${item.price.toLocaleString()} = ${(item.price * item.quantity).toLocaleString()} IQD\n`;
         } else {
-            msg += `${i + 1}. ${item.name} × ${item.quantity}\n`;
+            msg += `${i + 1}. ${item.name} Ã ${item.quantity}\n`;
         }
     });
 
     const total = cart.reduce((s, i) => s + i.price * i.quantity, 0);
-    msg += `━━━━━━━━━━━━━━━\n`;
-    if (total > 0) msg += `💰 *کۆی گشتی:* ${total.toLocaleString()} IQD\n`;
-    msg += `━━━━━━━━━━━━━━━\n`;
-    msg += `⏰ ${timeStr}\n`;
-    msg += `✅ تکایە دڵنیابەوە لە داواکاریەکەم`;
+    msg += `âââââââââââââââ\n`;
+    if (total > 0) msg += `ð° *Ú©ÛÛ Ú¯Ø´ØªÛ:* ${total.toLocaleString()} IQD\n`;
+    msg += `âââââââââââââââ\n`;
+    msg += `â° ${timeStr}\n`;
+    msg += `â ØªÚ©Ø§ÛÛ Ø¯ÚµÙÛØ§Ø¨ÛÙÛ ÙÛ Ø¯Ø§ÙØ§Ú©Ø§Ø±ÛÛÚ©ÛÙ`;
 
     window.open('https://wa.me/9647518959614?text=' + encodeURIComponent(msg), '_blank');
     cart = []; saveCart(); updateCartUI(); toggleCart();
