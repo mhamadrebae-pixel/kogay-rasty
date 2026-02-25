@@ -1,0 +1,2261 @@
+[
+  {
+    "id": "cake-001",
+    "name": "نەزەری دووقول",
+    "description": "24 عەدەد",
+    "price": 5250,
+    "image": "kek/IMG_0214.jpeg",
+    "category": "cake",
+    "hidden": false
+  },
+  {
+    "id": "cake-002",
+    "name": "کولیچەی دوانی",
+    "description": "60 عەدەد",
+    "price": 5500,
+    "image": "kek/IMG_0211.jpeg",
+    "category": "cake",
+    "hidden": false
+  },
+  {
+    "id": "cake-003",
+    "name": "کێکی ئادرین",
+    "description": "24 عەدەد",
+    "price": 5000,
+    "image": "kek/IMG_0212.jpeg",
+    "category": "cake",
+    "hidden": false
+  },
+  {
+    "id": "cake-004",
+    "name": "لۆپۆچۆکۆ",
+    "description": "24 عەدەد",
+    "price": 5250,
+    "image": "kek/IMG_0213.jpeg",
+    "category": "cake",
+    "hidden": false
+  },
+  {
+    "id": "cake-005",
+    "name": "کێکی دوانی قاوە",
+    "description": "24 عەدەد",
+    "price": 2500,
+    "image": "kek/photo_1_2026-02-20_22-41-44.jpg",
+    "category": "cake",
+    "hidden": false
+  },
+  {
+    "id": "cake-006",
+    "name": "موفید شلیک",
+    "description": "24 عەدەد",
+    "price": 4750,
+    "image": "kek/photo_2_2026-02-20_22-41-44.jpg",
+    "category": "cake",
+    "hidden": false
+  },
+  {
+    "id": "cake-007",
+    "name": "مەفید پرتەقاڵ",
+    "description": "24 عەدەد",
+    "price": 4750,
+    "image": "kek/photo_3_2026-02-20_22-41-44.jpg",
+    "category": "cake",
+    "hidden": false
+  },
+  {
+    "id": "cake-008",
+    "name": "موفید پەنیر",
+    "description": "24 عەدەد",
+    "price": 4750,
+    "image": "kek/photo_7_2026-02-20_22-41-44.jpg",
+    "category": "cake",
+    "hidden": false
+  },
+  {
+    "id": "cake-009",
+    "name": "موفید پڵەس کەرەمێڵ",
+    "description": "24 عەدەد",
+    "price": 4750,
+    "image": "kek/photo_5_2026-02-20_22-41-44.jpg",
+    "category": "cake",
+    "hidden": false
+  },
+  {
+    "id": "cake-010",
+    "name": "کێکی جەلی",
+    "description": "24 عەدەد",
+    "price": 5000,
+    "image": "kek/photo_4_2026-02-20_22-41-44.jpg",
+    "category": "cake",
+    "hidden": false
+  },
+  {
+    "id": "cake-011",
+    "name": "دوو قول",
+    "description": "24 عەدەد",
+    "price": 5000,
+    "image": "kek/photo_6_2026-02-20_22-41-44.jpg",
+    "category": "cake",
+    "hidden": false
+  },
+  {
+    "id": "cake-012",
+    "name": "فۆڕچن تەخت سور",
+    "description": "24 عەدەد",
+    "price": 5000,
+    "image": "kek/photo_8_2026-02-20_22-41-44.jpg",
+    "category": "cake",
+    "hidden": false
+  },
+  {
+    "id": "cake-013",
+    "name": "کیکی دوبەی فستق",
+    "description": "24 عەدەد",
+    "price": 5000,
+    "image": "kek/photo_9_2026-02-20_22-41-44.jpg",
+    "category": "cake",
+    "hidden": false
+  },
+  {
+    "id": "cake-014",
+    "name": "کێکی روزینا کرێم",
+    "description": "24 عەدەد",
+    "price": 5000,
+    "image": "kek/photo_10_2026-02-20_22-41-44.jpg",
+    "category": "cake",
+    "hidden": false
+  },
+  {
+    "id": "cake-015",
+    "name": "تۆپ کێک سور",
+    "description": "24 عەدەد",
+    "price": 5000,
+    "image": "kek/photo_11_2026-02-20_22-41-44.jpg",
+    "category": "cake",
+    "hidden": false
+  },
+  {
+    "id": "cake-016",
+    "name": "تۆپ کێک ڕەش",
+    "description": "24 عەدەد",
+    "price": 5000,
+    "image": "kek/photo_12_2026-02-20_22-41-44.jpg",
+    "category": "cake",
+    "hidden": false
+  },
+  {
+    "id": "cake-017",
+    "name": "تۆپ کێک گۆڵد",
+    "description": "24 عەدەد",
+    "price": 5000,
+    "image": "kek/photo_14_2026-02-20_22-41-44.jpg",
+    "category": "cake",
+    "hidden": false
+  },
+  {
+    "id": "cake-018",
+    "name": "رۆزینا گوێزی",
+    "description": "24 عەدەد",
+    "price": 4750,
+    "image": "kek/photo_13_2026-02-20_22-41-44.jpg",
+    "category": "cake",
+    "hidden": false
+  },
+  {
+    "id": "cake-019",
+    "name": "فۆڕچن فستق",
+    "description": "24 عەدەد",
+    "price": 5000,
+    "image": "kek/photo_15_2026-02-20_22-41-44.jpg",
+    "category": "cake",
+    "hidden": false
+  },
+  {
+    "id": "cake-020",
+    "name": "فۆڕچن بسکیت",
+    "description": "24 عەدەد",
+    "price": 5000,
+    "image": "kek/photo_16_2026-02-20_22-41-44.jpg",
+    "category": "cake",
+    "hidden": false
+  },
+  {
+    "id": "cake-021",
+    "name": "فۆڕچن شلک",
+    "description": "24 عەدەد",
+    "price": 5000,
+    "image": "kek/photo_18_2026-02-20_22-41-44.jpg",
+    "category": "cake",
+    "hidden": false
+  },
+  {
+    "id": "cake-022",
+    "name": "فۆڕچن پەنیر",
+    "description": "24 عەدەد",
+    "price": 5000,
+    "image": "kek/photo_19_2026-02-20_22-41-44.jpg",
+    "category": "cake",
+    "hidden": false
+  },
+  {
+    "id": "cake-023",
+    "name": "کێکی مۆتۆ ٥٠٠",
+    "description": "24 عەدەد",
+    "price": 10000,
+    "image": "kek/photo_17_2026-02-20_22-41-44.jpg",
+    "category": "cake",
+    "hidden": false
+  },
+  {
+    "id": "cake-024",
+    "name": "دۆماتی ئەڵقە",
+    "description": "24 عەدەد",
+    "price": 4250,
+    "image": "kek/photo_20_2026-02-20_22-41-44.jpg",
+    "category": "cake",
+    "hidden": false
+  },
+  {
+    "id": "cake-025",
+    "name": "نەزەڕی دڵ پەمەی",
+    "description": "24 عەدەد",
+    "price": 5250,
+    "image": "kek/photo_21_2026-02-20_22-41-44.jpg",
+    "category": "cake",
+    "hidden": false
+  },
+  {
+    "id": "cake-026",
+    "name": "نەزەڕی دڵ ڕەش",
+    "description": "24 عەدەد",
+    "price": 5250,
+    "image": "kek/photo_22_2026-02-20_22-41-44.jpg",
+    "category": "cake",
+    "hidden": false
+  },
+  {
+    "id": "cake-027",
+    "name": "پاوەن کێک",
+    "description": "24 عەدەد",
+    "price": 5000,
+    "image": "kek/photo_24_2026-02-20_22-41-44.jpg",
+    "category": "cake",
+    "hidden": false
+  },
+  {
+    "id": "cake-028",
+    "name": "نەزەڕی سەتڵ",
+    "description": "24 عەدەد",
+    "price": 5250,
+    "image": "kek/photo_25_2026-02-20_22-41-44.jpg",
+    "category": "cake",
+    "hidden": false
+  },
+  {
+    "id": "cake-029",
+    "name": "کێکی مهیار",
+    "description": "24 عەدەد",
+    "price": 5000,
+    "image": "kek/photo_27_2026-02-20_22-41-44.jpg",
+    "category": "cake",
+    "hidden": false
+  },
+  {
+    "id": "cake-030",
+    "name": "کێک تایگەر",
+    "description": "12 عەدەد",
+    "price": 2500,
+    "image": "kek/photo_28_2026-02-20_22-41-44.jpg",
+    "category": "cake",
+    "hidden": false
+  },
+  {
+    "id": "cake-031",
+    "name": "کێک رۆز جەلی",
+    "description": "24 عەدەد",
+    "price": 4750,
+    "image": "kek/photo_29_2026-02-20_22-41-44.jpg",
+    "category": "cake",
+    "hidden": false
+  },
+  {
+    "id": "cake-032",
+    "name": "تۆپ کێک",
+    "description": "24 عەدەد",
+    "price": 4750,
+    "image": "kek/photo_30_2026-02-20_22-41-44.jpg",
+    "category": "cake",
+    "hidden": false
+  },
+  {
+    "id": "gaz-001",
+    "name": "ویتان",
+    "description": "24 عەدەد",
+    "price": 5250,
+    "image": "gaz/IMG_0215.jpeg",
+    "category": "gaz",
+    "hidden": false
+  },
+  {
+    "id": "gaz-002",
+    "name": "تایکۆی شەسی",
+    "description": "24 عەدەد",
+    "price": 4500,
+    "image": "gaz/IMG_0216.jpeg",
+    "category": "gaz",
+    "hidden": false
+  },
+  {
+    "id": "gaz-003",
+    "name": "دایجستۆ",
+    "description": "24 عەدەد",
+    "price": 5000,
+    "image": "gaz/IMG_0217.jpeg",
+    "category": "gaz",
+    "hidden": false
+  },
+  {
+    "id": "gaz-004",
+    "name": "پاپڵی گەورە",
+    "description": "40 عەدەد",
+    "price": 9000,
+    "image": "gaz/IMG_0218.jpeg",
+    "category": "gaz",
+    "hidden": false
+  },
+  {
+    "id": "gaz-005",
+    "name": "وایفەر ئەزرا",
+    "description": "24 عەدەد",
+    "price": 5250,
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (2).jpeg",
+    "category": "gaz",
+    "hidden": false
+  },
+  {
+    "id": "gaz-006",
+    "name": "کەزی لامیا",
+    "description": "24 عەدەد",
+    "price": 5000,
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (1).jpeg",
+    "category": "gaz",
+    "hidden": false
+  },
+  {
+    "id": "gaz-007",
+    "name": "پاپڵ",
+    "description": "24 عەدەد",
+    "price": 5250,
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (3).jpeg",
+    "category": "gaz",
+    "hidden": false
+  },
+  {
+    "id": "gaz-008",
+    "name": "پاڵشتی",
+    "description": "80 عەدەد",
+    "price": 7500,
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (4).jpeg",
+    "category": "gaz",
+    "hidden": false
+  },
+  {
+    "id": "gaz-009",
+    "name": "ناستەلەی نانی",
+    "description": "24 عەدەد",
+    "price": 2500,
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (5).jpeg",
+    "category": "gaz",
+    "hidden": false
+  },
+  {
+    "id": "gaz-010",
+    "name": "ستار مۆز",
+    "description": "40 عەدەد",
+    "price": 8000,
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (6).jpeg",
+    "category": "gaz",
+    "hidden": false
+  },
+  {
+    "id": "gaz-011",
+    "name": "ستار شلیک",
+    "description": "40 عەدەد",
+    "price": 8000,
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (7).jpeg",
+    "category": "gaz",
+    "hidden": false
+  },
+  {
+    "id": "gaz-012",
+    "name": "ستار پرتەقاڵ",
+    "description": "40 عەدەد",
+    "price": 8000,
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (8).jpeg",
+    "category": "gaz",
+    "hidden": false
+  },
+  {
+    "id": "gaz-013",
+    "name": "بسکیتی ترد",
+    "description": "40 عەدەد",
+    "price": 7500,
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (9).jpeg",
+    "category": "gaz",
+    "hidden": false
+  },
+  {
+    "id": "gaz-014",
+    "name": "چیلکەی دوانی",
+    "description": "24 عەدەد",
+    "price": 5000,
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM.jpeg",
+    "category": "gaz",
+    "hidden": false
+  },
+  {
+    "id": "gaz-015",
+    "name": "وایفەر ئەزرا شلیک",
+    "description": "24 عەدەد",
+    "price": 5000,
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (1).jpeg",
+    "category": "gaz",
+    "hidden": false
+  },
+  {
+    "id": "gaz-016",
+    "name": "وایفەر ئەزرا مۆز",
+    "description": "24 عەدەد",
+    "price": 5000,
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (2).jpeg",
+    "category": "gaz",
+    "hidden": false
+  },
+  {
+    "id": "gaz-017",
+    "name": "وایفەر ئەزرا پرتەقاڵ",
+    "description": "24 عەدەد",
+    "price": 5000,
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM.jpeg",
+    "category": "gaz",
+    "hidden": false
+  },
+  {
+    "id": "gaz-018",
+    "name": "شیرین عەسەل مۆز",
+    "description": "40 عەدەد",
+    "price": 8000,
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (3).jpeg",
+    "category": "gaz",
+    "hidden": false
+  },
+  {
+    "id": "gaz-019",
+    "name": "بسکت پیتی پور وار",
+    "description": "24 عەدەد",
+    "price": 5000,
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (4).jpeg",
+    "category": "gaz",
+    "hidden": false
+  },
+  {
+    "id": "gaz-020",
+    "name": "تایستێلی قاوە",
+    "description": "48 عەدەد",
+    "price": 5000,
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (5).jpeg",
+    "category": "gaz",
+    "hidden": false
+  },
+  {
+    "id": "gaz-021",
+    "name": "چلکەی دوانی",
+    "description": "60 عەدەد",
+    "price": 6500,
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (6).jpeg",
+    "category": "gaz",
+    "hidden": false
+  },
+  {
+    "id": "gaz-022",
+    "name": "ویکی دوانی",
+    "description": "60 عەدەد",
+    "price": 11500,
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (7).jpeg",
+    "category": "gaz",
+    "hidden": false
+  },
+  {
+    "id": "gaz-023",
+    "name": "ویکی گەورە",
+    "description": "60 عەدەد",
+    "price": 6500,
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (8).jpeg",
+    "category": "gaz",
+    "hidden": false
+  },
+  {
+    "id": "gaz-024",
+    "name": "شەمائیڵ",
+    "description": "12 عەدەد",
+    "price": 2500,
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (9).jpeg",
+    "category": "gaz",
+    "hidden": false
+  },
+  {
+    "id": "gaz-025",
+    "name": "بسکیتی دەموو چاو",
+    "description": "24 عەدەد",
+    "price": 5250,
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (10).jpeg",
+    "category": "gaz",
+    "hidden": false
+  },
+  {
+    "id": "gaz-026",
+    "name": "بسکیتی کالیتی",
+    "description": "24 عەدەد",
+    "price": 4750,
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (11).jpeg",
+    "category": "gaz",
+    "hidden": false
+  },
+  {
+    "id": "gaz-027",
+    "name": "بورادا",
+    "description": "32 عەدەد",
+    "price": 6250,
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (12).jpeg",
+    "category": "gaz",
+    "hidden": false
+  },
+  {
+    "id": "gaz-028",
+    "name": "شەوائیل",
+    "description": "60 عەدەد",
+    "price": 6500,
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (15).jpeg",
+    "category": "gaz",
+    "hidden": false
+  },
+  {
+    "id": "gaz-029",
+    "name": "هایبای",
+    "description": "40 عەدەد",
+    "price": 8000,
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (16).jpeg",
+    "category": "gaz",
+    "hidden": false
+  },
+  {
+    "id": "gaz-030",
+    "name": "هەپی عادی",
+    "description": "24 عەدەد",
+    "price": 4500,
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (17).jpeg",
+    "category": "gaz",
+    "hidden": false
+  },
+  {
+    "id": "gaz-031",
+    "name": "ستاکی شەفاف 500",
+    "description": "40 عەدەد",
+    "price": 10000,
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (18).jpeg",
+    "category": "gaz",
+    "hidden": false
+  },
+  {
+    "id": "gaz-032",
+    "name": "پاڵشتی دوانی",
+    "description": "80 عەدەد",
+    "price": 7500,
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (18).jpeg",
+    "category": "gaz",
+    "hidden": false
+  },
+  {
+    "id": "gaz-033",
+    "name": "مەڕەکان",
+    "description": "24 عەدەد",
+    "price": 4750,
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.03.27 PM.jpeg",
+    "category": "gaz",
+    "hidden": false
+  },
+  {
+    "id": "drink-001",
+    "name": "ئاوی دەبە",
+    "description": "12 عەدەد",
+    "price": 750,
+    "image": "sardy/IMG_0188.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-002",
+    "name": "ئاوی کارتۆن",
+    "description": "60 عەدەد",
+    "price": 1500,
+    "image": "sardy/IMG_0189.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-003",
+    "name": "پیپسی سلڤەر",
+    "description": "30 عەدەد",
+    "price": 6500,
+    "image": "sardy/IMG_6192.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-004",
+    "name": "پیپسی شین",
+    "description": "30 عەدەد",
+    "price": 6500,
+    "image": "sardy/IMG_6193.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-005",
+    "name": "میرندا",
+    "description": "30 عەدەد",
+    "price": 6500,
+    "image": "sardy/IMG_6194.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-006",
+    "name": "دیو",
+    "description": "30 عەدەد",
+    "price": 6500,
+    "image": "sardy/IMG_6195.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-007",
+    "name": "ڕاجی قۆخ",
+    "description": "24 عەدەد",
+    "price": 5000,
+    "image": "sardy/IMG_6196.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-008",
+    "name": "ڕانی قتو",
+    "description": "24 عەدەد",
+    "price": 9750,
+    "image": "sardy/IMG_6197.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-009",
+    "name": "ڕانی شوشە",
+    "description": "24 عەدەد",
+    "price": 9750,
+    "image": "sardy/IMG_6220.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-010",
+    "name": "لالە شین",
+    "description": "30 عەدەد",
+    "price": 6000,
+    "image": "sardy/IMG_6198.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-011",
+    "name": "لالە دیو",
+    "description": "30 عەدەد",
+    "price": 6000,
+    "image": "sardy/IMG_6199.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-012",
+    "name": "دیقی قەڵەو",
+    "description": "30 عەدەد",
+    "price": 10000,
+    "image": "sardy/IMG_6200.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-013",
+    "name": "پیپسی قەڵەو",
+    "description": "30 عەدەد",
+    "price": 10000,
+    "image": "sardy/IMG_6201.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-014",
+    "name": "تازجی قتو قۆخ",
+    "description": "30 عەدەد",
+    "price": 6500,
+    "image": "sardy/IMG_6202.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-015",
+    "name": "تازجی قتو پرتەقاڵ",
+    "description": "30 عەدەد",
+    "price": 6500,
+    "image": "sardy/IMG_6203.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-016",
+    "name": "تازجی قتو هەنار",
+    "description": "30 عەدەد",
+    "price": 6500,
+    "image": "sardy/IMG_6204.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-017",
+    "name": "RC شوشە ڕەش",
+    "description": "30 عەدەد",
+    "price": 6500,
+    "image": "sardy/IMG_6205.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-018",
+    "name": "RC شوشە پرتەقاڵ",
+    "description": "24 عەدەد",
+    "price": 6500,
+    "image": "sardy/IMG_6219.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-019",
+    "name": "سااردی بەغدادی",
+    "description": "30 عەدەد",
+    "price": 6500,
+    "image": "sardy/IMG_6206.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-020",
+    "name": "پیپسی شوشە",
+    "description": "24 عەدەد",
+    "price": 9750,
+    "image": "sardy/IMG_6207.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-021",
+    "name": "دیوی شوشە",
+    "description": "24 عەدەد",
+    "price": 9750,
+    "image": "sardy/IMG_6208.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-022",
+    "name": "زەمزەمی شوشە ڕەش",
+    "description": "24 عەدەد",
+    "price": 10000,
+    "image": "sardy/IMG_6209.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-023",
+    "name": "زەمزەمی شوشە پرتەقاڵ",
+    "description": "24 عەدەد",
+    "price": 10000,
+    "image": "sardy/IMG_6210.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-024",
+    "name": "زەمزەم شوشە لیمۆ",
+    "description": "12 عەدەد",
+    "price": 5000,
+    "image": "sardy/IMG_6218.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-025",
+    "name": "ئاسان شین",
+    "description": "24 عەدەد",
+    "price": 9750,
+    "image": "sardy/IMG_6211.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-026",
+    "name": "ئاسان مۆر",
+    "description": "24 عەدەد",
+    "price": 9750,
+    "image": "sardy/IMG_6212.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-027",
+    "name": "تایگەری تام پەمەی",
+    "description": "24 عەدەد",
+    "price": 5000,
+    "image": "sardy/IMG_6213.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-028",
+    "name": "تام شین",
+    "description": "24 عەدەد",
+    "price": 5000,
+    "image": "sardy/IMG_6238.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-029",
+    "name": "وینەر گەورە",
+    "description": "24 عەدەد",
+    "price": 9500,
+    "image": "sardy/IMG_6214.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-030",
+    "name": "وینەر بچوک",
+    "description": "24 عەدەد",
+    "price": 5250,
+    "image": "sardy/IMG_6215.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-031",
+    "name": "سۆدەی فروتلی",
+    "description": "24 عەدەد",
+    "price": 8250,
+    "image": "sardy/IMG_6216.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-032",
+    "name": "سۆدەی مستەر",
+    "description": "24 عەدەد",
+    "price": 5500,
+    "image": "sardy/IMG_6217.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-033",
+    "name": "شەربەتی تۆ شلک",
+    "description": "12 عەدەد",
+    "price": 5000,
+    "image": "sardy/IMG_6221.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-034",
+    "name": "شەربەتی تۆ کاڵەک",
+    "description": "12 عەدەد",
+    "price": 5000,
+    "image": "sardy/IMG_6222.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-035",
+    "name": "شەربەتی تۆ بلوبێری",
+    "description": "12 عەدەد",
+    "price": 5000,
+    "image": "sardy/IMG_6223.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-036",
+    "name": "شەربەتی تۆ پرتەقاڵ",
+    "description": "12 عەدەد",
+    "price": 5000,
+    "image": "sardy/IMG_6224.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-037",
+    "name": "شەربەتی تۆ ئەنەناس",
+    "description": "12 عەدەد",
+    "price": 5000,
+    "image": "sardy/IMG_6225.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-038",
+    "name": "سۆدەی مستار",
+    "description": "24 عەدەد",
+    "price": 10000,
+    "image": "sardy/IMG_6226.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-039",
+    "name": "ساردی تورکی پرتەقاڵ",
+    "description": "24 عەدەد",
+    "price": 9500,
+    "image": "sardy/IMG_6227.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-040",
+    "name": "تازج شوشە هەنار",
+    "description": "24 عەدەد",
+    "price": 9500,
+    "image": "sardy/IMG_6228.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-041",
+    "name": "تازج شوشە قۆخ",
+    "description": "24 عەدەد",
+    "price": 9500,
+    "image": "sardy/IMG_6229.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-042",
+    "name": "تازج شوشە پرتەقاڵ",
+    "description": "24 عەدەد",
+    "price": 9500,
+    "image": "sardy/IMG_6230.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-043",
+    "name": "تازج شوشە گێزەر",
+    "description": "24 عەدەد",
+    "price": 9500,
+    "image": "sardy/IMG_6231.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-044",
+    "name": "ماڵت جۆ",
+    "description": "24 عەدەد",
+    "price": 10000,
+    "image": "sardy/IMG_6232.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-045",
+    "name": "ماڵت لیمۆ",
+    "description": "24 عەدەد",
+    "price": 10000,
+    "image": "sardy/IMG_6233.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-046",
+    "name": "ماڵت قۆخ",
+    "description": "24 عەدەد",
+    "price": 10000,
+    "image": "sardy/IMG_6234.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-047",
+    "name": "K9 پەمەی",
+    "description": "24 عەدەد",
+    "price": 9500,
+    "image": "sardy/IMG_6235.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-048",
+    "name": "K9 شین",
+    "description": "24 عەدەد",
+    "price": 9500,
+    "image": "sardy/IMG_6237.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-049",
+    "name": "تایگەر ئەسڵ",
+    "description": "24 عەدەد",
+    "price": 21000,
+    "image": "sardy/IMG_6236.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-050",
+    "name": "دەبە سێڤن",
+    "description": "12 عەدەد",
+    "price": 2250,
+    "image": "sardy/IMG_6239.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-051",
+    "name": "ساردی نیو",
+    "description": "12 عەدەد",
+    "price": 2250,
+    "image": "sardy/IMG_6240.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-052",
+    "name": "ساردی K",
+    "description": "12 عەدەد",
+    "price": 2250,
+    "image": "sardy/IMG_6241.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-053",
+    "name": "ئارسۆ تایگەر",
+    "description": "30 عەدەد",
+    "price": 6500,
+    "image": "sardy/IMG_6242.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-054",
+    "name": "ئارسۆ پرتەقاڵ",
+    "description": "30 عەدەد",
+    "price": 6500,
+    "image": "sardy/IMG_6243.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-055",
+    "name": "ئارسۆ لیمۆ",
+    "description": "30 عەدەد",
+    "price": 6500,
+    "image": "sardy/IMG_6245.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-056",
+    "name": "ئارسۆ ئاوی",
+    "description": "30 عەدەد",
+    "price": 6500,
+    "image": "sardy/IMG_6246.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-057",
+    "name": "ترابی",
+    "description": "24 عەدەد",
+    "price": 9500,
+    "image": "sardy/IMG_6244.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-058",
+    "name": "تورکی ڕەش",
+    "description": "24 عەدەد",
+    "price": 9500,
+    "image": "sardy/IMG_6247.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-059",
+    "name": "زاکی",
+    "description": "36 عەدەد",
+    "price": 6000,
+    "image": "sardy/IMG_6248.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-060",
+    "name": "سەمناکی قۆخ",
+    "description": "36 عەدەد",
+    "price": 3000,
+    "image": "sardy/IMG_6249.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-061",
+    "name": "تازجی پاکەت قۆخ",
+    "description": "36 عەدەد",
+    "price": 4000,
+    "image": "sardy/IMG_6250.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-062",
+    "name": "تازجی پاکەت کۆکتێل",
+    "description": "36 عەدەد",
+    "price": 4000,
+    "image": "sardy/IMG_6252.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-063",
+    "name": "تازجی پاکەت پرتەقاڵ",
+    "description": "36 عەدەد",
+    "price": 4000,
+    "image": "sardy/IMG_6253.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-064",
+    "name": "کاڵبی مۆز",
+    "description": "36 عەدەد",
+    "price": 8000,
+    "image": "sardy/IMG_6254.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-065",
+    "name": "کاڵبی شلک",
+    "description": "36 عەدەد",
+    "price": 8000,
+    "image": "sardy/IMG_6255.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-066",
+    "name": "کاڵبی قاوە",
+    "description": "36 عەدەد",
+    "price": 8000,
+    "image": "sardy/IMG_6256.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-067",
+    "name": "کاڵبی کاڵەک",
+    "description": "36 عەدەد",
+    "price": 8000,
+    "image": "sardy/IMG_6257.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-068",
+    "name": "زۆزۆ پرتەقاڵ",
+    "description": "36 عەدەد",
+    "price": 3250,
+    "image": "sardy/IMG_6258.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-069",
+    "name": "زۆزۆ ئەنەناش",
+    "description": "36 عەدەد",
+    "price": 3250,
+    "image": "sardy/IMG_6259.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-070",
+    "name": "زۆزۆ کۆکتێل",
+    "description": "36 عەدەد",
+    "price": 3250,
+    "image": "sardy/IMG_6260.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-071",
+    "name": "زۆزۆ ترێ",
+    "description": "36 عەدەد",
+    "price": 3250,
+    "image": "sardy/IMG_6261.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-072",
+    "name": "زۆزۆ شلک",
+    "description": "36 عەدەد",
+    "price": 3250,
+    "image": "sardy/IMG_6262.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-073",
+    "name": "زۆزۆ قۆخ",
+    "description": "36 عەدەد",
+    "price": 3250,
+    "image": "sardy/IMG_6263.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-074",
+    "name": "زۆزۆ سێو",
+    "description": "36 عەدەد",
+    "price": 3250,
+    "image": "sardy/IMG_6264.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-075",
+    "name": "مەکسیکی لیمۆ",
+    "description": "24 عەدەد",
+    "price": 14500,
+    "image": "sardy/IMG_6265.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-076",
+    "name": "مەکسیکی شلک",
+    "description": "24 عەدەد",
+    "price": 14500,
+    "image": "sardy/IMG_6266.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-077",
+    "name": "مەکسیکی مانگۆ",
+    "description": "24 عەدەد",
+    "price": 14500,
+    "image": "sardy/IMG_6267.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-078",
+    "name": "مەکسیکی بوبی",
+    "description": "24 عەدەد",
+    "price": 14500,
+    "image": "sardy/IMG_6268.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-079",
+    "name": "مەکسیکی هەنار",
+    "description": "24 عەدەد",
+    "price": 14500,
+    "image": "sardy/IMG_6269.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-080",
+    "name": "مەکسیکی قاوە",
+    "description": "24 عەدەد",
+    "price": 14500,
+    "image": "sardy/IMG_6270.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-081",
+    "name": "ڕێد",
+    "description": "24 عەدەد",
+    "price": 9500,
+    "image": "sardy/IMG_6271.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-082",
+    "name": "پیپسی دەبڵ",
+    "description": "6 عەدەد",
+    "price": 6500,
+    "image": "sardy/IMG_6272.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-083",
+    "name": "پیپسی 1000",
+    "description": "6 عەدەد",
+    "price": 4500,
+    "image": "sardy/IMG_6274.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-084",
+    "name": "پیپسی وەصەت",
+    "description": "12 عەدەد",
+    "price": 6500,
+    "image": "sardy/IMG_6275.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-085",
+    "name": "دیوی دەبڵ",
+    "description": "6 عەدەد",
+    "price": 6500,
+    "image": "sardy/IMG_6276.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-086",
+    "name": "دیوی 1000",
+    "description": "6 عەدەد",
+    "price": 4500,
+    "image": "sardy/IMG_6277.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-087",
+    "name": "دیوی وەصەت",
+    "description": "12 عەدەد",
+    "price": 6500,
+    "image": "sardy/IMG_6278.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-088",
+    "name": "ئەفرا",
+    "description": "6 عەدەد",
+    "price": 3000,
+    "image": "sardy/IMG_6279.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-089",
+    "name": "یەومی ڕەش",
+    "description": "6 عەدەد",
+    "price": 3000,
+    "image": "sardy/IMG_6280.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-090",
+    "name": "زەمزامی پرتەقاڵ",
+    "description": "6 عەدەد",
+    "price": 5500,
+    "image": "sardy/IMG_6281.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-091",
+    "name": "زاگرۆزی دیو",
+    "description": "12 عەدەد",
+    "price": 2250,
+    "image": "sardy/IMG_6282.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-092",
+    "name": "زاگرۆزی لیمۆ",
+    "description": "12 عەدەد",
+    "price": 2250,
+    "image": "sardy/IMG_6283.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-093",
+    "name": "زاگرۆزی شین",
+    "description": "12 عەدەد",
+    "price": 2250,
+    "image": "sardy/IMG_6284.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-094",
+    "name": "دۆی بچوک",
+    "description": "16 عەدەد",
+    "price": 3000,
+    "image": "sardy/IMG_6285.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-095",
+    "name": "شەربەتی بۆبۆتۆ",
+    "description": "24 عەدەد",
+    "price": 4500,
+    "image": "sardy/IMG_6286.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-096",
+    "name": "شیر کاڵەکی دەبە",
+    "description": "24 عەدەد",
+    "price": 4500,
+    "image": "sardy/IMG_6287.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "chips-001",
+    "name": "کیش تەماتە 500",
+    "description": "24 عەدەد",
+    "price": 9250,
+    "image": "jbs/IMG_0223.jpeg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-002",
+    "name": "کیش سرکە 500",
+    "description": "24 عەدەد",
+    "price": 9250,
+    "image": "jbs/IMG_0224.jpeg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-003",
+    "name": "کیش بیبەر 500",
+    "description": "24 عەدەد",
+    "price": 9250,
+    "image": "jbs/IMG_0225.jpeg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-004",
+    "name": "کیش سادە 500",
+    "description": "24 عەدەد",
+    "price": 9250,
+    "image": "jbs/IMG_0226.jpeg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-005",
+    "name": "کیش لیمۆ 500",
+    "description": "24 عەدەد",
+    "price": 9250,
+    "image": "jbs/IMG_0227.jpeg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-006",
+    "name": "کیش بیبەر 250",
+    "description": "48 عەدەد",
+    "price": 9250,
+    "image": "jbs/photo_2_2026-02-20_22-38-05.jpg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-007",
+    "name": "کیش سادە 250",
+    "description": "48 عەدەد",
+    "price": 9250,
+    "image": "jbs/photo_3_2026-02-20_22-38-05.jpg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-008",
+    "name": "کیش لیمۆ 250",
+    "description": "48 عەدەد",
+    "price": 9250,
+    "image": "jbs/photo_4_2026-02-20_22-38-05.jpg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-009",
+    "name": "کیش سرکە 250",
+    "description": "48 عەدەد",
+    "price": 9250,
+    "image": "jbs/photo_10_2026-02-20_22-38-05.jpg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-010",
+    "name": "لیزا کۆکتێل",
+    "description": "48 عەدەد",
+    "price": 7500,
+    "image": "jbs/IMG_0206.jpeg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-011",
+    "name": "زەڕاتی شامی",
+    "description": "45 عەدەد",
+    "price": 9000,
+    "image": "jbs/IMG_0207.jpeg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-012",
+    "name": "سناپ",
+    "description": "40 عەدەد",
+    "price": 7500,
+    "image": "jbs/IMG_0208.jpeg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-013",
+    "name": "تیک تۆک",
+    "description": "40 عەدەد",
+    "price": 7500,
+    "image": "jbs/IMG_0209.jpeg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-014",
+    "name": "نینی",
+    "description": "36 عەدەد",
+    "price": 6750,
+    "image": "jbs/IMG_0219.jpeg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-015",
+    "name": "مانشی سپی 500",
+    "description": "24 عەدەد",
+    "price": 9500,
+    "image": "jbs/IMG_0228.jpeg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-016",
+    "name": "مانشی زەرد 500",
+    "description": "24 عەدەد",
+    "price": 9500,
+    "image": "jbs/IMG_0229.jpeg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-017",
+    "name": "مزمز چلکە سرکە",
+    "description": "48 عەدەد",
+    "price": 9000,
+    "image": "jbs/IMG_0230.jpeg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-018",
+    "name": "لابوبو",
+    "description": "48 عەدەد",
+    "price": 9000,
+    "image": "jbs/IMG_0232.jpeg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-019",
+    "name": "شامی دوانی",
+    "description": "60 عەدەد",
+    "price": 6250,
+    "image": "jbs/photo_6_2026-02-20_22-38-05.jpg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-020",
+    "name": "عەڵقەی کەباب",
+    "description": "40 عەدەد",
+    "price": 8000,
+    "image": "jbs/photo_7_2026-02-20_22-38-05.jpg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-021",
+    "name": "لوسی",
+    "description": "45 عەدەد",
+    "price": 9500,
+    "image": "jbs/photo_9_2026-02-20_22-38-05.jpg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-022",
+    "name": "من و تۆ کیس",
+    "description": "22 عەدەد",
+    "price": 4000,
+    "image": "jbs/photo_11_2026-02-20_22-38-05.jpg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-023",
+    "name": "لیزا",
+    "description": "40 عەدەد",
+    "price": 7500,
+    "image": "jbs/photo_12_2026-02-20_22-38-05.jpg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-024",
+    "name": "بانو کیس",
+    "description": "22 عەدەد",
+    "price": 4000,
+    "image": "jbs/photo_13_2026-02-20_22-38-05.jpg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-025",
+    "name": "مانچیس مۆر",
+    "description": "45 عەدەد",
+    "price": 9500,
+    "image": "jbs/photo_14_2026-02-20_22-38-05.jpg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-026",
+    "name": "ئەمرەک",
+    "description": "48 عەدەد",
+    "price": 9000,
+    "image": "jbs/photo_15_2026-02-20_22-38-05.jpg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-027",
+    "name": "عەڵقەی لیمۆ",
+    "description": "40 عەدەد",
+    "price": 8000,
+    "image": "jbs/photo_16_2026-02-20_22-38-05.jpg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-028",
+    "name": "بوشاری دوانی",
+    "description": "40 عەدەد",
+    "price": 4500,
+    "image": "jbs/photo_17_2026-02-20_22-38-05.jpg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-029",
+    "name": "مسک مریشک",
+    "description": "40 عەدەد",
+    "price": 8000,
+    "image": "jbs/photo_18_2026-02-20_22-38-05.jpg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-030",
+    "name": "مسک سرکە",
+    "description": "40 عەدەد",
+    "price": 8000,
+    "image": "jbs/photo_19_2026-02-20_22-38-05.jpg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-031",
+    "name": "مسک پەنیر",
+    "description": "40 عەدەد",
+    "price": 8000,
+    "image": "jbs/photo_20_2026-02-20_22-38-05.jpg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-032",
+    "name": "مسک لیمۆ",
+    "description": "40 عەدەد",
+    "price": 8000,
+    "image": "jbs/photo_21_2026-02-20_22-38-05.jpg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-033",
+    "name": "دانەن دانەی عایلەی",
+    "description": "24 عەدەد",
+    "price": 8000,
+    "image": "jbs/photo_23_2026-02-20_22-38-05.jpg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-034",
+    "name": "دانە دانە پرتەقاڵ",
+    "description": "40 عەدەد",
+    "price": 8000,
+    "image": "jbs/photo_8_2026-02-20_22-38-05.jpg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-035",
+    "name": "دانە دانە سور",
+    "description": "40 عەدەد",
+    "price": 8000,
+    "image": "jbs/photo_22_2026-02-20_22-38-05.jpg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-036",
+    "name": "دانە دانە شین",
+    "description": "40 عەدەد",
+    "price": 8000,
+    "image": "jbs/photo_24_2026-02-20_22-38-05.jpg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-037",
+    "name": "دانە دانە زەرد",
+    "description": "40 عەدەد",
+    "price": 8000,
+    "image": "jbs/photo_25_2026-02-20_22-38-05.jpg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-038",
+    "name": "تۆرتێلا سەوز",
+    "description": "48 عەدەد",
+    "price": 8500,
+    "image": "jbs/photo_26_2026-02-20_22-38-05.jpg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-039",
+    "name": "نینی لیمۆ",
+    "description": "36 عەدەد",
+    "price": 7000,
+    "image": "jbs/photo_27_2026-02-20_22-38-05.jpg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-040",
+    "name": "نینی بوشار",
+    "description": "36 عەدەد",
+    "price": 7000,
+    "image": "jbs/photo_28_2026-02-20_22-38-05.jpg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-041",
+    "name": "زەڕاتی پەرداخ",
+    "description": "40 عەدەد",
+    "price": 8000,
+    "image": "jbs/photo_30_2026-02-20_22-38-05.jpg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-042",
+    "name": "تۆرتێلای شین",
+    "description": "48 عەدەد",
+    "price": 9500,
+    "image": "jbs/photo_31_2026-02-20_22-38-05.jpg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-043",
+    "name": "مانشی سپی",
+    "description": "45 عەدەد",
+    "price": 9500,
+    "image": "jbs/photo_32_2026-02-20_22-38-05.jpg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-044",
+    "name": "مانشی زەرد",
+    "description": "45 عەدەد",
+    "price": 9500,
+    "image": "jbs/photo_33_2026-02-20_22-38-05.jpg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-045",
+    "name": "من من ڕان",
+    "description": "40 عەدەد",
+    "price": 7500,
+    "image": "jbs/photo_34_2026-02-20_22-38-05.jpg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-046",
+    "name": "من من پیتزا",
+    "description": "40 عەدەد",
+    "price": 7500,
+    "image": "jbs/photo_35_2026-02-20_22-38-05.jpg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-047",
+    "name": "بوشاری بانوو",
+    "description": "40 عەدەد",
+    "price": 4500,
+    "image": "jbs/photo_36_2026-02-20_22-38-05.jpg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-048",
+    "name": "لابوبو دوانی",
+    "description": "48 عەدەد",
+    "price": 9000,
+    "image": "jbs/photo_2026-02-20_22-39-15.jpg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "baby-001",
+    "name": "تەمەرندی پاکان",
+    "description": "24 عەدەد",
+    "price": 1000,
+    "image": "mnalan/photo_1_2026-02-21_00-54-52.jpg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-002",
+    "name": "پەشمەک سپی",
+    "description": "24 عەدەد",
+    "price": 4750,
+    "image": "mnalan/photo_2_2026-02-21_00-54-52.jpg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-003",
+    "name": "قاوەی زۆۆ",
+    "description": "24 عەدەد",
+    "price": 3500,
+    "image": "mnalan/photo_3_2026-02-21_00-54-52.jpg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-004",
+    "name": "کۆلا بۆن",
+    "description": "24 عەدەد",
+    "price": 5000,
+    "image": "mnalan/photo_4_2026-02-21_00-54-52.jpg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-005",
+    "name": "تەمەرندی لول",
+    "description": "24 عەدەد",
+    "price": 4750,
+    "image": "mnalan/photo_5_2026-02-21_00-54-52.jpg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-006",
+    "name": "نەستەلەی ئۆتۆن قاوە",
+    "description": "24 عەدەد",
+    "price": 5250,
+    "image": "mnalan/photo_7_2026-02-21_00-54-52.jpg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-007",
+    "name": "نەستەلەی ئۆتۆن سپی",
+    "description": "24 عەدەد",
+    "price": 5000,
+    "image": "mnalan/photo_17_2026-02-21_00-54-52.jpg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-008",
+    "name": "تەمەرندی تەخت",
+    "description": "48 عەدەد",
+    "price": 2500,
+    "image": "mnalan/photo_8_2026-02-21_00-54-52.jpg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-009",
+    "name": "مەساسەی سوور عادی",
+    "description": "45 عەدەد",
+    "price": 3000,
+    "image": "mnalan/photo_9_2026-02-21_00-54-52.jpg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-010",
+    "name": "مەساسەی دەبە کۆلا",
+    "description": "60 عەدەد",
+    "price": 5000,
+    "image": "mnalan/photo_11_2026-02-21_00-54-52.jpg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-011",
+    "name": "مەساسەی دەبە گێلاس",
+    "description": "60 عەدەد",
+    "price": 5000,
+    "image": "mnalan/photo_12_2026-02-21_00-54-52.jpg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-012",
+    "name": "مەساسەی دەبە ڕەش",
+    "description": "60 عەدەد",
+    "price": 5000,
+    "image": "mnalan/photo_13_2026-02-21_00-54-52.jpg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-013",
+    "name": "مەساسەی ورد",
+    "description": "100 عەدەد",
+    "price": 2000,
+    "image": "mnalan/photo_14_2026-02-21_00-54-52.jpg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-014",
+    "name": "مەساسەی دەبە شاتوو",
+    "description": "60 عەدەد",
+    "price": 5000,
+    "image": "mnalan/photo_15_2026-02-21_00-54-52.jpg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-015",
+    "name": "نوقڵی ورد ئایدین",
+    "description": "24 عەدەد",
+    "price": 5000,
+    "image": "mnalan/photo_16_2026-02-21_00-54-52.jpg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-016",
+    "name": "تەمەرندی ڕوڵ",
+    "description": "24 عەدەد",
+    "price": 5000,
+    "image": "mnalan/photo_19_2026-02-21_00-54-52.jpg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-017",
+    "name": "نوقڵی ڕانا",
+    "description": "12 عەدەد",
+    "price": 2250,
+    "image": "mnalan/photo_20_2026-02-21_00-54-52.jpg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-018",
+    "name": "چوکلێتی ئایدن",
+    "description": "100 عەدەد",
+    "price": 2500,
+    "image": "mnalan/photo_21_2026-02-21_00-54-52.jpg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-019",
+    "name": "بنێشتی یوبی 100",
+    "description": "100 عەدەد",
+    "price": 2500,
+    "image": "mnalan/photo_22_2026-02-21_00-54-52.jpg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-020",
+    "name": "تەمەرندی ڕستە",
+    "description": "12 عەدەد",
+    "price": 2500,
+    "image": "mnalan/photo_24_2026-02-21_00-54-52.jpg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-021",
+    "name": "قاوەی زۆۆ ٢",
+    "description": "24 عەدەد",
+    "price": 3500,
+    "image": "mnalan/photo_25_2026-02-21_00-54-52.jpg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-022",
+    "name": "سەمیریری",
+    "description": "24 عەدەد",
+    "price": 3500,
+    "image": "mnalan/photo_26_2026-02-21_00-54-52.jpg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-023",
+    "name": "نوقڵی ئاناتا شیر",
+    "description": "24 عەدەد",
+    "price": 5000,
+    "image": "mnalan/photo_27_2026-02-21_00-54-52.jpg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-024",
+    "name": "نەوقڵی ئاناتا قاوە",
+    "description": "24 عەدەد",
+    "price": 5000,
+    "image": "mnalan/photo_28_2026-02-21_00-54-52.jpg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-025",
+    "name": "تەمەرندی سرنج",
+    "description": "24 عەدەد",
+    "price": 4500,
+    "image": "mnalan/photo_29_2026-02-21_00-54-52.jpg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-026",
+    "name": "نەستەلەی بستە",
+    "description": "24 عەدەد",
+    "price": 5000,
+    "image": "mnalan/photo_30_2026-02-21_00-54-52.jpg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "family-001",
+    "name": "جکلیتی پۆپۆ",
+    "description": "8 عەدەد",
+    "price": 12000,
+    "image": "aylay/photo_1_2026-02-20_22-54-38.jpg",
+    "category": "family",
+    "hidden": false
+  },
+  {
+    "id": "family-002",
+    "name": "نوقولی ورد",
+    "description": "20 عەدەد",
+    "price": 18000,
+    "image": "aylay/photo_2_2026-02-20_22-54-38.jpg",
+    "category": "family",
+    "hidden": false
+  },
+  {
+    "id": "family-003",
+    "name": "وایفەر عایلە قاوە",
+    "description": "12 عەدەد",
+    "price": 10000,
+    "image": "aylay/photo_3_2026-02-20_22-54-38.jpg",
+    "category": "family",
+    "hidden": false
+  },
+  {
+    "id": "family-004",
+    "name": "چەمەک مۆز",
+    "description": "12 عەدەد",
+    "price": 10000,
+    "image": "aylay/photo_4_2026-02-20_22-54-38.jpg",
+    "category": "family",
+    "hidden": false
+  },
+  {
+    "id": "family-005",
+    "name": "چەمەکی قاوە",
+    "description": "12 عەدەد",
+    "price": 10000,
+    "image": "aylay/photo_16_2026-02-20_22-54-38.jpg",
+    "category": "family",
+    "hidden": false
+  },
+  {
+    "id": "family-006",
+    "name": "چەمەکی گوێز",
+    "description": "12 عەدەد",
+    "price": 10000,
+    "image": "aylay/photo_17_2026-02-20_22-54-38.jpg",
+    "category": "family",
+    "hidden": false
+  },
+  {
+    "id": "family-007",
+    "name": "نوقڵی مینۆ",
+    "description": "12 عەدەد",
+    "price": 10000,
+    "image": "aylay/photo_7_2026-02-20_22-54-38.jpg",
+    "category": "family",
+    "hidden": false
+  },
+  {
+    "id": "family-008",
+    "name": "مادەر لاکێشە",
+    "description": "18 عەدەد",
+    "price": 15000,
+    "image": "aylay/photo_9_2026-02-20_22-54-38.jpg",
+    "category": "family",
+    "hidden": false
+  },
+  {
+    "id": "family-009",
+    "name": "ئیسپانی عادی",
+    "description": "12 عەدەد",
+    "price": 10000,
+    "image": "aylay/photo_10_2026-02-20_22-54-38.jpg",
+    "category": "family",
+    "hidden": false
+  },
+  {
+    "id": "family-010",
+    "name": "فینگەری عایلە",
+    "description": "12 عەدەد",
+    "price": 10000,
+    "image": "aylay/photo_11_2026-02-20_22-54-38.jpg",
+    "category": "family",
+    "hidden": false
+  },
+  {
+    "id": "family-011",
+    "name": "بسكیتی چای سەوز",
+    "description": "12 عەدەد",
+    "price": 8500,
+    "image": "aylay/photo_12_2026-02-20_22-54-38.jpg",
+    "category": "family",
+    "hidden": false
+  },
+  {
+    "id": "family-012",
+    "name": "پیتی پور عایلە",
+    "description": "12 عەدەد",
+    "price": 10000,
+    "image": "aylay/photo_8_2026-02-20_22-54-38.jpg",
+    "category": "family",
+    "hidden": false
+  },
+  {
+    "id": "family-013",
+    "name": "پیتی پوری قاوە",
+    "description": "12 عەدەد",
+    "price": 10000,
+    "image": "aylay/photo_13_2026-02-20_22-54-38.jpg",
+    "category": "family",
+    "hidden": false
+  },
+  {
+    "id": "family-014",
+    "name": "پیتی پور سادە",
+    "description": "12 عەدەد",
+    "price": 10000,
+    "image": "aylay/photo_14_2026-02-20_22-54-38.jpg",
+    "category": "family",
+    "hidden": false
+  },
+  {
+    "id": "family-015",
+    "name": "ئاناتای بەڵەم",
+    "description": "8 عەدەد",
+    "price": 11500,
+    "image": "aylay/photo_18_2026-02-20_22-54-38.jpg",
+    "category": "family",
+    "hidden": false
+  },
+  {
+    "id": "cake-1772059869747",
+    "name": "ااا",
+    "description": "٢٣",
+    "price": 5000,
+    "image": "placeholder.jpg",
+    "category": "cake",
+    "hidden": false
+  }
+]
