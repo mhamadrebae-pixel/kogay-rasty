@@ -1,5 +1,5 @@
 // ==========================================
-// ÙØ±ÛØ´Ú¯Ø§Û Ø¦ÛÙÛ - v4 Global Search + Reminder
+// ÃÂÃÂ±ÃÂÃÂ´ÃÂ¯ÃÂ§ÃÂ ÃÂ¦ÃÂÃÂÃÂ - v4 Global Search + Reminder
 // ==========================================
 // script.js
 (function hideLoaderSafe() {
@@ -16,19 +16,19 @@
 })();
 
 // ==========================================
-// Ø¨ÛØ´ÛÚ©Ø§Ù
+// ÃÂ¨ÃÂÃÂ´ÃÂÃÂ©ÃÂ§ÃÂ
 // ==========================================
 const categories = {
-    cake: { name: 'Ú©ÛÚ©', icon: 'fa-cake-candles', count: 0 },
-    gaz: { name: 'Ú¯ÛØ² Ù Ø¨Ø³Ú©ÛØª', icon: 'fa-cookie-bite', count: 0 },
-    drink: { name: 'Ø®ÙØ§Ø±Ø¯ÙÛÙÛ', icon: 'fa-glass-water', count: 0 },
-    chips: { name: 'ÚÛÙ¾Ø³', icon: 'fa-bowl-food', count: 0 },
-    baby: { name: 'ÙÙØ§ÚµØ§Ù', icon: 'fa-baby', count: 0 },
-    family: { name: 'Ø¹Ø§ÛÙÛÛ', icon: 'fa-users', count: 0 }
+    cake: { name: 'ÃÂ©ÃÂÃÂ©', icon: 'fa-cake-candles', count: 0 },
+    gaz: { name: 'ÃÂ¯ÃÂÃÂ² ÃÂ ÃÂ¨ÃÂ³ÃÂ©ÃÂÃÂª', icon: 'fa-cookie-bite', count: 0 },
+    drink: { name: 'ÃÂ®ÃÂÃÂ§ÃÂ±ÃÂ¯ÃÂÃÂÃÂÃÂ', icon: 'fa-glass-water', count: 0 },
+    chips: { name: 'ÃÂÃÂÃÂ¾ÃÂ³', icon: 'fa-bowl-food', count: 0 },
+    baby: { name: 'ÃÂÃÂÃÂ§ÃÂµÃÂ§ÃÂ', icon: 'fa-baby', count: 0 },
+    family: { name: 'ÃÂ¹ÃÂ§ÃÂÃÂÃÂÃÂ', icon: 'fa-users', count: 0 }
 };
 
 // ==========================================
-// Ú©Ø§ÚµØ§Ú©Ø§Ù â Ø¦ÛØ¯ÙÛÙ Ù¾Ø§ÙÛÙ Ø¨ÛÚÛÙÛÛØ§Ù Ø¯ÛØ¨Ø§Øª
+// ÃÂ©ÃÂ§ÃÂµÃÂ§ÃÂ©ÃÂ§ÃÂ Ã¢ÂÂ ÃÂ¦ÃÂÃÂ¯ÃÂÃÂÃÂ ÃÂ¾ÃÂ§ÃÂÃÂÃÂ ÃÂ¨ÃÂÃÂÃÂÃÂÃÂÃÂÃÂ§ÃÂ ÃÂ¯ÃÂÃÂ¨ÃÂ§ÃÂª
 // ==========================================
 const _hardcodedProducts = [
     { id: 'cake-001', name: 'نەزەری دووقول', description: '24 عەدەد', price: 5250, image: 'kek/IMG_0214.jpeg', category: 'cake' },
@@ -284,18 +284,18 @@ const _hardcodedProducts = [
 ];
 
 // ==========================================
-// ð Ù¾ÛÛÙÛÙØ¯ÛÚ©Ø±Ø¯Ù Ø¨Û Ø¦ÛØ¯ÙÛÙ Ù¾Ø§ÙÛÙ
-// Ø¦ÛÚ¯ÛØ± Ø¦ÛØ¯ÙÛÙ Ú¯ÛÚØ§ÙÚ©Ø§Ø±Û Ú©Ø±Ø¯Ø¨ÛØªØ Ø¦ÛÙØ§ ÙÛ
-// localStorage Ø¨Ø®ÙÛÙÛØ±ÛÙÛ â Ø¨ÛØ¨Û Ø¦ÛÙ¾ÙÛØ¯
+// Ã°ÂÂÂ ÃÂ¾ÃÂÃÂÃÂÃÂÃÂÃÂ¯ÃÂÃÂ©ÃÂ±ÃÂ¯ÃÂ ÃÂ¨ÃÂ ÃÂ¦ÃÂÃÂ¯ÃÂÃÂÃÂ ÃÂ¾ÃÂ§ÃÂÃÂÃÂ
+// ÃÂ¦ÃÂÃÂ¯ÃÂÃÂ± ÃÂ¦ÃÂÃÂ¯ÃÂÃÂÃÂ ÃÂ¯ÃÂÃÂÃÂ§ÃÂÃÂ©ÃÂ§ÃÂ±ÃÂ ÃÂ©ÃÂ±ÃÂ¯ÃÂ¨ÃÂÃÂªÃÂ ÃÂ¦ÃÂÃÂÃÂ§ ÃÂÃÂ
+// localStorage ÃÂ¨ÃÂ®ÃÂÃÂÃÂÃÂÃÂ±ÃÂÃÂÃÂ Ã¢ÂÂ ÃÂ¨ÃÂÃÂ¨ÃÂ ÃÂ¦ÃÂÃÂ¾ÃÂÃÂÃÂ¯
 // ==========================================
 (function loadAdminProducts() {
     try {
         const saved = localStorage.getItem('adminProducts_v1');
         if (saved) {
             const adminList = JSON.parse(saved);
-            // ØªÛÙÙØ§ Ú©Ø§ÚµØ§Ú©Ø§ÙÛ ÙÛØ´Ø§ÙØ¯Ø±Ø§Ù Ø¨ÙÛØ´Ø§ÙØ¯Û (hidden=false)
+            // ÃÂªÃÂÃÂÃÂÃÂ§ ÃÂ©ÃÂ§ÃÂµÃÂ§ÃÂ©ÃÂ§ÃÂÃÂ ÃÂÃÂÃÂ´ÃÂ§ÃÂÃÂ¯ÃÂ±ÃÂ§ÃÂ ÃÂ¨ÃÂÃÂÃÂ´ÃÂ§ÃÂÃÂ¯ÃÂ (hidden=false)
             const visible = adminList.filter(p => !p.hidden);
-            // Ø¬ÛÚ¯Ø§Ú©Ø±Ø¯ÙÛÙÛÛ ÙÛØ³ØªÛ Ø³ÛØ±ÛÚ©Û
+            // ÃÂ¬ÃÂÃÂ¯ÃÂ§ÃÂ©ÃÂ±ÃÂ¯ÃÂÃÂÃÂÃÂÃÂ ÃÂÃÂÃÂ³ÃÂªÃÂ ÃÂ³ÃÂÃÂ±ÃÂÃÂ©ÃÂ
             _hardcodedProducts.length = 0;
             visible.forEach(p => _hardcodedProducts.push(p));
         }
@@ -304,11 +304,11 @@ const _hardcodedProducts = [
     }
 })();
 
-// Ø¦ÛÙÛ ÙÛÙÛØ´Û Ø¨ÛÚ©Ø§Ø± Ø¯ÛØª â Ø¦ÛØ¯ÙÛÙ Ú¯ÛÚÛ ÛØ§Ù ÙÛÚ¯ÛÚÛ
+// ÃÂ¦ÃÂÃÂÃÂ ÃÂÃÂÃÂÃÂÃÂ´ÃÂ ÃÂ¨ÃÂÃÂ©ÃÂ§ÃÂ± ÃÂ¯ÃÂÃÂª Ã¢ÂÂ ÃÂ¦ÃÂÃÂ¯ÃÂÃÂÃÂ ÃÂ¯ÃÂÃÂÃÂ ÃÂÃÂ§ÃÂ ÃÂÃÂÃÂ¯ÃÂÃÂÃÂ
 const products = _hardcodedProducts;
 
 // ==========================================
-// Ú¯ÙÛØ¨Ø§Ù
+// ÃÂ¯ÃÂÃÂÃÂ¨ÃÂ§ÃÂ
 // ==========================================
 let cart = [];
 let currentCategory = 'cake';
@@ -341,8 +341,8 @@ function openImageModal(productId) {
     const img = document.getElementById('imageModalImg');
     img.src = product.image;
     img.alt = product.name;
-    document.getElementById('imageModalName').textContent = product.name + ' â ' + product.description;
-    document.getElementById('imageModalPrice').textContent = product.price > 0 ? product.price.toLocaleString() + ' IQD' : 'Ù¾Ø±Ø³ÛØ§Ø± Ø¨Ú©Û';
+    document.getElementById('imageModalName').textContent = product.name + ' Ã¢ÂÂ ' + product.description;
+    document.getElementById('imageModalPrice').textContent = product.price > 0 ? product.price.toLocaleString() + ' IQD' : 'ÃÂ¾ÃÂ±ÃÂ³ÃÂÃÂ§ÃÂ± ÃÂ¨ÃÂ©ÃÂ';
     modal.style.visibility = 'visible';
     modal.style.opacity = '1';
     setTimeout(() => { img.style.transform = 'scale(1)'; }, 10);
@@ -419,7 +419,7 @@ function updateCategoryCounts() {
         const m = (card.getAttribute('onclick') || '').match(/showCategory\('(\w+)'/);
         if (m && categories[m[1]]) {
             const el = card.querySelector('.category-count');
-            if (el) el.textContent = categories[m[1]].count + ' Ú©Ø§ÚµØ§';
+            if (el) el.textContent = categories[m[1]].count + ' ÃÂ©ÃÂ§ÃÂµÃÂ§';
         }
     });
 }
@@ -481,7 +481,7 @@ function buildProductCard(product, index) {
     const imgAttr = isEager
         ? `src="${product.image}" loading="eager"`
         : `src="${PLACEHOLDER}" data-src="${product.image}" loading="lazy"`;
-    const priceText = product.price > 0 ? product.price.toLocaleString() + ' IQD' : 'Ù¾Ø±Ø³ÛØ§Ø± Ø¨Ú©Û';
+    const priceText = product.price > 0 ? product.price.toLocaleString() + ' IQD' : 'ÃÂ¾ÃÂ±ÃÂ³ÃÂÃÂ§ÃÂ± ÃÂ¨ÃÂ©ÃÂ';
     return `
     <div class="product-card" style="animation-delay:${index * 0.04}s">
         <div class="product-image" onclick="openImageModal('${product.id}')" style="cursor:zoom-in;">
@@ -496,7 +496,7 @@ function buildProductCard(product, index) {
             <p class="product-desc">${product.description}</p>
             <div class="product-footer">
                 <div class="product-price">
-                    <span class="price-label">ÙØ±Ø®</span>
+                    <span class="price-label">ÃÂÃÂ±ÃÂ®</span>
                     <span class="price-value">${priceText}</span>
                 </div>
                 <button class="add-btn" onclick="addToCart('${product.id}')">
@@ -513,7 +513,7 @@ function renderProducts() {
     const emptyState = document.getElementById('emptyState');
     const filtered = products.filter(p => p.category === currentCategory);
     const countEl = document.getElementById('productsCount');
-    if (countEl) countEl.textContent = filtered.length + ' Ú©Ø§ÚµØ§';
+    if (countEl) countEl.textContent = filtered.length + ' ÃÂ©ÃÂ§ÃÂµÃÂ§';
     if (filtered.length === 0) {
         grid.innerHTML = '';
         if (emptyState) emptyState.style.display = 'block';
@@ -531,8 +531,8 @@ function renderGlobalSearch(query) {
     const countEl = document.getElementById('productsCount');
     const q = query.toLowerCase();
     const filtered = products.filter(p => p.name.toLowerCase().includes(q) || p.description.toLowerCase().includes(q));
-    if (titleEl) titleEl.innerHTML = `<i class="fas fa-search"></i> Ø¦ÛÙØ¬Ø§ÙÛ Ú¯ÛÚØ§Ù: "${query}"`;
-    if (countEl) countEl.textContent = filtered.length + ' Ú©Ø§ÚµØ§';
+    if (titleEl) titleEl.innerHTML = `<i class="fas fa-search"></i> ÃÂ¦ÃÂÃÂÃÂ¬ÃÂ§ÃÂÃÂ ÃÂ¯ÃÂÃÂÃÂ§ÃÂ: "${query}"`;
+    if (countEl) countEl.textContent = filtered.length + ' ÃÂ©ÃÂ§ÃÂµÃÂ§';
     if (filtered.length === 0) {
         grid.innerHTML = '';
         if (emptyState) emptyState.style.display = 'block';
@@ -548,7 +548,7 @@ function renderGlobalSearch(query) {
             <div style="display:flex;align-items:center;gap:8px;padding:8px 4px;border-bottom:1px solid rgba(255,255,255,0.1);margin-bottom:8px;">
                 <div style="width:32px;height:32px;background:rgba(249,115,22,0.2);border-radius:10px;display:flex;align-items:center;justify-content:center;color:#f97316;font-size:14px;"><i class="fas ${catInfo.icon}"></i></div>
                 <span style="color:white;font-weight:700;font-size:15px;">${catInfo.name}</span>
-                <span style="color:rgba(255,255,255,0.4);font-size:12px;">${grouped[cat].length} Ú©Ø§ÚµØ§</span>
+                <span style="color:rgba(255,255,255,0.4);font-size:12px;">${grouped[cat].length} ÃÂ©ÃÂ§ÃÂµÃÂ§</span>
             </div></div>`;
         grouped[cat].forEach((product, index) => { html += buildProductCard(product, index); });
     });
@@ -557,7 +557,7 @@ function renderGlobalSearch(query) {
 }
 
 // ==========================================
-// ÛØ§Ø¯ÛÙÛØ±Û Ø³ÛØ¨ÛØªÛ
+// ÃÂÃÂ§ÃÂ¯ÃÂÃÂÃÂÃÂ±ÃÂ ÃÂ³ÃÂÃÂ¨ÃÂÃÂªÃÂ
 // ==========================================
 function initCartReminder() {
     document.addEventListener('visibilitychange', () => {
@@ -588,12 +588,12 @@ function showCartReminder() {
     reminder.style.cssText = `position:fixed;bottom:80px;left:16px;right:16px;z-index:2500;background:linear-gradient(135deg,rgba(249,115,22,0.95),rgba(244,63,94,0.95));backdrop-filter:blur(20px);border-radius:20px;padding:16px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px;box-shadow:0 8px 32px rgba(249,115,22,0.4);animation:reminderSlideUp 0.4s ease forwards;border:1px solid rgba(255,255,255,0.2);`;
     reminder.innerHTML = `<style>@keyframes reminderSlideUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}</style>
         <div style="display:flex;align-items:center;gap:12px;flex:1;">
-            <div style="width:44px;height:44px;background:rgba(255,255,255,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;">ð</div>
-            <div><div style="color:white;font-weight:700;font-size:14px;">${totalItems} Ú©Ø§ÚµØ§Øª ÙÛ Ø³ÛØ¨ÛØªÛØ¯Ø§ÛÛ!</div><div style="color:rgba(255,255,255,0.8);font-size:12px;margin-top:2px;">Ø¯Ø§ÙØ§Ú©Ø§Ø±ÛÛÚ©ÛØª ØªÛÙØ§Ù Ø¨Ú©Û</div></div>
+            <div style="width:44px;height:44px;background:rgba(255,255,255,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;">Ã°ÂÂÂ</div>
+            <div><div style="color:white;font-weight:700;font-size:14px;">${totalItems} ÃÂ©ÃÂ§ÃÂµÃÂ§ÃÂª ÃÂÃÂ ÃÂ³ÃÂÃÂ¨ÃÂÃÂªÃÂÃÂ¯ÃÂ§ÃÂÃÂ!</div><div style="color:rgba(255,255,255,0.8);font-size:12px;margin-top:2px;">ÃÂ¯ÃÂ§ÃÂÃÂ§ÃÂ©ÃÂ§ÃÂ±ÃÂÃÂÃÂ©ÃÂÃÂª ÃÂªÃÂÃÂÃÂ§ÃÂ ÃÂ¨ÃÂ©ÃÂ</div></div>
         </div>
         <div style="display:flex;gap:8px;flex-shrink:0;">
-            <button onclick="toggleCart();document.getElementById('cartReminder')?.remove();" style="padding:8px 16px;background:white;color:#f97316;border:none;border-radius:12px;font-weight:700;font-size:13px;cursor:pointer;font-family:inherit;">Ø¨ÛÙÛÙ</button>
-            <button onclick="document.getElementById('cartReminder')?.remove();" style="width:34px;height:34px;background:rgba(255,255,255,0.15);border:none;border-radius:50%;color:white;font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;">â</button>
+            <button onclick="toggleCart();document.getElementById('cartReminder')?.remove();" style="padding:8px 16px;background:white;color:#f97316;border:none;border-radius:12px;font-weight:700;font-size:13px;cursor:pointer;font-family:inherit;">ÃÂ¨ÃÂÃÂÃÂÃÂ</button>
+            <button onclick="document.getElementById('cartReminder')?.remove();" style="width:34px;height:34px;background:rgba(255,255,255,0.15);border:none;border-radius:50%;color:white;font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;">Ã¢ÂÂ</button>
         </div>`;
     document.body.appendChild(reminder);
     setTimeout(() => {
@@ -612,7 +612,7 @@ function createGlobalSearchBtn() {
     btn.className = 'cart-btn';
     btn.style.cssText = 'background:rgba(255,255,255,0.1);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,0.15);';
     btn.innerHTML = `<i class="fas fa-search"></i>`;
-    btn.title = 'Ú¯ÛÚØ§ÙÛ Ú¯Ø´ØªÛ';
+    btn.title = 'ÃÂ¯ÃÂÃÂÃÂ§ÃÂÃÂ ÃÂ¯ÃÂ´ÃÂªÃÂ';
     btn.onclick = () => {
         const input = document.getElementById('searchInputMobile') || document.getElementById('searchInput');
         if (input) { input.focus(); window.scrollTo({ top: 100, behavior: 'smooth' }); }
@@ -621,7 +621,7 @@ function createGlobalSearchBtn() {
 }
 
 // ==========================================
-// Ø³ÛØ¨ÛØªÛ
+// ÃÂ³ÃÂÃÂ¨ÃÂÃÂªÃÂ
 // ==========================================
 function loadCart() {
     try { cart = JSON.parse(localStorage.getItem('myShopCart')) || []; } catch (e) { cart = []; }
@@ -639,7 +639,7 @@ function addToCart(productId) {
     if (existing) existing.quantity++;
     else cart.push({ id: product.id, name: product.name, price: product.price, quantity: 1 });
     saveCart(); updateCartUI();
-    showToast(product.name + ' Ø²ÛØ§Ø¯Ú©Ø±Ø§ â', 'success');
+    showToast(product.name + ' ÃÂ²ÃÂÃÂ§ÃÂ¯ÃÂ©ÃÂ±ÃÂ§ Ã¢ÂÂ', 'success');
     const btn = document.querySelector('.cart-btn');
     if (btn) { btn.style.transform = 'scale(1.15)'; setTimeout(() => btn.style.transform = '', 200); }
 }
@@ -649,13 +649,13 @@ function updateCartUI() {
     const totalPrice = cart.reduce((s, i) => s + i.price * i.quantity, 0);
     const g = id => document.getElementById(id);
     if (g('cartCount')) g('cartCount').textContent = totalItems;
-    if (g('cartItemsCount')) g('cartItemsCount').textContent = totalItems + ' Ú©Ø§ÚµØ§';
+    if (g('cartItemsCount')) g('cartItemsCount').textContent = totalItems + ' ÃÂ©ÃÂ§ÃÂµÃÂ§';
     if (g('totalItems')) g('totalItems').textContent = totalItems;
     if (g('totalPrice')) g('totalPrice').textContent = totalPrice.toLocaleString() + ' IQD';
     const cartItemsEl = g('cartItems');
     if (!cartItemsEl) return;
     if (cart.length === 0) {
-        cartItemsEl.innerHTML = `<div class="cart-empty"><div class="empty-cart-icon"><i class="fas fa-shopping-cart"></i></div><h4>Ø³ÛØ¨ÛØªÛ Ø¨ÛØªØ§ÚµÛ</h4><p>Ú©Ø§ÚµØ§Û Ø¯ÚµØ®ÙØ§Ø²Øª Ø²ÛØ§Ø¯ Ø¨Ú©Û</p></div>`;
+        cartItemsEl.innerHTML = `<div class="cart-empty"><div class="empty-cart-icon"><i class="fas fa-shopping-cart"></i></div><h4>ÃÂ³ÃÂÃÂ¨ÃÂÃÂªÃÂ ÃÂ¨ÃÂÃÂªÃÂ§ÃÂµÃÂ</h4><p>ÃÂ©ÃÂ§ÃÂµÃÂ§ÃÂ ÃÂ¯ÃÂµÃÂ®ÃÂÃÂ§ÃÂ²ÃÂª ÃÂ²ÃÂÃÂ§ÃÂ¯ ÃÂ¨ÃÂ©ÃÂ</p></div>`;
         return;
     }
     cartItemsEl.innerHTML = cart.map((item, i) => `
@@ -670,14 +670,14 @@ function updateCartUI() {
                     <span class="cart-item-qty">${item.quantity}</span>
                     <button class="qty-btn" onclick="increaseQty(${i})">+</button>
                 </div>
-                <span class="cart-item-price">${item.price > 0 ? (item.price * item.quantity).toLocaleString() + ' IQD' : 'Ù¾Ø±Ø³ÛØ§Ø± Ø¨Ú©Û'}</span>
+                <span class="cart-item-price">${item.price > 0 ? (item.price * item.quantity).toLocaleString() + ' IQD' : 'ÃÂ¾ÃÂ±ÃÂ³ÃÂÃÂ§ÃÂ± ÃÂ¨ÃÂ©ÃÂ'}</span>
             </div>
         </div>`).join('');
 }
 
 function increaseQty(i) { cart[i].quantity++; saveCart(); updateCartUI(); }
 function decreaseQty(i) { if (cart[i].quantity > 1) cart[i].quantity--; else cart.splice(i, 1); saveCart(); updateCartUI(); }
-function removeFromCart(i) { cart.splice(i, 1); saveCart(); updateCartUI(); showToast('Ú©Ø§ÚµØ§ ÙØ§Ø¨Ø±Ø§', 'info'); }
+function removeFromCart(i) { cart.splice(i, 1); saveCart(); updateCartUI(); showToast('ÃÂ©ÃÂ§ÃÂµÃÂ§ ÃÂÃÂ§ÃÂ¨ÃÂ±ÃÂ§', 'info'); }
 
 function toggleCart() {
     const sidebar = document.getElementById('cartSidebar');
@@ -699,37 +699,37 @@ function closeSuccessModal() {
 }
 
 function sendWhatsApp() {
-    if (cart.length === 0) { showToast('Ø³ÛØ¨ÛØªÛ Ø¨ÛØªØ§ÚµÛ!', 'error'); return; }
+    if (cart.length === 0) { showToast('ÃÂ³ÃÂÃÂ¨ÃÂÃÂªÃÂ ÃÂ¨ÃÂÃÂªÃÂ§ÃÂµÃÂ!', 'error'); return; }
     const name = (document.getElementById('customerName')?.value || '').trim();
     const phone = (document.getElementById('customerPhone')?.value || '').trim();
-    if (!name || !phone) { showToast('ÙØ§Ù Ù ÚÙØ§Ø±Û Ø¨ÙÙÙØ³Û', 'error'); return; }
+    if (!name || !phone) { showToast('ÃÂÃÂ§ÃÂ ÃÂ ÃÂÃÂÃÂ§ÃÂ±ÃÂ ÃÂ¨ÃÂÃÂÃÂÃÂ³ÃÂ', 'error'); return; }
 
     const now = new Date();
     const timeStr = now.toLocaleString('ar-IQ');
 
-    let msg = `ð *Ø¯Ø§ÙØ§Ú©Ø§Ø±Û ÙÙÛ*\n`;
-    msg += `âââââââââââââââ\n`;
-    msg += `ð¤ *ÙØ§Ù:* ${name}\n`;
-    msg += `ð± *ØªÛÙÛÙÛÙ:* ${phone}\n`;
-    msg += `âââââââââââââââ\n`;
-    msg += `ð¦ *Ú©Ø§ÚµØ§Ú©Ø§Ù:*\n`;
-    msg += `âââââââââââââââ\n`;
+    let msg = `Ã°ÂÂÂ *ÃÂ¯ÃÂ§ÃÂÃÂ§ÃÂ©ÃÂ§ÃÂ±ÃÂ ÃÂÃÂÃÂ*\n`;
+    msg += `Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂ\n`;
+    msg += `Ã°ÂÂÂ¤ *ÃÂÃÂ§ÃÂ:* ${name}\n`;
+    msg += `Ã°ÂÂÂ± *ÃÂªÃÂÃÂÃÂÃÂÃÂÃÂ:* ${phone}\n`;
+    msg += `Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂ\n`;
+    msg += `Ã°ÂÂÂ¦ *ÃÂ©ÃÂ§ÃÂµÃÂ§ÃÂ©ÃÂ§ÃÂ:*\n`;
+    msg += `Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂ\n`;
 
     cart.forEach((item, i) => {
         if (item.price > 0) {
             msg += `${i + 1}. ${item.name}\n`;
-            msg += `   ${item.quantity} Ã ${item.price.toLocaleString()} = ${(item.price * item.quantity).toLocaleString()} IQD\n`;
+            msg += `   ${item.quantity} ÃÂ ${item.price.toLocaleString()} = ${(item.price * item.quantity).toLocaleString()} IQD\n`;
         } else {
-            msg += `${i + 1}. ${item.name} Ã ${item.quantity}\n`;
+            msg += `${i + 1}. ${item.name} ÃÂ ${item.quantity}\n`;
         }
     });
 
     const total = cart.reduce((s, i) => s + i.price * i.quantity, 0);
-    msg += `âââââââââââââââ\n`;
-    if (total > 0) msg += `ð° *Ú©ÛÛ Ú¯Ø´ØªÛ:* ${total.toLocaleString()} IQD\n`;
-    msg += `âââââââââââââââ\n`;
-    msg += `â° ${timeStr}\n`;
-    msg += `â ØªÚ©Ø§ÛÛ Ø¯ÚµÙÛØ§Ø¨ÛÙÛ ÙÛ Ø¯Ø§ÙØ§Ú©Ø§Ø±ÛÛÚ©ÛÙ`;
+    msg += `Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂ\n`;
+    if (total > 0) msg += `Ã°ÂÂÂ° *ÃÂ©ÃÂÃÂ ÃÂ¯ÃÂ´ÃÂªÃÂ:* ${total.toLocaleString()} IQD\n`;
+    msg += `Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂ\n`;
+    msg += `Ã¢ÂÂ° ${timeStr}\n`;
+    msg += `Ã¢ÂÂ ÃÂªÃÂ©ÃÂ§ÃÂÃÂ ÃÂ¯ÃÂµÃÂÃÂÃÂ§ÃÂ¨ÃÂÃÂÃÂ ÃÂÃÂ ÃÂ¯ÃÂ§ÃÂÃÂ§ÃÂ©ÃÂ§ÃÂ±ÃÂÃÂÃÂ©ÃÂÃÂ`;
 
     window.open('https://wa.me/9647518959614?text=' + encodeURIComponent(msg), '_blank');
     cart = []; saveCart(); updateCartUI(); toggleCart();
