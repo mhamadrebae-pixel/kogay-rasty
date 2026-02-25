@@ -1,7 +1,7 @@
 // ==========================================
 // فرۆشگای ئێمە - v4 Global Search + Reminder
 // ==========================================
-
+// script.js
 (function hideLoaderSafe() {
     function doHide() {
         var loader = document.getElementById('loader');
@@ -28,9 +28,9 @@ const categories = {
 };
 
 // ==========================================
-// کاڵاکان
+// کاڵاکان — ئەدمین پانێل بەڕێوەیان دەبات
 // ==========================================
-const products = [
+const _hardcodedProducts = [
     // ========== 🎂 کێک ==========
     { id: 'cake-001', name: 'نەزەری دووقول', description: '24 عەدەد', price: 5250, image: 'kek/IMG_0214.jpeg', category: 'cake' },
     { id: 'cake-002', name: 'کولیچەی دوانی', description: '60 عەدەد', price: 5500, image: 'kek/IMG_0211.jpeg', category: 'cake' },
@@ -293,6 +293,30 @@ const products = [
     { id: 'family-014', name: 'پیتی پور سادە', description: '12 عەدەد', price: 10000, image: 'aylay/photo_14_2026-02-20_22-54-38.jpg', category: 'family' },
     { id: 'family-015', name: 'ئاناتای بەڵەم', description: '8 عەدەد', price: 11500, image: 'aylay/photo_18_2026-02-20_22-54-38.jpg', category: 'family' },
 ];
+
+// ==========================================
+// 🔗 پەیوەندیکردن بە ئەدمین پانێل
+// ئەگەر ئەدمین گۆڕانکاری کردبێت، ئەوا لە
+// localStorage بخوێنەرەوە — بەبێ ئەپلۆد
+// ==========================================
+(function loadAdminProducts() {
+    try {
+        const saved = localStorage.getItem('adminProducts_v1');
+        if (saved) {
+            const adminList = JSON.parse(saved);
+            // تەنها کاڵاکانی نیشاندراو بنیشاندە (hidden=false)
+            const visible = adminList.filter(p => !p.hidden);
+            // جێگاکردنەوەی لیستی سەرەکی
+            _hardcodedProducts.length = 0;
+            visible.forEach(p => _hardcodedProducts.push(p));
+        }
+    } catch(e) {
+        console.warn('Admin products load failed, using defaults:', e);
+    }
+})();
+
+// ئەمە هەمیشە بەکار دێت — ئەدمین گۆڕی یان نەگۆڕی
+const products = _hardcodedProducts;
 
 // ==========================================
 // گلۆبال
