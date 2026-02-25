@@ -1,5 +1,14 @@
 [
   {
+    "id": "cake-001",
+    "name": "نەزەری دووقول",
+    "description": "24 عەدەد",
+    "price": 5250,
+    "image": "kek/IMG_0214.jpeg",
+    "category": "cake",
+    "hidden": false
+  },
+  {
     "id": "cake-002",
     "name": "کولیچەی دوانی",
     "description": "60 عەدەد",
