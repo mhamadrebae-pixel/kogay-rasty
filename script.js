@@ -1,7 +1,7 @@
 // ==========================================
 // کۆگای ڕاستی - v6 (Fixed: Always load from products.json)
 // ==========================================
-
+ 
 (function hideLoaderSafe() {
     function doHide() {
         var loader = document.getElementById('loader');
