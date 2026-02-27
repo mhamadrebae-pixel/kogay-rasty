@@ -11,7 +11,6 @@
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{font-family:'Noto Sans Arabic',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;direction:rtl;overflow-x:hidden;-webkit-font-smoothing:antialiased}
-/* ===== SETUP PAGE ===== */
 .setup-page{position:fixed;inset:0;z-index:9999;background:var(--bg);display:flex;align-items:flex-start;justify-content:center;padding:20px;overflow-y:auto}
 .setup-page.hidden{display:none}
 .blob{position:absolute;border-radius:50%;filter:blur(100px);opacity:.35;pointer-events:none}
@@ -30,7 +29,6 @@ body{font-family:'Noto Sans Arabic',sans-serif;background:var(--bg);color:var(--
 .field input,.field select{width:100%;padding:13px 16px 13px 42px;background:rgba(255,255,255,0.06);border:1px solid var(--border);border-radius:var(--radius);color:white;font-size:14px;font-family:inherit;transition:all .3s;direction:ltr}
 .field input:focus,.field select:focus{outline:none;border-color:var(--primary);background:rgba(249,115,22,0.08)}
 .field-icon{position:absolute;left:13px;bottom:13px;color:var(--text3);font-size:14px}
-/* ===== LOGIN PAGE ===== */
 .login-page{position:fixed;inset:0;z-index:9998;background:var(--bg);display:flex;align-items:center;justify-content:center;padding:20px}
 .login-page.hidden{display:none}
 .login-box{position:relative;z-index:1;background:rgba(255,255,255,0.04);backdrop-filter:blur(30px);border:1px solid rgba(255,255,255,0.1);border-radius:var(--radius-lg);padding:40px 32px;width:100%;max-width:400px;box-shadow:0 30px 80px rgba(0,0,0,0.6)}
@@ -43,7 +41,6 @@ body{font-family:'Noto Sans Arabic',sans-serif;background:var(--bg);color:var(--
 .login-field input{width:100%;padding:14px 16px 14px 44px;background:rgba(255,255,255,0.06);border:1px solid var(--border);border-radius:var(--radius);color:white;font-size:15px;font-family:inherit;transition:all .3s}
 .login-field input:focus{outline:none;border-color:var(--primary);background:rgba(249,115,22,0.08)}
 .login-field .field-icon{position:absolute;left:14px;bottom:14px;color:var(--text3);font-size:15px}
-/* ===== BUTTONS ===== */
 .btn-main{width:100%;padding:15px;background:var(--gradient);border:none;border-radius:var(--radius);color:white;font-family:inherit;font-size:15px;font-weight:700;cursor:pointer;transition:all .3s;display:flex;align-items:center;justify-content:center;gap:8px;margin-top:8px}
 .btn-main:hover{transform:translateY(-2px);box-shadow:0 8px 25px rgba(249,115,22,0.5)}
 .btn{display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:var(--radius);font-family:inherit;font-size:13px;font-weight:600;cursor:pointer;transition:all .3s;border:none}
@@ -58,7 +55,6 @@ body{font-family:'Noto Sans Arabic',sans-serif;background:var(--bg);color:var(--
 .btn-sm{padding:7px 12px;font-size:12px}
 .error-box{display:none;background:rgba(239,68,68,0.15);border:1px solid rgba(239,68,68,0.3);border-radius:var(--radius);padding:12px 16px;font-size:13px;color:#fca5a5;text-align:center;margin-top:10px}
 .error-box.show{display:block}
-/* ===== MAIN APP ===== */
 .app{display:none}
 .app.show{display:flex;min-height:100vh}
 .sidebar{width:240px;background:var(--bg2);border-left:1px solid var(--border);display:flex;flex-direction:column;position:fixed;top:0;right:0;bottom:0;z-index:100;transition:all .3s}
@@ -91,7 +87,6 @@ body{font-family:'Noto Sans Arabic',sans-serif;background:var(--bg);color:var(--
 .page-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:24px;flex-wrap:wrap;gap:12px}
 .page-title{font-size:20px;font-weight:800;color:white}
 .page-sub{font-size:13px;color:var(--text2);margin-top:3px}
-/* ===== STATS ===== */
 .stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-bottom:28px}
 .stat-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:20px;transition:all .3s}
 .stat-card:hover{border-color:rgba(249,115,22,0.3);transform:translateY(-2px)}
@@ -106,11 +101,9 @@ body{font-family:'Noto Sans Arabic',sans-serif;background:var(--bg);color:var(--
 .cat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:28px}
 .cat-item{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:14px;display:flex;align-items:center;gap:10px}
 .cat-icon{width:36px;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0}
-/* ===== PUBLISH BAR ===== */
 .publish-bar{background:rgba(249,115,22,0.06);border:1px solid rgba(249,115,22,0.2);border-radius:var(--radius-lg);padding:16px 20px;margin-bottom:20px;display:none;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
 .publish-bar.show{display:flex}
 .publish-icon{width:44px;height:44px;background:rgba(249,115,22,0.15);border-radius:12px;display:flex;align-items:center;justify-content:center;color:var(--primary);font-size:18px;flex-shrink:0}
-/* ===== TABLE ===== */
 .table-wrap{background:var(--card);border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden}
 .table-head{padding:16px 20px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between}
 .table-title{font-size:15px;font-weight:700;color:white}
@@ -151,7 +144,6 @@ tr:hover td{background:rgba(255,255,255,0.02)}
 .a-toggle:hover{background:rgba(234,179,8,0.25)}
 .a-del{background:rgba(239,68,68,0.12);color:#fca5a5}
 .a-del:hover{background:rgba(239,68,68,0.25)}
-/* ===== MODAL ===== */
 .modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.8);backdrop-filter:blur(8px);z-index:500;display:none;align-items:center;justify-content:center;padding:20px}
 .modal-overlay.open{display:flex}
 .modal{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);width:100%;max-width:560px;max-height:90vh;overflow-y:auto;box-shadow:0 30px 80px rgba(0,0,0,0.6)}
@@ -170,16 +162,13 @@ tr:hover td{background:rgba(255,255,255,0.02)}
 .form-control option{background:var(--bg2)}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 .form-hint{font-size:11px;color:var(--text3);margin-top:5px}
-/* ===== SETTINGS ===== */
 .s-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:24px;margin-bottom:16px}
 .s-card-title{font-size:15px;font-weight:700;color:white;margin-bottom:20px;display:flex;align-items:center;gap:10px}
 .s-card-title i{color:var(--primary)}
-/* ===== CONFIRM ===== */
 .confirm-box{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:32px;text-align:center;max-width:380px;width:100%}
 .confirm-icon{width:64px;height:64px;background:rgba(239,68,68,0.12);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:26px;color:#fca5a5;margin:0 auto 16px}
 .confirm-title{font-size:18px;font-weight:700;color:white;margin-bottom:8px}
 .confirm-text{font-size:13px;color:var(--text2);line-height:1.7;margin-bottom:24px}
-/* ===== TOAST ===== */
 .toast-wrap{position:fixed;bottom:24px;left:24px;z-index:9999;display:flex;flex-direction:column;gap:8px}
 .toast-item{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:13px 18px;display:flex;align-items:center;gap:10px;box-shadow:var(--shadow);animation:slideUp .3s ease;min-width:260px}
 .toast-item.out{animation:slideDown .3s ease forwards}
@@ -190,19 +179,22 @@ tr:hover td{background:rgba(255,255,255,0.02)}
 .t-error .toast-icon{background:rgba(239,68,68,0.2);color:#fca5a5}
 .t-info .toast-icon{background:rgba(59,130,246,0.2);color:#60a5fa}
 .toast-text{font-size:13px;color:white;font-weight:500}
-/* ===== LOADING ===== */
 .loading-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.7);backdrop-filter:blur(8px);z-index:9999;display:none;align-items:center;justify-content:center;flex-direction:column;gap:16px}
 .loading-overlay.show{display:flex}
 .spinner{width:56px;height:56px;border:3px solid rgba(249,115,22,0.2);border-top-color:var(--primary);border-radius:50%;animation:spin .8s linear infinite}
 @keyframes spin{to{transform:rotate(360deg)}}
 .loading-text{color:white;font-size:15px;font-weight:600}
-/* ===== MOBILE ===== */
 .mobile-btn{display:none;width:40px;height:40px;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);color:white;align-items:center;justify-content:center;cursor:pointer;font-size:16px}
 .mobile-bg{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:99}
 .mobile-bg.show{display:block}
 .pass-strength{height:3px;border-radius:2px;margin-top:6px;transition:all .3s;background:var(--border)}
 .shake{animation:shake .4s ease}
 @keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-8px)}75%{transform:translateX(8px)}}
+/* ★ ئۆتۆ-ڕیستارت بار */
+.refresh-bar{background:rgba(34,197,94,0.08);border:1px solid rgba(34,197,94,0.25);border-radius:var(--radius);padding:10px 16px;display:flex;align-items:center;gap:10px;font-size:13px;color:#4ade80;margin-bottom:16px;animation:slideUp .3s ease}
+.refresh-bar i{font-size:16px;animation:spin .8s linear infinite}
+.json-info{background:rgba(59,130,246,0.06);border:1px solid rgba(59,130,246,0.2);border-radius:var(--radius);padding:12px 16px;display:flex;align-items:center;gap:10px;font-size:13px;color:var(--text2);margin-bottom:16px}
+.json-info i{color:#60a5fa;font-size:16px}
 @media(max-width:768px){
   .sidebar{transform:translateX(240px)}
   .sidebar.open{transform:translateX(0)}
@@ -215,9 +207,6 @@ tr:hover td{background:rgba(255,255,255,0.02)}
 ::-webkit-scrollbar-thumb{background:rgba(249,115,22,0.3);border-radius:2px}
 .empty-state{text-align:center;padding:60px 20px}
 .empty-icon{width:70px;height:70px;background:rgba(255,255,255,0.04);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;color:var(--text3);margin:0 auto 16px}
-/* ===== JSON STATUS BAR ===== */
-.json-info{background:rgba(59,130,246,0.06);border:1px solid rgba(59,130,246,0.2);border-radius:var(--radius);padding:12px 16px;display:flex;align-items:center;gap:10px;font-size:13px;color:var(--text2);margin-bottom:16px}
-.json-info i{color:#60a5fa;font-size:16px}
 </style>
 </head>
 <body>
@@ -323,6 +312,7 @@ tr:hover td{background:rgba(255,255,255,0.02)}
       <div style="display:flex;align-items:center;gap:10px">
         <div class="topbar-time" id="clock"></div>
         <div class="changes-badge" id="changesBadge"><i class="fas fa-circle-dot"></i> <span id="changesNum">0</span> گۆڕانکاری</div>
+        <button class="btn btn-secondary btn-sm" onclick="manualRefresh()" title="نوێکردنەوە"><i class="fas fa-rotate-right"></i></button>
       </div>
     </div>
 
@@ -340,8 +330,8 @@ tr:hover td{background:rgba(255,255,255,0.02)}
         <button class="btn btn-success" onclick="publishJSON()"><i class="fas fa-cloud-upload-alt"></i> بڵاوکردنەوە ئێستا</button>
       </div>
       <div class="json-info">
-        <i class="fas fa-info-circle"></i>
-        <span>ئێستا تەنها <strong style="color:white">products.json</strong> بڵاودەکرێتەوە — ناوی کوردی ١٠٠٪ ڕاست دەمێنێت ✅</span>
+        <i class="fas fa-sync-alt"></i>
+        <span>کاڵاکان ئۆتۆماتیکی لە <strong style="color:white">products.json</strong> ی GitHub دەخوێنرێتەوە — هەر گۆڕانکاریەک ڕاستەوخۆ دیاری دەبێت ✅</span>
       </div>
       <div class="stats-grid" id="statsGrid"></div>
       <h3 style="font-size:15px;font-weight:700;color:white;margin-bottom:14px"><i class="fas fa-grid-2" style="color:var(--primary);margin-left:8px"></i> کاڵا بە بەش</h3>
@@ -349,10 +339,10 @@ tr:hover td{background:rgba(255,255,255,0.02)}
       <div style="background:rgba(249,115,22,0.06);border:1px solid rgba(249,115,22,0.15);border-radius:var(--radius-lg);padding:20px 24px">
         <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px"><i class="fas fa-circle-info" style="color:var(--primary)"></i><span style="font-size:14px;font-weight:700;color:white">چۆن کار دەکات؟</span></div>
         <div style="font-size:13px;color:var(--text2);line-height:2">
-          ١. گۆڕانکارییەکانت لە <strong style="color:white">بەشی کاڵاکان</strong> بکە<br>
-          ٢. دوای تەواوکردن، <strong style="color:#4ade80">بڵاوکردنەوە بۆ GitHub</strong> بکە<br>
-          ٣. فایلی <strong style="color:#60a5fa">products.json</strong> نوێ دەبێتەوە لە GitHub<br>
-          ٤. سایتەکەت <strong style="color:white">ئۆتۆماتیکی</strong> کاڵاکانی نوێ نیشان دەدات 🚀
+          ١. کاڵاکان ئۆتۆماتیکی لە <strong style="color:#60a5fa">products.json</strong> ی GitHub دەخوێنرێتەوە<br>
+          ٢. گۆڕانکارییەکانت بکە (زیادکردن، ئیدیت، شاراوەکردن)<br>
+          ٣. دوای تەواوکردن، <strong style="color:#4ade80">بڵاوکردنەوە بۆ GitHub</strong> بکە<br>
+          ٤. کاتێک لا دەگەڕێیتەوە، <strong style="color:white">ئۆتۆماتیکی نوێدەبێتەوە 🔄</strong>
         </div>
       </div>
     </div>
@@ -361,7 +351,10 @@ tr:hover td{background:rgba(255,255,255,0.02)}
     <div class="page" id="page-products">
       <div class="page-header">
         <div><div class="page-title">کاڵاکان</div><div class="page-sub" id="prodSub">بارکردن...</div></div>
-        <button class="btn btn-primary" onclick="showPage('add',document.querySelector('[onclick*=add]'))"><i class="fas fa-plus"></i> کاڵای نوێ</button>
+        <div style="display:flex;gap:8px">
+          <button class="btn btn-secondary" onclick="manualRefresh()"><i class="fas fa-rotate-right"></i> نوێکردنەوە</button>
+          <button class="btn btn-primary" onclick="showPage('add',document.querySelector('[onclick*=add]'))"><i class="fas fa-plus"></i> کاڵای نوێ</button>
+        </div>
       </div>
       <div class="filters">
         <div class="search-box"><i class="fas fa-search"></i><input type="text" id="srch" placeholder="گەڕان..." oninput="filterProds()"></div>
@@ -434,6 +427,14 @@ tr:hover td{background:rgba(255,255,255,0.02)}
           </div>
         </div>
         <div class="s-card">
+          <div class="s-card-title"><i class="fas fa-rotate-right"></i> ئۆتۆ-ڕیستارت</div>
+          <p style="font-size:13px;color:var(--text2);margin-bottom:12px;line-height:1.8">کاتێک لا دەگەڕێیتەوە، پانێل ئۆتۆماتیکی کاڵاکان لە GitHub دەخوێنێتەوە.</p>
+          <div style="display:flex;align-items:center;gap:12px;background:rgba(34,197,94,0.08);border:1px solid rgba(34,197,94,0.2);border-radius:var(--radius);padding:12px 16px;">
+            <i class="fas fa-check-circle" style="color:#4ade80;font-size:18px"></i>
+            <span style="font-size:13px;color:#4ade80;font-weight:600">چالاکە — ئۆتۆماتیکی کاڵاکان نوێ دەبێتەوە</span>
+          </div>
+        </div>
+        <div class="s-card">
           <div class="s-card-title"><i class="fas fa-key"></i> گۆڕینی وشەی تێپەڕ</div>
           <div class="form-group"><label class="form-label">وشەی تێپەڕی ئێستا</label><input type="password" class="form-control" id="curPass" placeholder="وشەی تێپەڕی ئێستا"></div>
           <div class="form-group"><label class="form-label">وشەی تێپەڕی نوێ</label><input type="password" class="form-control" id="newPass" placeholder="لانیکەم ٦ پیت" oninput="checkStrength()"><div class="pass-strength" id="passStr"></div></div>
@@ -442,7 +443,7 @@ tr:hover td{background:rgba(255,255,255,0.02)}
         </div>
         <div class="s-card">
           <div class="s-card-title"><i class="fas fa-rotate-left"></i> ڕیسێت</div>
-          <p style="font-size:13px;color:var(--text2);margin-bottom:16px;line-height:1.8">هەموو گۆڕانکارییەکان دەسڕێتەوە و کاڵاکان دەگەڕێنەوە سەر حاڵی سەرەکی.</p>
+          <p style="font-size:13px;color:var(--text2);margin-bottom:16px;line-height:1.8">هەموو گۆڕانکارییەکان دەسڕێتەوە و کاڵاکان دەگەڕێنەوە سەر حاڵی GitHub.</p>
           <button class="btn btn-danger" onclick="doReset()"><i class="fas fa-rotate-left"></i> گەڕانەوەی سەرەکی</button>
         </div>
       </div>
@@ -499,265 +500,8 @@ tr:hover td{background:rgba(255,255,255,0.02)}
 const ADMIN_USER    = 'admin';
 const DEFAULT_PASS  = 'admin2025';
 const SESSION_KEY   = 'adminSession_v2';
-const PRODUCTS_KEY  = 'adminProducts_v1';
 const PASS_KEY      = 'adminPass_v1';
 const GH_CONFIG_KEY = 'githubConfig_v1';
-
-// ============================================================
-// داتای بنچینەی کاڵاکان
-// ============================================================
-const originalProducts = [
-    {id:'cake-001',name:'نەزەری دووقول',description:'24 عەدەد',price:5250,image:'kek/IMG_0214.jpeg',category:'cake'},
-    {id:'cake-002',name:'کولیچەی دوانی',description:'60 عەدەد',price:5500,image:'kek/IMG_0211.jpeg',category:'cake'},
-    {id:'cake-003',name:'کێکی ئادرین',description:'24 عەدەد',price:5000,image:'kek/IMG_0212.jpeg',category:'cake'},
-    {id:'cake-004',name:'لۆپۆچۆکۆ',description:'24 عەدەد',price:5250,image:'kek/IMG_0213.jpeg',category:'cake'},
-    {id:'cake-005',name:'کێکی دوانی قاوە',description:'24 عەدەد',price:2500,image:'kek/photo_1_2026-02-20_22-41-44.jpg',category:'cake'},
-    {id:'cake-006',name:'موفید شلیک',description:'24 عەدەد',price:4750,image:'kek/photo_2_2026-02-20_22-41-44.jpg',category:'cake'},
-    {id:'cake-007',name:'مەفید پرتەقاڵ',description:'24 عەدەد',price:4750,image:'kek/photo_3_2026-02-20_22-41-44.jpg',category:'cake'},
-    {id:'cake-008',name:'موفید پەنیر',description:'24 عەدەد',price:4750,image:'kek/photo_7_2026-02-20_22-41-44.jpg',category:'cake'},
-    {id:'cake-009',name:'موفید پڵەس کەرەمێڵ',description:'24 عەدەد',price:4750,image:'kek/photo_5_2026-02-20_22-41-44.jpg',category:'cake'},
-    {id:'cake-010',name:'کێکی جەلی',description:'24 عەدەد',price:5000,image:'kek/photo_4_2026-02-20_22-41-44.jpg',category:'cake'},
-    {id:'cake-011',name:'دوو قول',description:'24 عەدەد',price:5000,image:'kek/photo_6_2026-02-20_22-41-44.jpg',category:'cake'},
-    {id:'cake-012',name:'فۆڕچن تەخت سور',description:'24 عەدەد',price:5000,image:'kek/photo_8_2026-02-20_22-41-44.jpg',category:'cake'},
-    {id:'cake-013',name:'کیکی دوبەی فستق',description:'24 عەدەد',price:5000,image:'kek/photo_9_2026-02-20_22-41-44.jpg',category:'cake'},
-    {id:'cake-014',name:'کێکی روزینا کرێم',description:'24 عەدەد',price:5000,image:'kek/photo_10_2026-02-20_22-41-44.jpg',category:'cake'},
-    {id:'cake-015',name:'تۆپ کێک سور',description:'24 عەدەد',price:5000,image:'kek/photo_11_2026-02-20_22-41-44.jpg',category:'cake'},
-    {id:'cake-016',name:'تۆپ کێک ڕەش',description:'24 عەدەد',price:5000,image:'kek/photo_12_2026-02-20_22-41-44.jpg',category:'cake'},
-    {id:'cake-017',name:'تۆپ کێک گۆڵد',description:'24 عەدەد',price:5000,image:'kek/photo_14_2026-02-20_22-41-44.jpg',category:'cake'},
-    {id:'cake-018',name:'رۆزینا گوێزی',description:'24 عەدەد',price:4750,image:'kek/photo_13_2026-02-20_22-41-44.jpg',category:'cake'},
-    {id:'cake-019',name:'فۆڕچن فستق',description:'24 عەدەد',price:5000,image:'kek/photo_15_2026-02-20_22-41-44.jpg',category:'cake'},
-    {id:'cake-020',name:'فۆڕچن بسکیت',description:'24 عەدەد',price:5000,image:'kek/photo_16_2026-02-20_22-41-44.jpg',category:'cake'},
-    {id:'cake-021',name:'فۆڕچن شلک',description:'24 عەدەد',price:5000,image:'kek/photo_18_2026-02-20_22-41-44.jpg',category:'cake'},
-    {id:'cake-022',name:'فۆڕچن پەنیر',description:'24 عەدەد',price:5000,image:'kek/photo_19_2026-02-20_22-41-44.jpg',category:'cake'},
-    {id:'cake-023',name:'کێکی مۆتۆ ٥٠٠',description:'24 عەدەد',price:10000,image:'kek/photo_17_2026-02-20_22-41-44.jpg',category:'cake'},
-    {id:'cake-024',name:'دۆماتی ئەڵقە',description:'24 عەدەد',price:4250,image:'kek/photo_20_2026-02-20_22-41-44.jpg',category:'cake'},
-    {id:'cake-025',name:'نەزەڕی دڵ پەمەی',description:'24 عەدەد',price:5250,image:'kek/photo_21_2026-02-20_22-41-44.jpg',category:'cake'},
-    {id:'cake-026',name:'نەزەڕی دڵ ڕەش',description:'24 عەدەد',price:5250,image:'kek/photo_22_2026-02-20_22-41-44.jpg',category:'cake'},
-    {id:'cake-027',name:'پاوەن کێک',description:'24 عەدەد',price:5000,image:'kek/photo_24_2026-02-20_22-41-44.jpg',category:'cake'},
-    {id:'cake-028',name:'نەزەڕی سەتڵ',description:'24 عەدەد',price:5250,image:'kek/photo_25_2026-02-20_22-41-44.jpg',category:'cake'},
-    {id:'cake-029',name:'کێکی مهیار',description:'24 عەدەد',price:5000,image:'kek/photo_27_2026-02-20_22-41-44.jpg',category:'cake'},
-    {id:'cake-030',name:'کێک تایگەر',description:'12 عەدەد',price:2500,image:'kek/photo_28_2026-02-20_22-41-44.jpg',category:'cake'},
-    {id:'cake-031',name:'کێک رۆز جەلی',description:'24 عەدەد',price:4750,image:'kek/photo_29_2026-02-20_22-41-44.jpg',category:'cake'},
-    {id:'cake-032',name:'تۆپ کێک',description:'24 عەدەد',price:4750,image:'kek/photo_30_2026-02-20_22-41-44.jpg',category:'cake'},
-    {id:'gaz-001',name:'ویتان',description:'24 عەدەد',price:5250,image:'gaz/IMG_0215.jpeg',category:'gaz'},
-    {id:'gaz-002',name:'تایکۆی شەسی',description:'24 عەدەد',price:4500,image:'gaz/IMG_0216.jpeg',category:'gaz'},
-    {id:'gaz-003',name:'دایجستۆ',description:'24 عەدەد',price:5000,image:'gaz/IMG_0217.jpeg',category:'gaz'},
-    {id:'gaz-004',name:'پاپڵی گەورە',description:'40 عەدەد',price:9000,image:'gaz/IMG_0218.jpeg',category:'gaz'},
-    {id:'gaz-005',name:'وایفەر ئەزرا',description:'24 عەدەد',price:5250,image:'gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (2).jpeg',category:'gaz'},
-    {id:'gaz-006',name:'کەزی لامیا',description:'24 عەدەد',price:5000,image:'gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (1).jpeg',category:'gaz'},
-    {id:'gaz-007',name:'پاپڵ',description:'24 عەدەد',price:5250,image:'gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (3).jpeg',category:'gaz'},
-    {id:'gaz-008',name:'پاڵشتی',description:'80 عەدەد',price:7500,image:'gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (4).jpeg',category:'gaz'},
-    {id:'gaz-009',name:'ناستەلەی نانی',description:'24 عەدەد',price:2500,image:'gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (5).jpeg',category:'gaz'},
-    {id:'gaz-010',name:'ستار مۆز',description:'40 عەدەد',price:8000,image:'gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (6).jpeg',category:'gaz'},
-    {id:'gaz-011',name:'ستار شلیک',description:'40 عەدەد',price:8000,image:'gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (7).jpeg',category:'gaz'},
-    {id:'gaz-012',name:'ستار پرتەقاڵ',description:'40 عەدەد',price:8000,image:'gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (8).jpeg',category:'gaz'},
-    {id:'gaz-013',name:'بسکیتی ترد',description:'40 عەدەد',price:7500,image:'gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (9).jpeg',category:'gaz'},
-    {id:'gaz-014',name:'چیلکەی دوانی',description:'24 عەدەد',price:5000,image:'gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM.jpeg',category:'gaz'},
-    {id:'gaz-015',name:'وایفەر ئەزرا شلیک',description:'24 عەدەد',price:5000,image:'gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (1).jpeg',category:'gaz'},
-    {id:'gaz-016',name:'وایفەر ئەزرا مۆز',description:'24 عەدەد',price:5000,image:'gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (2).jpeg',category:'gaz'},
-    {id:'gaz-017',name:'وایفەر ئەزرا پرتەقاڵ',description:'24 عەدەد',price:5000,image:'gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM.jpeg',category:'gaz'},
-    {id:'gaz-018',name:'شیرین عەسەل مۆز',description:'40 عەدەد',price:8000,image:'gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (3).jpeg',category:'gaz'},
-    {id:'gaz-019',name:'بسکت پیتی پور وار',description:'24 عەدەد',price:5000,image:'gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (4).jpeg',category:'gaz'},
-    {id:'gaz-020',name:'تایستێلی قاوە',description:'48 عەدەد',price:5000,image:'gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (5).jpeg',category:'gaz'},
-    {id:'gaz-021',name:'چلکەی دوانی',description:'60 عەدەد',price:6500,image:'gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (6).jpeg',category:'gaz'},
-    {id:'gaz-022',name:'ویکی دوانی',description:'60 عەدەد',price:11500,image:'gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (7).jpeg',category:'gaz'},
-    {id:'gaz-023',name:'ویکی گەورە',description:'60 عەدەد',price:6500,image:'gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (8).jpeg',category:'gaz'},
-    {id:'gaz-024',name:'شەمائیڵ',description:'12 عەدەد',price:2500,image:'gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (9).jpeg',category:'gaz'},
-    {id:'gaz-025',name:'بسکیتی دەموو چاو',description:'24 عەدەد',price:5250,image:'gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (10).jpeg',category:'gaz'},
-    {id:'gaz-026',name:'بسکیتی کالیتی',description:'24 عەدەد',price:4750,image:'gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (11).jpeg',category:'gaz'},
-    {id:'gaz-027',name:'بورادا',description:'32 عەدەد',price:6250,image:'gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (12).jpeg',category:'gaz'},
-    {id:'gaz-028',name:'شەوائیل',description:'60 عەدەد',price:6500,image:'gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (15).jpeg',category:'gaz'},
-    {id:'gaz-029',name:'هایبای',description:'40 عەدەد',price:8000,image:'gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (16).jpeg',category:'gaz'},
-    {id:'gaz-030',name:'هەپی عادی',description:'24 عەدەد',price:4500,image:'gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (17).jpeg',category:'gaz'},
-    {id:'gaz-031',name:'ستاکی شەفاف 500',description:'40 عەدەد',price:10000,image:'gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (18).jpeg',category:'gaz'},
-    {id:'gaz-032',name:'پاڵشتی دوانی',description:'80 عەدەد',price:7500,image:'gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (18).jpeg',category:'gaz'},
-    {id:'gaz-033',name:'مەڕەکان',description:'24 عەدەد',price:4750,image:'gaz/WhatsApp Image 2026-02-20 at 10.03.27 PM.jpeg',category:'gaz'},
-    {id:'drink-001',name:'ئاوی دەبە',description:'12 عەدەد',price:750,image:'sardy/IMG_0188.jpeg',category:'drink'},
-    {id:'drink-002',name:'ئاوی کارتۆن',description:'60 عەدەد',price:1500,image:'sardy/IMG_0189.jpeg',category:'drink'},
-    {id:'drink-003',name:'پیپسی سلڤەر',description:'30 عەدەد',price:6500,image:'sardy/IMG_6192.jpeg',category:'drink'},
-    {id:'drink-004',name:'پیپسی شین',description:'30 عەدەد',price:6500,image:'sardy/IMG_6193.jpeg',category:'drink'},
-    {id:'drink-005',name:'میرندا',description:'30 عەدەد',price:6500,image:'sardy/IMG_6194.jpeg',category:'drink'},
-    {id:'drink-006',name:'دیو',description:'30 عەدەد',price:6500,image:'sardy/IMG_6195.jpeg',category:'drink'},
-    {id:'drink-007',name:'ڕاجی قۆخ',description:'24 عەدەد',price:5000,image:'sardy/IMG_6196.jpeg',category:'drink'},
-    {id:'drink-008',name:'ڕانی قتو',description:'24 عەدەد',price:9750,image:'sardy/IMG_6197.jpeg',category:'drink'},
-    {id:'drink-009',name:'ڕانی شوشە',description:'24 عەدەد',price:9750,image:'sardy/IMG_6220.jpeg',category:'drink'},
-    {id:'drink-010',name:'لالە شین',description:'30 عەدەد',price:6000,image:'sardy/IMG_6198.jpeg',category:'drink'},
-    {id:'drink-011',name:'لالە دیو',description:'30 عەدەد',price:6000,image:'sardy/IMG_6199.jpeg',category:'drink'},
-    {id:'drink-012',name:'دیقی قەڵەو',description:'30 عەدەد',price:10000,image:'sardy/IMG_6200.jpeg',category:'drink'},
-    {id:'drink-013',name:'پیپسی قەڵەو',description:'30 عەدەد',price:10000,image:'sardy/IMG_6201.jpeg',category:'drink'},
-    {id:'drink-014',name:'تازجی قتو قۆخ',description:'30 عەدەد',price:6500,image:'sardy/IMG_6202.jpeg',category:'drink'},
-    {id:'drink-015',name:'تازجی قتو پرتەقاڵ',description:'30 عەدەد',price:6500,image:'sardy/IMG_6203.jpeg',category:'drink'},
-    {id:'drink-016',name:'تازجی قتو هەنار',description:'30 عەدەد',price:6500,image:'sardy/IMG_6204.jpeg',category:'drink'},
-    {id:'drink-017',name:'RC شوشە ڕەش',description:'30 عەدەد',price:6500,image:'sardy/IMG_6205.jpeg',category:'drink'},
-    {id:'drink-018',name:'RC شوشە پرتەقاڵ',description:'24 عەدەد',price:6500,image:'sardy/IMG_6219.jpeg',category:'drink'},
-    {id:'drink-019',name:'سااردی بەغدادی',description:'30 عەدەد',price:6500,image:'sardy/IMG_6206.jpeg',category:'drink'},
-    {id:'drink-020',name:'پیپسی شوشە',description:'24 عەدەد',price:9750,image:'sardy/IMG_6207.jpeg',category:'drink'},
-    {id:'drink-021',name:'دیوی شوشە',description:'24 عەدەد',price:9750,image:'sardy/IMG_6208.jpeg',category:'drink'},
-    {id:'drink-022',name:'زەمزەمی شوشە ڕەش',description:'24 عەدەد',price:10000,image:'sardy/IMG_6209.jpeg',category:'drink'},
-    {id:'drink-023',name:'زەمزەمی شوشە پرتەقاڵ',description:'24 عەدەد',price:10000,image:'sardy/IMG_6210.jpeg',category:'drink'},
-    {id:'drink-024',name:'زەمزەم شوشە لیمۆ',description:'12 عەدەد',price:5000,image:'sardy/IMG_6218.jpeg',category:'drink'},
-    {id:'drink-025',name:'ئاسان شین',description:'24 عەدەد',price:9750,image:'sardy/IMG_6211.jpeg',category:'drink'},
-    {id:'drink-026',name:'ئاسان مۆر',description:'24 عەدەد',price:9750,image:'sardy/IMG_6212.jpeg',category:'drink'},
-    {id:'drink-027',name:'تایگەری تام پەمەی',description:'24 عەدەد',price:5000,image:'sardy/IMG_6213.jpeg',category:'drink'},
-    {id:'drink-028',name:'تام شین',description:'24 عەدەد',price:5000,image:'sardy/IMG_6238.jpeg',category:'drink'},
-    {id:'drink-029',name:'وینەر گەورە',description:'24 عەدەد',price:9500,image:'sardy/IMG_6214.jpeg',category:'drink'},
-    {id:'drink-030',name:'وینەر بچوک',description:'24 عەدەد',price:5250,image:'sardy/IMG_6215.jpeg',category:'drink'},
-    {id:'drink-031',name:'سۆدەی فروتلی',description:'24 عەدەد',price:8250,image:'sardy/IMG_6216.jpeg',category:'drink'},
-    {id:'drink-032',name:'سۆدەی مستەر',description:'24 عەدەد',price:5500,image:'sardy/IMG_6217.jpeg',category:'drink'},
-    {id:'drink-033',name:'شەربەتی تۆ شلک',description:'12 عەدەد',price:5000,image:'sardy/IMG_6221.jpeg',category:'drink'},
-    {id:'drink-034',name:'شەربەتی تۆ کاڵەک',description:'12 عەدەد',price:5000,image:'sardy/IMG_6222.jpeg',category:'drink'},
-    {id:'drink-035',name:'شەربەتی تۆ بلوبێری',description:'12 عەدەد',price:5000,image:'sardy/IMG_6223.jpeg',category:'drink'},
-    {id:'drink-036',name:'شەربەتی تۆ پرتەقاڵ',description:'12 عەدەد',price:5000,image:'sardy/IMG_6224.jpeg',category:'drink'},
-    {id:'drink-037',name:'شەربەتی تۆ ئەنەناس',description:'12 عەدەد',price:5000,image:'sardy/IMG_6225.jpeg',category:'drink'},
-    {id:'drink-038',name:'سۆدەی مستار',description:'24 عەدەد',price:10000,image:'sardy/IMG_6226.jpeg',category:'drink'},
-    {id:'drink-039',name:'ساردی تورکی پرتەقاڵ',description:'24 عەدەد',price:9500,image:'sardy/IMG_6227.jpeg',category:'drink'},
-    {id:'drink-040',name:'تازج شوشە هەنار',description:'24 عەدەد',price:9500,image:'sardy/IMG_6228.jpeg',category:'drink'},
-    {id:'drink-041',name:'تازج شوشە قۆخ',description:'24 عەدەد',price:9500,image:'sardy/IMG_6229.jpeg',category:'drink'},
-    {id:'drink-042',name:'تازج شوشە پرتەقاڵ',description:'24 عەدەد',price:9500,image:'sardy/IMG_6230.jpeg',category:'drink'},
-    {id:'drink-043',name:'تازج شوشە گێزەر',description:'24 عەدەد',price:9500,image:'sardy/IMG_6231.jpeg',category:'drink'},
-    {id:'drink-044',name:'ماڵت جۆ',description:'24 عەدەد',price:10000,image:'sardy/IMG_6232.jpeg',category:'drink'},
-    {id:'drink-045',name:'ماڵت لیمۆ',description:'24 عەدەد',price:10000,image:'sardy/IMG_6233.jpeg',category:'drink'},
-    {id:'drink-046',name:'ماڵت قۆخ',description:'24 عەدەد',price:10000,image:'sardy/IMG_6234.jpeg',category:'drink'},
-    {id:'drink-047',name:'K9 پەمەی',description:'24 عەدەد',price:9500,image:'sardy/IMG_6235.jpeg',category:'drink'},
-    {id:'drink-048',name:'K9 شین',description:'24 عەدەد',price:9500,image:'sardy/IMG_6237.jpeg',category:'drink'},
-    {id:'drink-049',name:'تایگەر ئەسڵ',description:'24 عەدەد',price:21000,image:'sardy/IMG_6236.jpeg',category:'drink'},
-    {id:'drink-050',name:'دەبە سێڤن',description:'12 عەدەد',price:2250,image:'sardy/IMG_6239.jpeg',category:'drink'},
-    {id:'drink-051',name:'ساردی نیو',description:'12 عەدەد',price:2250,image:'sardy/IMG_6240.jpeg',category:'drink'},
-    {id:'drink-052',name:'ساردی K',description:'12 عەدەد',price:2250,image:'sardy/IMG_6241.jpeg',category:'drink'},
-    {id:'drink-053',name:'ئارسۆ تایگەر',description:'30 عەدەد',price:6500,image:'sardy/IMG_6242.jpeg',category:'drink'},
-    {id:'drink-054',name:'ئارسۆ پرتەقاڵ',description:'30 عەدەد',price:6500,image:'sardy/IMG_6243.jpeg',category:'drink'},
-    {id:'drink-055',name:'ئارسۆ لیمۆ',description:'30 عەدەد',price:6500,image:'sardy/IMG_6245.jpeg',category:'drink'},
-    {id:'drink-056',name:'ئارسۆ ئاوی',description:'30 عەدەد',price:6500,image:'sardy/IMG_6246.jpeg',category:'drink'},
-    {id:'drink-057',name:'ترابی',description:'24 عەدەد',price:9500,image:'sardy/IMG_6244.jpeg',category:'drink'},
-    {id:'drink-058',name:'تورکی ڕەش',description:'24 عەدەد',price:9500,image:'sardy/IMG_6247.jpeg',category:'drink'},
-    {id:'drink-059',name:'زاکی',description:'36 عەدەد',price:6000,image:'sardy/IMG_6248.jpeg',category:'drink'},
-    {id:'drink-060',name:'سەمناکی قۆخ',description:'36 عەدەد',price:3000,image:'sardy/IMG_6249.jpeg',category:'drink'},
-    {id:'drink-061',name:'تازجی پاکەت قۆخ',description:'36 عەدەد',price:4000,image:'sardy/IMG_6250.jpeg',category:'drink'},
-    {id:'drink-062',name:'تازجی پاکەت کۆکتێل',description:'36 عەدەد',price:4000,image:'sardy/IMG_6252.jpeg',category:'drink'},
-    {id:'drink-063',name:'تازجی پاکەت پرتەقاڵ',description:'36 عەدەد',price:4000,image:'sardy/IMG_6253.jpeg',category:'drink'},
-    {id:'drink-064',name:'کاڵبی مۆز',description:'36 عەدەد',price:8000,image:'sardy/IMG_6254.jpeg',category:'drink'},
-    {id:'drink-065',name:'کاڵبی شلک',description:'36 عەدەد',price:8000,image:'sardy/IMG_6255.jpeg',category:'drink'},
-    {id:'drink-066',name:'کاڵبی قاوە',description:'36 عەدەد',price:8000,image:'sardy/IMG_6256.jpeg',category:'drink'},
-    {id:'drink-067',name:'کاڵبی کاڵەک',description:'36 عەدەد',price:8000,image:'sardy/IMG_6257.jpeg',category:'drink'},
-    {id:'drink-068',name:'زۆزۆ پرتەقاڵ',description:'36 عەدەد',price:3250,image:'sardy/IMG_6258.jpeg',category:'drink'},
-    {id:'drink-069',name:'زۆزۆ ئەنەناش',description:'36 عەدەد',price:3250,image:'sardy/IMG_6259.jpeg',category:'drink'},
-    {id:'drink-070',name:'زۆزۆ کۆکتێل',description:'36 عەدەد',price:3250,image:'sardy/IMG_6260.jpeg',category:'drink'},
-    {id:'drink-071',name:'زۆزۆ ترێ',description:'36 عەدەد',price:3250,image:'sardy/IMG_6261.jpeg',category:'drink'},
-    {id:'drink-072',name:'زۆزۆ شلک',description:'36 عەدەد',price:3250,image:'sardy/IMG_6262.jpeg',category:'drink'},
-    {id:'drink-073',name:'زۆزۆ قۆخ',description:'36 عەدەد',price:3250,image:'sardy/IMG_6263.jpeg',category:'drink'},
-    {id:'drink-074',name:'زۆزۆ سێو',description:'36 عەدەد',price:3250,image:'sardy/IMG_6264.jpeg',category:'drink'},
-    {id:'drink-075',name:'مەکسیکی لیمۆ',description:'24 عەدەد',price:14500,image:'sardy/IMG_6265.jpeg',category:'drink'},
-    {id:'drink-076',name:'مەکسیکی شلک',description:'24 عەدەد',price:14500,image:'sardy/IMG_6266.jpeg',category:'drink'},
-    {id:'drink-077',name:'مەکسیکی مانگۆ',description:'24 عەدەد',price:14500,image:'sardy/IMG_6267.jpeg',category:'drink'},
-    {id:'drink-078',name:'مەکسیکی بوبی',description:'24 عەدەد',price:14500,image:'sardy/IMG_6268.jpeg',category:'drink'},
-    {id:'drink-079',name:'مەکسیکی هەنار',description:'24 عەدەد',price:14500,image:'sardy/IMG_6269.jpeg',category:'drink'},
-    {id:'drink-080',name:'مەکسیکی قاوە',description:'24 عەدەد',price:14500,image:'sardy/IMG_6270.jpeg',category:'drink'},
-    {id:'drink-081',name:'ڕێد',description:'24 عەدەد',price:9500,image:'sardy/IMG_6271.jpeg',category:'drink'},
-    {id:'drink-082',name:'پیپسی دەبڵ',description:'6 عەدەد',price:6500,image:'sardy/IMG_6272.jpeg',category:'drink'},
-    {id:'drink-083',name:'پیپسی 1000',description:'6 عەدەد',price:4500,image:'sardy/IMG_6274.jpeg',category:'drink'},
-    {id:'drink-084',name:'پیپسی وەصەت',description:'12 عەدەد',price:6500,image:'sardy/IMG_6275.jpeg',category:'drink'},
-    {id:'drink-085',name:'دیوی دەبڵ',description:'6 عەدەد',price:6500,image:'sardy/IMG_6276.jpeg',category:'drink'},
-    {id:'drink-086',name:'دیوی 1000',description:'6 عەدەد',price:4500,image:'sardy/IMG_6277.jpeg',category:'drink'},
-    {id:'drink-087',name:'دیوی وەصەت',description:'12 عەدەد',price:6500,image:'sardy/IMG_6278.jpeg',category:'drink'},
-    {id:'drink-088',name:'ئەفرا',description:'6 عەدەد',price:3000,image:'sardy/IMG_6279.jpeg',category:'drink'},
-    {id:'drink-089',name:'یەومی ڕەش',description:'6 عەدەد',price:3000,image:'sardy/IMG_6280.jpeg',category:'drink'},
-    {id:'drink-090',name:'زەمزامی پرتەقاڵ',description:'6 عەدەد',price:5500,image:'sardy/IMG_6281.jpeg',category:'drink'},
-    {id:'drink-091',name:'زاگرۆزی دیو',description:'12 عەدەد',price:2250,image:'sardy/IMG_6282.jpeg',category:'drink'},
-    {id:'drink-092',name:'زاگرۆزی لیمۆ',description:'12 عەدەد',price:2250,image:'sardy/IMG_6283.jpeg',category:'drink'},
-    {id:'drink-093',name:'زاگرۆزی شین',description:'12 عەدەد',price:2250,image:'sardy/IMG_6284.jpeg',category:'drink'},
-    {id:'drink-094',name:'دۆی بچوک',description:'16 عەدەد',price:3000,image:'sardy/IMG_6285.jpeg',category:'drink'},
-    {id:'drink-095',name:'شەربەتی بۆبۆتۆ',description:'24 عەدەد',price:4500,image:'sardy/IMG_6286.jpeg',category:'drink'},
-    {id:'drink-096',name:'شیر کاڵەکی دەبە',description:'24 عەدەد',price:4500,image:'sardy/IMG_6287.jpeg',category:'drink'},
-    {id:'chips-001',name:'کیش تەماتە 500',description:'24 عەدەد',price:9250,image:'jbs/IMG_0223.jpeg',category:'chips'},
-    {id:'chips-002',name:'کیش سرکە 500',description:'24 عەدەد',price:9250,image:'jbs/IMG_0224.jpeg',category:'chips'},
-    {id:'chips-003',name:'کیش بیبەر 500',description:'24 عەدەد',price:9250,image:'jbs/IMG_0225.jpeg',category:'chips'},
-    {id:'chips-004',name:'کیش سادە 500',description:'24 عەدەد',price:9250,image:'jbs/IMG_0226.jpeg',category:'chips'},
-    {id:'chips-005',name:'کیش لیمۆ 500',description:'24 عەدەد',price:9250,image:'jbs/IMG_0227.jpeg',category:'chips'},
-    {id:'chips-006',name:'کیش بیبەر 250',description:'48 عەدەد',price:9250,image:'jbs/photo_2_2026-02-20_22-38-05.jpg',category:'chips'},
-    {id:'chips-007',name:'کیش سادە 250',description:'48 عەدەد',price:9250,image:'jbs/photo_3_2026-02-20_22-38-05.jpg',category:'chips'},
-    {id:'chips-008',name:'کیش لیمۆ 250',description:'48 عەدەد',price:9250,image:'jbs/photo_4_2026-02-20_22-38-05.jpg',category:'chips'},
-    {id:'chips-009',name:'کیش سرکە 250',description:'48 عەدەد',price:9250,image:'jbs/photo_10_2026-02-20_22-38-05.jpg',category:'chips'},
-    {id:'chips-010',name:'لیزا کۆکتێل',description:'48 عەدەد',price:7500,image:'jbs/IMG_0206.jpeg',category:'chips'},
-    {id:'chips-011',name:'زەڕاتی شامی',description:'45 عەدەد',price:9000,image:'jbs/IMG_0207.jpeg',category:'chips'},
-    {id:'chips-012',name:'سناپ',description:'40 عەدەد',price:7500,image:'jbs/IMG_0208.jpeg',category:'chips'},
-    {id:'chips-013',name:'تیک تۆک',description:'40 عەدەد',price:7500,image:'jbs/IMG_0209.jpeg',category:'chips'},
-    {id:'chips-014',name:'نینی',description:'36 عەدەد',price:6750,image:'jbs/IMG_0219.jpeg',category:'chips'},
-    {id:'chips-015',name:'مانشی سپی 500',description:'24 عەدەد',price:9500,image:'jbs/IMG_0228.jpeg',category:'chips'},
-    {id:'chips-016',name:'مانشی زەرد 500',description:'24 عەدەد',price:9500,image:'jbs/IMG_0229.jpeg',category:'chips'},
-    {id:'chips-017',name:'مزمز چلکە سرکە',description:'48 عەدەد',price:9000,image:'jbs/IMG_0230.jpeg',category:'chips'},
-    {id:'chips-018',name:'لابوبو',description:'48 عەدەد',price:9000,image:'jbs/IMG_0232.jpeg',category:'chips'},
-    {id:'chips-019',name:'شامی دوانی',description:'60 عەدەد',price:6250,image:'jbs/photo_6_2026-02-20_22-38-05.jpg',category:'chips'},
-    {id:'chips-020',name:'عەڵقەی کەباب',description:'40 عەدەد',price:8000,image:'jbs/photo_7_2026-02-20_22-38-05.jpg',category:'chips'},
-    {id:'chips-021',name:'لوسی',description:'45 عەدەد',price:9500,image:'jbs/photo_9_2026-02-20_22-38-05.jpg',category:'chips'},
-    {id:'chips-022',name:'من و تۆ کیس',description:'22 عەدەد',price:4000,image:'jbs/photo_11_2026-02-20_22-38-05.jpg',category:'chips'},
-    {id:'chips-023',name:'لیزا',description:'40 عەدەد',price:7500,image:'jbs/photo_12_2026-02-20_22-38-05.jpg',category:'chips'},
-    {id:'chips-024',name:'بانو کیس',description:'22 عەدەد',price:4000,image:'jbs/photo_13_2026-02-20_22-38-05.jpg',category:'chips'},
-    {id:'chips-025',name:'مانچیس مۆر',description:'45 عەدەد',price:9500,image:'jbs/photo_14_2026-02-20_22-38-05.jpg',category:'chips'},
-    {id:'chips-026',name:'ئەمرەک',description:'48 عەدەد',price:9000,image:'jbs/photo_15_2026-02-20_22-38-05.jpg',category:'chips'},
-    {id:'chips-027',name:'عەڵقەی لیمۆ',description:'40 عەدەد',price:8000,image:'jbs/photo_16_2026-02-20_22-38-05.jpg',category:'chips'},
-    {id:'chips-028',name:'بوشاری دوانی',description:'40 عەدەد',price:4500,image:'jbs/photo_17_2026-02-20_22-38-05.jpg',category:'chips'},
-    {id:'chips-029',name:'مسک مریشک',description:'40 عەدەد',price:8000,image:'jbs/photo_18_2026-02-20_22-38-05.jpg',category:'chips'},
-    {id:'chips-030',name:'مسک سرکە',description:'40 عەدەد',price:8000,image:'jbs/photo_19_2026-02-20_22-38-05.jpg',category:'chips'},
-    {id:'chips-031',name:'مسک پەنیر',description:'40 عەدەد',price:8000,image:'jbs/photo_20_2026-02-20_22-38-05.jpg',category:'chips'},
-    {id:'chips-032',name:'مسک لیمۆ',description:'40 عەدەد',price:8000,image:'jbs/photo_21_2026-02-20_22-38-05.jpg',category:'chips'},
-    {id:'chips-033',name:'دانەن دانەی عایلەی',description:'24 عەدەد',price:8000,image:'jbs/photo_23_2026-02-20_22-38-05.jpg',category:'chips'},
-    {id:'chips-034',name:'دانە دانە پرتەقاڵ',description:'40 عەدەد',price:8000,image:'jbs/photo_8_2026-02-20_22-38-05.jpg',category:'chips'},
-    {id:'chips-035',name:'دانە دانە سور',description:'40 عەدەد',price:8000,image:'jbs/photo_22_2026-02-20_22-38-05.jpg',category:'chips'},
-    {id:'chips-036',name:'دانە دانە شین',description:'40 عەدەد',price:8000,image:'jbs/photo_24_2026-02-20_22-38-05.jpg',category:'chips'},
-    {id:'chips-037',name:'دانە دانە زەرد',description:'40 عەدەد',price:8000,image:'jbs/photo_25_2026-02-20_22-38-05.jpg',category:'chips'},
-    {id:'chips-038',name:'تۆرتێلا سەوز',description:'48 عەدەد',price:8500,image:'jbs/photo_26_2026-02-20_22-38-05.jpg',category:'chips'},
-    {id:'chips-039',name:'نینی لیمۆ',description:'36 عەدەد',price:7000,image:'jbs/photo_27_2026-02-20_22-38-05.jpg',category:'chips'},
-    {id:'chips-040',name:'نینی بوشار',description:'36 عەدەد',price:7000,image:'jbs/photo_28_2026-02-20_22-38-05.jpg',category:'chips'},
-    {id:'chips-041',name:'زەڕاتی پەرداخ',description:'40 عەدەد',price:8000,image:'jbs/photo_30_2026-02-20_22-38-05.jpg',category:'chips'},
-    {id:'chips-042',name:'تۆرتێلای شین',description:'48 عەدەد',price:9500,image:'jbs/photo_31_2026-02-20_22-38-05.jpg',category:'chips'},
-    {id:'chips-043',name:'مانشی سپی',description:'45 عەدەد',price:9500,image:'jbs/photo_32_2026-02-20_22-38-05.jpg',category:'chips'},
-    {id:'chips-044',name:'مانشی زەرد',description:'45 عەدەد',price:9500,image:'jbs/photo_33_2026-02-20_22-38-05.jpg',category:'chips'},
-    {id:'chips-045',name:'من من ڕان',description:'40 عەدەد',price:7500,image:'jbs/photo_34_2026-02-20_22-38-05.jpg',category:'chips'},
-    {id:'chips-046',name:'من من پیتزا',description:'40 عەدەد',price:7500,image:'jbs/photo_35_2026-02-20_22-38-05.jpg',category:'chips'},
-    {id:'chips-047',name:'بوشاری بانوو',description:'40 عەدەد',price:4500,image:'jbs/photo_36_2026-02-20_22-38-05.jpg',category:'chips'},
-    {id:'chips-048',name:'لابوبو دوانی',description:'48 عەدەد',price:9000,image:'jbs/photo_2026-02-20_22-39-15.jpg',category:'chips'},
-    {id:'baby-001',name:'تەمەرندی پاکان',description:'24 عەدەد',price:1000,image:'mnalan/photo_1_2026-02-21_00-54-52.jpg',category:'baby'},
-    {id:'baby-002',name:'پەشمەک سپی',description:'24 عەدەد',price:4750,image:'mnalan/photo_2_2026-02-21_00-54-52.jpg',category:'baby'},
-    {id:'baby-003',name:'قاوەی زۆۆ',description:'24 عەدەد',price:3500,image:'mnalan/photo_3_2026-02-21_00-54-52.jpg',category:'baby'},
-    {id:'baby-004',name:'کۆلا بۆن',description:'24 عەدەد',price:5000,image:'mnalan/photo_4_2026-02-21_00-54-52.jpg',category:'baby'},
-    {id:'baby-005',name:'تەمەرندی لول',description:'24 عەدەد',price:4750,image:'mnalan/photo_5_2026-02-21_00-54-52.jpg',category:'baby'},
-    {id:'baby-006',name:'نەستەلەی ئۆتۆن قاوە',description:'24 عەدەد',price:5250,image:'mnalan/photo_7_2026-02-21_00-54-52.jpg',category:'baby'},
-    {id:'baby-007',name:'نەستەلەی ئۆتۆن سپی',description:'24 عەدەد',price:5000,image:'mnalan/photo_17_2026-02-21_00-54-52.jpg',category:'baby'},
-    {id:'baby-008',name:'تەمەرندی تەخت',description:'48 عەدەد',price:2500,image:'mnalan/photo_8_2026-02-21_00-54-52.jpg',category:'baby'},
-    {id:'baby-009',name:'مەساسەی سوور عادی',description:'45 عەدەد',price:3000,image:'mnalan/photo_9_2026-02-21_00-54-52.jpg',category:'baby'},
-    {id:'baby-010',name:'مەساسەی دەبە کۆلا',description:'60 عەدەد',price:5000,image:'mnalan/photo_11_2026-02-21_00-54-52.jpg',category:'baby'},
-    {id:'baby-011',name:'مەساسەی دەبە گێلاس',description:'60 عەدەد',price:5000,image:'mnalan/photo_12_2026-02-21_00-54-52.jpg',category:'baby'},
-    {id:'baby-012',name:'مەساسەی دەبە ڕەش',description:'60 عەدەد',price:5000,image:'mnalan/photo_13_2026-02-21_00-54-52.jpg',category:'baby'},
-    {id:'baby-013',name:'مەساسەی ورد',description:'100 عەدەد',price:2000,image:'mnalan/photo_14_2026-02-21_00-54-52.jpg',category:'baby'},
-    {id:'baby-014',name:'مەساسەی دەبە شاتوو',description:'60 عەدەد',price:5000,image:'mnalan/photo_15_2026-02-21_00-54-52.jpg',category:'baby'},
-    {id:'baby-015',name:'نوقڵی ورد ئایدین',description:'24 عەدەد',price:5000,image:'mnalan/photo_16_2026-02-21_00-54-52.jpg',category:'baby'},
-    {id:'baby-016',name:'تەمەرندی ڕوڵ',description:'24 عەدەد',price:5000,image:'mnalan/photo_19_2026-02-21_00-54-52.jpg',category:'baby'},
-    {id:'baby-017',name:'نوقڵی ڕانا',description:'12 عەدەد',price:2250,image:'mnalan/photo_20_2026-02-21_00-54-52.jpg',category:'baby'},
-    {id:'baby-018',name:'چوکلێتی ئایدن',description:'100 عەدەد',price:2500,image:'mnalan/photo_21_2026-02-21_00-54-52.jpg',category:'baby'},
-    {id:'baby-019',name:'بنێشتی یوبی 100',description:'100 عەدەد',price:2500,image:'mnalan/photo_22_2026-02-21_00-54-52.jpg',category:'baby'},
-    {id:'baby-020',name:'تەمەرندی ڕستە',description:'12 عەدەد',price:2500,image:'mnalan/photo_24_2026-02-21_00-54-52.jpg',category:'baby'},
-    {id:'baby-021',name:'قاوەی زۆۆ ٢',description:'24 عەدەد',price:3500,image:'mnalan/photo_25_2026-02-21_00-54-52.jpg',category:'baby'},
-    {id:'baby-022',name:'سەمیریری',description:'24 عەدەد',price:3500,image:'mnalan/photo_26_2026-02-21_00-54-52.jpg',category:'baby'},
-    {id:'baby-023',name:'نوقڵی ئاناتا شیر',description:'24 عەدەد',price:5000,image:'mnalan/photo_27_2026-02-21_00-54-52.jpg',category:'baby'},
-    {id:'baby-024',name:'نەوقڵی ئاناتا قاوە',description:'24 عەدەد',price:5000,image:'mnalan/photo_28_2026-02-21_00-54-52.jpg',category:'baby'},
-    {id:'baby-025',name:'تەمەرندی سرنج',description:'24 عەدەد',price:4500,image:'mnalan/photo_29_2026-02-21_00-54-52.jpg',category:'baby'},
-    {id:'baby-026',name:'نەستەلەی بستە',description:'24 عەدەد',price:5000,image:'mnalan/photo_30_2026-02-21_00-54-52.jpg',category:'baby'},
-    {id:'family-001',name:'جکلیتی پۆپۆ',description:'8 عەدەد',price:12000,image:'aylay/photo_1_2026-02-20_22-54-38.jpg',category:'family'},
-    {id:'family-002',name:'نوقولی ورد',description:'20 عەدەد',price:18000,image:'aylay/photo_2_2026-02-20_22-54-38.jpg',category:'family'},
-    {id:'family-003',name:'وایفەر عایلە قاوە',description:'12 عەدەد',price:10000,image:'aylay/photo_3_2026-02-20_22-54-38.jpg',category:'family'},
-    {id:'family-004',name:'چەمەک مۆز',description:'12 عەدەد',price:10000,image:'aylay/photo_4_2026-02-20_22-54-38.jpg',category:'family'},
-    {id:'family-005',name:'چەمەکی قاوە',description:'12 عەدەد',price:10000,image:'aylay/photo_16_2026-02-20_22-54-38.jpg',category:'family'},
-    {id:'family-006',name:'چەمەکی گوێز',description:'12 عەدەد',price:10000,image:'aylay/photo_17_2026-02-20_22-54-38.jpg',category:'family'},
-    {id:'family-007',name:'نوقڵی مینۆ',description:'12 عەدەد',price:10000,image:'aylay/photo_7_2026-02-20_22-54-38.jpg',category:'family'},
-    {id:'family-008',name:'مادەر لاکێشە',description:'18 عەدەد',price:15000,image:'aylay/photo_9_2026-02-20_22-54-38.jpg',category:'family'},
-    {id:'family-009',name:'ئیسپانی عادی',description:'12 عەدەد',price:10000,image:'aylay/photo_10_2026-02-20_22-54-38.jpg',category:'family'},
-    {id:'family-010',name:'فینگەری عایلە',description:'12 عەدەد',price:10000,image:'aylay/photo_11_2026-02-20_22-54-38.jpg',category:'family'},
-    {id:'family-011',name:'بسكیتی چای سەوز',description:'12 عەدەد',price:8500,image:'aylay/photo_12_2026-02-20_22-54-38.jpg',category:'family'},
-    {id:'family-012',name:'پیتی پور عایلە',description:'12 عەدەد',price:10000,image:'aylay/photo_8_2026-02-20_22-54-38.jpg',category:'family'},
-    {id:'family-013',name:'پیتی پوری قاوە',description:'12 عەدەد',price:10000,image:'aylay/photo_13_2026-02-20_22-54-38.jpg',category:'family'},
-    {id:'family-014',name:'پیتی پور سادە',description:'12 عەدەد',price:10000,image:'aylay/photo_14_2026-02-20_22-54-38.jpg',category:'family'},
-    {id:'family-015',name:'ئاناتای بەڵەم',description:'8 عەدەد',price:11500,image:'aylay/photo_18_2026-02-20_22-54-38.jpg',category:'family'},
-];
 
 const catInfo = {
     cake:   {name:'کێک',         icon:'fa-cake-candles', color:'#f97316'},
@@ -774,6 +518,8 @@ const catInfo = {
 let currentProducts = [];
 let ghConfig = null;
 let confirmCb = null;
+let hasUnsavedChanges = false;
+let autoRefreshInterval = null;
 
 // ============================================================
 // دەستپێکردن
@@ -784,8 +530,93 @@ document.addEventListener('DOMContentLoaded', () => {
         const el = document.getElementById('clock');
         if (el) el.textContent = new Date().toLocaleTimeString('ar-IQ');
     }, 1000);
+
+    // ★ ئۆتۆ-ڕیستارت کاتێک لا دەگەڕێیتەوە
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+
+    // ★ ئۆتۆ-ڕیفرێش هەر ٣٠ چرکە
+    startAutoRefresh();
 });
 
+// ============================================================
+// ★ ئۆتۆ-ڕیستارت کاتێک لا دەگەڕێیتەوە
+// ============================================================
+function handleVisibilityChange() {
+    if (!document.hidden) {
+        // کاتێک دووبارە دێتە لاکە
+        const isLoggedIn = localStorage.getItem(SESSION_KEY) === 'true';
+        if (isLoggedIn && ghConfig) {
+            console.log('🔄 لا گەڕایەوە — نوێکردنەوەی کاڵاکان...');
+            showRefreshBar();
+            loadProductsFromGitHub().then(() => {
+                renderDash();
+                // ئەگەر لە پەیجی کاڵاکاندا بوو
+                if (document.getElementById('page-products').classList.contains('active')) {
+                    renderTable();
+                }
+                hideRefreshBar();
+                toast('کاڵاکان نوێکرانەوە ✓', 'success');
+            });
+        }
+    }
+}
+
+// ★ بارێکی سەرەوە نیشان بدە کاتی نوێکردنەوە
+let refreshBarEl = null;
+function showRefreshBar() {
+    if (refreshBarEl) return;
+    refreshBarEl = document.createElement('div');
+    refreshBarEl.className = 'refresh-bar';
+    refreshBarEl.innerHTML = '<i class="fas fa-sync-alt"></i> <span>نوێکردنەوەی کاڵاکان لە GitHub...</span>';
+    const firstPage = document.querySelector('.page.active');
+    if (firstPage) firstPage.insertBefore(refreshBarEl, firstPage.firstChild);
+}
+function hideRefreshBar() {
+    if (refreshBarEl) { refreshBarEl.remove(); refreshBarEl = null; }
+}
+
+// ★ ئۆتۆ-ڕیفرێش هەر ٣٠ چرکە (بەبێ گۆڕانکاری نەپاراستوو)
+function startAutoRefresh() {
+    if (autoRefreshInterval) clearInterval(autoRefreshInterval);
+    autoRefreshInterval = setInterval(() => {
+        if (!hasUnsavedChanges && !document.hidden && ghConfig && localStorage.getItem(SESSION_KEY) === 'true') {
+            loadProductsFromGitHub().then(() => {
+                renderDash();
+                if (document.getElementById('page-products').classList.contains('active')) {
+                    renderTable();
+                }
+            }).catch(() => {});
+        }
+    }, 30000); // هەر ٣٠ چرکە
+}
+
+// ★ نوێکردنەوەی دەستی
+async function manualRefresh() {
+    if (hasUnsavedChanges) {
+        showConfirm('نوێکردنەوە', 'گۆڕانکارییەکانت پاراستن نییە. ئایا دڵنیایت؟', async () => {
+            hasUnsavedChanges = false;
+            document.getElementById('publishBar').classList.remove('show');
+            await doRefresh();
+        });
+        return;
+    }
+    await doRefresh();
+}
+
+async function doRefresh() {
+    showLoad('نوێکردنەوەی کاڵاکان...');
+    await loadProductsFromGitHub();
+    hideLoad();
+    renderDash();
+    if (document.getElementById('page-products').classList.contains('active')) {
+        renderTable();
+    }
+    toast('کاڵاکان نوێکرانەوە ✓', 'success');
+}
+
+// ============================================================
+// GitHub Config
+// ============================================================
 function loadGhConfig() {
     try {
         const s = localStorage.getItem(GH_CONFIG_KEY);
@@ -824,6 +655,31 @@ function saveSetup() {
     }).catch(() => { hideLoad(); errEl.textContent = 'پەیوەندی نەتووانرا'; errEl.classList.add('show'); });
 }
 
+// ============================================================
+// ★★★ بارکردنی کاڵاکان لە GitHub (سەرەکی)
+// ============================================================
+async function loadProductsFromGitHub() {
+    if (!ghConfig) return;
+    try {
+        const {username, repo} = ghConfig;
+        const url = `https://raw.githubusercontent.com/${username}/${repo}/main/products.json?v=${Date.now()}`;
+        const res = await fetch(url, { cache: 'no-store' });
+        if (res.ok) {
+            const data = await res.json();
+            currentProducts = Array.isArray(data) ? data.map(p => ({...p, hidden: p.hidden || false})) : [];
+            document.getElementById('navBadge').textContent = currentProducts.length;
+            updateChangesBadge();
+            return true;
+        }
+    } catch(e) {
+        console.warn('GitHub fetch کێشە:', e);
+    }
+    return false;
+}
+
+// ============================================================
+// چوونە ژوورەوە
+// ============================================================
 function getPass() { return localStorage.getItem(PASS_KEY) || DEFAULT_PASS; }
 
 function checkSession() {
@@ -850,64 +706,50 @@ function doLogout() {
     });
 }
 
-function showApp() {
+async function showApp() {
     document.getElementById('loginPage').classList.add('hidden');
     document.getElementById('mainApp').classList.add('show');
-    loadProducts(); renderDash(); updateGhStatus();
-}
-
-function loadProducts() {
-    try {
-        const s = localStorage.getItem(PRODUCTS_KEY);
-        currentProducts = s ? JSON.parse(s) : originalProducts.map(p => ({...p, hidden: false}));
-    } catch(e) {
-        currentProducts = originalProducts.map(p => ({...p, hidden: false}));
+    showLoad('بارکردنی کاڵاکان لە GitHub...');
+    const ok = await loadProductsFromGitHub();
+    hideLoad();
+    if (!ok) {
+        toast('نەتوانرا کاڵاکان بار بکرێن — پشکنینی پەیوەندی', 'error');
     }
-    document.getElementById('navBadge').textContent = currentProducts.length;
-    updateChangesBadge();
+    renderDash();
+    updateGhStatus();
 }
 
-function saveProducts() {
-    localStorage.setItem(PRODUCTS_KEY, JSON.stringify(currentProducts));
+// ============================================================
+// پاراستنی گۆڕانکاری
+// ============================================================
+function markUnsaved() {
+    hasUnsavedChanges = true;
     document.getElementById('publishBar').classList.add('show');
     updateChangesBadge();
     document.getElementById('navBadge').textContent = currentProducts.length;
 }
 
 function updateChangesBadge() {
-    let count = 0;
-    currentProducts.forEach(p => {
-        const o = originalProducts.find(x => x.id === p.id);
-        if (!o || p.name !== o.name || p.price !== o.price || p.description !== o.description || p.hidden) count++;
-    });
-    originalProducts.forEach(o => { if (!currentProducts.find(p => p.id === o.id)) count++; });
     const b = document.getElementById('changesBadge');
-    if (count > 0) { b.classList.add('show'); document.getElementById('changesNum').textContent = count; }
-    else { b.classList.remove('show'); }
+    if (hasUnsavedChanges) {
+        b.classList.add('show');
+        document.getElementById('changesNum').textContent = '!';
+    } else {
+        b.classList.remove('show');
+    }
 }
 
 // ============================================================
-// ★★★ PUBLISH — تەنها products.json بنێرێت ★★★
-// ئەمە چارەسەری ١٠٠٪ کێشەی encoding کوردییە
-// JSON.stringify خۆی نووسینی کوردی ڕاست دەپارێزێت
+// ★★★ PUBLISH — ناردن بۆ GitHub
 // ============================================================
 async function publishJSON() {
     if (!ghConfig) { toast('GitHub ڕێکنەخراوە!', 'error'); return; }
-
     showLoad('ئامادەکردنی داتا...');
-
     try {
         const {token, username, repo} = ghConfig;
-
-        // تەنها کاڵاکانی نیشاندراو
         const visible = currentProducts.filter(p => !p.hidden);
-
-        // JSON بۆ بنێرین — ناوی کوردی ١٠٠٪ ڕاست دەمێنێت
         const jsonContent = JSON.stringify(visible, null, 2);
 
-        // ══════════════════════════════════════════════
-        // base64 کردن بە ڕێگەی ڕاست — بۆ UTF-8 کوردی
-        // ══════════════════════════════════════════════
         function toBase64(str) {
             const bytes = new TextEncoder().encode(str);
             let bin = '';
@@ -917,20 +759,14 @@ async function publishJSON() {
             return btoa(bin);
         }
 
-        // SHA خوێندنەوە (ئەگەر فایلەکە بوو)
         document.getElementById('loadingText').textContent = 'خوێندنەوەی SHA...';
         let sha = null;
         const getRes = await fetch(
             `https://api.github.com/repos/${username}/${repo}/contents/products.json`,
             { headers: {'Authorization': `token ${token}`, 'Accept': 'application/vnd.github.v3+json'} }
         );
-        if (getRes.ok) {
-            const d = await getRes.json();
-            sha = d.sha;
-        }
-        // ئەگەر فایلەکە نەبوو (status 404) — بە تازە دروستی دەکەین
+        if (getRes.ok) { const d = await getRes.json(); sha = d.sha; }
 
-        // ناردن بۆ GitHub
         document.getElementById('loadingText').textContent = 'ناردن بۆ GitHub...';
         const body = {
             message: `✅ کاڵاکان نوێکرانەوە — ${visible.length} کاڵا`,
@@ -953,18 +789,17 @@ async function publishJSON() {
 
         if (putRes.ok) {
             hideLoad();
+            hasUnsavedChanges = false;
             document.getElementById('publishBar').classList.remove('show');
-            toast(`✅ products.json بڵاوکرایەوە! ${visible.length} کاڵا — ناوەکانیشی ڕاستن`, 'success');
-            // ❌ localStorage نادەسڕێتەوە — داتا دەمێنێت
+            updateChangesBadge();
+            toast(`✅ بڵاوکرایەوە! ${visible.length} کاڵا`, 'success');
         } else {
             const err = await putRes.json();
             throw new Error(err.message || 'کێشە لە ناردن');
         }
-
     } catch(e) {
         hideLoad();
         toast('کێشە: ' + e.message, 'error');
-        console.error(e);
     }
 }
 
@@ -988,7 +823,7 @@ function renderDash() {
 }
 
 // ============================================================
-// کاڵاکان — لیست و گۆڕینی
+// کاڵاکان — لیست
 // ============================================================
 function showPage(id, btn) {
     document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
@@ -1058,7 +893,7 @@ function saveEdit() {
         description: document.getElementById('editDesc').value.trim(),
         image:       document.getElementById('editImage').value.trim()
     };
-    saveProducts(); closeEdit(); renderTable(); renderDash();
+    markUnsaved(); closeEdit(); renderTable(); renderDash();
     toast('کاڵاکە نوێکرایەوە ✓', 'success');
 }
 
@@ -1066,14 +901,14 @@ function toggleProd(id) {
     const p = currentProducts.find(x => x.id === id);
     if (!p) return;
     p.hidden = !p.hidden;
-    saveProducts(); renderTable(); renderDash();
+    markUnsaved(); renderTable(); renderDash();
     toast(p.hidden ? 'شاراوەکرا' : 'نیشاندرا', 'info');
 }
 
 function delProd(id) {
     showConfirm('سڕینەوەی کاڵا', 'دڵنیایت؟ گەڕانەوەی نییە.', () => {
         currentProducts = currentProducts.filter(x => x.id !== id);
-        saveProducts(); renderTable(); renderDash();
+        markUnsaved(); renderTable(); renderDash();
         toast('سڕایەوە ✓', 'success');
     });
 }
@@ -1086,8 +921,13 @@ function addProduct() {
     const img   = document.getElementById('newImage').value.trim();
     if (!name)  { toast('ناوی کاڵاکە بنووسە!', 'error'); return; }
     if (!price) { toast('نرخ بنووسە!', 'error'); return; }
-    currentProducts.push({id: cat + '-' + Date.now(), name, description: desc, price, image: img || 'placeholder.jpg', category: cat, hidden: false});
-    saveProducts(); renderDash();
+    currentProducts.push({
+        id: cat + '-' + Date.now(),
+        name, description: desc, price,
+        image: img || 'placeholder.jpg',
+        category: cat, hidden: false
+    });
+    markUnsaved(); renderDash();
     toast('کاڵای نوێ زیادکرا ✓', 'success');
     clearAdd();
 }
@@ -1141,10 +981,15 @@ function checkStrength() {
     if (!v) { b.style.background = 'var(--border)'; return; }
     b.style.background = v.length < 6 ? '#ef4444' : v.length < 10 ? '#eab308' : '#22c55e';
 }
-function doReset() {
-    showConfirm('گەڕانەوەی سەرەکی', 'هەموو گۆڕانکارییەکان دەسڕێتەوە، دڵنیایت؟', () => {
-        localStorage.removeItem(PRODUCTS_KEY); loadProducts(); renderDash();
+async function doReset() {
+    showConfirm('گەڕانەوەی سەرەکی', 'هەموو گۆڕانکارییەکان دەسڕێتەوە، دڵنیایت؟', async () => {
+        hasUnsavedChanges = false;
+        showLoad('بارکردنەوە لە GitHub...');
+        await loadProductsFromGitHub();
+        hideLoad();
+        renderDash();
         document.getElementById('publishBar').classList.remove('show');
+        updateChangesBadge();
         toast('گەڕانەوە ئەنجامدرا ✓', 'info');
     });
 }
