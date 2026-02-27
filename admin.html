@@ -123,11 +123,11 @@ tr:last-child td{border-bottom:none}
 tr:hover td{background:rgba(255,255,255,0.02)}
 .p-name{display:flex;align-items:center;gap:12px}
 
-/* ★★★ وێنەی کاڵا لە تەیبڵ */
-.p-thumb{width:48px;height:48px;border-radius:10px;background:rgba(249,115,22,0.1);display:flex;align-items:center;justify-content:center;color:var(--primary);font-size:18px;overflow:hidden;cursor:pointer;transition:all .3s;border:2px solid transparent;flex-shrink:0}
+.p-thumb{width:48px;height:48px;border-radius:10px;background:rgba(249,115,22,0.08);display:flex;align-items:center;justify-content:center;color:var(--text3);font-size:18px;overflow:visible;cursor:pointer;transition:all .3s;border:2px solid transparent;flex-shrink:0;position:relative}
+.p-thumb.has-img{background:rgba(249,115,22,0.12);color:var(--primary);cursor:zoom-in}
 .p-thumb:hover{border-color:var(--primary);transform:scale(1.08);box-shadow:0 4px 16px rgba(249,115,22,0.3)}
-.p-thumb img{width:100%;height:100%;object-fit:cover;border-radius:8px}
 .p-thumb .no-img{display:flex;align-items:center;justify-content:center;width:100%;height:100%}
+.img-dot{position:absolute;top:-3px;left:-3px;width:10px;height:10px;background:#4ade80;border-radius:50%;border:2px solid var(--bg2);}
 
 .p-title{font-weight:600;color:white}
 .p-id{font-size:11px;color:var(--text3)}
@@ -569,11 +569,14 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // ★★★ IMAGE PREVIEW FUNCTIONS
+// Cache بۆ وێنەکان — دووجار بار ناکرێن
+const imgCache = {};
+
 function getImgUrl(imgPath) {
     if (!imgPath || imgPath === 'placeholder.jpg' || !ghConfig) return null;
     if (imgPath.startsWith('http')) return imgPath;
     const {username, repo} = ghConfig;
-    return `https://raw.githubusercontent.com/${username}/${repo}/main/${imgPath}?v=${Date.now()}`;
+    return `https://raw.githubusercontent.com/${username}/${repo}/main/${imgPath}`;
 }
 
 function openImgPreview(prodId) {
@@ -588,21 +591,35 @@ function openImgPreview(prodId) {
     pathEl.textContent = p.image || 'وێنەی نییە';
 
     const url = getImgUrl(p.image);
-    if (url) {
-        content.innerHTML = `<div class="img-loading"><div class="spinner"></div></div>`;
-        const img = new Image();
-        img.onload = () => {
-            content.innerHTML = `<img class="img-preview-img" src="${url}" alt="${p.name}">`;
-        };
-        img.onerror = () => {
-            content.innerHTML = `<div class="img-err"><i class="fas fa-image-slash"></i><div>وێنەکە نەدۆزرایەوە</div><div style="font-size:11px;color:var(--text3);margin-top:4px;direction:ltr">${p.image}</div></div>`;
-        };
-        img.src = url;
-    } else {
+    if (!url) {
         content.innerHTML = `<div class="img-preview-no"><i class="fas fa-image"></i><div>وێنەی نییە</div></div>`;
+        modal.classList.add('open');
+        document.body.style.overflow = 'hidden';
+        return;
     }
+
+    // ئەگەر پێشتر بارکراوە cache بەکاربێنە
+    if (imgCache[url]) {
+        content.innerHTML = `<img class="img-preview-img" src="${imgCache[url]}" alt="${p.name}">`;
+        modal.classList.add('open');
+        document.body.style.overflow = 'hidden';
+        return;
+    }
+
+    // Lazy Load — تەنها ئێستا بار دەکرێت
+    content.innerHTML = `<div class="img-loading"><div class="spinner"></div></div>`;
     modal.classList.add('open');
     document.body.style.overflow = 'hidden';
+
+    const img = new Image();
+    img.onload = () => {
+        imgCache[url] = url; // cache بکە
+        content.innerHTML = `<img class="img-preview-img" src="${url}" alt="${p.name}">`;
+    };
+    img.onerror = () => {
+        content.innerHTML = `<div class="img-err"><i class="fas fa-image-slash"></i><div>وێنەکە نەدۆزرایەوە</div><div style="font-size:11px;color:var(--text3);margin-top:4px;direction:ltr">${p.image}</div></div>`;
+    };
+    img.src = url;
 }
 
 function closeImgPreview(e) {
@@ -611,13 +628,14 @@ function closeImgPreview(e) {
     document.body.style.overflow = '';
 }
 
-// ★ Thumb HTML — وێنەی بچووک لە تەیبڵ
+// ★ Thumb HTML — ئایکۆنی کلیک (بەبێ بارکردنی وێنە لە تەیبڵ)
+// وێنەکان تەنها کاتی کلیک لە Modal بار دەبن
 function thumbHtml(p) {
-    const url = getImgUrl(p.image);
-    if (url) {
-        return `<div class="p-thumb" onclick="openImgPreview('${p.id}')" title="کلیک بکە بۆ بینینی وێنە"><img src="${url}" alt="${p.name}" onerror="this.parentNode.innerHTML='<div class=\\'no-img\\'><i class=\\'fas fa-image\\'></i></div>'"></div>`;
-    }
-    return `<div class="p-thumb" onclick="openImgPreview('${p.id}')" title="وێنەی نییە" style="cursor:default"><div class="no-img"><i class="fas fa-image"></i></div></div>`;
+    const hasImg = p.image && p.image !== 'placeholder.jpg';
+    return `<div class="p-thumb${hasImg ? ' has-img' : ''}" onclick="openImgPreview('${p.id}')" title="${hasImg ? 'کلیک بکە بۆ بینینی وێنە' : 'وێنەی نییە'}">
+        <div class="no-img"><i class="fas ${hasImg ? 'fa-image' : 'fa-image-slash'}"></i></div>
+        ${hasImg ? '<div class="img-dot"></div>' : ''}
+    </div>`;
 }
 
 // ============================================================
