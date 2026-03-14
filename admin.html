@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>پانێلی ئەدمین — کۆگای ڕاستی</title>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;500;600;700;800;900&display=swap"
     rel="stylesheet">
@@ -27,7 +27,10 @@
       --radius: 14px;
       --radius-lg: 20px;
       --shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
-      --gradient: linear-gradient(135deg, #f97316, #f43f5e)
+      --gradient: linear-gradient(135deg, #f97316, #f43f5e);
+      --sidebar-w: 260px;
+      --topbar-h: 60px;
+      --bottom-nav-h: 64px;
     }
 
     *,
@@ -35,7 +38,8 @@
     *::after {
       margin: 0;
       padding: 0;
-      box-sizing: border-box
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent
     }
 
     html {
@@ -52,6 +56,33 @@
       -webkit-font-smoothing: antialiased
     }
 
+    /* BLOBS */
+    .blob {
+      position: fixed;
+      border-radius: 50%;
+      filter: blur(120px);
+      opacity: .2;
+      pointer-events: none;
+      z-index: 0
+    }
+
+    .blob1 {
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(249, 115, 22, .6), transparent);
+      top: -100px;
+      right: -100px
+    }
+
+    .blob2 {
+      width: 350px;
+      height: 350px;
+      background: radial-gradient(circle, rgba(244, 63, 94, .5), transparent);
+      bottom: -100px;
+      left: -100px
+    }
+
+    /* SETUP PAGE */
     .setup-page {
       position: fixed;
       inset: 0;
@@ -68,30 +99,6 @@
       display: none
     }
 
-    .blob {
-      position: absolute;
-      border-radius: 50%;
-      filter: blur(100px);
-      opacity: .35;
-      pointer-events: none
-    }
-
-    .blob1 {
-      width: 500px;
-      height: 500px;
-      background: radial-gradient(circle, rgba(249, 115, 22, .5), transparent);
-      top: -100px;
-      right: -100px
-    }
-
-    .blob2 {
-      width: 400px;
-      height: 400px;
-      background: radial-gradient(circle, rgba(244, 63, 94, .4), transparent);
-      bottom: -100px;
-      left: -100px
-    }
-
     .setup-box {
       position: relative;
       z-index: 1;
@@ -99,7 +106,7 @@
       backdrop-filter: blur(30px);
       border: 1px solid rgba(255, 255, 255, 0.1);
       border-radius: var(--radius-lg);
-      padding: 40px 32px;
+      padding: 32px 24px;
       width: 100%;
       max-width: 480px;
       box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
@@ -108,25 +115,25 @@
 
     .setup-logo {
       text-align: center;
-      margin-bottom: 28px
+      margin-bottom: 24px
     }
 
     .setup-logo-icon {
-      width: 72px;
-      height: 72px;
+      width: 68px;
+      height: 68px;
       background: var(--gradient);
       border-radius: 20px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 30px;
+      font-size: 28px;
       color: white;
-      margin: 0 auto 14px;
+      margin: 0 auto 12px;
       box-shadow: 0 8px 30px rgba(249, 115, 22, 0.4)
     }
 
     .setup-logo h1 {
-      font-size: 22px;
+      font-size: 20px;
       font-weight: 800;
       background: var(--gradient);
       -webkit-background-clip: text;
@@ -134,7 +141,7 @@
     }
 
     .setup-logo p {
-      font-size: 13px;
+      font-size: 12px;
       color: var(--text2);
       margin-top: 4px
     }
@@ -143,15 +150,15 @@
       background: rgba(249, 115, 22, 0.06);
       border: 1px solid rgba(249, 115, 22, 0.15);
       border-radius: var(--radius);
-      padding: 16px;
-      margin-bottom: 16px
+      padding: 14px;
+      margin-bottom: 14px
     }
 
     .setup-step-title {
-      font-size: 13px;
+      font-size: 12px;
       font-weight: 700;
       color: var(--primary);
-      margin-bottom: 8px;
+      margin-bottom: 6px;
       display: flex;
       align-items: center;
       gap: 8px
@@ -160,11 +167,11 @@
     .setup-step-text {
       font-size: 12px;
       color: var(--text2);
-      line-height: 1.9
+      line-height: 2
     }
 
     .field {
-      margin-bottom: 14px;
+      margin-bottom: 12px;
       position: relative
     }
 
@@ -172,14 +179,13 @@
       display: block;
       font-size: 13px;
       color: var(--text2);
-      margin-bottom: 7px;
+      margin-bottom: 6px;
       font-weight: 500
     }
 
-    .field input,
-    .field select {
+    .field input {
       width: 100%;
-      padding: 13px 16px 13px 42px;
+      padding: 13px 16px 13px 44px;
       background: rgba(255, 255, 255, 0.06);
       border: 1px solid var(--border);
       border-radius: var(--radius);
@@ -190,8 +196,7 @@
       direction: ltr
     }
 
-    .field input:focus,
-    .field select:focus {
+    .field input:focus {
       outline: none;
       border-color: var(--primary);
       background: rgba(249, 115, 22, 0.08)
@@ -199,12 +204,13 @@
 
     .field-icon {
       position: absolute;
-      left: 13px;
-      bottom: 13px;
+      left: 14px;
+      bottom: 14px;
       color: var(--text3);
       font-size: 14px
     }
 
+    /* LOGIN PAGE */
     .login-page {
       position: fixed;
       inset: 0;
@@ -227,7 +233,7 @@
       backdrop-filter: blur(30px);
       border: 1px solid rgba(255, 255, 255, 0.1);
       border-radius: var(--radius-lg);
-      padding: 40px 32px;
+      padding: 36px 28px;
       width: 100%;
       max-width: 400px;
       box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6)
@@ -235,7 +241,7 @@
 
     .login-logo {
       text-align: center;
-      margin-bottom: 32px
+      margin-bottom: 28px
     }
 
     .login-logo-icon {
@@ -281,7 +287,7 @@
 
     .login-field input {
       width: 100%;
-      padding: 14px 16px 14px 44px;
+      padding: 15px 16px 15px 44px;
       background: rgba(255, 255, 255, 0.06);
       border: 1px solid var(--border);
       border-radius: var(--radius);
@@ -300,14 +306,15 @@
     .login-field .field-icon {
       position: absolute;
       left: 14px;
-      bottom: 14px;
+      bottom: 15px;
       color: var(--text3);
       font-size: 15px
     }
 
+    /* BUTTONS */
     .btn-main {
       width: 100%;
-      padding: 15px;
+      padding: 16px;
       background: var(--gradient);
       border: none;
       border-radius: var(--radius);
@@ -321,12 +328,19 @@
       align-items: center;
       justify-content: center;
       gap: 8px;
-      margin-top: 8px
+      margin-top: 8px;
+      min-height: 52px
     }
 
     .btn-main:hover {
-      transform: translateY(-2px);
+      opacity: .92;
+      transform: translateY(-1px);
       box-shadow: 0 8px 25px rgba(249, 115, 22, 0.5)
+    }
+
+    .btn-main:active {
+      transform: translateY(0);
+      opacity: .85
     }
 
     .btn {
@@ -339,8 +353,13 @@
       font-size: 13px;
       font-weight: 600;
       cursor: pointer;
-      transition: all .3s;
-      border: none
+      transition: all .25s;
+      border: none;
+      min-height: 42px
+    }
+
+    .btn:active {
+      transform: scale(0.97)
     }
 
     .btn-primary {
@@ -349,8 +368,7 @@
     }
 
     .btn-primary:hover {
-      opacity: .9;
-      transform: translateY(-1px)
+      opacity: .9
     }
 
     .btn-secondary {
@@ -384,8 +402,9 @@
     }
 
     .btn-sm {
-      padding: 7px 12px;
-      font-size: 12px
+      padding: 8px 13px;
+      font-size: 12px;
+      min-height: 36px
     }
 
     .error-box {
@@ -404,17 +423,19 @@
       display: block
     }
 
+    /* APP LAYOUT */
     .app {
       display: none
     }
 
     .app.show {
-      display: flex;
+      display: block;
       min-height: 100vh
     }
 
+    /* SIDEBAR */
     .sidebar {
-      width: 240px;
+      width: var(--sidebar-w);
       background: var(--bg2);
       border-left: 1px solid var(--border);
       display: flex;
@@ -423,33 +444,35 @@
       top: 0;
       right: 0;
       bottom: 0;
-      z-index: 100;
-      transition: all .3s
+      z-index: 200;
+      transition: transform .3s cubic-bezier(.4, 0, .2, 1);
+      overflow-y: auto
     }
 
     .sidebar-logo {
-      padding: 20px;
+      padding: 18px;
       border-bottom: 1px solid var(--border);
       display: flex;
       align-items: center;
-      gap: 12px
+      gap: 12px;
+      flex-shrink: 0
     }
 
     .sidebar-logo-icon {
-      width: 44px;
-      height: 44px;
+      width: 42px;
+      height: 42px;
       background: var(--gradient);
       border-radius: 12px;
       display: flex;
       align-items: center;
       justify-content: center;
       color: white;
-      font-size: 18px;
+      font-size: 17px;
       flex-shrink: 0
     }
 
     .sidebar-logo-text {
-      font-size: 16px;
+      font-size: 15px;
       font-weight: 800;
       background: var(--gradient);
       -webkit-background-clip: text;
@@ -463,7 +486,7 @@
 
     .sidebar-nav {
       flex: 1;
-      padding: 16px 12px;
+      padding: 14px 10px;
       overflow-y: auto
     }
 
@@ -474,17 +497,17 @@
       letter-spacing: 1px;
       text-transform: uppercase;
       padding: 0 8px;
-      margin: 16px 0 8px
+      margin: 14px 0 6px
     }
 
     .nav-item {
       display: flex;
       align-items: center;
       gap: 12px;
-      padding: 11px 12px;
+      padding: 12px 12px;
       border-radius: 12px;
       cursor: pointer;
-      transition: all .25s;
+      transition: all .2s;
       color: var(--text2);
       font-size: 14px;
       font-weight: 500;
@@ -493,7 +516,8 @@
       background: none;
       width: 100%;
       font-family: inherit;
-      margin-bottom: 2px
+      margin-bottom: 2px;
+      min-height: 46px
     }
 
     .nav-item:hover {
@@ -510,7 +534,8 @@
     .nav-item i {
       width: 20px;
       text-align: center;
-      font-size: 15px
+      font-size: 15px;
+      flex-shrink: 0
     }
 
     .nav-badge {
@@ -524,27 +549,28 @@
     }
 
     .sidebar-footer {
-      padding: 16px;
-      border-top: 1px solid var(--border)
+      padding: 14px;
+      border-top: 1px solid var(--border);
+      flex-shrink: 0
     }
 
     .sidebar-user {
       display: flex;
       align-items: center;
       gap: 10px;
-      margin-bottom: 12px
+      margin-bottom: 10px
     }
 
     .user-avatar {
-      width: 38px;
-      height: 38px;
+      width: 36px;
+      height: 36px;
       background: var(--gradient);
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
       color: white;
-      font-size: 16px;
+      font-size: 15px;
       flex-shrink: 0
     }
 
@@ -580,60 +606,92 @@
       background: rgba(239, 68, 68, 0.2)
     }
 
+    /* MAIN */
     .main {
-      margin-right: 240px;
-      flex: 1;
+      margin-right: var(--sidebar-w);
       min-height: 100vh;
-      background: var(--bg)
+      background: var(--bg);
+      padding-top: var(--topbar-h)
     }
 
+    /* TOPBAR */
     .topbar {
       background: var(--bg2);
       border-bottom: 1px solid var(--border);
-      padding: 14px 24px;
+      padding: 0 20px;
+      height: var(--topbar-h);
       display: flex;
       align-items: center;
       justify-content: space-between;
-      position: sticky;
+      position: fixed;
       top: 0;
-      z-index: 50
+      left: 0;
+      right: var(--sidebar-w);
+      z-index: 100;
+      gap: 10px
     }
 
     .topbar-title {
-      font-size: 18px;
+      font-size: 17px;
       font-weight: 700;
-      color: white
+      color: white;
+      flex: 1;
+      min-width: 0;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis
     }
 
     .topbar-time {
-      font-size: 12px;
+      font-size: 11px;
       color: var(--text3);
       background: rgba(255, 255, 255, 0.03);
-      padding: 6px 12px;
+      padding: 5px 10px;
       border-radius: 50px;
-      border: 1px solid var(--border)
+      border: 1px solid var(--border);
+      white-space: nowrap;
+      flex-shrink: 0
     }
 
     .changes-badge {
       display: none;
       align-items: center;
-      gap: 6px;
-      padding: 6px 14px;
+      gap: 5px;
+      padding: 5px 12px;
       background: rgba(249, 115, 22, 0.12);
       border: 1px solid rgba(249, 115, 22, 0.25);
       border-radius: 50px;
-      font-size: 12px;
+      font-size: 11px;
       color: var(--primary);
-      font-weight: 600
+      font-weight: 600;
+      white-space: nowrap;
+      flex-shrink: 0
     }
 
     .changes-badge.show {
       display: flex
     }
 
+    .mobile-menu-btn {
+      display: none;
+      width: 40px;
+      height: 40px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      color: white;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 16px;
+      flex-shrink: 0
+    }
+
+    /* PAGES */
     .page {
       display: none;
-      padding: 24px
+      padding: 20px;
+      max-width: 100%
     }
 
     .page.active {
@@ -642,58 +700,65 @@
 
     .page-header {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       justify-content: space-between;
-      margin-bottom: 24px;
+      margin-bottom: 20px;
       flex-wrap: wrap;
-      gap: 12px
+      gap: 10px
     }
 
     .page-title {
-      font-size: 20px;
+      font-size: 19px;
       font-weight: 800;
       color: white
     }
 
     .page-sub {
-      font-size: 13px;
+      font-size: 12px;
       color: var(--text2);
       margin-top: 3px
     }
 
+    .page-header-actions {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      align-items: center
+    }
+
+    /* STATS */
     .stats-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 16px;
-      margin-bottom: 28px
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-bottom: 24px
     }
 
     .stat-card {
       background: var(--card);
       border: 1px solid var(--border);
       border-radius: var(--radius-lg);
-      padding: 20px;
+      padding: 16px;
       transition: all .3s
     }
 
     .stat-card:hover {
-      border-color: rgba(249, 115, 22, 0.3);
-      transform: translateY(-2px)
+      border-color: rgba(249, 115, 22, 0.3)
     }
 
     .stat-icon {
-      width: 44px;
-      height: 44px;
+      width: 40px;
+      height: 40px;
       border-radius: 12px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 18px
+      font-size: 17px
     }
 
     .stat-badge {
-      font-size: 11px;
-      padding: 3px 9px;
+      font-size: 10px;
+      padding: 3px 8px;
       border-radius: 50px;
       font-weight: 600
     }
@@ -719,76 +784,84 @@
     }
 
     .stat-number {
-      font-size: 28px;
+      font-size: 26px;
       font-weight: 800;
       color: white;
-      line-height: 1
+      line-height: 1;
+      margin-top: 8px
     }
 
     .stat-label {
-      font-size: 13px;
+      font-size: 12px;
       color: var(--text2);
-      margin-top: 4px
+      margin-top: 3px
     }
 
+    /* CAT GRID */
     .cat-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 12px;
-      margin-bottom: 28px
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin-bottom: 24px
     }
 
     .cat-item {
       background: var(--card);
       border: 1px solid var(--border);
       border-radius: var(--radius);
-      padding: 14px;
+      padding: 12px;
       display: flex;
       align-items: center;
       gap: 10px
     }
 
     .cat-icon {
-      width: 36px;
-      height: 36px;
+      width: 34px;
+      height: 34px;
       border-radius: 10px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 15px;
+      font-size: 14px;
       flex-shrink: 0
     }
 
+    /* PUBLISH BAR */
     .publish-bar {
       background: rgba(249, 115, 22, 0.06);
       border: 1px solid rgba(249, 115, 22, 0.2);
       border-radius: var(--radius-lg);
-      padding: 16px 20px;
-      margin-bottom: 20px;
+      padding: 14px 16px;
+      margin-bottom: 16px;
       display: none;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-      flex-wrap: wrap
+      flex-direction: column;
+      gap: 12px
     }
 
     .publish-bar.show {
       display: flex
     }
 
+    .publish-bar-inner {
+      display: flex;
+      align-items: center;
+      gap: 12px
+    }
+
     .publish-icon {
-      width: 44px;
-      height: 44px;
+      width: 42px;
+      height: 42px;
       background: rgba(249, 115, 22, 0.15);
       border-radius: 12px;
       display: flex;
       align-items: center;
       justify-content: center;
       color: var(--primary);
-      font-size: 18px;
+      font-size: 17px;
       flex-shrink: 0
     }
 
+    /* TABLE WRAP */
     .table-wrap {
       background: var(--card);
       border: 1px solid var(--border);
@@ -797,17 +870,22 @@
     }
 
     .table-head {
-      padding: 16px 20px;
+      padding: 14px 16px;
       border-bottom: 1px solid var(--border);
       display: flex;
       align-items: center;
-      justify-content: space-between
+      justify-content: space-between;
+      gap: 8px;
+      flex-wrap: wrap
     }
 
     .table-title {
-      font-size: 15px;
+      font-size: 14px;
       font-weight: 700;
-      color: white
+      color: white;
+      display: flex;
+      align-items: center;
+      gap: 8px
     }
 
     .table-count {
@@ -818,73 +896,20 @@
       border-radius: 50px
     }
 
-    .filters {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 20px;
-      flex-wrap: wrap
-    }
-
-    .search-box {
-      flex: 1;
-      min-width: 200px;
-      position: relative
-    }
-
-    .search-box i {
-      position: absolute;
-      right: 14px;
-      top: 50%;
-      transform: translateY(-50%);
-      color: var(--text3);
-      font-size: 14px
-    }
-
-    .search-box input {
+    /* DESKTOP TABLE */
+    .prod-table-desktop {
       width: 100%;
-      padding: 11px 40px 11px 14px;
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      color: white;
-      font-size: 14px;
-      font-family: inherit;
-      transition: all .3s
+      overflow-x: auto
     }
 
-    .search-box input:focus {
-      outline: none;
-      border-color: var(--primary)
-    }
-
-    .f-select {
-      padding: 11px 14px;
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      color: white;
-      font-size: 13px;
-      font-family: inherit;
-      cursor: pointer
-    }
-
-    .f-select:focus {
-      outline: none;
-      border-color: var(--primary)
-    }
-
-    .f-select option {
-      background: var(--bg2)
-    }
-
-    table {
+    .prod-table-desktop table {
       width: 100%;
-      border-collapse: collapse
+      border-collapse: collapse;
+      min-width: 600px
     }
 
     th {
-      padding: 12px 16px;
+      padding: 11px 14px;
       text-align: right;
       font-size: 11px;
       color: var(--text3);
@@ -894,7 +919,7 @@
     }
 
     td {
-      padding: 13px 16px;
+      padding: 12px 14px;
       border-bottom: 1px solid rgba(255, 255, 255, 0.04);
       font-size: 13px;
       vertical-align: middle
@@ -908,22 +933,99 @@
       background: rgba(255, 255, 255, 0.02)
     }
 
+    /* MOBILE CARDS */
+    .prod-cards-mobile {
+      display: none;
+      padding: 12px;
+      gap: 10px;
+      flex-direction: column
+    }
+
+    .prod-card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 14px;
+      transition: all .2s
+    }
+
+    .prod-card:active {
+      background: rgba(255, 255, 255, 0.06)
+    }
+
+    .prod-card-top {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px
+    }
+
+    .prod-card-info {
+      flex: 1;
+      min-width: 0
+    }
+
+    .prod-card-name {
+      font-size: 14px;
+      font-weight: 700;
+      color: white;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis
+    }
+
+    .prod-card-id {
+      font-size: 11px;
+      color: var(--text3);
+      margin-top: 2px
+    }
+
+    .prod-card-meta {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 8px
+    }
+
+    .prod-card-actions {
+      display: flex;
+      gap: 8px;
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px solid var(--border)
+    }
+
+    .prod-card-actions .act-btn {
+      flex: 1;
+      height: 40px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all .2s;
+      border: none;
+      font-size: 14px
+    }
+
+    /* PRODUCT THUMB */
     .p-name {
       display: flex;
       align-items: center;
-      gap: 12px
+      gap: 10px
     }
 
     .p-thumb {
-      width: 48px;
-      height: 48px;
+      width: 44px;
+      height: 44px;
       border-radius: 10px;
       background: rgba(249, 115, 22, 0.08);
       display: flex;
       align-items: center;
       justify-content: center;
       color: var(--text3);
-      font-size: 18px;
+      font-size: 17px;
       overflow: visible;
       cursor: pointer;
       transition: all .3s;
@@ -940,8 +1042,7 @@
 
     .p-thumb:hover {
       border-color: var(--primary);
-      transform: scale(1.08);
-      box-shadow: 0 4px 16px rgba(249, 115, 22, 0.3)
+      transform: scale(1.08)
     }
 
     .p-thumb .no-img {
@@ -960,12 +1061,13 @@
       height: 10px;
       background: #4ade80;
       border-radius: 50%;
-      border: 2px solid var(--bg2);
+      border: 2px solid var(--bg2)
     }
 
     .p-title {
       font-weight: 600;
-      color: white
+      color: white;
+      font-size: 13px
     }
 
     .p-id {
@@ -973,6 +1075,7 @@
       color: var(--text3)
     }
 
+    /* BADGES */
     .price-badge {
       background: rgba(249, 115, 22, 0.12);
       color: var(--primary);
@@ -1091,35 +1194,123 @@
       background: rgba(239, 68, 68, 0.25)
     }
 
+    /* FILTERS */
+    .filters {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+      flex-wrap: wrap
+    }
+
+    .search-box {
+      flex: 1;
+      min-width: 150px;
+      position: relative
+    }
+
+    .search-box i {
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text3);
+      font-size: 14px
+    }
+
+    .search-box input {
+      width: 100%;
+      padding: 11px 38px 11px 12px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      color: white;
+      font-size: 14px;
+      font-family: inherit;
+      transition: all .3s;
+      min-height: 44px
+    }
+
+    .search-box input:focus {
+      outline: none;
+      border-color: var(--primary)
+    }
+
+    .f-select {
+      padding: 11px 12px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      color: white;
+      font-size: 13px;
+      font-family: inherit;
+      cursor: pointer;
+      min-height: 44px
+    }
+
+    .f-select:focus {
+      outline: none;
+      border-color: var(--primary)
+    }
+
+    .f-select option {
+      background: var(--bg2)
+    }
+
+    /* MODALS */
     .modal-overlay {
       position: fixed;
       inset: 0;
-      background: rgba(0, 0, 0, 0.8);
+      background: rgba(0, 0, 0, 0.85);
       backdrop-filter: blur(8px);
       z-index: 500;
       display: none;
-      align-items: center;
+      align-items: flex-end;
       justify-content: center;
-      padding: 20px
+      padding: 0
     }
 
     .modal-overlay.open {
-      display: flex
+      display: flex;
+      animation: fadeInModal .2s ease
+    }
+
+    @keyframes fadeInModal {
+      from {
+        opacity: 0
+      }
+
+      to {
+        opacity: 1
+      }
     }
 
     .modal {
       background: var(--bg2);
       border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
+      border-radius: var(--radius-lg) var(--radius-lg) 0 0;
       width: 100%;
-      max-width: 560px;
-      max-height: 90vh;
+      max-width: 600px;
+      max-height: 92vh;
       overflow-y: auto;
-      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6)
+      box-shadow: 0 -20px 60px rgba(0, 0, 0, 0.6);
+      animation: slideUpModal .3s cubic-bezier(.4, 0, .2, 1)
+    }
+
+    @keyframes slideUpModal {
+      from {
+        transform: translateY(40px);
+        opacity: 0
+      }
+
+      to {
+        transform: translateY(0);
+        opacity: 1
+      }
     }
 
     .modal-hd {
-      padding: 20px 24px;
+      padding: 16px 20px;
       border-bottom: 1px solid var(--border);
       display: flex;
       align-items: center;
@@ -1131,7 +1322,7 @@
     }
 
     .modal-hd-title {
-      font-size: 17px;
+      font-size: 16px;
       font-weight: 700;
       color: white;
       display: flex;
@@ -1144,8 +1335,8 @@
     }
 
     .modal-close {
-      width: 34px;
-      height: 34px;
+      width: 36px;
+      height: 36px;
       background: rgba(255, 255, 255, 0.05);
       border: 1px solid var(--border);
       border-radius: 50%;
@@ -1164,26 +1355,27 @@
     }
 
     .modal-body {
-      padding: 24px
+      padding: 20px
     }
 
     .modal-ft {
-      padding: 16px 24px;
+      padding: 14px 20px;
       border-top: 1px solid var(--border);
       display: flex;
       gap: 10px;
       justify-content: flex-end
     }
 
+    /* FORM */
     .form-group {
-      margin-bottom: 18px
+      margin-bottom: 16px
     }
 
     .form-label {
       display: block;
       font-size: 13px;
       color: var(--text2);
-      margin-bottom: 8px;
+      margin-bottom: 7px;
       font-weight: 500
     }
 
@@ -1194,14 +1386,15 @@
 
     .form-control {
       width: 100%;
-      padding: 12px 14px;
+      padding: 13px 14px;
       background: rgba(255, 255, 255, 0.05);
       border: 1px solid var(--border);
       border-radius: var(--radius);
       color: white;
-      font-size: 14px;
+      font-size: 15px;
       font-family: inherit;
-      transition: all .3s
+      transition: all .3s;
+      min-height: 48px
     }
 
     .form-control:focus {
@@ -1217,7 +1410,7 @@
     .form-row {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 16px
+      gap: 14px
     }
 
     .form-hint {
@@ -1226,19 +1419,20 @@
       margin-top: 5px
     }
 
+    /* SETTINGS CARD */
     .s-card {
       background: var(--card);
       border: 1px solid var(--border);
       border-radius: var(--radius-lg);
-      padding: 24px;
-      margin-bottom: 16px
+      padding: 20px;
+      margin-bottom: 14px
     }
 
     .s-card-title {
-      font-size: 15px;
+      font-size: 14px;
       font-weight: 700;
       color: white;
-      margin-bottom: 20px;
+      margin-bottom: 16px;
       display: flex;
       align-items: center;
       gap: 10px
@@ -1248,27 +1442,29 @@
       color: var(--primary)
     }
 
+    /* CONFIRM */
     .confirm-box {
       background: var(--bg2);
       border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      padding: 32px;
+      border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+      padding: 32px 24px;
       text-align: center;
-      max-width: 380px;
-      width: 100%
+      width: 100%;
+      max-width: 480px;
+      animation: slideUpModal .3s cubic-bezier(.4, 0, .2, 1)
     }
 
     .confirm-icon {
-      width: 64px;
-      height: 64px;
+      width: 60px;
+      height: 60px;
       background: rgba(239, 68, 68, 0.12);
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 26px;
+      font-size: 24px;
       color: #fca5a5;
-      margin: 0 auto 16px
+      margin: 0 auto 14px
     }
 
     .confirm-title {
@@ -1285,10 +1481,11 @@
       margin-bottom: 24px
     }
 
+    /* TOAST */
     .toast-wrap {
       position: fixed;
-      bottom: 24px;
-      left: 24px;
+      bottom: 80px;
+      left: 16px;
       z-index: 9999;
       display: flex;
       flex-direction: column;
@@ -1299,13 +1496,14 @@
       background: var(--bg2);
       border: 1px solid var(--border);
       border-radius: var(--radius);
-      padding: 13px 18px;
+      padding: 12px 16px;
       display: flex;
       align-items: center;
       gap: 10px;
       box-shadow: var(--shadow);
       animation: slideUp .3s ease;
-      min-width: 260px
+      min-width: 220px;
+      max-width: calc(100vw - 32px)
     }
 
     .toast-item.out {
@@ -1336,13 +1534,13 @@
     }
 
     .toast-icon {
-      width: 30px;
-      height: 30px;
+      width: 28px;
+      height: 28px;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 13px;
+      font-size: 12px;
       flex-shrink: 0
     }
 
@@ -1367,17 +1565,18 @@
       font-weight: 500
     }
 
+    /* LOADING */
     .loading-overlay {
       position: fixed;
       inset: 0;
-      background: rgba(0, 0, 0, 0.7);
+      background: rgba(0, 0, 0, 0.75);
       backdrop-filter: blur(8px);
       z-index: 9999;
       display: none;
       align-items: center;
       justify-content: center;
       flex-direction: column;
-      gap: 16px
+      gap: 14px
     }
 
     .loading-overlay.show {
@@ -1385,8 +1584,8 @@
     }
 
     .spinner {
-      width: 56px;
-      height: 56px;
+      width: 52px;
+      height: 52px;
       border: 3px solid rgba(249, 115, 22, 0.2);
       border-top-color: var(--primary);
       border-radius: 50%;
@@ -1401,34 +1600,189 @@
 
     .loading-text {
       color: white;
-      font-size: 15px;
+      font-size: 14px;
       font-weight: 600
     }
 
-    .mobile-btn {
-      display: none;
-      width: 40px;
-      height: 40px;
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      color: white;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      font-size: 16px
-    }
-
-    .mobile-bg {
-      display: none;
+    /* IMAGE PREVIEW */
+    .img-preview-modal {
       position: fixed;
       inset: 0;
-      background: rgba(0, 0, 0, 0.6);
-      z-index: 99
+      z-index: 9000;
+      background: rgba(0, 0, 0, 0.95);
+      backdrop-filter: blur(20px);
+      display: none;
+      align-items: flex-end;
+      justify-content: center;
+      padding: 0;
+      cursor: zoom-out
     }
 
-    .mobile-bg.show {
-      display: block
+    .img-preview-modal.open {
+      display: flex;
+      animation: fadeIn .25s ease
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0
+      }
+
+      to {
+        opacity: 1
+      }
+    }
+
+    .img-preview-wrap {
+      position: relative;
+      width: 100%;
+      max-width: 560px;
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+      overflow: hidden;
+      cursor: default;
+      animation: slideUpModal .3s ease;
+      max-height: 90vh;
+      display: flex;
+      flex-direction: column
+    }
+
+    .img-preview-header {
+      padding: 14px 18px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-shrink: 0
+    }
+
+    .img-preview-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: white
+    }
+
+    .img-preview-close {
+      width: 34px;
+      height: 34px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid var(--border);
+      border-radius: 50%;
+      color: white;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px
+    }
+
+    .img-preview-body {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+      overflow-y: auto;
+      flex: 1
+    }
+
+    .img-preview-img {
+      max-width: 100%;
+      max-height: 55vh;
+      border-radius: 14px;
+      object-fit: contain;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5)
+    }
+
+    .img-preview-path {
+      font-size: 11px;
+      color: var(--text3);
+      background: rgba(255, 255, 255, 0.04);
+      padding: 6px 12px;
+      border-radius: 50px;
+      direction: ltr;
+      font-family: monospace;
+      text-align: center;
+      max-width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap
+    }
+
+    .img-preview-no {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      color: var(--text3);
+      padding: 30px;
+      font-size: 13px
+    }
+
+    .img-preview-no i {
+      font-size: 40px;
+      color: rgba(255, 255, 255, 0.1)
+    }
+
+    .img-loading {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px
+    }
+
+    .img-err {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      color: var(--text3);
+      padding: 30px
+    }
+
+    .img-err i {
+      font-size: 36px;
+      color: rgba(239, 68, 68, 0.4)
+    }
+
+    /* INFO BOXES */
+    .json-info {
+      background: rgba(59, 130, 246, 0.06);
+      border: 1px solid rgba(59, 130, 246, 0.2);
+      border-radius: var(--radius);
+      padding: 12px 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 12px;
+      color: var(--text2);
+      margin-bottom: 16px
+    }
+
+    .json-info i {
+      color: #60a5fa;
+      font-size: 15px;
+      flex-shrink: 0
+    }
+
+    .refresh-bar {
+      background: rgba(34, 197, 94, 0.08);
+      border: 1px solid rgba(34, 197, 94, 0.25);
+      border-radius: var(--radius);
+      padding: 10px 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13px;
+      color: #4ade80;
+      margin-bottom: 14px;
+      animation: slideUp .3s ease
+    }
+
+    .refresh-bar i {
+      font-size: 16px;
+      animation: spin .8s linear infinite
     }
 
     .pass-strength {
@@ -1459,205 +1813,106 @@
       }
     }
 
-    .refresh-bar {
-      background: rgba(34, 197, 94, 0.08);
-      border: 1px solid rgba(34, 197, 94, 0.25);
-      border-radius: var(--radius);
-      padding: 10px 16px;
-      display: flex;
+    /* BOTTOM NAV */
+    .bottom-nav {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 150;
+      background: var(--bg2);
+      border-top: 1px solid var(--border);
+      height: var(--bottom-nav-h);
+      padding: 0 8px;
       align-items: center;
-      gap: 10px;
-      font-size: 13px;
-      color: #4ade80;
-      margin-bottom: 16px;
-      animation: slideUp .3s ease
+      justify-content: space-around
     }
 
-    .refresh-bar i {
-      font-size: 16px;
-      animation: spin .8s linear infinite
-    }
-
-    .json-info {
-      background: rgba(59, 130, 246, 0.06);
-      border: 1px solid rgba(59, 130, 246, 0.2);
-      border-radius: var(--radius);
-      padding: 12px 16px;
+    .bottom-nav-item {
       display: flex;
+      flex-direction: column;
       align-items: center;
-      gap: 10px;
-      font-size: 13px;
-      color: var(--text2);
-      margin-bottom: 16px
+      gap: 4px;
+      padding: 8px 12px;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all .2s;
+      color: var(--text3);
+      font-size: 11px;
+      font-weight: 500;
+      border: none;
+      background: none;
+      font-family: inherit;
+      min-width: 60px;
+      position: relative
     }
 
-    .json-info i {
-      color: #60a5fa;
-      font-size: 16px
+    .bottom-nav-item i {
+      font-size: 18px;
+      transition: all .2s
     }
 
-    /* ★★★ IMAGE PREVIEW MODAL */
-    .img-preview-modal {
+    .bottom-nav-item.active {
+      color: var(--primary)
+    }
+
+    .bottom-nav-item.active i {
+      transform: translateY(-2px)
+    }
+
+    .bottom-nav-dot {
+      position: absolute;
+      top: 6px;
+      right: 10px;
+      width: 8px;
+      height: 8px;
+      background: var(--primary);
+      border-radius: 50%;
+      border: 2px solid var(--bg2)
+    }
+
+    /* SIDEBAR OVERLAY */
+    .sidebar-overlay {
+      display: none;
       position: fixed;
       inset: 0;
-      z-index: 9000;
-      background: rgba(0, 0, 0, 0.92);
-      backdrop-filter: blur(20px);
-      display: none;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      gap: 20px;
-      padding: 20px;
-      cursor: zoom-out
+      background: rgba(0, 0, 0, 0.65);
+      z-index: 190
     }
 
-    .img-preview-modal.open {
-      display: flex;
-      animation: fadeIn .25s ease
+    .sidebar-overlay.show {
+      display: block
     }
 
-    @keyframes fadeIn {
-      from {
-        opacity: 0
-      }
-
-      to {
-        opacity: 1
-      }
+    /* EMPTY STATE */
+    .empty-state {
+      text-align: center;
+      padding: 50px 20px
     }
 
-    .img-preview-wrap {
-      position: relative;
-      max-width: min(90vw, 600px);
-      width: 100%;
-      text-align: center
-    }
-
-    .img-preview-img {
-      max-width: 100%;
-      max-height: 70vh;
-      border-radius: 20px;
-      object-fit: contain;
-      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.8);
-      border: 2px solid rgba(255, 255, 255, 0.1);
-      animation: zoomIn .3s ease
-    }
-
-    @keyframes zoomIn {
-      from {
-        transform: scale(0.8);
-        opacity: 0
-      }
-
-      to {
-        transform: scale(1);
-        opacity: 1
-      }
-    }
-
-    .img-preview-no {
-      width: 200px;
-      height: 200px;
+    .empty-icon {
+      width: 64px;
+      height: 64px;
       background: rgba(255, 255, 255, 0.04);
-      border: 2px dashed rgba(255, 255, 255, 0.15);
-      border-radius: 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-      color: var(--text3);
-      font-size: 14px;
-      margin: 0 auto
-    }
-
-    .img-preview-no i {
-      font-size: 48px;
-      color: rgba(255, 255, 255, 0.1)
-    }
-
-    .img-preview-info {
-      text-align: center
-    }
-
-    .img-preview-name {
-      font-size: 20px;
-      font-weight: 800;
-      color: white;
-      margin-bottom: 6px
-    }
-
-    .img-preview-path {
-      font-size: 12px;
-      color: var(--text3);
-      background: rgba(255, 255, 255, 0.05);
-      padding: 6px 14px;
-      border-radius: 50px;
-      display: inline-block;
-      direction: ltr;
-      font-family: monospace
-    }
-
-    .img-preview-close {
-      width: 44px;
-      height: 44px;
-      background: rgba(255, 255, 255, 0.1);
-      border: 1px solid rgba(255, 255, 255, 0.15);
       border-radius: 50%;
-      color: white;
-      cursor: pointer;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 18px;
-      transition: all .2s;
-      position: absolute;
-      top: -16px;
-      left: -16px
-    }
-
-    .img-preview-close:hover {
-      background: rgba(239, 68, 68, 0.3);
-      border-color: rgba(239, 68, 68, 0.5)
-    }
-
-    .img-preview-hint {
-      font-size: 12px;
+      font-size: 26px;
       color: var(--text3);
-      background: rgba(255, 255, 255, 0.03);
-      padding: 8px 16px;
-      border-radius: 50px;
-      border: 1px solid var(--border)
+      margin: 0 auto 14px
     }
 
-    /* ★★★ ئیمەج لوودینگ */
-    .img-loading {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 200px;
-      height: 200px;
-      margin: 0 auto
+    .add-page-wrap {
+      max-width: 560px
     }
 
-    .img-err {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 10px;
-      color: var(--text3);
-      padding: 30px
-    }
-
-    .img-err i {
-      font-size: 40px;
-      color: rgba(239, 68, 68, 0.4)
-    }
-
+    /* MOBILE RESPONSIVE */
     @media(max-width:768px) {
       .sidebar {
-        transform: translateX(240px)
+        transform: translateX(100%);
+        width: min(280px, 85vw)
       }
 
       .sidebar.open {
@@ -1665,10 +1920,73 @@
       }
 
       .main {
-        margin-right: 0
+        margin-right: 0;
+        padding-top: var(--topbar-h);
+        padding-bottom: calc(var(--bottom-nav-h) + 10px)
       }
 
-      .mobile-btn {
+      .topbar {
+        right: 0;
+        padding: 0 14px
+      }
+
+      .mobile-menu-btn {
+        display: flex
+      }
+
+      .topbar-time {
+        display: none
+      }
+
+      .page {
+        padding: 14px
+      }
+
+      .page-title {
+        font-size: 17px
+      }
+
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px
+      }
+
+      .stat-number {
+        font-size: 22px
+      }
+
+      .cat-grid {
+        grid-template-columns: repeat(2, 1fr)
+      }
+
+      .publish-bar {
+        flex-direction: column
+      }
+
+      .publish-bar .btn {
+        width: 100%;
+        justify-content: center
+      }
+
+      .filters {
+        gap: 8px
+      }
+
+      .search-box {
+        min-width: 100%;
+        order: -1
+      }
+
+      .f-select {
+        flex: 1;
+        min-width: calc(50% - 4px)
+      }
+
+      .prod-table-desktop {
+        display: none
+      }
+
+      .prod-cards-mobile {
         display: flex
       }
 
@@ -1676,122 +1994,100 @@
         grid-template-columns: 1fr
       }
 
-      th:nth-child(3),
-      th:nth-child(5),
-      td:nth-child(3),
-      td:nth-child(5) {
-        display: none
+      .form-control {
+        font-size: 16px
+      }
+
+      .modal-overlay {
+        align-items: flex-end
+      }
+
+      .modal {
+        max-height: 88vh;
+        border-radius: var(--radius-lg) var(--radius-lg) 0 0
+      }
+
+      .modal-ft {
+        padding-bottom: max(14px, env(safe-area-inset-bottom))
+      }
+
+      .page-header {
+        flex-direction: column;
+        align-items: flex-start
+      }
+
+      .page-header-actions {
+        width: 100%
+      }
+
+      .page-header-actions .btn {
+        flex: 1;
+        justify-content: center
+      }
+
+      .add-page-wrap {
+        max-width: 100%
+      }
+
+      .bottom-nav {
+        display: flex
+      }
+
+      .toast-wrap {
+        bottom: calc(var(--bottom-nav-h) + 12px);
+        left: 12px;
+        right: 12px
+      }
+
+      .toast-item {
+        min-width: unset;
+        width: 100%
+      }
+
+      .bottom-nav {
+        padding-bottom: env(safe-area-inset-bottom)
+      }
+    }
+
+    @media(max-width:380px) {
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr)
+      }
+
+      .stat-number {
+        font-size: 20px
+      }
+
+      .cat-grid {
+        grid-template-columns: repeat(2, 1fr)
+      }
+
+      .bottom-nav-item {
+        padding: 8px 6px;
+        min-width: 50px
+      }
+
+      .bottom-nav-item span {
+        font-size: 10px
       }
     }
 
     ::-webkit-scrollbar {
-      width: 4px;
-      height: 4px
+      width: 3px;
+      height: 3px
     }
 
     ::-webkit-scrollbar-thumb {
       background: rgba(249, 115, 22, 0.3);
       border-radius: 2px
     }
-
-    .empty-state {
-      text-align: center;
-      padding: 60px 20px
-    }
-
-    .empty-icon {
-      width: 70px;
-      height: 70px;
-      background: rgba(255, 255, 255, 0.04);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 28px;
-      color: var(--text3);
-      margin: 0 auto 16px
-    }
-
-    /* ─── MOBILE CARDS ─── */
-    .prod-cards-mobile {
-      display: none;
-      padding: 12px;
-      gap: 10px;
-      flex-direction: column;
-    }
-
-    .prod-card {
-      background: rgba(255, 255, 255, 0.04);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 14px;
-    }
-
-    .prod-card-top {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 10px;
-    }
-
-    .prod-card-info {
-      flex: 1;
-      min-width: 0;
-    }
-
-    .prod-card-name {
-      font-size: 14px;
-      font-weight: 700;
-      color: white;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-
-    .prod-card-id {
-      font-size: 11px;
-      color: var(--text3);
-      margin-top: 2px;
-    }
-
-    .prod-card-meta {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      flex-wrap: wrap;
-      margin-bottom: 10px;
-    }
-
-    .prod-card-actions {
-      display: flex;
-      gap: 8px;
-      padding-top: 10px;
-      border-top: 1px solid var(--border);
-    }
-
-    .prod-card-actions .act-btn {
-      flex: 1;
-      height: 38px;
-      border-radius: 10px;
-      font-size: 14px;
-    }
-
-    @media(max-width: 768px) {
-
-      /* تەیبڵ شاراوە بکە */
-      .prod-table-desktop {
-        display: none;
-      }
-
-      /* کارتەکان نیشان بدە */
-      .prod-cards-mobile {
-        display: flex;
-      }
-    }
   </style>
 </head>
 
 <body>
+  <div class="blob blob1"></div>
+  <div class="blob blob2"></div>
+
   <div class="loading-overlay" id="loadingOverlay">
     <div class="spinner"></div>
     <div class="loading-text" id="loadingText">چاوەڕێ بکە...</div>
@@ -1799,8 +2095,6 @@
 
   <!-- SETUP PAGE -->
   <div class="setup-page" id="setupPage">
-    <div class="blob blob1"></div>
-    <div class="blob blob2"></div>
     <div class="setup-box">
       <div class="setup-logo">
         <div class="setup-logo-icon"><i class="fab fa-github"></i></div>
@@ -1841,8 +2135,6 @@
 
   <!-- LOGIN PAGE -->
   <div class="login-page hidden" id="loginPage">
-    <div class="blob blob1"></div>
-    <div class="blob blob2"></div>
     <div class="login-box" id="loginBox">
       <div class="login-logo">
         <div class="login-logo-icon"><i class="fas fa-shield-halved"></i></div>
@@ -1867,7 +2159,8 @@
 
   <!-- MAIN APP -->
   <div class="app" id="mainApp">
-    <div class="mobile-bg" id="mobileBg" onclick="closeSidebar()"></div>
+    <div class="sidebar-overlay" id="sidebarOverlay" onclick="closeSidebar()"></div>
+
     <aside class="sidebar" id="sidebar">
       <div class="sidebar-logo">
         <div class="sidebar-logo-icon"><i class="fas fa-store"></i></div>
@@ -1898,18 +2191,19 @@
         <button class="logout-btn" onclick="doLogout()"><i class="fas fa-sign-out-alt"></i> چوونەدەرەوە</button>
       </div>
     </aside>
+
     <main class="main">
       <div class="topbar">
-        <div style="display:flex;align-items:center;gap:12px">
-          <button class="mobile-btn" onclick="openSidebar()"><i class="fas fa-bars"></i></button>
+        <div style="display:flex;align-items:center;gap:10px;flex:1;min-width:0">
+          <button class="mobile-menu-btn" onclick="openSidebar()"><i class="fas fa-bars"></i></button>
           <div class="topbar-title" id="topTitle">داشبۆرد</div>
         </div>
-        <div style="display:flex;align-items:center;gap:10px">
+        <div style="display:flex;align-items:center;gap:8px;flex-shrink:0">
           <div class="topbar-time" id="clock"></div>
-          <div class="changes-badge" id="changesBadge"><i class="fas fa-circle-dot"></i> <span id="changesNum">0</span>
-            گۆڕانکاری</div>
-          <button class="btn btn-secondary btn-sm" onclick="manualRefresh()" title="نوێکردنەوە"><i
-              class="fas fa-rotate-right"></i></button>
+          <div class="changes-badge" id="changesBadge"><i class="fas fa-circle-dot"></i>&nbsp;<span
+              id="changesNum">!</span></div>
+          <button class="btn btn-secondary btn-sm" onclick="manualRefresh()"
+            style="width:38px;height:38px;padding:0;justify-content:center"><i class="fas fa-rotate-right"></i></button>
         </div>
       </div>
 
@@ -1920,39 +2214,41 @@
             <div class="page-title">خۆشت هاتی! 👋</div>
             <div class="page-sub">گۆڕانکارییەکانت بکە دوایشدا بڵاوی بکەرەوە</div>
           </div>
-          <button class="btn btn-success" onclick="publishJSON()"><i class="fas fa-cloud-upload-alt"></i> بڵاوکردنەوە بۆ
-            GitHub</button>
+          <div class="page-header-actions">
+            <button class="btn btn-success" onclick="publishJSON()"><i class="fas fa-cloud-upload-alt"></i>
+              بڵاوکردنەوە</button>
+          </div>
         </div>
         <div class="publish-bar" id="publishBar">
-          <div style="display:flex;align-items:center;gap:12px">
+          <div class="publish-bar-inner">
             <div class="publish-icon"><i class="fas fa-triangle-exclamation"></i></div>
             <div>
-              <div style="font-size:15px;font-weight:700;color:white">گۆڕانکارییەکانت پاراستنیان نییە!</div>
-              <div style="font-size:12px;color:var(--text2);margin-top:3px">بڵاوی بکەرەوە تا سایتەکەت نوێ بێتەوە</div>
+              <div style="font-size:14px;font-weight:700;color:white">گۆڕانکارییەکانت پاراستنیان نییە!</div>
+              <div style="font-size:12px;color:var(--text2);margin-top:2px">بڵاوی بکەرەوە تا سایتەکەت نوێ بێتەوە</div>
             </div>
           </div>
-          <button class="btn btn-success" onclick="publishJSON()"><i class="fas fa-cloud-upload-alt"></i> بڵاوکردنەوە
-            ئێستا</button>
+          <button class="btn btn-success" onclick="publishJSON()" style="width:100%;justify-content:center"><i
+              class="fas fa-cloud-upload-alt"></i> بڵاوکردنەوە ئێستا</button>
         </div>
         <div class="json-info">
           <i class="fas fa-sync-alt"></i>
-          <span>کاڵاکان ئۆتۆماتیکی لە <strong style="color:white">products.json</strong> ی GitHub دەخوێنرێتەوە — هەر
-            گۆڕانکاریەک ڕاستەوخۆ دیاری دەبێت ✅</span>
+          <span>کاڵاکان ئۆتۆماتیکی لە <strong style="color:white">products.json</strong> ی GitHub دەخوێنرێتەوە ✅</span>
         </div>
         <div class="stats-grid" id="statsGrid"></div>
-        <h3 style="font-size:15px;font-weight:700;color:white;margin-bottom:14px"><i class="fas fa-grid-2"
+        <h3 style="font-size:14px;font-weight:700;color:white;margin-bottom:12px"><i class="fas fa-grid-2"
             style="color:var(--primary);margin-left:8px"></i> کاڵا بە بەش</h3>
         <div class="cat-grid" id="catGrid"></div>
         <div
-          style="background:rgba(249,115,22,0.06);border:1px solid rgba(249,115,22,0.15);border-radius:var(--radius-lg);padding:20px 24px">
-          <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px"><i class="fas fa-circle-info"
-              style="color:var(--primary)"></i><span style="font-size:14px;font-weight:700;color:white">چۆن کار
-              دەکات؟</span></div>
-          <div style="font-size:13px;color:var(--text2);line-height:2">
-            ١. کاڵاکان ئۆتۆماتیکی لە <strong style="color:#60a5fa">products.json</strong> ی GitHub دەخوێنرێتەوە<br>
+          style="background:rgba(249,115,22,0.06);border:1px solid rgba(249,115,22,0.15);border-radius:var(--radius-lg);padding:16px 18px">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">
+            <i class="fas fa-circle-info" style="color:var(--primary)"></i>
+            <span style="font-size:13px;font-weight:700;color:white">چۆن کار دەکات؟</span>
+          </div>
+          <div style="font-size:12px;color:var(--text2);line-height:2.2">
+            ١. کاڵاکان ئۆتۆماتیکی لە <strong style="color:#60a5fa">products.json</strong> بار دەبن<br>
             ٢. گۆڕانکارییەکانت بکە (زیادکردن، ئیدیت، شاراوەکردن)<br>
-            ٣. دوای تەواوکردن، <strong style="color:#4ade80">بڵاوکردنەوە بۆ GitHub</strong> بکە<br>
-            ٤. کاتێک لا دەگەڕێیتەوە، <strong style="color:white">ئۆتۆماتیکی نوێدەبێتەوە 🔄</strong>
+            ٣. دوای تەواوکردن، <strong style="color:#4ade80">بڵاوکردنەوە</strong> بکە<br>
+            ٤. سایتەکەت <strong style="color:white">ئۆتۆماتیکی نوێ دەبێتەوە 🔄</strong>
           </div>
         </div>
       </div>
@@ -1964,16 +2260,17 @@
             <div class="page-title">کاڵاکان</div>
             <div class="page-sub" id="prodSub">بارکردن...</div>
           </div>
-          <div style="display:flex;gap:8px">
-            <button class="btn btn-secondary" onclick="manualRefresh()"><i class="fas fa-rotate-right"></i>
-              نوێکردنەوە</button>
-            <button class="btn btn-primary" onclick="showPage('add',document.querySelector('[onclick*=add]'))"><i
-                class="fas fa-plus"></i> کاڵای نوێ</button>
+          <div class="page-header-actions">
+            <button class="btn btn-secondary" onclick="manualRefresh()"><i class="fas fa-rotate-right"></i> نوێ</button>
+            <button class="btn btn-primary" onclick="showPage('add',null)"><i class="fas fa-plus"></i> کاڵای
+              نوێ</button>
           </div>
         </div>
         <div class="filters">
-          <div class="search-box"><i class="fas fa-search"></i><input type="text" id="srch" placeholder="گەڕان..."
-              oninput="filterProds()"></div>
+          <div class="search-box">
+            <i class="fas fa-search"></i>
+            <input type="text" id="srch" placeholder="گەڕان لە کاڵاکان..." oninput="filterProds()">
+          </div>
           <select class="f-select" id="catFilter" onchange="filterProds()">
             <option value="">هەموو بەشەکان</option>
             <option value="cake">کێک</option>
@@ -1991,12 +2288,12 @@
         </div>
         <div class="table-wrap">
           <div class="table-head">
-            <div class="table-title"><i class="fas fa-list" style="color:var(--primary);margin-left:8px"></i> لیستی
-              کاڵاکان</div>
+            <div class="table-title"><i class="fas fa-list" style="color:var(--primary)"></i> لیستی کاڵاکان</div>
             <div class="table-count" id="tCount">0 کاڵا</div>
           </div>
-          <div style="overflow-x:auto">
-            <table id="prodTable">
+          <!-- Desktop Table -->
+          <div class="prod-table-desktop">
+            <table>
               <thead>
                 <tr>
                   <th>کاڵا</th>
@@ -2010,9 +2307,11 @@
               <tbody id="prodBody"></tbody>
             </table>
           </div>
+          <!-- Mobile Cards -->
+          <div class="prod-cards-mobile" id="prodCardsMobile"></div>
           <div class="empty-state" id="prodEmpty" style="display:none">
             <div class="empty-icon"><i class="fas fa-box-open"></i></div>
-            <h3 style="color:var(--text2)">هیچ کاڵایەک نەدۆزرایەوە</h3>
+            <h3 style="color:var(--text2);font-size:15px">هیچ کاڵایەک نەدۆزرایەوە</h3>
           </div>
         </div>
       </div>
@@ -2025,13 +2324,16 @@
             <div class="page-sub">دوای زیادکردن فەرامووش مەکە بڵاوی بکەیتەوە</div>
           </div>
         </div>
-        <div style="max-width:600px">
+        <div class="add-page-wrap">
           <div class="s-card">
             <div class="s-card-title"><i class="fas fa-plus-circle"></i> زانیاری کاڵا</div>
-            <div class="form-group"><label class="form-label"><span>*</span> ناوی کاڵا</label><input type="text"
-                class="form-control" id="newName" placeholder="ناوی کاڵاکەت بنووسە"></div>
+            <div class="form-group">
+              <label class="form-label"><span>*</span> ناوی کاڵا</label>
+              <input type="text" class="form-control" id="newName" placeholder="ناوی کاڵاکەت بنووسە">
+            </div>
             <div class="form-row">
-              <div class="form-group"><label class="form-label"><span>*</span> بەش</label>
+              <div class="form-group">
+                <label class="form-label"><span>*</span> بەش</label>
                 <select class="form-control" id="newCat">
                   <option value="cake">🎂 کێک</option>
                   <option value="gaz">🍪 گەز و بسکیت</option>
@@ -2041,19 +2343,24 @@
                   <option value="family">👨‍👩‍👧 عایلەی</option>
                 </select>
               </div>
-              <div class="form-group"><label class="form-label"><span>*</span> نرخ (IQD)</label><input type="number"
-                  class="form-control" id="newPrice" placeholder="5000" min="0"></div>
+              <div class="form-group">
+                <label class="form-label"><span>*</span> نرخ (IQD)</label>
+                <input type="number" class="form-control" id="newPrice" placeholder="5000" min="0" inputmode="numeric">
+              </div>
             </div>
-            <div class="form-group"><label class="form-label"><span>*</span> وەسف</label><input type="text"
-                class="form-control" id="newDesc" placeholder="٢٤ عەدەد"></div>
-            <div class="form-group"><label class="form-label">ناونیشانی وێنە</label><input type="text"
-                class="form-control" id="newImage" placeholder="kek/photo.jpg">
+            <div class="form-group">
+              <label class="form-label"><span>*</span> وەسف</label>
+              <input type="text" class="form-control" id="newDesc" placeholder="٢٤ عەدەد">
+            </div>
+            <div class="form-group">
+              <label class="form-label">ناونیشانی وێنە</label>
+              <input type="text" class="form-control" id="newImage" placeholder="kek/photo.jpg">
               <div class="form-hint">وێنەکە دەبێت پێشتر لە GitHub ئەپلۆدی کردبێیت</div>
             </div>
             <div style="display:flex;gap:10px">
-              <button class="btn btn-primary" onclick="addProduct()"><i class="fas fa-plus"></i> زیادکردن</button>
-              <button class="btn btn-secondary" onclick="clearAdd()"><i class="fas fa-rotate-left"></i>
-                پاکردنەوە</button>
+              <button class="btn btn-primary" onclick="addProduct()" style="flex:1;justify-content:center"><i
+                  class="fas fa-plus"></i> زیادکردن</button>
+              <button class="btn btn-secondary" onclick="clearAdd()"><i class="fas fa-rotate-left"></i></button>
             </div>
           </div>
         </div>
@@ -2067,36 +2374,40 @@
             <div class="page-sub">ڕێکخستنی پانێل و GitHub</div>
           </div>
         </div>
-        <div style="max-width:500px">
+        <div style="max-width:540px">
           <div class="s-card">
             <div class="s-card-title"><i class="fab fa-github"></i> ڕێکخستنی GitHub</div>
             <div id="ghInfo" style="margin-bottom:16px;font-size:13px;color:var(--text2)"></div>
-            <div class="form-group"><label class="form-label">Token نوێ</label><input type="password"
-                class="form-control" id="newToken" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx" style="direction:ltr">
+            <div class="form-group">
+              <label class="form-label">Token نوێ</label>
+              <input type="password" class="form-control" id="newToken" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx"
+                style="direction:ltr">
               <div class="form-hint">ئەگەر دەتەوێت Token بگۆڕیت</div>
             </div>
-            <div style="display:flex;gap:10px;flex-wrap:wrap">
+            <div style="display:flex;gap:8px;flex-wrap:wrap">
               <button class="btn btn-primary" onclick="updateToken()"><i class="fas fa-check"></i> نوێکردنەوە</button>
               <button class="btn btn-danger" onclick="clearSetup()"><i class="fas fa-trash"></i> سڕینەوەی
                 ڕێکخستن</button>
             </div>
           </div>
           <div class="s-card">
-            <div class="s-card-title"><i class="fas fa-rotate-right"></i> ئۆتۆ-ڕیستارت</div>
+            <div class="s-card-title"><i class="fas fa-rotate-right"></i> ئۆتۆ-ڕیفرێش</div>
             <p style="font-size:13px;color:var(--text2);margin-bottom:12px;line-height:1.8">کاتێک لا دەگەڕێیتەوە، پانێل
               ئۆتۆماتیکی کاڵاکان لە GitHub دەخوێنێتەوە.</p>
             <div
-              style="display:flex;align-items:center;gap:12px;background:rgba(34,197,94,0.08);border:1px solid rgba(34,197,94,0.2);border-radius:var(--radius);padding:12px 16px;">
-              <i class="fas fa-check-circle" style="color:#4ade80;font-size:18px"></i>
-              <span style="font-size:13px;color:#4ade80;font-weight:600">چالاکە — ئۆتۆماتیکی کاڵاکان نوێ دەبێتەوە</span>
+              style="display:flex;align-items:center;gap:12px;background:rgba(34,197,94,0.08);border:1px solid rgba(34,197,94,0.2);border-radius:var(--radius);padding:12px 14px">
+              <i class="fas fa-check-circle" style="color:#4ade80;font-size:17px"></i>
+              <span style="font-size:13px;color:#4ade80;font-weight:600">چالاکە — ئۆتۆماتیکی نوێ دەبێتەوە</span>
             </div>
           </div>
           <div class="s-card">
             <div class="s-card-title"><i class="fas fa-key"></i> گۆڕینی وشەی تێپەڕ</div>
             <div class="form-group"><label class="form-label">وشەی تێپەڕی ئێستا</label><input type="password"
                 class="form-control" id="curPass" placeholder="وشەی تێپەڕی ئێستا"></div>
-            <div class="form-group"><label class="form-label">وشەی تێپەڕی نوێ</label><input type="password"
-                class="form-control" id="newPass" placeholder="لانیکەم ٦ پیت" oninput="checkStrength()">
+            <div class="form-group">
+              <label class="form-label">وشەی تێپەڕی نوێ</label>
+              <input type="password" class="form-control" id="newPass" placeholder="لانیکەم ٦ پیت"
+                oninput="checkStrength()">
               <div class="pass-strength" id="passStr"></div>
             </div>
             <div class="form-group"><label class="form-label">دووبارەکردنەوە</label><input type="password"
@@ -2105,7 +2416,7 @@
           </div>
           <div class="s-card">
             <div class="s-card-title"><i class="fas fa-rotate-left"></i> ڕیسێت</div>
-            <p style="font-size:13px;color:var(--text2);margin-bottom:16px;line-height:1.8">هەموو گۆڕانکارییەکان
+            <p style="font-size:13px;color:var(--text2);margin-bottom:14px;line-height:1.8">هەموو گۆڕانکارییەکان
               دەسڕێتەوە و کاڵاکان دەگەڕێنەوە سەر حاڵی GitHub.</p>
             <button class="btn btn-danger" onclick="doReset()"><i class="fas fa-rotate-left"></i> گەڕانەوەی
               سەرەکی</button>
@@ -2113,14 +2424,32 @@
         </div>
       </div>
     </main>
+
+    <!-- BOTTOM NAV -->
+    <nav class="bottom-nav" id="bottomNav">
+      <button class="bottom-nav-item active" id="bn-dashboard"
+        onclick="showPage('dashboard',null);setBottomNav('dashboard')">
+        <i class="fas fa-gauge-high"></i><span>داشبۆرد</span>
+      </button>
+      <button class="bottom-nav-item" id="bn-products" onclick="showPage('products',null);setBottomNav('products')">
+        <i class="fas fa-box"></i><span>کاڵاکان</span>
+        <div class="bottom-nav-dot" id="bnDot" style="display:none"></div>
+      </button>
+      <button class="bottom-nav-item" id="bn-add" onclick="showPage('add',null);setBottomNav('add')">
+        <i class="fas fa-plus-circle"></i><span>زیادکردن</span>
+      </button>
+      <button class="bottom-nav-item" id="bn-settings" onclick="showPage('settings',null);setBottomNav('settings')">
+        <i class="fas fa-gear"></i><span>ڕێکخستن</span>
+      </button>
+    </nav>
   </div>
 
   <!-- EDIT MODAL -->
   <div class="modal-overlay" id="editModal">
     <div class="modal">
       <div class="modal-hd">
-        <div class="modal-hd-title"><i class="fas fa-pen"></i> دەستکاری کاڵا</div><button class="modal-close"
-          onclick="closeEdit()"><i class="fas fa-times"></i></button>
+        <div class="modal-hd-title"><i class="fas fa-pen"></i> دەستکاری کاڵا</div>
+        <button class="modal-close" onclick="closeEdit()"><i class="fas fa-times"></i></button>
       </div>
       <div class="modal-body">
         <input type="hidden" id="editId">
@@ -2138,7 +2467,7 @@
             </select>
           </div>
           <div class="form-group"><label class="form-label">نرخ (IQD)</label><input type="number" class="form-control"
-              id="editPrice" min="0"></div>
+              id="editPrice" min="0" inputmode="numeric"></div>
         </div>
         <div class="form-group"><label class="form-label">وەسف</label><input type="text" class="form-control"
             id="editDesc"></div>
@@ -2165,29 +2494,21 @@
     </div>
   </div>
 
-  <!-- ★★★ IMAGE PREVIEW MODAL -->
+  <!-- IMAGE PREVIEW MODAL -->
   <div class="img-preview-modal" id="imgPreviewModal" onclick="closeImgPreview(event)">
     <div class="img-preview-wrap" onclick="event.stopPropagation()">
-      <button class="img-preview-close" onclick="closeImgPreview()"><i class="fas fa-times"></i></button>
-      <div id="imgPreviewContent"></div>
-    </div>
-    <div class="img-preview-info">
-      <div class="img-preview-name" id="imgPreviewName"></div>
-      <div class="img-preview-path" id="imgPreviewPath"></div>
-    </div>
-    <div class="img-preview-hint"><i class="fas fa-keyboard" style="margin-left:6px"></i> ESC یان کلیک لە دەرەوە دابخە
+      <div class="img-preview-header">
+        <div class="img-preview-title" id="imgPreviewName">بینینی وێنە</div>
+        <button class="img-preview-close" onclick="closeImgPreview()"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="img-preview-body">
+        <div id="imgPreviewContent"></div>
+        <div class="img-preview-path" id="imgPreviewPath"></div>
+      </div>
     </div>
   </div>
 
   <div class="toast-wrap" id="toasts"></div>
-  <!-- جیاتی: <div style="overflow-x:auto"> -->
-  <div class="prod-table-desktop" style="overflow-x:auto">
-    <table id="prodTable">
-      <!-- هەموو کۆدی تەیبڵەکەت وەک خۆیەتی -->
-    </table>
-  </div>
-  <!-- کارتی موبایل — نوێ -->
-  <div class="prod-cards-mobile" id="prodCardsMobile"></div>
 
   <script>
     const ADMIN_USER = 'admin';
@@ -2210,6 +2531,7 @@
     let confirmCb = null;
     let hasUnsavedChanges = false;
     let autoRefreshInterval = null;
+    const imgCache = {};
 
     document.addEventListener('DOMContentLoaded', () => {
       loadGhConfig();
@@ -2218,15 +2540,14 @@
         if (el) el.textContent = new Date().toLocaleTimeString('ar-IQ');
       }, 1000);
       document.addEventListener('visibilitychange', handleVisibilityChange);
-      // ESC key لۆز کردنی modal وێنە
-      document.addEventListener('keydown', e => { if (e.key === 'Escape') closeImgPreview(); });
+      document.addEventListener('keydown', e => {
+        if (e.key === 'Escape') { closeImgPreview(); closeEdit(); closeConfirm(); }
+        if (e.ctrlKey && e.key === 's') { e.preventDefault(); publishJSON(); }
+      });
       startAutoRefresh();
     });
 
-    // ★★★ IMAGE PREVIEW FUNCTIONS
-    // Cache بۆ وێنەکان — دووجار بار ناکرێن
-    const imgCache = {};
-
+    // IMAGE PREVIEW
     function getImgUrl(imgPath) {
       if (!imgPath || imgPath === 'placeholder.jpg' || !ghConfig) return null;
       if (imgPath.startsWith('http')) return imgPath;
@@ -2239,41 +2560,22 @@
       if (!p) return;
       const modal = document.getElementById('imgPreviewModal');
       const content = document.getElementById('imgPreviewContent');
-      const nameEl = document.getElementById('imgPreviewName');
-      const pathEl = document.getElementById('imgPreviewPath');
-
-      nameEl.textContent = p.name;
-      pathEl.textContent = p.image || 'وێنەی نییە';
-
+      document.getElementById('imgPreviewName').textContent = p.name;
+      document.getElementById('imgPreviewPath').textContent = p.image || 'وێنەی نییە';
       const url = getImgUrl(p.image);
       if (!url) {
         content.innerHTML = `<div class="img-preview-no"><i class="fas fa-image"></i><div>وێنەی نییە</div></div>`;
-        modal.classList.add('open');
-        document.body.style.overflow = 'hidden';
-        return;
+        modal.classList.add('open'); document.body.style.overflow = 'hidden'; return;
       }
-
-      // ئەگەر پێشتر بارکراوە cache بەکاربێنە
       if (imgCache[url]) {
         content.innerHTML = `<img class="img-preview-img" src="${imgCache[url]}" alt="${p.name}">`;
-        modal.classList.add('open');
-        document.body.style.overflow = 'hidden';
-        return;
+        modal.classList.add('open'); document.body.style.overflow = 'hidden'; return;
       }
-
-      // Lazy Load — تەنها ئێستا بار دەکرێت
       content.innerHTML = `<div class="img-loading"><div class="spinner"></div></div>`;
-      modal.classList.add('open');
-      document.body.style.overflow = 'hidden';
-
+      modal.classList.add('open'); document.body.style.overflow = 'hidden';
       const img = new Image();
-      img.onload = () => {
-        imgCache[url] = url; // cache بکە
-        content.innerHTML = `<img class="img-preview-img" src="${url}" alt="${p.name}">`;
-      };
-      img.onerror = () => {
-        content.innerHTML = `<div class="img-err"><i class="fas fa-image-slash"></i><div>وێنەکە نەدۆزرایەوە</div><div style="font-size:11px;color:var(--text3);margin-top:4px;direction:ltr">${p.image}</div></div>`;
-      };
+      img.onload = () => { imgCache[url] = url; content.innerHTML = `<img class="img-preview-img" src="${url}" alt="${p.name}">`; };
+      img.onerror = () => { content.innerHTML = `<div class="img-err"><i class="fas fa-image-slash"></i><div>وێنەکە نەدۆزرایەوە</div><div style="font-size:11px;margin-top:4px;direction:ltr">${p.image}</div></div>`; };
       img.src = url;
     }
 
@@ -2283,29 +2585,24 @@
       document.body.style.overflow = '';
     }
 
-    // ★ Thumb HTML — ئایکۆنی کلیک (بەبێ بارکردنی وێنە لە تەیبڵ)
-    // وێنەکان تەنها کاتی کلیک لە Modal بار دەبن
     function thumbHtml(p) {
       const hasImg = p.image && p.image !== 'placeholder.jpg';
       return `<div class="p-thumb${hasImg ? ' has-img' : ''}" onclick="openImgPreview('${p.id}')" title="${hasImg ? 'کلیک بکە بۆ بینینی وێنە' : 'وێنەی نییە'}">
-        <div class="no-img"><i class="fas ${hasImg ? 'fa-image' : 'fa-image-slash'}"></i></div>
-        ${hasImg ? '<div class="img-dot"></div>' : ''}
-    </div>`;
+    <div class="no-img"><i class="fas ${hasImg ? 'fa-image' : 'fa-image-slash'}"></i></div>
+    ${hasImg ? '<div class="img-dot"></div>' : ''}
+  </div>`;
     }
 
-    // ============================================================
+    // VISIBILITY / REFRESH
     function handleVisibilityChange() {
-      if (!document.hidden) {
-        const isLoggedIn = localStorage.getItem(SESSION_KEY) === 'true';
-        if (isLoggedIn && ghConfig) {
-          showRefreshBar();
-          loadProductsFromGitHub().then(() => {
-            renderDash();
-            if (document.getElementById('page-products').classList.contains('active')) renderTable();
-            hideRefreshBar();
-            toast('کاڵاکان نوێکرانەوە ✓', 'success');
-          });
-        }
+      if (!document.hidden && localStorage.getItem(SESSION_KEY) === 'true' && ghConfig) {
+        showRefreshBar();
+        loadProductsFromGitHub().then(() => {
+          renderDash();
+          if (document.getElementById('page-products').classList.contains('active')) renderTable();
+          hideRefreshBar();
+          toast('کاڵاکان نوێکرانەوە ✓', 'success');
+        });
       }
     }
 
@@ -2315,8 +2612,8 @@
       refreshBarEl = document.createElement('div');
       refreshBarEl.className = 'refresh-bar';
       refreshBarEl.innerHTML = '<i class="fas fa-sync-alt"></i> <span>نوێکردنەوەی کاڵاکان لە GitHub...</span>';
-      const firstPage = document.querySelector('.page.active');
-      if (firstPage) firstPage.insertBefore(refreshBarEl, firstPage.firstChild);
+      const pg = document.querySelector('.page.active');
+      if (pg) pg.insertBefore(refreshBarEl, pg.firstChild);
     }
     function hideRefreshBar() {
       if (refreshBarEl) { refreshBarEl.remove(); refreshBarEl = null; }
@@ -2340,8 +2637,7 @@
           hasUnsavedChanges = false;
           document.getElementById('publishBar').classList.remove('show');
           await doRefresh();
-        });
-        return;
+        }); return;
       }
       await doRefresh();
     }
@@ -2355,6 +2651,7 @@
       toast('کاڵاکان نوێکرانەوە ✓', 'success');
     }
 
+    // SETUP
     function loadGhConfig() {
       try {
         const s = localStorage.getItem(GH_CONFIG_KEY);
@@ -2400,6 +2697,8 @@
           const data = await res.json();
           currentProducts = Array.isArray(data) ? data.map(p => ({ ...p, hidden: p.hidden || false })) : [];
           document.getElementById('navBadge').textContent = currentProducts.length;
+          const dot = document.getElementById('bnDot');
+          if (dot) dot.style.display = currentProducts.length ? 'block' : 'none';
           updateChangesBadge();
           return true;
         }
@@ -2426,7 +2725,7 @@
 
     function doLogout() {
       showConfirm('چوونەدەرەوە', 'دڵنیایت؟', () => {
-        currentProducts = []; // ← زیاد بکە
+        currentProducts = [];
         localStorage.removeItem(SESSION_KEY);
         location.reload();
       });
@@ -2452,7 +2751,7 @@
 
     function updateChangesBadge() {
       const b = document.getElementById('changesBadge');
-      if (hasUnsavedChanges) { b.classList.add('show'); document.getElementById('changesNum').textContent = '!'; }
+      if (hasUnsavedChanges) b.classList.add('show');
       else b.classList.remove('show');
     }
 
@@ -2471,7 +2770,9 @@
         }
         document.getElementById('loadingText').textContent = 'خوێندنەوەی SHA...';
         let sha = null;
-        const getRes = await fetch(`https://api.github.com/repos/${username}/${repo}/contents/products.json`, { headers: { 'Authorization': `token ${token}`, 'Accept': 'application/vnd.github.v3+json' } });
+        const getRes = await fetch(`https://api.github.com/repos/${username}/${repo}/contents/products.json`, {
+          headers: { 'Authorization': `token ${token}`, 'Accept': 'application/vnd.github.v3+json' }
+        });
         if (getRes.ok) { const d = await getRes.json(); sha = d.sha; }
         document.getElementById('loadingText').textContent = 'ناردن بۆ GitHub...';
         const body = {
@@ -2498,17 +2799,25 @@
       const visible = currentProducts.filter(p => !p.hidden).length;
       const hidden = currentProducts.filter(p => p.hidden).length;
       document.getElementById('statsGrid').innerHTML = `
-        <div class="stat-card"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px"><div class="stat-icon" style="background:rgba(249,115,22,0.15)"><i class="fas fa-box" style="color:var(--primary)"></i></div><div class="stat-badge badge-orange">کۆی گشتی</div></div><div class="stat-number">${total}</div><div class="stat-label">کۆی کاڵاکان</div></div>
-        <div class="stat-card"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px"><div class="stat-icon" style="background:rgba(34,197,94,0.15)"><i class="fas fa-eye" style="color:#4ade80"></i></div><div class="stat-badge badge-green">چالاک</div></div><div class="stat-number">${visible}</div><div class="stat-label">نیشاندراو</div></div>
-        <div class="stat-card"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px"><div class="stat-icon" style="background:rgba(239,68,68,0.15)"><i class="fas fa-eye-slash" style="color:#fca5a5"></i></div><div class="stat-badge badge-pink">شاراوە</div></div><div class="stat-number">${hidden}</div><div class="stat-label">شاراوە</div></div>
-        <div class="stat-card"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px"><div class="stat-icon" style="background:rgba(59,130,246,0.15)"><i class="fas fa-tags" style="color:#60a5fa"></i></div><div class="stat-badge badge-blue">بەشەکان</div></div><div class="stat-number">6</div><div class="stat-label">بەشی جیاواز</div></div>`;
+    <div class="stat-card"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px"><div class="stat-icon" style="background:rgba(249,115,22,0.15)"><i class="fas fa-box" style="color:var(--primary)"></i></div><div class="stat-badge badge-orange">کۆی گشتی</div></div><div class="stat-number">${total}</div><div class="stat-label">کۆی کاڵاکان</div></div>
+    <div class="stat-card"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px"><div class="stat-icon" style="background:rgba(34,197,94,0.15)"><i class="fas fa-eye" style="color:#4ade80"></i></div><div class="stat-badge badge-green">چالاک</div></div><div class="stat-number">${visible}</div><div class="stat-label">نیشاندراو</div></div>
+    <div class="stat-card"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px"><div class="stat-icon" style="background:rgba(239,68,68,0.15)"><i class="fas fa-eye-slash" style="color:#fca5a5"></i></div><div class="stat-badge badge-pink">شاراوە</div></div><div class="stat-number">${hidden}</div><div class="stat-label">شاراوە</div></div>
+    <div class="stat-card"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px"><div class="stat-icon" style="background:rgba(59,130,246,0.15)"><i class="fas fa-tags" style="color:#60a5fa"></i></div><div class="stat-badge badge-blue">بەشەکان</div></div><div class="stat-number">6</div><div class="stat-label">بەشی جیاواز</div></div>`;
       document.getElementById('catGrid').innerHTML = Object.keys(catInfo).map(cat => {
         const info = catInfo[cat];
         const c = currentProducts.filter(p => p.category === cat && !p.hidden).length;
-        return `<div class="cat-item"><div class="cat-icon" style="background:${info.color}22"><i class="fas ${info.icon}" style="color:${info.color}"></i></div><div><div style="font-size:12px;color:var(--text2)">${info.name}</div><div style="font-size:18px;font-weight:800;color:white">${c}</div></div></div>`;
+        return `<div class="cat-item"><div class="cat-icon" style="background:${info.color}22"><i class="fas ${info.icon}" style="color:${info.color}"></i></div><div><div style="font-size:11px;color:var(--text2)">${info.name}</div><div style="font-size:18px;font-weight:800;color:white">${c}</div></div></div>`;
       }).join('');
     }
 
+    // BOTTOM NAV
+    function setBottomNav(id) {
+      document.querySelectorAll('.bottom-nav-item').forEach(b => b.classList.remove('active'));
+      const el = document.getElementById('bn-' + id);
+      if (el) el.classList.add('active');
+    }
+
+    // SHOW PAGE
     function showPage(id, btn) {
       document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
       document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
@@ -2517,38 +2826,19 @@
       const titles = { dashboard: 'داشبۆرد 📊', products: 'کاڵاکان 📦', add: 'زیادکردنی کاڵا ➕', settings: 'ڕێکخستن ⚙️' };
       document.getElementById('topTitle').textContent = titles[id] || id;
       if (id === 'products') renderTable();
+      if (id === 'settings') updateGhStatus();
+      setBottomNav(id);
       closeSidebar();
+      window.scrollTo(0, 0);
     }
 
-    function renderTable(list) {
-      const prods = list || currentProducts;
-      const tbody = document.getElementById('prodBody');
-      document.getElementById('tCount').textContent = prods.length + ' کاڵا';
-      document.getElementById('prodSub').textContent = prods.length + ' کاڵا بوونە';
-      if (!prods.length) { document.getElementById('prodEmpty').style.display = 'block'; tbody.innerHTML = ''; return; }
-      document.getElementById('prodEmpty').style.display = 'none';
-      tbody.innerHTML = prods.map(p => `<tr>
-        <td><div class="p-name">${thumbHtml(p)}<div><div class="p-title">${p.name}</div><div class="p-id">${p.id}</div></div></div></td>
-        <td><span class="cat-badge c-${p.category}">${catInfo[p.category]?.name || p.category}</span></td>
-        <td style="color:var(--text2);max-width:100px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${p.description}</td>
-        <td><span class="price-badge">${p.price.toLocaleString()} د.ع</span></td>
-        <td><span class="status-badge ${p.hidden ? 's-hidden' : 's-active'}">${p.hidden ? 'شاراوە' : 'نیشاندراو'}</span></td>
-        <td><div class="act-cell">
-            <button class="act-btn a-img" onclick="openImgPreview('${p.id}')" title="بینینی وێنە"><i class="fas fa-image"></i></button>
-            <button class="act-btn a-edit" onclick="openEdit('${p.id}')"><i class="fas fa-pen"></i></button>
-            <button class="act-btn a-toggle" onclick="toggleProd('${p.id}')"><i class="fas ${p.hidden ? 'fa-eye' : 'fa-eye-slash'}"></i></button>
-            <button class="act-btn a-del" onclick="delProd('${p.id}')"><i class="fas fa-trash"></i></button>
-        </div></td>
-    </tr>`).join('');
-    }
+    // RENDER TABLE + MOBILE CARDS
     function renderTable(list) {
       const prods = list || currentProducts;
       const tbody = document.getElementById('prodBody');
       const cards = document.getElementById('prodCardsMobile');
-
       document.getElementById('tCount').textContent = prods.length + ' کاڵا';
       document.getElementById('prodSub').textContent = prods.length + ' کاڵا بوونە';
-
       if (!prods.length) {
         document.getElementById('prodEmpty').style.display = 'block';
         tbody.innerHTML = '';
@@ -2557,13 +2847,11 @@
       }
       document.getElementById('prodEmpty').style.display = 'none';
 
-      // ── Desktop Table ──
+      // Desktop
       tbody.innerHTML = prods.map(p => `<tr>
-    <td><div class="p-name">${thumbHtml(p)}
-      <div><div class="p-title">${p.name}</div>
-      <div class="p-id">${p.id}</div></div></div></td>
+    <td><div class="p-name">${thumbHtml(p)}<div><div class="p-title">${p.name}</div><div class="p-id">${p.id}</div></div></div></td>
     <td><span class="cat-badge c-${p.category}">${catInfo[p.category]?.name || p.category}</span></td>
-    <td style="color:var(--text2);max-width:100px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${p.description}</td>
+    <td style="color:var(--text2);max-width:120px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${p.description}</td>
     <td><span class="price-badge">${p.price.toLocaleString()} د.ع</span></td>
     <td><span class="status-badge ${p.hidden ? 's-hidden' : 's-active'}">${p.hidden ? 'شاراوە' : 'نیشاندراو'}</span></td>
     <td><div class="act-cell">
@@ -2574,10 +2862,9 @@
     </div></td>
   </tr>`).join('');
 
-      // ── Mobile Cards ──
+      // Mobile Cards
       if (cards) {
-        cards.innerHTML = prods.map(p => `
-    <div class="prod-card">
+        cards.innerHTML = prods.map(p => `<div class="prod-card">
       <div class="prod-card-top">
         ${thumbHtml(p)}
         <div class="prod-card-info">
@@ -2590,7 +2877,7 @@
         <span class="price-badge">${p.price.toLocaleString()} د.ع</span>
         <span class="status-badge ${p.hidden ? 's-hidden' : 's-active'}">${p.hidden ? 'شاراوە' : 'نیشاندراو'}</span>
       </div>
-      ${p.description ? `<div style="font-size:12px;color:var(--text2);margin-bottom:8px">${p.description}</div>` : ''}
+      ${p.description ? `<div style="font-size:12px;color:var(--text2);margin-top:8px">${p.description}</div>` : ''}
       <div class="prod-card-actions">
         <button class="act-btn a-img" onclick="openImgPreview('${p.id}')"><i class="fas fa-image"></i></button>
         <button class="act-btn a-edit" onclick="openEdit('${p.id}')"><i class="fas fa-pen"></i></button>
@@ -2599,7 +2886,7 @@
       </div>
     </div>`).join('');
       }
-    } 
+    }
 
     function filterProds() {
       const q = document.getElementById('srch').value.toLowerCase();
@@ -2613,41 +2900,35 @@
       }));
     }
 
+    // EDIT
     function openEdit(id) {
       const p = currentProducts.find(x => x.id === id);
       if (!p) return;
-
-      // ✅ پاکردنەوەی فیلدەکان پێش هەر شتێک
       document.getElementById('editId').value = '';
       document.getElementById('editName').value = '';
       document.getElementById('editCat').value = 'cake';
       document.getElementById('editPrice').value = '';
       document.getElementById('editDesc').value = '';
       document.getElementById('editImage').value = '';
-
-      // دواتر داتای نوێ دابنێ
       document.getElementById('editId').value = p.id;
       document.getElementById('editName').value = p.name;
       document.getElementById('editCat').value = p.category;
       document.getElementById('editPrice').value = p.price;
       document.getElementById('editDesc').value = p.description;
       document.getElementById('editImage').value = p.image;
-
       document.getElementById('editModal').classList.add('open');
       document.body.style.overflow = 'hidden';
     }
     function closeEdit() {
       document.getElementById('editModal').classList.remove('open');
       document.body.style.overflow = '';
-      document.getElementById('editId').value = ''; // ✅ گرنگە
+      document.getElementById('editId').value = '';
     }
     function saveEdit() {
       const id = document.getElementById('editId').value;
-      if (!id) { toast('هەڵە: ID نەدۆزرایەوە', 'error'); return; } // ✅
-
+      if (!id) { toast('هەڵە: ID نەدۆزرایەوە', 'error'); return; }
       const i = currentProducts.findIndex(x => x.id === id);
       if (i === -1) return;
-
       currentProducts[i] = {
         ...currentProducts[i],
         name: document.getElementById('editName').value.trim(),
@@ -2656,11 +2937,7 @@
         description: document.getElementById('editDesc').value.trim(),
         image: document.getElementById('editImage').value.trim()
       };
-
-      markUnsaved();
-      closeEdit();
-      renderTable();
-      renderDash();
+      markUnsaved(); closeEdit(); renderTable(); renderDash();
       toast('کاڵاکە نوێکرایەوە ✓', 'success');
     }
 
@@ -2693,25 +2970,33 @@
       toast('کاڵای نوێ زیادکرا ✓', 'success');
       clearAdd();
       showPage('products', null);
-      const visible = currentProducts.filter(p => !p.hidden);
+      setBottomNav('products');
     }
     function clearAdd() {
       ['newName', 'newPrice', 'newDesc', 'newImage'].forEach(i => document.getElementById(i).value = '');
       document.getElementById('newCat').value = 'cake';
     }
 
+    // SETTINGS
     function updateGhStatus() {
       if (!ghConfig) return;
       document.getElementById('ghStatus').textContent = '✅ GitHub پەیوەستە';
-      document.getElementById('ghInfo').innerHTML = `<div style="background:rgba(34,197,94,0.08);border:1px solid rgba(34,197,94,0.2);border-radius:var(--radius);padding:12px 14px;font-size:12px;line-height:1.9"><div><i class="fas fa-check-circle" style="color:#4ade80;margin-left:6px"></i> <strong style="color:white">پەیوەستبوو</strong></div><div style="color:var(--text2)">Repository: <span style="color:white">${ghConfig.username}/${ghConfig.repo}</span></div><div style="color:var(--text3);font-size:11px">Token: ${ghConfig.token.substring(0, 8)}••••••••</div></div>`;
+      document.getElementById('ghInfo').innerHTML = `<div style="background:rgba(34,197,94,0.08);border:1px solid rgba(34,197,94,0.2);border-radius:var(--radius);padding:12px 14px;font-size:12px;line-height:2">
+    <div><i class="fas fa-check-circle" style="color:#4ade80;margin-left:6px"></i> <strong style="color:white">پەیوەستبوو</strong></div>
+    <div style="color:var(--text2)">Repository: <span style="color:white">${ghConfig.username}/${ghConfig.repo}</span></div>
+    <div style="color:var(--text3);font-size:11px">Token: ${ghConfig.token.substring(0, 8)}••••••••</div>
+  </div>`;
     }
     function updateToken() {
       const t = document.getElementById('newToken').value.trim();
       if (!t) { toast('Token بنووسە!', 'error'); return; }
       showLoad('پشتراستکردن...');
       fetch(`https://api.github.com/repos/${ghConfig.username}/${ghConfig.repo}`, { headers: { 'Authorization': `token ${t}` } })
-        .then(r => { hideLoad(); if (r.ok) { ghConfig.token = t; localStorage.setItem(GH_CONFIG_KEY, JSON.stringify(ghConfig)); document.getElementById('newToken').value = ''; updateGhStatus(); toast('Token نوێکرایەوە ✓', 'success'); } else toast('Token هەڵەیە!', 'error'); })
-        .catch(() => { hideLoad(); toast('پەیوەندی نەتووانرا', 'error'); });
+        .then(r => {
+          hideLoad();
+          if (r.ok) { ghConfig.token = t; localStorage.setItem(GH_CONFIG_KEY, JSON.stringify(ghConfig)); document.getElementById('newToken').value = ''; updateGhStatus(); toast('Token نوێکرایەوە ✓', 'success'); }
+          else toast('Token هەڵەیە!', 'error');
+        }).catch(() => { hideLoad(); toast('پەیوەندی نەتووانرا', 'error'); });
     }
     function clearSetup() {
       showConfirm('سڕینەوەی ڕێکخستن', 'دڵنیایت؟', () => { localStorage.removeItem(GH_CONFIG_KEY); location.reload(); });
@@ -2746,15 +3031,21 @@
       });
     }
 
+    // CONFIRM
     function showConfirm(title, text, cb) {
       document.getElementById('confTitle').textContent = title;
       document.getElementById('confText').textContent = text;
       confirmCb = cb;
       document.getElementById('confOk').onclick = () => { closeConfirm(); if (confirmCb) confirmCb(); };
       document.getElementById('confirmModal').classList.add('open');
+      document.body.style.overflow = 'hidden';
     }
-    function closeConfirm() { document.getElementById('confirmModal').classList.remove('open'); }
+    function closeConfirm() {
+      document.getElementById('confirmModal').classList.remove('open');
+      document.body.style.overflow = '';
+    }
 
+    // TOAST
     function toast(msg, type = 'info') {
       const icons = { success: 'fa-check', error: 'fa-times', info: 'fa-info' };
       const wrap = document.getElementById('toasts');
@@ -2765,15 +3056,21 @@
       setTimeout(() => { el.classList.add('out'); setTimeout(() => el.remove(), 300); }, 3500);
     }
 
+    // LOADING
     function showLoad(msg) { document.getElementById('loadingOverlay').classList.add('show'); document.getElementById('loadingText').textContent = msg || 'چاوەڕێ بکە...'; }
     function hideLoad() { document.getElementById('loadingOverlay').classList.remove('show'); }
-    function openSidebar() { document.getElementById('sidebar').classList.add('open'); document.getElementById('mobileBg').classList.add('show'); }
-    function closeSidebar() { document.getElementById('sidebar').classList.remove('open'); document.getElementById('mobileBg').classList.remove('show'); }
 
-    // لە DOMContentLoaded
-    document.addEventListener('keydown', e => {
-      if (e.ctrlKey && e.key === 's') { e.preventDefault(); publishJSON(); }
-    });
+    // SIDEBAR
+    function openSidebar() {
+      document.getElementById('sidebar').classList.add('open');
+      document.getElementById('sidebarOverlay').classList.add('show');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeSidebar() {
+      document.getElementById('sidebar').classList.remove('open');
+      document.getElementById('sidebarOverlay').classList.remove('show');
+      document.body.style.overflow = '';
+    }
   </script>
 </body>
 
