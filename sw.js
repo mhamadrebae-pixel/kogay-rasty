@@ -12,6 +12,7 @@ const STATIC_FILES = [
     './style.css',
     './script.js',
     './products.json',
+    './sw.js',
 ];
 
 // دامەزراندن - فایلەکان cache بکە
@@ -50,11 +51,10 @@ self.addEventListener('fetch', (event) => {
     // products.json هەمیشە لە نێتوەرک بگیرە (بۆ نوێکردنەوەی کاڵاکان)
     if (url.pathname.endsWith('products.json')) {
         event.respondWith(
-            fetch(event.request).then((response) => {
-                const clone = response.clone();
-                caches.open(CACHE_NAME).then((cache) => cache.put(event.request, clone));
-                return response;
-            }).catch(() => caches.match(event.request))
+
+            fetch(event.request, { cache: 'no-store' }) // ← ئەمە زیاد بکە
+                .then((response) => { return response; })
+                .catch(() => caches.match('./products.json'))
         );
         return;
     }
