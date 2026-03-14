@@ -82,13 +82,13 @@ async function loadProducts() {
         const res = await fetch('products.json?v=' + Date.now(), { cache: 'no-store' });
         if (res.ok) {
             const data = await res.json();
-            products = Array.isArray(data) 
-                ? data.filter(p => 
-                    !p.hidden && 
-                    p.price > 0 && 
-                    p.name && 
-                    !p.name.match(/^IMG_\d+$/)  // ← ئەمە زیاد بکە
-                ) 
+            products = Array.isArray(data)
+                ? data.filter(p =>
+                    !p.hidden &&
+                    p.price > 0 &&
+                    p.name &&
+                    !p.name.match(/^IMG_\d+$/)
+                )
                 : [];
             return;
         }
