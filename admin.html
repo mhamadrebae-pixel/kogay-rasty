@@ -1711,6 +1711,83 @@
       color: var(--text3);
       margin: 0 auto 16px
     }
+
+    /* ─── MOBILE CARDS ─── */
+    .prod-cards-mobile {
+      display: none;
+      padding: 12px;
+      gap: 10px;
+      flex-direction: column;
+    }
+
+    .prod-card {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 14px;
+    }
+
+    .prod-card-top {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+
+    .prod-card-info {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .prod-card-name {
+      font-size: 14px;
+      font-weight: 700;
+      color: white;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .prod-card-id {
+      font-size: 11px;
+      color: var(--text3);
+      margin-top: 2px;
+    }
+
+    .prod-card-meta {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
+
+    .prod-card-actions {
+      display: flex;
+      gap: 8px;
+      padding-top: 10px;
+      border-top: 1px solid var(--border);
+    }
+
+    .prod-card-actions .act-btn {
+      flex: 1;
+      height: 38px;
+      border-radius: 10px;
+      font-size: 14px;
+    }
+
+    @media(max-width: 768px) {
+
+      /* تەیبڵ شاراوە بکە */
+      .prod-table-desktop {
+        display: none;
+      }
+
+      /* کارتەکان نیشان بدە */
+      .prod-cards-mobile {
+        display: flex;
+      }
+    }
   </style>
 </head>
 
@@ -2103,6 +2180,14 @@
   </div>
 
   <div class="toast-wrap" id="toasts"></div>
+  <!-- جیاتی: <div style="overflow-x:auto"> -->
+  <div class="prod-table-desktop" style="overflow-x:auto">
+    <table id="prodTable">
+      <!-- هەموو کۆدی تەیبڵەکەت وەک خۆیەتی -->
+    </table>
+  </div>
+  <!-- کارتی موبایل — نوێ -->
+  <div class="prod-cards-mobile" id="prodCardsMobile"></div>
 
   <script>
     const ADMIN_USER = 'admin';
@@ -2456,6 +2541,65 @@
         </div></td>
     </tr>`).join('');
     }
+    function renderTable(list) {
+      const prods = list || currentProducts;
+      const tbody = document.getElementById('prodBody');
+      const cards = document.getElementById('prodCardsMobile');
+
+      document.getElementById('tCount').textContent = prods.length + ' کاڵا';
+      document.getElementById('prodSub').textContent = prods.length + ' کاڵا بوونە';
+
+      if (!prods.length) {
+        document.getElementById('prodEmpty').style.display = 'block';
+        tbody.innerHTML = '';
+        if (cards) cards.innerHTML = '';
+        return;
+      }
+      document.getElementById('prodEmpty').style.display = 'none';
+
+      // ── Desktop Table ──
+      tbody.innerHTML = prods.map(p => `<tr>
+    <td><div class="p-name">${thumbHtml(p)}
+      <div><div class="p-title">${p.name}</div>
+      <div class="p-id">${p.id}</div></div></div></td>
+    <td><span class="cat-badge c-${p.category}">${catInfo[p.category]?.name || p.category}</span></td>
+    <td style="color:var(--text2);max-width:100px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${p.description}</td>
+    <td><span class="price-badge">${p.price.toLocaleString()} د.ع</span></td>
+    <td><span class="status-badge ${p.hidden ? 's-hidden' : 's-active'}">${p.hidden ? 'شاراوە' : 'نیشاندراو'}</span></td>
+    <td><div class="act-cell">
+      <button class="act-btn a-img" onclick="openImgPreview('${p.id}')"><i class="fas fa-image"></i></button>
+      <button class="act-btn a-edit" onclick="openEdit('${p.id}')"><i class="fas fa-pen"></i></button>
+      <button class="act-btn a-toggle" onclick="toggleProd('${p.id}')"><i class="fas ${p.hidden ? 'fa-eye' : 'fa-eye-slash'}"></i></button>
+      <button class="act-btn a-del" onclick="delProd('${p.id}')"><i class="fas fa-trash"></i></button>
+    </div></td>
+  </tr>`).join('');
+
+      // ── Mobile Cards ──
+      if (cards) {
+        cards.innerHTML = prods.map(p => `
+    <div class="prod-card">
+      <div class="prod-card-top">
+        ${thumbHtml(p)}
+        <div class="prod-card-info">
+          <div class="prod-card-name">${p.name}</div>
+          <div class="prod-card-id">${p.id}</div>
+        </div>
+      </div>
+      <div class="prod-card-meta">
+        <span class="cat-badge c-${p.category}">${catInfo[p.category]?.name || p.category}</span>
+        <span class="price-badge">${p.price.toLocaleString()} د.ع</span>
+        <span class="status-badge ${p.hidden ? 's-hidden' : 's-active'}">${p.hidden ? 'شاراوە' : 'نیشاندراو'}</span>
+      </div>
+      ${p.description ? `<div style="font-size:12px;color:var(--text2);margin-bottom:8px">${p.description}</div>` : ''}
+      <div class="prod-card-actions">
+        <button class="act-btn a-img" onclick="openImgPreview('${p.id}')"><i class="fas fa-image"></i></button>
+        <button class="act-btn a-edit" onclick="openEdit('${p.id}')"><i class="fas fa-pen"></i></button>
+        <button class="act-btn a-toggle" onclick="toggleProd('${p.id}')"><i class="fas ${p.hidden ? 'fa-eye' : 'fa-eye-slash'}"></i></button>
+        <button class="act-btn a-del" onclick="delProd('${p.id}')"><i class="fas fa-trash"></i></button>
+      </div>
+    </div>`).join('');
+      }
+    } 
 
     function filterProds() {
       const q = document.getElementById('srch').value.toLowerCase();
