@@ -2305,9 +2305,9 @@
   },
   {
     "id": "cake-034",
-    "name": "IMG_6344",
-    "description": "24 عەدەد",
-    "price": 0,
+    "name": "میکس ڕوڵ مۆر",
+    "description": "12 عەدەد",
+    "price": 2500,
     "image": "kek/IMG_6344.jpeg",
     "category": "cake",
     "hidden": false
@@ -2332,9 +2332,9 @@
   },
   {
     "id": "cake-037",
-    "name": "ڕۆکی",
+    "name": "IMG_6353",
     "description": "24 عەدەد",
-    "price": 4500,
+    "price": 0,
     "image": "kek/IMG_6353.jpeg",
     "category": "cake",
     "hidden": false
