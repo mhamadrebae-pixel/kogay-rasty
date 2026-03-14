@@ -2267,7 +2267,6 @@
     "category": "drink",
     "hidden": false
   },
-  
   {
     "id": "drink-1772053943960",
     "name": "شیر قاوە دەبە",
@@ -2297,9 +2296,9 @@
   },
   {
     "id": "cake-033",
-    "name": "IMG_6343",
+    "name": "میکس ڕوڵی پرتەقاڵ",
     "description": "24 عەدەد",
-    "price": 0,
+    "price": 2500,
     "image": "kek/IMG_6343.jpeg",
     "category": "cake",
     "hidden": false
@@ -3456,5 +3455,4 @@
     "category": "baby",
     "hidden": false
   }
-  
 ]
