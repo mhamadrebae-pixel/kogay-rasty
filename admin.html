@@ -2389,7 +2389,10 @@
         const getRes = await fetch(`https://api.github.com/repos/${username}/${repo}/contents/products.json`, { headers: { 'Authorization': `token ${token}`, 'Accept': 'application/vnd.github.v3+json' } });
         if (getRes.ok) { const d = await getRes.json(); sha = d.sha; }
         document.getElementById('loadingText').textContent = 'ناردن بۆ GitHub...';
-        const body = { message: `✅ نوێکرانەوە — ${currentProducts.length} کاڵا (${visible.length} نیشاندراو)` };
+        const body = {
+          message: `✅ نوێکرانەوە — ${currentProducts.length} کاڵا (${visible.length} نیشاندراو)`,
+          content: toBase64(jsonContent)
+        };
         if (sha) body.sha = sha;
         const putRes = await fetch(`https://api.github.com/repos/${username}/${repo}/contents/products.json`, {
           method: 'PUT',
@@ -2470,49 +2473,48 @@
       const p = currentProducts.find(x => x.id === id);
       if (!p) return;
 
-      // ✅ پاکردنەوەی فیلدەکان پێش داتای نوێ
-      ['editName', 'editCat', 'editPrice', 'editDesc', 'editImage'].forEach(i => {
-        const el = document.getElementById(i);
-        if (el) el.value = '';
-      });
+      // ✅ پاکردنەوەی فیلدەکان پێش هەر شتێک
+      document.getElementById('editId').value = '';
+      document.getElementById('editName').value = '';
+      document.getElementById('editCat').value = 'cake';
+      document.getElementById('editPrice').value = '';
+      document.getElementById('editDesc').value = '';
+      document.getElementById('editImage').value = '';
 
+      // دواتر داتای نوێ دابنێ
       document.getElementById('editId').value = p.id;
       document.getElementById('editName').value = p.name;
       document.getElementById('editCat').value = p.category;
       document.getElementById('editPrice').value = p.price;
       document.getElementById('editDesc').value = p.description;
       document.getElementById('editImage').value = p.image;
+
       document.getElementById('editModal').classList.add('open');
       document.body.style.overflow = 'hidden';
     }
     function closeEdit() {
       document.getElementById('editModal').classList.remove('open');
       document.body.style.overflow = '';
-      // ✅ پاکردنەوەی فیلدەکان کاتێک modal دادەخرێت
-      document.getElementById('editId').value = '';
-    } function saveEdit() {
+      document.getElementById('editId').value = ''; // ✅ گرنگە
+    }
+    function saveEdit() {
       const id = document.getElementById('editId').value;
-      if (!id) return; // ✅ دڵنیابە ID هەیە
+      if (!id) { toast('هەڵە: ID نەدۆزرایەوە', 'error'); return; } // ✅
 
       const i = currentProducts.findIndex(x => x.id === id);
       if (i === -1) return;
 
-      const name = document.getElementById('editName').value.trim();
-      const price = parseInt(document.getElementById('editPrice').value) || 0;
-
-      if (!name) { toast('ناوی کاڵاکە بنووسە!', 'error'); return; }
-
       currentProducts[i] = {
         ...currentProducts[i],
-        name,
+        name: document.getElementById('editName').value.trim(),
         category: document.getElementById('editCat').value,
-        price,
+        price: parseInt(document.getElementById('editPrice').value) || 0,
         description: document.getElementById('editDesc').value.trim(),
         image: document.getElementById('editImage').value.trim()
       };
 
       markUnsaved();
-      closeEdit();   // ✅ پێش renderTable
+      closeEdit();
       renderTable();
       renderDash();
       toast('کاڵاکە نوێکرایەوە ✓', 'success');
@@ -2547,7 +2549,7 @@
       toast('کاڵای نوێ زیادکرا ✓', 'success');
       clearAdd();
       showPage('products', null);
-      setBottomNav('products');
+      const visible = currentProducts.filter(p => !p.hidden);
     }
     function clearAdd() {
       ['newName', 'newPrice', 'newDesc', 'newImage'].forEach(i => document.getElementById(i).value = '');
