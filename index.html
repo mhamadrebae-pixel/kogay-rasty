@@ -14,7 +14,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;500;600;700;800;900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
+    <!-- جیاتی v=1, v=2 -->
+    <link rel="stylesheet" href="style.css?v=2026031401">
+    <script src="script.js?v=2026031401"></script>
 </head>
 
 <body>
@@ -276,11 +278,9 @@
                         // هەر جارێک نسخەی نوێ بووە، ئۆتۆماتیک نوێ بکەرەوە
                         reg.addEventListener('updatefound', () => {
                             const newWorker = reg.installing;
-                            newWorker.addEventListener('statechange', () => {
-                                if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
-                                    console.log('[SW] New version available, reloading...');
-                                    window.location.reload();
-                                }
+                            reg.addEventListener('updatefound', () => {
+                                console.log('[SW] Update found');
+                                // بەکارهێنەر خۆی refresh دەکات کاتێک دەیەوێت
                             });
                         });
                     })
