@@ -16,12 +16,12 @@
 })();
 
 const categories = {
-    cake:   { name: 'کێک',         icon: 'fa-cake-candles', count: 0 },
-    gaz:    { name: 'گەز و بسکیت', icon: 'fa-cookie-bite',  count: 0 },
-    drink:  { name: 'خواردنەوە',   icon: 'fa-glass-water',  count: 0 },
-    chips:  { name: 'چیپس',        icon: 'fa-bowl-food',    count: 0 },
-    baby:   { name: 'مناڵان',      icon: 'fa-baby',         count: 0 },
-    family: { name: 'عایلەی',      icon: 'fa-users',        count: 0 }
+    cake: { name: 'کێک', icon: 'fa-cake-candles', count: 0 },
+    gaz: { name: 'گەز و بسکیت', icon: 'fa-cookie-bite', count: 0 },
+    drink: { name: 'خواردنەوە', icon: 'fa-glass-water', count: 0 },
+    chips: { name: 'چیپس', icon: 'fa-bowl-food', count: 0 },
+    baby: { name: 'مناڵان', icon: 'fa-baby', count: 0 },
+    family: { name: 'عایلەی', icon: 'fa-users', count: 0 }
 };
 
 let products = [];
@@ -82,8 +82,8 @@ async function loadProducts() {
         const res = await fetch('products.json?v=' + Date.now(), { cache: 'no-store' });
         if (res.ok) {
             const data = await res.json();
-            products = Array.isArray(data) ? data.filter(p => !p.hidden) : [];
-            console.log('✅ products.json:', products.length, 'کاڵا');
+            // لە loadProducts() دوای فلتەر کردن
+            products = Array.isArray(data) ? data.filter(p => !p.hidden && p.price > 0 && p.name && !p.name.startsWith('IMG_')) : []; console.log('✅ products.json:', products.length, 'کاڵا');
             return;
         }
     } catch (e) { console.warn('products.json کێشە:', e); }
@@ -398,7 +398,7 @@ function sendWhatsApp() {
     const phone = (document.getElementById('customerPhone')?.value || '').trim();
     if (!name || !phone) { showToast('ناو و ژمارە بنووسە', 'error'); return; }
     let msg = `🛒 *داواکاری نوێ*\n━━━━━━━━━━━━━━━\n👤 *ناو:* ${name}\n📱 *تەلەفۆن:* ${phone}\n━━━━━━━━━━━━━━━\n📦 *کاڵاکان:*\n━━━━━━━━━━━━━━━\n`;
-    cart.forEach((item, i) => { msg += item.price > 0 ? `${i+1}. ${item.name}\n   ${item.quantity} × ${item.price.toLocaleString()} = ${(item.price*item.quantity).toLocaleString()} IQD\n` : `${i+1}. ${item.name} × ${item.quantity}\n`; });
+    cart.forEach((item, i) => { msg += item.price > 0 ? `${i + 1}. ${item.name}\n   ${item.quantity} × ${item.price.toLocaleString()} = ${(item.price * item.quantity).toLocaleString()} IQD\n` : `${i + 1}. ${item.name} × ${item.quantity}\n`; });
     const total = cart.reduce((s, i) => s + i.price * i.quantity, 0);
     msg += `━━━━━━━━━━━━━━━\n${total > 0 ? '💰 *کۆی گشتی:* ' + total.toLocaleString() + ' IQD\n' : ''}━━━━━━━━━━━━━━━\n⏰ ${new Date().toLocaleString('ar-IQ')}\n✅ تەنیا داواکاریەکەم بنێرە`;
     window.open('https://wa.me/9647518959614?text=' + encodeURIComponent(msg), '_blank');
@@ -412,7 +412,7 @@ function showToast(message, type = 'success') {
     const icons = { success: 'fa-check', error: 'fa-times', info: 'fa-info' };
     const toast = document.createElement('div');
     toast.className = 'toast';
-    toast.innerHTML = `<div class="toast-icon"><i class="fas ${icons[type]||'fa-check'}"></i></div><span class="toast-message">${message}</span>`;
+    toast.innerHTML = `<div class="toast-icon"><i class="fas ${icons[type] || 'fa-check'}"></i></div><span class="toast-message">${message}</span>`;
     container.appendChild(toast);
     setTimeout(() => { toast.classList.add('hide'); setTimeout(() => toast.remove(), 400); }, 2500);
 }
