@@ -82,17 +82,17 @@ async function loadProducts() {
         const res = await fetch('products.json?v=' + Date.now(), { cache: 'no-store' });
         if (res.ok) {
             const data = await res.json();
-            // لە loadProducts() دوای فلتەر کردن
-            products = Array.isArray(data) ? data.filter(p => !p.hidden && p.price > 0 && p.name && !p.name.startsWith('IMG_')) : []; console.log('✅ products.json:', products.length, 'کاڵا');
+            products = Array.isArray(data) 
+                ? data.filter(p => 
+                    !p.hidden && 
+                    p.price > 0 && 
+                    p.name && 
+                    !p.name.match(/^IMG_\d+$/)  // ← ئەمە زیاد بکە
+                ) 
+                : [];
             return;
         }
     } catch (e) { console.warn('products.json کێشە:', e); }
-
-    try {
-        const saved = localStorage.getItem('adminProducts_v1');
-        if (saved) { products = JSON.parse(saved).filter(p => !p.hidden); return; }
-    } catch (e) { }
-
     products = [];
 }
 
