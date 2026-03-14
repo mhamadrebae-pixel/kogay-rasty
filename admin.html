@@ -2246,7 +2246,7 @@
             if (document.getElementById('page-products').classList.contains('active')) renderTable();
           }).catch(() => { });
         }
-      }, 30000);
+      }, 300000);
     }
 
     async function manualRefresh() {
@@ -2340,7 +2340,11 @@
     }
 
     function doLogout() {
-      showConfirm('چوونەدەرەوە', 'دڵنیایت؟', () => { localStorage.removeItem(SESSION_KEY); location.reload(); });
+      showConfirm('چوونەدەرەوە', 'دڵنیایت؟', () => {
+        currentProducts = []; // ← زیاد بکە
+        localStorage.removeItem(SESSION_KEY);
+        location.reload();
+      });
     }
 
     async function showApp() {
@@ -2373,7 +2377,7 @@
       try {
         const { token, username, repo } = ghConfig;
         const visible = currentProducts.filter(p => !p.hidden);
-        const jsonContent = JSON.stringify(visible, null, 2);
+        const jsonContent = JSON.stringify(currentProducts, null, 2);
         function toBase64(str) {
           const bytes = new TextEncoder().encode(str);
           let bin = '';
@@ -2385,7 +2389,7 @@
         const getRes = await fetch(`https://api.github.com/repos/${username}/${repo}/contents/products.json`, { headers: { 'Authorization': `token ${token}`, 'Accept': 'application/vnd.github.v3+json' } });
         if (getRes.ok) { const d = await getRes.json(); sha = d.sha; }
         document.getElementById('loadingText').textContent = 'ناردن بۆ GitHub...';
-        const body = { message: `✅ کاڵاکان نوێکرانەوە — ${visible.length} کاڵا`, content: toBase64(jsonContent) };
+        const body = { message: `✅ نوێکرانەوە — ${currentProducts.length} کاڵا (${visible.length} نیشاندراو)` };
         if (sha) body.sha = sha;
         const putRes = await fetch(`https://api.github.com/repos/${username}/${repo}/contents/products.json`, {
           method: 'PUT',
@@ -2542,6 +2546,8 @@
       markUnsaved(); renderDash();
       toast('کاڵای نوێ زیادکرا ✓', 'success');
       clearAdd();
+      showPage('products', null);
+      setBottomNav('products');
     }
     function clearAdd() {
       ['newName', 'newPrice', 'newDesc', 'newImage'].forEach(i => document.getElementById(i).value = '');
@@ -2617,6 +2623,11 @@
     function hideLoad() { document.getElementById('loadingOverlay').classList.remove('show'); }
     function openSidebar() { document.getElementById('sidebar').classList.add('open'); document.getElementById('mobileBg').classList.add('show'); }
     function closeSidebar() { document.getElementById('sidebar').classList.remove('open'); document.getElementById('mobileBg').classList.remove('show'); }
+
+    // لە DOMContentLoaded
+    document.addEventListener('keydown', e => {
+      if (e.ctrlKey && e.key === 's') { e.preventDefault(); publishJSON(); }
+    });
   </script>
 </body>
 
