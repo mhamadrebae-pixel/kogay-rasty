@@ -3160,43 +3160,43 @@
   },
   {
     "id": "baby-058",
-    "name": "IMG_6418",
+    "name": "وەن حەب",
     "description": "24 عەدەد",
-    "price": 0,
+    "price": 5000,
     "image": "mnalan/IMG_6418.jpeg",
     "category": "baby",
     "hidden": false
   },
   {
     "id": "baby-059",
-    "name": "IMG_6419",
-    "description": "24 عەدەد",
-    "price": 0,
+    "name": "بوبی لاکیشە",
+    "description": "48 عەدەد",
+    "price": 2000,
     "image": "mnalan/IMG_6419.jpeg",
     "category": "baby",
     "hidden": false
   },
   {
     "id": "baby-060",
-    "name": "IMG_6420",
+    "name": "جەلی پیتزا",
     "description": "24 عەدەد",
-    "price": 0,
+    "price": 5000,
     "image": "mnalan/IMG_6420.jpeg",
     "category": "baby",
     "hidden": false
   },
   {
     "id": "baby-061",
-    "name": "IMG_6421",
+    "name": "جەلئ کوبرا",
     "description": "24 عەدەد",
-    "price": 0,
+    "price": 5000,
     "image": "mnalan/IMG_6421.jpeg",
     "category": "baby",
     "hidden": false
   },
   {
     "id": "baby-062",
-    "name": "IMG_6422",
+    "name": "جەلی کرم کۆکتیل",
     "description": "24 عەدەد",
     "price": 0,
     "image": "mnalan/IMG_6422.jpeg",
@@ -3205,18 +3205,18 @@
   },
   {
     "id": "baby-063",
-    "name": "IMG_6424",
+    "name": "جەلی کرم بلوبیری",
     "description": "24 عەدەد",
-    "price": 0,
+    "price": 5000,
     "image": "mnalan/IMG_6424.jpeg",
     "category": "baby",
     "hidden": false
   },
   {
     "id": "baby-064",
-    "name": "IMG_6425",
+    "name": "جەلی زمان",
     "description": "24 عەدەد",
-    "price": 0,
+    "price": 5000,
     "image": "mnalan/IMG_6425.jpeg",
     "category": "baby",
     "hidden": false
