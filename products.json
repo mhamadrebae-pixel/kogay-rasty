@@ -3403,27 +3403,27 @@
   },
   {
     "id": "baby-085",
-    "name": "IMG_6465",
-    "description": "24 عەدەد",
-    "price": 0,
+    "name": "بنێشتی بۆین ٤غرام",
+    "description": "100 عەدەد",
+    "price": 16000,
     "image": "mnalan/IMG_6465.jpeg",
     "category": "baby",
     "hidden": false
   },
   {
     "id": "baby-086",
-    "name": "IMG_6466",
-    "description": "24 عەدەد",
-    "price": 0,
+    "name": "بنیشتی سینی شوتی",
+    "description": "100 عەدەد",
+    "price": 3000,
     "image": "mnalan/IMG_6466.jpeg",
     "category": "baby",
     "hidden": false
   },
   {
     "id": "baby-087",
-    "name": "IMG_6467",
-    "description": "24 عەدەد",
-    "price": 0,
+    "name": "بنێشتی سینی بلوبیری",
+    "description": "100 عەدەد",
+    "price": 3000,
     "image": "mnalan/IMG_6467.jpeg",
     "category": "baby",
     "hidden": false
