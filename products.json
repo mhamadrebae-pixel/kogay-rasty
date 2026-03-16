@@ -12,7 +12,7 @@
     "id": "cake-002",
     "name": "کولیچەی دوانی",
     "description": "60 عەدەد",
-    "price": 5500,
+    "price": 5750,
     "image": "kek/IMG_0211.jpeg",
     "category": "cake",
     "hidden": false
@@ -55,7 +55,7 @@
   },
   {
     "id": "cake-007",
-    "name": "مەفید پرتەقاڵ",
+    "name": "موفید پرتەقاڵ",
     "description": "24 عەدەد",
     "price": 4750,
     "image": "kek/photo_3_2026-02-20_22-41-44.jpg",
@@ -109,7 +109,7 @@
   },
   {
     "id": "cake-013",
-    "name": "کیکی دوبەی فستق",
+    "name": "فۆڕچت دوبەی",
     "description": "24 عەدەد",
     "price": 5000,
     "image": "kek/photo_9_2026-02-20_22-41-44.jpg",
@@ -127,7 +127,7 @@
   },
   {
     "id": "cake-015",
-    "name": "تۆپ کێک سور",
+    "name": "دیل کێک سور",
     "description": "24 عەدەد",
     "price": 5000,
     "image": "kek/photo_11_2026-02-20_22-41-44.jpg",
@@ -136,7 +136,7 @@
   },
   {
     "id": "cake-016",
-    "name": "تۆپ کێک ڕەش",
+    "name": "دیل کێک ڕەش",
     "description": "24 عەدەد",
     "price": 5000,
     "image": "kek/photo_12_2026-02-20_22-41-44.jpg",
@@ -145,7 +145,7 @@
   },
   {
     "id": "cake-017",
-    "name": "تۆپ کێک گۆڵد",
+    "name": "دیل کێک گۆڵد",
     "description": "24 عەدەد",
     "price": 5000,
     "image": "kek/photo_14_2026-02-20_22-41-44.jpg",
@@ -163,7 +163,7 @@
   },
   {
     "id": "cake-019",
-    "name": "فۆڕچن فستق",
+    "name": "فۆڕچن فستق خڕ",
     "description": "24 عەدەد",
     "price": 5000,
     "image": "kek/photo_15_2026-02-20_22-41-44.jpg",
@@ -208,7 +208,7 @@
   },
   {
     "id": "cake-024",
-    "name": "دۆماتی ئەڵقە",
+    "name": "دۆناتی ئەڵقە",
     "description": "24 عەدەد",
     "price": 4250,
     "image": "kek/photo_20_2026-02-20_22-41-44.jpg",
@@ -298,7 +298,7 @@
   },
   {
     "id": "gaz-002",
-    "name": "تایکۆی شەسی",
+    "name": "تایکۆی شەشی",
     "description": "24 عەدەد",
     "price": 4500,
     "image": "gaz/IMG_0216.jpeg",
@@ -320,15 +320,6 @@
     "description": "40 عەدەد",
     "price": 9000,
     "image": "gaz/IMG_0218.jpeg",
-    "category": "gaz",
-    "hidden": false
-  },
-  {
-    "id": "gaz-005",
-    "name": "وایفەر ئەزرا",
-    "description": "24 عەدەد",
-    "price": 5250,
-    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (2).jpeg",
     "category": "gaz",
     "hidden": false
   },
@@ -567,15 +558,6 @@
     "hidden": false
   },
   {
-    "id": "gaz-032",
-    "name": "پاڵشتی دوانی",
-    "description": "80 عەدەد",
-    "price": 7500,
-    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (18).jpeg",
-    "category": "gaz",
-    "hidden": false
-  },
-  {
     "id": "gaz-033",
     "name": "مەڕەکان",
     "description": "24 عەدەد",
@@ -604,7 +586,7 @@
   },
   {
     "id": "drink-003",
-    "name": "پیپسی سلڤەر",
+    "name": "پیپسی سلڤەر قەزەم",
     "description": "30 عەدەد",
     "price": 6500,
     "image": "sardy/IMG_6192.jpeg",
@@ -613,7 +595,7 @@
   },
   {
     "id": "drink-004",
-    "name": "پیپسی شین",
+    "name": "پیپسی شین قەزەم",
     "description": "30 عەدەد",
     "price": 6500,
     "image": "sardy/IMG_6193.jpeg",
@@ -622,7 +604,7 @@
   },
   {
     "id": "drink-005",
-    "name": "میرندا",
+    "name": "میرندا پرتەقال قەزەم",
     "description": "30 عەدەد",
     "price": 6500,
     "image": "sardy/IMG_6194.jpeg",
@@ -631,7 +613,7 @@
   },
   {
     "id": "drink-006",
-    "name": "دیو",
+    "name": "دیو قەزەم",
     "description": "30 عەدەد",
     "price": 6500,
     "image": "sardy/IMG_6195.jpeg",
@@ -685,7 +667,7 @@
   },
   {
     "id": "drink-012",
-    "name": "دیقی قەڵەو",
+    "name": "دیوی قەڵەو",
     "description": "30 عەدەد",
     "price": 10000,
     "image": "sardy/IMG_6200.jpeg",
@@ -748,7 +730,7 @@
   },
   {
     "id": "drink-019",
-    "name": "سااردی بەغدادی",
+    "name": "ساردی بەغدادی",
     "description": "30 عەدەد",
     "price": 6500,
     "image": "sardy/IMG_6206.jpeg",
