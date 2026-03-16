@@ -1434,7 +1434,7 @@
     "id": "chips-001",
     "name": "کیش تەماتە 500",
     "description": "24 عەدەد",
-    "price": 9250,
+    "price": 9500,
     "image": "jbs/IMG_0223.jpeg",
     "category": "chips",
     "hidden": false
@@ -1443,7 +1443,7 @@
     "id": "chips-002",
     "name": "کیش سرکە 500",
     "description": "24 عەدەد",
-    "price": 9250,
+    "price": 9500,
     "image": "jbs/IMG_0224.jpeg",
     "category": "chips",
     "hidden": false
@@ -1452,7 +1452,7 @@
     "id": "chips-003",
     "name": "کیش بیبەر 500",
     "description": "24 عەدەد",
-    "price": 9250,
+    "price": 9500,
     "image": "jbs/IMG_0225.jpeg",
     "category": "chips",
     "hidden": false
@@ -1461,7 +1461,7 @@
     "id": "chips-004",
     "name": "کیش سادە 500",
     "description": "24 عەدەد",
-    "price": 9250,
+    "price": 9500,
     "image": "jbs/IMG_0226.jpeg",
     "category": "chips",
     "hidden": false
@@ -1470,7 +1470,7 @@
     "id": "chips-005",
     "name": "کیش لیمۆ 500",
     "description": "24 عەدەد",
-    "price": 9250,
+    "price": 9500,
     "image": "jbs/IMG_0227.jpeg",
     "category": "chips",
     "hidden": false
@@ -1479,7 +1479,7 @@
     "id": "chips-006",
     "name": "کیش بیبەر 250",
     "description": "48 عەدەد",
-    "price": 9250,
+    "price": 9500,
     "image": "jbs/photo_2_2026-02-20_22-38-05.jpg",
     "category": "chips",
     "hidden": false
@@ -1488,7 +1488,7 @@
     "id": "chips-007",
     "name": "کیش سادە 250",
     "description": "48 عەدەد",
-    "price": 9250,
+    "price": 9500,
     "image": "jbs/photo_3_2026-02-20_22-38-05.jpg",
     "category": "chips",
     "hidden": false
@@ -1497,7 +1497,7 @@
     "id": "chips-008",
     "name": "کیش لیمۆ 250",
     "description": "48 عەدەد",
-    "price": 9250,
+    "price": 9500,
     "image": "jbs/photo_4_2026-02-20_22-38-05.jpg",
     "category": "chips",
     "hidden": false
@@ -1506,7 +1506,7 @@
     "id": "chips-009",
     "name": "کیش سرکە 250",
     "description": "48 عەدەد",
-    "price": 9250,
+    "price": 9500,
     "image": "jbs/photo_10_2026-02-20_22-38-05.jpg",
     "category": "chips",
     "hidden": false
