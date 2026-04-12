@@ -2,7 +2,7 @@
 // کۆگای ڕاستی - Offline Storefront Cache
 // ==========================================
 
-const CACHE_VERSION = 'v18';
+const CACHE_VERSION = 'v19';
 const APP_CACHE = `kogay-rasti-app-${CACHE_VERSION}`;
 const DATA_CACHE = `kogay-rasti-data-${CACHE_VERSION}`;
 const IMAGE_CACHE = `kogay-rasti-images-${CACHE_VERSION}`;
@@ -105,7 +105,7 @@ self.addEventListener('fetch', event => {
 
     if (request.destination === 'image') {
         const fallbackImage = sameOrigin ? './icon-192.png' : undefined;
-        event.respondWith(cacheFirst(request, IMAGE_CACHE, fallbackImage));
+        event.respondWith(networkFirst(request, IMAGE_CACHE, fallbackImage));
         return;
     }
 
