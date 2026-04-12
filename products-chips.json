@@ -1,0 +1,434 @@
+[
+  {
+    "id": "chips-001",
+    "name": "کیش تەماتە 500",
+    "description": "24 عەدەد",
+    "price": 9500,
+    "image": "jbs/IMG_0223.jpeg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-002",
+    "name": "کیش سرکە 500",
+    "description": "24 عەدەد",
+    "price": 9500,
+    "image": "jbs/IMG_0224.jpeg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-003",
+    "name": "کیش بیبەر 500",
+    "description": "24 عەدەد",
+    "price": 9500,
+    "image": "jbs/IMG_0225.jpeg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-004",
+    "name": "کیش سادە 500",
+    "description": "24 عەدەد",
+    "price": 9500,
+    "image": "jbs/IMG_0226.jpeg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-005",
+    "name": "کیش لیمۆ 500",
+    "description": "24 عەدەد",
+    "price": 9500,
+    "image": "jbs/IMG_0227.jpeg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-006",
+    "name": "کیش بیبەر 250",
+    "description": "48 عەدەد",
+    "price": 9500,
+    "image": "jbs/photo_2_2026-02-20_22-38-05.jpg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-007",
+    "name": "کیش سادە 250",
+    "description": "48 عەدەد",
+    "price": 9500,
+    "image": "jbs/photo_3_2026-02-20_22-38-05.jpg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-008",
+    "name": "کیش لیمۆ 250",
+    "description": "48 عەدەد",
+    "price": 9500,
+    "image": "jbs/photo_4_2026-02-20_22-38-05.jpg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-009",
+    "name": "کیش سرکە 250",
+    "description": "48 عەدەد",
+    "price": 9500,
+    "image": "jbs/photo_10_2026-02-20_22-38-05.jpg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-010",
+    "name": "لیزا کۆکتێل",
+    "description": "48 عەدەد",
+    "price": 7500,
+    "image": "jbs/IMG_0206.jpeg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-011",
+    "name": "زەڕاتی شامی",
+    "description": "45 عەدەد",
+    "price": 9000,
+    "image": "jbs/IMG_0207.jpeg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-012",
+    "name": "سناپ",
+    "description": "40 عەدەد",
+    "price": 7500,
+    "image": "jbs/IMG_0208.jpeg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-013",
+    "name": "تیک تۆک",
+    "description": "40 عەدەد",
+    "price": 7500,
+    "image": "jbs/IMG_0209.jpeg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-014",
+    "name": "نینی",
+    "description": "36 عەدەد",
+    "price": 6750,
+    "image": "jbs/IMG_0219.jpeg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-015",
+    "name": "مانشی سپی 500",
+    "description": "24 عەدەد",
+    "price": 9500,
+    "image": "jbs/IMG_0228.jpeg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-016",
+    "name": "مانشی زەرد 500",
+    "description": "24 عەدەد",
+    "price": 9500,
+    "image": "jbs/IMG_0229.jpeg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-017",
+    "name": "مزمز چلکە سرکە",
+    "description": "48 عەدەد",
+    "price": 9000,
+    "image": "jbs/IMG_0230.jpeg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-018",
+    "name": "لابوبو",
+    "description": "48 عەدەد",
+    "price": 9000,
+    "image": "jbs/IMG_0232.jpeg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-019",
+    "name": "شامی دوانی",
+    "description": "60 عەدەد",
+    "price": 6250,
+    "image": "jbs/photo_6_2026-02-20_22-38-05.jpg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-020",
+    "name": "عەڵقەی کەباب",
+    "description": "40 عەدەد",
+    "price": 8000,
+    "image": "jbs/photo_7_2026-02-20_22-38-05.jpg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-021",
+    "name": "لوسی",
+    "description": "45 عەدەد",
+    "price": 9500,
+    "image": "jbs/photo_9_2026-02-20_22-38-05.jpg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-022",
+    "name": "من و تۆ کیس",
+    "description": "22 عەدەد",
+    "price": 4000,
+    "image": "jbs/photo_11_2026-02-20_22-38-05.jpg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-023",
+    "name": "لیزا",
+    "description": "40 عەدەد",
+    "price": 7500,
+    "image": "jbs/photo_12_2026-02-20_22-38-05.jpg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-024",
+    "name": "بانو کیس",
+    "description": "22 عەدەد",
+    "price": 4000,
+    "image": "jbs/photo_13_2026-02-20_22-38-05.jpg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-025",
+    "name": "مانچیس مۆر",
+    "description": "45 عەدەد",
+    "price": 9500,
+    "image": "jbs/photo_14_2026-02-20_22-38-05.jpg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-026",
+    "name": "ئەمرەک",
+    "description": "48 عەدەد",
+    "price": 9000,
+    "image": "jbs/photo_15_2026-02-20_22-38-05.jpg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-027",
+    "name": "عەڵقەی لیمۆ",
+    "description": "40 عەدەد",
+    "price": 8000,
+    "image": "jbs/photo_16_2026-02-20_22-38-05.jpg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-028",
+    "name": "بوشاری دوانی",
+    "description": "40 عەدەد",
+    "price": 4500,
+    "image": "jbs/photo_17_2026-02-20_22-38-05.jpg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-029",
+    "name": "مسک مریشک",
+    "description": "40 عەدەد",
+    "price": 8000,
+    "image": "jbs/photo_18_2026-02-20_22-38-05.jpg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-030",
+    "name": "مسک سرکە",
+    "description": "40 عەدەد",
+    "price": 8000,
+    "image": "jbs/photo_19_2026-02-20_22-38-05.jpg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-031",
+    "name": "مسک پەنیر",
+    "description": "40 عەدەد",
+    "price": 8000,
+    "image": "jbs/photo_20_2026-02-20_22-38-05.jpg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-032",
+    "name": "مسک لیمۆ",
+    "description": "40 عەدەد",
+    "price": 8000,
+    "image": "jbs/photo_21_2026-02-20_22-38-05.jpg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-033",
+    "name": "دانەن دانەی عایلەی",
+    "description": "24 عەدەد",
+    "price": 8000,
+    "image": "jbs/photo_23_2026-02-20_22-38-05.jpg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-034",
+    "name": "دانە دانە پرتەقاڵ",
+    "description": "40 عەدەد",
+    "price": 8000,
+    "image": "jbs/photo_8_2026-02-20_22-38-05.jpg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-035",
+    "name": "دانە دانە سور",
+    "description": "40 عەدەد",
+    "price": 8000,
+    "image": "jbs/photo_22_2026-02-20_22-38-05.jpg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-036",
+    "name": "دانە دانە شین",
+    "description": "40 عەدەد",
+    "price": 8000,
+    "image": "jbs/photo_24_2026-02-20_22-38-05.jpg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-037",
+    "name": "دانە دانە زەرد",
+    "description": "40 عەدەد",
+    "price": 8000,
+    "image": "jbs/photo_25_2026-02-20_22-38-05.jpg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-038",
+    "name": "تۆرتێلا سەوز",
+    "description": "48 عەدەد",
+    "price": 8500,
+    "image": "jbs/photo_26_2026-02-20_22-38-05.jpg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-039",
+    "name": "نینی لیمۆ",
+    "description": "36 عەدەد",
+    "price": 7000,
+    "image": "jbs/photo_27_2026-02-20_22-38-05.jpg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-040",
+    "name": "نینی بوشار",
+    "description": "36 عەدەد",
+    "price": 7000,
+    "image": "jbs/photo_28_2026-02-20_22-38-05.jpg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-041",
+    "name": "زەڕاتی پەرداخ",
+    "description": "40 عەدەد",
+    "price": 8000,
+    "image": "jbs/photo_30_2026-02-20_22-38-05.jpg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-042",
+    "name": "تۆرتێلای شین",
+    "description": "48 عەدەد",
+    "price": 9500,
+    "image": "jbs/photo_31_2026-02-20_22-38-05.jpg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-043",
+    "name": "مانشی سپی",
+    "description": "45 عەدەد",
+    "price": 9500,
+    "image": "jbs/photo_32_2026-02-20_22-38-05.jpg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-044",
+    "name": "مانشی زەرد",
+    "description": "45 عەدەد",
+    "price": 9500,
+    "image": "jbs/photo_33_2026-02-20_22-38-05.jpg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-045",
+    "name": "من من ڕان",
+    "description": "40 عەدەد",
+    "price": 7500,
+    "image": "jbs/photo_34_2026-02-20_22-38-05.jpg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-046",
+    "name": "من من پیتزا",
+    "description": "40 عەدەد",
+    "price": 7500,
+    "image": "jbs/photo_35_2026-02-20_22-38-05.jpg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-047",
+    "name": "بوشاری بانوو",
+    "description": "40 عەدەد",
+    "price": 4500,
+    "image": "jbs/photo_36_2026-02-20_22-38-05.jpg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-048",
+    "name": "لابوبو دوانی",
+    "description": "48 عەدەد",
+    "price": 9000,
+    "image": "jbs/photo_2026-02-20_22-39-15.jpg",
+    "category": "chips",
+    "hidden": false
+  }
+]

@@ -1,89 +1,132 @@
 // ==========================================
-// Service Worker - کۆگای ڕاستی
-// هەر جارێک نسخەکە گۆڕی، CACHE_VERSION گۆڕ
+// کۆگای ڕاستی - Offline Storefront Cache
 // ==========================================
 
-const CACHE_VERSION = 'v1'; // ← ئەمە گۆڕ هەر جارێک فایلت گۆڕی (v2, v3, ...)
-const CACHE_NAME = 'kogay-rasti-' + CACHE_VERSION;
+const CACHE_VERSION = 'v18';
+const APP_CACHE = `kogay-rasti-app-${CACHE_VERSION}`;
+const DATA_CACHE = `kogay-rasti-data-${CACHE_VERSION}`;
+const IMAGE_CACHE = `kogay-rasti-images-${CACHE_VERSION}`;
+const RUNTIME_CACHE = `kogay-rasti-runtime-${CACHE_VERSION}`;
 
-const STATIC_FILES = [
+const OFFLINE_FALLBACK_URL = './index.html';
+const PRODUCTS_URL = './products.json';
+const CORE_ASSETS = [
     './',
     './index.html',
     './style.css',
     './script.js',
-    './products.json',
-    './sw.js',
+    './analytics.js',
+    './manifest.json',
+    './icon-192.png',
+    './icon-512.png'
 ];
 
-// دامەزراندن - فایلەکان cache بکە
-self.addEventListener('install', (event) => {
-    console.log('[SW] Install:', CACHE_NAME);
+self.addEventListener('install', event => {
     event.waitUntil(
-        caches.open(CACHE_NAME).then((cache) => {
-            return cache.addAll(STATIC_FILES);
-        })
+        caches.open(APP_CACHE).then(cache => cache.addAll(CORE_ASSETS))
     );
     self.skipWaiting();
 });
 
-// چالاکبوون - cache کۆنەکان بسڕەوە
-self.addEventListener('activate', (event) => {
-    console.log('[SW] Activate:', CACHE_NAME);
-    event.waitUntil(
-        caches.keys().then((cacheNames) => {
-            return Promise.all(
-                cacheNames
-                    .filter((name) => name.startsWith('kogay-rasti-') && name !== CACHE_NAME)
-                    .map((name) => {
-                        console.log('[SW] Deleting old cache:', name);
-                        return caches.delete(name);
-                    })
-            );
-        })
-    );
-    self.clients.claim();
+self.addEventListener('activate', event => {
+    event.waitUntil((async () => {
+        const names = await caches.keys();
+        await Promise.all(
+            names
+                .filter(name => name.startsWith('kogay-rasti-') && ![
+                    APP_CACHE,
+                    DATA_CACHE,
+                    IMAGE_CACHE,
+                    RUNTIME_CACHE
+                ].includes(name))
+                .map(name => caches.delete(name))
+        );
+        await self.clients.claim();
+    })());
 });
 
-// داواکاری - Network First بۆ HTML/JS/CSS، Cache First بۆ وێنە
-self.addEventListener('fetch', (event) => {
-    const url = new URL(event.request.url);
+function isCacheable(response) {
+    return Boolean(response && (response.ok || response.type === 'opaque'));
+}
 
-    // products.json هەمیشە لە نێتوەرک بگیرە (بۆ نوێکردنەوەی کاڵاکان)
-    if (url.pathname.endsWith('products.json')) {
-        event.respondWith(
+async function getCached(request, fallbackUrl) {
+    const cached = await caches.match(request);
+    if (cached) return cached;
+    if (!fallbackUrl) return null;
+    return caches.match(fallbackUrl, { ignoreSearch: true });
+}
 
-            fetch(event.request, { cache: 'no-store' }) // ← ئەمە زیاد بکە
-                .then((response) => { return response; })
-                .catch(() => caches.match('./products.json'))
-        );
+async function putInCache(cacheName, request, response) {
+    if (!isCacheable(response)) return response;
+    const cache = await caches.open(cacheName);
+    await cache.put(request, response.clone());
+    return response;
+}
+
+async function networkFirst(request, cacheName, fallbackUrl) {
+    try {
+        const response = await fetch(request);
+        if (!isCacheable(response)) throw new Error(`Uncacheable response: ${response.status}`);
+        return putInCache(cacheName, request, response);
+    } catch (error) {
+        const cached = await getCached(request, fallbackUrl);
+        return cached || Response.error();
+    }
+}
+
+async function cacheFirst(request, cacheName, fallbackUrl) {
+    const cached = await getCached(request, fallbackUrl);
+    if (cached) return cached;
+    try {
+        const response = await fetch(request);
+        if (!isCacheable(response)) throw new Error(`Uncacheable response: ${response.status}`);
+        return putInCache(cacheName, request, response);
+    } catch (error) {
+        return Response.error();
+    }
+}
+
+self.addEventListener('fetch', event => {
+    const { request } = event;
+    if (request.method !== 'GET' || !request.url.startsWith('http')) return;
+
+    const url = new URL(request.url);
+    const sameOrigin = url.origin === self.location.origin;
+
+    if (request.mode === 'navigate') {
+        event.respondWith(networkFirst(request, APP_CACHE, OFFLINE_FALLBACK_URL));
         return;
     }
 
-    // HTML, CSS, JS → Network First (نوێترین نسخە هەمیشە)
-    if (
-        url.pathname.endsWith('.html') ||
-        url.pathname.endsWith('.css') ||
-        url.pathname.endsWith('.js') ||
-        url.pathname === '/'
-    ) {
-        event.respondWith(
-            fetch(event.request).then((response) => {
-                const clone = response.clone();
-                caches.open(CACHE_NAME).then((cache) => cache.put(event.request, clone));
-                return response;
-            }).catch(() => caches.match(event.request))
-        );
+    if (sameOrigin && /\/products(?:-[a-z]+)?\.json$/i.test(url.pathname)) {
+        event.respondWith(networkFirst(request, DATA_CACHE, PRODUCTS_URL));
         return;
     }
 
-    // وێنەکان → Cache First
-    event.respondWith(
-        caches.match(event.request).then((cached) => {
-            return cached || fetch(event.request).then((response) => {
-                const clone = response.clone();
-                caches.open(CACHE_NAME).then((cache) => cache.put(event.request, clone));
-                return response;
-            });
-        })
-    );
+    if (request.destination === 'image') {
+        const fallbackImage = sameOrigin ? './icon-192.png' : undefined;
+        event.respondWith(cacheFirst(request, IMAGE_CACHE, fallbackImage));
+        return;
+    }
+
+    if (sameOrigin && (
+        url.pathname.endsWith('/index.html') ||
+        url.pathname.endsWith('/style.css') ||
+        url.pathname.endsWith('/script.js') ||
+        url.pathname.endsWith('/analytics.js') ||
+        url.pathname.endsWith('/manifest.json') ||
+        url.pathname.endsWith('/icon-192.png') ||
+        url.pathname.endsWith('/icon-512.png') ||
+        url.pathname === '/' ||
+        url.pathname.endsWith('/')
+    )) {
+        // Fallback to the same asset path so versioned CSS/JS requests never resolve to index.html.
+        const fallbackAsset = request.mode === 'navigate' ? OFFLINE_FALLBACK_URL : url.pathname;
+        event.respondWith(networkFirst(request, APP_CACHE, fallbackAsset));
+        return;
+    }
+
+    if (request.destination === 'style' || request.destination === 'font' || request.destination === 'script') {
+        event.respondWith(cacheFirst(request, RUNTIME_CACHE));
+    }
 });

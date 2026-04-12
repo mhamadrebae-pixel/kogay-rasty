@@ -1,0 +1,812 @@
+[
+  {
+    "id": "baby-001",
+    "name": "تەمەرندی پاکان",
+    "description": "24 عەدەد",
+    "price": 1000,
+    "image": "mnalan/photo_1_2026-02-21_00-54-52.jpg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-002",
+    "name": "پەشمەک سپی",
+    "description": "24 عەدەد",
+    "price": 4750,
+    "image": "mnalan/photo_2_2026-02-21_00-54-52.jpg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-003",
+    "name": "قاوەی زۆۆ",
+    "description": "24 عەدەد",
+    "price": 3500,
+    "image": "mnalan/photo_3_2026-02-21_00-54-52.jpg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-004",
+    "name": "کۆلا بۆن",
+    "description": "24 عەدەد",
+    "price": 5000,
+    "image": "mnalan/photo_4_2026-02-21_00-54-52.jpg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-005",
+    "name": "تەمەرندی لول",
+    "description": "24 عەدەد",
+    "price": 4750,
+    "image": "mnalan/photo_5_2026-02-21_00-54-52.jpg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-006",
+    "name": "نەستەلەی ئۆتۆن قاوە",
+    "description": "24 عەدەد",
+    "price": 5250,
+    "image": "mnalan/photo_7_2026-02-21_00-54-52.jpg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-007",
+    "name": "نەستەلەی ئۆتۆن سپی",
+    "description": "24 عەدەد",
+    "price": 5000,
+    "image": "mnalan/photo_17_2026-02-21_00-54-52.jpg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-008",
+    "name": "تەمەرندی تەخت",
+    "description": "48 عەدەد",
+    "price": 2500,
+    "image": "mnalan/photo_8_2026-02-21_00-54-52.jpg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-009",
+    "name": "مەساسەی سوور عادی",
+    "description": "45 عەدەد",
+    "price": 3000,
+    "image": "mnalan/photo_9_2026-02-21_00-54-52.jpg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-010",
+    "name": "مەساسەی دەبە کۆلا",
+    "description": "60 عەدەد",
+    "price": 5000,
+    "image": "mnalan/photo_11_2026-02-21_00-54-52.jpg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-011",
+    "name": "مەساسەی دەبە گێلاس",
+    "description": "60 عەدەد",
+    "price": 5000,
+    "image": "mnalan/photo_12_2026-02-21_00-54-52.jpg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-012",
+    "name": "مەساسەی دەبە ڕەش",
+    "description": "60 عەدەد",
+    "price": 5000,
+    "image": "mnalan/photo_13_2026-02-21_00-54-52.jpg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-013",
+    "name": "مەساسەی ورد",
+    "description": "100 عەدەد",
+    "price": 2000,
+    "image": "mnalan/photo_14_2026-02-21_00-54-52.jpg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-014",
+    "name": "مەساسەی دەبە شاتوو",
+    "description": "60 عەدەد",
+    "price": 5000,
+    "image": "mnalan/photo_15_2026-02-21_00-54-52.jpg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-015",
+    "name": "نوقڵی ورد ئایدین",
+    "description": "24 عەدەد",
+    "price": 5000,
+    "image": "mnalan/photo_16_2026-02-21_00-54-52.jpg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-016",
+    "name": "تەمەرندی ڕوڵ",
+    "description": "24 عەدەد",
+    "price": 5000,
+    "image": "mnalan/photo_19_2026-02-21_00-54-52.jpg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-017",
+    "name": "نوقڵی ڕانا",
+    "description": "12 عەدەد",
+    "price": 2250,
+    "image": "mnalan/photo_20_2026-02-21_00-54-52.jpg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-018",
+    "name": "چوکلێتی ئایدن",
+    "description": "100 عەدەد",
+    "price": 2500,
+    "image": "mnalan/photo_21_2026-02-21_00-54-52.jpg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-019",
+    "name": "بنێشتی یوبی 100",
+    "description": "100 عەدەد",
+    "price": 2500,
+    "image": "mnalan/photo_22_2026-02-21_00-54-52.jpg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-020",
+    "name": "تەمەرندی ڕستە",
+    "description": "12 عەدەد",
+    "price": 2500,
+    "image": "mnalan/photo_24_2026-02-21_00-54-52.jpg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-021",
+    "name": "قاوەی زۆۆ ٢",
+    "description": "24 عەدەد",
+    "price": 3500,
+    "image": "mnalan/photo_25_2026-02-21_00-54-52.jpg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-022",
+    "name": "سەمیریری",
+    "description": "24 عەدەد",
+    "price": 3500,
+    "image": "mnalan/photo_26_2026-02-21_00-54-52.jpg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-023",
+    "name": "نوقڵی ئاناتا شیر",
+    "description": "24 عەدەد",
+    "price": 5000,
+    "image": "mnalan/photo_27_2026-02-21_00-54-52.jpg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-024",
+    "name": "نەوقڵی ئاناتا قاوە",
+    "description": "24 عەدەد",
+    "price": 5000,
+    "image": "mnalan/photo_28_2026-02-21_00-54-52.jpg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-025",
+    "name": "تەمەرندی سرنج",
+    "description": "24 عەدەد",
+    "price": 4500,
+    "image": "mnalan/photo_29_2026-02-21_00-54-52.jpg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-026",
+    "name": "نەستەلەی بستە",
+    "description": "24 عەدەد",
+    "price": 5000,
+    "image": "mnalan/photo_30_2026-02-21_00-54-52.jpg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-027",
+    "name": "مۆتەی قاوە",
+    "description": "24 عەدەد",
+    "price": 5000,
+    "image": "mnalan/IMG_6346.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-028",
+    "name": "کەفاو",
+    "description": "24 عەدەد",
+    "price": 4500,
+    "image": "mnalan/IMG_6348.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-029",
+    "name": "مارشمیلۆ ورج",
+    "description": "40 عەدەد",
+    "price": 8000,
+    "image": "mnalan/IMG_6350.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-030",
+    "name": "لینکەر",
+    "description": "24 عەدەد",
+    "price": 5250,
+    "image": "mnalan/IMG_6351.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-031",
+    "name": "ڕامتین",
+    "description": "24 عەدەد",
+    "price": 3000,
+    "image": "mnalan/IMG_6352.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-032",
+    "name": "جەلی مەتری لولە",
+    "description": "24 عەدەد",
+    "price": 5000,
+    "image": "mnalan/IMG_6354.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-033",
+    "name": "قاوە مەڵهەم",
+    "description": "24 عەدەد",
+    "price": 5000,
+    "image": "mnalan/IMG_6358.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-034",
+    "name": "نەستەلەئ چەکوش",
+    "description": "24 عەدەد",
+    "price": 5250,
+    "image": "mnalan/IMG_6359.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-035",
+    "name": "تۆپ",
+    "description": "60 عەدەد",
+    "price": 8000,
+    "image": "mnalan/IMG_6360.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-036",
+    "name": "ناوکە کولەکە پاشا",
+    "description": "24 عەدەد",
+    "price": 5250,
+    "image": "mnalan/IMG_6361.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-037",
+    "name": "شەربەتی ئیتالی",
+    "description": "24 عەدەد",
+    "price": 5250,
+    "image": "mnalan/IMG_6362.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-038",
+    "name": "بستە پاشا",
+    "description": "24 عەدەد",
+    "price": 5250,
+    "image": "mnalan/IMG_6363.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-039",
+    "name": "ئاماسی",
+    "description": "24 عەدەد",
+    "price": 5250,
+    "image": "mnalan/IMG_6365.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-040",
+    "name": "کۆکۆسی میکسی",
+    "description": "24 عەدەد",
+    "price": 5000,
+    "image": "mnalan/IMG_6367.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-041",
+    "name": "جەلی هەمبەرگر",
+    "description": "20عەدەد",
+    "price": 4000,
+    "image": "mnalan/IMG_6368.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-042",
+    "name": "X.5",
+    "description": "24 عەدەد",
+    "price": 5250,
+    "image": "mnalan/IMG_6369.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-043",
+    "name": "ناوکە پاش",
+    "description": "24 عەدەد",
+    "price": 5250,
+    "image": "mnalan/IMG_6370.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-044",
+    "name": "جلکەی سۆلار",
+    "description": "24 عەدەد",
+    "price": 4500,
+    "image": "mnalan/IMG_6371.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-045",
+    "name": "کونجی سپی",
+    "description": "40 عەدەد",
+    "price": 7000,
+    "image": "mnalan/IMG_6405.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-046",
+    "name": "مارشمیلۆ کیس لولە",
+    "description": "24 عەدەد",
+    "price": 5250,
+    "image": "mnalan/IMG_6406.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-047",
+    "name": "جەلی میکس ڕوڵ",
+    "description": "24 عەدەد",
+    "price": 5000,
+    "image": "mnalan/IMG_6407.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-048",
+    "name": "جەلی کەباب",
+    "description": "48 عەدەد",
+    "price": 5000,
+    "image": "mnalan/IMG_6408.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-049",
+    "name": "کونجی ڕەش",
+    "description": "40عەدەد",
+    "price": 7000,
+    "image": "mnalan/IMG_6409.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-050",
+    "name": "جەلی هەمبەرگر",
+    "description": "24 عەدەد",
+    "price": 5000,
+    "image": "mnalan/IMG_6410.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-051",
+    "name": "جەلئ قەلەم",
+    "description": "20 عەدەد",
+    "price": 4250,
+    "image": "mnalan/IMG_6411.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-052",
+    "name": "جەلی پیزا قتو",
+    "description": "24 عەدەد",
+    "price": 5000,
+    "image": "mnalan/IMG_6412.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-053",
+    "name": "جەلی ڕستە شەیبا",
+    "description": "24 عەدەد",
+    "price": 4500,
+    "image": "mnalan/IMG_6413.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-054",
+    "name": "جەلی ڕستە",
+    "description": "24 عەدەد",
+    "price": 5000,
+    "image": "mnalan/IMG_6414.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-055",
+    "name": "مارشمیلۆ ڕستە",
+    "description": "12 عەدەد",
+    "price": 2500,
+    "image": "mnalan/IMG_6415.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-056",
+    "name": "شەربەتی جەلی کیس",
+    "description": "24 عەدەد",
+    "price": 5000,
+    "image": "mnalan/IMG_6416.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-057",
+    "name": "ڕەسم",
+    "description": "60 عەدەد",
+    "price": 9000,
+    "image": "mnalan/IMG_6417.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-058",
+    "name": "وەن حەب",
+    "description": "24 عەدەد",
+    "price": 5000,
+    "image": "mnalan/IMG_6418.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-059",
+    "name": "بوبی لاکیشە",
+    "description": "48 عەدەد",
+    "price": 2000,
+    "image": "mnalan/IMG_6419.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-060",
+    "name": "جەلی پیتزا",
+    "description": "24 عەدەد",
+    "price": 5000,
+    "image": "mnalan/IMG_6420.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-061",
+    "name": "جەلئ کوبرا",
+    "description": "24 عەدەد",
+    "price": 5000,
+    "image": "mnalan/IMG_6421.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-062",
+    "name": "جەلی کرم کۆکتیل",
+    "description": "24 عەدەد",
+    "price": 0,
+    "image": "mnalan/IMG_6422.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-063",
+    "name": "جەلی کرم بلوبیری",
+    "description": "24 عەدەد",
+    "price": 5000,
+    "image": "mnalan/IMG_6424.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-064",
+    "name": "جەلی زمان",
+    "description": "24 عەدەد",
+    "price": 5000,
+    "image": "mnalan/IMG_6425.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-065",
+    "name": "نوقولی کیس تیکەلە",
+    "description": "24 عەدەد",
+    "price": 5000,
+    "image": "mnalan/IMG_6428.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-066",
+    "name": "نوقولی کیس قاوە",
+    "description": "24 عەدەد",
+    "price": 5000,
+    "image": "mnalan/IMG_6429.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-067",
+    "name": "نوقولی کیس شیر",
+    "description": "24 عەدەد",
+    "price": 5000,
+    "image": "mnalan/IMG_6430.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-068",
+    "name": "ستیکی بلوبیری",
+    "description": "24 عەدەد",
+    "price": 4000,
+    "image": "mnalan/IMG_6448.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-069",
+    "name": "ستیکی تیکەلە",
+    "description": "24 عەدەد",
+    "price": 4000,
+    "image": "mnalan/IMG_6449.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-070",
+    "name": "ستیکی کۆلا",
+    "description": "24 عەدەد",
+    "price": 4000,
+    "image": "mnalan/IMG_6450.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-071",
+    "name": "ستیکی لیمۆ",
+    "description": "24 عەدەد",
+    "price": 4000,
+    "image": "mnalan/IMG_6451.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-072",
+    "name": "ستیکی قەزوان",
+    "description": "24 عەدەد",
+    "price": 4000,
+    "image": "mnalan/IMG_6452.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-073",
+    "name": "ستیکی نەعنا",
+    "description": "24 عەدەد",
+    "price": 4000,
+    "image": "mnalan/IMG_6453.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-074",
+    "name": "ستیکی شوتی",
+    "description": "24 عەدەد",
+    "price": 4000,
+    "image": "mnalan/IMG_6454.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-075",
+    "name": "ڕیلاکسی شوتی",
+    "description": "24 عەدەد",
+    "price": 4000,
+    "image": "mnalan/IMG_6455.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-076",
+    "name": "ستیکی شلک",
+    "description": "24 عەدەد",
+    "price": 4000,
+    "image": "mnalan/IMG_6456.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-077",
+    "name": "ڕیلاکس نەعنا شین",
+    "description": "24 عەدەد",
+    "price": 4000,
+    "image": "mnalan/IMG_6457.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-078",
+    "name": "ڕیلاکسی شلک",
+    "description": "24 عەدەد",
+    "price": 4000,
+    "image": "mnalan/IMG_6458.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-079",
+    "name": "ستیکی پرتەقاڵ",
+    "description": "24 عەدەد",
+    "price": 4000,
+    "image": "mnalan/IMG_6459.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-080",
+    "name": "ستیکی بوبی",
+    "description": "24 عەدەد",
+    "price": 4000,
+    "image": "mnalan/IMG_6460.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-081",
+    "name": "ستیکی دارچینی",
+    "description": "24 عەدەد",
+    "price": 4000,
+    "image": "mnalan/IMG_6461.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-082",
+    "name": "سەمیری قتو",
+    "description": "20 عەدەد",
+    "price": 4250,
+    "image": "mnalan/IMG_6462.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-083",
+    "name": "ستیکی حێل",
+    "description": "24 عەدەد",
+    "price": 4000,
+    "image": "mnalan/IMG_6463.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-084",
+    "name": "ستیکی تایگەر",
+    "description": "24 عەدەد",
+    "price": 4000,
+    "image": "mnalan/IMG_6464.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-085",
+    "name": "بنێشتی بۆین ٤غرام",
+    "description": "100 عەدەد",
+    "price": 16000,
+    "image": "mnalan/IMG_6465.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-086",
+    "name": "بنیشتی سینی شوتی",
+    "description": "100 عەدەد",
+    "price": 3000,
+    "image": "mnalan/IMG_6466.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-087",
+    "name": "بنێشتی سینی بلوبیری",
+    "description": "100 عەدەد",
+    "price": 3000,
+    "image": "mnalan/IMG_6467.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-088",
+    "name": "بنێشتی سینی کۆلا",
+    "description": "100 عەدەد",
+    "price": 3500,
+    "image": "mnalan/IMG_6468.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-089",
+    "name": "سەمیری لول پاکەت",
+    "description": "24 عەدەد",
+    "price": 5250,
+    "image": "mnalan/IMG_6469.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-090",
+    "name": "لیرەی بنیشت",
+    "description": "100 عەدەد",
+    "price": 3500,
+    "image": "mnalan/IMG_6470.jpeg",
+    "category": "baby",
+    "hidden": false
+  }
+]

@@ -1,0 +1,227 @@
+[
+  {
+    "id": "family-001",
+    "name": "جکلیتی پۆپۆ",
+    "description": "8 عەدەد",
+    "price": 12000,
+    "image": "aylay/photo_1_2026-02-20_22-54-38.jpg",
+    "category": "family",
+    "hidden": false
+  },
+  {
+    "id": "family-002",
+    "name": "نوقولی ورد",
+    "description": "20 عەدەد",
+    "price": 18000,
+    "image": "aylay/photo_2_2026-02-20_22-54-38.jpg",
+    "category": "family",
+    "hidden": false
+  },
+  {
+    "id": "family-003",
+    "name": "وایفەر عایلە قاوە",
+    "description": "12 عەدەد",
+    "price": 10000,
+    "image": "aylay/photo_3_2026-02-20_22-54-38.jpg",
+    "category": "family",
+    "hidden": false
+  },
+  {
+    "id": "family-004",
+    "name": "چەمەک مۆز",
+    "description": "12 عەدەد",
+    "price": 10000,
+    "image": "aylay/photo_4_2026-02-20_22-54-38.jpg",
+    "category": "family",
+    "hidden": false
+  },
+  {
+    "id": "family-005",
+    "name": "چەمەکی قاوە",
+    "description": "12 عەدەد",
+    "price": 10000,
+    "image": "aylay/photo_16_2026-02-20_22-54-38.jpg",
+    "category": "family",
+    "hidden": false
+  },
+  {
+    "id": "family-006",
+    "name": "چەمەکی گوێز",
+    "description": "12 عەدەد",
+    "price": 10000,
+    "image": "aylay/photo_17_2026-02-20_22-54-38.jpg",
+    "category": "family",
+    "hidden": false
+  },
+  {
+    "id": "family-007",
+    "name": "نوقڵی مینۆ",
+    "description": "12 عەدەد",
+    "price": 10000,
+    "image": "aylay/photo_7_2026-02-20_22-54-38.jpg",
+    "category": "family",
+    "hidden": false
+  },
+  {
+    "id": "family-008",
+    "name": "مادەر لاکێشە",
+    "description": "18 عەدەد",
+    "price": 15000,
+    "image": "aylay/photo_9_2026-02-20_22-54-38.jpg",
+    "category": "family",
+    "hidden": false
+  },
+  {
+    "id": "family-009",
+    "name": "ئیسپانی عادی",
+    "description": "12 عەدەد",
+    "price": 10000,
+    "image": "aylay/photo_10_2026-02-20_22-54-38.jpg",
+    "category": "family",
+    "hidden": false
+  },
+  {
+    "id": "family-010",
+    "name": "فینگەری عایلە",
+    "description": "12 عەدەد",
+    "price": 10000,
+    "image": "aylay/photo_11_2026-02-20_22-54-38.jpg",
+    "category": "family",
+    "hidden": false
+  },
+  {
+    "id": "family-011",
+    "name": "بسكیتی چای سەوز",
+    "description": "12 عەدەد",
+    "price": 8500,
+    "image": "aylay/photo_12_2026-02-20_22-54-38.jpg",
+    "category": "family",
+    "hidden": false
+  },
+  {
+    "id": "family-012",
+    "name": "پیتی پور عایلە",
+    "description": "12 عەدەد",
+    "price": 10000,
+    "image": "aylay/photo_8_2026-02-20_22-54-38.jpg",
+    "category": "family",
+    "hidden": false
+  },
+  {
+    "id": "family-013",
+    "name": "پیتی پوری قاوە",
+    "description": "12 عەدەد",
+    "price": 10000,
+    "image": "aylay/photo_13_2026-02-20_22-54-38.jpg",
+    "category": "family",
+    "hidden": false
+  },
+  {
+    "id": "family-014",
+    "name": "پیتی پور سادە",
+    "description": "12 عەدەد",
+    "price": 10000,
+    "image": "aylay/photo_14_2026-02-20_22-54-38.jpg",
+    "category": "family",
+    "hidden": false
+  },
+  {
+    "id": "family-015",
+    "name": "ئاناتای بەڵەم",
+    "description": "8 عەدەد",
+    "price": 11500,
+    "image": "aylay/photo_18_2026-02-20_22-54-38.jpg",
+    "category": "family",
+    "hidden": false
+  },
+  {
+    "id": "family-016",
+    "name": "نەستەلەی یەک کیلۆی",
+    "description": "12 عەدەد",
+    "price": 47000,
+    "image": "aylay/IMG_6375.jpeg",
+    "category": "family",
+    "hidden": false
+  },
+  {
+    "id": "family-017",
+    "name": "لامیان عایلە مۆز",
+    "description": "12 عەدەد",
+    "price": 9000,
+    "image": "aylay/IMG_6376.jpeg",
+    "category": "family",
+    "hidden": false
+  },
+  {
+    "id": "family-018",
+    "name": "لامیان عایلە پرتەقال",
+    "description": "12 عەدەد",
+    "price": 9000,
+    "image": "aylay/IMG_6377.jpeg",
+    "category": "family",
+    "hidden": false
+  },
+  {
+    "id": "family-019",
+    "name": "لامیان عایلە شلک",
+    "description": "12 عەدەد",
+    "price": 9000,
+    "image": "aylay/IMG_6378.jpeg",
+    "category": "family",
+    "hidden": false
+  },
+  {
+    "id": "family-020",
+    "name": "وایفەر عایلە پرتەقاڵ",
+    "description": "12 عەدەد",
+    "price": 10000,
+    "image": "aylay/IMG_6379.jpeg",
+    "category": "family",
+    "hidden": false
+  },
+  {
+    "id": "family-021",
+    "name": "وایفەر عایلە مۆز",
+    "description": "12 عەدەد",
+    "price": 10000,
+    "image": "aylay/IMG_6380.jpeg",
+    "category": "family",
+    "hidden": false
+  },
+  {
+    "id": "family-022",
+    "name": "وایفەر عایلە شلک",
+    "description": "12 عەدەد",
+    "price": 10000,
+    "image": "aylay/IMG_6381.jpeg",
+    "category": "family",
+    "hidden": false
+  },
+  {
+    "id": "family-023",
+    "name": "وایفەر عایلە گویزهیند",
+    "description": "12 عەدەد",
+    "price": 10000,
+    "image": "aylay/IMG_6382.jpeg",
+    "category": "family",
+    "hidden": false
+  },
+  {
+    "id": "family-024",
+    "name": "وایفەر عایلە مۆتە",
+    "description": "12عەدەد",
+    "price": 10000,
+    "image": "aylay/IMG_6383.jpeg",
+    "category": "family",
+    "hidden": false
+  },
+  {
+    "id": "family-025",
+    "name": "ئاناتا کیس",
+    "description": "6عەدەد",
+    "price": 12500,
+    "image": "aylay/IMG_6384.jpeg",
+    "category": "family",
+    "hidden": false
+  }
+]

@@ -4,20 +4,53 @@
  
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
-    <title>فرۆشگای ئێمە</title>
+    <meta name="color-scheme" content="dark light">
+    <title>کۆگای ڕاستی</title>
     <!-- ★ v=1 گۆڕ هەر جارێک style.css گۆڕی → v=2, v=3, ... -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script>
+        (function () {
+            try {
+                var connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+                var saveData = !!(connection && connection.saveData);
+                var slowNetwork = !!(connection && /(^|-)2g$|(^|-)3g$/i.test(connection.effectiveType || ''));
+                var lowMemory = Number(navigator.deviceMemory || 0);
+                var lowCores = Number(navigator.hardwareConcurrency || 0);
+                var coarsePointer = window.matchMedia && window.matchMedia('(pointer: coarse)').matches;
+                var smallScreen = Math.min(window.screen.width || 0, window.screen.height || 0) < 820;
+
+                if (
+                    (coarsePointer && smallScreen) ||
+                    saveData ||
+                    slowNetwork ||
+                    (lowMemory > 0 && lowMemory <= 4) ||
+                    (lowCores > 0 && lowCores <= 4)
+                ) {
+                    document.documentElement.classList.add('lite-mode');
+                }
+            } catch (error) { }
+        })();
+    </script>
     <!-- جیاتی v=1, v=2 -->
-    <link rel="stylesheet" href="style.css?v=2026031401">
-    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="style.css?v=20260412-v18">
+    <link rel="icon" type="image/png" sizes="192x192" href="./icon-192.png">
+    <link rel="apple-touch-icon" href="./icon-192.png">
+    <link rel="manifest" href="manifest.json?v=20260412-v18">
+    <meta name="description" content="کۆگای ڕاستی — باشترین کاڵاکان بەنرخی گونجاو">
+    <!-- Open Graph / Social Share -->
+    <meta property="og:title" content="کۆگای ڕاستی">
+    <meta property="og:description" content="باشترین کاڵاکان هەڵبژێرە و داواکاریەکەت بنێرە">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="./icon-512.png">
+    <meta property="og:locale" content="ku">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="کۆگای ڕاستی">
+    <meta name="twitter:image" content="./icon-512.png">
     <meta name="theme-color" content="#f97316">
-    <script src="script.js?v=2026031401" defer></script>
+    <script src="analytics.js?v=20260412-v18" defer></script>
+    <script src="script.js?v=20260412-v18" defer></script>
 </head>
  
 <body>
@@ -49,24 +82,24 @@
             <div class="logo">
                 <div class="logo-icon"><i class="fas fa-store"></i></div>
                 <div class="logo-text">
-                    <span class="logo-title">کۆگای ڕاستی</span>
-                    <span class="logo-subtitle">فرۆشگای تایبەت</span>
+                    <span class="logo-title" id="logoTitle">کۆگای ڕاستی</span>
+                    <span class="logo-subtitle" id="logoSubtitle">فرۆشگای تایبەت</span>
                 </div>
             </div>
             <div class="nav-search">
                 <i class="fas fa-search"></i>
                 <input type="text" id="searchInput" placeholder="گەڕان...">
             </div>
-            <button class="cart-btn" onclick="toggleCart()">
-                <i class="fas fa-shopping-cart"></i>
+            <button class="cart-btn" type="button" onclick="toggleCart()" aria-label="سەبەتە">
+                <i class="fas fa-shopping-cart" aria-hidden="true"></i>
                 <span class="cart-text">سەبەتە</span>
-                <span class="cart-count" id="cartCount">0</span>
+                <span class="cart-count" id="cartCount" aria-hidden="true">0</span>
             </button>
             <div class="lang-switcher">
-                <button class="lang-btn active" data-lang="ku" onclick="setLang('ku')">KU</button>
-                <button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button>
+                <button class="lang-btn active" data-lang="ku" type="button" onclick="setLang('ku')">KU</button>
+                <button class="lang-btn" data-lang="en" type="button" onclick="setLang('en')">EN</button>
             </div>
-            <button class="theme-btn" onclick="toggleTheme()" title="Dark/Light">
+            <button class="theme-btn" type="button" onclick="toggleTheme()" title="Dark/Light" aria-label="Toggle theme">
                 <i class="fas fa-moon"></i>
             </button>
         </div>
@@ -79,7 +112,15 @@
             <input type="text" id="searchInputMobile" placeholder="گەڕان لە کاڵاکان...">
         </div>
     </div>
- 
+
+    <div class="offline-banner" id="offlineBanner" aria-live="polite" aria-hidden="true">
+        <div class="offline-banner-inner">
+            <i class="fas fa-wifi-slash"></i>
+            <span id="offlineBannerText">ئۆفلاینیت، بەرهەمە هەڵگیراوەکان نیشان دەدرێن</span>
+        </div>
+    </div>
+
+    <main class="site-main">
     <!-- Hero -->
     <section class="hero">
         <div class="hero-content">
@@ -119,45 +160,48 @@
     <!-- Categories -->
     <section class="categories-section">
         <div class="section-header">
-            <h2 class="section-title"><i class="fas fa-grid-2"></i> بەشەکان</h2>
+            <h2 class="section-title"><i class="fas fa-border-all"></i> <span id="sectionCatsTitle">بەشەکان</span></h2>
+            <button class="wishlist-filter-btn" id="wishlistFilterBtn" type="button" onclick="toggleWishlistFilter()" title="دڵخوازەکان" aria-label="Toggle favorites">
+                <i class="fas fa-heart"></i>
+            </button>
         </div>
         <div class="categories-container" id="categoriesContainer">
-            <button class="category-card active" onclick="showCategory('cake', this)">
+            <button class="category-card active" data-category="cake" onclick="showCategory('cake', this)">
                 <div class="category-icon"><i class="fas fa-cake-candles"></i></div>
                 <div class="category-info">
                     <span class="category-name">کێک</span>
                     <span class="category-count">0 کاڵا</span>
                 </div>
             </button>
-            <button class="category-card" onclick="showCategory('gaz', this)">
+            <button class="category-card" data-category="gaz" onclick="showCategory('gaz', this)">
                 <div class="category-icon"><i class="fas fa-cookie-bite"></i></div>
                 <div class="category-info">
                     <span class="category-name">گەز و بسکیت</span>
                     <span class="category-count">0 کاڵا</span>
                 </div>
             </button>
-            <button class="category-card" onclick="showCategory('drink', this)">
+            <button class="category-card" data-category="drink" onclick="showCategory('drink', this)">
                 <div class="category-icon"><i class="fas fa-glass-water"></i></div>
                 <div class="category-info">
                     <span class="category-name">خواردنەوە</span>
                     <span class="category-count">0 کاڵا</span>
                 </div>
             </button>
-            <button class="category-card" onclick="showCategory('chips', this)">
+            <button class="category-card" data-category="chips" onclick="showCategory('chips', this)">
                 <div class="category-icon"><i class="fas fa-bowl-food"></i></div>
                 <div class="category-info">
                     <span class="category-name">چیپس</span>
                     <span class="category-count">0 کاڵا</span>
                 </div>
             </button>
-            <button class="category-card" onclick="showCategory('baby', this)">
+            <button class="category-card" data-category="baby" onclick="showCategory('baby', this)">
                 <div class="category-icon"><i class="fas fa-baby"></i></div>
                 <div class="category-info">
                     <span class="category-name">مناڵان</span>
                     <span class="category-count">0 کاڵا</span>
                 </div>
             </button>
-            <button class="category-card" onclick="showCategory('family', this)">
+            <button class="category-card" data-category="family" onclick="showCategory('family', this)">
                 <div class="category-icon"><i class="fas fa-users"></i></div>
                 <div class="category-info">
                     <span class="category-name">عایلەی</span>
@@ -174,37 +218,50 @@
             <span class="products-count" id="productsCount">0 کاڵا</span>
         </div>
         <div class="products-grid" id="productsGrid"></div>
+        <div class="pagination-wrap" id="paginationWrap" style="display:none;"></div>
         <div class="empty-state" id="emptyState" style="display:none;">
             <div class="empty-icon"><i class="fas fa-box-open"></i></div>
             <h3>هیچ کاڵایەک نەدۆزرایەوە</h3>
             <p>هەوڵ بدە بە گەڕانی دیکە</p>
         </div>
     </section>
+    </main>
  
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-logo">
                 <div class="footer-icon"><i class="fas fa-store"></i></div>
-                <span>کۆگای ڕاستی</span>
+                <span id="footerBrand">کۆگای ڕاستی</span>
             </div>
-            <p class="footer-text">© 2025 فرۆشگای ئێمە — هەموو مافەکان پارێزراون</p>
+            <p class="footer-text" id="footerText">© 2026 کۆگای ڕاستی — هەموو مافەکان پارێزراون بۆ</p>
+
+            <div class="developer-card">
+                <div class="developer-card-icon"><i class="fas fa-code"></i></div>
+                <div class="developer-card-text">
+                    <span class="developer-label" id="developerLabel">دیزاین و گەشەپێدراوە لەلایەن</span>
+                    <strong class="developer-name">Mhamad</strong>
+                </div>
+                <a class="profile-btn" id="profileBtn" href="https://mhamadrebae-pixel.github.io/my-profile/" target="_blank" rel="noopener">
+                    <i class="fas fa-user"></i>
+                    <span>View profile</span>
+                </a>
+            </div>
+
             <div class="footer-social">
                 <a href="https://www.facebook.com/share/1DetrL6pvc/?mibextid=wwXIfr" target="_blank" class="social-link"
-                    title="فەیسبووک"><i class="fab fa-facebook"></i></a>
-                <a href="https://wa.me/9647518959614" target="_blank" class="social-link" title="واتساپ"><i
+                    title="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="https://wa.me/9647518959614" target="_blank" class="social-link" title="WhatsApp"><i
                         class="fab fa-whatsapp"></i></a>
-                <a href="tel:+9647518959614" class="social-link" title="تەلەفۆن"><i class="fas fa-phone"></i></a>
+                <a href="tel:+9647518959614" class="social-link" title="Phone"><i class="fas fa-phone"></i></a>
             </div>
-            <p class="footer-text" style="margin-top:10px; font-size:13px;">
-                <i class="fas fa-phone" style="color:#f97316; margin-left:6px;"></i>
-                <a href="tel:+9647518959614"
-                    style="color:rgba(255,255,255,0.6); text-decoration:none; direction:ltr; display:inline-block;">+964
-                    751 895 9614</a>
+            <p class="footer-phone">
+                <i class="fas fa-phone"></i>
+                <a href="tel:+9647518959614">+964 751 895 9614</a>
             </p>
         </div>
     </footer>
- 
+
     <!-- Cart -->
     <div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
     <aside class="cart-sidebar" id="cartSidebar">
@@ -216,7 +273,7 @@
                     <span id="cartItemsCount">0 کاڵا</span>
                 </div>
             </div>
-            <button class="close-btn" onclick="toggleCart()"><i class="fas fa-times"></i></button>
+            <button class="close-btn" type="button" onclick="toggleCart()" aria-label="Close cart"><i class="fas fa-times"></i></button>
         </div>
         <div class="cart-items" id="cartItems">
             <div class="cart-empty">
@@ -240,8 +297,8 @@
                 <h4><i class="fas fa-user"></i> زانیاری کڕیار</h4>
                 <div class="form-group">
                     <input type="text" id="customerName" placeholder="ناوت بنووسە...">
-                    <i class="fas fa-user input-icon"></i>
                 </div>
+                    <i class="fas fa-user input-icon"></i>
                 <div class="form-group">
                     <input type="tel" id="customerPhone" placeholder="ژمارە تەلەفۆن...">
                     <i class="fas fa-phone input-icon"></i>
@@ -258,47 +315,89 @@
     <div class="success-modal" id="successModal">
         <div class="success-modal-box">
             <div class="success-icon"><i class="fab fa-whatsapp"></i></div>
-            <h3>سوپاس! 🎉</h3>
-            <p>داواکاریەکەت بە سەرکەوتوویی نێردرا<br>بەم زووانەیە پەیوەندیت پێوە دەکرێت</p>
-            <button class="success-close-btn" onclick="closeSuccessModal()">باشە، سوپاس!</button>
+            <h3 id="successModalTitle">سوپاس! 🎉</h3>
+            <p id="successModalText">داواکاریەکەت بە سەرکەوتوویی نێردرا<br>بەم زووانەیە پەیوەندیت پێوە دەکرێت</p>
+            <button class="success-close-btn" id="successModalCloseBtn" type="button" onclick="closeSuccessModal()">باشە، سوپاس!</button>
         </div>
     </div>
  
+    <!-- PWA Install Banner -->
+    <div class="install-banner" id="installBanner" style="display:none;">
+        <div class="install-banner-inner">
+            <div class="install-banner-icon"><i class="fas fa-store"></i></div>
+            <div class="install-banner-text">
+                <span id="installBannerTitle">ئەپەکە دامەزرێنە</span>
+                <small id="installBannerSub">خێراتر و ئاسانتر بەکاربێنە</small>
+            </div>
+            <button class="install-banner-btn" id="installBtn" type="button" onclick="triggerInstall()" aria-label="Install app">
+                <i class="fas fa-download"></i>
+            </button>
+            <button class="install-banner-close" type="button" onclick="dismissInstall()" aria-label="Close install banner">✕</button>
+        </div>
+    </div>
+
     <!-- Toast -->
     <div class="toast-container" id="toastContainer"></div>
  
     <!-- Scroll Top -->
-    <button class="scroll-top" id="scrollTop" onclick="scrollToTop()">
+    <button class="scroll-top" id="scrollTop" type="button" onclick="scrollToTop()" aria-label="Scroll to top">
         <i class="fas fa-arrow-up"></i>
     </button>
- 
-    <!-- ★ v=1 گۆڕ هەر جارێک script.js گۆڕی → v=2, v=3, ... -->
-    <script src="script.js?v=1" defer></script>
-    <script src="chatbot.js?v=1" defer></script>
-    <script>
-        // ★ Chatbot دەستپێبکە دوای بارکردن
-        document.addEventListener('DOMContentLoaded', () => {
-            if (typeof initChatbot === 'function') initChatbot();
-        });
-    </script>
  
     <!-- ★ Service Worker دامەزراندن -->
     <script>
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
-                navigator.serviceWorker.register('./sw.js')
-                    .then(reg => {
-                        console.log('[SW] Registered:', reg.scope);
-                        // هەر جارێک نسخەی نوێ بووە، ئۆتۆماتیک نوێ بکەرەوە
-                        reg.addEventListener('updatefound', () => {
-                            const newWorker = reg.installing;
+                const isLocalDevHost = /^(localhost|127(?:\.\d{1,3}){3}|::1)$/i.test(location.hostname);
+
+                if (isLocalDevHost) {
+                    (async () => {
+                        try {
+                            const registrations = await navigator.serviceWorker.getRegistrations();
+                            const hadController = !!navigator.serviceWorker.controller;
+                            await Promise.all(registrations.map(reg => reg.unregister()));
+
+                            if ('caches' in window) {
+                                const cacheNames = await caches.keys();
+                                await Promise.all(
+                                    cacheNames
+                                        .filter(name => name.startsWith('kogay-rasti-'))
+                                        .map(name => caches.delete(name))
+                                );
+                            }
+
+                            // On localhost we disable SW completely so every refresh shows fresh dev files.
+                            if ((registrations.length > 0 || hadController) && !sessionStorage.getItem('dev-sw-reset')) {
+                                sessionStorage.setItem('dev-sw-reset', '1');
+                                location.reload();
+                                return;
+                            }
+
+                            sessionStorage.removeItem('dev-sw-reset');
+                        } catch (error) {
+                            console.warn('[SW] Dev cleanup failed:', error);
+                        }
+                    })();
+                    return;
+                }
+
+                const registerServiceWorker = () => {
+                    navigator.serviceWorker.register('./sw.js?v=20260412-v18')
+                        .then(reg => {
+                            console.log('[SW] Registered:', reg.scope);
                             reg.addEventListener('updatefound', () => {
                                 console.log('[SW] Update found');
-                                // بەکارهێنەر خۆی refresh دەکات کاتێک دەیەوێت
                             });
-                        });
-                    })
-                    .catch(err => console.warn('[SW] Registration failed:', err));
+                        })
+                        .catch(err => console.warn('[SW] Registration failed:', err));
+                };
+
+                if (document.documentElement.classList.contains('lite-mode') && 'requestIdleCallback' in window) {
+                    requestIdleCallback(registerServiceWorker, { timeout: 2500 });
+                    return;
+                }
+
+                setTimeout(registerServiceWorker, 450);
             });
         }
     </script>
