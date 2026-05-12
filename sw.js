@@ -2,7 +2,8 @@
 // کۆگای ڕاستی - Offline Storefront Cache
 // ==========================================
 
-const CACHE_VERSION = 'v19';
+const CACHE_VERSION = 'v21';
+const ASSET_VERSION = 'mobile-perf-v21';
 const APP_CACHE = `kogay-rasti-app-${CACHE_VERSION}`;
 const DATA_CACHE = `kogay-rasti-data-${CACHE_VERSION}`;
 const IMAGE_CACHE = `kogay-rasti-images-${CACHE_VERSION}`;
@@ -13,12 +14,12 @@ const PRODUCTS_URL = './products.json';
 const CORE_ASSETS = [
     './',
     './index.html',
-    './style.css',
-    './script.js',
-    './analytics.js',
-    './manifest.json',
-    './icon-192.png',
-    './icon-512.png'
+    `./style.css?v=${ASSET_VERSION}`,
+    `./script.js?v=${ASSET_VERSION}`,
+    `./analytics.js?v=${ASSET_VERSION}`,
+    `./manifest.json?v=${ASSET_VERSION}`,
+    `./icon-192.png?v=${ASSET_VERSION}`,
+    `./icon-512.png?v=${ASSET_VERSION}`
 ];
 
 self.addEventListener('install', event => {
@@ -98,14 +99,19 @@ self.addEventListener('fetch', event => {
         return;
     }
 
-    if (sameOrigin && /\/products(?:-[a-z]+)?\.json$/i.test(url.pathname)) {
+    if (sameOrigin && /\/products-[a-z]+\.json$/i.test(url.pathname)) {
+        event.respondWith(networkFirst(request, DATA_CACHE));
+        return;
+    }
+
+    if (sameOrigin && /\/products\.json$/i.test(url.pathname)) {
         event.respondWith(networkFirst(request, DATA_CACHE, PRODUCTS_URL));
         return;
     }
 
     if (request.destination === 'image') {
         const fallbackImage = sameOrigin ? './icon-192.png' : undefined;
-        event.respondWith(networkFirst(request, IMAGE_CACHE, fallbackImage));
+        event.respondWith(cacheFirst(request, IMAGE_CACHE, fallbackImage));
         return;
     }
 

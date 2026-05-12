@@ -141,8 +141,8 @@ let currentCategory = 'cake';
 let currentPage = 1;
 // Returns the right page size for the current viewport so mobile gets lighter pages.
 function getItemsPerPage() {
-    if (window.innerWidth < 600) return shouldUseLiteMode() ? 8 : 12;
-    if (window.innerWidth < 1024) return 16;
+    if (window.innerWidth < 600) return 8;
+    if (window.innerWidth < 1024) return 12;
     return 20;
 }
 let wishlist = [];
@@ -157,6 +157,7 @@ let scrollLockDepth = 0;
 let scrollLockY = 0;
 let preloadQueued = false;
 let preloadingCategories = false;
+let searchCatalogLoadState = 'idle';
 // Search is pre-indexed once products are loaded so typing stays responsive.
 let searchIndex = [];
 // Track which category files have already been fetched from the split JSON payloads.
@@ -216,6 +217,8 @@ const LANG = {
         itemWord: 'کاڵا',
         loadingProducts: 'بارکردنی بەرهەمەکان...',
         searchResults: 'ئەنجامی گەڕان',
+        searchAllProducts: 'گەڕان لە هەموو کاڵاکان',
+        searchLoadingMore: 'بەرهەمەکانی تر بار دەکرێن...',
         wishlistTitle: 'دڵخوازەکان',
         wishlistAdded: 'زیادکرا بۆ دڵخوازەکان ❤️',
         wishlistRemoved: 'لە دڵخوازەکان لابرا',
@@ -285,6 +288,8 @@ const LANG = {
         itemWord: 'items',
         loadingProducts: 'Loading products...',
         searchResults: 'Search results',
+        searchAllProducts: 'Search all products',
+        searchLoadingMore: 'More products are loading...',
         wishlistTitle: 'Favorites',
         wishlistAdded: 'Added to favorites ❤️',
         wishlistRemoved: 'Removed from favorites',
@@ -521,24 +526,27 @@ function initLazyObserver() {
             img.addEventListener('error', () => { img.style.opacity = '0.3'; }, { once: true });
             img.src = realSrc;
             lazyObserver.unobserve(img);
+            img.setAttribute('data-lazy-bound', 'loaded');
         });
     }, { rootMargin: shouldUseLiteMode() ? '180px 0px' : '320px 0px', threshold: 0 });
 }
  
-function observeNewImages() {
+function observeNewImages(root = document) {
+    const scope = root && root.querySelectorAll ? root : document;
     if (!lazyObserver) {
         // Fallback: بار بکە هەموویان
-        document.querySelectorAll('img[data-lazy-src]').forEach(img => {
+        scope.querySelectorAll('img[data-lazy-src]').forEach(img => {
             const src = img.getAttribute('data-lazy-src');
             if (src) { img.src = src; img.removeAttribute('data-lazy-src'); }
         });
-        document.querySelectorAll('source[data-lazy-srcset]').forEach(source => {
+        scope.querySelectorAll('source[data-lazy-srcset]').forEach(source => {
             source.srcset = source.getAttribute('data-lazy-srcset') || '';
             source.removeAttribute('data-lazy-srcset');
         });
         return;
     }
-    document.querySelectorAll('img[data-lazy-src]').forEach(img => {
+    scope.querySelectorAll('img[data-lazy-src]:not([data-lazy-bound])').forEach(img => {
+        img.setAttribute('data-lazy-bound', 'pending');
         lazyObserver.observe(img);
     });
 }
@@ -609,6 +617,52 @@ function markLoadedCategories(categoriesToMark = []) {
     });
 }
 
+function hasUnloadedCategories() {
+    return Object.keys(categories).some(category => !loadedCategories.has(category));
+}
+
+function shouldShowSearchLoadNotice() {
+    return isGlobalSearch &&
+        isMobileViewport() &&
+        currentSearchQuery.trim().length >= 2 &&
+        hasUnloadedCategories();
+}
+
+function buildSearchLoadNoticeMarkup() {
+    if (!shouldShowSearchLoadNotice()) return '';
+    const isLoading = searchCatalogLoadState === 'loading';
+    return `<div class="search-status-banner">
+        <span class="search-status-icon"><i class="fas fa-cloud-bolt"></i></span>
+        <div class="search-status-copy">
+            ${isLoading
+                ? `<span>${escapeHtml(LANG[currentLang]?.searchLoadingMore || 'More products are loading...')}</span>`
+                : `<button class="search-status-action" type="button" onclick="triggerSearchCatalogLoad()">${escapeHtml(LANG[currentLang]?.searchAllProducts || 'Search all products')}</button>`
+            }
+        </div>
+    </div>`;
+}
+
+async function triggerSearchCatalogLoad() {
+    if (searchCatalogLoadState === 'loading' || !isGlobalSearch || !isMobileViewport() || currentSearchQuery.trim().length < 2 || !hasUnloadedCategories()) {
+        searchCatalogLoadState = hasUnloadedCategories() ? 'idle' : 'done';
+        return;
+    }
+
+    searchCatalogLoadState = 'loading';
+    renderCurrentView({ resetPage: false });
+
+    try {
+        await ensureAllProductsLoaded();
+        updateCategoryCounts();
+        updateHeroStats();
+    } catch (error) {
+        console.warn('On-demand search catalog load failed.', error);
+    } finally {
+        searchCatalogLoadState = hasUnloadedCategories() ? 'idle' : 'done';
+        renderCurrentView({ resetPage: false });
+    }
+}
+
 // Flatten product names/descriptions into a small lookup table for debounced search.
 function buildSearchIndex(items = products) {
     searchIndex = items.map(product => ({
@@ -644,14 +698,14 @@ function getCachedCategoryProducts(category) {
 }
 
 // Load a single category file from the network and merge it into the in-memory store.
-async function loadCategoryProducts(category, { showSkeleton = false } = {}) {
+async function loadCategoryProducts(category, { showSkeleton = false, allowFullCatalogFallback = !isMobileViewport() && !shouldUseLiteMode() } = {}) {
     if (!VALID_CATEGORIES.has(category)) return false;
     if (showSkeleton && products.length === 0) showProductSkeletons();
 
-    const candidates = [
-        { url: getCategoryDataUrl(category), categoryOnly: true },
-        { url: PRODUCT_DATA_FALLBACK, categoryOnly: false }
-    ];
+    const candidates = [{ url: getCategoryDataUrl(category), categoryOnly: true }];
+    if (allowFullCatalogFallback) {
+        candidates.push({ url: PRODUCT_DATA_FALLBACK, categoryOnly: false });
+    }
     try {
         for (const candidate of candidates) {
             try {
@@ -685,12 +739,12 @@ async function loadCategoryProducts(category, { showSkeleton = false } = {}) {
 }
 
 // Deduplicate concurrent fetches so repeated taps on the same category do not race.
-async function ensureCategoryLoaded(category, { showSkeleton = false, force = false } = {}) {
+async function ensureCategoryLoaded(category, { showSkeleton = false, force = false, allowFullCatalogFallback = !isMobileViewport() && !shouldUseLiteMode() } = {}) {
     if (!VALID_CATEGORIES.has(category)) return false;
     if (!force && loadedCategories.has(category)) return true;
     if (!force && pendingCategoryLoads.has(category)) return pendingCategoryLoads.get(category);
 
-    const request = loadCategoryProducts(category, { showSkeleton }).finally(() => {
+    const request = loadCategoryProducts(category, { showSkeleton, allowFullCatalogFallback }).finally(() => {
         pendingCategoryLoads.delete(category);
     });
     pendingCategoryLoads.set(category, request);
@@ -702,6 +756,17 @@ async function ensureAllProductsLoaded({ showSkeleton = false } = {}) {
     const missing = Object.keys(categories).filter(category => !loadedCategories.has(category));
     if (missing.length === 0) return true;
     if (showSkeleton && products.length === 0) showProductSkeletons();
+    if (isMobileViewport() || shouldUseLiteMode()) {
+        let allLoaded = true;
+        for (let index = 0; index < missing.length; index++) {
+            const loaded = await ensureCategoryLoaded(missing[index], { allowFullCatalogFallback: false });
+            allLoaded = allLoaded && loaded;
+            if (index < missing.length - 1) {
+                await new Promise(resolve => window.setTimeout(resolve, 80));
+            }
+        }
+        return allLoaded;
+    }
     const results = await Promise.all(missing.map(category => ensureCategoryLoaded(category)));
     return results.every(Boolean);
 }
@@ -946,7 +1011,7 @@ async function loadProducts({ showSkeleton = true } = {}) {
     try {
         const loaded = await ensureCategoryLoaded(currentCategory, {
             showSkeleton: false,
-            force: !shouldUseLiteMode() && !isOffline
+            force: !isOffline && !isMobileViewport() && !shouldUseLiteMode()
         });
         if (loaded) preloadRemainingCategories();
         return loaded;
@@ -1278,29 +1343,30 @@ function syncSearchInputs() {
             currentSearchQuery = nextQuery;
             isGlobalSearch = currentSearchQuery.length > 0;
             if (!isGlobalSearch) {
+                searchCatalogLoadState = 'idle';
                 renderCurrentView({ resetPage: true });
                 return;
             }
 
             showingWishlist = false;
             updateWishlistFilterBtn();
+            searchCatalogLoadState = hasUnloadedCategories() ? 'idle' : 'done';
             renderCurrentView({ resetPage: true });
 
-            const needsMoreCategories = Object.keys(categories).some(category => !loadedCategories.has(category));
+            const needsMoreCategories = hasUnloadedCategories();
             if (!needsMoreCategories || nextQuery.length < 2) return;
 
             const completeSearch = async () => {
+                searchCatalogLoadState = 'loading';
                 await ensureAllProductsLoaded();
                 updateCategoryCounts();
                 updateHeroStats();
+                searchCatalogLoadState = hasUnloadedCategories() ? 'idle' : 'done';
                 if (pendingId !== requestId || currentSearchQuery !== nextQuery) return;
                 renderCurrentView({ resetPage: true });
             };
 
             if (isMobileViewport()) {
-                scheduleNonCriticalTask(() => {
-                    completeSearch().catch(error => console.warn('Deferred search catalog load failed.', error));
-                }, 1200);
                 return;
             }
 
@@ -1386,6 +1452,7 @@ async function showCategory(category, element) {
     currentPage = 1;
     currentSearchQuery = '';
     isGlobalSearch = false;
+    searchCatalogLoadState = 'idle';
     showingWishlist = false;
     updateWishlistFilterBtn();
     document.getElementById('searchInput') && (document.getElementById('searchInput').value = '');
@@ -1443,13 +1510,13 @@ function buildProductCard(product, index) {
 }
  
 function buildSearchResultsMarkup(productsPage) {
+    let html = buildSearchLoadNoticeMarkup();
     const grouped = new Map();
     productsPage.forEach(product => {
         if (!grouped.has(product.category)) grouped.set(product.category, []);
         grouped.get(product.category).push(product);
     });
 
-    let html = '';
     let index = 0;
     grouped.forEach((groupProducts, categoryKey) => {
         const category = categories[categoryKey] || { name: categoryKey, icon: 'fa-box' };
@@ -1490,7 +1557,17 @@ function renderCurrentView({ resetPage = false } = {}) {
     if (titleEl) titleEl.innerHTML = viewState.title;
     if (countEl) countEl.textContent = formatItemCount(filtered.length);
 
+    if (filtered.length === 0 && viewState.mode === 'search' && shouldShowSearchLoadNotice()) {
+        if (emptyState) emptyState.style.display = 'none';
+        grid.innerHTML = buildSearchLoadNoticeMarkup();
+        hydrateIcons(titleEl || document);
+        hydrateIcons(grid);
+        renderPagination(0);
+        return;
+    }
+
     if (filtered.length === 0) {
+        hydrateIcons(titleEl || document);
         renderEmptyState(viewState);
         return;
     }
@@ -1502,8 +1579,9 @@ function renderCurrentView({ resetPage = false } = {}) {
         ? buildSearchResultsMarkup(visible)
         : visible.map((p, i) => buildProductCard(p, i)).join('');
 
+    hydrateIcons(titleEl || document);
     hydrateIcons(grid);
-    observeNewImages();
+    observeNewImages(grid);
     renderPagination(filtered.length);
 }
 
@@ -1768,6 +1846,7 @@ async function toggleWishlistFilter() {
     currentPage = 1;
     currentSearchQuery = '';
     isGlobalSearch = false;
+    searchCatalogLoadState = 'idle';
     const si = document.getElementById('searchInput');
     const sm = document.getElementById('searchInputMobile');
     if (si) si.value = '';
