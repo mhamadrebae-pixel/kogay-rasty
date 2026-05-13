@@ -1,4 +1,4 @@
-﻿// ==========================================
+// ==========================================
 // کۆگای ڕاستی - v9 (Mobile Thermal Pass)
 // ==========================================
  
@@ -531,24 +531,55 @@ function initLazyObserver() {
     }, { rootMargin: shouldUseLiteMode() ? '180px 0px' : '320px 0px', threshold: 0 });
 }
  
+function loadLazyImageNow(img) {
+    if (!img) return;
+    const realSrc = img.getAttribute('data-lazy-src');
+    if (!realSrc) return;
+    img.closest('picture')?.querySelectorAll('source[data-lazy-srcset]').forEach(source => {
+        source.srcset = source.getAttribute('data-lazy-srcset') || '';
+        source.removeAttribute('data-lazy-srcset');
+    });
+    img.removeAttribute('data-lazy-src');
+    img.loading = 'lazy';
+    img.decoding = 'async';
+    img.addEventListener('load', () => { img.style.opacity = '1'; }, { once: true });
+    img.addEventListener('error', () => { handleProductImageError(img); }, { once: true });
+    img.src = realSrc;
+    img.setAttribute('data-lazy-bound', 'loaded');
+    try { lazyObserver?.unobserve(img); } catch (error) { }
+}
+
 function observeNewImages(root = document) {
     const scope = root && root.querySelectorAll ? root : document;
+    const lazyImages = Array.from(scope.querySelectorAll('img[data-lazy-src]:not([data-lazy-bound])'));
+
     if (!lazyObserver) {
-        // Fallback: بار بکە هەموویان
-        scope.querySelectorAll('img[data-lazy-src]').forEach(img => {
-            const src = img.getAttribute('data-lazy-src');
-            if (src) { img.src = src; img.removeAttribute('data-lazy-src'); }
-        });
+        // Fallback بۆ براوزەرە کۆنەکان: وێنەکان ڕاستەوخۆ بار بکە.
+        lazyImages.forEach(loadLazyImageNow);
         scope.querySelectorAll('source[data-lazy-srcset]').forEach(source => {
             source.srcset = source.getAttribute('data-lazy-srcset') || '';
             source.removeAttribute('data-lazy-srcset');
         });
         return;
     }
-    scope.querySelectorAll('img[data-lazy-src]:not([data-lazy-bound])').forEach(img => {
+
+    lazyImages.forEach(img => {
         img.setAttribute('data-lazy-bound', 'pending');
         lazyObserver.observe(img);
     });
+
+    // Mobile/Safari جاروبارە لەگەڵ content-visibility + IntersectionObserver وێنەکان repaint ناکات.
+    // ئەم fallback ـە دوای کەمێک چاوەڕوانی هەر وێنەیەکی هێشتا pending بار دەکات.
+    if (lazyImages.length) {
+        const delay = (isMobileViewport() || shouldUseLiteMode()) ? 650 : 1400;
+        window.setTimeout(() => {
+            lazyImages.forEach(img => {
+                if (img.getAttribute('data-lazy-bound') === 'pending' && img.getAttribute('data-lazy-src')) {
+                    loadLazyImageNow(img);
+                }
+            });
+        }, delay);
+    }
 }
  
 // ==========================================
@@ -1093,7 +1124,7 @@ function openImageModal(productId) {
         modal.classList.add('has-image');
         img.onerror = null;
     };
-    img.src = product.image;
+    img.src = product.image || PLACEHOLDER;
 }
  
 function closeImageModal() {

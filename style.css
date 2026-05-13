@@ -1407,6 +1407,31 @@ html.lite-mode .skeleton-block::before {
     opacity: 0.35;
 }
 
+
+
+/* Mobile paint fix: some mobile browsers fail to repaint lazy images when
+   product cards use content-visibility:auto. Keep the performance containment
+   on desktop, but make mobile cards paint normally. */
+@media (max-width: 767px) {
+    .product-card {
+        content-visibility: visible;
+        contain: layout style;
+        contain-intrinsic-size: auto;
+    }
+    .product-image,
+    .product-image picture,
+    .product-image img {
+        display: block;
+        min-height: 0;
+    }
+}
+
+html.lite-mode .product-card {
+    content-visibility: visible;
+    contain: layout style;
+    contain-intrinsic-size: auto;
+}
+
 /* ==========================================
    Tablet 768px+
    ========================================== */
@@ -2397,5 +2422,295 @@ html[lang="en"] .footer-social { direction:ltr; }
     body:not(.light-mode) .hero-decoration,
     body:not(.light-mode) .floating-card {
         display: none !important;
+    }
+}
+
+@media (min-width: 1280px) {
+    html[lang="ku"] body:not(.light-mode) .hero {
+        justify-content: flex-start;
+        text-align: right;
+        direction: rtl;
+    }
+
+    html[lang="ku"] body:not(.light-mode) .hero-content {
+        margin-right: 0;
+        margin-left: auto;
+        align-items: flex-start;
+        text-align: right;
+    }
+
+    html[lang="ku"] body:not(.light-mode) .hero-badge {
+        margin-right: 0;
+        margin-left: auto;
+    }
+
+    html[lang="ku"] body:not(.light-mode) .hero-subtitle {
+        margin-right: 0;
+        margin-left: auto;
+        text-align: right;
+    }
+
+    html[lang="ku"] body:not(.light-mode) .hero-stats {
+        margin-right: 0;
+        margin-left: auto;
+        justify-content: flex-start;
+    }
+
+    html[lang="en"] body:not(.light-mode) .hero {
+        justify-content: flex-start;
+        text-align: left;
+        direction: ltr;
+    }
+
+    html[lang="en"] body:not(.light-mode) .hero-content {
+        margin-left: 0;
+        margin-right: auto;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    html[lang="en"] body:not(.light-mode) .hero-badge {
+        margin-left: 0;
+        margin-right: auto;
+    }
+
+    html[lang="en"] body:not(.light-mode) .hero-subtitle {
+        margin-left: 0;
+        margin-right: auto;
+        text-align: left;
+    }
+
+    html[lang="en"] body:not(.light-mode) .hero-stats {
+        margin-left: 0;
+        margin-right: auto;
+        justify-content: flex-start;
+    }
+
+    body:not(.light-mode) .hero-decoration,
+    body:not(.light-mode) .floating-card {
+        display: none !important;
+    }
+}
+
+/* =====================================================
+   Premium hero redesign - safe CSS-only polish
+   ===================================================== */
+
+@keyframes heroSoftIn {
+    from {
+        opacity: 0;
+        transform: translateY(18px) scale(0.985);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes heroGlowDrift {
+    0%, 100% {
+        transform: translate3d(0, 0, 0) scale(1);
+        opacity: 0.55;
+    }
+    50% {
+        transform: translate3d(-14px, 10px, 0) scale(1.05);
+        opacity: 0.75;
+    }
+}
+
+@keyframes heroBadgePulse {
+    0%, 100% {
+        box-shadow: 0 0 0 rgba(249, 115, 22, 0);
+    }
+    50% {
+        box-shadow: 0 0 22px rgba(249, 115, 22, 0.22);
+    }
+}
+
+@media (min-width: 768px) {
+    body:not(.light-mode) .hero {
+        position: relative;
+        overflow: hidden;
+        isolation: isolate;
+        max-width: 1180px;
+        margin: 22px auto 20px;
+        padding: 84px 52px 48px;
+        border-radius: 34px;
+        background:
+            radial-gradient(circle at 78% 28%, rgba(249, 115, 22, 0.13), transparent 34%),
+            radial-gradient(circle at 18% 78%, rgba(244, 63, 94, 0.10), transparent 30%),
+            linear-gradient(135deg, rgba(15, 23, 42, 0.88), rgba(17, 24, 39, 0.72));
+        border: 1px solid rgba(255, 255, 255, 0.075);
+        box-shadow:
+            0 22px 60px rgba(0, 0, 0, 0.20),
+            inset 0 1px 0 rgba(255, 255, 255, 0.045);
+        animation: heroSoftIn 0.55s ease both;
+    }
+
+    body:not(.light-mode) .hero::before {
+        content: "";
+        position: absolute;
+        width: 360px;
+        height: 360px;
+        border-radius: 999px;
+        right: -120px;
+        top: -150px;
+        background: radial-gradient(circle, rgba(249, 115, 22, 0.18), transparent 64%);
+        filter: blur(8px);
+        pointer-events: none;
+        animation: heroGlowDrift 9s ease-in-out infinite;
+    }
+
+    body:not(.light-mode) .hero::after {
+        content: "";
+        position: absolute;
+        width: 280px;
+        height: 280px;
+        border-radius: 999px;
+        left: -90px;
+        bottom: -120px;
+        background: radial-gradient(circle, rgba(244, 63, 94, 0.12), transparent 65%);
+        filter: blur(10px);
+        pointer-events: none;
+        animation: heroGlowDrift 11s ease-in-out infinite reverse;
+    }
+
+    body:not(.light-mode) .hero-content {
+        position: relative;
+        z-index: 1;
+        max-width: 620px;
+    }
+
+    body:not(.light-mode) .hero-badge {
+        animation: heroSoftIn 0.45s ease 0.05s both, heroBadgePulse 3.2s ease-in-out 0.85s infinite;
+        background: rgba(249, 115, 22, 0.13);
+        border-color: rgba(249, 115, 22, 0.35);
+    }
+
+    body:not(.light-mode) .hero-title {
+        letter-spacing: -0.045em;
+        text-shadow: 0 12px 32px rgba(0, 0, 0, 0.24);
+        animation: heroSoftIn 0.55s ease 0.1s both;
+    }
+
+    body:not(.light-mode) .title-highlight {
+        filter: drop-shadow(0 10px 24px rgba(249, 115, 22, 0.18));
+    }
+
+    body:not(.light-mode) .hero-subtitle {
+        color: rgba(255, 255, 255, 0.72);
+        animation: heroSoftIn 0.62s ease 0.16s both;
+    }
+
+    body:not(.light-mode) .hero-stats {
+        background: rgba(15, 23, 42, 0.62);
+        border-color: rgba(255, 255, 255, 0.085);
+        box-shadow: 0 14px 34px rgba(0, 0, 0, 0.16);
+        animation: heroSoftIn 0.7s ease 0.22s both;
+    }
+
+    body:not(.light-mode) .hero-decoration,
+    body:not(.light-mode) .floating-card {
+        display: none !important;
+    }
+}
+
+@media (min-width: 1280px) {
+    html[lang="ku"] body:not(.light-mode) .hero {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        text-align: right;
+        direction: rtl;
+    }
+
+    html[lang="ku"] body:not(.light-mode) .hero-content {
+        margin-right: 0;
+        margin-left: auto;
+        align-items: flex-start;
+        text-align: right;
+    }
+
+    html[lang="ku"] body:not(.light-mode) .hero-badge {
+        margin-right: 0;
+        margin-left: auto;
+    }
+
+    html[lang="ku"] body:not(.light-mode) .hero-title,
+    html[lang="ku"] body:not(.light-mode) .hero-subtitle {
+        text-align: right;
+    }
+
+    html[lang="ku"] body:not(.light-mode) .hero-subtitle {
+        margin-right: 0;
+        margin-left: auto;
+    }
+
+    html[lang="ku"] body:not(.light-mode) .hero-stats {
+        margin-right: 0;
+        margin-left: auto;
+        justify-content: flex-start;
+    }
+
+    html[lang="en"] body:not(.light-mode) .hero {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        text-align: left;
+        direction: ltr;
+    }
+
+    html[lang="en"] body:not(.light-mode) .hero-content {
+        margin-left: 0;
+        margin-right: auto;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    html[lang="en"] body:not(.light-mode) .hero-badge {
+        margin-left: 0;
+        margin-right: auto;
+    }
+
+    html[lang="en"] body:not(.light-mode) .hero-title,
+    html[lang="en"] body:not(.light-mode) .hero-subtitle {
+        text-align: left;
+    }
+
+    html[lang="en"] body:not(.light-mode) .hero-subtitle {
+        margin-left: 0;
+        margin-right: auto;
+    }
+
+    html[lang="en"] body:not(.light-mode) .hero-stats {
+        margin-left: 0;
+        margin-right: auto;
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 767px) {
+    body:not(.light-mode) .hero {
+        position: relative;
+        overflow: hidden;
+        margin: 10px 10px 14px;
+        border-radius: 28px;
+        background:
+            radial-gradient(circle at top, rgba(249, 115, 22, 0.10), transparent 36%),
+            linear-gradient(135deg, rgba(15, 23, 42, 0.82), rgba(17, 24, 39, 0.70));
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        animation: heroSoftIn 0.45s ease both;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    body:not(.light-mode) .hero,
+    body:not(.light-mode) .hero::before,
+    body:not(.light-mode) .hero::after,
+    body:not(.light-mode) .hero-badge,
+    body:not(.light-mode) .hero-title,
+    body:not(.light-mode) .hero-subtitle,
+    body:not(.light-mode) .hero-stats {
+        animation: none !important;
     }
 }

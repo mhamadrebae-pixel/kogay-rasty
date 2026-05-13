@@ -1378,21 +1378,37 @@
     }
 
     async function loadProductsFromGitHub() {
-      if (!ghConfig) return;
+      if (!ghConfig) return false;
+
+      const applyProducts = data => {
+        currentProducts = normalizeProductList(data);
+        document.getElementById('navBadge').textContent = currentProducts.length;
+        const dot = document.getElementById('bnDot');
+        if (dot) dot.style.display = currentProducts.length ? 'block' : 'none';
+        updateChangesBadge();
+        return true;
+      };
+
       try {
         const { username, repo } = ghConfig;
-        const url = `https://raw.githubusercontent.com/${username}/${repo}/main/products.json?v=${Date.now()}`;
-        const res = await fetch(url, { cache: 'no-store' });
-        if (res.ok) {
-          const data = await res.json();
-          currentProducts = normalizeProductList(data);
-          document.getElementById('navBadge').textContent = currentProducts.length;
-          const dot = document.getElementById('bnDot');
-          if (dot) dot.style.display = currentProducts.length ? 'block' : 'none';
-          updateChangesBadge();
-          return true;
-        }
-      } catch (e) { console.warn('GitHub fetch:', e); }
+        const remoteUrl = `https://raw.githubusercontent.com/${username}/${repo}/main/products.json?v=${Date.now()}`;
+        const res = await fetch(remoteUrl, { cache: 'no-store' });
+        if (res.ok) return applyProducts(await res.json());
+        console.warn('GitHub products fetch failed:', res.status);
+      } catch (e) {
+        console.warn('GitHub fetch:', e);
+      }
+
+      // Fallback: when raw.githubusercontent.com is blocked, token is missing, or the repo is private,
+      // keep the admin panel usable from the local/GitHub Pages products.json file.
+      try {
+        const localRes = await fetch(`./products.json?v=${Date.now()}`, { cache: 'no-store' });
+        if (localRes.ok) return applyProducts(await localRes.json());
+        console.warn('Local products fallback failed:', localRes.status);
+      } catch (e) {
+        console.warn('Local products fallback:', e);
+      }
+
       return false;
     }
 
@@ -1601,9 +1617,9 @@
     }
 
     async function doLogin() {
-      const u = document.getElementById('loginUser').value.trim();
-      const p = document.getElementById('loginPass').value;
       const storedUser = getStoredAdminUser();
+      const u = document.getElementById('loginUser').value.trim() || storedUser;
+      const p = document.getElementById('loginPass').value;
       const storedHash = getStoredAdminHash();
       const verified = await window.verifyPassword?.(p, storedHash);
       if (u === storedUser && verified) {
