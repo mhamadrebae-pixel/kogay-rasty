@@ -561,9 +561,9 @@
       cake:   'kek',
       gaz:    'gaz',
       drink:  'sardy',
-      chips:  'chips',   // was 'jbs'
+      chips:  'jbs',
       baby:   'mnalan',
-      family: 'ailay'    // was 'aylay'
+      family: 'aylay'
     };
     // Original files larger than 5MB are rejected before any compression/upload work starts.
     const MAX_IMAGE_SIZE = 5 * 1024 * 1024;
@@ -593,6 +593,55 @@
 
     function encodeInlineArg(value) {
       return encodeURIComponent(String(value ?? ''));
+    }
+
+    function decodeUriSegmentSafe(value) {
+      try {
+        return decodeURIComponent(String(value ?? ''));
+      } catch (error) {
+        return String(value ?? '');
+      }
+    }
+
+    function splitPathSuffix(path) {
+      const queryIndex = path.indexOf('?');
+      const hashIndex = path.indexOf('#');
+      let cutIndex = -1;
+      if (queryIndex >= 0 && hashIndex >= 0) cutIndex = Math.min(queryIndex, hashIndex);
+      else if (queryIndex >= 0) cutIndex = queryIndex;
+      else if (hashIndex >= 0) cutIndex = hashIndex;
+      if (cutIndex < 0) return { basePath: path, suffix: '' };
+      return {
+        basePath: path.slice(0, cutIndex),
+        suffix: path.slice(cutIndex)
+      };
+    }
+
+    function encodePathPreservingSlashes(path) {
+      const cleanPath = String(path || '').trim();
+      if (!cleanPath || /^(data|blob):/i.test(cleanPath)) return cleanPath;
+      if (/^https?:\/\//i.test(cleanPath)) {
+        try {
+          const url = new URL(cleanPath);
+          url.pathname = url.pathname
+            .split('/')
+            .map(segment => (!segment || segment === '.' || segment === '..')
+              ? segment
+              : encodeURIComponent(decodeUriSegmentSafe(segment)))
+            .join('/');
+          return url.toString();
+        } catch (error) {
+          return encodeURI(cleanPath);
+        }
+      }
+      const { basePath, suffix } = splitPathSuffix(cleanPath);
+      const encodedBasePath = basePath
+        .split('/')
+        .map(segment => (!segment || segment === '.' || segment === '..')
+          ? segment
+          : encodeURIComponent(decodeUriSegmentSafe(segment)))
+        .join('/');
+      return `${encodedBasePath}${suffix}`;
     }
 
     function isValidProductId(value) {
@@ -897,7 +946,7 @@
       if (!cleanPath || cleanPath === 'placeholder.jpg') return;
       const img = new Image();
       img.onerror = () => showMissingImageWarning(cleanPath);
-      img.src = getImgUrl(cleanPath) || cleanPath;
+      img.src = getImgUrl(cleanPath) || encodePathPreservingSlashes(cleanPath);
     }
 
     // Resolve the target GitHub folder for a category, or fall back to a generic uploads folder.
@@ -905,12 +954,12 @@
       return CATEGORY_IMAGE_FOLDERS[String(category || '').trim()] || 'uploads';
     }
 
-    // Generate a predictable, safe WebP filename. Extension is always .webp since
-    // compressImage now normalises every upload to WebP regardless of source format.
-    function generateSafeImageName(category) {
+    // Generate a predictable, safe filename that matches the encoded image format.
+    function generateSafeImageName(category, extension = 'webp') {
       const cleanCat = String(category || 'product').toLowerCase().replace(/[^a-z0-9-]+/g, '-') || 'product';
+      const cleanExt = String(extension || 'webp').toLowerCase().replace(/[^a-z0-9]+/g, '') || 'webp';
       const rand = Math.random().toString(36).slice(2, 8);
-      return `${cleanCat}-${Date.now()}-${rand}.webp`;
+      return `${cleanCat}-${Date.now()}-${rand}.${cleanExt}`;
     }
 
     // Update the small status pill used by both add/edit upload boxes.
@@ -1041,7 +1090,7 @@
       if (input) input.value = '';
       const currentPath = document.getElementById('editImage')?.value.trim();
       if (currentPath) {
-        setImagePreview('edit', getImgUrl(currentPath) || currentPath, currentPath, 'is-active');
+        setImagePreview('edit', getImgUrl(currentPath) || encodePathPreservingSlashes(currentPath), currentPath, 'is-active');
       } else {
         setImagePreview('edit', '', 'هیچ فایلێک هەڵنەبژێردراوە');
       }
@@ -1073,8 +1122,41 @@
       });
     }
 
-    // Resize/compress images to WebP so uploads are fast, consistent, and modern-browser friendly.
-    // Every source format (PNG, JPEG, HEIC via browser decode) is normalised to WebP at 0.78 quality.
+    function dataUrlToBlob(dataUrl) {
+      const [header, payload] = String(dataUrl || '').split(',');
+      if (!header || !payload) return null;
+      const mimeMatch = header.match(/data:(.*?)(;base64)?$/i);
+      const mimeType = mimeMatch?.[1] || 'application/octet-stream';
+      const binary = atob(payload);
+      const bytes = new Uint8Array(binary.length);
+      for (let index = 0; index < binary.length; index += 1) {
+        bytes[index] = binary.charCodeAt(index);
+      }
+      return new Blob([bytes], { type: mimeType });
+    }
+
+    async function canvasToEncodedBlob(canvas, mimeType, quality) {
+      if (typeof canvas.toBlob === 'function') {
+        const blob = await new Promise(resolve => canvas.toBlob(resolve, mimeType, quality));
+        if (blob) return blob;
+      }
+      try {
+        const dataUrl = canvas.toDataURL(mimeType, quality);
+        return dataUrlToBlob(dataUrl);
+      } catch (error) {
+        return null;
+      }
+    }
+
+    function getImageExtensionFromMime(mimeType) {
+      const cleanType = String(mimeType || '').toLowerCase();
+      if (cleanType.includes('webp')) return 'webp';
+      if (cleanType.includes('png')) return 'png';
+      return 'jpg';
+    }
+
+    // Resize/compress images so uploads stay browser-friendly on desktop and mobile.
+    // WebP is preferred, but older/mobile browsers can fall back to JPEG when needed.
     async function compressImage(file) {
       validateImageFile(file);
       const objectUrl = URL.createObjectURL(file);
@@ -1117,6 +1199,49 @@
       }
     }
 
+    async function compressImageForUpload(file) {
+      validateImageFile(file);
+      const objectUrl = URL.createObjectURL(file);
+      try {
+        const image = await new Promise((resolve, reject) => {
+          const img = new Image();
+          img.onload = () => resolve(img);
+          img.onerror = () => reject(new Error('Could not preview the selected image'));
+          img.src = objectUrl;
+        });
+
+        const MAX_W = 1200;
+        const scale = image.width > MAX_W ? (MAX_W / image.width) : 1;
+        const width = Math.max(1, Math.round(image.width * scale));
+        const height = Math.max(1, Math.round(image.height * scale));
+
+        const canvas = document.createElement('canvas');
+        canvas.width = width;
+        canvas.height = height;
+        const ctx = canvas.getContext('2d');
+        if (!ctx) throw new Error('Canvas is not available in this browser');
+        ctx.fillStyle = '#ffffff';
+        ctx.fillRect(0, 0, width, height);
+        ctx.drawImage(image, 0, 0, width, height);
+
+        let blob = await canvasToEncodedBlob(canvas, 'image/webp', 0.78);
+        if (!blob || blob.type !== 'image/webp') {
+          blob = await canvasToEncodedBlob(canvas, 'image/jpeg', 0.84);
+        }
+        if (!blob) {
+          throw new Error('Image compression failed');
+        }
+        if (blob.size > MAX_COMPRESSED_IMAGE_SIZE) {
+          throw new Error('Compressed image is still too large');
+        }
+
+        const mimeType = blob.type || 'image/jpeg';
+        return { blob, mimeType, extension: getImageExtensionFromMime(mimeType) };
+      } finally {
+        URL.revokeObjectURL(objectUrl);
+      }
+    }
+
     // Upload the compressed WebP image into the matching GitHub category folder before saving the product.
     async function uploadImageToGitHub(file, category, prefix = 'add') {
       if (!ghConfig?.token || !ghConfig?.username || !ghConfig?.repo) {
@@ -1131,7 +1256,7 @@
         setImageUploadState(prefix, 'فشاردن بە WebP...', 's-uploading');
         toast('🗜️ فشاردنی وێنە بە WebP...', 'info');
 
-        const { blob } = await compressImage(file);
+        const { blob, extension } = await compressImageForUpload(file);
         // Show original → compressed sizes to give the user confidence the compression worked.
         setImageSizeInfo(prefix, formatBytes(file.size), formatBytes(blob.size));
 
@@ -1140,7 +1265,7 @@
         toast('⬆️ بارکردنی وێنە بۆ GitHub...', 'info');
 
         const folder   = getCategoryImageFolder(category);
-        const fileName = generateSafeImageName(category);   // always .webp
+        const fileName = generateSafeImageName(category, extension);
         const path     = `${folder}/${fileName}`;
         const base64   = await blobToBase64(blob);
 
@@ -1229,9 +1354,9 @@
     // IMAGE PREVIEW
     function getImgUrl(imgPath) {
       if (!imgPath || imgPath === 'placeholder.jpg' || !ghConfig) return null;
-      if (imgPath.startsWith('http')) return imgPath;
+      if (imgPath.startsWith('http')) return encodePathPreservingSlashes(imgPath);
       const { username, repo } = ghConfig;
-      return `https://raw.githubusercontent.com/${username}/${repo}/main/${imgPath}`;
+      return `https://raw.githubusercontent.com/${username}/${repo}/main/${encodePathPreservingSlashes(imgPath)}`;
     }
 
     function openImgPreview(prodId) {
@@ -2017,8 +2142,23 @@
     function toast(msg, type = 'info') {
       const icons = { success: 'fa-check', error: 'fa-times', info: 'fa-info' };
       const wrap = document.getElementById('toasts');
+      if (!wrap) return;
+      const key = `${type}:${String(msg)}`;
+      const existing = Array.from(wrap.children).find(node => node.dataset.toastKey === key);
+      if (existing) {
+        existing.classList.remove('out');
+        const timeoutId = Number(existing.dataset.timeoutId || '0');
+        if (timeoutId) clearTimeout(timeoutId);
+        const nextTimeoutId = window.setTimeout(() => {
+          existing.classList.add('out');
+          window.setTimeout(() => existing.remove(), 300);
+        }, 3500);
+        existing.dataset.timeoutId = String(nextTimeoutId);
+        return;
+      }
       const el = document.createElement('div');
       el.className = `toast-item t-${type}`;
+      el.dataset.toastKey = key;
       const iconWrap = document.createElement('div');
       iconWrap.className = 'toast-icon';
       const icon = document.createElement('i');
@@ -2029,7 +2169,11 @@
       text.textContent = msg;
       el.append(iconWrap, text);
       wrap.appendChild(el);
-      setTimeout(() => { el.classList.add('out'); setTimeout(() => el.remove(), 300); }, 3500);
+      const timeoutId = window.setTimeout(() => {
+        el.classList.add('out');
+        window.setTimeout(() => el.remove(), 300);
+      }, 3500);
+      el.dataset.timeoutId = String(timeoutId);
     }
 
     // LOADING

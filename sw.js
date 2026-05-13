@@ -2,8 +2,8 @@
 // کۆگای ڕاستی - Offline Storefront Cache
 // ==========================================
 
-const CACHE_VERSION = 'v22';
-const ASSET_VERSION = 'mobile-perf-v22';
+const CACHE_VERSION = 'v24';
+const ASSET_VERSION = 'mobile-perf-v24';
 const APP_CACHE = `kogay-rasti-app-${CACHE_VERSION}`;
 const DATA_CACHE = `kogay-rasti-data-${CACHE_VERSION}`;
 const IMAGE_CACHE = `kogay-rasti-images-${CACHE_VERSION}`;
@@ -110,8 +110,9 @@ self.addEventListener('fetch', event => {
     }
 
     if (request.destination === 'image') {
-        const fallbackImage = sameOrigin ? './icon-192.png' : undefined;
-        event.respondWith(cacheFirst(request, IMAGE_CACHE, fallbackImage));
+        // Never swap missing product photos with the app icon.
+        // If a fetch fails, let the page-level <img onerror> handler show its own placeholder.
+        event.respondWith(cacheFirst(request, IMAGE_CACHE));
         return;
     }
 
