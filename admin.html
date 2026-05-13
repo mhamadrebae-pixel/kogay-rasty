@@ -1275,6 +1275,7 @@
     // Upload the compressed WebP image into the matching GitHub category folder before saving the product.
     async function uploadImageToGitHub(file, category, prefix = 'add') {
       if (!ghConfig?.token || !ghConfig?.username || !ghConfig?.repo) {
+        promptForGitHubToken('GitHub token is required before image upload');
         throw new Error('GitHub token/config پێویستە بۆ upload');
       }
 
@@ -1854,7 +1855,7 @@
 
     async function publishJSON() {
       if (!ghConfig?.token || !ghConfig?.username || !ghConfig?.repo) {
-        toast('GitHub token/config is missing', 'error');
+        promptForGitHubToken('GitHub token/config is missing');
         return;
       }
       showLoad('Preparing product files...');
@@ -2058,6 +2059,19 @@
     <div style="color:var(--text2)">Repository: <span style="color:white">${escapeHtml(ghConfig.username)}/${escapeHtml(ghConfig.repo)}</span></div>
     <div style="color:var(--text3);font-size:11px">Token: ${hasToken ? 'saved in this browser' : 'not configured yet'}</div>
   </div>`;
+    }
+
+    function promptForGitHubToken(message = 'GitHub token is required for publish and image upload') {
+      showPage('settings', null);
+      updateGhStatus();
+      const tokenInput = document.getElementById('newToken');
+      if (tokenInput) {
+        window.setTimeout(() => {
+          tokenInput.focus();
+          tokenInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }, 80);
+      }
+      toast(message, 'error');
     }
 
     function updateToken() {

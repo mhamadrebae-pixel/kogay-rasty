@@ -502,6 +502,68 @@ const PLACEHOLDER = `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg
 // ==========================================
 // ★ TRUE LAZY LOADING — تەنها بار بکە کاتێک نیشان دەبێت
 // ==========================================
+function decodeUriSegmentSafe(value) {
+    try {
+        return decodeURIComponent(String(value ?? ''));
+    } catch (error) {
+        return String(value ?? '');
+    }
+}
+
+function splitPathSuffix(path) {
+    const queryIndex = path.indexOf('?');
+    const hashIndex = path.indexOf('#');
+    let cutIndex = -1;
+    if (queryIndex >= 0 && hashIndex >= 0) cutIndex = Math.min(queryIndex, hashIndex);
+    else if (queryIndex >= 0) cutIndex = queryIndex;
+    else if (hashIndex >= 0) cutIndex = hashIndex;
+    if (cutIndex < 0) return { basePath: path, suffix: '' };
+    return {
+        basePath: path.slice(0, cutIndex),
+        suffix: path.slice(cutIndex)
+    };
+}
+
+function encodePathPreservingSlashes(path) {
+    const cleanPath = String(path || '').trim();
+    if (!cleanPath || cleanPath === PLACEHOLDER || /^(data|blob):/i.test(cleanPath)) return cleanPath;
+
+    if (/^https?:\/\//i.test(cleanPath)) {
+        try {
+            const url = new URL(cleanPath);
+            url.pathname = url.pathname
+                .split('/')
+                .map(segment => (!segment || segment === '.' || segment === '..')
+                    ? segment
+                    : encodeURIComponent(decodeUriSegmentSafe(segment)))
+                .join('/');
+            return url.toString();
+        } catch (error) {
+            return encodeURI(cleanPath);
+        }
+    }
+
+    const { basePath, suffix } = splitPathSuffix(cleanPath);
+    const encodedBasePath = basePath
+        .split('/')
+        .map(segment => (!segment || segment === '.' || segment === '..')
+            ? segment
+            : encodeURIComponent(decodeUriSegmentSafe(segment)))
+        .join('/');
+
+    return `${encodedBasePath}${suffix}`;
+}
+
+function getSafeImageSrc(source) {
+    const cleanSource = String(source || '').trim();
+    if (!cleanSource) return PLACEHOLDER;
+    return encodePathPreservingSlashes(cleanSource) || PLACEHOLDER;
+}
+
+function shouldUseCustomLazyImages() {
+    return !shouldUseLiteMode() && !isMobileViewport();
+}
+
 let lazyObserver = null;
  
 function initLazyObserver() {
@@ -972,27 +1034,29 @@ function getWebpImagePath(product) {
 
 // Render product media inside <picture> so future WebP assets can slot in safely.
 function buildProductPicture(product, productName, priority = 'low') {
-    const imageSrc = escapeHtml(product.image || PLACEHOLDER);
-    const webpSrc = getWebpImagePath(product);
+    const imageSrc = escapeHtml(getSafeImageSrc(product.image || PLACEHOLDER));
+    const rawWebpSrc = getWebpImagePath(product);
+    const webpSrc = rawWebpSrc ? getSafeImageSrc(rawWebpSrc) : '';
     const eager = priority === 'high';
+    const useDeferredSourceSwap = shouldUseCustomLazyImages() && !eager;
     const sourceMarkup = webpSrc
-        ? eager
-            ? `<source srcset="${escapeHtml(webpSrc)}" type="image/webp">`
-            : `<source data-lazy-srcset="${escapeHtml(webpSrc)}" type="image/webp">`
+        ? useDeferredSourceSwap
+            ? `<source data-lazy-srcset="${escapeHtml(webpSrc)}" type="image/webp">`
+            : `<source srcset="${escapeHtml(webpSrc)}" type="image/webp">`
         : '';
 
     return `<picture>
         ${sourceMarkup}
         <img
-            src="${eager ? imageSrc : PLACEHOLDER}"
-            ${eager ? '' : `data-lazy-src="${imageSrc}"`}
+            src="${useDeferredSourceSwap ? PLACEHOLDER : imageSrc}"
+            ${useDeferredSourceSwap ? `data-lazy-src="${imageSrc}"` : ''}
             alt="${escapeHtml(productName)}"
             loading="${eager ? 'eager' : 'lazy'}"
             decoding="async"
             fetchpriority="${priority}"
             onerror="handleProductImageError(this)"
             width="400" height="280"
-            style="opacity:${eager ? '1' : '0.56'}"
+            style="opacity:${useDeferredSourceSwap ? '0.56' : '1'}"
         >
     </picture>`;
 }
@@ -1124,7 +1188,7 @@ function openImageModal(productId) {
         modal.classList.add('has-image');
         img.onerror = null;
     };
-    img.src = product.image || PLACEHOLDER;
+    img.src = getSafeImageSrc(product.image || PLACEHOLDER);
 }
  
 function closeImageModal() {
