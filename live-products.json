@@ -1,0 +1,3431 @@
+[
+  {
+    "id": "cake-001",
+    "name": "‰?“?—Ì œÊÊﬁÊ·",
+    "description": "24 ⁄?œ?œ",
+    "price": 5250,
+    "image": "kek/IMG_0214.jpeg",
+    "category": "cake",
+    "hidden": false
+  },
+  {
+    "id": "cake-002",
+    "name": "òÊ·Ìç?Ì œÊ«‰Ì",
+    "description": "60 ⁄?œ?œ",
+    "price": 5750,
+    "image": "kek/IMG_0211.jpeg",
+    "category": "cake",
+    "hidden": false
+  },
+  {
+    "id": "cake-003",
+    "name": "ò?òÌ ∆«œ—Ì‰",
+    "description": "24 ⁄?œ?œ",
+    "price": 5000,
+    "image": "kek/IMG_0212.jpeg",
+    "category": "cake",
+    "hidden": false
+  },
+  {
+    "id": "cake-004",
+    "name": "·?Å?ç?ò?",
+    "description": "24 ⁄?œ?œ",
+    "price": 5250,
+    "image": "kek/IMG_0213.jpeg",
+    "category": "cake",
+    "hidden": false
+  },
+  {
+    "id": "cake-005",
+    "name": "ò?òÌ œÊ«‰Ì ﬁ«Ê?",
+    "description": "24 ⁄?œ?œ",
+    "price": 2500,
+    "image": "kek/photo_1_2026-02-20_22-41-44.jpg",
+    "category": "cake",
+    "hidden": false
+  },
+  {
+    "id": "cake-006",
+    "name": "„Ê›Ìœ ‘·Ìò",
+    "description": "24 ⁄?œ?œ",
+    "price": 4750,
+    "image": "kek/photo_2_2026-02-20_22-41-44.jpg",
+    "category": "cake",
+    "hidden": false
+  },
+  {
+    "id": "cake-007",
+    "name": "„Ê›Ìœ Å— ?ﬁ«?",
+    "description": "24 ⁄?œ?œ",
+    "price": 4750,
+    "image": "kek/photo_3_2026-02-20_22-41-44.jpg",
+    "category": "cake",
+    "hidden": false
+  },
+  {
+    "id": "cake-008",
+    "name": "„Ê›Ìœ Å?‰Ì—",
+    "description": "24 ⁄?œ?œ",
+    "price": 4750,
+    "image": "kek/photo_7_2026-02-20_22-41-44.jpg",
+    "category": "cake",
+    "hidden": false
+  },
+  {
+    "id": "cake-009",
+    "name": "„Ê›Ìœ Å??” ò?—?„??",
+    "description": "24 ⁄?œ?œ",
+    "price": 4750,
+    "image": "kek/photo_5_2026-02-20_22-41-44.jpg",
+    "category": "cake",
+    "hidden": false
+  },
+  {
+    "id": "cake-010",
+    "name": "ò?òÌ Ã?·Ì",
+    "description": "24 ⁄?œ?œ",
+    "price": 5000,
+    "image": "kek/photo_4_2026-02-20_22-41-44.jpg",
+    "category": "cake",
+    "hidden": false
+  },
+  {
+    "id": "cake-011",
+    "name": "œÊÊ ﬁÊ·",
+    "description": "24 ⁄?œ?œ",
+    "price": 5000,
+    "image": "kek/photo_6_2026-02-20_22-41-44.jpg",
+    "category": "cake",
+    "hidden": false
+  },
+  {
+    "id": "cake-012",
+    "name": "›??ç‰  ?Œ  ”Ê—",
+    "description": "24 ⁄?œ?œ",
+    "price": 5000,
+    "image": "kek/photo_8_2026-02-20_22-41-44.jpg",
+    "category": "cake",
+    "hidden": false
+  },
+  {
+    "id": "cake-013",
+    "name": "›??ç  œÊ»?Ì",
+    "description": "24 ⁄?œ?œ",
+    "price": 5000,
+    "image": "kek/photo_9_2026-02-20_22-41-44.jpg",
+    "category": "cake",
+    "hidden": false
+  },
+  {
+    "id": "cake-014",
+    "name": "ò?òÌ —Ê“Ì‰« ò—?„",
+    "description": "24 ⁄?œ?œ",
+    "price": 5000,
+    "image": "kek/photo_10_2026-02-20_22-41-44.jpg",
+    "category": "cake",
+    "hidden": false
+  },
+  {
+    "id": "cake-015",
+    "name": "œÌ· ò?ò ”Ê—",
+    "description": "24 ⁄?œ?œ",
+    "price": 5000,
+    "image": "kek/photo_11_2026-02-20_22-41-44.jpg",
+    "category": "cake",
+    "hidden": false
+  },
+  {
+    "id": "cake-016",
+    "name": "œÌ· ò?ò ??‘",
+    "description": "24 ⁄?œ?œ",
+    "price": 5000,
+    "image": "kek/photo_12_2026-02-20_22-41-44.jpg",
+    "category": "cake",
+    "hidden": false
+  },
+  {
+    "id": "cake-017",
+    "name": "œÌ· ò?ò ê??œ",
+    "description": "24 ⁄?œ?œ",
+    "price": 5000,
+    "image": "kek/photo_14_2026-02-20_22-41-44.jpg",
+    "category": "cake",
+    "hidden": false
+  },
+  {
+    "id": "cake-018",
+    "name": "—?“Ì‰« êÊ?“Ì",
+    "description": "24 ⁄?œ?œ",
+    "price": 4750,
+    "image": "kek/photo_13_2026-02-20_22-41-44.jpg",
+    "category": "cake",
+    "hidden": false
+  },
+  {
+    "id": "cake-019",
+    "name": "›??ç‰ ›” ﬁ Œ?",
+    "description": "24 ⁄?œ?œ",
+    "price": 5000,
+    "image": "kek/photo_15_2026-02-20_22-41-44.jpg",
+    "category": "cake",
+    "hidden": false
+  },
+  {
+    "id": "cake-020",
+    "name": "›??ç‰ »”òÌ ",
+    "description": "24 ⁄?œ?œ",
+    "price": 5000,
+    "image": "kek/photo_16_2026-02-20_22-41-44.jpg",
+    "category": "cake",
+    "hidden": false
+  },
+  {
+    "id": "cake-021",
+    "name": "›??ç‰ ‘·ò",
+    "description": "24 ⁄?œ?œ",
+    "price": 5000,
+    "image": "kek/photo_18_2026-02-20_22-41-44.jpg",
+    "category": "cake",
+    "hidden": false
+  },
+  {
+    "id": "cake-022",
+    "name": "›??ç‰ Å?‰Ì—",
+    "description": "24 ⁄?œ?œ",
+    "price": 5000,
+    "image": "kek/photo_19_2026-02-20_22-41-44.jpg",
+    "category": "cake",
+    "hidden": false
+  },
+  {
+    "id": "cake-023",
+    "name": "ò?òÌ „? ? 500",
+    "description": "24 ⁄?œ?œ",
+    "price": 10000,
+    "image": "kek/photo_17_2026-02-20_22-41-44.jpg",
+    "category": "cake",
+    "hidden": false
+  },
+  {
+    "id": "cake-024",
+    "name": "œ?‰« Ì ∆??ﬁ?",
+    "description": "24 ⁄?œ?œ",
+    "price": 4250,
+    "image": "kek/photo_20_2026-02-20_22-41-44.jpg",
+    "category": "cake",
+    "hidden": false
+  },
+  {
+    "id": "cake-025",
+    "name": "‰?“??Ì œ? Å?„?Ì",
+    "description": "24 ⁄?œ?œ",
+    "price": 5250,
+    "image": "kek/photo_21_2026-02-20_22-41-44.jpg",
+    "category": "cake",
+    "hidden": false
+  },
+  {
+    "id": "cake-026",
+    "name": "‰?“??Ì œ? ??‘",
+    "description": "24 ⁄?œ?œ",
+    "price": 5250,
+    "image": "kek/photo_22_2026-02-20_22-41-44.jpg",
+    "category": "cake",
+    "hidden": false
+  },
+  {
+    "id": "cake-027",
+    "name": "Å«Ê?‰ ò?ò",
+    "description": "24 ⁄?œ?œ",
+    "price": 5000,
+    "image": "kek/photo_24_2026-02-20_22-41-44.jpg",
+    "category": "cake",
+    "hidden": false
+  },
+  {
+    "id": "cake-028",
+    "name": "‰?“??Ì ”? ?",
+    "description": "24 ⁄?œ?œ",
+    "price": 5250,
+    "image": "kek/photo_25_2026-02-20_22-41-44.jpg",
+    "category": "cake",
+    "hidden": false
+  },
+  {
+    "id": "cake-029",
+    "name": "ò?òÌ „ÂÌ«—",
+    "description": "24 ⁄?œ?œ",
+    "price": 5000,
+    "image": "kek/photo_27_2026-02-20_22-41-44.jpg",
+    "category": "cake",
+    "hidden": false
+  },
+  {
+    "id": "cake-030",
+    "name": "ò?ò  «Ìê?—",
+    "description": "12 ⁄?œ?œ",
+    "price": 2500,
+    "image": "kek/photo_28_2026-02-20_22-41-44.jpg",
+    "category": "cake",
+    "hidden": false
+  },
+  {
+    "id": "cake-031",
+    "name": "ò?ò —?“ Ã?·Ì",
+    "description": "24 ⁄?œ?œ",
+    "price": 4750,
+    "image": "kek/photo_29_2026-02-20_22-41-44.jpg",
+    "category": "cake",
+    "hidden": false
+  },
+  {
+    "id": "cake-032",
+    "name": " ?Å ò?ò",
+    "description": "24 ⁄?œ?œ",
+    "price": 4750,
+    "image": "kek/photo_30_2026-02-20_22-41-44.jpg",
+    "category": "cake",
+    "hidden": false
+  },
+  {
+    "id": "gaz-001",
+    "name": "ÊÌ «‰",
+    "description": "24 ⁄?œ?œ",
+    "price": 5250,
+    "image": "gaz/IMG_0215.jpeg",
+    "category": "gaz",
+    "hidden": false
+  },
+  {
+    "id": "gaz-002",
+    "name": " «Ìò?Ì ‘?‘Ì",
+    "description": "24 ⁄?œ?œ",
+    "price": 4500,
+    "image": "gaz/IMG_0216.jpeg",
+    "category": "gaz",
+    "hidden": false
+  },
+  {
+    "id": "gaz-003",
+    "name": "œ«ÌÃ” ?",
+    "description": "24 ⁄?œ?œ",
+    "price": 5000,
+    "image": "gaz/IMG_0217.jpeg",
+    "category": "gaz",
+    "hidden": false
+  },
+  {
+    "id": "gaz-004",
+    "name": "Å«Å?Ì ê?Ê—?",
+    "description": "40 ⁄?œ?œ",
+    "price": 9000,
+    "image": "gaz/IMG_0218.jpeg",
+    "category": "gaz",
+    "hidden": false
+  },
+  {
+    "id": "gaz-006",
+    "name": "ò?“Ì ·«„Ì«",
+    "description": "24 ⁄?œ?œ",
+    "price": 5000,
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (1).jpeg",
+    "category": "gaz",
+    "hidden": false
+  },
+  {
+    "id": "gaz-007",
+    "name": "Å«Å?",
+    "description": "24 ⁄?œ?œ",
+    "price": 5250,
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (3).jpeg",
+    "category": "gaz",
+    "hidden": false
+  },
+  {
+    "id": "gaz-008",
+    "name": "Å«?‘ Ì",
+    "description": "80 ⁄?œ?œ",
+    "price": 7500,
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (4).jpeg",
+    "category": "gaz",
+    "hidden": false
+  },
+  {
+    "id": "gaz-009",
+    "name": "‰«” ?·?Ì ‰«‰Ì",
+    "description": "24 ⁄?œ?œ",
+    "price": 2500,
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (5).jpeg",
+    "category": "gaz",
+    "hidden": false
+  },
+  {
+    "id": "gaz-010",
+    "name": "” «— „?“",
+    "description": "40 ⁄?œ?œ",
+    "price": 8000,
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (6).jpeg",
+    "category": "gaz",
+    "hidden": false
+  },
+  {
+    "id": "gaz-011",
+    "name": "” «— ‘·Ìò",
+    "description": "40 ⁄?œ?œ",
+    "price": 8000,
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (7).jpeg",
+    "category": "gaz",
+    "hidden": false
+  },
+  {
+    "id": "gaz-012",
+    "name": "” «— Å— ?ﬁ«?",
+    "description": "40 ⁄?œ?œ",
+    "price": 8000,
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (8).jpeg",
+    "category": "gaz",
+    "hidden": false
+  },
+  {
+    "id": "gaz-013",
+    "name": "»”òÌ Ì  —œ",
+    "description": "40 ⁄?œ?œ",
+    "price": 7500,
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (9).jpeg",
+    "category": "gaz",
+    "hidden": false
+  },
+  {
+    "id": "gaz-014",
+    "name": "çÌ·ò?Ì œÊ«‰Ì",
+    "description": "24 ⁄?œ?œ",
+    "price": 5000,
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM.jpeg",
+    "category": "gaz",
+    "hidden": false
+  },
+  {
+    "id": "gaz-015",
+    "name": "Ê«Ì›?— ∆?“—« ‘·Ìò",
+    "description": "24 ⁄?œ?œ",
+    "price": 5000,
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (1).jpeg",
+    "category": "gaz",
+    "hidden": false
+  },
+  {
+    "id": "gaz-016",
+    "name": "Ê«Ì›?— ∆?“—« „?“",
+    "description": "24 ⁄?œ?œ",
+    "price": 5000,
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (2).jpeg",
+    "category": "gaz",
+    "hidden": false
+  },
+  {
+    "id": "gaz-017",
+    "name": "Ê«Ì›?— ∆?“—« Å— ?ﬁ«?",
+    "description": "24 ⁄?œ?œ",
+    "price": 5000,
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM.jpeg",
+    "category": "gaz",
+    "hidden": false
+  },
+  {
+    "id": "gaz-018",
+    "name": "‘Ì—Ì‰ ⁄?”?· „?“",
+    "description": "40 ⁄?œ?œ",
+    "price": 8000,
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (3).jpeg",
+    "category": "gaz",
+    "hidden": false
+  },
+  {
+    "id": "gaz-019",
+    "name": "»”ò  ÅÌ Ì ÅÊ— Ê«—",
+    "description": "24 ⁄?œ?œ",
+    "price": 5000,
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (4).jpeg",
+    "category": "gaz",
+    "hidden": false
+  },
+  {
+    "id": "gaz-020",
+    "name": " «Ì” ?·Ì ﬁ«Ê?",
+    "description": "48 ⁄?œ?œ",
+    "price": 5000,
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (5).jpeg",
+    "category": "gaz",
+    "hidden": false
+  },
+  {
+    "id": "gaz-021",
+    "name": "ç·ò?Ì œÊ«‰Ì",
+    "description": "60 ⁄?œ?œ",
+    "price": 6500,
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (6).jpeg",
+    "category": "gaz",
+    "hidden": false
+  },
+  {
+    "id": "gaz-022",
+    "name": "ÊÌòÌ œÊ«‰Ì",
+    "description": "60 ⁄?œ?œ",
+    "price": 6500,
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (7).jpeg",
+    "category": "gaz",
+    "hidden": false
+  },
+  {
+    "id": "gaz-023",
+    "name": "ÊÌòÌ ê?Ê—?",
+    "description": "60 ⁄?œ?œ",
+    "price": 11500,
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (8).jpeg",
+    "category": "gaz",
+    "hidden": false
+  },
+  {
+    "id": "gaz-024",
+    "name": "‘?„«∆Ì?",
+    "description": "12 ⁄?œ?œ",
+    "price": 2500,
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (9).jpeg",
+    "category": "gaz",
+    "hidden": false
+  },
+  {
+    "id": "gaz-025",
+    "name": "»”òÌ Ì œ?„ÊÊ ç«Ê",
+    "description": "24 ⁄?œ?œ",
+    "price": 5250,
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (10).jpeg",
+    "category": "gaz",
+    "hidden": false
+  },
+  {
+    "id": "gaz-026",
+    "name": "»”òÌ Ì ò«·Ì Ì",
+    "description": "24 ⁄?œ?œ",
+    "price": 4750,
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (11).jpeg",
+    "category": "gaz",
+    "hidden": false
+  },
+  {
+    "id": "gaz-027",
+    "name": "»Ê—«œ«",
+    "description": "32 ⁄?œ?œ",
+    "price": 6250,
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (12).jpeg",
+    "category": "gaz",
+    "hidden": false
+  },
+  {
+    "id": "gaz-028",
+    "name": "‘?Ê«∆Ì·",
+    "description": "60 ⁄?œ?œ",
+    "price": 6500,
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (15).jpeg",
+    "category": "gaz",
+    "hidden": false
+  },
+  {
+    "id": "gaz-029",
+    "name": "Â«Ì»«Ì",
+    "description": "40 ⁄?œ?œ",
+    "price": 8000,
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (16).jpeg",
+    "category": "gaz",
+    "hidden": false
+  },
+  {
+    "id": "gaz-030",
+    "name": "Â?ÅÌ ⁄«œÌ",
+    "description": "24 ⁄?œ?œ",
+    "price": 4500,
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (17).jpeg",
+    "category": "gaz",
+    "hidden": false
+  },
+  {
+    "id": "gaz-031",
+    "name": "” «òÌ ‘?›«› 500",
+    "description": "40 ⁄?œ?œ",
+    "price": 10000,
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (18).jpeg",
+    "category": "gaz",
+    "hidden": false
+  },
+  {
+    "id": "gaz-033",
+    "name": "„???ò«‰",
+    "description": "24 ⁄?œ?œ",
+    "price": 4750,
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.03.27 PM.jpeg",
+    "category": "gaz",
+    "hidden": false
+  },
+  {
+    "id": "drink-001",
+    "name": "∆«ÊÌ œ?»?",
+    "description": "12 ⁄?œ?œ",
+    "price": 750,
+    "image": "sardy/IMG_0188.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-002",
+    "name": "∆«ÊÌ ò«— ?‰",
+    "description": "60 ⁄?œ?œ",
+    "price": 1500,
+    "image": "sardy/IMG_0189.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-003",
+    "name": "ÅÌÅ”Ì ”·??— ﬁ?“?„",
+    "description": "30 ⁄?œ?œ",
+    "price": 6500,
+    "image": "sardy/IMG_6192.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-004",
+    "name": "ÅÌÅ”Ì ‘Ì‰ ﬁ?“?„",
+    "description": "30 ⁄?œ?œ",
+    "price": 6500,
+    "image": "sardy/IMG_6193.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-005",
+    "name": "„Ì—‰œ« Å— ?ﬁ«· ﬁ?“?„",
+    "description": "30 ⁄?œ?œ",
+    "price": 6500,
+    "image": "sardy/IMG_6194.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-006",
+    "name": "œÌÊ ﬁ?“?„",
+    "description": "30 ⁄?œ?œ",
+    "price": 6500,
+    "image": "sardy/IMG_6195.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-007",
+    "name": "?«ÃÌ ﬁ?Œ",
+    "description": "24 ⁄?œ?œ",
+    "price": 5000,
+    "image": "sardy/IMG_6196.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-008",
+    "name": "?«‰Ì ﬁ Ê",
+    "description": "24 ⁄?œ?œ",
+    "price": 9750,
+    "image": "sardy/IMG_6197.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-009",
+    "name": "?«‰Ì ‘Ê‘?",
+    "description": "24 ⁄?œ?œ",
+    "price": 9750,
+    "image": "sardy/IMG_6220.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-010",
+    "name": "·«·? ‘Ì‰",
+    "description": "30 ⁄?œ?œ",
+    "price": 6000,
+    "image": "sardy/IMG_6198.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-011",
+    "name": "·«·? œÌÊ",
+    "description": "30 ⁄?œ?œ",
+    "price": 6000,
+    "image": "sardy/IMG_6199.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-012",
+    "name": "œÌÊÌ ﬁ???Ê",
+    "description": "30 ⁄?œ?œ",
+    "price": 10000,
+    "image": "sardy/IMG_6200.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-013",
+    "name": "ÅÌÅ”Ì ﬁ???Ê",
+    "description": "30 ⁄?œ?œ",
+    "price": 10000,
+    "image": "sardy/IMG_6201.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-014",
+    "name": " «“ÃÌ ﬁ Ê ﬁ?Œ",
+    "description": "30 ⁄?œ?œ",
+    "price": 6500,
+    "image": "sardy/IMG_6202.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-015",
+    "name": " «“ÃÌ ﬁ Ê Å— ?ﬁ«?",
+    "description": "30 ⁄?œ?œ",
+    "price": 6500,
+    "image": "sardy/IMG_6203.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-016",
+    "name": " «“ÃÌ ﬁ Ê Â?‰«—",
+    "description": "30 ⁄?œ?œ",
+    "price": 6500,
+    "image": "sardy/IMG_6204.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-017",
+    "name": "RC ‘Ê‘? ??‘",
+    "description": "30 ⁄?œ?œ",
+    "price": 6500,
+    "image": "sardy/IMG_6205.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-018",
+    "name": "RC ‘Ê‘? Å— ?ﬁ«?",
+    "description": "24 ⁄?œ?œ",
+    "price": 6500,
+    "image": "sardy/IMG_6219.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-019",
+    "name": "”«—œÌ »?€œ«œÌ",
+    "description": "30 ⁄?œ?œ",
+    "price": 6500,
+    "image": "sardy/IMG_6206.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-020",
+    "name": "ÅÌÅ”Ì ‘Ê‘?",
+    "description": "24 ⁄?œ?œ",
+    "price": 9750,
+    "image": "sardy/IMG_6207.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-021",
+    "name": "œÌÊÌ ‘Ê‘?",
+    "description": "24 ⁄?œ?œ",
+    "price": 9750,
+    "image": "sardy/IMG_6208.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-022",
+    "name": "“?„“?„Ì ‘Ê‘? ??‘",
+    "description": "24 ⁄?œ?œ",
+    "price": 10000,
+    "image": "sardy/IMG_6209.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-023",
+    "name": "“?„“?„Ì ‘Ê‘? Å— ?ﬁ«?",
+    "description": "24 ⁄?œ?œ",
+    "price": 10000,
+    "image": "sardy/IMG_6210.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-024",
+    "name": "“?„“?„ ‘Ê‘? ·Ì„?",
+    "description": "12 ⁄?œ?œ",
+    "price": 5000,
+    "image": "sardy/IMG_6218.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-025",
+    "name": "∆«”«‰ ‘Ì‰",
+    "description": "24 ⁄?œ?œ",
+    "price": 9750,
+    "image": "sardy/IMG_6211.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-026",
+    "name": "∆«”«‰ „?—",
+    "description": "24 ⁄?œ?œ",
+    "price": 9750,
+    "image": "sardy/IMG_6212.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-027",
+    "name": " «Ìê?—Ì  «„ Å?„?Ì",
+    "description": "24 ⁄?œ?œ",
+    "price": 5000,
+    "image": "sardy/IMG_6213.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-028",
+    "name": " «„ ‘Ì‰",
+    "description": "24 ⁄?œ?œ",
+    "price": 5000,
+    "image": "sardy/IMG_6238.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-029",
+    "name": "ÊÌ‰?— ê?Ê—?",
+    "description": "24 ⁄?œ?œ",
+    "price": 9500,
+    "image": "sardy/IMG_6214.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-030",
+    "name": "ÊÌ‰?— »çÊò",
+    "description": "24 ⁄?œ?œ",
+    "price": 5250,
+    "image": "sardy/IMG_6215.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-031",
+    "name": "”?œ?Ì ›—Ê ·Ì",
+    "description": "24 ⁄?œ?œ",
+    "price": 8250,
+    "image": "sardy/IMG_6216.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-032",
+    "name": "”?œ?Ì „” ?—",
+    "description": "24 ⁄?œ?œ",
+    "price": 5500,
+    "image": "sardy/IMG_6217.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-033",
+    "name": "‘?—»? Ì  ? ‘·ò",
+    "description": "12 ⁄?œ?œ",
+    "price": 5000,
+    "image": "sardy/IMG_6221.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-034",
+    "name": "‘?—»? Ì  ? ò«??ò",
+    "description": "12 ⁄?œ?œ",
+    "price": 5000,
+    "image": "sardy/IMG_6222.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-035",
+    "name": "‘?—»? Ì  ? »·Ê»?—Ì",
+    "description": "12 ⁄?œ?œ",
+    "price": 5000,
+    "image": "sardy/IMG_6223.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-036",
+    "name": "‘?—»? Ì  ? Å— ?ﬁ«?",
+    "description": "12 ⁄?œ?œ",
+    "price": 5000,
+    "image": "sardy/IMG_6224.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-037",
+    "name": "‘?—»? Ì  ? ∆?‰?‰«”",
+    "description": "12 ⁄?œ?œ",
+    "price": 5000,
+    "image": "sardy/IMG_6225.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-038",
+    "name": "”?œ?Ì „” «—",
+    "description": "24 ⁄?œ?œ",
+    "price": 10000,
+    "image": "sardy/IMG_6226.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-039",
+    "name": "”«—œÌ  Ê—òÌ Å— ?ﬁ«?",
+    "description": "24 ⁄?œ?œ",
+    "price": 9500,
+    "image": "sardy/IMG_6227.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-040",
+    "name": " «“Ã ‘Ê‘? Â?‰«—",
+    "description": "24 ⁄?œ?œ",
+    "price": 9500,
+    "image": "sardy/IMG_6228.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-041",
+    "name": " «“Ã ‘Ê‘? ﬁ?Œ",
+    "description": "24 ⁄?œ?œ",
+    "price": 9500,
+    "image": "sardy/IMG_6229.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-042",
+    "name": " «“Ã ‘Ê‘? Å— ?ﬁ«?",
+    "description": "24 ⁄?œ?œ",
+    "price": 9500,
+    "image": "sardy/IMG_6230.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-043",
+    "name": " «“Ã ‘Ê‘? ê?“?—",
+    "description": "24 ⁄?œ?œ",
+    "price": 9500,
+    "image": "sardy/IMG_6231.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-044",
+    "name": "„«?  Ã?",
+    "description": "24 ⁄?œ?œ",
+    "price": 10000,
+    "image": "sardy/IMG_6232.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-045",
+    "name": "„«?  ·Ì„?",
+    "description": "24 ⁄?œ?œ",
+    "price": 10000,
+    "image": "sardy/IMG_6233.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-046",
+    "name": "„«?  ﬁ?Œ",
+    "description": "24 ⁄?œ?œ",
+    "price": 10000,
+    "image": "sardy/IMG_6234.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-047",
+    "name": "K9 Å?„?Ì",
+    "description": "24 ⁄?œ?œ",
+    "price": 9500,
+    "image": "sardy/IMG_6235.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-048",
+    "name": "K9 ‘Ì‰",
+    "description": "24 ⁄?œ?œ",
+    "price": 9500,
+    "image": "sardy/IMG_6237.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-049",
+    "name": " «Ìê?— ∆?”?",
+    "description": "24 ⁄?œ?œ",
+    "price": 21000,
+    "image": "sardy/IMG_6236.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-050",
+    "name": "œ?»? ”??‰",
+    "description": "12 ⁄?œ?œ",
+    "price": 2250,
+    "image": "sardy/IMG_6239.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-051",
+    "name": "”«—œÌ ‰ÌÊ",
+    "description": "12 ⁄?œ?œ",
+    "price": 2250,
+    "image": "sardy/IMG_6240.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-052",
+    "name": "”«—œÌ K",
+    "description": "12 ⁄?œ?œ",
+    "price": 2250,
+    "image": "sardy/IMG_6241.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-053",
+    "name": "∆«—”?  «Ìê?—",
+    "description": "30 ⁄?œ?œ",
+    "price": 6500,
+    "image": "sardy/IMG_6242.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-054",
+    "name": "∆«—”? Å— ?ﬁ«?",
+    "description": "30 ⁄?œ?œ",
+    "price": 6500,
+    "image": "sardy/IMG_6243.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-055",
+    "name": "∆«—”? ·Ì„?",
+    "description": "30 ⁄?œ?œ",
+    "price": 6500,
+    "image": "sardy/IMG_6245.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-056",
+    "name": "∆«—”? ∆«ÊÌ",
+    "description": "30 ⁄?œ?œ",
+    "price": 6500,
+    "image": "sardy/IMG_6246.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-057",
+    "name": " —«»Ì",
+    "description": "24 ⁄?œ?œ",
+    "price": 9500,
+    "image": "sardy/IMG_6244.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-058",
+    "name": " Ê—òÌ ??‘",
+    "description": "24 ⁄?œ?œ",
+    "price": 9500,
+    "image": "sardy/IMG_6247.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-059",
+    "name": "“«òÌ",
+    "description": "36 ⁄?œ?œ",
+    "price": 6000,
+    "image": "sardy/IMG_6248.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-060",
+    "name": "”?„‰«òÌ ﬁ?Œ",
+    "description": "36 ⁄?œ?œ",
+    "price": 3000,
+    "image": "sardy/IMG_6249.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-061",
+    "name": " «“ÃÌ Å«ò?  ﬁ?Œ",
+    "description": "36 ⁄?œ?œ",
+    "price": 4000,
+    "image": "sardy/IMG_6250.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-062",
+    "name": " «“ÃÌ Å«ò?  ò?ò ?·",
+    "description": "36 ⁄?œ?œ",
+    "price": 4000,
+    "image": "sardy/IMG_6252.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-063",
+    "name": " «“ÃÌ Å«ò?  Å— ?ﬁ«?",
+    "description": "36 ⁄?œ?œ",
+    "price": 4000,
+    "image": "sardy/IMG_6253.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-064",
+    "name": "ò«?»Ì „?“",
+    "description": "36 ⁄?œ?œ",
+    "price": 8000,
+    "image": "sardy/IMG_6254.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-065",
+    "name": "ò«?»Ì ‘·ò",
+    "description": "36 ⁄?œ?œ",
+    "price": 8000,
+    "image": "sardy/IMG_6255.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-066",
+    "name": "ò«?»Ì ﬁ«Ê?",
+    "description": "36 ⁄?œ?œ",
+    "price": 8000,
+    "image": "sardy/IMG_6256.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-067",
+    "name": "ò«?»Ì ò«??ò",
+    "description": "36 ⁄?œ?œ",
+    "price": 8000,
+    "image": "sardy/IMG_6257.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-068",
+    "name": "“?“? Å— ?ﬁ«?",
+    "description": "36 ⁄?œ?œ",
+    "price": 3250,
+    "image": "sardy/IMG_6258.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-069",
+    "name": "“?“? ∆?‰?‰«‘",
+    "description": "36 ⁄?œ?œ",
+    "price": 3250,
+    "image": "sardy/IMG_6259.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-070",
+    "name": "“?“? ò?ò ?·",
+    "description": "36 ⁄?œ?œ",
+    "price": 3250,
+    "image": "sardy/IMG_6260.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-071",
+    "name": "“?“?  —?",
+    "description": "36 ⁄?œ?œ",
+    "price": 3250,
+    "image": "sardy/IMG_6261.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-072",
+    "name": "“?“? ‘·ò",
+    "description": "36 ⁄?œ?œ",
+    "price": 3250,
+    "image": "sardy/IMG_6262.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-073",
+    "name": "“?“? ﬁ?Œ",
+    "description": "36 ⁄?œ?œ",
+    "price": 3250,
+    "image": "sardy/IMG_6263.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-074",
+    "name": "“?“? ”?Ê",
+    "description": "36 ⁄?œ?œ",
+    "price": 3250,
+    "image": "sardy/IMG_6264.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-075",
+    "name": "„?ò”ÌòÌ ·Ì„?",
+    "description": "24 ⁄?œ?œ",
+    "price": 14500,
+    "image": "sardy/IMG_6265.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-076",
+    "name": "„?ò”ÌòÌ ‘·ò",
+    "description": "24 ⁄?œ?œ",
+    "price": 14500,
+    "image": "sardy/IMG_6266.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-077",
+    "name": "„?ò”ÌòÌ „«‰ê?",
+    "description": "24 ⁄?œ?œ",
+    "price": 14500,
+    "image": "sardy/IMG_6267.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-078",
+    "name": "„?ò”ÌòÌ »Ê»Ì",
+    "description": "24 ⁄?œ?œ",
+    "price": 14500,
+    "image": "sardy/IMG_6268.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-079",
+    "name": "„?ò”ÌòÌ Â?‰«—",
+    "description": "24 ⁄?œ?œ",
+    "price": 14500,
+    "image": "sardy/IMG_6269.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-080",
+    "name": "„?ò”ÌòÌ ﬁ«Ê?",
+    "description": "24 ⁄?œ?œ",
+    "price": 14500,
+    "image": "sardy/IMG_6270.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-081",
+    "name": "??œ",
+    "description": "24 ⁄?œ?œ",
+    "price": 9500,
+    "image": "sardy/IMG_6271.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-082",
+    "name": "ÅÌÅ”Ì œ?»?",
+    "description": "6 ⁄?œ?œ",
+    "price": 6500,
+    "image": "sardy/IMG_6272.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-083",
+    "name": "ÅÌÅ”Ì 1000",
+    "description": "6 ⁄?œ?œ",
+    "price": 4500,
+    "image": "sardy/IMG_6274.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-084",
+    "name": "ÅÌÅ”Ì Ê?’? ",
+    "description": "12 ⁄?œ?œ",
+    "price": 6500,
+    "image": "sardy/IMG_6275.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-085",
+    "name": "œÌÊÌ œ?»?",
+    "description": "6 ⁄?œ?œ",
+    "price": 6500,
+    "image": "sardy/IMG_6276.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-086",
+    "name": "œÌÊÌ 1000",
+    "description": "6 ⁄?œ?œ",
+    "price": 4500,
+    "image": "sardy/IMG_6277.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-087",
+    "name": "œÌÊÌ Ê?’? ",
+    "description": "12 ⁄?œ?œ",
+    "price": 6500,
+    "image": "sardy/IMG_6278.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-088",
+    "name": "∆?›—«",
+    "description": "6 ⁄?œ?œ",
+    "price": 3000,
+    "image": "sardy/IMG_6279.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-089",
+    "name": "Ì?Ê„Ì ??‘",
+    "description": "6 ⁄?œ?œ",
+    "price": 3000,
+    "image": "sardy/IMG_6280.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-090",
+    "name": "“?„“«„Ì Å— ?ﬁ«?",
+    "description": "6 ⁄?œ?œ",
+    "price": 5500,
+    "image": "sardy/IMG_6281.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-091",
+    "name": "“«ê—?“Ì œÌÊ",
+    "description": "12 ⁄?œ?œ",
+    "price": 2250,
+    "image": "sardy/IMG_6282.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-092",
+    "name": "“«ê—?“Ì ·Ì„?",
+    "description": "12 ⁄?œ?œ",
+    "price": 2250,
+    "image": "sardy/IMG_6283.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-093",
+    "name": "“«ê—?“Ì ‘Ì‰",
+    "description": "12 ⁄?œ?œ",
+    "price": 2250,
+    "image": "sardy/IMG_6284.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-094",
+    "name": "œ?Ì »çÊò",
+    "description": "16 ⁄?œ?œ",
+    "price": 3000,
+    "image": "sardy/IMG_6285.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-095",
+    "name": "‘?—»? Ì »?»? ?",
+    "description": "24 ⁄?œ?œ",
+    "price": 4500,
+    "image": "sardy/IMG_6286.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-096",
+    "name": "‘Ì— ò«??òÌ œ?»?",
+    "description": "24 ⁄?œ?œ",
+    "price": 4500,
+    "image": "sardy/IMG_6287.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "chips-001",
+    "name": "òÌ‘  ?„« ? 500",
+    "description": "24 ⁄?œ?œ",
+    "price": 9500,
+    "image": "jbs/IMG_0223.jpeg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-002",
+    "name": "òÌ‘ ”—ò? 500",
+    "description": "24 ⁄?œ?œ",
+    "price": 9500,
+    "image": "jbs/IMG_0224.jpeg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-003",
+    "name": "òÌ‘ »Ì»?— 500",
+    "description": "24 ⁄?œ?œ",
+    "price": 9500,
+    "image": "jbs/IMG_0225.jpeg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-004",
+    "name": "òÌ‘ ”«œ? 500",
+    "description": "24 ⁄?œ?œ",
+    "price": 9500,
+    "image": "jbs/IMG_0226.jpeg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-005",
+    "name": "òÌ‘ ·Ì„? 500",
+    "description": "24 ⁄?œ?œ",
+    "price": 9500,
+    "image": "jbs/IMG_0227.jpeg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-006",
+    "name": "òÌ‘ »Ì»?— 250",
+    "description": "48 ⁄?œ?œ",
+    "price": 9500,
+    "image": "jbs/photo_2_2026-02-20_22-38-05.jpg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-007",
+    "name": "òÌ‘ ”«œ? 250",
+    "description": "48 ⁄?œ?œ",
+    "price": 9500,
+    "image": "jbs/photo_3_2026-02-20_22-38-05.jpg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-008",
+    "name": "òÌ‘ ·Ì„? 250",
+    "description": "48 ⁄?œ?œ",
+    "price": 9500,
+    "image": "jbs/photo_4_2026-02-20_22-38-05.jpg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-009",
+    "name": "òÌ‘ ”—ò? 250",
+    "description": "48 ⁄?œ?œ",
+    "price": 9500,
+    "image": "jbs/photo_10_2026-02-20_22-38-05.jpg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-010",
+    "name": "·Ì“« ò?ò ?·",
+    "description": "48 ⁄?œ?œ",
+    "price": 7500,
+    "image": "jbs/IMG_0206.jpeg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-011",
+    "name": "“??« Ì ‘«„Ì",
+    "description": "45 ⁄?œ?œ",
+    "price": 9000,
+    "image": "jbs/IMG_0207.jpeg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-012",
+    "name": "”‰«Å",
+    "description": "40 ⁄?œ?œ",
+    "price": 7500,
+    "image": "jbs/IMG_0208.jpeg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-013",
+    "name": " Ìò  ?ò",
+    "description": "40 ⁄?œ?œ",
+    "price": 7500,
+    "image": "jbs/IMG_0209.jpeg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-014",
+    "name": "‰Ì‰Ì",
+    "description": "36 ⁄?œ?œ",
+    "price": 6750,
+    "image": "jbs/IMG_0219.jpeg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-015",
+    "name": "„«‰‘Ì ”ÅÌ 500",
+    "description": "24 ⁄?œ?œ",
+    "price": 9500,
+    "image": "jbs/IMG_0228.jpeg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-016",
+    "name": "„«‰‘Ì “?—œ 500",
+    "description": "24 ⁄?œ?œ",
+    "price": 9500,
+    "image": "jbs/IMG_0229.jpeg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-017",
+    "name": "„“„“ ç·ò? ”—ò?",
+    "description": "48 ⁄?œ?œ",
+    "price": 9000,
+    "image": "jbs/IMG_0230.jpeg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-018",
+    "name": "·«»Ê»Ê",
+    "description": "48 ⁄?œ?œ",
+    "price": 9000,
+    "image": "jbs/IMG_0232.jpeg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-019",
+    "name": "‘«„Ì œÊ«‰Ì",
+    "description": "60 ⁄?œ?œ",
+    "price": 6250,
+    "image": "jbs/photo_6_2026-02-20_22-38-05.jpg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-020",
+    "name": "⁄??ﬁ?Ì ò?»«»",
+    "description": "40 ⁄?œ?œ",
+    "price": 8000,
+    "image": "jbs/photo_7_2026-02-20_22-38-05.jpg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-021",
+    "name": "·Ê”Ì",
+    "description": "45 ⁄?œ?œ",
+    "price": 9500,
+    "image": "jbs/photo_9_2026-02-20_22-38-05.jpg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-022",
+    "name": "„‰ Ê  ? òÌ”",
+    "description": "22 ⁄?œ?œ",
+    "price": 4000,
+    "image": "jbs/photo_11_2026-02-20_22-38-05.jpg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-023",
+    "name": "·Ì“«",
+    "description": "40 ⁄?œ?œ",
+    "price": 7500,
+    "image": "jbs/photo_12_2026-02-20_22-38-05.jpg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-024",
+    "name": "»«‰Ê òÌ”",
+    "description": "22 ⁄?œ?œ",
+    "price": 4000,
+    "image": "jbs/photo_13_2026-02-20_22-38-05.jpg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-025",
+    "name": "„«‰çÌ” „?—",
+    "description": "45 ⁄?œ?œ",
+    "price": 9500,
+    "image": "jbs/photo_14_2026-02-20_22-38-05.jpg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-026",
+    "name": "∆?„—?ò",
+    "description": "48 ⁄?œ?œ",
+    "price": 9000,
+    "image": "jbs/photo_15_2026-02-20_22-38-05.jpg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-027",
+    "name": "⁄??ﬁ?Ì ·Ì„?",
+    "description": "40 ⁄?œ?œ",
+    "price": 8000,
+    "image": "jbs/photo_16_2026-02-20_22-38-05.jpg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-028",
+    "name": "»Ê‘«—Ì œÊ«‰Ì",
+    "description": "40 ⁄?œ?œ",
+    "price": 4500,
+    "image": "jbs/photo_17_2026-02-20_22-38-05.jpg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-029",
+    "name": "„”ò „—Ì‘ò",
+    "description": "40 ⁄?œ?œ",
+    "price": 8000,
+    "image": "jbs/photo_18_2026-02-20_22-38-05.jpg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-030",
+    "name": "„”ò ”—ò?",
+    "description": "40 ⁄?œ?œ",
+    "price": 8000,
+    "image": "jbs/photo_19_2026-02-20_22-38-05.jpg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-031",
+    "name": "„”ò Å?‰Ì—",
+    "description": "40 ⁄?œ?œ",
+    "price": 8000,
+    "image": "jbs/photo_20_2026-02-20_22-38-05.jpg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-032",
+    "name": "„”ò ·Ì„?",
+    "description": "40 ⁄?œ?œ",
+    "price": 8000,
+    "image": "jbs/photo_21_2026-02-20_22-38-05.jpg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-033",
+    "name": "œ«‰?‰ œ«‰?Ì ⁄«Ì·?Ì",
+    "description": "24 ⁄?œ?œ",
+    "price": 8000,
+    "image": "jbs/photo_23_2026-02-20_22-38-05.jpg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-034",
+    "name": "œ«‰? œ«‰? Å— ?ﬁ«?",
+    "description": "40 ⁄?œ?œ",
+    "price": 8000,
+    "image": "jbs/photo_8_2026-02-20_22-38-05.jpg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-035",
+    "name": "œ«‰? œ«‰? ”Ê—",
+    "description": "40 ⁄?œ?œ",
+    "price": 8000,
+    "image": "jbs/photo_22_2026-02-20_22-38-05.jpg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-036",
+    "name": "œ«‰? œ«‰? ‘Ì‰",
+    "description": "40 ⁄?œ?œ",
+    "price": 8000,
+    "image": "jbs/photo_24_2026-02-20_22-38-05.jpg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-037",
+    "name": "œ«‰? œ«‰? “?—œ",
+    "description": "40 ⁄?œ?œ",
+    "price": 8000,
+    "image": "jbs/photo_25_2026-02-20_22-38-05.jpg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-038",
+    "name": " ?— ?·« ”?Ê“",
+    "description": "48 ⁄?œ?œ",
+    "price": 8500,
+    "image": "jbs/photo_26_2026-02-20_22-38-05.jpg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-039",
+    "name": "‰Ì‰Ì ·Ì„?",
+    "description": "36 ⁄?œ?œ",
+    "price": 7000,
+    "image": "jbs/photo_27_2026-02-20_22-38-05.jpg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-040",
+    "name": "‰Ì‰Ì »Ê‘«—",
+    "description": "36 ⁄?œ?œ",
+    "price": 7000,
+    "image": "jbs/photo_28_2026-02-20_22-38-05.jpg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-041",
+    "name": "“??« Ì Å?—œ«Œ",
+    "description": "40 ⁄?œ?œ",
+    "price": 8000,
+    "image": "jbs/photo_30_2026-02-20_22-38-05.jpg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-042",
+    "name": " ?— ?·«Ì ‘Ì‰",
+    "description": "48 ⁄?œ?œ",
+    "price": 9500,
+    "image": "jbs/photo_31_2026-02-20_22-38-05.jpg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-043",
+    "name": "„«‰‘Ì ”ÅÌ",
+    "description": "45 ⁄?œ?œ",
+    "price": 9500,
+    "image": "jbs/photo_32_2026-02-20_22-38-05.jpg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-044",
+    "name": "„«‰‘Ì “?—œ",
+    "description": "45 ⁄?œ?œ",
+    "price": 9500,
+    "image": "jbs/photo_33_2026-02-20_22-38-05.jpg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-045",
+    "name": "„‰ „‰ ?«‰",
+    "description": "40 ⁄?œ?œ",
+    "price": 7500,
+    "image": "jbs/photo_34_2026-02-20_22-38-05.jpg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-046",
+    "name": "„‰ „‰ ÅÌ “«",
+    "description": "40 ⁄?œ?œ",
+    "price": 7500,
+    "image": "jbs/photo_35_2026-02-20_22-38-05.jpg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-047",
+    "name": "»Ê‘«—Ì »«‰ÊÊ",
+    "description": "40 ⁄?œ?œ",
+    "price": 4500,
+    "image": "jbs/photo_36_2026-02-20_22-38-05.jpg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "chips-048",
+    "name": "·«»Ê»Ê œÊ«‰Ì",
+    "description": "48 ⁄?œ?œ",
+    "price": 9000,
+    "image": "jbs/photo_2026-02-20_22-39-15.jpg",
+    "category": "chips",
+    "hidden": false
+  },
+  {
+    "id": "baby-001",
+    "name": " ?„?—‰œÌ Å«ò«‰",
+    "description": "24 ⁄?œ?œ",
+    "price": 1000,
+    "image": "mnalan/photo_1_2026-02-21_00-54-52.jpg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-002",
+    "name": "Å?‘„?ò ”ÅÌ",
+    "description": "24 ⁄?œ?œ",
+    "price": 4750,
+    "image": "mnalan/photo_2_2026-02-21_00-54-52.jpg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-003",
+    "name": "ﬁ«Ê?Ì “??",
+    "description": "24 ⁄?œ?œ",
+    "price": 3500,
+    "image": "mnalan/photo_3_2026-02-21_00-54-52.jpg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-004",
+    "name": "ò?·« »?‰",
+    "description": "24 ⁄?œ?œ",
+    "price": 5000,
+    "image": "mnalan/photo_4_2026-02-21_00-54-52.jpg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-005",
+    "name": " ?„?—‰œÌ ·Ê·",
+    "description": "24 ⁄?œ?œ",
+    "price": 4750,
+    "image": "mnalan/photo_5_2026-02-21_00-54-52.jpg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-006",
+    "name": "‰?” ?·?Ì ∆? ?‰ ﬁ«Ê?",
+    "description": "24 ⁄?œ?œ",
+    "price": 5250,
+    "image": "mnalan/photo_7_2026-02-21_00-54-52.jpg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-007",
+    "name": "‰?” ?·?Ì ∆? ?‰ ”ÅÌ",
+    "description": "24 ⁄?œ?œ",
+    "price": 5000,
+    "image": "mnalan/photo_17_2026-02-21_00-54-52.jpg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-008",
+    "name": " ?„?—‰œÌ  ?Œ ",
+    "description": "48 ⁄?œ?œ",
+    "price": 2500,
+    "image": "mnalan/photo_8_2026-02-21_00-54-52.jpg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-009",
+    "name": "„?”«”?Ì ”ÊÊ— ⁄«œÌ",
+    "description": "45 ⁄?œ?œ",
+    "price": 3000,
+    "image": "mnalan/photo_9_2026-02-21_00-54-52.jpg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-010",
+    "name": "„?”«”?Ì œ?»? ò?·«",
+    "description": "60 ⁄?œ?œ",
+    "price": 5000,
+    "image": "mnalan/photo_11_2026-02-21_00-54-52.jpg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-011",
+    "name": "„?”«”?Ì œ?»? ê?·«”",
+    "description": "60 ⁄?œ?œ",
+    "price": 5000,
+    "image": "mnalan/photo_12_2026-02-21_00-54-52.jpg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-012",
+    "name": "„?”«”?Ì œ?»? ??‘",
+    "description": "60 ⁄?œ?œ",
+    "price": 5000,
+    "image": "mnalan/photo_13_2026-02-21_00-54-52.jpg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-013",
+    "name": "„?”«”?Ì Ê—œ",
+    "description": "100 ⁄?œ?œ",
+    "price": 2000,
+    "image": "mnalan/photo_14_2026-02-21_00-54-52.jpg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-014",
+    "name": "„?”«”?Ì œ?»? ‘« ÊÊ",
+    "description": "60 ⁄?œ?œ",
+    "price": 5000,
+    "image": "mnalan/photo_15_2026-02-21_00-54-52.jpg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-015",
+    "name": "‰Êﬁ?Ì Ê—œ ∆«ÌœÌ‰",
+    "description": "24 ⁄?œ?œ",
+    "price": 5000,
+    "image": "mnalan/photo_16_2026-02-21_00-54-52.jpg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-016",
+    "name": " ?„?—‰œÌ ?Ê?",
+    "description": "24 ⁄?œ?œ",
+    "price": 5000,
+    "image": "mnalan/photo_19_2026-02-21_00-54-52.jpg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-017",
+    "name": "‰Êﬁ?Ì ?«‰«",
+    "description": "12 ⁄?œ?œ",
+    "price": 2250,
+    "image": "mnalan/photo_20_2026-02-21_00-54-52.jpg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-018",
+    "name": "çÊò·? Ì ∆«Ìœ‰",
+    "description": "100 ⁄?œ?œ",
+    "price": 2500,
+    "image": "mnalan/photo_21_2026-02-21_00-54-52.jpg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-019",
+    "name": "»‰?‘ Ì ÌÊ»Ì 100",
+    "description": "100 ⁄?œ?œ",
+    "price": 2500,
+    "image": "mnalan/photo_22_2026-02-21_00-54-52.jpg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-020",
+    "name": " ?„?—‰œÌ ?” ?",
+    "description": "12 ⁄?œ?œ",
+    "price": 2500,
+    "image": "mnalan/photo_24_2026-02-21_00-54-52.jpg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-021",
+    "name": "ﬁ«Ê?Ì “?? 2",
+    "description": "24 ⁄?œ?œ",
+    "price": 3500,
+    "image": "mnalan/photo_25_2026-02-21_00-54-52.jpg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-022",
+    "name": "”?„Ì—Ì—Ì",
+    "description": "24 ⁄?œ?œ",
+    "price": 3500,
+    "image": "mnalan/photo_26_2026-02-21_00-54-52.jpg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-023",
+    "name": "‰Êﬁ?Ì ∆«‰« « ‘Ì—",
+    "description": "24 ⁄?œ?œ",
+    "price": 5000,
+    "image": "mnalan/photo_27_2026-02-21_00-54-52.jpg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-024",
+    "name": "‰?Êﬁ?Ì ∆«‰« « ﬁ«Ê?",
+    "description": "24 ⁄?œ?œ",
+    "price": 5000,
+    "image": "mnalan/photo_28_2026-02-21_00-54-52.jpg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-025",
+    "name": " ?„?—‰œÌ ”—‰Ã",
+    "description": "24 ⁄?œ?œ",
+    "price": 4500,
+    "image": "mnalan/photo_29_2026-02-21_00-54-52.jpg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-026",
+    "name": "‰?” ?·?Ì »” ?",
+    "description": "24 ⁄?œ?œ",
+    "price": 5000,
+    "image": "mnalan/photo_30_2026-02-21_00-54-52.jpg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "family-001",
+    "name": "Ãò·Ì Ì Å?Å?",
+    "description": "8 ⁄?œ?œ",
+    "price": 12000,
+    "image": "aylay/photo_1_2026-02-20_22-54-38.jpg",
+    "category": "family",
+    "hidden": false
+  },
+  {
+    "id": "family-002",
+    "name": "‰ÊﬁÊ·Ì Ê—œ",
+    "description": "20 ⁄?œ?œ",
+    "price": 18000,
+    "image": "aylay/photo_2_2026-02-20_22-54-38.jpg",
+    "category": "family",
+    "hidden": false
+  },
+  {
+    "id": "family-003",
+    "name": "Ê«Ì›?— ⁄«Ì·? ﬁ«Ê?",
+    "description": "12 ⁄?œ?œ",
+    "price": 10000,
+    "image": "aylay/photo_3_2026-02-20_22-54-38.jpg",
+    "category": "family",
+    "hidden": false
+  },
+  {
+    "id": "family-004",
+    "name": "ç?„?ò „?“",
+    "description": "12 ⁄?œ?œ",
+    "price": 10000,
+    "image": "aylay/photo_4_2026-02-20_22-54-38.jpg",
+    "category": "family",
+    "hidden": false
+  },
+  {
+    "id": "family-005",
+    "name": "ç?„?òÌ ﬁ«Ê?",
+    "description": "12 ⁄?œ?œ",
+    "price": 10000,
+    "image": "aylay/photo_16_2026-02-20_22-54-38.jpg",
+    "category": "family",
+    "hidden": false
+  },
+  {
+    "id": "family-006",
+    "name": "ç?„?òÌ êÊ?“",
+    "description": "12 ⁄?œ?œ",
+    "price": 10000,
+    "image": "aylay/photo_17_2026-02-20_22-54-38.jpg",
+    "category": "family",
+    "hidden": false
+  },
+  {
+    "id": "family-007",
+    "name": "‰Êﬁ?Ì „Ì‰?",
+    "description": "12 ⁄?œ?œ",
+    "price": 10000,
+    "image": "aylay/photo_7_2026-02-20_22-54-38.jpg",
+    "category": "family",
+    "hidden": false
+  },
+  {
+    "id": "family-008",
+    "name": "„«œ?— ·«ò?‘?",
+    "description": "18 ⁄?œ?œ",
+    "price": 15000,
+    "image": "aylay/photo_9_2026-02-20_22-54-38.jpg",
+    "category": "family",
+    "hidden": false
+  },
+  {
+    "id": "family-009",
+    "name": "∆Ì”Å«‰Ì ⁄«œÌ",
+    "description": "12 ⁄?œ?œ",
+    "price": 10000,
+    "image": "aylay/photo_10_2026-02-20_22-54-38.jpg",
+    "category": "family",
+    "hidden": false
+  },
+  {
+    "id": "family-010",
+    "name": "›Ì‰ê?—Ì ⁄«Ì·?",
+    "description": "12 ⁄?œ?œ",
+    "price": 10000,
+    "image": "aylay/photo_11_2026-02-20_22-54-38.jpg",
+    "category": "family",
+    "hidden": false
+  },
+  {
+    "id": "family-011",
+    "name": "»”ﬂÌ Ì ç«Ì ”?Ê“",
+    "description": "12 ⁄?œ?œ",
+    "price": 8500,
+    "image": "aylay/photo_12_2026-02-20_22-54-38.jpg",
+    "category": "family",
+    "hidden": false
+  },
+  {
+    "id": "family-012",
+    "name": "ÅÌ Ì ÅÊ— ⁄«Ì·?",
+    "description": "12 ⁄?œ?œ",
+    "price": 10000,
+    "image": "aylay/photo_8_2026-02-20_22-54-38.jpg",
+    "category": "family",
+    "hidden": false
+  },
+  {
+    "id": "family-013",
+    "name": "ÅÌ Ì ÅÊ—Ì ﬁ«Ê?",
+    "description": "12 ⁄?œ?œ",
+    "price": 10000,
+    "image": "aylay/photo_13_2026-02-20_22-54-38.jpg",
+    "category": "family",
+    "hidden": false
+  },
+  {
+    "id": "family-014",
+    "name": "ÅÌ Ì ÅÊ— ”«œ?",
+    "description": "12 ⁄?œ?œ",
+    "price": 10000,
+    "image": "aylay/photo_14_2026-02-20_22-54-38.jpg",
+    "category": "family",
+    "hidden": false
+  },
+  {
+    "id": "family-015",
+    "name": "∆«‰« «Ì »???„",
+    "description": "8 ⁄?œ?œ",
+    "price": 11500,
+    "image": "aylay/photo_18_2026-02-20_22-54-38.jpg",
+    "category": "family",
+    "hidden": false
+  },
+  {
+    "id": "drink-1772043001326",
+    "name": "“„ “„ œ?»? ??‘",
+    "description": "6⁄œœ",
+    "price": 5500,
+    "image": "sardy/IMG_6341.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-1772043505832",
+    "name": "Ì?Ê„Ì Å— ?ﬁ«?Ì",
+    "description": "6 ⁄?œ?œ",
+    "price": 3000,
+    "image": "sardy/IMG_6342.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-1772053943960",
+    "name": "‘Ì— ﬁ«Ê? œ?»?",
+    "description": "24 ⁄?œ?œ",
+    "price": 4500,
+    "image": "sardy/IMG_6374.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-1772053977838",
+    "name": "‘Ì— ‘·ò œ?»?",
+    "description": "24 ⁄?œ?œ",
+    "price": 4500,
+    "image": "sardy/IMG_6373.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "drink-1772054011207",
+    "name": "‘Ì— „?“ œ?»?",
+    "description": "24 ⁄?œ?œ",
+    "price": 4500,
+    "image": "sardy/IMG_6372.jpeg",
+    "category": "drink",
+    "hidden": false
+  },
+  {
+    "id": "cake-033",
+    "name": "„Ìò” ?Ê?Ì Å— ?ﬁ«?",
+    "description": "12 ⁄?œ?œ",
+    "price": 2500,
+    "image": "kek/IMG_6343.jpeg",
+    "category": "cake",
+    "hidden": false
+  },
+  {
+    "id": "cake-034",
+    "name": "„Ìò” ?Ê?Ì „?—",
+    "description": "12 ⁄?œ?œ",
+    "price": 2500,
+    "image": "kek/IMG_6344.jpeg",
+    "category": "cake",
+    "hidden": false
+  },
+  {
+    "id": "cake-035",
+    "name": "„Ìò” ?Ê? ﬁ«Ê?",
+    "description": "12 ⁄?œ?œ",
+    "price": 2500,
+    "image": "kek/IMG_6345.jpeg",
+    "category": "cake",
+    "hidden": false
+  },
+  {
+    "id": "cake-036",
+    "name": "„Ìò” ?Ê? ∆?‰?‰«”",
+    "description": "12 ⁄?œ?œ",
+    "price": 2500,
+    "image": "kek/IMG_6347.jpeg",
+    "category": "cake",
+    "hidden": false
+  },
+  {
+    "id": "cake-037",
+    "name": "ò?ò ??òÌ",
+    "description": "24 ⁄?œ?œ",
+    "price": 4500,
+    "image": "kek/IMG_6353.jpeg",
+    "category": "cake",
+    "hidden": false
+  },
+  {
+    "id": "cake-038",
+    "name": "ò?òÌ œÊ»?Ì ‘⁄—Ì",
+    "description": "24 ⁄?œ?œ",
+    "price": 5000,
+    "image": "kek/IMG_6357.jpeg",
+    "category": "cake",
+    "hidden": false
+  },
+  {
+    "id": "cake-039",
+    "name": "‰?“?—Ì ò‘„Ì‘",
+    "description": "24 ⁄?œ?œ",
+    "price": 5250,
+    "image": "kek/IMG_6388.jpeg",
+    "category": "cake",
+    "hidden": false
+  },
+  {
+    "id": "cake-040",
+    "name": "‰?“?—Ì »—Ìò ›«” ",
+    "description": "24 ⁄?œ?œ",
+    "price": 5250,
+    "image": "kek/IMG_6389.jpeg",
+    "category": "cake",
+    "hidden": false
+  },
+  {
+    "id": "cake-041",
+    "name": "»?»? ?Ì ”Ê—",
+    "description": "24 ⁄?œ?œ",
+    "price": 5000,
+    "image": "kek/IMG_6391.jpeg",
+    "category": "cake",
+    "hidden": false
+  },
+  {
+    "id": "cake-042",
+    "name": "òÌò œÊ»?Ì",
+    "description": "24 ⁄?œ?œ",
+    "price": 5000,
+    "image": "kek/IMG_6392.jpeg",
+    "category": "cake",
+    "hidden": false
+  },
+  {
+    "id": "cake-044",
+    "name": "‰?“?—Ì Œ— ‘·ò",
+    "description": "24 ⁄?œ?œ",
+    "price": 5250,
+    "image": "kek/IMG_6395.jpeg",
+    "category": "cake",
+    "hidden": false
+  },
+  {
+    "id": "cake-045",
+    "name": "‰?“?—Ì Œ— ﬁ«Ê?",
+    "description": "24 ⁄?œ?œ",
+    "price": 5250,
+    "image": "kek/IMG_6396.jpeg",
+    "category": "cake",
+    "hidden": false
+  },
+  {
+    "id": "cake-046",
+    "name": "‰?“?—Ì Œ— ‘Ì—",
+    "description": "24 ⁄?œ?œ",
+    "price": 5250,
+    "image": "kek/IMG_6397.jpeg",
+    "category": "cake",
+    "hidden": false
+  },
+  {
+    "id": "cake-047",
+    "name": "Å?Å òÌò ·Ì„?",
+    "description": "24 ⁄?œ?œ",
+    "price": 5250,
+    "image": "kek/IMG_6398.jpeg",
+    "category": "cake",
+    "hidden": false
+  },
+  {
+    "id": "cake-048",
+    "name": "Å?Å òÌò „?“",
+    "description": "24 ⁄?œ?œ",
+    "price": 5250,
+    "image": "kek/IMG_6399.jpeg",
+    "category": "cake",
+    "hidden": false
+  },
+  {
+    "id": "gaz-034",
+    "name": "∆?‰ê?”",
+    "description": "24 ⁄?œ?œ",
+    "price": 3500,
+    "image": "gaz/IMG_6349.jpeg",
+    "category": "gaz",
+    "hidden": false
+  },
+  {
+    "id": "gaz-035",
+    "name": "ÃÌ‰",
+    "description": "24 ⁄?œ?œ",
+    "price": 5250,
+    "image": "gaz/IMG_6355.jpeg",
+    "category": "gaz",
+    "hidden": false
+  },
+  {
+    "id": "gaz-036",
+    "name": "∆?‰œ?„Ì",
+    "description": "40 ⁄?œ?œ",
+    "price": 9250,
+    "image": "gaz/IMG_6356.jpeg",
+    "category": "gaz",
+    "hidden": false
+  },
+  {
+    "id": "gaz-037",
+    "name": "„” ?— »«Ì  ??‘",
+    "description": "24 ⁄?œ?œ",
+    "price": 5250,
+    "image": "gaz/IMG_6364.jpeg",
+    "category": "gaz",
+    "hidden": false
+  },
+  {
+    "id": "gaz-038",
+    "name": "„” ?—»«Ì  ‘Ì—",
+    "description": "24 ⁄?œ?œ",
+    "price": 5250,
+    "image": "gaz/IMG_6366.jpeg",
+    "category": "gaz",
+    "hidden": false
+  },
+  {
+    "id": "gaz-039",
+    "name": "»”òÌ Ì  Ê‰”",
+    "description": "40 ⁄?œ?œ",
+    "price": 8000,
+    "image": "gaz/IMG_6385.jpeg",
+    "category": "gaz",
+    "hidden": false
+  },
+  {
+    "id": "gaz-040",
+    "name": "„«œ—",
+    "description": "32 ⁄?œ?œ",
+    "price": 6250,
+    "image": "gaz/IMG_6386.jpeg",
+    "category": "gaz",
+    "hidden": false
+  },
+  {
+    "id": "gaz-041",
+    "name": "òÊ·Ìç?Ì ›?·",
+    "description": "24 ⁄?œ?œ",
+    "price": 5250,
+    "image": "gaz/IMG_6387.jpeg",
+    "category": "gaz",
+    "hidden": false
+  },
+  {
+    "id": "gaz-042",
+    "name": "»Ê—„?Ì Ê«Ì›?—",
+    "description": "24 ⁄?œ?œ",
+    "price": 5000,
+    "image": "gaz/IMG_6390.jpeg",
+    "category": "gaz",
+    "hidden": false
+  },
+  {
+    "id": "gaz-043",
+    "name": "«·ÌÊ?„ ŒÊ—„«",
+    "description": "24 ⁄?œ?œ",
+    "price": 5000,
+    "image": "gaz/IMG_6394.jpeg",
+    "category": "gaz",
+    "hidden": false
+  },
+  {
+    "id": "gaz-044",
+    "name": "Ê«Ì› ∆?Å ‘Ì‰",
+    "description": "24 ⁄?œ?œ",
+    "price": 5250,
+    "image": "gaz/IMG_6400.jpeg",
+    "category": "gaz",
+    "hidden": false
+  },
+  {
+    "id": "gaz-045",
+    "name": "ÊﬁÌ› ∆?Å ﬁ«Ê?",
+    "description": "24 ⁄?œ?œ",
+    "price": 5250,
+    "image": "gaz/IMG_6401.jpeg",
+    "category": "gaz",
+    "hidden": false
+  },
+  {
+    "id": "gaz-046",
+    "name": "Ê«Ì› ∆?Å »‰œÊﬁ",
+    "description": "24 ⁄?œ?œ",
+    "price": 5250,
+    "image": "gaz/IMG_6402.jpeg",
+    "category": "gaz",
+    "hidden": false
+  },
+  {
+    "id": "gaz-047",
+    "name": "Ê«Ì› ∆?Å ‘Ì—",
+    "description": "24 ⁄?œ?œ",
+    "price": 5250,
+    "image": "gaz/IMG_6403.jpeg",
+    "category": "gaz",
+    "hidden": false
+  },
+  {
+    "id": "gaz-048",
+    "name": "Ê«Ì› ∆?Å ‘·ò",
+    "description": "24 ⁄?œ?œ",
+    "price": 5250,
+    "image": "gaz/IMG_6404.jpeg",
+    "category": "gaz",
+    "hidden": false
+  },
+  {
+    "id": "gaz-049",
+    "name": "Å«Å· ﬁ«Ê?",
+    "description": "24 ⁄?œ?œ",
+    "price": 5250,
+    "image": "gaz/IMG_6423.jpeg",
+    "category": "gaz",
+    "hidden": false
+  },
+  {
+    "id": "gaz-050",
+    "name": "»”òÌ Ì ∆?—Ì? ⁄«œÌ",
+    "description": "24 ⁄?œ?œ",
+    "price": 5000,
+    "image": "gaz/IMG_6426.jpeg",
+    "category": "gaz",
+    "hidden": false
+  },
+  {
+    "id": "gaz-051",
+    "name": "»—«Ê” «—Ì “?—œ",
+    "description": "24 ⁄?œ?œ",
+    "price": 5000,
+    "image": "gaz/IMG_6427.jpeg",
+    "category": "gaz",
+    "hidden": false
+  },
+  {
+    "id": "gaz-052",
+    "name": "›Ê·  ?Å ‘Ì‰",
+    "description": "24 ⁄?œ?œ",
+    "price": 5000,
+    "image": "gaz/IMG_6431.jpeg",
+    "category": "gaz",
+    "hidden": false
+  },
+  {
+    "id": "gaz-053",
+    "name": "›Ê·  ?Å ‘Ì‰ ﬁ«Ê?",
+    "description": "24 ⁄?œ?œ",
+    "price": 5000,
+    "image": "gaz/IMG_6432.jpeg",
+    "category": "gaz",
+    "hidden": false
+  },
+  {
+    "id": "gaz-054",
+    "name": "›Ê·  ?Å Å?„?Ì",
+    "description": "24 ⁄?œ?œ",
+    "price": 5000,
+    "image": "gaz/IMG_6433.jpeg",
+    "category": "gaz",
+    "hidden": false
+  },
+  {
+    "id": "gaz-055",
+    "name": "›Ê·  ?Å ”Ê—",
+    "description": "24 ⁄?œ?œ",
+    "price": 5000,
+    "image": "gaz/IMG_6434.jpeg",
+    "category": "gaz",
+    "hidden": false
+  },
+  {
+    "id": "gaz-056",
+    "name": "Ê«Ì›?—  Ê—«‰ ﬁ«Ê?",
+    "description": "24 ⁄?œ?œ",
+    "price": 5250,
+    "image": "gaz/IMG_6435.jpeg",
+    "category": "gaz",
+    "hidden": false
+  },
+  {
+    "id": "gaz-057",
+    "name": "Ê«Ì›?—  Ê—«‰ »‰œÊﬁ",
+    "description": "24 ⁄?œ?œ",
+    "price": 5250,
+    "image": "gaz/IMG_6436.jpeg",
+    "category": "gaz",
+    "hidden": false
+  },
+  {
+    "id": "gaz-058",
+    "name": "Ê«Ì›?—  Ê—«‰ ·Ì„?",
+    "description": "24 ⁄?œ?œ",
+    "price": 5250,
+    "image": "gaz/IMG_6438.jpeg",
+    "category": "gaz",
+    "hidden": false
+  },
+  {
+    "id": "gaz-059",
+    "name": "Ê«Ì›?—   Ê—«‰ ‘·ò",
+    "description": "24 ⁄?œ?œ",
+    "price": 5250,
+    "image": "gaz/IMG_6439.jpeg",
+    "category": "gaz",
+    "hidden": false
+  },
+  {
+    "id": "gaz-060",
+    "name": "Ê«Ì›?—  Ê—«‰ ‘Ì—",
+    "description": "24 ⁄?œ?œ",
+    "price": 5250,
+    "image": "gaz/IMG_6440.jpeg",
+    "category": "gaz",
+    "hidden": false
+  },
+  {
+    "id": "gaz-061",
+    "name": "Ê«Ì›?— ∆?“—« ·Ì„?",
+    "description": "24 ⁄?œ?œ",
+    "price": 5000,
+    "image": "gaz/IMG_6441.jpeg",
+    "category": "gaz",
+    "hidden": false
+  },
+  {
+    "id": "gaz-062",
+    "name": "Ê«Ì›?— ∆?“—« ‘·ò",
+    "description": "24 ⁄?œ?œ",
+    "price": 5000,
+    "image": "gaz/IMG_6442.jpeg",
+    "category": "gaz",
+    "hidden": false
+  },
+  {
+    "id": "gaz-063",
+    "name": "Ê«Ì›?— ∆?“—« êÊÌ“ÂÌ‰œ",
+    "description": "24 ⁄?œ?œ",
+    "price": 5000,
+    "image": "gaz/IMG_6443.jpeg",
+    "category": "gaz",
+    "hidden": false
+  },
+  {
+    "id": "gaz-064",
+    "name": "Ê«Ì›?— ∆?“—« »‰œÊﬁ",
+    "description": "24 ⁄?œ?œ",
+    "price": 5000,
+    "image": "gaz/IMG_6444.jpeg",
+    "category": "gaz",
+    "hidden": false
+  },
+  {
+    "id": "gaz-065",
+    "name": "Ê«Ì›?— ∆?“—« ﬁ«Ê?",
+    "description": "24 ⁄?œ?œ",
+    "price": 5000,
+    "image": "gaz/IMG_6445.jpeg",
+    "category": "gaz",
+    "hidden": false
+  },
+  {
+    "id": "gaz-066",
+    "name": "Ê«Ì›?— ∆?“—« „? ?",
+    "description": "24 ⁄?œ?œ",
+    "price": 5000,
+    "image": "gaz/IMG_6446.jpeg",
+    "category": "gaz",
+    "hidden": false
+  },
+  {
+    "id": "gaz-067",
+    "name": "Ê«Ì›?— ∆?“—« êÌ·«”",
+    "description": "24 ⁄?œ?œ",
+    "price": 5000,
+    "image": "gaz/IMG_6447.jpeg",
+    "category": "gaz",
+    "hidden": false
+  },
+  {
+    "id": "gaz-068",
+    "name": "„” ?— »«Ì  ﬁ«Ê?",
+    "description": "24 ⁄?œ?œ",
+    "price": 5250,
+    "image": "gaz/IMG_6471.jpeg",
+    "category": "gaz",
+    "hidden": false
+  },
+  {
+    "id": "gaz-069",
+    "name": "„” ?— »«Ì  »‰œÊﬁ “?—œ",
+    "description": "24 ⁄?œ?œ",
+    "price": 5250,
+    "image": "gaz/IMG_6472.jpeg",
+    "category": "gaz",
+    "hidden": false
+  },
+  {
+    "id": "gaz-070",
+    "name": "„” ?— »«Ì  êÊÌ“ÂÌ‰œ",
+    "description": "24 ⁄?œ?œ",
+    "price": 5250,
+    "image": "gaz/IMG_6473.jpeg",
+    "category": "gaz",
+    "hidden": false
+  },
+  {
+    "id": "gaz-071",
+    "name": "„” ?— »«Ì  »‰œÊﬁ",
+    "description": "24 ⁄?œ?œ",
+    "price": 5250,
+    "image": "gaz/IMG_6474.jpeg",
+    "category": "gaz",
+    "hidden": false
+  },
+  {
+    "id": "gaz-072",
+    "name": "„” ?— »«Ì  ›” ?ﬁ",
+    "description": "24 ⁄?œ?œ",
+    "price": 5250,
+    "image": "gaz/IMG_6475.jpeg",
+    "category": "gaz",
+    "hidden": false
+  },
+  {
+    "id": "family-016",
+    "name": "‰?” ?·?Ì Ì?ò òÌ·?Ì",
+    "description": "12 ⁄?œ?œ",
+    "price": 47000,
+    "image": "aylay/IMG_6375.jpeg",
+    "category": "family",
+    "hidden": false
+  },
+  {
+    "id": "family-017",
+    "name": "·«„Ì«‰ ⁄«Ì·? „?“",
+    "description": "12 ⁄?œ?œ",
+    "price": 9000,
+    "image": "aylay/IMG_6376.jpeg",
+    "category": "family",
+    "hidden": false
+  },
+  {
+    "id": "family-018",
+    "name": "·«„Ì«‰ ⁄«Ì·? Å— ?ﬁ«·",
+    "description": "12 ⁄?œ?œ",
+    "price": 9000,
+    "image": "aylay/IMG_6377.jpeg",
+    "category": "family",
+    "hidden": false
+  },
+  {
+    "id": "family-019",
+    "name": "·«„Ì«‰ ⁄«Ì·? ‘·ò",
+    "description": "12 ⁄?œ?œ",
+    "price": 9000,
+    "image": "aylay/IMG_6378.jpeg",
+    "category": "family",
+    "hidden": false
+  },
+  {
+    "id": "family-020",
+    "name": "Ê«Ì›?— ⁄«Ì·? Å— ?ﬁ«?",
+    "description": "12 ⁄?œ?œ",
+    "price": 10000,
+    "image": "aylay/IMG_6379.jpeg",
+    "category": "family",
+    "hidden": false
+  },
+  {
+    "id": "family-021",
+    "name": "Ê«Ì›?— ⁄«Ì·? „?“",
+    "description": "12 ⁄?œ?œ",
+    "price": 10000,
+    "image": "aylay/IMG_6380.jpeg",
+    "category": "family",
+    "hidden": false
+  },
+  {
+    "id": "family-022",
+    "name": "Ê«Ì›?— ⁄«Ì·? ‘·ò",
+    "description": "12 ⁄?œ?œ",
+    "price": 10000,
+    "image": "aylay/IMG_6381.jpeg",
+    "category": "family",
+    "hidden": false
+  },
+  {
+    "id": "family-023",
+    "name": "Ê«Ì›?— ⁄«Ì·? êÊÌ“ÂÌ‰œ",
+    "description": "12 ⁄?œ?œ",
+    "price": 10000,
+    "image": "aylay/IMG_6382.jpeg",
+    "category": "family",
+    "hidden": false
+  },
+  {
+    "id": "family-024",
+    "name": "Ê«Ì›?— ⁄«Ì·? „? ?",
+    "description": "12⁄?œ?œ",
+    "price": 10000,
+    "image": "aylay/IMG_6383.jpeg",
+    "category": "family",
+    "hidden": false
+  },
+  {
+    "id": "family-025",
+    "name": "∆«‰« « òÌ”",
+    "description": "6⁄?œ?œ",
+    "price": 12500,
+    "image": "aylay/IMG_6384.jpeg",
+    "category": "family",
+    "hidden": false
+  },
+  {
+    "id": "baby-027",
+    "name": "„? ?Ì ﬁ«Ê?",
+    "description": "24 ⁄?œ?œ",
+    "price": 5000,
+    "image": "mnalan/IMG_6346.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-028",
+    "name": "ò?›«Ê",
+    "description": "24 ⁄?œ?œ",
+    "price": 4500,
+    "image": "mnalan/IMG_6348.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-029",
+    "name": "„«—‘„Ì·? Ê—Ã",
+    "description": "40 ⁄?œ?œ",
+    "price": 8000,
+    "image": "mnalan/IMG_6350.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-030",
+    "name": "·Ì‰ò?—",
+    "description": "24 ⁄?œ?œ",
+    "price": 5250,
+    "image": "mnalan/IMG_6351.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-031",
+    "name": "?«„ Ì‰",
+    "description": "24 ⁄?œ?œ",
+    "price": 3000,
+    "image": "mnalan/IMG_6352.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-032",
+    "name": "Ã?·Ì „? —Ì ·Ê·?",
+    "description": "24 ⁄?œ?œ",
+    "price": 5000,
+    "image": "mnalan/IMG_6354.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-033",
+    "name": "ﬁ«Ê? „??Â?„",
+    "description": "24 ⁄?œ?œ",
+    "price": 5000,
+    "image": "mnalan/IMG_6358.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-034",
+    "name": "‰?” ?·?∆ ç?òÊ‘",
+    "description": "24 ⁄?œ?œ",
+    "price": 5250,
+    "image": "mnalan/IMG_6359.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-035",
+    "name": " ?Å",
+    "description": "60 ⁄?œ?œ",
+    "price": 8000,
+    "image": "mnalan/IMG_6360.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-036",
+    "name": "‰«Êò? òÊ·?ò? Å«‘«",
+    "description": "24 ⁄?œ?œ",
+    "price": 5250,
+    "image": "mnalan/IMG_6361.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-037",
+    "name": "‘?—»? Ì ∆Ì «·Ì",
+    "description": "24 ⁄?œ?œ",
+    "price": 5250,
+    "image": "mnalan/IMG_6362.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-038",
+    "name": "»” ? Å«‘«",
+    "description": "24 ⁄?œ?œ",
+    "price": 5250,
+    "image": "mnalan/IMG_6363.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-039",
+    "name": "∆«„«”Ì",
+    "description": "24 ⁄?œ?œ",
+    "price": 5250,
+    "image": "mnalan/IMG_6365.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-040",
+    "name": "ò?ò?”Ì „Ìò”Ì",
+    "description": "24 ⁄?œ?œ",
+    "price": 5000,
+    "image": "mnalan/IMG_6367.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-041",
+    "name": "Ã?·Ì Â?„»?—ê—",
+    "description": "20⁄?œ?œ",
+    "price": 4000,
+    "image": "mnalan/IMG_6368.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-042",
+    "name": "X.5",
+    "description": "24 ⁄?œ?œ",
+    "price": 5250,
+    "image": "mnalan/IMG_6369.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-043",
+    "name": "‰«Êò? Å«‘",
+    "description": "24 ⁄?œ?œ",
+    "price": 5250,
+    "image": "mnalan/IMG_6370.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-044",
+    "name": "Ã·ò?Ì ”?·«—",
+    "description": "24 ⁄?œ?œ",
+    "price": 4500,
+    "image": "mnalan/IMG_6371.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-045",
+    "name": "òÊ‰ÃÌ ”ÅÌ",
+    "description": "40 ⁄?œ?œ",
+    "price": 7000,
+    "image": "mnalan/IMG_6405.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-046",
+    "name": "„«—‘„Ì·? òÌ” ·Ê·?",
+    "description": "24 ⁄?œ?œ",
+    "price": 5250,
+    "image": "mnalan/IMG_6406.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-047",
+    "name": "Ã?·Ì „Ìò” ?Ê?",
+    "description": "24 ⁄?œ?œ",
+    "price": 5000,
+    "image": "mnalan/IMG_6407.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-048",
+    "name": "Ã?·Ì ò?»«»",
+    "description": "48 ⁄?œ?œ",
+    "price": 5000,
+    "image": "mnalan/IMG_6408.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-049",
+    "name": "òÊ‰ÃÌ ??‘",
+    "description": "40⁄?œ?œ",
+    "price": 7000,
+    "image": "mnalan/IMG_6409.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-050",
+    "name": "Ã?·Ì Â?„»?—ê—",
+    "description": "24 ⁄?œ?œ",
+    "price": 5000,
+    "image": "mnalan/IMG_6410.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-051",
+    "name": "Ã?·∆ ﬁ?·?„",
+    "description": "20 ⁄?œ?œ",
+    "price": 4250,
+    "image": "mnalan/IMG_6411.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-052",
+    "name": "Ã?·Ì ÅÌ“« ﬁ Ê",
+    "description": "24 ⁄?œ?œ",
+    "price": 5000,
+    "image": "mnalan/IMG_6412.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-053",
+    "name": "Ã?·Ì ?” ? ‘?Ì»«",
+    "description": "24 ⁄?œ?œ",
+    "price": 4500,
+    "image": "mnalan/IMG_6413.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-054",
+    "name": "Ã?·Ì ?” ?",
+    "description": "24 ⁄?œ?œ",
+    "price": 5000,
+    "image": "mnalan/IMG_6414.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-055",
+    "name": "„«—‘„Ì·? ?” ?",
+    "description": "12 ⁄?œ?œ",
+    "price": 2500,
+    "image": "mnalan/IMG_6415.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-056",
+    "name": "‘?—»? Ì Ã?·Ì òÌ”",
+    "description": "24 ⁄?œ?œ",
+    "price": 5000,
+    "image": "mnalan/IMG_6416.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-057",
+    "name": "??”„",
+    "description": "60 ⁄?œ?œ",
+    "price": 9000,
+    "image": "mnalan/IMG_6417.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-058",
+    "name": "Ê?‰ Õ?»",
+    "description": "24 ⁄?œ?œ",
+    "price": 5000,
+    "image": "mnalan/IMG_6418.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-059",
+    "name": "»Ê»Ì ·«òÌ‘?",
+    "description": "48 ⁄?œ?œ",
+    "price": 2000,
+    "image": "mnalan/IMG_6419.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-060",
+    "name": "Ã?·Ì ÅÌ “«",
+    "description": "24 ⁄?œ?œ",
+    "price": 5000,
+    "image": "mnalan/IMG_6420.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-061",
+    "name": "Ã?·∆ òÊ»—«",
+    "description": "24 ⁄?œ?œ",
+    "price": 5000,
+    "image": "mnalan/IMG_6421.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-062",
+    "name": "Ã?·Ì ò—„ ò?ò Ì·",
+    "description": "24 ⁄?œ?œ",
+    "price": 0,
+    "image": "mnalan/IMG_6422.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-063",
+    "name": "Ã?·Ì ò—„ »·Ê»Ì—Ì",
+    "description": "24 ⁄?œ?œ",
+    "price": 5000,
+    "image": "mnalan/IMG_6424.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-064",
+    "name": "Ã?·Ì “„«‰",
+    "description": "24 ⁄?œ?œ",
+    "price": 5000,
+    "image": "mnalan/IMG_6425.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-065",
+    "name": "‰ÊﬁÊ·Ì òÌ”  Ìò?·?",
+    "description": "24 ⁄?œ?œ",
+    "price": 5000,
+    "image": "mnalan/IMG_6428.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-066",
+    "name": "‰ÊﬁÊ·Ì òÌ” ﬁ«Ê?",
+    "description": "24 ⁄?œ?œ",
+    "price": 5000,
+    "image": "mnalan/IMG_6429.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-067",
+    "name": "‰ÊﬁÊ·Ì òÌ” ‘Ì—",
+    "description": "24 ⁄?œ?œ",
+    "price": 5000,
+    "image": "mnalan/IMG_6430.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-068",
+    "name": "” ÌòÌ »·Ê»Ì—Ì",
+    "description": "24 ⁄?œ?œ",
+    "price": 4000,
+    "image": "mnalan/IMG_6448.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-069",
+    "name": "” ÌòÌ  Ìò?·?",
+    "description": "24 ⁄?œ?œ",
+    "price": 4000,
+    "image": "mnalan/IMG_6449.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-070",
+    "name": "” ÌòÌ ò?·«",
+    "description": "24 ⁄?œ?œ",
+    "price": 4000,
+    "image": "mnalan/IMG_6450.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-071",
+    "name": "” ÌòÌ ·Ì„?",
+    "description": "24 ⁄?œ?œ",
+    "price": 4000,
+    "image": "mnalan/IMG_6451.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-072",
+    "name": "” ÌòÌ ﬁ?“Ê«‰",
+    "description": "24 ⁄?œ?œ",
+    "price": 4000,
+    "image": "mnalan/IMG_6452.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-073",
+    "name": "” ÌòÌ ‰?⁄‰«",
+    "description": "24 ⁄?œ?œ",
+    "price": 4000,
+    "image": "mnalan/IMG_6453.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-074",
+    "name": "” ÌòÌ ‘Ê Ì",
+    "description": "24 ⁄?œ?œ",
+    "price": 4000,
+    "image": "mnalan/IMG_6454.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-075",
+    "name": "?Ì·«ò”Ì ‘Ê Ì",
+    "description": "24 ⁄?œ?œ",
+    "price": 4000,
+    "image": "mnalan/IMG_6455.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-076",
+    "name": "” ÌòÌ ‘·ò",
+    "description": "24 ⁄?œ?œ",
+    "price": 4000,
+    "image": "mnalan/IMG_6456.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-077",
+    "name": "?Ì·«ò” ‰?⁄‰« ‘Ì‰",
+    "description": "24 ⁄?œ?œ",
+    "price": 4000,
+    "image": "mnalan/IMG_6457.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-078",
+    "name": "?Ì·«ò”Ì ‘·ò",
+    "description": "24 ⁄?œ?œ",
+    "price": 4000,
+    "image": "mnalan/IMG_6458.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-079",
+    "name": "” ÌòÌ Å— ?ﬁ«?",
+    "description": "24 ⁄?œ?œ",
+    "price": 4000,
+    "image": "mnalan/IMG_6459.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-080",
+    "name": "” ÌòÌ »Ê»Ì",
+    "description": "24 ⁄?œ?œ",
+    "price": 4000,
+    "image": "mnalan/IMG_6460.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-081",
+    "name": "” ÌòÌ œ«—çÌ‰Ì",
+    "description": "24 ⁄?œ?œ",
+    "price": 4000,
+    "image": "mnalan/IMG_6461.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-082",
+    "name": "”?„Ì—Ì ﬁ Ê",
+    "description": "20 ⁄?œ?œ",
+    "price": 4250,
+    "image": "mnalan/IMG_6462.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-083",
+    "name": "” ÌòÌ Õ?·",
+    "description": "24 ⁄?œ?œ",
+    "price": 4000,
+    "image": "mnalan/IMG_6463.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-084",
+    "name": "” ÌòÌ  «Ìê?—",
+    "description": "24 ⁄?œ?œ",
+    "price": 4000,
+    "image": "mnalan/IMG_6464.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-085",
+    "name": "»‰?‘ Ì »?Ì‰ 4€—«„",
+    "description": "100 ⁄?œ?œ",
+    "price": 16000,
+    "image": "mnalan/IMG_6465.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-086",
+    "name": "»‰Ì‘ Ì ”Ì‰Ì ‘Ê Ì",
+    "description": "100 ⁄?œ?œ",
+    "price": 3000,
+    "image": "mnalan/IMG_6466.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-087",
+    "name": "»‰?‘ Ì ”Ì‰Ì »·Ê»Ì—Ì",
+    "description": "100 ⁄?œ?œ",
+    "price": 3000,
+    "image": "mnalan/IMG_6467.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-088",
+    "name": "»‰?‘ Ì ”Ì‰Ì ò?·«",
+    "description": "100 ⁄?œ?œ",
+    "price": 3500,
+    "image": "mnalan/IMG_6468.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-089",
+    "name": "”?„Ì—Ì ·Ê· Å«ò? ",
+    "description": "24 ⁄?œ?œ",
+    "price": 5250,
+    "image": "mnalan/IMG_6469.jpeg",
+    "category": "baby",
+    "hidden": false
+  },
+  {
+    "id": "baby-090",
+    "name": "·Ì—?Ì »‰Ì‘ ",
+    "description": "100 ⁄?œ?œ",
+    "price": 3500,
+    "image": "mnalan/IMG_6470.jpeg",
+    "category": "baby",
+    "hidden": false
+  }
+]
