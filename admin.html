@@ -539,13 +539,14 @@
   <script src="auth.js?v=2026041002"></script>
   <script>
     // SECURITY NOTE:
-    // This panel remains frontend-only. Authentication is stored as a local hash and GitHub writes use a session-scoped token.
+    // This panel remains frontend-only. Authentication is stored as a local hash and GitHub writes use a browser-stored token.
     // The small hardening below only reduces obvious exposure; it does not replace a backend.
     const SESSION_KEY = 'adminSession_v2';
     const ADMIN_USER_KEY = 'adminUser';
     const ADMIN_HASH_KEY = 'adminHash';
     const GH_CONFIG_KEY = 'githubConfig_v1';
     const GH_TOKEN_SESSION_KEY = 'githubToken_session_v1';
+    const GH_TOKEN_STORAGE_KEY = 'githubToken_v1';
 
     const catInfo = {
       cake: { name: 'کێک', icon: 'fa-cake-candles', color: '#f97316' },
@@ -761,16 +762,45 @@
       return cleanToken;
     }
 
-    // Persist only repo identity long-term; the write token stays limited to the current browser session.
+    function getStoredGhToken() {
+      try {
+        return localStorage.getItem(GH_TOKEN_STORAGE_KEY) || '';
+      } catch (error) {
+        return '';
+      }
+    }
+
+    function setStoredGhToken(token) {
+      const cleanToken = String(token || '').trim();
+      try {
+        if (cleanToken) localStorage.setItem(GH_TOKEN_STORAGE_KEY, cleanToken);
+        else localStorage.removeItem(GH_TOKEN_STORAGE_KEY);
+      } catch (error) {
+      }
+      return cleanToken;
+    }
+
+    function getGitHubAuthHeaders(token, contentType = '') {
+      const headers = {
+        'Authorization': `Bearer ${String(token || '').trim()}`,
+        'Accept': 'application/vnd.github.v3+json'
+      };
+      if (contentType) headers['Content-Type'] = contentType;
+      return headers;
+    }
+
+    // Persist repo identity plus the current GitHub token inside this browser so publish/upload keep working after reloads.
     function persistGhConfig(config, tokenOverride) {
       const normalized = sanitizeGhConfig(config);
       if (!normalized) {
         ghConfig = null;
         localStorage.removeItem(GH_CONFIG_KEY);
+        setStoredGhToken('');
         setSessionGhToken('');
         return null;
       }
-      const sessionToken = setSessionGhToken(typeof tokenOverride === 'string' ? tokenOverride : normalized.token);
+      const persistedToken = setStoredGhToken(typeof tokenOverride === 'string' ? tokenOverride : normalized.token);
+      const sessionToken = setSessionGhToken(persistedToken);
       ghConfig = {
         username: normalized.username,
         repo: normalized.repo,
@@ -811,7 +841,7 @@
         setupNote.innerHTML = `
           <strong>Security note:</strong>
           This panel still runs frontend-only, so it is still best for private use only.
-          Passwords are hashed locally, and the GitHub token is optional during first setup.
+          Passwords are hashed locally, and the GitHub token can be saved in this browser so publish/image-upload keeps working.
           Add the token later when you want publish/image-upload access.
         `;
       }
@@ -820,7 +850,7 @@
       if (settingsNote) {
         settingsNote.innerHTML = `
           <strong>GitHub note:</strong>
-          Publishing and image uploads use the token from the current browser session only.
+          Publishing and image uploads reuse the token saved in this browser.
           If the token is missing, the admin stays usable but publish/upload features will wait until you enter one.
         `;
       }
@@ -843,7 +873,7 @@
         const note = document.createElement('div');
         note.className = 'form-hint proxy-hint';
         note.style.marginBottom = '14px';
-        note.textContent = 'GitHub token is optional for setup, but required later for JSON publishing and automatic image uploads.';
+        note.textContent = 'GitHub token is optional for setup, but required later for JSON publishing and automatic image uploads. Once entered, it stays saved in this browser.';
         ghCard.appendChild(note);
       }
     }
@@ -1273,11 +1303,7 @@
           `https://api.github.com/repos/${ghConfig.username}/${ghConfig.repo}/contents/${path}`,
           {
             method: 'PUT',
-            headers: {
-              'Authorization': `token ${ghConfig.token}`,
-              'Accept': 'application/vnd.github.v3+json',
-              'Content-Type': 'application/json'
-            },
+            headers: getGitHubAuthHeaders(ghConfig.token, 'application/json'),
             body: JSON.stringify({
               message: `Upload product image: ${fileName}`,
               content: base64
@@ -1487,7 +1513,7 @@
         if (s) {
           const parsed = sanitizeGhConfig(JSON.parse(s));
           if (!parsed) throw new Error('Invalid config');
-          ghConfig = persistGhConfig(parsed, getSessionGhToken() || parsed.token);
+          ghConfig = persistGhConfig(parsed, getSessionGhToken() || getStoredGhToken() || parsed.token);
           syncSetupPrefill();
           if (hasAdminSetup()) {
             document.getElementById('setupPage').classList.add('hidden');
@@ -1498,6 +1524,7 @@
       } catch (e) {
         ghConfig = null;
         localStorage.removeItem(GH_CONFIG_KEY);
+        localStorage.removeItem(GH_TOKEN_STORAGE_KEY);
         sessionStorage.removeItem(GH_TOKEN_SESSION_KEY);
       }
     }
@@ -1709,7 +1736,7 @@
         if (token) {
           showLoad('Checking GitHub token...');
           const response = await fetch(`https://api.github.com/repos/${username}/${repo}`, {
-            headers: { 'Authorization': `token ${token}` }
+            headers: getGitHubAuthHeaders(token)
           });
           if (!response.ok) {
             hideLoad();
@@ -1796,10 +1823,7 @@
 
     async function getRepoFileSha(path) {
       const res = await fetch(`https://api.github.com/repos/${ghConfig.username}/${ghConfig.repo}/contents/${path}`, {
-        headers: {
-          'Authorization': `token ${ghConfig.token}`,
-          'Accept': 'application/vnd.github.v3+json'
-        }
+        headers: getGitHubAuthHeaders(ghConfig.token)
       });
       if (res.status === 404) return null;
       if (!res.ok) {
@@ -1819,11 +1843,7 @@
       if (sha) body.sha = sha;
       const res = await fetch(`https://api.github.com/repos/${ghConfig.username}/${ghConfig.repo}/contents/${path}`, {
         method: 'PUT',
-        headers: {
-          'Authorization': `token ${ghConfig.token}`,
-          'Accept': 'application/vnd.github.v3+json',
-          'Content-Type': 'application/json'
-        },
+        headers: getGitHubAuthHeaders(ghConfig.token, 'application/json'),
         body: JSON.stringify(body)
       });
       if (!res.ok) {
@@ -2036,7 +2056,7 @@
       document.getElementById('ghInfo').innerHTML = `<div style="background:rgba(34,197,94,0.08);border:1px solid rgba(34,197,94,0.2);border-radius:var(--radius);padding:12px 14px;font-size:12px;line-height:2">
     <div><i class="fas fa-check-circle" style="color:#4ade80;margin-left:6px"></i> <strong style="color:white">Image upload + publish mode</strong></div>
     <div style="color:var(--text2)">Repository: <span style="color:white">${escapeHtml(ghConfig.username)}/${escapeHtml(ghConfig.repo)}</span></div>
-    <div style="color:var(--text3);font-size:11px">Token: ${hasToken ? 'active for this session only' : 'not configured yet'}</div>
+    <div style="color:var(--text3);font-size:11px">Token: ${hasToken ? 'saved in this browser' : 'not configured yet'}</div>
   </div>`;
     }
 
@@ -2048,7 +2068,7 @@
       }
       showLoad('Checking new token...');
       fetch(`https://api.github.com/repos/${ghConfig.username}/${ghConfig.repo}`, {
-        headers: { 'Authorization': `token ${t}` }
+        headers: getGitHubAuthHeaders(t)
       })
         .then(r => {
           hideLoad();
@@ -2068,8 +2088,9 @@
     }
 
     function clearSetup() {
-      showConfirm('Clear setup', 'This removes the session GitHub token, saved repo settings, and the local admin login from this browser.', () => {
+      showConfirm('Clear setup', 'This removes the saved GitHub token, repo settings, and the local admin login from this browser.', () => {
         localStorage.removeItem(GH_CONFIG_KEY);
+        localStorage.removeItem(GH_TOKEN_STORAGE_KEY);
         localStorage.removeItem(ADMIN_USER_KEY);
         localStorage.removeItem(ADMIN_HASH_KEY);
         localStorage.removeItem(window.AdminAuth?.ADMIN_SALT_KEY || 'adminSalt');
