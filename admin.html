@@ -784,10 +784,45 @@
     function getGitHubAuthHeaders(token, contentType = '') {
       const headers = {
         'Authorization': `Bearer ${String(token || '').trim()}`,
-        'Accept': 'application/vnd.github.v3+json'
+        'Accept': 'application/vnd.github+json'
       };
       if (contentType) headers['Content-Type'] = contentType;
       return headers;
+    }
+
+    async function validateGitHubTokenAccess(token, username, repo) {
+      const owner = encodeURIComponent(String(username || '').trim());
+      const repoName = encodeURIComponent(String(repo || '').trim());
+      const response = await fetch(`https://api.github.com/repos/${owner}/${repoName}/contents/products.json?ref=main`, {
+        headers: getGitHubAuthHeaders(token)
+      });
+
+      if (response.ok) {
+        return { ok: true, status: response.status, detail: '' };
+      }
+
+      let detail = '';
+      try {
+        const data = await response.json();
+        detail = String(data?.message || '').trim();
+      } catch (error) {
+      }
+
+      let hint = 'GitHub rejected this token for this repository.';
+      if (response.status === 401) {
+        hint = 'The token appears invalid, expired, or copied incompletely.';
+      } else if (response.status === 403) {
+        hint = 'The token does not have enough repository permission.';
+      } else if (response.status === 404) {
+        hint = 'For fine-grained tokens, choose the exact repository and grant Contents: Read and write.';
+      }
+
+      return {
+        ok: false,
+        status: response.status,
+        detail,
+        hint
+      };
     }
 
     function readLocalDraft() {
@@ -1788,12 +1823,10 @@
       try {
         if (token) {
           showLoad('Checking GitHub token...');
-          const response = await fetch(`https://api.github.com/repos/${username}/${repo}`, {
-            headers: getGitHubAuthHeaders(token)
-          });
-          if (!response.ok) {
+          const validation = await validateGitHubTokenAccess(token, username, repo);
+          if (!validation.ok) {
             hideLoad();
-            errEl.textContent = 'Token or repository is invalid (' + response.status + ')';
+            errEl.textContent = `${validation.hint} (${validation.status})${validation.detail ? ` - ${validation.detail}` : ''}`;
             errEl.classList.add('show');
             return;
           }
@@ -2132,31 +2165,31 @@
       toast(message, 'error');
     }
 
-    function updateToken() {
+    async function updateToken() {
       const t = document.getElementById('newToken').value.trim();
       if (!t || !ghConfig?.username || !ghConfig?.repo) {
         toast('Enter a token first', 'error');
         return;
       }
+
       showLoad('Checking new token...');
-      fetch(`https://api.github.com/repos/${ghConfig.username}/${ghConfig.repo}`, {
-        headers: getGitHubAuthHeaders(t)
-      })
-        .then(r => {
-          hideLoad();
-          if (!r.ok) {
-            toast('Token is invalid', 'error');
-            return;
-          }
-          ghConfig = persistGhConfig({ ...ghConfig, token: t }, t);
-          document.getElementById('newToken').value = '';
-          updateGhStatus();
-          toast('Token updated successfully', 'success');
-        })
-        .catch(() => {
-          hideLoad();
-          toast('Could not verify the new token', 'error');
-        });
+      try {
+        const validation = await validateGitHubTokenAccess(t, ghConfig.username, ghConfig.repo);
+        hideLoad();
+
+        if (!validation.ok) {
+          toast(`${validation.hint} (${validation.status})${validation.detail ? ` - ${validation.detail}` : ''}`, 'error');
+          return;
+        }
+
+        ghConfig = persistGhConfig({ ...ghConfig, token: t }, t);
+        document.getElementById('newToken').value = '';
+        updateGhStatus();
+        toast('Token updated successfully', 'success');
+      } catch (error) {
+        hideLoad();
+        toast(error?.message || 'Could not verify the new token', 'error');
+      }
     }
 
     function clearSetup() {
