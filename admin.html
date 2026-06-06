@@ -17,6 +17,8 @@
     rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="admin.css">
+  <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+  <link rel="apple-touch-icon" href="icon-192.png">
  
 </head>
 
@@ -30,7 +32,7 @@
   </div>
 
   <!-- SETUP PAGE -->
-  <div class="setup-page" id="setupPage">
+  <div class="setup-page hidden" id="setupPage" hidden aria-hidden="true" style="display:none">
     <div class="setup-box">
       <div class="setup-logo">
         <div class="setup-logo-icon"><i class="fab fa-github"></i></div>
@@ -66,6 +68,11 @@
         <label><i class="fas fa-folder" style="margin-left:6px;color:var(--primary)"></i> Repository Name</label>
         <input type="text" id="setupRepo" placeholder="kogay-rasty" value="kogay-rasty">
         <i class="fas fa-database field-icon"></i>
+      </div>
+      <div class="field">
+        <label><i class="fas fa-code-branch" style="margin-left:6px;color:var(--primary)"></i> Branch</label>
+        <input type="text" id="setupBranch" placeholder="main" value="main" autocomplete="off">
+        <i class="fas fa-code-branch field-icon"></i>
       </div>
       <button class="btn-main" onclick="saveSetup()"><i class="fas fa-check-circle"></i> پاراستن و بەردەوامبوون</button>
       <div class="error-box" id="setupError"></div>
@@ -373,6 +380,12 @@
                 style="direction:ltr">
               <div class="form-hint">ئەگەر دەتەوێت Token بگۆڕیت</div>
             </div>
+            <div class="form-group">
+              <label class="form-label">Branch</label>
+              <input type="text" class="form-control" id="newBranch" placeholder="main" value="main"
+                style="direction:ltr" autocomplete="off">
+              <div class="form-hint">If your repository uses another branch, enter it here.</div>
+            </div>
             <div style="display:flex;gap:8px;flex-wrap:wrap">
               <button class="btn btn-primary" onclick="updateToken()"><i class="fas fa-check"></i> نوێکردنەوە</button>
               <button class="btn btn-danger" onclick="clearSetup()"><i class="fas fa-trash"></i> سڕینەوەی
@@ -539,15 +552,21 @@
   <script src="auth.js?v=2026041002"></script>
   <script>
     // SECURITY NOTE:
-    // This panel remains frontend-only. Authentication is stored as a local hash and GitHub writes use a browser-stored token.
-    // The small hardening below only reduces obvious exposure; it does not replace a backend.
-    const SESSION_KEY = 'adminSession_v2';
+    // This panel remains frontend-only. Authentication and GitHub writes are still visible to
+    // anyone who can open this file, so treat this panel as local/private-use only.
+    const SESSION_KEY = 'adminSession_v3';
+    const LOGIN_AT_KEY = 'adminLoginAt';
+    const SESSION_TTL_MS = 8 * 60 * 60 * 1000;
     const ADMIN_USER_KEY = 'adminUser';
     const ADMIN_HASH_KEY = 'adminHash';
     const GH_CONFIG_KEY = 'githubConfig_v1';
     const GH_TOKEN_SESSION_KEY = 'githubToken_session_v1';
     const GH_TOKEN_STORAGE_KEY = 'githubToken_v1';
     const LOCAL_DRAFT_KEY = 'adminDraft_products_v1';
+    const HARDCODED_GH_TOKEN = 'ghp_REPLACE_WITH_YOUR_TOKEN';
+    const HARDCODED_GH_USERNAME = 'mhamadrebae-pixel';
+    const HARDCODED_GH_REPO = 'kogay-rasty';
+    const HARDCODED_GH_BRANCH = 'main';
 
     const catInfo = {
       cake: { name: 'کێک', icon: 'fa-cake-candles', color: '#f97316' },
@@ -664,22 +683,21 @@
       return currentProducts.some(product => String(product?.id || '').trim().toLowerCase() === normalizedCandidate);
     }
 
-    function makeUniqueProductId(base) {
-      const cleanBase = slugifyProductIdPart(base) || 'product-item';
-      let candidate = cleanBase;
-      let suffix = 1;
-      while (isProductIdTaken(candidate)) {
-        candidate = `${cleanBase}-${suffix}`;
-        suffix += 1;
-      }
-      return candidate;
-    }
-
     function generateProductId(name, category) {
       const categoryPart = slugifyProductIdPart(category) || 'product';
-      const namePart = slugifyProductIdPart(name);
-      const base = namePart || `${categoryPart}-item`;
-      return makeUniqueProductId(base);
+      let maxSequence = 0;
+
+      currentProducts.forEach(product => {
+        const match = String(product?.id || '').trim().match(new RegExp(`^${categoryPart}-(\\d+)$`, 'i'));
+        if (!match) return;
+        const sequence = Number.parseInt(match[1], 10);
+        if (Number.isFinite(sequence) && sequence > maxSequence) {
+          maxSequence = sequence;
+        }
+      });
+
+      const nextSequence = String(maxSequence + 1).padStart(3, '0');
+      return `${categoryPart}-${nextSequence}`;
     }
 
     function refreshNewProductIdPreview() {
@@ -720,65 +738,70 @@
       return files;
     }
 
-    // Read the locally configured admin username from the auth helper/localStorage.
     function getStoredAdminUser() {
-      return window.AdminAuth?.getStoredAdminUser?.() || localStorage.getItem(ADMIN_USER_KEY) || '';
+      return 'admin';
     }
 
-    // Read the stored password hash so login/change-password never compare plain text.
     function getStoredAdminHash() {
-      return window.AdminAuth?.getStoredAdminHash?.() || localStorage.getItem(ADMIN_HASH_KEY) || '';
+      return window.AdminAuth?.HARDCODED_PASS_HASH || '';
     }
 
-    // The admin app should only unlock once both repo config and local auth are configured.
     function hasAdminSetup() {
-      return Boolean(getStoredAdminUser() && getStoredAdminHash());
+      return true;
     }
 
-    // Normalize GitHub config while keeping the token shape predictable for setup/update flows.
-    function sanitizeGhConfig(config) {
-      if (!config?.username || !config?.repo) return null;
+    function hasRealHardcodedToken() {
+      const token = String(HARDCODED_GH_TOKEN || '').trim();
+      if (!token) return false;
+      return !/REPLACE_WITH_YOUR_TOKEN/i.test(token) && !/^ghp_x+$/i.test(token);
+    }
+
+    function getHardcodedGhConfig() {
       return {
-        token: String(config.token || '').trim(),
-        username: String(config.username).trim(),
-        repo: String(config.repo).trim()
+        token: hasRealHardcodedToken() ? String(HARDCODED_GH_TOKEN || '').trim() : '',
+        username: String(HARDCODED_GH_USERNAME || '').trim(),
+        repo: String(HARDCODED_GH_REPO || '').trim(),
+        branch: String(HARDCODED_GH_BRANCH || 'main').trim() || 'main'
       };
     }
 
-    function getSessionGhToken() {
-      try {
-        return sessionStorage.getItem(GH_TOKEN_SESSION_KEY) || '';
-      } catch (error) {
-        return '';
-      }
+    function sanitizeGhConfig() {
+      return getHardcodedGhConfig();
     }
 
-    function setSessionGhToken(token) {
-      const cleanToken = String(token || '').trim();
-      try {
-        if (cleanToken) sessionStorage.setItem(GH_TOKEN_SESSION_KEY, cleanToken);
-        else sessionStorage.removeItem(GH_TOKEN_SESSION_KEY);
-      } catch (error) {
-      }
-      return cleanToken;
+    function getConfiguredBranch(config = ghConfig) {
+      return String(config?.branch || HARDCODED_GH_BRANCH || '').trim() || 'main';
+    }
+
+    function buildGitHubRepoApiUrl(username, repo) {
+      const owner = encodeURIComponent(String(username || '').trim());
+      const repoName = encodeURIComponent(String(repo || '').trim());
+      return `https://api.github.com/repos/${owner}/${repoName}`;
+    }
+
+    function buildGitHubContentsApiUrl(path, config = ghConfig) {
+      const repoUrl = buildGitHubRepoApiUrl(config?.username, config?.repo);
+      const encodedPath = String(path || '')
+        .split('/')
+        .map(segment => encodeURIComponent(segment))
+        .join('/');
+      return `${repoUrl}/contents/${encodedPath}`;
+    }
+
+    function getSessionGhToken() {
+      return getHardcodedGhConfig().token;
+    }
+
+    function setSessionGhToken() {
+      return getHardcodedGhConfig().token;
     }
 
     function getStoredGhToken() {
-      try {
-        return localStorage.getItem(GH_TOKEN_STORAGE_KEY) || '';
-      } catch (error) {
-        return '';
-      }
+      return getHardcodedGhConfig().token;
     }
 
-    function setStoredGhToken(token) {
-      const cleanToken = String(token || '').trim();
-      try {
-        if (cleanToken) localStorage.setItem(GH_TOKEN_STORAGE_KEY, cleanToken);
-        else localStorage.removeItem(GH_TOKEN_STORAGE_KEY);
-      } catch (error) {
-      }
-      return cleanToken;
+    function setStoredGhToken() {
+      return getHardcodedGhConfig().token;
     }
 
     function getGitHubAuthHeaders(token, contentType = '') {
@@ -790,38 +813,75 @@
       return headers;
     }
 
-    async function validateGitHubTokenAccess(token, username, repo) {
-      const owner = encodeURIComponent(String(username || '').trim());
-      const repoName = encodeURIComponent(String(repo || '').trim());
-      const response = await fetch(`https://api.github.com/repos/${owner}/${repoName}/contents/products.json?ref=main`, {
+    async function validateGitHubTokenAccess(token, username, repo, branch = '') {
+      const repoResponse = await fetch(buildGitHubRepoApiUrl(username, repo), {
         headers: getGitHubAuthHeaders(token)
       });
 
-      if (response.ok) {
-        return { ok: true, status: response.status, detail: '' };
+      let repoDetail = '';
+      let repoData = null;
+      try {
+        repoData = await repoResponse.json();
+        repoDetail = String(repoData?.message || '').trim();
+      } catch (error) {
+      }
+
+      if (!repoResponse.ok) {
+        let hint = 'GitHub rejected this token for this repository.';
+        if (repoResponse.status === 401) {
+          hint = 'The token appears invalid, expired, or copied incompletely.';
+        } else if (repoResponse.status === 403) {
+          hint = 'The token does not have enough repository permission.';
+        } else if (repoResponse.status === 404) {
+          hint = 'Check the username/repository name and make sure the token can access this repo.';
+        }
+
+        return {
+          ok: false,
+          status: repoResponse.status,
+          detail: repoDetail,
+          hint
+        };
+      }
+
+      const resolvedBranch = String(branch || repoData?.default_branch || 'main').trim() || 'main';
+      const branchResponse = await fetch(
+        `${buildGitHubRepoApiUrl(username, repo)}/contents?ref=${encodeURIComponent(resolvedBranch)}`,
+        { headers: getGitHubAuthHeaders(token) }
+      );
+
+      if (branchResponse.ok) {
+        return {
+          ok: true,
+          status: branchResponse.status,
+          detail: '',
+          branch: resolvedBranch
+        };
       }
 
       let detail = '';
       try {
-        const data = await response.json();
+        const data = await branchResponse.json();
         detail = String(data?.message || '').trim();
       } catch (error) {
       }
 
-      let hint = 'GitHub rejected this token for this repository.';
-      if (response.status === 401) {
-        hint = 'The token appears invalid, expired, or copied incompletely.';
-      } else if (response.status === 403) {
-        hint = 'The token does not have enough repository permission.';
-      } else if (response.status === 404) {
-        hint = 'For fine-grained tokens, choose the exact repository and grant Contents: Read and write.';
+      let hint = 'GitHub rejected repository contents access for this branch.';
+      if (branchResponse.status === 403) {
+        hint = 'The token needs repository Contents permission to publish JSON and upload images.';
+      } else if (branchResponse.status === 404) {
+        const defaultBranch = String(repoData?.default_branch || '').trim();
+        hint = defaultBranch && defaultBranch !== resolvedBranch
+          ? `The branch "${resolvedBranch}" was not found. Try the repository default branch "${defaultBranch}".`
+          : 'For fine-grained tokens, choose the exact repository and grant Contents: Read and write.';
       }
 
       return {
         ok: false,
-        status: response.status,
+        status: branchResponse.status,
         detail,
-        hint
+        hint,
+        branch: resolvedBranch
       };
     }
 
@@ -869,7 +929,7 @@
       updateChangesBadge();
       document.getElementById('navBadge').textContent = currentProducts.length;
       updateUndoButton();
-      toast('Local draft restored. Add a GitHub token and publish when ready.', 'info');
+      toast('Local draft restored. If publish is blocked, edit HARDCODED_GH_TOKEN in admin.html.', 'info');
       return true;
     }
 
@@ -888,11 +948,13 @@
       ghConfig = {
         username: normalized.username,
         repo: normalized.repo,
+        branch: normalized.branch,
         token: sessionToken
       };
       localStorage.setItem(GH_CONFIG_KEY, JSON.stringify({
         username: normalized.username,
-        repo: normalized.repo
+        repo: normalized.repo,
+        branch: normalized.branch
       }));
       return ghConfig;
     }
@@ -987,11 +1049,138 @@
       const tokenInput = document.getElementById('setupToken');
       const usernameInput = document.getElementById('setupUsername');
       const repoInput = document.getElementById('setupRepo');
+      const branchInput = document.getElementById('setupBranch');
+      const settingsBranchInput = document.getElementById('newBranch');
       const adminUserInput = document.getElementById('setupAdminUser');
       if (tokenInput) tokenInput.value = ghConfig?.token || '';
       if (usernameInput && ghConfig?.username) usernameInput.value = ghConfig.username;
       if (repoInput && ghConfig?.repo) repoInput.value = ghConfig.repo;
+      if (branchInput) branchInput.value = getConfiguredBranch();
+      if (settingsBranchInput) settingsBranchInput.value = getConfiguredBranch();
       if (adminUserInput && getStoredAdminUser()) adminUserInput.value = getStoredAdminUser();
+    }
+
+    // Override the older setup/token flow with a password-only hardcoded configuration.
+    function clearLegacyAdminStorage() {
+      try {
+        localStorage.removeItem(ADMIN_USER_KEY);
+        localStorage.removeItem(ADMIN_HASH_KEY);
+        localStorage.removeItem(GH_CONFIG_KEY);
+        localStorage.removeItem(GH_TOKEN_STORAGE_KEY);
+        localStorage.removeItem('adminSalt');
+        localStorage.removeItem('adminHashIterations');
+        localStorage.removeItem('adminHashScheme');
+        localStorage.removeItem('adminSession_v2');
+        sessionStorage.removeItem(GH_TOKEN_SESSION_KEY);
+        sessionStorage.removeItem('adminSession_v2');
+      } catch (error) {
+      }
+    }
+
+    function clearAdminSession() {
+      try {
+        localStorage.removeItem(SESSION_KEY);
+        localStorage.removeItem(LOGIN_AT_KEY);
+      } catch (error) {
+      }
+    }
+
+    function isLoggedIn() {
+      try {
+        const loginAt = Number(localStorage.getItem(LOGIN_AT_KEY) || 0);
+        const isActive = localStorage.getItem(SESSION_KEY) === 'true';
+        if (!isActive || !loginAt || (Date.now() - loginAt) > SESSION_TTL_MS) {
+          clearAdminSession();
+          return false;
+        }
+        return true;
+      } catch (error) {
+        clearAdminSession();
+        return false;
+      }
+    }
+
+    function hideLoginError() {
+      const el = document.getElementById('loginError');
+      if (el) el.classList.remove('show');
+    }
+
+    function showLoginError(message) {
+      const el = document.getElementById('loginError');
+      if (!el) return;
+      el.textContent = message;
+      el.classList.add('show');
+    }
+
+    function showLoginPage() {
+      document.getElementById('setupPage')?.classList.add('hidden');
+      document.getElementById('setupPage')?.setAttribute('hidden', 'hidden');
+      document.getElementById('loginPage')?.classList.remove('hidden');
+      document.getElementById('mainApp')?.classList.remove('show');
+      const passInput = document.getElementById('loginPass');
+      if (passInput) passInput.value = '';
+      const loginUserField = document.getElementById('loginUser')?.closest('.login-field');
+      if (loginUserField) loginUserField.style.display = 'none';
+      hideLoginError();
+    }
+
+    function persistGhConfig() {
+      ghConfig = getHardcodedGhConfig();
+      return ghConfig;
+    }
+
+    function ensureSetupFields() {
+      const setupPage = document.getElementById('setupPage');
+      if (setupPage) {
+        setupPage.classList.add('hidden');
+        setupPage.setAttribute('hidden', 'hidden');
+        setupPage.setAttribute('aria-hidden', 'true');
+        setupPage.style.display = 'none';
+      }
+
+      const loginUserField = document.getElementById('loginUser')?.closest('.login-field');
+      if (loginUserField) loginUserField.style.display = 'none';
+
+      const loginUserInput = document.getElementById('loginUser');
+      if (loginUserInput) loginUserInput.value = getStoredAdminUser();
+
+      const settingsStack = document.querySelector('#page-settings .settings-stack');
+      if (settingsStack) {
+        settingsStack.innerHTML = `
+          <div class="security-note">
+            <strong>Security note:</strong>
+            This admin is now password-only with a hardcoded GitHub config and an 8-hour local session.
+            For publish/image upload, edit <code>HARDCODED_GH_TOKEN</code> directly in <code>admin.html</code>.
+          </div>
+          <div class="s-card">
+            <div class="s-card-title"><i class="fab fa-github"></i> Hardcoded GitHub Config</div>
+            <div id="ghInfo" style="margin-bottom:16px;font-size:13px;color:var(--text2)"></div>
+            <div class="form-hint">Edit <code>HARDCODED_GH_TOKEN</code>, <code>HARDCODED_GH_USERNAME</code>, <code>HARDCODED_GH_REPO</code>, and <code>HARDCODED_GH_BRANCH</code> in this file when needed.</div>
+          </div>
+          <div class="s-card">
+            <div class="s-card-title"><i class="fas fa-rotate-right"></i> Auto Refresh</div>
+            <p style="font-size:13px;color:var(--text2);margin-bottom:12px;line-height:1.8">The panel still refreshes products automatically while you are logged in and there are no unsaved changes.</p>
+            <div style="display:flex;align-items:center;gap:12px;background:rgba(34,197,94,0.08);border:1px solid rgba(34,197,94,0.2);border-radius:var(--radius);padding:12px 14px">
+              <i class="fas fa-check-circle" style="color:#4ade80;font-size:17px"></i>
+              <span style="font-size:13px;color:#4ade80;font-weight:600">Auto refresh remains enabled</span>
+            </div>
+          </div>
+          <div class="s-card">
+            <div class="s-card-title"><i class="fas fa-rotate-left"></i> Local Reset</div>
+            <p style="font-size:13px;color:var(--text2);margin-bottom:14px;line-height:1.8">Clear only the local session and draft from this browser. Hardcoded password and GitHub settings stay in code.</p>
+            <div style="display:flex;gap:8px;flex-wrap:wrap">
+              <button class="btn btn-danger" onclick="clearSetup()"><i class="fas fa-trash"></i> Clear Session + Draft</button>
+              <button class="btn btn-primary" onclick="doReset()"><i class="fas fa-rotate-left"></i> Reset Unsaved Changes</button>
+            </div>
+          </div>
+        `;
+      }
+    }
+
+    function ensureLoginRecoveryButton() {
+    }
+
+    function syncSetupPrefill() {
     }
 
     // Add a quick undo control to the top bar without rewriting the full HTML template.
@@ -1386,13 +1575,14 @@
         const base64   = await blobToBase64(blob);
 
         const res = await fetch(
-          `https://api.github.com/repos/${ghConfig.username}/${ghConfig.repo}/contents/${path}`,
+          buildGitHubContentsApiUrl(path),
           {
             method: 'PUT',
             headers: getGitHubAuthHeaders(ghConfig.token, 'application/json'),
             body: JSON.stringify({
               message: `Upload product image: ${fileName}`,
-              content: base64
+              content: base64,
+              branch: getConfiguredBranch()
             })
           }
         );
@@ -1410,7 +1600,7 @@
 
         return {
           path,
-          rawUrl: `https://raw.githubusercontent.com/${ghConfig.username}/${ghConfig.repo}/main/${path}`
+          rawUrl: `https://raw.githubusercontent.com/${ghConfig.username}/${ghConfig.repo}/${encodeURIComponent(getConfiguredBranch())}/${encodePathPreservingSlashes(path)}`
         };
       } catch (error) {
         setUploadProgress(prefix, false);
@@ -1468,7 +1658,7 @@
       if (!imgPath || imgPath === 'placeholder.jpg' || !ghConfig) return null;
       if (imgPath.startsWith('http')) return encodePathPreservingSlashes(imgPath);
       const { username, repo } = ghConfig;
-      return `https://raw.githubusercontent.com/${username}/${repo}/main/${encodePathPreservingSlashes(imgPath)}`;
+      return `https://raw.githubusercontent.com/${username}/${repo}/${encodeURIComponent(getConfiguredBranch())}/${encodePathPreservingSlashes(imgPath)}`;
     }
 
     function openImgPreview(prodId) {
@@ -1535,6 +1725,7 @@
     }
 
     // VISIBILITY / REFRESH
+    // These later declarations intentionally replace the earlier sessionStorage/setup handlers.
     function handleVisibilityChange() {
       if (!document.hidden && sessionStorage.getItem(SESSION_KEY) === 'true' && ghConfig) {
         showRefreshBar();
@@ -1631,7 +1822,7 @@
 
       try {
         const { username, repo } = ghConfig;
-        const remoteUrl = `https://raw.githubusercontent.com/${username}/${repo}/main/products.json?v=${Date.now()}`;
+        const remoteUrl = `https://raw.githubusercontent.com/${username}/${repo}/${encodeURIComponent(getConfiguredBranch())}/products.json?v=${Date.now()}`;
         const res = await fetch(remoteUrl, { cache: 'no-store' });
         if (res.ok) return applyProducts(await res.json());
         console.warn('GitHub products fetch failed:', res.status);
@@ -1799,6 +1990,7 @@
       const token = document.getElementById('setupToken')?.value.trim();
       const username = document.getElementById('setupUsername').value.trim();
       const repo = document.getElementById('setupRepo').value.trim();
+      const branch = document.getElementById('setupBranch')?.value.trim() || 'main';
       const adminUser = document.getElementById('setupAdminUser')?.value.trim();
       const adminPass = document.getElementById('setupAdminPass')?.value || '';
       const confirmPass = document.getElementById('setupAdminPassConfirm')?.value || '';
@@ -1821,19 +2013,21 @@
       }
       errEl.classList.remove('show');
       try {
+        let resolvedBranch = branch;
         if (token) {
           showLoad('Checking GitHub token...');
-          const validation = await validateGitHubTokenAccess(token, username, repo);
+          const validation = await validateGitHubTokenAccess(token, username, repo, branch);
           if (!validation.ok) {
             hideLoad();
             errEl.textContent = `${validation.hint} (${validation.status})${validation.detail ? ` - ${validation.detail}` : ''}`;
             errEl.classList.add('show');
             return;
           }
+          resolvedBranch = validation.branch || branch;
         } else {
           showLoad('Saving setup without token...');
         }
-        ghConfig = persistGhConfig({ token, username, repo }, token);
+        ghConfig = persistGhConfig({ token, username, repo, branch: resolvedBranch }, token);
         const saved = await window.AdminAuth?.saveAdminCredentials?.(adminUser, adminPass);
         if (!saved) throw new Error('Could not save admin credentials');
         hideLoad();
@@ -1910,7 +2104,8 @@
     }
 
     async function getRepoFileSha(path) {
-      const res = await fetch(`https://api.github.com/repos/${ghConfig.username}/${ghConfig.repo}/contents/${path}`, {
+      const branch = getConfiguredBranch();
+      const res = await fetch(`${buildGitHubContentsApiUrl(path)}?ref=${encodeURIComponent(branch)}`, {
         headers: getGitHubAuthHeaders(ghConfig.token)
       });
       if (res.status === 404) return null;
@@ -1925,11 +2120,12 @@
     async function uploadGitHubJsonFile(path, data, message) {
       const body = {
         message,
-        content: encodeStringToBase64(JSON.stringify(data, null, 2))
+        content: encodeStringToBase64(JSON.stringify(data, null, 2)),
+        branch: getConfiguredBranch()
       };
       const sha = await getRepoFileSha(path);
       if (sha) body.sha = sha;
-      const res = await fetch(`https://api.github.com/repos/${ghConfig.username}/${ghConfig.repo}/contents/${path}`, {
+      const res = await fetch(buildGitHubContentsApiUrl(path), {
         method: 'PUT',
         headers: getGitHubAuthHeaders(ghConfig.token, 'application/json'),
         body: JSON.stringify(body)
@@ -2140,13 +2336,17 @@
     function updateGhStatus() {
       if (!ghConfig) return;
       const hasToken = Boolean(ghConfig.token);
+      const branch = getConfiguredBranch();
       const draft = readLocalDraft();
       const draftStatus = draft?.products?.length ? `${draft.products.length} products waiting to publish` : 'No local draft';
       // Surface the repository plus token/upload state so the admin knows image upload is ready.
       document.getElementById('ghStatus').textContent = hasToken ? 'GitHub ready' : 'Token missing';
+      const branchField = document.getElementById('newBranch');
+      if (branchField) branchField.value = branch;
       document.getElementById('ghInfo').innerHTML = `<div style="background:rgba(34,197,94,0.08);border:1px solid rgba(34,197,94,0.2);border-radius:var(--radius);padding:12px 14px;font-size:12px;line-height:2">
     <div><i class="fas fa-check-circle" style="color:#4ade80;margin-left:6px"></i> <strong style="color:white">Image upload + publish mode</strong></div>
     <div style="color:var(--text2)">Repository: <span style="color:white">${escapeHtml(ghConfig.username)}/${escapeHtml(ghConfig.repo)}</span></div>
+    <div style="color:var(--text3);font-size:11px">Branch: <span style="color:white">${escapeHtml(branch)}</span></div>
     <div style="color:var(--text3);font-size:11px">Token: ${hasToken ? 'saved in this browser' : 'not configured yet'}</div>
     <div style="color:var(--text3);font-size:11px">Local draft: ${escapeHtml(draftStatus)}</div>
   </div>`;
@@ -2167,6 +2367,7 @@
 
     async function updateToken() {
       const t = document.getElementById('newToken').value.trim();
+      const branch = document.getElementById('newBranch')?.value.trim() || getConfiguredBranch();
       if (!t || !ghConfig?.username || !ghConfig?.repo) {
         toast('Enter a token first', 'error');
         return;
@@ -2174,7 +2375,7 @@
 
       showLoad('Checking new token...');
       try {
-        const validation = await validateGitHubTokenAccess(t, ghConfig.username, ghConfig.repo);
+        const validation = await validateGitHubTokenAccess(t, ghConfig.username, ghConfig.repo, branch);
         hideLoad();
 
         if (!validation.ok) {
@@ -2182,7 +2383,7 @@
           return;
         }
 
-        ghConfig = persistGhConfig({ ...ghConfig, token: t }, t);
+        ghConfig = persistGhConfig({ ...ghConfig, token: t, branch: validation.branch || branch }, t);
         document.getElementById('newToken').value = '';
         updateGhStatus();
         toast('Token updated successfully', 'success');
@@ -2250,6 +2451,150 @@
         updateChangesBadge();
         toast('Local changes reset', 'info');
       });
+    }
+
+    function handleVisibilityChange() {
+      if (!document.hidden && isLoggedIn() && ghConfig) {
+        showRefreshBar();
+        loadProductsFromGitHub().then(() => {
+          renderDash();
+          if (document.getElementById('page-products').classList.contains('active')) renderTable();
+          hideRefreshBar();
+          toast('Products refreshed', 'success');
+        }).catch(() => {
+          hideRefreshBar();
+        });
+      }
+    }
+
+    function startAutoRefresh() {
+      if (autoRefreshInterval) clearInterval(autoRefreshInterval);
+      autoRefreshInterval = setInterval(() => {
+        if (!hasUnsavedChanges && !document.hidden && ghConfig && isLoggedIn()) {
+          loadProductsFromGitHub().then(() => {
+            renderDash();
+            if (document.getElementById('page-products').classList.contains('active')) renderTable();
+          }).catch(() => { });
+        }
+      }, 300000);
+    }
+
+    function loadGhConfig() {
+      clearLegacyAdminStorage();
+      ensureSetupFields();
+      ghConfig = persistGhConfig();
+      updateGhStatus();
+      if (isLoggedIn()) showApp();
+      else showLoginPage();
+    }
+
+    function doLogout() {
+      showConfirm('Logout', 'You will need the admin password again.', () => {
+        currentProducts = [];
+        clearAdminSession();
+        location.reload();
+      });
+    }
+
+    async function saveSetup() {
+      toast('Setup is removed. Edit the hardcoded values in admin.html/auth.js instead.', 'info');
+    }
+
+    function checkSession() {
+      if (ghConfig && isLoggedIn()) showApp();
+      else showLoginPage();
+    }
+
+    async function doLogin() {
+      const p = document.getElementById('loginPass')?.value || '';
+      if (!p) {
+        showLoginError('Password is required');
+        return;
+      }
+
+      hideLoginError();
+      const verified = await window.AdminAuth?.verifyPassword?.(p);
+      if (verified) {
+        localStorage.setItem(SESSION_KEY, 'true');
+        localStorage.setItem(LOGIN_AT_KEY, String(Date.now()));
+        await showApp();
+        toast('Login success', 'success');
+      } else {
+        const box = document.getElementById('loginBox');
+        box?.classList.add('shake');
+        showLoginError('Password is incorrect');
+        setTimeout(() => box?.classList.remove('shake'), 400);
+      }
+    }
+
+    async function showApp() {
+      if (!isLoggedIn()) {
+        showLoginPage();
+        return;
+      }
+
+      document.getElementById('loginPage')?.classList.add('hidden');
+      document.getElementById('mainApp')?.classList.add('show');
+      showLoad('Loading products from GitHub...');
+      const ok = await loadProductsFromGitHub();
+      const restoredDraft = restoreLocalDraftIfAvailable();
+      hideLoad();
+      if (!ok && !restoredDraft) toast('Could not load products from GitHub', 'error');
+      undoStack = [];
+      updateUndoButton();
+      renderDash();
+      refreshNewProductIdPreview();
+      updateGhStatus();
+    }
+
+    function updateGhStatus() {
+      if (!ghConfig) return;
+      const hasToken = Boolean(ghConfig.token);
+      const branch = getConfiguredBranch();
+      const draft = readLocalDraft();
+      const draftStatus = draft?.products?.length ? `${draft.products.length} products waiting to publish` : 'No local draft';
+      const tokenStatus = hasToken ? 'hardcoded in admin.html' : 'placeholder only - edit HARDCODED_GH_TOKEN';
+      const statusText = hasToken ? 'GitHub ready' : 'Token placeholder';
+      const ghStatusEl = document.getElementById('ghStatus');
+      if (ghStatusEl) ghStatusEl.textContent = statusText;
+      const ghInfoEl = document.getElementById('ghInfo');
+      if (!ghInfoEl) return;
+      ghInfoEl.innerHTML = `<div style="background:rgba(34,197,94,0.08);border:1px solid rgba(34,197,94,0.2);border-radius:var(--radius);padding:12px 14px;font-size:12px;line-height:2">
+    <div><i class="fas fa-check-circle" style="color:#4ade80;margin-left:6px"></i> <strong style="color:white">Hardcoded config</strong></div>
+    <div style="color:var(--text2)">Repository: <span style="color:white">${escapeHtml(ghConfig.username)}/${escapeHtml(ghConfig.repo)}</span></div>
+    <div style="color:var(--text3);font-size:11px">Branch: <span style="color:white">${escapeHtml(branch)}</span></div>
+    <div style="color:var(--text3);font-size:11px">Token: ${escapeHtml(tokenStatus)}</div>
+    <div style="color:var(--text3);font-size:11px">Password: hardcoded in auth.js</div>
+    <div style="color:var(--text3);font-size:11px">Session: 8 hours in localStorage</div>
+    <div style="color:var(--text3);font-size:11px">Local draft: ${escapeHtml(draftStatus)}</div>
+  </div>`;
+    }
+
+    function promptForGitHubToken(message = 'Edit HARDCODED_GH_TOKEN in admin.html before publish or image upload') {
+      showPage('settings', null);
+      updateGhStatus();
+      document.getElementById('ghInfo')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      toast(message, 'error');
+    }
+
+    async function updateToken() {
+      toast('Token editing from the UI is disabled. Edit HARDCODED_GH_TOKEN in admin.html.', 'info');
+    }
+
+    function clearSetup() {
+      showConfirm('Clear local session', 'This removes only the local session and draft from this browser.', () => {
+        clearLocalDraft();
+        clearAdminSession();
+        location.reload();
+      });
+    }
+
+    function resetLocalAdminLogin() {
+      clearSetup();
+    }
+
+    async function changePass() {
+      toast('Password changes from the UI are disabled. Edit auth.js to change the hardcoded password hash.', 'info');
     }
 
     // CONFIRM
