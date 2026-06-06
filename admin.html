@@ -563,7 +563,7 @@
     const GH_TOKEN_SESSION_KEY = 'githubToken_session_v1';
     const GH_TOKEN_STORAGE_KEY = 'githubToken_v1';
     const LOCAL_DRAFT_KEY = 'adminDraft_products_v1';
-    const HARDCODED_GH_TOKEN = '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';
+    const HARDCODED_GH_TOKEN = 'ghp_REPLACE_WITH_YOUR_TOKEN';
     const HARDCODED_GH_USERNAME = 'mhamadrebae-pixel';
     const HARDCODED_GH_REPO = 'kogay-rasty';
     const HARDCODED_GH_BRANCH = 'main';
@@ -601,6 +601,7 @@
     let undoStack = [];
     let addImageObjectUrl = '';
     let editImageObjectUrl = '';
+    let ghTokenHealth = { state: 'unknown', source: 'none', detail: '', checkedAt: 0 };
 
     function escapeHtml(value) {
       return String(value ?? '').replace(/[&<>"']/g, char => ({
@@ -929,7 +930,7 @@
       updateChangesBadge();
       document.getElementById('navBadge').textContent = currentProducts.length;
       updateUndoButton();
-      toast('Local draft restored. If publish is blocked, edit HARDCODED_GH_TOKEN in admin.html.', 'info');
+      toast('Local draft restored. If publish is blocked, add a valid GitHub token in Settings.', 'info');
       return true;
     }
 
@@ -1060,13 +1061,46 @@
       if (adminUserInput && getStoredAdminUser()) adminUserInput.value = getStoredAdminUser();
     }
 
+    function getBrowserStoredGhToken() {
+      try {
+        return localStorage.getItem(GH_TOKEN_STORAGE_KEY) || '';
+      } catch (error) {
+        return '';
+      }
+    }
+
+    function setBrowserStoredGhToken(token) {
+      const cleanToken = String(token || '').trim();
+      try {
+        if (cleanToken) localStorage.setItem(GH_TOKEN_STORAGE_KEY, cleanToken);
+        else localStorage.removeItem(GH_TOKEN_STORAGE_KEY);
+      } catch (error) {
+      }
+      return cleanToken;
+    }
+
+    function getStoredGhConfigMeta() {
+      try {
+        const raw = localStorage.getItem(GH_CONFIG_KEY);
+        const parsed = raw ? JSON.parse(raw) : {};
+        return parsed && typeof parsed === 'object' ? parsed : {};
+      } catch (error) {
+        return {};
+      }
+    }
+
+    function getActiveGhTokenSource() {
+      const browserToken = getBrowserStoredGhToken();
+      if (browserToken) return { token: browserToken, source: 'browser' };
+      if (hasRealHardcodedToken()) return { token: String(HARDCODED_GH_TOKEN || '').trim(), source: 'hardcoded' };
+      return { token: '', source: 'none' };
+    }
+
     // Override the older setup/token flow with a password-only hardcoded configuration.
     function clearLegacyAdminStorage() {
       try {
         localStorage.removeItem(ADMIN_USER_KEY);
         localStorage.removeItem(ADMIN_HASH_KEY);
-        localStorage.removeItem(GH_CONFIG_KEY);
-        localStorage.removeItem(GH_TOKEN_STORAGE_KEY);
         localStorage.removeItem('adminSalt');
         localStorage.removeItem('adminHashIterations');
         localStorage.removeItem('adminHashScheme');
@@ -1124,8 +1158,28 @@
       hideLoginError();
     }
 
-    function persistGhConfig() {
-      ghConfig = getHardcodedGhConfig();
+    function persistGhConfig(config = {}, tokenOverride) {
+      const savedMeta = getStoredGhConfigMeta();
+      const source = getActiveGhTokenSource();
+      const nextBranch = String(config?.branch || savedMeta.branch || HARDCODED_GH_BRANCH || 'main').trim() || 'main';
+      let nextToken = source.token;
+
+      if (typeof tokenOverride === 'string') {
+        nextToken = setBrowserStoredGhToken(tokenOverride);
+      }
+
+      ghConfig = {
+        username: String(HARDCODED_GH_USERNAME || '').trim(),
+        repo: String(HARDCODED_GH_REPO || '').trim(),
+        branch: nextBranch,
+        token: nextToken
+      };
+
+      try {
+        localStorage.setItem(GH_CONFIG_KEY, JSON.stringify({ branch: nextBranch }));
+      } catch (error) {
+      }
+
       return ghConfig;
     }
 
@@ -1149,13 +1203,23 @@
         settingsStack.innerHTML = `
           <div class="security-note">
             <strong>Security note:</strong>
-            This admin is now password-only with a hardcoded GitHub config and an 8-hour local session.
-            For publish/image upload, edit <code>HARDCODED_GH_TOKEN</code> directly in <code>admin.html</code>.
+            This admin is password-only with a hardcoded repository config and an 8-hour local session.
+            If publish or image upload does not work, paste a valid GitHub token below and save it in this browser.
           </div>
           <div class="s-card">
-            <div class="s-card-title"><i class="fab fa-github"></i> Hardcoded GitHub Config</div>
+            <div class="s-card-title"><i class="fab fa-github"></i> GitHub Publish Token</div>
             <div id="ghInfo" style="margin-bottom:16px;font-size:13px;color:var(--text2)"></div>
-            <div class="form-hint">Edit <code>HARDCODED_GH_TOKEN</code>, <code>HARDCODED_GH_USERNAME</code>, <code>HARDCODED_GH_REPO</code>, and <code>HARDCODED_GH_BRANCH</code> in this file when needed.</div>
+            <div class="form-group">
+              <label class="form-label">GitHub Token</label>
+              <input type="password" class="form-control" id="newToken" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx" style="direction:ltr" autocomplete="off">
+              <div class="form-hint">This token is stored only in this browser on this device.</div>
+            </div>
+            <div style="display:flex;gap:8px;flex-wrap:wrap">
+              <button class="btn btn-primary" onclick="updateToken()"><i class="fas fa-check"></i> Save Token</button>
+              <button class="btn btn-secondary" onclick="refreshGitHubTokenHealth(true)"><i class="fas fa-rotate-right"></i> Check Token</button>
+              <button class="btn btn-danger" onclick="clearStoredGhToken()"><i class="fas fa-trash"></i> Clear Token</button>
+            </div>
+            <div class="form-hint" style="margin-top:12px">Repository, owner, and branch still come from <code>admin.html</code>. Only the token is updated from this panel.</div>
           </div>
           <div class="s-card">
             <div class="s-card-title"><i class="fas fa-rotate-right"></i> Auto Refresh</div>
@@ -1167,9 +1231,9 @@
           </div>
           <div class="s-card">
             <div class="s-card-title"><i class="fas fa-rotate-left"></i> Local Reset</div>
-            <p style="font-size:13px;color:var(--text2);margin-bottom:14px;line-height:1.8">Clear only the local session and draft from this browser. Hardcoded password and GitHub settings stay in code.</p>
+            <p style="font-size:13px;color:var(--text2);margin-bottom:14px;line-height:1.8">Clear the local session, browser-saved token, and draft from this browser. Password and repository settings stay in code.</p>
             <div style="display:flex;gap:8px;flex-wrap:wrap">
-              <button class="btn btn-danger" onclick="clearSetup()"><i class="fas fa-trash"></i> Clear Session + Draft</button>
+              <button class="btn btn-danger" onclick="clearSetup()"><i class="fas fa-trash"></i> Clear Session + Token + Draft</button>
               <button class="btn btn-primary" onclick="doReset()"><i class="fas fa-rotate-left"></i> Reset Unsaved Changes</button>
             </div>
           </div>
@@ -1181,6 +1245,24 @@
     }
 
     function syncSetupPrefill() {
+      const tokenInput = document.getElementById('newToken');
+      if (tokenInput) tokenInput.value = getBrowserStoredGhToken();
+    }
+
+    function getSessionGhToken() {
+      return getBrowserStoredGhToken();
+    }
+
+    function setSessionGhToken(token) {
+      return setBrowserStoredGhToken(token);
+    }
+
+    function getStoredGhToken() {
+      return getBrowserStoredGhToken();
+    }
+
+    function setStoredGhToken(token) {
+      return setBrowserStoredGhToken(token);
     }
 
     // Add a quick undo control to the top bar without rewriting the full HTML template.
@@ -2479,11 +2561,67 @@
       }, 300000);
     }
 
+    async function refreshGitHubTokenHealth(forceToast = false) {
+      if (!ghConfig?.username || !ghConfig?.repo) {
+        ghTokenHealth = { state: 'missing', source: 'none', detail: 'Repository config is missing.', checkedAt: Date.now() };
+        updateGhStatus();
+        return ghTokenHealth;
+      }
+
+      const active = getActiveGhTokenSource();
+      ghConfig.token = active.token;
+
+      if (!active.token) {
+        ghTokenHealth = { state: 'missing', source: 'none', detail: 'No GitHub token is saved yet.', checkedAt: Date.now() };
+        updateGhStatus();
+        if (forceToast) toast('Add a GitHub token first', 'error');
+        return ghTokenHealth;
+      }
+
+      ghTokenHealth = { state: 'checking', source: active.source, detail: '', checkedAt: Date.now() };
+      updateGhStatus();
+
+      try {
+        const validation = await validateGitHubTokenAccess(active.token, ghConfig.username, ghConfig.repo, getConfiguredBranch());
+        if (validation.ok) {
+          if (validation.branch && validation.branch !== ghConfig.branch) {
+            ghConfig = persistGhConfig({ branch: validation.branch }, getBrowserStoredGhToken());
+          }
+          ghTokenHealth = { state: 'valid', source: active.source, detail: '', checkedAt: Date.now() };
+          updateGhStatus();
+          if (forceToast) toast('GitHub token works correctly', 'success');
+          return ghTokenHealth;
+        }
+
+        ghTokenHealth = {
+          state: 'invalid',
+          source: active.source,
+          detail: `${validation.hint}${validation.detail ? ` - ${validation.detail}` : ''}`,
+          checkedAt: Date.now()
+        };
+        updateGhStatus();
+        if (forceToast) toast(ghTokenHealth.detail, 'error');
+        return ghTokenHealth;
+      } catch (error) {
+        ghTokenHealth = {
+          state: 'invalid',
+          source: active.source,
+          detail: error?.message || 'Could not validate the token right now.',
+          checkedAt: Date.now()
+        };
+        updateGhStatus();
+        if (forceToast) toast(ghTokenHealth.detail, 'error');
+        return ghTokenHealth;
+      }
+    }
+
     function loadGhConfig() {
       clearLegacyAdminStorage();
       ensureSetupFields();
       ghConfig = persistGhConfig();
       updateGhStatus();
+      syncSetupPrefill();
+      void refreshGitHubTokenHealth(false);
       if (isLoggedIn()) showApp();
       else showLoginPage();
     }
@@ -2549,41 +2687,108 @@
 
     function updateGhStatus() {
       if (!ghConfig) return;
-      const hasToken = Boolean(ghConfig.token);
       const branch = getConfiguredBranch();
       const draft = readLocalDraft();
       const draftStatus = draft?.products?.length ? `${draft.products.length} products waiting to publish` : 'No local draft';
-      const tokenStatus = hasToken ? 'hardcoded in admin.html' : 'placeholder only - edit HARDCODED_GH_TOKEN';
-      const statusText = hasToken ? 'GitHub ready' : 'Token placeholder';
+      const browserToken = getBrowserStoredGhToken();
+      const hasToken = Boolean(ghConfig.token);
+      const sourceLabel = browserToken ? 'saved in this browser' : hasRealHardcodedToken() ? 'hardcoded in admin.html' : 'not configured';
+      const statusMap = {
+        missing: { label: 'Token missing', detail: 'Add a valid token below to publish JSON and upload images.' },
+        checking: { label: 'Checking token', detail: `Validating the ${ghTokenHealth.source || 'current'} token with GitHub...` },
+        valid: { label: 'GitHub ready', detail: `Token is valid and ${ghTokenHealth.source === 'browser' ? 'saved in this browser' : 'coming from admin.html'}.` },
+        invalid: { label: 'Token invalid', detail: ghTokenHealth.detail || 'GitHub rejected the current token. Save a valid token below.' },
+        unknown: { label: hasToken ? 'Checking token' : 'Token missing', detail: hasToken ? 'Validating token status...' : 'Add a valid token below to publish JSON and upload images.' }
+      };
+      const currentStatus = statusMap[ghTokenHealth.state] || statusMap.unknown;
       const ghStatusEl = document.getElementById('ghStatus');
-      if (ghStatusEl) ghStatusEl.textContent = statusText;
+      if (ghStatusEl) ghStatusEl.textContent = currentStatus.label;
       const ghInfoEl = document.getElementById('ghInfo');
       if (!ghInfoEl) return;
       ghInfoEl.innerHTML = `<div style="background:rgba(34,197,94,0.08);border:1px solid rgba(34,197,94,0.2);border-radius:var(--radius);padding:12px 14px;font-size:12px;line-height:2">
-    <div><i class="fas fa-check-circle" style="color:#4ade80;margin-left:6px"></i> <strong style="color:white">Hardcoded config</strong></div>
+    <div><i class="fas fa-check-circle" style="color:#4ade80;margin-left:6px"></i> <strong style="color:white">${escapeHtml(currentStatus.label)}</strong></div>
     <div style="color:var(--text2)">Repository: <span style="color:white">${escapeHtml(ghConfig.username)}/${escapeHtml(ghConfig.repo)}</span></div>
     <div style="color:var(--text3);font-size:11px">Branch: <span style="color:white">${escapeHtml(branch)}</span></div>
-    <div style="color:var(--text3);font-size:11px">Token: ${escapeHtml(tokenStatus)}</div>
+    <div style="color:var(--text3);font-size:11px">Token source: ${escapeHtml(sourceLabel)}</div>
+    <div style="color:var(--text3);font-size:11px">${escapeHtml(currentStatus.detail)}</div>
     <div style="color:var(--text3);font-size:11px">Password: hardcoded in auth.js</div>
     <div style="color:var(--text3);font-size:11px">Session: 8 hours in localStorage</div>
     <div style="color:var(--text3);font-size:11px">Local draft: ${escapeHtml(draftStatus)}</div>
   </div>`;
+      const tokenInput = document.getElementById('newToken');
+      if (tokenInput && document.activeElement !== tokenInput) tokenInput.value = browserToken;
     }
 
-    function promptForGitHubToken(message = 'Edit HARDCODED_GH_TOKEN in admin.html before publish or image upload') {
+    function promptForGitHubToken(message = 'A valid GitHub token is required for publish and image upload') {
       showPage('settings', null);
       updateGhStatus();
-      document.getElementById('ghInfo')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      const tokenInput = document.getElementById('newToken');
+      if (tokenInput) {
+        tokenInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        window.setTimeout(() => tokenInput.focus(), 80);
+      }
       toast(message, 'error');
     }
 
     async function updateToken() {
-      toast('Token editing from the UI is disabled. Edit HARDCODED_GH_TOKEN in admin.html.', 'info');
+      const tokenInput = document.getElementById('newToken');
+      const t = tokenInput?.value.trim() || '';
+      if (!t) {
+        toast('Enter a GitHub token first', 'error');
+        tokenInput?.focus();
+        return;
+      }
+
+      showLoad('Checking GitHub token...');
+      try {
+        const validation = await validateGitHubTokenAccess(t, HARDCODED_GH_USERNAME, HARDCODED_GH_REPO, getConfiguredBranch());
+        hideLoad();
+
+        if (!validation.ok) {
+          const detail = `${validation.hint}${validation.detail ? ` - ${validation.detail}` : ''}`;
+          ghTokenHealth = { state: 'invalid', source: 'browser', detail, checkedAt: Date.now() };
+          updateGhStatus();
+          toast(detail, 'error');
+          return;
+        }
+
+        ghConfig = persistGhConfig({ branch: validation.branch || getConfiguredBranch() }, t);
+        ghTokenHealth = { state: 'valid', source: 'browser', detail: '', checkedAt: Date.now() };
+        updateGhStatus();
+        if (tokenInput) tokenInput.value = t;
+        toast('GitHub token saved in this browser', 'success');
+      } catch (error) {
+        hideLoad();
+        ghTokenHealth = {
+          state: 'invalid',
+          source: 'browser',
+          detail: error?.message || 'Could not verify the token right now.',
+          checkedAt: Date.now()
+        };
+        updateGhStatus();
+        toast(ghTokenHealth.detail, 'error');
+      }
+    }
+
+    function clearStoredGhToken() {
+      showConfirm('Clear GitHub token', 'The token saved in this browser will be removed, but your session and draft will stay.', () => {
+        setBrowserStoredGhToken('');
+        ghConfig = persistGhConfig({ branch: getConfiguredBranch() }, '');
+        ghTokenHealth = { state: 'missing', source: 'none', detail: 'No GitHub token is saved yet.', checkedAt: Date.now() };
+        updateGhStatus();
+        syncSetupPrefill();
+        toast('Stored GitHub token was cleared', 'info');
+      });
     }
 
     function clearSetup() {
-      showConfirm('Clear local session', 'This removes only the local session and draft from this browser.', () => {
+      showConfirm('Clear local admin data', 'This removes the local session, browser-saved GitHub token, and draft from this browser.', () => {
         clearLocalDraft();
+        setBrowserStoredGhToken('');
+        try {
+          localStorage.removeItem(GH_CONFIG_KEY);
+        } catch (error) {
+        }
         clearAdminSession();
         location.reload();
       });
