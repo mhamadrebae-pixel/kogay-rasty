@@ -6,7 +6,10 @@
     "price": 750,
     "image": "sardy/IMG_0188.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-002",
@@ -15,7 +18,10 @@
     "price": 1500,
     "image": "sardy/IMG_0189.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-003",
@@ -24,7 +30,10 @@
     "price": 6500,
     "image": "sardy/IMG_6192.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-004",
@@ -33,7 +42,10 @@
     "price": 6500,
     "image": "sardy/IMG_6193.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-005",
@@ -42,7 +54,10 @@
     "price": 6500,
     "image": "sardy/IMG_6194.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-006",
@@ -51,7 +66,10 @@
     "price": 6500,
     "image": "sardy/IMG_6195.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-007",
@@ -60,7 +78,10 @@
     "price": 5000,
     "image": "sardy/IMG_6196.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-008",
@@ -69,7 +90,10 @@
     "price": 9750,
     "image": "sardy/IMG_6197.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-009",
@@ -78,7 +102,10 @@
     "price": 9750,
     "image": "sardy/IMG_6220.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-010",
@@ -87,7 +114,10 @@
     "price": 6000,
     "image": "sardy/IMG_6198.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-011",
@@ -96,7 +126,10 @@
     "price": 6000,
     "image": "sardy/IMG_6199.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-012",
@@ -105,7 +138,10 @@
     "price": 10000,
     "image": "sardy/IMG_6200.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-013",
@@ -114,7 +150,10 @@
     "price": 10000,
     "image": "sardy/IMG_6201.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-014",
@@ -123,7 +162,10 @@
     "price": 6500,
     "image": "sardy/IMG_6202.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-015",
@@ -132,7 +174,10 @@
     "price": 6500,
     "image": "sardy/IMG_6203.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-016",
@@ -141,7 +186,10 @@
     "price": 6500,
     "image": "sardy/IMG_6204.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-017",
@@ -150,7 +198,10 @@
     "price": 6500,
     "image": "sardy/IMG_6205.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-018",
@@ -159,7 +210,10 @@
     "price": 6500,
     "image": "sardy/IMG_6219.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-019",
@@ -168,7 +222,10 @@
     "price": 6500,
     "image": "sardy/IMG_6206.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-020",
@@ -177,7 +234,10 @@
     "price": 9750,
     "image": "sardy/IMG_6207.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-021",
@@ -186,7 +246,10 @@
     "price": 9750,
     "image": "sardy/IMG_6208.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-022",
@@ -195,7 +258,10 @@
     "price": 10000,
     "image": "sardy/IMG_6209.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-023",
@@ -204,7 +270,10 @@
     "price": 10000,
     "image": "sardy/IMG_6210.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-024",
@@ -213,7 +282,10 @@
     "price": 5000,
     "image": "sardy/IMG_6218.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-025",
@@ -222,7 +294,10 @@
     "price": 9750,
     "image": "sardy/IMG_6211.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-026",
@@ -231,7 +306,10 @@
     "price": 9750,
     "image": "sardy/IMG_6212.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-027",
@@ -240,7 +318,10 @@
     "price": 5000,
     "image": "sardy/IMG_6213.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-028",
@@ -249,7 +330,10 @@
     "price": 5000,
     "image": "sardy/IMG_6238.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-029",
@@ -258,7 +342,10 @@
     "price": 9500,
     "image": "sardy/IMG_6214.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-030",
@@ -267,7 +354,10 @@
     "price": 5250,
     "image": "sardy/IMG_6215.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-031",
@@ -276,7 +366,10 @@
     "price": 8250,
     "image": "sardy/IMG_6216.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-032",
@@ -285,7 +378,10 @@
     "price": 5500,
     "image": "sardy/IMG_6217.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-033",
@@ -294,7 +390,10 @@
     "price": 5000,
     "image": "sardy/IMG_6221.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-034",
@@ -303,7 +402,10 @@
     "price": 5000,
     "image": "sardy/IMG_6222.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-035",
@@ -312,7 +414,10 @@
     "price": 5000,
     "image": "sardy/IMG_6223.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-036",
@@ -321,7 +426,10 @@
     "price": 5000,
     "image": "sardy/IMG_6224.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-037",
@@ -330,7 +438,10 @@
     "price": 5000,
     "image": "sardy/IMG_6225.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-038",
@@ -339,7 +450,10 @@
     "price": 10000,
     "image": "sardy/IMG_6226.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-039",
@@ -348,7 +462,10 @@
     "price": 9500,
     "image": "sardy/IMG_6227.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-040",
@@ -357,7 +474,10 @@
     "price": 9500,
     "image": "sardy/IMG_6228.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-041",
@@ -366,7 +486,10 @@
     "price": 9500,
     "image": "sardy/IMG_6229.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-042",
@@ -375,7 +498,10 @@
     "price": 9500,
     "image": "sardy/IMG_6230.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-043",
@@ -384,7 +510,10 @@
     "price": 9500,
     "image": "sardy/IMG_6231.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-044",
@@ -393,7 +522,10 @@
     "price": 10000,
     "image": "sardy/IMG_6232.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-045",
@@ -402,7 +534,10 @@
     "price": 10000,
     "image": "sardy/IMG_6233.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-046",
@@ -411,7 +546,10 @@
     "price": 10000,
     "image": "sardy/IMG_6234.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-047",
@@ -420,7 +558,10 @@
     "price": 9500,
     "image": "sardy/IMG_6235.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-048",
@@ -429,7 +570,10 @@
     "price": 9500,
     "image": "sardy/IMG_6237.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-049",
@@ -438,7 +582,10 @@
     "price": 21000,
     "image": "sardy/IMG_6236.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-050",
@@ -447,7 +594,10 @@
     "price": 2250,
     "image": "sardy/IMG_6239.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-051",
@@ -456,7 +606,10 @@
     "price": 2250,
     "image": "sardy/IMG_6240.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-052",
@@ -465,7 +618,10 @@
     "price": 2250,
     "image": "sardy/IMG_6241.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-053",
@@ -474,7 +630,10 @@
     "price": 6500,
     "image": "sardy/IMG_6242.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-054",
@@ -483,7 +642,10 @@
     "price": 6500,
     "image": "sardy/IMG_6243.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-055",
@@ -492,7 +654,10 @@
     "price": 6500,
     "image": "sardy/IMG_6245.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-056",
@@ -501,7 +666,10 @@
     "price": 6500,
     "image": "sardy/IMG_6246.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-057",
@@ -510,7 +678,10 @@
     "price": 9500,
     "image": "sardy/IMG_6244.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-058",
@@ -519,7 +690,10 @@
     "price": 9500,
     "image": "sardy/IMG_6247.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-059",
@@ -528,7 +702,10 @@
     "price": 6000,
     "image": "sardy/IMG_6248.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-060",
@@ -537,7 +714,10 @@
     "price": 3000,
     "image": "sardy/IMG_6249.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-061",
@@ -546,7 +726,10 @@
     "price": 4000,
     "image": "sardy/IMG_6250.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-062",
@@ -555,7 +738,10 @@
     "price": 4000,
     "image": "sardy/IMG_6252.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-063",
@@ -564,7 +750,10 @@
     "price": 4000,
     "image": "sardy/IMG_6253.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-064",
@@ -573,7 +762,10 @@
     "price": 8000,
     "image": "sardy/IMG_6254.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-065",
@@ -582,7 +774,10 @@
     "price": 8000,
     "image": "sardy/IMG_6255.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-066",
@@ -591,7 +786,10 @@
     "price": 8000,
     "image": "sardy/IMG_6256.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-067",
@@ -600,7 +798,10 @@
     "price": 8000,
     "image": "sardy/IMG_6257.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-068",
@@ -609,7 +810,10 @@
     "price": 3250,
     "image": "sardy/IMG_6258.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-069",
@@ -618,7 +822,10 @@
     "price": 3250,
     "image": "sardy/IMG_6259.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-070",
@@ -627,7 +834,10 @@
     "price": 3250,
     "image": "sardy/IMG_6260.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-071",
@@ -636,7 +846,10 @@
     "price": 3250,
     "image": "sardy/IMG_6261.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-072",
@@ -645,7 +858,10 @@
     "price": 3250,
     "image": "sardy/IMG_6262.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-073",
@@ -654,7 +870,10 @@
     "price": 3250,
     "image": "sardy/IMG_6263.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-074",
@@ -663,7 +882,10 @@
     "price": 3250,
     "image": "sardy/IMG_6264.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-075",
@@ -672,7 +894,10 @@
     "price": 14500,
     "image": "sardy/IMG_6265.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-076",
@@ -681,7 +906,10 @@
     "price": 14500,
     "image": "sardy/IMG_6266.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-077",
@@ -690,7 +918,10 @@
     "price": 14500,
     "image": "sardy/IMG_6267.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-078",
@@ -699,7 +930,10 @@
     "price": 14500,
     "image": "sardy/IMG_6268.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-079",
@@ -708,7 +942,10 @@
     "price": 14500,
     "image": "sardy/IMG_6269.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-080",
@@ -717,7 +954,10 @@
     "price": 14500,
     "image": "sardy/IMG_6270.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-081",
@@ -726,7 +966,10 @@
     "price": 9500,
     "image": "sardy/IMG_6271.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-082",
@@ -735,7 +978,10 @@
     "price": 6500,
     "image": "sardy/IMG_6272.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-083",
@@ -744,7 +990,10 @@
     "price": 4500,
     "image": "sardy/IMG_6274.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-084",
@@ -753,7 +1002,10 @@
     "price": 6500,
     "image": "sardy/IMG_6275.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-085",
@@ -762,7 +1014,10 @@
     "price": 6500,
     "image": "sardy/IMG_6276.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-086",
@@ -771,7 +1026,10 @@
     "price": 4500,
     "image": "sardy/IMG_6277.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-087",
@@ -780,7 +1038,10 @@
     "price": 6500,
     "image": "sardy/IMG_6278.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-088",
@@ -789,7 +1050,10 @@
     "price": 3000,
     "image": "sardy/IMG_6279.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-089",
@@ -798,7 +1062,10 @@
     "price": 3000,
     "image": "sardy/IMG_6280.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-090",
@@ -807,7 +1074,10 @@
     "price": 5500,
     "image": "sardy/IMG_6281.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-091",
@@ -816,7 +1086,10 @@
     "price": 2250,
     "image": "sardy/IMG_6282.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-092",
@@ -825,7 +1098,10 @@
     "price": 2250,
     "image": "sardy/IMG_6283.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-093",
@@ -834,7 +1110,10 @@
     "price": 2250,
     "image": "sardy/IMG_6284.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-094",
@@ -843,7 +1122,10 @@
     "price": 3000,
     "image": "sardy/IMG_6285.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-095",
@@ -852,7 +1134,10 @@
     "price": 4500,
     "image": "sardy/IMG_6286.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-096",
@@ -861,7 +1146,10 @@
     "price": 4500,
     "image": "sardy/IMG_6287.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-1772043001326",
@@ -870,7 +1158,10 @@
     "price": 5500,
     "image": "sardy/IMG_6341.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-1772043505832",
@@ -879,7 +1170,10 @@
     "price": 3000,
     "image": "sardy/IMG_6342.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-1772053943960",
@@ -888,7 +1182,10 @@
     "price": 4500,
     "image": "sardy/IMG_6374.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-1772053977838",
@@ -897,7 +1194,10 @@
     "price": 4500,
     "image": "sardy/IMG_6373.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-1772054011207",
@@ -906,6 +1206,9 @@
     "price": 4500,
     "image": "sardy/IMG_6372.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   }
 ]
