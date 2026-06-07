@@ -562,8 +562,9 @@
     const GH_CONFIG_KEY = 'githubConfig_v1';
     const GH_TOKEN_SESSION_KEY = 'githubToken_session_v1';
     const GH_TOKEN_STORAGE_KEY = 'githubToken_v1';
+    const GH_TOKEN_REMEMBER_KEY = 'githubTokenRemember_v1';
     const LOCAL_DRAFT_KEY = 'adminDraft_products_v1';
-    const HARDCODED_GH_TOKEN = 'ghp_REPLACE_WITH_YOUR_TOKEN';
+    const HARDCODED_GH_TOKEN = '';
     const HARDCODED_GH_USERNAME = 'mhamadrebae-pixel';
     const HARDCODED_GH_REPO = 'kogay-rasty';
     const HARDCODED_GH_BRANCH = 'main';
@@ -576,6 +577,11 @@
       baby: { name: 'مناڵان', icon: 'fa-baby', color: '#f472b6' },
       family: { name: 'عایلەی', icon: 'fa-users', color: '#4ade80' }
     };
+
+    const PRODUCT_CATEGORY_FILES = Object.fromEntries(
+      Object.keys(catInfo).map(category => [category, `products-${category}.json`])
+    );
+    const DEFAULT_PRODUCT_CATEGORY = Object.keys(catInfo)[0] || 'cake';
 
     // Keep uploaded product images organized in predictable category folders.
     const CATEGORY_IMAGE_FOLDERS = {
@@ -602,6 +608,8 @@
     let addImageObjectUrl = '';
     let editImageObjectUrl = '';
     let ghTokenHealth = { state: 'unknown', source: 'none', detail: '', checkedAt: 0 };
+    let lastLoadedRemoteFingerprint = '';
+    let lastLoadedRemoteSource = 'none';
 
     function escapeHtml(value) {
       return String(value ?? '').replace(/[&<>"']/g, char => ({
@@ -709,32 +717,90 @@
       idInput.value = generateProductId(name, category);
     }
 
-    function normalizeProductRecord(product) {
-      const category = String(product?.category || '').trim();
-      const price = Number(product?.price);
-      return {
-        ...product,
-        id: String(product?.id || '').trim(),
-        name: String(product?.name || '').trim(),
-        category: catInfo[category] ? category : 'cake',
-        price: Number.isFinite(price) && price >= 0 ? Math.round(price) : 0,
-        description: String(product?.description || '').trim(),
-        image: String(product?.image || '').trim(),
-        hidden: Boolean(product?.hidden)
+    function isValidCategory(category) {
+      return Object.prototype.hasOwnProperty.call(catInfo, String(category || '').trim());
+    }
+
+    function sortProductKeys(product = {}) {
+      return Object.keys(product)
+        .sort()
+        .reduce((acc, key) => {
+          acc[key] = product[key];
+          return acc;
+        }, {});
+    }
+
+    function getProductsFingerprint(products = []) {
+      const comparable = normalizeProductList(products)
+        .map(product => sortProductKeys(product))
+        .sort((a, b) => String(a.id || '').localeCompare(String(b.id || '')));
+      const json = JSON.stringify(comparable);
+      let hash = 2166136261;
+      for (let index = 0; index < json.length; index += 1) {
+        hash ^= json.charCodeAt(index);
+        hash = Math.imul(hash, 16777619);
+      }
+      return `${comparable.length}:${(hash >>> 0).toString(16)}`;
+    }
+
+    function normalizeProductRecord(product = {}, options = {}) {
+      const source = product && typeof product === 'object' ? product : {};
+      const touchUpdatedAt = Boolean(options.touchUpdatedAt);
+      const allowIdGeneration = options.allowIdGeneration !== false;
+      const rawCategory = String(source.category || '').trim();
+      const normalizedPrice = Number(source.price);
+      const now = new Date().toISOString();
+      const normalized = {
+        ...source,
+        id: String(source.id || '').trim(),
+        name: String(source.name || '').trim(),
+        name_en: String(source.name_en || '').trim(),
+        category: isValidCategory(rawCategory) ? rawCategory : DEFAULT_PRODUCT_CATEGORY,
+        price: Number.isFinite(normalizedPrice) && normalizedPrice >= 0 ? normalizedPrice : 0,
+        description: String(source.description || '').trim(),
+        description_en: String(source.description_en || '').trim(),
+        image: String(source.image || '').trim(),
+        image_webp: String(source.image_webp || '').trim(),
+        hidden: Boolean(source.hidden)
       };
+
+      if (!normalized.id && allowIdGeneration) {
+        normalized.id = generateProductId(normalized.name || normalized.name_en, normalized.category);
+      }
+
+      if (touchUpdatedAt) {
+        if (!normalized.createdAt) {
+          normalized.createdAt = source.createdAt || now;
+        }
+        normalized.updatedAt = now;
+      }
+
+      return normalized;
     }
 
     function normalizeProductList(data) {
       if (!Array.isArray(data)) return [];
+      const seenIds = new Set();
       return data
-        .filter(product => product && typeof product === 'object' && product.id && product.name)
-        .map(normalizeProductRecord);
+        .filter(product => product && typeof product === 'object')
+        .map(product => normalizeProductRecord(product, { allowIdGeneration: false }))
+        .filter(product => {
+          const id = String(product.id || '').trim();
+          const idKey = id.toLowerCase();
+          const hasName = Boolean(product.name || product.name_en);
+          if (!id || !hasName || !isValidCategory(product.category) || seenIds.has(idKey)) {
+            return false;
+          }
+          seenIds.add(idKey);
+          return true;
+        });
     }
 
     function buildProductFiles(products) {
-      const files = { 'products.json': products };
-      Object.keys(catInfo).forEach(category => {
-        files[`products-${category}.json`] = products.filter(product => product.category === category);
+      const normalizedProducts = normalizeProductList(products);
+      const files = { 'products.json': normalizedProducts };
+      Object.entries(PRODUCT_CATEGORY_FILES).forEach(([category, fileName]) => {
+        files[fileName] = normalizedProducts.filter(product => product.category === category);
       });
       return files;
     }
@@ -752,26 +818,30 @@
     }
 
     function hasRealHardcodedToken() {
-      const token = String(HARDCODED_GH_TOKEN || '').trim();
-      if (!token) return false;
-      return !/REPLACE_WITH_YOUR_TOKEN/i.test(token) && !/^ghp_x+$/i.test(token);
+      return false;
     }
 
     function getHardcodedGhConfig() {
       return {
-        token: hasRealHardcodedToken() ? String(HARDCODED_GH_TOKEN || '').trim() : '',
+        token: '',
         username: String(HARDCODED_GH_USERNAME || '').trim(),
         repo: String(HARDCODED_GH_REPO || '').trim(),
         branch: String(HARDCODED_GH_BRANCH || 'main').trim() || 'main'
       };
     }
 
-    function sanitizeGhConfig() {
-      return getHardcodedGhConfig();
+    function sanitizeGhConfig(config = {}) {
+      const source = config && typeof config === 'object' ? config : {};
+      return {
+        username: String(source.username || HARDCODED_GH_USERNAME || '').trim(),
+        repo: String(source.repo || HARDCODED_GH_REPO || '').trim(),
+        branch: String(source.branch || HARDCODED_GH_BRANCH || 'main').trim() || 'main',
+        token: String(source.token || '').trim()
+      };
     }
 
     function getConfiguredBranch(config = ghConfig) {
-      return String(config?.branch || HARDCODED_GH_BRANCH || '').trim() || 'main';
+      return String(config?.branch || HARDCODED_GH_BRANCH || 'main').trim() || 'main';
     }
 
     function buildGitHubRepoApiUrl(username, repo) {
@@ -789,26 +859,15 @@
       return `${repoUrl}/contents/${encodedPath}`;
     }
 
-    function getSessionGhToken() {
-      return getHardcodedGhConfig().token;
-    }
-
-    function setSessionGhToken() {
-      return getHardcodedGhConfig().token;
-    }
-
-    function getStoredGhToken() {
-      return getHardcodedGhConfig().token;
-    }
-
-    function setStoredGhToken() {
-      return getHardcodedGhConfig().token;
-    }
-
     function getGitHubAuthHeaders(token, contentType = '') {
+      const cleanToken = String(token || '').trim();
+      if (!cleanToken) {
+        throw new Error('GitHub token is missing.');
+      }
       const headers = {
-        'Authorization': `Bearer ${String(token || '').trim()}`,
-        'Accept': 'application/vnd.github+json'
+        'Accept': 'application/vnd.github+json',
+        'Authorization': `Bearer ${cleanToken}`,
+        'X-GitHub-Api-Version': '2022-11-28'
       };
       if (contentType) headers['Content-Type'] = contentType;
       return headers;
@@ -893,7 +952,11 @@
         const parsed = JSON.parse(raw);
         if (!Array.isArray(parsed?.products)) return null;
         return {
+          reason: String(parsed.reason || 'unsaved').trim() || 'unsaved',
           savedAt: Number(parsed.savedAt) || 0,
+          baseFingerprint: String(parsed.baseFingerprint || '').trim(),
+          repo: String(parsed.repo || '').trim(),
+          branch: String(parsed.branch || '').trim(),
           products: normalizeProductList(parsed.products)
         };
       } catch (error) {
@@ -903,11 +966,17 @@
 
     function saveLocalDraft(reason = 'unsaved') {
       try {
-        if (!Array.isArray(currentProducts) || currentProducts.length === 0) return;
+        if (!Array.isArray(currentProducts)) return;
+        const repoIdentity = ghConfig?.username && ghConfig?.repo
+          ? `${ghConfig.username}/${ghConfig.repo}`
+          : '';
         localStorage.setItem(LOCAL_DRAFT_KEY, JSON.stringify({
           reason,
           savedAt: Date.now(),
-          products: currentProducts.map(normalizeProductRecord)
+          baseFingerprint: lastLoadedRemoteFingerprint || getProductsFingerprint(currentProducts),
+          repo: repoIdentity,
+          branch: getConfiguredBranch(),
+          products: currentProducts.map(product => normalizeProductRecord(product, { allowIdGeneration: false }))
         }));
       } catch (error) {
         console.warn('Could not save local draft', error);
@@ -921,17 +990,99 @@
       }
     }
 
-    function restoreLocalDraftIfAvailable() {
-      const draft = readLocalDraft();
-      if (!draft?.products?.length) return false;
-      currentProducts = draft.products;
+    function getDraftSavedAtLabel(draft) {
+      const timestamp = Number(draft?.savedAt) || 0;
+      if (!timestamp) return '';
+      try {
+        return new Date(timestamp).toLocaleString();
+      } catch (error) {
+        return '';
+      }
+    }
+
+    function applyDraftProducts(draft) {
+      if (!draft || !Array.isArray(draft.products)) return false;
+      currentProducts = normalizeProductList(draft.products);
       hasUnsavedChanges = true;
-      document.getElementById('publishBar').classList.add('show');
+      document.getElementById('publishBar')?.classList.add('show');
       updateChangesBadge();
       document.getElementById('navBadge').textContent = currentProducts.length;
+      const dot = document.getElementById('bnDot');
+      if (dot) dot.style.display = currentProducts.length ? 'block' : 'none';
       updateUndoButton();
-      toast('Local draft restored. If publish is blocked, add a valid GitHub token in Settings.', 'info');
+      refreshNewProductIdPreview();
       return true;
+    }
+
+    function restoreSavedDraft(forcePrompt = true) {
+      const draft = readLocalDraft();
+      if (!draft) {
+        toast('No local draft is saved in this browser.', 'info');
+        return false;
+      }
+      const restoreNow = () => {
+        if (!applyDraftProducts(draft)) return;
+        renderDash();
+        if (document.getElementById('page-products')?.classList.contains('active')) renderTable();
+        updateGhStatus();
+        toast('Local draft restored. Publish when you are ready.', 'info');
+      };
+      if (!forcePrompt) {
+        restoreNow();
+        return true;
+      }
+      const savedAtLabel = getDraftSavedAtLabel(draft);
+      showConfirm(
+        'Restore local draft',
+        savedAtLabel
+          ? `Restore the local draft saved on ${savedAtLabel}? GitHub products will stay unchanged until you publish.`
+          : 'Restore the saved local draft? GitHub products will stay unchanged until you publish.',
+        restoreNow
+      );
+      return true;
+    }
+
+    function restoreLocalDraftIfAvailable(options = {}) {
+      const { remoteLoaded = false, allowPrompt = true } = options;
+      const draft = readLocalDraft();
+      if (!draft) return false;
+
+      if (!remoteLoaded) {
+        applyDraftProducts(draft);
+        toast('Local draft restored because GitHub products could not be loaded.', 'info');
+        return true;
+      }
+
+      const repoIdentity = ghConfig?.username && ghConfig?.repo
+        ? `${ghConfig.username}/${ghConfig.repo}`
+        : '';
+      const sameRepo = !draft.repo || draft.repo === repoIdentity;
+      const sameBranch = !draft.branch || draft.branch === getConfiguredBranch();
+      const remoteChanged = Boolean(
+        draft.baseFingerprint &&
+        lastLoadedRemoteFingerprint &&
+        draft.baseFingerprint !== lastLoadedRemoteFingerprint
+      );
+
+      if (sameRepo && sameBranch && !remoteChanged) {
+        applyDraftProducts(draft);
+        toast('Local draft restored.', 'info');
+        return true;
+      }
+
+      if (allowPrompt) {
+        const savedAtLabel = getDraftSavedAtLabel(draft);
+        toast('GitHub products were kept. A local draft is still available in this browser.', 'info');
+        showConfirm(
+          'Restore local draft',
+          savedAtLabel
+            ? `A local draft from ${savedAtLabel} is available, but GitHub products changed after it was saved. Restore the draft in admin?`
+            : 'A local draft is available, but GitHub products changed after it was saved. Restore the draft in admin?',
+          () => restoreSavedDraft(false)
+        );
+      }
+
+      return false;
     }
 
     // Persist repo identity plus the current GitHub token inside this browser so publish/upload keep working after reloads.
@@ -1079,6 +1230,24 @@
       return cleanToken;
     }
 
+    function isGhTokenRemembered() {
+      try {
+        return localStorage.getItem(GH_TOKEN_REMEMBER_KEY) === 'true';
+      } catch (error) {
+        return false;
+      }
+    }
+
+    function setGhTokenRemembered(remember) {
+      const nextValue = Boolean(remember);
+      try {
+        if (nextValue) localStorage.setItem(GH_TOKEN_REMEMBER_KEY, 'true');
+        else localStorage.removeItem(GH_TOKEN_REMEMBER_KEY);
+      } catch (error) {
+      }
+      return nextValue;
+    }
+
     function getStoredGhConfigMeta() {
       try {
         const raw = localStorage.getItem(GH_CONFIG_KEY);
@@ -1090,9 +1259,13 @@
     }
 
     function getActiveGhTokenSource() {
+      try {
+        const sessionToken = sessionStorage.getItem(GH_TOKEN_SESSION_KEY) || '';
+        if (sessionToken) return { token: sessionToken, source: 'session' };
+      } catch (error) {
+      }
       const browserToken = getBrowserStoredGhToken();
-      if (browserToken) return { token: browserToken, source: 'browser' };
-      if (hasRealHardcodedToken()) return { token: String(HARDCODED_GH_TOKEN || '').trim(), source: 'hardcoded' };
+      if (browserToken) return { token: browserToken, source: 'local' };
       return { token: '', source: 'none' };
     }
 
@@ -1105,7 +1278,6 @@
         localStorage.removeItem('adminHashIterations');
         localStorage.removeItem('adminHashScheme');
         localStorage.removeItem('adminSession_v2');
-        sessionStorage.removeItem(GH_TOKEN_SESSION_KEY);
         sessionStorage.removeItem('adminSession_v2');
       } catch (error) {
       }
@@ -1158,25 +1330,43 @@
       hideLoginError();
     }
 
-    function persistGhConfig(config = {}, tokenOverride) {
+    function persistGhConfig(config = {}, tokenOverride, options = {}) {
       const savedMeta = getStoredGhConfigMeta();
-      const source = getActiveGhTokenSource();
-      const nextBranch = String(config?.branch || savedMeta.branch || HARDCODED_GH_BRANCH || 'main').trim() || 'main';
-      let nextToken = source.token;
+      const fallbackConfig = sanitizeGhConfig({
+        username: savedMeta.username || HARDCODED_GH_USERNAME,
+        repo: savedMeta.repo || HARDCODED_GH_REPO,
+        branch: savedMeta.branch || HARDCODED_GH_BRANCH
+      });
+      const normalized = sanitizeGhConfig({
+        ...fallbackConfig,
+        ...config
+      });
+      const rememberToken = setGhTokenRemembered(
+        typeof options.rememberToken === 'boolean' ? options.rememberToken : isGhTokenRemembered()
+      );
+      const nextToken = String(
+        typeof tokenOverride === 'string'
+          ? tokenOverride
+          : (config?.token || getActiveGhTokenSource().token || '')
+      ).trim();
 
-      if (typeof tokenOverride === 'string') {
-        nextToken = setBrowserStoredGhToken(tokenOverride);
-      }
+      setSessionGhToken(nextToken);
+      if (rememberToken) setStoredGhToken(nextToken);
+      else setStoredGhToken('');
 
       ghConfig = {
-        username: String(HARDCODED_GH_USERNAME || '').trim(),
-        repo: String(HARDCODED_GH_REPO || '').trim(),
-        branch: nextBranch,
-        token: nextToken
+        username: normalized.username,
+        repo: normalized.repo,
+        branch: normalized.branch,
+        token: getSessionGhToken() || getStoredGhToken() || ''
       };
 
       try {
-        localStorage.setItem(GH_CONFIG_KEY, JSON.stringify({ branch: nextBranch }));
+        localStorage.setItem(GH_CONFIG_KEY, JSON.stringify({
+          username: normalized.username,
+          repo: normalized.repo,
+          branch: normalized.branch
+        }));
       } catch (error) {
       }
 
@@ -1203,23 +1393,39 @@
         settingsStack.innerHTML = `
           <div class="security-note">
             <strong>Security note:</strong>
-            This admin is password-only with a hardcoded repository config and an 8-hour local session.
-            If publish or image upload does not work, paste a valid GitHub token below and save it in this browser.
+            This admin is still frontend-only. GitHub publishing can use a session-only token, or you can explicitly remember the token on this device.
           </div>
           <div class="s-card">
-            <div class="s-card-title"><i class="fab fa-github"></i> GitHub Publish Token</div>
+            <div class="s-card-title"><i class="fab fa-github"></i> GitHub Publish Settings</div>
             <div id="ghInfo" style="margin-bottom:16px;font-size:13px;color:var(--text2)"></div>
+            <div class="form-group">
+              <label class="form-label">Repository Owner</label>
+              <input type="text" class="form-control" id="newGhOwner" placeholder="mhamadrebae-pixel" autocomplete="off" style="direction:ltr">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Repository Name</label>
+              <input type="text" class="form-control" id="newGhRepo" placeholder="kogay-rasty" autocomplete="off" style="direction:ltr">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Branch</label>
+              <input type="text" class="form-control" id="newBranch" placeholder="main" autocomplete="off" style="direction:ltr">
+            </div>
             <div class="form-group">
               <label class="form-label">GitHub Token</label>
               <input type="password" class="form-control" id="newToken" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx" style="direction:ltr" autocomplete="off">
-              <div class="form-hint">This token is stored only in this browser on this device.</div>
+              <label style="display:flex;align-items:center;gap:8px;margin-top:10px;font-size:13px;color:var(--text2)">
+                <input type="checkbox" id="rememberToken">
+                <span>Remember this token on this device</span>
+              </label>
+              <div class="form-hint">If unchecked, the token is stored only in this browser session.</div>
             </div>
             <div style="display:flex;gap:8px;flex-wrap:wrap">
-              <button class="btn btn-primary" onclick="updateToken()"><i class="fas fa-check"></i> Save Token</button>
+              <button class="btn btn-primary" onclick="updateToken()"><i class="fas fa-check"></i> Save GitHub Settings</button>
               <button class="btn btn-secondary" onclick="refreshGitHubTokenHealth(true)"><i class="fas fa-rotate-right"></i> Check Token</button>
               <button class="btn btn-danger" onclick="clearStoredGhToken()"><i class="fas fa-trash"></i> Clear Token</button>
+              <button class="btn btn-secondary" onclick="restoreSavedDraft()"><i class="fas fa-clock-rotate-left"></i> Restore Draft</button>
             </div>
-            <div class="form-hint" style="margin-top:12px">Repository, owner, and branch still come from <code>admin.html</code>. Only the token is updated from this panel.</div>
+            <div class="form-hint" style="margin-top:12px">Publishing validates the exact owner/repo/branch shown here before any file is committed.</div>
           </div>
           <div class="s-card">
             <div class="s-card-title"><i class="fas fa-rotate-right"></i> Auto Refresh</div>
@@ -1246,15 +1452,33 @@
 
     function syncSetupPrefill() {
       const tokenInput = document.getElementById('newToken');
-      if (tokenInput) tokenInput.value = getBrowserStoredGhToken();
+      const ownerInput = document.getElementById('newGhOwner');
+      const repoInput = document.getElementById('newGhRepo');
+      const branchInput = document.getElementById('newBranch');
+      const rememberInput = document.getElementById('rememberToken');
+      if (tokenInput && document.activeElement !== tokenInput) tokenInput.value = getSessionGhToken() || getStoredGhToken();
+      if (ownerInput) ownerInput.value = String(ghConfig?.username || HARDCODED_GH_USERNAME || '').trim();
+      if (repoInput) repoInput.value = String(ghConfig?.repo || HARDCODED_GH_REPO || '').trim();
+      if (branchInput) branchInput.value = getConfiguredBranch();
+      if (rememberInput) rememberInput.checked = isGhTokenRemembered();
     }
 
     function getSessionGhToken() {
-      return getBrowserStoredGhToken();
+      try {
+        return sessionStorage.getItem(GH_TOKEN_SESSION_KEY) || getStoredGhToken() || '';
+      } catch (error) {
+        return getStoredGhToken() || '';
+      }
     }
 
     function setSessionGhToken(token) {
-      return setBrowserStoredGhToken(token);
+      const cleanToken = String(token || '').trim();
+      try {
+        if (cleanToken) sessionStorage.setItem(GH_TOKEN_SESSION_KEY, cleanToken);
+        else sessionStorage.removeItem(GH_TOKEN_SESSION_KEY);
+      } catch (error) {
+      }
+      return cleanToken;
     }
 
     function getStoredGhToken() {
@@ -1306,13 +1530,14 @@
       const snapshot = undoStack.pop();
       if (!snapshot) return;
       try {
-        currentProducts = JSON.parse(snapshot);
+        currentProducts = normalizeProductList(JSON.parse(snapshot));
         hasUnsavedChanges = true;
         document.getElementById('publishBar').classList.add('show');
         updateChangesBadge();
         renderTable();
         renderDash();
         saveLocalDraft('undo');
+        updateGhStatus();
         toast('Undo complete ✓', 'info');
       } catch (error) {
         toast('Undo failed', 'error');
@@ -1859,11 +2084,12 @@
 
     async function doRefresh() {
       showLoad('نوێکردنەوەی کاڵاکان...');
-      await loadProductsFromGitHub();
+      const loaded = await loadProductsFromGitHub();
       clearLocalDraft();
       hideLoad();
       renderDash();
       if (document.getElementById('page-products').classList.contains('active')) renderTable();
+      updateGhStatus();
       toast('کاڵاکان نوێکرانەوە ✓', 'success');
     }
 
@@ -1893,20 +2119,32 @@
     async function loadProductsFromGitHub() {
       if (!ghConfig) return false;
 
-      const applyProducts = data => {
+      const applyProducts = (data, source = 'unknown') => {
         currentProducts = normalizeProductList(data);
+        lastLoadedRemoteFingerprint = getProductsFingerprint(currentProducts);
+        lastLoadedRemoteSource = source;
         document.getElementById('navBadge').textContent = currentProducts.length;
         const dot = document.getElementById('bnDot');
         if (dot) dot.style.display = currentProducts.length ? 'block' : 'none';
         updateChangesBadge();
+        refreshNewProductIdPreview();
         return true;
       };
+
+      try {
+        if (ghConfig?.token) {
+          const remoteProducts = await readGitHubJsonFile('products.json', ghConfig);
+          if (Array.isArray(remoteProducts)) return applyProducts(remoteProducts, 'contents-api');
+        }
+      } catch (e) {
+        console.warn('GitHub contents API fetch:', e);
+      }
 
       try {
         const { username, repo } = ghConfig;
         const remoteUrl = `https://raw.githubusercontent.com/${username}/${repo}/${encodeURIComponent(getConfiguredBranch())}/products.json?v=${Date.now()}`;
         const res = await fetch(remoteUrl, { cache: 'no-store' });
-        if (res.ok) return applyProducts(await res.json());
+        if (res.ok) return applyProducts(await res.json(), 'raw');
         console.warn('GitHub products fetch failed:', res.status);
       } catch (e) {
         console.warn('GitHub fetch:', e);
@@ -1916,7 +2154,7 @@
       // keep the admin panel usable from the local/GitHub Pages products.json file.
       try {
         const localRes = await fetch(`./products.json?v=${Date.now()}`, { cache: 'no-store' });
-        if (localRes.ok) return applyProducts(await localRes.json());
+        if (localRes.ok) return applyProducts(await localRes.json(), 'local-fallback');
         console.warn('Local products fallback failed:', localRes.status);
       } catch (e) {
         console.warn('Local products fallback:', e);
@@ -2173,85 +2411,186 @@
       document.getElementById('navBadge').textContent = currentProducts.length;
       updateUndoButton();
       saveLocalDraft('unsaved');
+      updateGhStatus();
     }
 
     // GitHub Contents API expects base64 text, so JSON is encoded in chunks to stay browser-safe.
     function encodeStringToBase64(str) {
-      const bytes = new TextEncoder().encode(str);
-      let bin = '';
-      for (let i = 0; i < bytes.length; i += 8192) {
-        bin += String.fromCharCode(...bytes.subarray(i, i + 8192));
+      const bytes = new TextEncoder().encode(String(str || ''));
+      let binary = '';
+      const chunkSize = 0x8000;
+      for (let index = 0; index < bytes.length; index += chunkSize) {
+        binary += String.fromCharCode(...bytes.subarray(index, index + chunkSize));
       }
-      return btoa(bin);
+      return btoa(binary);
     }
 
-    async function getRepoFileSha(path) {
-      const branch = getConfiguredBranch();
-      const res = await fetch(`${buildGitHubContentsApiUrl(path)}?ref=${encodeURIComponent(branch)}`, {
-        headers: getGitHubAuthHeaders(ghConfig.token)
+    function decodeBase64ToString(base64Text) {
+      const sanitized = String(base64Text || '').replace(/\s+/g, '');
+      if (!sanitized) return '';
+      const binary = atob(sanitized);
+      const bytes = new Uint8Array(binary.length);
+      for (let index = 0; index < binary.length; index += 1) {
+        bytes[index] = binary.charCodeAt(index);
+      }
+      return new TextDecoder().decode(bytes);
+    }
+
+    async function readGitHubApiError(response) {
+      let detail = '';
+      try {
+        const data = await response.json();
+        detail = String(data?.message || '').trim();
+      } catch (error) {
+      }
+      return detail || response.statusText || 'Unknown GitHub error';
+    }
+
+    function formatGitHubApiError(status, path, detail, operation = 'publish') {
+      const cleanDetail = String(detail || '').trim();
+      if (status === 401) {
+        return `GitHub returned 401 for ${path}. The token is missing, invalid, expired, or copied incompletely.${cleanDetail ? ` ${cleanDetail}` : ''}`;
+      }
+      if (status === 403) {
+        return `GitHub returned 403 for ${path}. The token does not have repository contents permission or the API rate limit was reached.${cleanDetail ? ` ${cleanDetail}` : ''}`;
+      }
+      if (status === 404) {
+        return `GitHub returned 404 for ${path}. Check the owner, repository, branch, and file path.${cleanDetail ? ` ${cleanDetail}` : ''}`;
+      }
+      return `GitHub could not ${operation} ${path} (${status}).${cleanDetail ? ` ${cleanDetail}` : ''}`;
+    }
+
+    async function readGitHubJsonFile(path, config = ghConfig) {
+      const cleanPath = String(path || '').replace(/^\/+/, '');
+      const branch = getConfiguredBranch(config);
+      const res = await fetch(`${buildGitHubContentsApiUrl(cleanPath, config)}?ref=${encodeURIComponent(branch)}`, {
+        headers: getGitHubAuthHeaders(config?.token),
+        cache: 'no-store'
       });
-      if (res.status === 404) return null;
       if (!res.ok) {
-        const err = await res.json().catch(() => ({}));
-        throw new Error(err.message || `Unable to read ${path}`);
+        const detail = await readGitHubApiError(res);
+        throw new Error(formatGitHubApiError(res.status, cleanPath, detail, 'read'));
       }
-      const data = await res.json();
-      return data.sha || null;
+      const file = await res.json();
+      const jsonText = decodeBase64ToString(file?.content || '');
+      return JSON.parse(jsonText || '[]');
     }
 
-    async function uploadGitHubJsonFile(path, data, message) {
+    async function putJsonFileToGitHub(path, data, config = ghConfig) {
+      const cleanPath = String(path || '').replace(/^\/+/, '');
+      const branch = getConfiguredBranch(config);
+      const url = buildGitHubContentsApiUrl(cleanPath, config);
+      let sha = null;
+
+      const getRes = await fetch(`${url}?ref=${encodeURIComponent(branch)}`, {
+        method: 'GET',
+        headers: getGitHubAuthHeaders(config?.token),
+        cache: 'no-store'
+      });
+
+      if (getRes.ok) {
+        const currentFile = await getRes.json();
+        sha = currentFile?.sha || null;
+      } else if (getRes.status !== 404) {
+        const detail = await readGitHubApiError(getRes);
+        throw new Error(formatGitHubApiError(getRes.status, cleanPath, detail, 'read'));
+      }
+
       const body = {
-        message,
-        content: encodeStringToBase64(JSON.stringify(data, null, 2)),
-        branch: getConfiguredBranch()
+        message: `Update ${cleanPath}`,
+        content: encodeStringToBase64(JSON.stringify(data, null, 2) + '\n'),
+        branch
       };
-      const sha = await getRepoFileSha(path);
       if (sha) body.sha = sha;
-      const res = await fetch(buildGitHubContentsApiUrl(path), {
+
+      const putRes = await fetch(url, {
         method: 'PUT',
-        headers: getGitHubAuthHeaders(ghConfig.token, 'application/json'),
+        headers: getGitHubAuthHeaders(config?.token, 'application/json'),
         body: JSON.stringify(body)
       });
-      if (!res.ok) {
-        const err = await res.json().catch(() => ({}));
-        throw new Error(err.message || `Could not upload ${path}`);
+
+      if (!putRes.ok) {
+        const detail = await readGitHubApiError(putRes);
+        throw new Error(formatGitHubApiError(putRes.status, cleanPath, detail, 'publish'));
       }
+
+      return putRes.json();
+    }
+
+    function getPublishReadyGhConfig() {
+      const activeToken = getSessionGhToken() || getStoredGhToken();
+      return sanitizeGhConfig({
+        ...(ghConfig || getStoredGhConfigMeta()),
+        token: activeToken
+      });
     }
 
     async function publishJSON() {
-      if (!ghConfig?.token || !ghConfig?.username || !ghConfig?.repo) {
-        promptForGitHubToken('GitHub token/config is missing');
+      const publishConfig = getPublishReadyGhConfig();
+      if (!publishConfig.token) {
+        promptForGitHubToken('A GitHub token is required before publishing product files.');
+        return;
+      }
+      if (!publishConfig.username || !publishConfig.repo) {
+        toast('Repository owner or name is missing in GitHub settings.', 'error');
         return;
       }
       showLoad('Preparing product files...');
       try {
-        const normalizedProducts = currentProducts.map(normalizeProductRecord);
-        const visible = normalizedProducts.filter(p => !p.hidden);
+        ghConfig = persistGhConfig(publishConfig, publishConfig.token, { rememberToken: isGhTokenRemembered() });
+        const normalizedProducts = normalizeProductList(currentProducts);
+        const visible = normalizedProducts.filter(product => !product.hidden);
         const productFiles = buildProductFiles(normalizedProducts);
         const entries = Object.entries(productFiles);
 
         for (let index = 0; index < entries.length; index += 1) {
           const [path, fileData] = entries[index];
           document.getElementById('loadingText').textContent = `Publishing ${path} (${index + 1}/${entries.length})...`;
-          await uploadGitHubJsonFile(
-            path,
-            fileData,
-            `Update ${path} (${fileData.length} items, ${visible.length} visible overall)`
-          );
+          await putJsonFileToGitHub(path, fileData, ghConfig);
         }
 
         currentProducts = normalizedProducts;
+        lastLoadedRemoteFingerprint = getProductsFingerprint(normalizedProducts);
+        lastLoadedRemoteSource = 'publish';
         hideLoad();
         hasUnsavedChanges = false;
         clearLocalDraft();
-        document.getElementById('publishBar').classList.remove('show');
+        document.getElementById('publishBar')?.classList.remove('show');
         updateChangesBadge();
         updateGhStatus();
         toast(`${entries.length} product files published successfully`, 'success');
       } catch (error) {
         hideLoad();
-        toast('Publish failed: ' + error.message, 'error');
+        toast('Publish failed: ' + (error?.message || 'Unknown error'), 'error');
       }
+    }
+
+    function validateProductInput({ id, name, category, price, image }, { existingId = '' } = {}) {
+      const cleanId = String(id || '').trim();
+      const cleanName = String(name || '').trim();
+      const cleanCategory = String(category || '').trim();
+      const cleanImage = String(image || '').trim();
+      const normalizedPrice = Number(price);
+
+      if (!cleanName) throw new Error('Product name is required.');
+      if (!cleanCategory || !isValidCategory(cleanCategory)) throw new Error('Select a valid product category.');
+      if (!cleanId || !isValidProductId(cleanId)) throw new Error('Product ID is invalid.');
+      if (!Number.isFinite(normalizedPrice) || normalizedPrice < 0) throw new Error('Product price must be a valid number greater than or equal to zero.');
+      if (!cleanImage) throw new Error('Select an image file or enter an existing image path.');
+
+      const duplicate = currentProducts.some(product =>
+        String(product?.id || '').trim().toLowerCase() === cleanId.toLowerCase() &&
+        String(product?.id || '').trim() !== String(existingId || '').trim()
+      );
+      if (duplicate) throw new Error('Product ID must stay unique.');
+
+      return {
+        id: cleanId,
+        name: cleanName,
+        category: cleanCategory,
+        price: normalizedPrice,
+        image: cleanImage
+      };
     }
 
     function openEdit(id) {
@@ -2294,9 +2633,6 @@
       const newFile = document.getElementById('editImageFile')?.files?.[0];
       let uploadedPath = '';
 
-      if (!name) { toast('Product name is required', 'error'); return; }
-      if (!Number.isFinite(price) || price < 0) { toast('Product price must be zero or higher', 'error'); return; }
-
       try {
         let imagePath = editImageInput.value.trim();
         if (newFile) {
@@ -2306,15 +2642,24 @@
           editImageInput.value = imagePath;
         }
 
-        pushUndoState();
-        currentProducts[i] = normalizeProductRecord({
-          ...currentProducts[i],
+        const validated = validateProductInput({
+          id,
           name,
           category,
           price,
+          image: imagePath || currentProducts[i]?.image || ''
+        }, { existingId: id });
+
+        pushUndoState();
+        currentProducts[i] = normalizeProductRecord({
+          ...currentProducts[i],
+          id: validated.id,
+          name: validated.name,
+          category: validated.category,
+          price: validated.price,
           description,
-          image: imagePath || currentProducts[i].image
-        });
+          image: validated.image
+        }, { touchUpdatedAt: true, allowIdGeneration: false });
         validateImagePath(currentProducts[i].image);
         markUnsaved();
         renderTable();
@@ -2330,14 +2675,17 @@
     }
 
     function toggleProd(id) {
-      const p = currentProducts.find(x => x.id === id);
-      if (!p) return;
+      const index = currentProducts.findIndex(x => x.id === id);
+      if (index === -1) return;
       pushUndoState();
-      p.hidden = !p.hidden;
+      currentProducts[index] = normalizeProductRecord({
+        ...currentProducts[index],
+        hidden: !currentProducts[index].hidden
+      }, { touchUpdatedAt: true, allowIdGeneration: false });
       markUnsaved();
       renderTable();
       renderDash();
-      toast(p.hidden ? 'Product hidden' : 'Product visible', 'info');
+      toast(currentProducts[index].hidden ? 'Product hidden' : 'Product visible', 'info');
     }
 
     function delProd(id) {
@@ -2362,11 +2710,7 @@
       const selectedFile = document.getElementById('addImageFile')?.files?.[0];
       let uploadedPath = '';
 
-      if (!name) { toast('Product name is required', 'error'); return; }
       document.getElementById('newId').value = id;
-      if (!isValidProductId(id)) { toast('Could not generate a valid Product ID', 'error'); return; }
-      if (!Number.isFinite(price) || price < 0) { toast('Product price must be zero or higher', 'error'); return; }
-      if (isProductIdTaken(id)) { toast('Duplicate Product ID', 'error'); return; }
 
       try {
         let imagePath = imageInput.value.trim();
@@ -2379,17 +2723,25 @@
           throw new Error('Select an image file or enter an existing image path');
         }
 
-        pushUndoState();
-        currentProducts.push(normalizeProductRecord({
+        const validated = validateProductInput({
           id,
           name,
           category,
           price,
+          image: imagePath
+        });
+
+        pushUndoState();
+        currentProducts.push(normalizeProductRecord({
+          id: validated.id,
+          name: validated.name,
+          category: validated.category,
+          price: validated.price,
           description,
-          image: imagePath,
+          image: validated.image,
           hidden: false
-        }));
-        validateImagePath(imagePath);
+        }, { touchUpdatedAt: true }));
+        validateImagePath(validated.image);
         markUnsaved();
         renderTable();
         renderDash();
@@ -2529,8 +2881,9 @@
         hideLoad();
         renderDash();
         renderTable();
-        document.getElementById('publishBar').classList.remove('show');
+        document.getElementById('publishBar')?.classList.remove('show');
         updateChangesBadge();
+        updateGhStatus();
         toast('Local changes reset', 'info');
       });
     }
@@ -2538,11 +2891,11 @@
     function handleVisibilityChange() {
       if (!document.hidden && isLoggedIn() && ghConfig) {
         showRefreshBar();
-        loadProductsFromGitHub().then(() => {
+        loadProductsFromGitHub().then(loaded => {
           renderDash();
           if (document.getElementById('page-products').classList.contains('active')) renderTable();
           hideRefreshBar();
-          toast('Products refreshed', 'success');
+          if (loaded) toast('Products refreshed', 'success');
         }).catch(() => {
           hideRefreshBar();
         });
@@ -2561,32 +2914,54 @@
       }, 300000);
     }
 
+    function getGitHubSettingsInputConfig() {
+      const saved = sanitizeGhConfig({
+        ...(ghConfig || {}),
+        ...getStoredGhConfigMeta()
+      });
+      return {
+        username: String(document.getElementById('newGhOwner')?.value || saved.username || '').trim(),
+        repo: String(document.getElementById('newGhRepo')?.value || saved.repo || '').trim(),
+        branch: String(document.getElementById('newBranch')?.value || saved.branch || 'main').trim() || 'main',
+        rememberToken: Boolean(document.getElementById('rememberToken')?.checked)
+      };
+    }
+
     async function refreshGitHubTokenHealth(forceToast = false) {
-      if (!ghConfig?.username || !ghConfig?.repo) {
+      const settings = getGitHubSettingsInputConfig();
+      if (!settings.username || !settings.repo) {
         ghTokenHealth = { state: 'missing', source: 'none', detail: 'Repository config is missing.', checkedAt: Date.now() };
         updateGhStatus();
         return ghTokenHealth;
       }
 
-      const active = getActiveGhTokenSource();
-      ghConfig.token = active.token;
+      const typedToken = String(document.getElementById('newToken')?.value || '').trim();
+      const activeToken = typedToken || getSessionGhToken() || getStoredGhToken();
+      ghConfig = sanitizeGhConfig({
+        ...(ghConfig || {}),
+        ...settings,
+        token: activeToken
+      });
 
-      if (!active.token) {
+      if (!activeToken) {
         ghTokenHealth = { state: 'missing', source: 'none', detail: 'No GitHub token is saved yet.', checkedAt: Date.now() };
         updateGhStatus();
         if (forceToast) toast('Add a GitHub token first', 'error');
         return ghTokenHealth;
       }
 
+      const active = getActiveGhTokenSource();
       ghTokenHealth = { state: 'checking', source: active.source, detail: '', checkedAt: Date.now() };
       updateGhStatus();
 
       try {
-        const validation = await validateGitHubTokenAccess(active.token, ghConfig.username, ghConfig.repo, getConfiguredBranch());
+        const validation = await validateGitHubTokenAccess(activeToken, settings.username, settings.repo, settings.branch);
         if (validation.ok) {
-          if (validation.branch && validation.branch !== ghConfig.branch) {
-            ghConfig = persistGhConfig({ branch: validation.branch }, getBrowserStoredGhToken());
-          }
+          ghConfig = persistGhConfig({
+            username: settings.username,
+            repo: settings.repo,
+            branch: validation.branch || settings.branch
+          }, activeToken, { rememberToken: settings.rememberToken });
           ghTokenHealth = { state: 'valid', source: active.source, detail: '', checkedAt: Date.now() };
           updateGhStatus();
           if (forceToast) toast('GitHub token works correctly', 'success');
@@ -2618,9 +2993,12 @@
     function loadGhConfig() {
       clearLegacyAdminStorage();
       ensureSetupFields();
-      ghConfig = persistGhConfig();
-      updateGhStatus();
+      const savedMeta = getStoredGhConfigMeta();
+      ghConfig = persistGhConfig(savedMeta, getSessionGhToken() || getStoredGhToken(), {
+        rememberToken: isGhTokenRemembered()
+      });
       syncSetupPrefill();
+      updateGhStatus();
       void refreshGitHubTokenHealth(false);
       if (isLoggedIn()) showApp();
       else showLoginPage();
@@ -2675,28 +3053,41 @@
       document.getElementById('mainApp')?.classList.add('show');
       showLoad('Loading products from GitHub...');
       const ok = await loadProductsFromGitHub();
-      const restoredDraft = restoreLocalDraftIfAvailable();
+      const restoredDraft = restoreLocalDraftIfAvailable({ remoteLoaded: ok, allowPrompt: ok });
       hideLoad();
       if (!ok && !restoredDraft) toast('Could not load products from GitHub', 'error');
       undoStack = [];
       updateUndoButton();
       renderDash();
+      if (document.getElementById('page-products')?.classList.contains('active')) renderTable();
       refreshNewProductIdPreview();
       updateGhStatus();
     }
 
     function updateGhStatus() {
       if (!ghConfig) return;
+      const active = getActiveGhTokenSource();
       const branch = getConfiguredBranch();
       const draft = readLocalDraft();
-      const draftStatus = draft?.products?.length ? `${draft.products.length} products waiting to publish` : 'No local draft';
-      const browserToken = getBrowserStoredGhToken();
-      const hasToken = Boolean(ghConfig.token);
-      const sourceLabel = browserToken ? 'saved in this browser' : hasRealHardcodedToken() ? 'hardcoded in admin.html' : 'not configured';
+      const hasDraft = Boolean(draft);
+      const hasToken = Boolean(active.token);
+      const tokenStorageLabel = !hasToken
+        ? 'not configured'
+        : isGhTokenRemembered()
+          ? 'session + localStorage'
+          : 'sessionStorage only';
+      const sourceLabel = active.source === 'session'
+        ? 'current browser session'
+        : active.source === 'local'
+          ? 'saved in localStorage'
+          : 'not configured';
+      const draftStatus = !hasDraft
+        ? 'No local draft'
+        : `${draft.products.length} products saved locally${hasUnsavedChanges ? ' (currently applied)' : ''}${draft.savedAt ? ` on ${getDraftSavedAtLabel(draft)}` : ''}`;
       const statusMap = {
         missing: { label: 'Token missing', detail: 'Add a valid token below to publish JSON and upload images.' },
         checking: { label: 'Checking token', detail: `Validating the ${ghTokenHealth.source || 'current'} token with GitHub...` },
-        valid: { label: 'GitHub ready', detail: `Token is valid and ${ghTokenHealth.source === 'browser' ? 'saved in this browser' : 'coming from admin.html'}.` },
+        valid: { label: 'GitHub ready', detail: `Token is valid for ${ghConfig.username}/${ghConfig.repo} on branch ${branch}.` },
         invalid: { label: 'Token invalid', detail: ghTokenHealth.detail || 'GitHub rejected the current token. Save a valid token below.' },
         unknown: { label: hasToken ? 'Checking token' : 'Token missing', detail: hasToken ? 'Validating token status...' : 'Add a valid token below to publish JSON and upload images.' }
       };
@@ -2710,13 +3101,17 @@
     <div style="color:var(--text2)">Repository: <span style="color:white">${escapeHtml(ghConfig.username)}/${escapeHtml(ghConfig.repo)}</span></div>
     <div style="color:var(--text3);font-size:11px">Branch: <span style="color:white">${escapeHtml(branch)}</span></div>
     <div style="color:var(--text3);font-size:11px">Token source: ${escapeHtml(sourceLabel)}</div>
+    <div style="color:var(--text3);font-size:11px">Token storage: ${escapeHtml(tokenStorageLabel)}</div>
     <div style="color:var(--text3);font-size:11px">${escapeHtml(currentStatus.detail)}</div>
     <div style="color:var(--text3);font-size:11px">Password: hardcoded in auth.js</div>
     <div style="color:var(--text3);font-size:11px">Session: 8 hours in localStorage</div>
+    <div style="color:var(--text3);font-size:11px">Last product source: ${escapeHtml(lastLoadedRemoteSource || 'none')}</div>
     <div style="color:var(--text3);font-size:11px">Local draft: ${escapeHtml(draftStatus)}</div>
   </div>`;
       const tokenInput = document.getElementById('newToken');
-      if (tokenInput && document.activeElement !== tokenInput) tokenInput.value = browserToken;
+      if (tokenInput && document.activeElement !== tokenInput) tokenInput.value = getSessionGhToken() || getStoredGhToken();
+      const rememberInput = document.getElementById('rememberToken');
+      if (rememberInput) rememberInput.checked = isGhTokenRemembered();
     }
 
     function promptForGitHubToken(message = 'A valid GitHub token is required for publish and image upload') {
@@ -2731,37 +3126,51 @@
     }
 
     async function updateToken() {
+      const settings = getGitHubSettingsInputConfig();
       const tokenInput = document.getElementById('newToken');
-      const t = tokenInput?.value.trim() || '';
-      if (!t) {
-        toast('Enter a GitHub token first', 'error');
-        tokenInput?.focus();
+      const typedToken = String(tokenInput?.value || '').trim();
+      const activeToken = typedToken || getSessionGhToken() || getStoredGhToken();
+
+      if (!settings.username || !settings.repo || !settings.branch) {
+        toast('Repository owner, repository name, and branch are required.', 'error');
+        return;
+      }
+
+      if (!activeToken) {
+        ghConfig = persistGhConfig(settings, '', { rememberToken: settings.rememberToken });
+        ghTokenHealth = { state: 'missing', source: 'none', detail: 'No GitHub token is saved yet.', checkedAt: Date.now() };
+        updateGhStatus();
+        toast('GitHub repository settings were saved. Add a token before publishing.', 'info');
         return;
       }
 
       showLoad('Checking GitHub token...');
       try {
-        const validation = await validateGitHubTokenAccess(t, HARDCODED_GH_USERNAME, HARDCODED_GH_REPO, getConfiguredBranch());
+        const validation = await validateGitHubTokenAccess(activeToken, settings.username, settings.repo, settings.branch);
         hideLoad();
 
         if (!validation.ok) {
           const detail = `${validation.hint}${validation.detail ? ` - ${validation.detail}` : ''}`;
-          ghTokenHealth = { state: 'invalid', source: 'browser', detail, checkedAt: Date.now() };
+          ghTokenHealth = { state: 'invalid', source: typedToken ? 'session' : getActiveGhTokenSource().source, detail, checkedAt: Date.now() };
           updateGhStatus();
           toast(detail, 'error');
           return;
         }
 
-        ghConfig = persistGhConfig({ branch: validation.branch || getConfiguredBranch() }, t);
-        ghTokenHealth = { state: 'valid', source: 'browser', detail: '', checkedAt: Date.now() };
+        ghConfig = persistGhConfig({
+          username: settings.username,
+          repo: settings.repo,
+          branch: validation.branch || settings.branch
+        }, activeToken, { rememberToken: settings.rememberToken });
+        ghTokenHealth = { state: 'valid', source: getActiveGhTokenSource().source, detail: '', checkedAt: Date.now() };
         updateGhStatus();
-        if (tokenInput) tokenInput.value = t;
-        toast('GitHub token saved in this browser', 'success');
+        syncSetupPrefill();
+        toast('GitHub settings saved and token verified', 'success');
       } catch (error) {
         hideLoad();
         ghTokenHealth = {
           state: 'invalid',
-          source: 'browser',
+          source: typedToken ? 'session' : getActiveGhTokenSource().source,
           detail: error?.message || 'Could not verify the token right now.',
           checkedAt: Date.now()
         };
@@ -2771,9 +3180,14 @@
     }
 
     function clearStoredGhToken() {
-      showConfirm('Clear GitHub token', 'The token saved in this browser will be removed, but your session and draft will stay.', () => {
-        setBrowserStoredGhToken('');
-        ghConfig = persistGhConfig({ branch: getConfiguredBranch() }, '');
+      showConfirm('Clear GitHub token', 'The GitHub token will be removed from both this session and this device, but your draft will stay.', () => {
+        setSessionGhToken('');
+        setStoredGhToken('');
+        setGhTokenRemembered(false);
+        ghConfig = persistGhConfig({
+          ...(ghConfig || getStoredGhConfigMeta()),
+          token: ''
+        }, '', { rememberToken: false });
         ghTokenHealth = { state: 'missing', source: 'none', detail: 'No GitHub token is saved yet.', checkedAt: Date.now() };
         updateGhStatus();
         syncSetupPrefill();
@@ -2784,7 +3198,9 @@
     function clearSetup() {
       showConfirm('Clear local admin data', 'This removes the local session, browser-saved GitHub token, and draft from this browser.', () => {
         clearLocalDraft();
-        setBrowserStoredGhToken('');
+        setSessionGhToken('');
+        setStoredGhToken('');
+        setGhTokenRemembered(false);
         try {
           localStorage.removeItem(GH_CONFIG_KEY);
         } catch (error) {

@@ -2,7 +2,7 @@
 // کۆگای ڕاستی - Offline Storefront Cache
 // ==========================================
 
-const CACHE_VERSION = 'v24';
+const CACHE_VERSION = 'v25';
 const ASSET_VERSION = 'mobile-perf-v24';
 const APP_CACHE = `kogay-rasti-app-${CACHE_VERSION}`;
 const DATA_CACHE = `kogay-rasti-data-${CACHE_VERSION}`;
@@ -64,9 +64,9 @@ async function putInCache(cacheName, request, response) {
     return response;
 }
 
-async function networkFirst(request, cacheName, fallbackUrl) {
+async function networkFirst(request, cacheName, fallbackUrl, fetchOptions) {
     try {
-        const response = await fetch(request);
+        const response = await fetch(request, fetchOptions);
         if (!isCacheable(response)) throw new Error(`Uncacheable response: ${response.status}`);
         return putInCache(cacheName, request, response);
     } catch (error) {
@@ -100,12 +100,12 @@ self.addEventListener('fetch', event => {
     }
 
     if (sameOrigin && /\/products-[a-z]+\.json$/i.test(url.pathname)) {
-        event.respondWith(networkFirst(request, DATA_CACHE));
+        event.respondWith(networkFirst(request, DATA_CACHE, null, { cache: 'no-store' }));
         return;
     }
 
     if (sameOrigin && /\/products\.json$/i.test(url.pathname)) {
-        event.respondWith(networkFirst(request, DATA_CACHE, PRODUCTS_URL));
+        event.respondWith(networkFirst(request, DATA_CACHE, PRODUCTS_URL, { cache: 'no-store' }));
         return;
     }
 

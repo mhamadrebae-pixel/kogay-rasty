@@ -168,6 +168,7 @@ const PRODUCT_CACHE_KEY = 'kogayProductsCache';
 const PRODUCT_CACHE_META_KEY = 'kogayProductsCacheMeta';
 const INSTALL_DISMISS_KEY = 'installDismissedAt';
 const INSTALL_DISMISS_MS = 7 * 24 * 60 * 60 * 1000;
+const PRODUCT_REQUEST_OPTIONS = { cache: 'no-store' };
 const VALID_CATEGORIES = new Set(Object.keys(categories));
 // Each storefront category now maps to its own lightweight JSON file.
 const PRODUCT_DATA_FALLBACK = 'products.json';
@@ -765,19 +766,34 @@ function buildSearchIndex(items = products) {
 }
 
 // Merge newly loaded category data into the existing product cache without duplicating IDs.
-function mergeProducts(items = []) {
-    const merged = new Map(products.map(product => [product.id, product]));
-    items.forEach(product => {
+function commitProducts(nextProducts = []) {
+    products = nextProducts.map(product => ({
+        ...product,
+        views: Number(window.getProductViewCount?.(product.id) || product.views || 0)
+    }));
+    buildSearchIndex(products);
+    storeProducts(products);
+    return products;
+}
+
+function mergeProducts(items = [], options = {}) {
+    const { replaceCategory = '', replaceAll = false } = options;
+    const normalizedItems = normalizeProducts(items);
+    if (replaceAll) {
+        return commitProducts(normalizedItems);
+    }
+    const baseProducts = replaceCategory
+        ? products.filter(product => product.category !== replaceCategory)
+        : Array.from(products);
+    const merged = new Map(baseProducts.map(product => [product.id, product]));
+    normalizedItems.forEach(product => {
         merged.set(product.id, {
             ...(merged.get(product.id) || {}),
             ...product,
             views: Number(window.getProductViewCount?.(product.id) || product.views || 0)
         });
     });
-    products = Array.from(merged.values());
-    buildSearchIndex(products);
-    storeProducts(products);
-    return products;
+    return commitProducts(Array.from(merged.values()));
 }
 
 // Resolve the split JSON filename for a category.
@@ -802,13 +818,18 @@ async function loadCategoryProducts(category, { showSkeleton = false, allowFullC
     try {
         for (const candidate of candidates) {
             try {
-                const res = await fetch(candidate.url);
+                const res = await fetch(candidate.url, PRODUCT_REQUEST_OPTIONS);
                 if (!res.ok) throw new Error(`HTTP ${res.status}`);
                 const normalized = normalizeProducts(await res.json());
                 const nextProducts = candidate.categoryOnly
                     ? normalized.filter(product => product.category === category)
                     : normalized;
-                mergeProducts(nextProducts);
+                mergeProducts(
+                    nextProducts,
+                    candidate.categoryOnly
+                        ? { replaceCategory: category }
+                        : { replaceAll: true }
+                );
                 if (candidate.categoryOnly) markLoadedCategories([category]);
                 else markLoadedCategories(Object.keys(categories));
                 lastProductLoadSource = 'network';
@@ -821,7 +842,7 @@ async function loadCategoryProducts(category, { showSkeleton = false, allowFullC
         console.warn(`${category} products load failed:`, error);
         const cachedProducts = getCachedCategoryProducts(category);
         if (cachedProducts.length > 0) {
-            mergeProducts(cachedProducts);
+            mergeProducts(cachedProducts, { replaceCategory: category });
             markLoadedCategories([category]);
             lastProductLoadSource = 'cache';
             return true;
