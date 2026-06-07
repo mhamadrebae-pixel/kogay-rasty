@@ -6,7 +6,10 @@
     "price": 1000,
     "image": "mnalan/photo_1_2026-02-21_00-54-52.jpg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-002",
@@ -15,7 +18,10 @@
     "price": 4750,
     "image": "mnalan/photo_2_2026-02-21_00-54-52.jpg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-003",
@@ -24,7 +30,10 @@
     "price": 3500,
     "image": "mnalan/photo_3_2026-02-21_00-54-52.jpg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-004",
@@ -33,7 +42,10 @@
     "price": 5000,
     "image": "mnalan/photo_4_2026-02-21_00-54-52.jpg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-005",
@@ -42,7 +54,10 @@
     "price": 4750,
     "image": "mnalan/photo_5_2026-02-21_00-54-52.jpg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-006",
@@ -51,7 +66,10 @@
     "price": 5250,
     "image": "mnalan/photo_7_2026-02-21_00-54-52.jpg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-007",
@@ -60,7 +78,10 @@
     "price": 5000,
     "image": "mnalan/photo_17_2026-02-21_00-54-52.jpg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-008",
@@ -69,7 +90,10 @@
     "price": 2500,
     "image": "mnalan/photo_8_2026-02-21_00-54-52.jpg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-009",
@@ -78,7 +102,10 @@
     "price": 3000,
     "image": "mnalan/photo_9_2026-02-21_00-54-52.jpg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-010",
@@ -87,7 +114,10 @@
     "price": 5000,
     "image": "mnalan/photo_11_2026-02-21_00-54-52.jpg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-011",
@@ -96,7 +126,10 @@
     "price": 5000,
     "image": "mnalan/photo_12_2026-02-21_00-54-52.jpg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-012",
@@ -105,7 +138,10 @@
     "price": 5000,
     "image": "mnalan/photo_13_2026-02-21_00-54-52.jpg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-013",
@@ -114,7 +150,10 @@
     "price": 2000,
     "image": "mnalan/photo_14_2026-02-21_00-54-52.jpg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-014",
@@ -123,7 +162,10 @@
     "price": 5000,
     "image": "mnalan/photo_15_2026-02-21_00-54-52.jpg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-015",
@@ -132,7 +174,10 @@
     "price": 5000,
     "image": "mnalan/photo_16_2026-02-21_00-54-52.jpg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-016",
@@ -141,7 +186,10 @@
     "price": 5000,
     "image": "mnalan/photo_19_2026-02-21_00-54-52.jpg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-017",
@@ -150,7 +198,10 @@
     "price": 2250,
     "image": "mnalan/photo_20_2026-02-21_00-54-52.jpg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-018",
@@ -159,7 +210,10 @@
     "price": 2500,
     "image": "mnalan/photo_21_2026-02-21_00-54-52.jpg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-019",
@@ -168,7 +222,10 @@
     "price": 2500,
     "image": "mnalan/photo_22_2026-02-21_00-54-52.jpg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-020",
@@ -177,7 +234,10 @@
     "price": 2500,
     "image": "mnalan/photo_24_2026-02-21_00-54-52.jpg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-021",
@@ -186,7 +246,10 @@
     "price": 3500,
     "image": "mnalan/photo_25_2026-02-21_00-54-52.jpg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-022",
@@ -195,7 +258,10 @@
     "price": 3500,
     "image": "mnalan/photo_26_2026-02-21_00-54-52.jpg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-023",
@@ -204,7 +270,10 @@
     "price": 5000,
     "image": "mnalan/photo_27_2026-02-21_00-54-52.jpg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-024",
@@ -213,7 +282,10 @@
     "price": 5000,
     "image": "mnalan/photo_28_2026-02-21_00-54-52.jpg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-025",
@@ -222,7 +294,10 @@
     "price": 4500,
     "image": "mnalan/photo_29_2026-02-21_00-54-52.jpg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-026",
@@ -231,7 +306,10 @@
     "price": 5000,
     "image": "mnalan/photo_30_2026-02-21_00-54-52.jpg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-027",
@@ -240,7 +318,10 @@
     "price": 5000,
     "image": "mnalan/IMG_6346.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-028",
@@ -249,7 +330,10 @@
     "price": 4500,
     "image": "mnalan/IMG_6348.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-029",
@@ -258,7 +342,10 @@
     "price": 8000,
     "image": "mnalan/IMG_6350.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-030",
@@ -267,7 +354,10 @@
     "price": 5250,
     "image": "mnalan/IMG_6351.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-031",
@@ -276,7 +366,10 @@
     "price": 3000,
     "image": "mnalan/IMG_6352.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-032",
@@ -285,7 +378,10 @@
     "price": 5000,
     "image": "mnalan/IMG_6354.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-033",
@@ -294,7 +390,10 @@
     "price": 5000,
     "image": "mnalan/IMG_6358.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-034",
@@ -303,7 +402,10 @@
     "price": 5250,
     "image": "mnalan/IMG_6359.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-035",
@@ -312,7 +414,10 @@
     "price": 8000,
     "image": "mnalan/IMG_6360.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-036",
@@ -321,7 +426,10 @@
     "price": 5250,
     "image": "mnalan/IMG_6361.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-037",
@@ -330,7 +438,10 @@
     "price": 5250,
     "image": "mnalan/IMG_6362.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-038",
@@ -339,7 +450,10 @@
     "price": 5250,
     "image": "mnalan/IMG_6363.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-039",
@@ -348,7 +462,10 @@
     "price": 5250,
     "image": "mnalan/IMG_6365.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-040",
@@ -357,7 +474,10 @@
     "price": 5000,
     "image": "mnalan/IMG_6367.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-041",
@@ -366,7 +486,10 @@
     "price": 4000,
     "image": "mnalan/IMG_6368.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-042",
@@ -375,7 +498,10 @@
     "price": 5250,
     "image": "mnalan/IMG_6369.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-043",
@@ -384,7 +510,10 @@
     "price": 5250,
     "image": "mnalan/IMG_6370.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-044",
@@ -393,7 +522,10 @@
     "price": 4500,
     "image": "mnalan/IMG_6371.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-045",
@@ -402,7 +534,10 @@
     "price": 7000,
     "image": "mnalan/IMG_6405.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-046",
@@ -411,7 +546,10 @@
     "price": 5250,
     "image": "mnalan/IMG_6406.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-047",
@@ -420,7 +558,10 @@
     "price": 5000,
     "image": "mnalan/IMG_6407.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-048",
@@ -429,7 +570,10 @@
     "price": 5000,
     "image": "mnalan/IMG_6408.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-049",
@@ -438,7 +582,10 @@
     "price": 7000,
     "image": "mnalan/IMG_6409.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-050",
@@ -447,7 +594,10 @@
     "price": 5000,
     "image": "mnalan/IMG_6410.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-051",
@@ -456,7 +606,10 @@
     "price": 4250,
     "image": "mnalan/IMG_6411.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-052",
@@ -465,7 +618,10 @@
     "price": 5000,
     "image": "mnalan/IMG_6412.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-053",
@@ -474,7 +630,10 @@
     "price": 4500,
     "image": "mnalan/IMG_6413.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-054",
@@ -483,7 +642,10 @@
     "price": 5000,
     "image": "mnalan/IMG_6414.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-055",
@@ -492,7 +654,10 @@
     "price": 2500,
     "image": "mnalan/IMG_6415.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-056",
@@ -501,7 +666,10 @@
     "price": 5000,
     "image": "mnalan/IMG_6416.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-057",
@@ -510,7 +678,10 @@
     "price": 9000,
     "image": "mnalan/IMG_6417.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-058",
@@ -519,7 +690,10 @@
     "price": 5000,
     "image": "mnalan/IMG_6418.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-059",
@@ -528,7 +702,10 @@
     "price": 2000,
     "image": "mnalan/IMG_6419.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-060",
@@ -537,7 +714,10 @@
     "price": 5000,
     "image": "mnalan/IMG_6420.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-061",
@@ -546,7 +726,10 @@
     "price": 5000,
     "image": "mnalan/IMG_6421.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-062",
@@ -555,7 +738,10 @@
     "price": 0,
     "image": "mnalan/IMG_6422.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-063",
@@ -564,7 +750,10 @@
     "price": 5000,
     "image": "mnalan/IMG_6424.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-064",
@@ -573,7 +762,10 @@
     "price": 5000,
     "image": "mnalan/IMG_6425.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-065",
@@ -582,7 +774,10 @@
     "price": 5000,
     "image": "mnalan/IMG_6428.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-066",
@@ -591,7 +786,10 @@
     "price": 5000,
     "image": "mnalan/IMG_6429.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-067",
@@ -600,7 +798,10 @@
     "price": 5000,
     "image": "mnalan/IMG_6430.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-068",
@@ -609,7 +810,10 @@
     "price": 4000,
     "image": "mnalan/IMG_6448.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-069",
@@ -618,7 +822,10 @@
     "price": 4000,
     "image": "mnalan/IMG_6449.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-070",
@@ -627,7 +834,10 @@
     "price": 4000,
     "image": "mnalan/IMG_6450.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-071",
@@ -636,7 +846,10 @@
     "price": 4000,
     "image": "mnalan/IMG_6451.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-072",
@@ -645,7 +858,10 @@
     "price": 4000,
     "image": "mnalan/IMG_6452.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-073",
@@ -654,7 +870,10 @@
     "price": 4000,
     "image": "mnalan/IMG_6453.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-074",
@@ -663,7 +882,10 @@
     "price": 4000,
     "image": "mnalan/IMG_6454.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-075",
@@ -672,7 +894,10 @@
     "price": 4000,
     "image": "mnalan/IMG_6455.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-076",
@@ -681,7 +906,10 @@
     "price": 4000,
     "image": "mnalan/IMG_6456.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-077",
@@ -690,7 +918,10 @@
     "price": 4000,
     "image": "mnalan/IMG_6457.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-078",
@@ -699,7 +930,10 @@
     "price": 4000,
     "image": "mnalan/IMG_6458.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-079",
@@ -708,7 +942,10 @@
     "price": 4000,
     "image": "mnalan/IMG_6459.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-080",
@@ -717,7 +954,10 @@
     "price": 4000,
     "image": "mnalan/IMG_6460.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-081",
@@ -726,7 +966,10 @@
     "price": 4000,
     "image": "mnalan/IMG_6461.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-082",
@@ -735,7 +978,10 @@
     "price": 4250,
     "image": "mnalan/IMG_6462.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-083",
@@ -744,7 +990,10 @@
     "price": 4000,
     "image": "mnalan/IMG_6463.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-084",
@@ -753,7 +1002,10 @@
     "price": 4000,
     "image": "mnalan/IMG_6464.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-085",
@@ -762,7 +1014,10 @@
     "price": 16000,
     "image": "mnalan/IMG_6465.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-086",
@@ -771,7 +1026,10 @@
     "price": 3000,
     "image": "mnalan/IMG_6466.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-087",
@@ -780,7 +1038,10 @@
     "price": 3000,
     "image": "mnalan/IMG_6467.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-088",
@@ -789,7 +1050,10 @@
     "price": 3500,
     "image": "mnalan/IMG_6468.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-089",
@@ -798,7 +1062,10 @@
     "price": 5250,
     "image": "mnalan/IMG_6469.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-090",
@@ -807,6 +1074,9 @@
     "price": 3500,
     "image": "mnalan/IMG_6470.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   }
 ]
