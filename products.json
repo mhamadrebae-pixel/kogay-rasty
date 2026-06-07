@@ -3,10 +3,15 @@
     "id": "cake-001",
     "name": "نەزەری دووقول",
     "description": "24 عەدەد",
-    "price": 5250,
+    "price": 525000,
     "image": "kek/IMG_0214.jpeg",
     "category": "cake",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": "",
+    "createdAt": "2026-06-07T00:59:15.258Z",
+    "updatedAt": "2026-06-07T00:59:15.258Z"
   },
   {
     "id": "cake-002",
@@ -15,7 +20,10 @@
     "price": 5750,
     "image": "kek/IMG_0211.jpeg",
     "category": "cake",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "cake-003",
@@ -24,7 +32,10 @@
     "price": 5000,
     "image": "kek/IMG_0212.jpeg",
     "category": "cake",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "cake-004",
@@ -33,7 +44,10 @@
     "price": 5250,
     "image": "kek/IMG_0213.jpeg",
     "category": "cake",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "cake-005",
@@ -42,7 +56,10 @@
     "price": 2500,
     "image": "kek/photo_1_2026-02-20_22-41-44.jpg",
     "category": "cake",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "cake-006",
@@ -51,7 +68,10 @@
     "price": 4750,
     "image": "kek/photo_2_2026-02-20_22-41-44.jpg",
     "category": "cake",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "cake-007",
@@ -60,7 +80,10 @@
     "price": 4750,
     "image": "kek/photo_3_2026-02-20_22-41-44.jpg",
     "category": "cake",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "cake-008",
@@ -69,7 +92,10 @@
     "price": 4750,
     "image": "kek/photo_7_2026-02-20_22-41-44.jpg",
     "category": "cake",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "cake-009",
@@ -78,7 +104,10 @@
     "price": 4750,
     "image": "kek/photo_5_2026-02-20_22-41-44.jpg",
     "category": "cake",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "cake-010",
@@ -87,7 +116,10 @@
     "price": 5000,
     "image": "kek/photo_4_2026-02-20_22-41-44.jpg",
     "category": "cake",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "cake-011",
@@ -96,7 +128,10 @@
     "price": 5000,
     "image": "kek/photo_6_2026-02-20_22-41-44.jpg",
     "category": "cake",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "cake-012",
@@ -105,7 +140,10 @@
     "price": 5000,
     "image": "kek/photo_8_2026-02-20_22-41-44.jpg",
     "category": "cake",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "cake-013",
@@ -114,7 +152,10 @@
     "price": 5000,
     "image": "kek/photo_9_2026-02-20_22-41-44.jpg",
     "category": "cake",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "cake-014",
@@ -123,7 +164,10 @@
     "price": 5000,
     "image": "kek/photo_10_2026-02-20_22-41-44.jpg",
     "category": "cake",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "cake-015",
@@ -132,7 +176,10 @@
     "price": 5000,
     "image": "kek/photo_11_2026-02-20_22-41-44.jpg",
     "category": "cake",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "cake-016",
@@ -141,7 +188,10 @@
     "price": 5000,
     "image": "kek/photo_12_2026-02-20_22-41-44.jpg",
     "category": "cake",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "cake-017",
@@ -150,7 +200,10 @@
     "price": 5000,
     "image": "kek/photo_14_2026-02-20_22-41-44.jpg",
     "category": "cake",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "cake-018",
@@ -159,7 +212,10 @@
     "price": 4750,
     "image": "kek/photo_13_2026-02-20_22-41-44.jpg",
     "category": "cake",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "cake-019",
@@ -168,7 +224,10 @@
     "price": 5000,
     "image": "kek/photo_15_2026-02-20_22-41-44.jpg",
     "category": "cake",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "cake-020",
@@ -177,7 +236,10 @@
     "price": 5000,
     "image": "kek/photo_16_2026-02-20_22-41-44.jpg",
     "category": "cake",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "cake-021",
@@ -186,7 +248,10 @@
     "price": 5000,
     "image": "kek/photo_18_2026-02-20_22-41-44.jpg",
     "category": "cake",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "cake-022",
@@ -195,7 +260,10 @@
     "price": 5000,
     "image": "kek/photo_19_2026-02-20_22-41-44.jpg",
     "category": "cake",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "cake-023",
@@ -204,7 +272,10 @@
     "price": 10000,
     "image": "kek/photo_17_2026-02-20_22-41-44.jpg",
     "category": "cake",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "cake-024",
@@ -213,7 +284,10 @@
     "price": 4250,
     "image": "kek/photo_20_2026-02-20_22-41-44.jpg",
     "category": "cake",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "cake-025",
@@ -222,7 +296,10 @@
     "price": 5250,
     "image": "kek/photo_21_2026-02-20_22-41-44.jpg",
     "category": "cake",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "cake-026",
@@ -231,7 +308,10 @@
     "price": 5250,
     "image": "kek/photo_22_2026-02-20_22-41-44.jpg",
     "category": "cake",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "cake-027",
@@ -240,7 +320,10 @@
     "price": 5000,
     "image": "kek/photo_24_2026-02-20_22-41-44.jpg",
     "category": "cake",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "cake-028",
@@ -249,7 +332,10 @@
     "price": 5250,
     "image": "kek/photo_25_2026-02-20_22-41-44.jpg",
     "category": "cake",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "cake-029",
@@ -258,7 +344,10 @@
     "price": 5000,
     "image": "kek/photo_27_2026-02-20_22-41-44.jpg",
     "category": "cake",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "cake-030",
@@ -267,7 +356,10 @@
     "price": 2500,
     "image": "kek/photo_28_2026-02-20_22-41-44.jpg",
     "category": "cake",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "cake-031",
@@ -276,7 +368,10 @@
     "price": 4750,
     "image": "kek/photo_29_2026-02-20_22-41-44.jpg",
     "category": "cake",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "cake-032",
@@ -285,7 +380,10 @@
     "price": 4750,
     "image": "kek/photo_30_2026-02-20_22-41-44.jpg",
     "category": "cake",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "gaz-001",
@@ -294,7 +392,10 @@
     "price": 5250,
     "image": "gaz/IMG_0215.jpeg",
     "category": "gaz",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "gaz-002",
@@ -303,7 +404,10 @@
     "price": 4500,
     "image": "gaz/IMG_0216.jpeg",
     "category": "gaz",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "gaz-003",
@@ -312,7 +416,10 @@
     "price": 5000,
     "image": "gaz/IMG_0217.jpeg",
     "category": "gaz",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "gaz-004",
@@ -321,7 +428,10 @@
     "price": 9000,
     "image": "gaz/IMG_0218.jpeg",
     "category": "gaz",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "gaz-006",
@@ -330,7 +440,10 @@
     "price": 5000,
     "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (1).jpeg",
     "category": "gaz",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "gaz-007",
@@ -339,7 +452,10 @@
     "price": 5250,
     "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (3).jpeg",
     "category": "gaz",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "gaz-008",
@@ -348,7 +464,10 @@
     "price": 7500,
     "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (4).jpeg",
     "category": "gaz",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "gaz-009",
@@ -357,7 +476,10 @@
     "price": 2500,
     "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (5).jpeg",
     "category": "gaz",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "gaz-010",
@@ -366,7 +488,10 @@
     "price": 8000,
     "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (6).jpeg",
     "category": "gaz",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "gaz-011",
@@ -375,7 +500,10 @@
     "price": 8000,
     "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (7).jpeg",
     "category": "gaz",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "gaz-012",
@@ -384,7 +512,10 @@
     "price": 8000,
     "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (8).jpeg",
     "category": "gaz",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "gaz-013",
@@ -393,7 +524,10 @@
     "price": 7500,
     "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (9).jpeg",
     "category": "gaz",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "gaz-014",
@@ -402,7 +536,10 @@
     "price": 5000,
     "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM.jpeg",
     "category": "gaz",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "gaz-015",
@@ -411,7 +548,10 @@
     "price": 5000,
     "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (1).jpeg",
     "category": "gaz",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "gaz-016",
@@ -420,7 +560,10 @@
     "price": 5000,
     "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (2).jpeg",
     "category": "gaz",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "gaz-017",
@@ -429,7 +572,10 @@
     "price": 5000,
     "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM.jpeg",
     "category": "gaz",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "gaz-018",
@@ -438,7 +584,10 @@
     "price": 8000,
     "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (3).jpeg",
     "category": "gaz",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "gaz-019",
@@ -447,7 +596,10 @@
     "price": 5000,
     "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (4).jpeg",
     "category": "gaz",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "gaz-020",
@@ -456,7 +608,10 @@
     "price": 5000,
     "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (5).jpeg",
     "category": "gaz",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "gaz-021",
@@ -465,7 +620,10 @@
     "price": 6500,
     "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (6).jpeg",
     "category": "gaz",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "gaz-022",
@@ -474,7 +632,10 @@
     "price": 6500,
     "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (7).jpeg",
     "category": "gaz",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "gaz-023",
@@ -483,7 +644,10 @@
     "price": 11500,
     "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (8).jpeg",
     "category": "gaz",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "gaz-024",
@@ -492,7 +656,10 @@
     "price": 2500,
     "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (9).jpeg",
     "category": "gaz",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "gaz-025",
@@ -501,7 +668,10 @@
     "price": 5250,
     "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (10).jpeg",
     "category": "gaz",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "gaz-026",
@@ -510,7 +680,10 @@
     "price": 4750,
     "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (11).jpeg",
     "category": "gaz",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "gaz-027",
@@ -519,7 +692,10 @@
     "price": 6250,
     "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (12).jpeg",
     "category": "gaz",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "gaz-028",
@@ -528,7 +704,10 @@
     "price": 6500,
     "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (15).jpeg",
     "category": "gaz",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "gaz-029",
@@ -537,7 +716,10 @@
     "price": 8000,
     "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (16).jpeg",
     "category": "gaz",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "gaz-030",
@@ -546,7 +728,10 @@
     "price": 4500,
     "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (17).jpeg",
     "category": "gaz",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "gaz-031",
@@ -555,7 +740,10 @@
     "price": 10000,
     "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (18).jpeg",
     "category": "gaz",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "gaz-033",
@@ -564,7 +752,10 @@
     "price": 4750,
     "image": "gaz/WhatsApp Image 2026-02-20 at 10.03.27 PM.jpeg",
     "category": "gaz",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-001",
@@ -573,7 +764,10 @@
     "price": 750,
     "image": "sardy/IMG_0188.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-002",
@@ -582,7 +776,10 @@
     "price": 1500,
     "image": "sardy/IMG_0189.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-003",
@@ -591,7 +788,10 @@
     "price": 6500,
     "image": "sardy/IMG_6192.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-004",
@@ -600,7 +800,10 @@
     "price": 6500,
     "image": "sardy/IMG_6193.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-005",
@@ -609,7 +812,10 @@
     "price": 6500,
     "image": "sardy/IMG_6194.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-006",
@@ -618,7 +824,10 @@
     "price": 6500,
     "image": "sardy/IMG_6195.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-007",
@@ -627,7 +836,10 @@
     "price": 5000,
     "image": "sardy/IMG_6196.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-008",
@@ -636,7 +848,10 @@
     "price": 9750,
     "image": "sardy/IMG_6197.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-009",
@@ -645,7 +860,10 @@
     "price": 9750,
     "image": "sardy/IMG_6220.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-010",
@@ -654,7 +872,10 @@
     "price": 6000,
     "image": "sardy/IMG_6198.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-011",
@@ -663,7 +884,10 @@
     "price": 6000,
     "image": "sardy/IMG_6199.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-012",
@@ -672,7 +896,10 @@
     "price": 10000,
     "image": "sardy/IMG_6200.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-013",
@@ -681,7 +908,10 @@
     "price": 10000,
     "image": "sardy/IMG_6201.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-014",
@@ -690,7 +920,10 @@
     "price": 6500,
     "image": "sardy/IMG_6202.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-015",
@@ -699,7 +932,10 @@
     "price": 6500,
     "image": "sardy/IMG_6203.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-016",
@@ -708,7 +944,10 @@
     "price": 6500,
     "image": "sardy/IMG_6204.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-017",
@@ -717,7 +956,10 @@
     "price": 6500,
     "image": "sardy/IMG_6205.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-018",
@@ -726,7 +968,10 @@
     "price": 6500,
     "image": "sardy/IMG_6219.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-019",
@@ -735,7 +980,10 @@
     "price": 6500,
     "image": "sardy/IMG_6206.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-020",
@@ -744,7 +992,10 @@
     "price": 9750,
     "image": "sardy/IMG_6207.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-021",
@@ -753,7 +1004,10 @@
     "price": 9750,
     "image": "sardy/IMG_6208.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-022",
@@ -762,7 +1016,10 @@
     "price": 10000,
     "image": "sardy/IMG_6209.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-023",
@@ -771,7 +1028,10 @@
     "price": 10000,
     "image": "sardy/IMG_6210.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-024",
@@ -780,7 +1040,10 @@
     "price": 5000,
     "image": "sardy/IMG_6218.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-025",
@@ -789,7 +1052,10 @@
     "price": 9750,
     "image": "sardy/IMG_6211.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-026",
@@ -798,7 +1064,10 @@
     "price": 9750,
     "image": "sardy/IMG_6212.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-027",
@@ -807,7 +1076,10 @@
     "price": 5000,
     "image": "sardy/IMG_6213.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-028",
@@ -816,7 +1088,10 @@
     "price": 5000,
     "image": "sardy/IMG_6238.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-029",
@@ -825,7 +1100,10 @@
     "price": 9500,
     "image": "sardy/IMG_6214.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-030",
@@ -834,7 +1112,10 @@
     "price": 5250,
     "image": "sardy/IMG_6215.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-031",
@@ -843,7 +1124,10 @@
     "price": 8250,
     "image": "sardy/IMG_6216.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-032",
@@ -852,7 +1136,10 @@
     "price": 5500,
     "image": "sardy/IMG_6217.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-033",
@@ -861,7 +1148,10 @@
     "price": 5000,
     "image": "sardy/IMG_6221.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-034",
@@ -870,7 +1160,10 @@
     "price": 5000,
     "image": "sardy/IMG_6222.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-035",
@@ -879,7 +1172,10 @@
     "price": 5000,
     "image": "sardy/IMG_6223.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-036",
@@ -888,7 +1184,10 @@
     "price": 5000,
     "image": "sardy/IMG_6224.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-037",
@@ -897,7 +1196,10 @@
     "price": 5000,
     "image": "sardy/IMG_6225.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-038",
@@ -906,7 +1208,10 @@
     "price": 10000,
     "image": "sardy/IMG_6226.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-039",
@@ -915,7 +1220,10 @@
     "price": 9500,
     "image": "sardy/IMG_6227.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-040",
@@ -924,7 +1232,10 @@
     "price": 9500,
     "image": "sardy/IMG_6228.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-041",
@@ -933,7 +1244,10 @@
     "price": 9500,
     "image": "sardy/IMG_6229.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-042",
@@ -942,7 +1256,10 @@
     "price": 9500,
     "image": "sardy/IMG_6230.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-043",
@@ -951,7 +1268,10 @@
     "price": 9500,
     "image": "sardy/IMG_6231.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-044",
@@ -960,7 +1280,10 @@
     "price": 10000,
     "image": "sardy/IMG_6232.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-045",
@@ -969,7 +1292,10 @@
     "price": 10000,
     "image": "sardy/IMG_6233.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-046",
@@ -978,7 +1304,10 @@
     "price": 10000,
     "image": "sardy/IMG_6234.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-047",
@@ -987,7 +1316,10 @@
     "price": 9500,
     "image": "sardy/IMG_6235.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-048",
@@ -996,7 +1328,10 @@
     "price": 9500,
     "image": "sardy/IMG_6237.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-049",
@@ -1005,7 +1340,10 @@
     "price": 21000,
     "image": "sardy/IMG_6236.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-050",
@@ -1014,7 +1352,10 @@
     "price": 2250,
     "image": "sardy/IMG_6239.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-051",
@@ -1023,7 +1364,10 @@
     "price": 2250,
     "image": "sardy/IMG_6240.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-052",
@@ -1032,7 +1376,10 @@
     "price": 2250,
     "image": "sardy/IMG_6241.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-053",
@@ -1041,7 +1388,10 @@
     "price": 6500,
     "image": "sardy/IMG_6242.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-054",
@@ -1050,7 +1400,10 @@
     "price": 6500,
     "image": "sardy/IMG_6243.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-055",
@@ -1059,7 +1412,10 @@
     "price": 6500,
     "image": "sardy/IMG_6245.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-056",
@@ -1068,7 +1424,10 @@
     "price": 6500,
     "image": "sardy/IMG_6246.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-057",
@@ -1077,7 +1436,10 @@
     "price": 9500,
     "image": "sardy/IMG_6244.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-058",
@@ -1086,7 +1448,10 @@
     "price": 9500,
     "image": "sardy/IMG_6247.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-059",
@@ -1095,7 +1460,10 @@
     "price": 6000,
     "image": "sardy/IMG_6248.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-060",
@@ -1104,7 +1472,10 @@
     "price": 3000,
     "image": "sardy/IMG_6249.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-061",
@@ -1113,7 +1484,10 @@
     "price": 4000,
     "image": "sardy/IMG_6250.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-062",
@@ -1122,7 +1496,10 @@
     "price": 4000,
     "image": "sardy/IMG_6252.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-063",
@@ -1131,7 +1508,10 @@
     "price": 4000,
     "image": "sardy/IMG_6253.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-064",
@@ -1140,7 +1520,10 @@
     "price": 8000,
     "image": "sardy/IMG_6254.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-065",
@@ -1149,7 +1532,10 @@
     "price": 8000,
     "image": "sardy/IMG_6255.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-066",
@@ -1158,7 +1544,10 @@
     "price": 8000,
     "image": "sardy/IMG_6256.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-067",
@@ -1167,7 +1556,10 @@
     "price": 8000,
     "image": "sardy/IMG_6257.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-068",
@@ -1176,7 +1568,10 @@
     "price": 3250,
     "image": "sardy/IMG_6258.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-069",
@@ -1185,7 +1580,10 @@
     "price": 3250,
     "image": "sardy/IMG_6259.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-070",
@@ -1194,7 +1592,10 @@
     "price": 3250,
     "image": "sardy/IMG_6260.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-071",
@@ -1203,7 +1604,10 @@
     "price": 3250,
     "image": "sardy/IMG_6261.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-072",
@@ -1212,7 +1616,10 @@
     "price": 3250,
     "image": "sardy/IMG_6262.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-073",
@@ -1221,7 +1628,10 @@
     "price": 3250,
     "image": "sardy/IMG_6263.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-074",
@@ -1230,7 +1640,10 @@
     "price": 3250,
     "image": "sardy/IMG_6264.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-075",
@@ -1239,7 +1652,10 @@
     "price": 14500,
     "image": "sardy/IMG_6265.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-076",
@@ -1248,7 +1664,10 @@
     "price": 14500,
     "image": "sardy/IMG_6266.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-077",
@@ -1257,7 +1676,10 @@
     "price": 14500,
     "image": "sardy/IMG_6267.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-078",
@@ -1266,7 +1688,10 @@
     "price": 14500,
     "image": "sardy/IMG_6268.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-079",
@@ -1275,7 +1700,10 @@
     "price": 14500,
     "image": "sardy/IMG_6269.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-080",
@@ -1284,7 +1712,10 @@
     "price": 14500,
     "image": "sardy/IMG_6270.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-081",
@@ -1293,7 +1724,10 @@
     "price": 9500,
     "image": "sardy/IMG_6271.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-082",
@@ -1302,7 +1736,10 @@
     "price": 6500,
     "image": "sardy/IMG_6272.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-083",
@@ -1311,7 +1748,10 @@
     "price": 4500,
     "image": "sardy/IMG_6274.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-084",
@@ -1320,7 +1760,10 @@
     "price": 6500,
     "image": "sardy/IMG_6275.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-085",
@@ -1329,7 +1772,10 @@
     "price": 6500,
     "image": "sardy/IMG_6276.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-086",
@@ -1338,7 +1784,10 @@
     "price": 4500,
     "image": "sardy/IMG_6277.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-087",
@@ -1347,7 +1796,10 @@
     "price": 6500,
     "image": "sardy/IMG_6278.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-088",
@@ -1356,7 +1808,10 @@
     "price": 3000,
     "image": "sardy/IMG_6279.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-089",
@@ -1365,7 +1820,10 @@
     "price": 3000,
     "image": "sardy/IMG_6280.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-090",
@@ -1374,7 +1832,10 @@
     "price": 5500,
     "image": "sardy/IMG_6281.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-091",
@@ -1383,7 +1844,10 @@
     "price": 2250,
     "image": "sardy/IMG_6282.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-092",
@@ -1392,7 +1856,10 @@
     "price": 2250,
     "image": "sardy/IMG_6283.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-093",
@@ -1401,7 +1868,10 @@
     "price": 2250,
     "image": "sardy/IMG_6284.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-094",
@@ -1410,7 +1880,10 @@
     "price": 3000,
     "image": "sardy/IMG_6285.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-095",
@@ -1419,7 +1892,10 @@
     "price": 4500,
     "image": "sardy/IMG_6286.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-096",
@@ -1428,7 +1904,10 @@
     "price": 4500,
     "image": "sardy/IMG_6287.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "chips-001",
@@ -1437,7 +1916,10 @@
     "price": 9500,
     "image": "jbs/IMG_0223.jpeg",
     "category": "chips",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "chips-002",
@@ -1446,7 +1928,10 @@
     "price": 9500,
     "image": "jbs/IMG_0224.jpeg",
     "category": "chips",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "chips-003",
@@ -1455,7 +1940,10 @@
     "price": 9500,
     "image": "jbs/IMG_0225.jpeg",
     "category": "chips",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "chips-004",
@@ -1464,7 +1952,10 @@
     "price": 9500,
     "image": "jbs/IMG_0226.jpeg",
     "category": "chips",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "chips-005",
@@ -1473,7 +1964,10 @@
     "price": 9500,
     "image": "jbs/IMG_0227.jpeg",
     "category": "chips",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "chips-006",
@@ -1482,7 +1976,10 @@
     "price": 9500,
     "image": "jbs/photo_2_2026-02-20_22-38-05.jpg",
     "category": "chips",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "chips-007",
@@ -1491,7 +1988,10 @@
     "price": 9500,
     "image": "jbs/photo_3_2026-02-20_22-38-05.jpg",
     "category": "chips",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "chips-008",
@@ -1500,7 +2000,10 @@
     "price": 9500,
     "image": "jbs/photo_4_2026-02-20_22-38-05.jpg",
     "category": "chips",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "chips-009",
@@ -1509,7 +2012,10 @@
     "price": 9500,
     "image": "jbs/photo_10_2026-02-20_22-38-05.jpg",
     "category": "chips",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "chips-010",
@@ -1518,7 +2024,10 @@
     "price": 7500,
     "image": "jbs/IMG_0206.jpeg",
     "category": "chips",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "chips-011",
@@ -1527,7 +2036,10 @@
     "price": 9000,
     "image": "jbs/IMG_0207.jpeg",
     "category": "chips",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "chips-012",
@@ -1536,7 +2048,10 @@
     "price": 7500,
     "image": "jbs/IMG_0208.jpeg",
     "category": "chips",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "chips-013",
@@ -1545,7 +2060,10 @@
     "price": 7500,
     "image": "jbs/IMG_0209.jpeg",
     "category": "chips",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "chips-014",
@@ -1554,7 +2072,10 @@
     "price": 6750,
     "image": "jbs/IMG_0219.jpeg",
     "category": "chips",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "chips-015",
@@ -1563,7 +2084,10 @@
     "price": 9500,
     "image": "jbs/IMG_0228.jpeg",
     "category": "chips",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "chips-016",
@@ -1572,7 +2096,10 @@
     "price": 9500,
     "image": "jbs/IMG_0229.jpeg",
     "category": "chips",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "chips-017",
@@ -1581,7 +2108,10 @@
     "price": 9000,
     "image": "jbs/IMG_0230.jpeg",
     "category": "chips",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "chips-018",
@@ -1590,7 +2120,10 @@
     "price": 9000,
     "image": "jbs/IMG_0232.jpeg",
     "category": "chips",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "chips-019",
@@ -1599,7 +2132,10 @@
     "price": 6250,
     "image": "jbs/photo_6_2026-02-20_22-38-05.jpg",
     "category": "chips",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "chips-020",
@@ -1608,7 +2144,10 @@
     "price": 8000,
     "image": "jbs/photo_7_2026-02-20_22-38-05.jpg",
     "category": "chips",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "chips-021",
@@ -1617,7 +2156,10 @@
     "price": 9500,
     "image": "jbs/photo_9_2026-02-20_22-38-05.jpg",
     "category": "chips",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "chips-022",
@@ -1626,7 +2168,10 @@
     "price": 4000,
     "image": "jbs/photo_11_2026-02-20_22-38-05.jpg",
     "category": "chips",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "chips-023",
@@ -1635,7 +2180,10 @@
     "price": 7500,
     "image": "jbs/photo_12_2026-02-20_22-38-05.jpg",
     "category": "chips",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "chips-024",
@@ -1644,7 +2192,10 @@
     "price": 4000,
     "image": "jbs/photo_13_2026-02-20_22-38-05.jpg",
     "category": "chips",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "chips-025",
@@ -1653,7 +2204,10 @@
     "price": 9500,
     "image": "jbs/photo_14_2026-02-20_22-38-05.jpg",
     "category": "chips",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "chips-026",
@@ -1662,7 +2216,10 @@
     "price": 9000,
     "image": "jbs/photo_15_2026-02-20_22-38-05.jpg",
     "category": "chips",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "chips-027",
@@ -1671,7 +2228,10 @@
     "price": 8000,
     "image": "jbs/photo_16_2026-02-20_22-38-05.jpg",
     "category": "chips",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "chips-028",
@@ -1680,7 +2240,10 @@
     "price": 4500,
     "image": "jbs/photo_17_2026-02-20_22-38-05.jpg",
     "category": "chips",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "chips-029",
@@ -1689,7 +2252,10 @@
     "price": 8000,
     "image": "jbs/photo_18_2026-02-20_22-38-05.jpg",
     "category": "chips",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "chips-030",
@@ -1698,7 +2264,10 @@
     "price": 8000,
     "image": "jbs/photo_19_2026-02-20_22-38-05.jpg",
     "category": "chips",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "chips-031",
@@ -1707,7 +2276,10 @@
     "price": 8000,
     "image": "jbs/photo_20_2026-02-20_22-38-05.jpg",
     "category": "chips",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "chips-032",
@@ -1716,7 +2288,10 @@
     "price": 8000,
     "image": "jbs/photo_21_2026-02-20_22-38-05.jpg",
     "category": "chips",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "chips-033",
@@ -1725,7 +2300,10 @@
     "price": 8000,
     "image": "jbs/photo_23_2026-02-20_22-38-05.jpg",
     "category": "chips",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "chips-034",
@@ -1734,7 +2312,10 @@
     "price": 8000,
     "image": "jbs/photo_8_2026-02-20_22-38-05.jpg",
     "category": "chips",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "chips-035",
@@ -1743,7 +2324,10 @@
     "price": 8000,
     "image": "jbs/photo_22_2026-02-20_22-38-05.jpg",
     "category": "chips",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "chips-036",
@@ -1752,7 +2336,10 @@
     "price": 8000,
     "image": "jbs/photo_24_2026-02-20_22-38-05.jpg",
     "category": "chips",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "chips-037",
@@ -1761,7 +2348,10 @@
     "price": 8000,
     "image": "jbs/photo_25_2026-02-20_22-38-05.jpg",
     "category": "chips",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "chips-038",
@@ -1770,7 +2360,10 @@
     "price": 8500,
     "image": "jbs/photo_26_2026-02-20_22-38-05.jpg",
     "category": "chips",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "chips-039",
@@ -1779,7 +2372,10 @@
     "price": 7000,
     "image": "jbs/photo_27_2026-02-20_22-38-05.jpg",
     "category": "chips",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "chips-040",
@@ -1788,7 +2384,10 @@
     "price": 7000,
     "image": "jbs/photo_28_2026-02-20_22-38-05.jpg",
     "category": "chips",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "chips-041",
@@ -1797,7 +2396,10 @@
     "price": 8000,
     "image": "jbs/photo_30_2026-02-20_22-38-05.jpg",
     "category": "chips",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "chips-042",
@@ -1806,7 +2408,10 @@
     "price": 9500,
     "image": "jbs/photo_31_2026-02-20_22-38-05.jpg",
     "category": "chips",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "chips-043",
@@ -1815,7 +2420,10 @@
     "price": 9500,
     "image": "jbs/photo_32_2026-02-20_22-38-05.jpg",
     "category": "chips",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "chips-044",
@@ -1824,7 +2432,10 @@
     "price": 9500,
     "image": "jbs/photo_33_2026-02-20_22-38-05.jpg",
     "category": "chips",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "chips-045",
@@ -1833,7 +2444,10 @@
     "price": 7500,
     "image": "jbs/photo_34_2026-02-20_22-38-05.jpg",
     "category": "chips",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "chips-046",
@@ -1842,7 +2456,10 @@
     "price": 7500,
     "image": "jbs/photo_35_2026-02-20_22-38-05.jpg",
     "category": "chips",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "chips-047",
@@ -1851,7 +2468,10 @@
     "price": 4500,
     "image": "jbs/photo_36_2026-02-20_22-38-05.jpg",
     "category": "chips",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "chips-048",
@@ -1860,7 +2480,10 @@
     "price": 9000,
     "image": "jbs/photo_2026-02-20_22-39-15.jpg",
     "category": "chips",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-001",
@@ -1869,7 +2492,10 @@
     "price": 1000,
     "image": "mnalan/photo_1_2026-02-21_00-54-52.jpg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-002",
@@ -1878,7 +2504,10 @@
     "price": 4750,
     "image": "mnalan/photo_2_2026-02-21_00-54-52.jpg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-003",
@@ -1887,7 +2516,10 @@
     "price": 3500,
     "image": "mnalan/photo_3_2026-02-21_00-54-52.jpg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-004",
@@ -1896,7 +2528,10 @@
     "price": 5000,
     "image": "mnalan/photo_4_2026-02-21_00-54-52.jpg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-005",
@@ -1905,7 +2540,10 @@
     "price": 4750,
     "image": "mnalan/photo_5_2026-02-21_00-54-52.jpg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-006",
@@ -1914,7 +2552,10 @@
     "price": 5250,
     "image": "mnalan/photo_7_2026-02-21_00-54-52.jpg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-007",
@@ -1923,7 +2564,10 @@
     "price": 5000,
     "image": "mnalan/photo_17_2026-02-21_00-54-52.jpg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-008",
@@ -1932,7 +2576,10 @@
     "price": 2500,
     "image": "mnalan/photo_8_2026-02-21_00-54-52.jpg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-009",
@@ -1941,7 +2588,10 @@
     "price": 3000,
     "image": "mnalan/photo_9_2026-02-21_00-54-52.jpg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-010",
@@ -1950,7 +2600,10 @@
     "price": 5000,
     "image": "mnalan/photo_11_2026-02-21_00-54-52.jpg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-011",
@@ -1959,7 +2612,10 @@
     "price": 5000,
     "image": "mnalan/photo_12_2026-02-21_00-54-52.jpg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-012",
@@ -1968,7 +2624,10 @@
     "price": 5000,
     "image": "mnalan/photo_13_2026-02-21_00-54-52.jpg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-013",
@@ -1977,7 +2636,10 @@
     "price": 2000,
     "image": "mnalan/photo_14_2026-02-21_00-54-52.jpg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-014",
@@ -1986,7 +2648,10 @@
     "price": 5000,
     "image": "mnalan/photo_15_2026-02-21_00-54-52.jpg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-015",
@@ -1995,7 +2660,10 @@
     "price": 5000,
     "image": "mnalan/photo_16_2026-02-21_00-54-52.jpg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-016",
@@ -2004,7 +2672,10 @@
     "price": 5000,
     "image": "mnalan/photo_19_2026-02-21_00-54-52.jpg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-017",
@@ -2013,7 +2684,10 @@
     "price": 2250,
     "image": "mnalan/photo_20_2026-02-21_00-54-52.jpg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-018",
@@ -2022,7 +2696,10 @@
     "price": 2500,
     "image": "mnalan/photo_21_2026-02-21_00-54-52.jpg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-019",
@@ -2031,7 +2708,10 @@
     "price": 2500,
     "image": "mnalan/photo_22_2026-02-21_00-54-52.jpg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-020",
@@ -2040,7 +2720,10 @@
     "price": 2500,
     "image": "mnalan/photo_24_2026-02-21_00-54-52.jpg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-021",
@@ -2049,7 +2732,10 @@
     "price": 3500,
     "image": "mnalan/photo_25_2026-02-21_00-54-52.jpg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-022",
@@ -2058,7 +2744,10 @@
     "price": 3500,
     "image": "mnalan/photo_26_2026-02-21_00-54-52.jpg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-023",
@@ -2067,7 +2756,10 @@
     "price": 5000,
     "image": "mnalan/photo_27_2026-02-21_00-54-52.jpg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-024",
@@ -2076,7 +2768,10 @@
     "price": 5000,
     "image": "mnalan/photo_28_2026-02-21_00-54-52.jpg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-025",
@@ -2085,7 +2780,10 @@
     "price": 4500,
     "image": "mnalan/photo_29_2026-02-21_00-54-52.jpg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-026",
@@ -2094,7 +2792,10 @@
     "price": 5000,
     "image": "mnalan/photo_30_2026-02-21_00-54-52.jpg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "family-001",
@@ -2103,7 +2804,10 @@
     "price": 12000,
     "image": "aylay/photo_1_2026-02-20_22-54-38.jpg",
     "category": "family",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "family-002",
@@ -2112,7 +2816,10 @@
     "price": 18000,
     "image": "aylay/photo_2_2026-02-20_22-54-38.jpg",
     "category": "family",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "family-003",
@@ -2121,7 +2828,10 @@
     "price": 10000,
     "image": "aylay/photo_3_2026-02-20_22-54-38.jpg",
     "category": "family",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "family-004",
@@ -2130,7 +2840,10 @@
     "price": 10000,
     "image": "aylay/photo_4_2026-02-20_22-54-38.jpg",
     "category": "family",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "family-005",
@@ -2139,7 +2852,10 @@
     "price": 10000,
     "image": "aylay/photo_16_2026-02-20_22-54-38.jpg",
     "category": "family",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "family-006",
@@ -2148,7 +2864,10 @@
     "price": 10000,
     "image": "aylay/photo_17_2026-02-20_22-54-38.jpg",
     "category": "family",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "family-007",
@@ -2157,7 +2876,10 @@
     "price": 10000,
     "image": "aylay/photo_7_2026-02-20_22-54-38.jpg",
     "category": "family",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "family-008",
@@ -2166,7 +2888,10 @@
     "price": 15000,
     "image": "aylay/photo_9_2026-02-20_22-54-38.jpg",
     "category": "family",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "family-009",
@@ -2175,7 +2900,10 @@
     "price": 10000,
     "image": "aylay/photo_10_2026-02-20_22-54-38.jpg",
     "category": "family",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "family-010",
@@ -2184,7 +2912,10 @@
     "price": 10000,
     "image": "aylay/photo_11_2026-02-20_22-54-38.jpg",
     "category": "family",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "family-011",
@@ -2193,7 +2924,10 @@
     "price": 8500,
     "image": "aylay/photo_12_2026-02-20_22-54-38.jpg",
     "category": "family",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "family-012",
@@ -2202,7 +2936,10 @@
     "price": 10000,
     "image": "aylay/photo_8_2026-02-20_22-54-38.jpg",
     "category": "family",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "family-013",
@@ -2211,7 +2948,10 @@
     "price": 10000,
     "image": "aylay/photo_13_2026-02-20_22-54-38.jpg",
     "category": "family",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "family-014",
@@ -2220,7 +2960,10 @@
     "price": 10000,
     "image": "aylay/photo_14_2026-02-20_22-54-38.jpg",
     "category": "family",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "family-015",
@@ -2229,7 +2972,10 @@
     "price": 11500,
     "image": "aylay/photo_18_2026-02-20_22-54-38.jpg",
     "category": "family",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-1772043001326",
@@ -2238,7 +2984,10 @@
     "price": 5500,
     "image": "sardy/IMG_6341.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-1772043505832",
@@ -2247,7 +2996,10 @@
     "price": 3000,
     "image": "sardy/IMG_6342.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-1772053943960",
@@ -2256,7 +3008,10 @@
     "price": 4500,
     "image": "sardy/IMG_6374.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-1772053977838",
@@ -2265,7 +3020,10 @@
     "price": 4500,
     "image": "sardy/IMG_6373.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "drink-1772054011207",
@@ -2274,7 +3032,10 @@
     "price": 4500,
     "image": "sardy/IMG_6372.jpeg",
     "category": "drink",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "cake-033",
@@ -2283,7 +3044,10 @@
     "price": 2500,
     "image": "kek/IMG_6343.jpeg",
     "category": "cake",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "cake-034",
@@ -2292,7 +3056,10 @@
     "price": 2500,
     "image": "kek/IMG_6344.jpeg",
     "category": "cake",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "cake-035",
@@ -2301,7 +3068,10 @@
     "price": 2500,
     "image": "kek/IMG_6345.jpeg",
     "category": "cake",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "cake-036",
@@ -2310,7 +3080,10 @@
     "price": 2500,
     "image": "kek/IMG_6347.jpeg",
     "category": "cake",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "cake-037",
@@ -2319,7 +3092,10 @@
     "price": 4500,
     "image": "kek/IMG_6353.jpeg",
     "category": "cake",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "cake-038",
@@ -2328,7 +3104,10 @@
     "price": 5000,
     "image": "kek/IMG_6357.jpeg",
     "category": "cake",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "cake-039",
@@ -2337,7 +3116,10 @@
     "price": 5250,
     "image": "kek/IMG_6388.jpeg",
     "category": "cake",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "cake-040",
@@ -2346,7 +3128,10 @@
     "price": 5250,
     "image": "kek/IMG_6389.jpeg",
     "category": "cake",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "cake-041",
@@ -2355,7 +3140,10 @@
     "price": 5000,
     "image": "kek/IMG_6391.jpeg",
     "category": "cake",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "cake-042",
@@ -2364,7 +3152,10 @@
     "price": 5000,
     "image": "kek/IMG_6392.jpeg",
     "category": "cake",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "cake-044",
@@ -2373,7 +3164,10 @@
     "price": 5250,
     "image": "kek/IMG_6395.jpeg",
     "category": "cake",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "cake-045",
@@ -2382,7 +3176,10 @@
     "price": 5250,
     "image": "kek/IMG_6396.jpeg",
     "category": "cake",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "cake-046",
@@ -2391,7 +3188,10 @@
     "price": 5250,
     "image": "kek/IMG_6397.jpeg",
     "category": "cake",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "cake-047",
@@ -2400,7 +3200,10 @@
     "price": 5250,
     "image": "kek/IMG_6398.jpeg",
     "category": "cake",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "cake-048",
@@ -2409,7 +3212,10 @@
     "price": 5250,
     "image": "kek/IMG_6399.jpeg",
     "category": "cake",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "gaz-034",
@@ -2418,7 +3224,10 @@
     "price": 3500,
     "image": "gaz/IMG_6349.jpeg",
     "category": "gaz",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "gaz-035",
@@ -2427,7 +3236,10 @@
     "price": 5250,
     "image": "gaz/IMG_6355.jpeg",
     "category": "gaz",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "gaz-036",
@@ -2436,7 +3248,10 @@
     "price": 9250,
     "image": "gaz/IMG_6356.jpeg",
     "category": "gaz",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "gaz-037",
@@ -2445,7 +3260,10 @@
     "price": 5250,
     "image": "gaz/IMG_6364.jpeg",
     "category": "gaz",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "gaz-038",
@@ -2454,7 +3272,10 @@
     "price": 5250,
     "image": "gaz/IMG_6366.jpeg",
     "category": "gaz",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "gaz-039",
@@ -2463,7 +3284,10 @@
     "price": 8000,
     "image": "gaz/IMG_6385.jpeg",
     "category": "gaz",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "gaz-040",
@@ -2472,7 +3296,10 @@
     "price": 6250,
     "image": "gaz/IMG_6386.jpeg",
     "category": "gaz",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "gaz-041",
@@ -2481,7 +3308,10 @@
     "price": 5250,
     "image": "gaz/IMG_6387.jpeg",
     "category": "gaz",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "gaz-042",
@@ -2490,7 +3320,10 @@
     "price": 5000,
     "image": "gaz/IMG_6390.jpeg",
     "category": "gaz",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "gaz-043",
@@ -2499,7 +3332,10 @@
     "price": 5000,
     "image": "gaz/IMG_6394.jpeg",
     "category": "gaz",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "gaz-044",
@@ -2508,7 +3344,10 @@
     "price": 5250,
     "image": "gaz/IMG_6400.jpeg",
     "category": "gaz",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "gaz-045",
@@ -2517,7 +3356,10 @@
     "price": 5250,
     "image": "gaz/IMG_6401.jpeg",
     "category": "gaz",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "gaz-046",
@@ -2526,7 +3368,10 @@
     "price": 5250,
     "image": "gaz/IMG_6402.jpeg",
     "category": "gaz",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "gaz-047",
@@ -2535,7 +3380,10 @@
     "price": 5250,
     "image": "gaz/IMG_6403.jpeg",
     "category": "gaz",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "gaz-048",
@@ -2544,7 +3392,10 @@
     "price": 5250,
     "image": "gaz/IMG_6404.jpeg",
     "category": "gaz",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "gaz-049",
@@ -2553,7 +3404,10 @@
     "price": 5250,
     "image": "gaz/IMG_6423.jpeg",
     "category": "gaz",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "gaz-050",
@@ -2562,7 +3416,10 @@
     "price": 5000,
     "image": "gaz/IMG_6426.jpeg",
     "category": "gaz",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "gaz-051",
@@ -2571,7 +3428,10 @@
     "price": 5000,
     "image": "gaz/IMG_6427.jpeg",
     "category": "gaz",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "gaz-052",
@@ -2580,7 +3440,10 @@
     "price": 5000,
     "image": "gaz/IMG_6431.jpeg",
     "category": "gaz",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "gaz-053",
@@ -2589,7 +3452,10 @@
     "price": 5000,
     "image": "gaz/IMG_6432.jpeg",
     "category": "gaz",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "gaz-054",
@@ -2598,7 +3464,10 @@
     "price": 5000,
     "image": "gaz/IMG_6433.jpeg",
     "category": "gaz",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "gaz-055",
@@ -2607,7 +3476,10 @@
     "price": 5000,
     "image": "gaz/IMG_6434.jpeg",
     "category": "gaz",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "gaz-056",
@@ -2616,7 +3488,10 @@
     "price": 5250,
     "image": "gaz/IMG_6435.jpeg",
     "category": "gaz",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "gaz-057",
@@ -2625,7 +3500,10 @@
     "price": 5250,
     "image": "gaz/IMG_6436.jpeg",
     "category": "gaz",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "gaz-058",
@@ -2634,7 +3512,10 @@
     "price": 5250,
     "image": "gaz/IMG_6438.jpeg",
     "category": "gaz",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "gaz-059",
@@ -2643,7 +3524,10 @@
     "price": 5250,
     "image": "gaz/IMG_6439.jpeg",
     "category": "gaz",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "gaz-060",
@@ -2652,7 +3536,10 @@
     "price": 5250,
     "image": "gaz/IMG_6440.jpeg",
     "category": "gaz",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "gaz-061",
@@ -2661,7 +3548,10 @@
     "price": 5000,
     "image": "gaz/IMG_6441.jpeg",
     "category": "gaz",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "gaz-062",
@@ -2670,7 +3560,10 @@
     "price": 5000,
     "image": "gaz/IMG_6442.jpeg",
     "category": "gaz",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "gaz-063",
@@ -2679,7 +3572,10 @@
     "price": 5000,
     "image": "gaz/IMG_6443.jpeg",
     "category": "gaz",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "gaz-064",
@@ -2688,7 +3584,10 @@
     "price": 5000,
     "image": "gaz/IMG_6444.jpeg",
     "category": "gaz",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "gaz-065",
@@ -2697,7 +3596,10 @@
     "price": 5000,
     "image": "gaz/IMG_6445.jpeg",
     "category": "gaz",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "gaz-066",
@@ -2706,7 +3608,10 @@
     "price": 5000,
     "image": "gaz/IMG_6446.jpeg",
     "category": "gaz",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "gaz-067",
@@ -2715,7 +3620,10 @@
     "price": 5000,
     "image": "gaz/IMG_6447.jpeg",
     "category": "gaz",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "gaz-068",
@@ -2724,7 +3632,10 @@
     "price": 5250,
     "image": "gaz/IMG_6471.jpeg",
     "category": "gaz",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "gaz-069",
@@ -2733,7 +3644,10 @@
     "price": 5250,
     "image": "gaz/IMG_6472.jpeg",
     "category": "gaz",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "gaz-070",
@@ -2742,7 +3656,10 @@
     "price": 5250,
     "image": "gaz/IMG_6473.jpeg",
     "category": "gaz",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "gaz-071",
@@ -2751,7 +3668,10 @@
     "price": 5250,
     "image": "gaz/IMG_6474.jpeg",
     "category": "gaz",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "gaz-072",
@@ -2760,7 +3680,10 @@
     "price": 5250,
     "image": "gaz/IMG_6475.jpeg",
     "category": "gaz",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "family-016",
@@ -2769,7 +3692,10 @@
     "price": 47000,
     "image": "aylay/IMG_6375.jpeg",
     "category": "family",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "family-017",
@@ -2778,7 +3704,10 @@
     "price": 9000,
     "image": "aylay/IMG_6376.jpeg",
     "category": "family",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "family-018",
@@ -2787,7 +3716,10 @@
     "price": 9000,
     "image": "aylay/IMG_6377.jpeg",
     "category": "family",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "family-019",
@@ -2796,7 +3728,10 @@
     "price": 9000,
     "image": "aylay/IMG_6378.jpeg",
     "category": "family",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "family-020",
@@ -2805,7 +3740,10 @@
     "price": 10000,
     "image": "aylay/IMG_6379.jpeg",
     "category": "family",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "family-021",
@@ -2814,7 +3752,10 @@
     "price": 10000,
     "image": "aylay/IMG_6380.jpeg",
     "category": "family",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "family-022",
@@ -2823,7 +3764,10 @@
     "price": 10000,
     "image": "aylay/IMG_6381.jpeg",
     "category": "family",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "family-023",
@@ -2832,7 +3776,10 @@
     "price": 10000,
     "image": "aylay/IMG_6382.jpeg",
     "category": "family",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "family-024",
@@ -2841,7 +3788,10 @@
     "price": 10000,
     "image": "aylay/IMG_6383.jpeg",
     "category": "family",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "family-025",
@@ -2850,7 +3800,10 @@
     "price": 12500,
     "image": "aylay/IMG_6384.jpeg",
     "category": "family",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-027",
@@ -2859,7 +3812,10 @@
     "price": 5000,
     "image": "mnalan/IMG_6346.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-028",
@@ -2868,7 +3824,10 @@
     "price": 4500,
     "image": "mnalan/IMG_6348.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-029",
@@ -2877,7 +3836,10 @@
     "price": 8000,
     "image": "mnalan/IMG_6350.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-030",
@@ -2886,7 +3848,10 @@
     "price": 5250,
     "image": "mnalan/IMG_6351.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-031",
@@ -2895,7 +3860,10 @@
     "price": 3000,
     "image": "mnalan/IMG_6352.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-032",
@@ -2904,7 +3872,10 @@
     "price": 5000,
     "image": "mnalan/IMG_6354.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-033",
@@ -2913,7 +3884,10 @@
     "price": 5000,
     "image": "mnalan/IMG_6358.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-034",
@@ -2922,7 +3896,10 @@
     "price": 5250,
     "image": "mnalan/IMG_6359.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-035",
@@ -2931,7 +3908,10 @@
     "price": 8000,
     "image": "mnalan/IMG_6360.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-036",
@@ -2940,7 +3920,10 @@
     "price": 5250,
     "image": "mnalan/IMG_6361.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-037",
@@ -2949,7 +3932,10 @@
     "price": 5250,
     "image": "mnalan/IMG_6362.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-038",
@@ -2958,7 +3944,10 @@
     "price": 5250,
     "image": "mnalan/IMG_6363.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-039",
@@ -2967,7 +3956,10 @@
     "price": 5250,
     "image": "mnalan/IMG_6365.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-040",
@@ -2976,7 +3968,10 @@
     "price": 5000,
     "image": "mnalan/IMG_6367.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-041",
@@ -2985,7 +3980,10 @@
     "price": 4000,
     "image": "mnalan/IMG_6368.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-042",
@@ -2994,7 +3992,10 @@
     "price": 5250,
     "image": "mnalan/IMG_6369.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-043",
@@ -3003,7 +4004,10 @@
     "price": 5250,
     "image": "mnalan/IMG_6370.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-044",
@@ -3012,7 +4016,10 @@
     "price": 4500,
     "image": "mnalan/IMG_6371.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-045",
@@ -3021,7 +4028,10 @@
     "price": 7000,
     "image": "mnalan/IMG_6405.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-046",
@@ -3030,7 +4040,10 @@
     "price": 5250,
     "image": "mnalan/IMG_6406.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-047",
@@ -3039,7 +4052,10 @@
     "price": 5000,
     "image": "mnalan/IMG_6407.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-048",
@@ -3048,7 +4064,10 @@
     "price": 5000,
     "image": "mnalan/IMG_6408.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-049",
@@ -3057,7 +4076,10 @@
     "price": 7000,
     "image": "mnalan/IMG_6409.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-050",
@@ -3066,7 +4088,10 @@
     "price": 5000,
     "image": "mnalan/IMG_6410.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-051",
@@ -3075,7 +4100,10 @@
     "price": 4250,
     "image": "mnalan/IMG_6411.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-052",
@@ -3084,7 +4112,10 @@
     "price": 5000,
     "image": "mnalan/IMG_6412.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-053",
@@ -3093,7 +4124,10 @@
     "price": 4500,
     "image": "mnalan/IMG_6413.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-054",
@@ -3102,7 +4136,10 @@
     "price": 5000,
     "image": "mnalan/IMG_6414.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-055",
@@ -3111,7 +4148,10 @@
     "price": 2500,
     "image": "mnalan/IMG_6415.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-056",
@@ -3120,7 +4160,10 @@
     "price": 5000,
     "image": "mnalan/IMG_6416.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-057",
@@ -3129,7 +4172,10 @@
     "price": 9000,
     "image": "mnalan/IMG_6417.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-058",
@@ -3138,7 +4184,10 @@
     "price": 5000,
     "image": "mnalan/IMG_6418.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-059",
@@ -3147,7 +4196,10 @@
     "price": 2000,
     "image": "mnalan/IMG_6419.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-060",
@@ -3156,7 +4208,10 @@
     "price": 5000,
     "image": "mnalan/IMG_6420.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-061",
@@ -3165,7 +4220,10 @@
     "price": 5000,
     "image": "mnalan/IMG_6421.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-062",
@@ -3174,7 +4232,10 @@
     "price": 0,
     "image": "mnalan/IMG_6422.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-063",
@@ -3183,7 +4244,10 @@
     "price": 5000,
     "image": "mnalan/IMG_6424.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-064",
@@ -3192,7 +4256,10 @@
     "price": 5000,
     "image": "mnalan/IMG_6425.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-065",
@@ -3201,7 +4268,10 @@
     "price": 5000,
     "image": "mnalan/IMG_6428.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-066",
@@ -3210,7 +4280,10 @@
     "price": 5000,
     "image": "mnalan/IMG_6429.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-067",
@@ -3219,7 +4292,10 @@
     "price": 5000,
     "image": "mnalan/IMG_6430.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-068",
@@ -3228,7 +4304,10 @@
     "price": 4000,
     "image": "mnalan/IMG_6448.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-069",
@@ -3237,7 +4316,10 @@
     "price": 4000,
     "image": "mnalan/IMG_6449.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-070",
@@ -3246,7 +4328,10 @@
     "price": 4000,
     "image": "mnalan/IMG_6450.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-071",
@@ -3255,7 +4340,10 @@
     "price": 4000,
     "image": "mnalan/IMG_6451.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-072",
@@ -3264,7 +4352,10 @@
     "price": 4000,
     "image": "mnalan/IMG_6452.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-073",
@@ -3273,7 +4364,10 @@
     "price": 4000,
     "image": "mnalan/IMG_6453.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-074",
@@ -3282,7 +4376,10 @@
     "price": 4000,
     "image": "mnalan/IMG_6454.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-075",
@@ -3291,7 +4388,10 @@
     "price": 4000,
     "image": "mnalan/IMG_6455.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-076",
@@ -3300,7 +4400,10 @@
     "price": 4000,
     "image": "mnalan/IMG_6456.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-077",
@@ -3309,7 +4412,10 @@
     "price": 4000,
     "image": "mnalan/IMG_6457.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-078",
@@ -3318,7 +4424,10 @@
     "price": 4000,
     "image": "mnalan/IMG_6458.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-079",
@@ -3327,7 +4436,10 @@
     "price": 4000,
     "image": "mnalan/IMG_6459.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-080",
@@ -3336,7 +4448,10 @@
     "price": 4000,
     "image": "mnalan/IMG_6460.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-081",
@@ -3345,7 +4460,10 @@
     "price": 4000,
     "image": "mnalan/IMG_6461.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-082",
@@ -3354,7 +4472,10 @@
     "price": 4250,
     "image": "mnalan/IMG_6462.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-083",
@@ -3363,7 +4484,10 @@
     "price": 4000,
     "image": "mnalan/IMG_6463.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-084",
@@ -3372,7 +4496,10 @@
     "price": 4000,
     "image": "mnalan/IMG_6464.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-085",
@@ -3381,7 +4508,10 @@
     "price": 16000,
     "image": "mnalan/IMG_6465.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-086",
@@ -3390,7 +4520,10 @@
     "price": 3000,
     "image": "mnalan/IMG_6466.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-087",
@@ -3399,7 +4532,10 @@
     "price": 3000,
     "image": "mnalan/IMG_6467.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-088",
@@ -3408,7 +4544,10 @@
     "price": 3500,
     "image": "mnalan/IMG_6468.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-089",
@@ -3417,7 +4556,10 @@
     "price": 5250,
     "image": "mnalan/IMG_6469.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "baby-090",
@@ -3426,6 +4568,9 @@
     "price": 3500,
     "image": "mnalan/IMG_6470.jpeg",
     "category": "baby",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   }
 ]
