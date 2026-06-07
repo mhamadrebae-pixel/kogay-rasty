@@ -3,10 +3,15 @@
     "id": "cake-001",
     "name": "نەزەری دووقول",
     "description": "24 عەدەد",
-    "price": 5250,
+    "price": 525000,
     "image": "kek/IMG_0214.jpeg",
     "category": "cake",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": "",
+    "createdAt": "2026-06-07T00:59:15.258Z",
+    "updatedAt": "2026-06-07T00:59:15.258Z"
   },
   {
     "id": "cake-002",
@@ -15,7 +20,10 @@
     "price": 5750,
     "image": "kek/IMG_0211.jpeg",
     "category": "cake",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "cake-003",
@@ -24,7 +32,10 @@
     "price": 5000,
     "image": "kek/IMG_0212.jpeg",
     "category": "cake",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "cake-004",
@@ -33,7 +44,10 @@
     "price": 5250,
     "image": "kek/IMG_0213.jpeg",
     "category": "cake",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "cake-005",
@@ -42,7 +56,10 @@
     "price": 2500,
     "image": "kek/photo_1_2026-02-20_22-41-44.jpg",
     "category": "cake",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "cake-006",
@@ -51,7 +68,10 @@
     "price": 4750,
     "image": "kek/photo_2_2026-02-20_22-41-44.jpg",
     "category": "cake",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "cake-007",
@@ -60,7 +80,10 @@
     "price": 4750,
     "image": "kek/photo_3_2026-02-20_22-41-44.jpg",
     "category": "cake",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "cake-008",
@@ -69,7 +92,10 @@
     "price": 4750,
     "image": "kek/photo_7_2026-02-20_22-41-44.jpg",
     "category": "cake",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "cake-009",
@@ -78,7 +104,10 @@
     "price": 4750,
     "image": "kek/photo_5_2026-02-20_22-41-44.jpg",
     "category": "cake",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "cake-010",
@@ -87,7 +116,10 @@
     "price": 5000,
     "image": "kek/photo_4_2026-02-20_22-41-44.jpg",
     "category": "cake",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "cake-011",
@@ -96,7 +128,10 @@
     "price": 5000,
     "image": "kek/photo_6_2026-02-20_22-41-44.jpg",
     "category": "cake",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "cake-012",
@@ -105,7 +140,10 @@
     "price": 5000,
     "image": "kek/photo_8_2026-02-20_22-41-44.jpg",
     "category": "cake",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "cake-013",
@@ -114,7 +152,10 @@
     "price": 5000,
     "image": "kek/photo_9_2026-02-20_22-41-44.jpg",
     "category": "cake",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "cake-014",
@@ -123,7 +164,10 @@
     "price": 5000,
     "image": "kek/photo_10_2026-02-20_22-41-44.jpg",
     "category": "cake",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "cake-015",
@@ -132,7 +176,10 @@
     "price": 5000,
     "image": "kek/photo_11_2026-02-20_22-41-44.jpg",
     "category": "cake",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "cake-016",
@@ -141,7 +188,10 @@
     "price": 5000,
     "image": "kek/photo_12_2026-02-20_22-41-44.jpg",
     "category": "cake",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "cake-017",
@@ -150,7 +200,10 @@
     "price": 5000,
     "image": "kek/photo_14_2026-02-20_22-41-44.jpg",
     "category": "cake",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "cake-018",
@@ -159,7 +212,10 @@
     "price": 4750,
     "image": "kek/photo_13_2026-02-20_22-41-44.jpg",
     "category": "cake",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "cake-019",
@@ -168,7 +224,10 @@
     "price": 5000,
     "image": "kek/photo_15_2026-02-20_22-41-44.jpg",
     "category": "cake",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "cake-020",
@@ -177,7 +236,10 @@
     "price": 5000,
     "image": "kek/photo_16_2026-02-20_22-41-44.jpg",
     "category": "cake",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "cake-021",
@@ -186,7 +248,10 @@
     "price": 5000,
     "image": "kek/photo_18_2026-02-20_22-41-44.jpg",
     "category": "cake",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "cake-022",
@@ -195,7 +260,10 @@
     "price": 5000,
     "image": "kek/photo_19_2026-02-20_22-41-44.jpg",
     "category": "cake",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "cake-023",
@@ -204,7 +272,10 @@
     "price": 10000,
     "image": "kek/photo_17_2026-02-20_22-41-44.jpg",
     "category": "cake",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "cake-024",
@@ -213,7 +284,10 @@
     "price": 4250,
     "image": "kek/photo_20_2026-02-20_22-41-44.jpg",
     "category": "cake",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "cake-025",
@@ -222,7 +296,10 @@
     "price": 5250,
     "image": "kek/photo_21_2026-02-20_22-41-44.jpg",
     "category": "cake",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "cake-026",
@@ -231,7 +308,10 @@
     "price": 5250,
     "image": "kek/photo_22_2026-02-20_22-41-44.jpg",
     "category": "cake",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "cake-027",
@@ -240,7 +320,10 @@
     "price": 5000,
     "image": "kek/photo_24_2026-02-20_22-41-44.jpg",
     "category": "cake",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "cake-028",
@@ -249,7 +332,10 @@
     "price": 5250,
     "image": "kek/photo_25_2026-02-20_22-41-44.jpg",
     "category": "cake",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "cake-029",
@@ -258,7 +344,10 @@
     "price": 5000,
     "image": "kek/photo_27_2026-02-20_22-41-44.jpg",
     "category": "cake",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "cake-030",
@@ -267,7 +356,10 @@
     "price": 2500,
     "image": "kek/photo_28_2026-02-20_22-41-44.jpg",
     "category": "cake",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "cake-031",
@@ -276,7 +368,10 @@
     "price": 4750,
     "image": "kek/photo_29_2026-02-20_22-41-44.jpg",
     "category": "cake",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "cake-032",
@@ -285,7 +380,10 @@
     "price": 4750,
     "image": "kek/photo_30_2026-02-20_22-41-44.jpg",
     "category": "cake",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "cake-033",
@@ -294,7 +392,10 @@
     "price": 2500,
     "image": "kek/IMG_6343.jpeg",
     "category": "cake",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "cake-034",
@@ -303,7 +404,10 @@
     "price": 2500,
     "image": "kek/IMG_6344.jpeg",
     "category": "cake",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "cake-035",
@@ -312,7 +416,10 @@
     "price": 2500,
     "image": "kek/IMG_6345.jpeg",
     "category": "cake",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "cake-036",
@@ -321,7 +428,10 @@
     "price": 2500,
     "image": "kek/IMG_6347.jpeg",
     "category": "cake",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "cake-037",
@@ -330,7 +440,10 @@
     "price": 4500,
     "image": "kek/IMG_6353.jpeg",
     "category": "cake",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "cake-038",
@@ -339,7 +452,10 @@
     "price": 5000,
     "image": "kek/IMG_6357.jpeg",
     "category": "cake",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "cake-039",
@@ -348,7 +464,10 @@
     "price": 5250,
     "image": "kek/IMG_6388.jpeg",
     "category": "cake",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "cake-040",
@@ -357,7 +476,10 @@
     "price": 5250,
     "image": "kek/IMG_6389.jpeg",
     "category": "cake",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "cake-041",
@@ -366,7 +488,10 @@
     "price": 5000,
     "image": "kek/IMG_6391.jpeg",
     "category": "cake",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "cake-042",
@@ -375,7 +500,10 @@
     "price": 5000,
     "image": "kek/IMG_6392.jpeg",
     "category": "cake",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "cake-044",
@@ -384,7 +512,10 @@
     "price": 5250,
     "image": "kek/IMG_6395.jpeg",
     "category": "cake",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "cake-045",
@@ -393,7 +524,10 @@
     "price": 5250,
     "image": "kek/IMG_6396.jpeg",
     "category": "cake",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "cake-046",
@@ -402,7 +536,10 @@
     "price": 5250,
     "image": "kek/IMG_6397.jpeg",
     "category": "cake",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "cake-047",
@@ -411,7 +548,10 @@
     "price": 5250,
     "image": "kek/IMG_6398.jpeg",
     "category": "cake",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "cake-048",
@@ -420,6 +560,9 @@
     "price": 5250,
     "image": "kek/IMG_6399.jpeg",
     "category": "cake",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   }
 ]
