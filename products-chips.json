@@ -6,7 +6,10 @@
     "price": 9500,
     "image": "jbs/IMG_0223.jpeg",
     "category": "chips",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "chips-002",
@@ -15,7 +18,10 @@
     "price": 9500,
     "image": "jbs/IMG_0224.jpeg",
     "category": "chips",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "chips-003",
@@ -24,7 +30,10 @@
     "price": 9500,
     "image": "jbs/IMG_0225.jpeg",
     "category": "chips",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "chips-004",
@@ -33,7 +42,10 @@
     "price": 9500,
     "image": "jbs/IMG_0226.jpeg",
     "category": "chips",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "chips-005",
@@ -42,7 +54,10 @@
     "price": 9500,
     "image": "jbs/IMG_0227.jpeg",
     "category": "chips",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "chips-006",
@@ -51,7 +66,10 @@
     "price": 9500,
     "image": "jbs/photo_2_2026-02-20_22-38-05.jpg",
     "category": "chips",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "chips-007",
@@ -60,7 +78,10 @@
     "price": 9500,
     "image": "jbs/photo_3_2026-02-20_22-38-05.jpg",
     "category": "chips",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "chips-008",
@@ -69,7 +90,10 @@
     "price": 9500,
     "image": "jbs/photo_4_2026-02-20_22-38-05.jpg",
     "category": "chips",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "chips-009",
@@ -78,7 +102,10 @@
     "price": 9500,
     "image": "jbs/photo_10_2026-02-20_22-38-05.jpg",
     "category": "chips",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "chips-010",
@@ -87,7 +114,10 @@
     "price": 7500,
     "image": "jbs/IMG_0206.jpeg",
     "category": "chips",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "chips-011",
@@ -96,7 +126,10 @@
     "price": 9000,
     "image": "jbs/IMG_0207.jpeg",
     "category": "chips",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "chips-012",
@@ -105,7 +138,10 @@
     "price": 7500,
     "image": "jbs/IMG_0208.jpeg",
     "category": "chips",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "chips-013",
@@ -114,7 +150,10 @@
     "price": 7500,
     "image": "jbs/IMG_0209.jpeg",
     "category": "chips",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "chips-014",
@@ -123,7 +162,10 @@
     "price": 6750,
     "image": "jbs/IMG_0219.jpeg",
     "category": "chips",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "chips-015",
@@ -132,7 +174,10 @@
     "price": 9500,
     "image": "jbs/IMG_0228.jpeg",
     "category": "chips",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "chips-016",
@@ -141,7 +186,10 @@
     "price": 9500,
     "image": "jbs/IMG_0229.jpeg",
     "category": "chips",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "chips-017",
@@ -150,7 +198,10 @@
     "price": 9000,
     "image": "jbs/IMG_0230.jpeg",
     "category": "chips",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "chips-018",
@@ -159,7 +210,10 @@
     "price": 9000,
     "image": "jbs/IMG_0232.jpeg",
     "category": "chips",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "chips-019",
@@ -168,7 +222,10 @@
     "price": 6250,
     "image": "jbs/photo_6_2026-02-20_22-38-05.jpg",
     "category": "chips",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "chips-020",
@@ -177,7 +234,10 @@
     "price": 8000,
     "image": "jbs/photo_7_2026-02-20_22-38-05.jpg",
     "category": "chips",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "chips-021",
@@ -186,7 +246,10 @@
     "price": 9500,
     "image": "jbs/photo_9_2026-02-20_22-38-05.jpg",
     "category": "chips",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "chips-022",
@@ -195,7 +258,10 @@
     "price": 4000,
     "image": "jbs/photo_11_2026-02-20_22-38-05.jpg",
     "category": "chips",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "chips-023",
@@ -204,7 +270,10 @@
     "price": 7500,
     "image": "jbs/photo_12_2026-02-20_22-38-05.jpg",
     "category": "chips",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "chips-024",
@@ -213,7 +282,10 @@
     "price": 4000,
     "image": "jbs/photo_13_2026-02-20_22-38-05.jpg",
     "category": "chips",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "chips-025",
@@ -222,7 +294,10 @@
     "price": 9500,
     "image": "jbs/photo_14_2026-02-20_22-38-05.jpg",
     "category": "chips",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "chips-026",
@@ -231,7 +306,10 @@
     "price": 9000,
     "image": "jbs/photo_15_2026-02-20_22-38-05.jpg",
     "category": "chips",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "chips-027",
@@ -240,7 +318,10 @@
     "price": 8000,
     "image": "jbs/photo_16_2026-02-20_22-38-05.jpg",
     "category": "chips",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "chips-028",
@@ -249,7 +330,10 @@
     "price": 4500,
     "image": "jbs/photo_17_2026-02-20_22-38-05.jpg",
     "category": "chips",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "chips-029",
@@ -258,7 +342,10 @@
     "price": 8000,
     "image": "jbs/photo_18_2026-02-20_22-38-05.jpg",
     "category": "chips",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "chips-030",
@@ -267,7 +354,10 @@
     "price": 8000,
     "image": "jbs/photo_19_2026-02-20_22-38-05.jpg",
     "category": "chips",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "chips-031",
@@ -276,7 +366,10 @@
     "price": 8000,
     "image": "jbs/photo_20_2026-02-20_22-38-05.jpg",
     "category": "chips",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "chips-032",
@@ -285,7 +378,10 @@
     "price": 8000,
     "image": "jbs/photo_21_2026-02-20_22-38-05.jpg",
     "category": "chips",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "chips-033",
@@ -294,7 +390,10 @@
     "price": 8000,
     "image": "jbs/photo_23_2026-02-20_22-38-05.jpg",
     "category": "chips",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "chips-034",
@@ -303,7 +402,10 @@
     "price": 8000,
     "image": "jbs/photo_8_2026-02-20_22-38-05.jpg",
     "category": "chips",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "chips-035",
@@ -312,7 +414,10 @@
     "price": 8000,
     "image": "jbs/photo_22_2026-02-20_22-38-05.jpg",
     "category": "chips",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "chips-036",
@@ -321,7 +426,10 @@
     "price": 8000,
     "image": "jbs/photo_24_2026-02-20_22-38-05.jpg",
     "category": "chips",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "chips-037",
@@ -330,7 +438,10 @@
     "price": 8000,
     "image": "jbs/photo_25_2026-02-20_22-38-05.jpg",
     "category": "chips",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "chips-038",
@@ -339,7 +450,10 @@
     "price": 8500,
     "image": "jbs/photo_26_2026-02-20_22-38-05.jpg",
     "category": "chips",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "chips-039",
@@ -348,7 +462,10 @@
     "price": 7000,
     "image": "jbs/photo_27_2026-02-20_22-38-05.jpg",
     "category": "chips",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "chips-040",
@@ -357,7 +474,10 @@
     "price": 7000,
     "image": "jbs/photo_28_2026-02-20_22-38-05.jpg",
     "category": "chips",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "chips-041",
@@ -366,7 +486,10 @@
     "price": 8000,
     "image": "jbs/photo_30_2026-02-20_22-38-05.jpg",
     "category": "chips",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "chips-042",
@@ -375,7 +498,10 @@
     "price": 9500,
     "image": "jbs/photo_31_2026-02-20_22-38-05.jpg",
     "category": "chips",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "chips-043",
@@ -384,7 +510,10 @@
     "price": 9500,
     "image": "jbs/photo_32_2026-02-20_22-38-05.jpg",
     "category": "chips",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "chips-044",
@@ -393,7 +522,10 @@
     "price": 9500,
     "image": "jbs/photo_33_2026-02-20_22-38-05.jpg",
     "category": "chips",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "chips-045",
@@ -402,7 +534,10 @@
     "price": 7500,
     "image": "jbs/photo_34_2026-02-20_22-38-05.jpg",
     "category": "chips",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "chips-046",
@@ -411,7 +546,10 @@
     "price": 7500,
     "image": "jbs/photo_35_2026-02-20_22-38-05.jpg",
     "category": "chips",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "chips-047",
@@ -420,7 +558,10 @@
     "price": 4500,
     "image": "jbs/photo_36_2026-02-20_22-38-05.jpg",
     "category": "chips",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   },
   {
     "id": "chips-048",
@@ -429,6 +570,9 @@
     "price": 9000,
     "image": "jbs/photo_2026-02-20_22-39-15.jpg",
     "category": "chips",
-    "hidden": false
+    "hidden": false,
+    "name_en": "",
+    "description_en": "",
+    "image_webp": ""
   }
 ]
