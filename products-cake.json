@@ -9,15 +9,13 @@
     "hidden": false,
     "name_en": "",
     "description_en": "",
-    "image_webp": "",
-    "createdAt": "2026-06-07T00:59:15.258Z",
-    "updatedAt": "2026-06-07T01:00:56.482Z"
+    "image_webp": ""
   },
   {
     "id": "cake-002",
     "name": "کولیچەی دوانی",
     "description": "60 عەدەد",
-    "price": 5750,
+    "price": 6500,
     "image": "kek/IMG_0211.jpeg",
     "category": "cake",
     "hidden": false,
