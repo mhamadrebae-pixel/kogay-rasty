@@ -610,6 +610,9 @@
     let ghTokenHealth = { state: 'unknown', source: 'none', detail: '', checkedAt: 0 };
     let lastLoadedRemoteFingerprint = '';
     let lastLoadedRemoteSource = 'none';
+    let ghSettingsAutoSaveTimer = null;
+    let ghSettingsSaveInFlight = false;
+    let lastSavedGhSettingsFingerprint = '';
 
     function escapeHtml(value) {
       return String(value ?? '').replace(/[&<>"']/g, char => ({
@@ -1232,17 +1235,19 @@
 
     function isGhTokenRemembered() {
       try {
-        return localStorage.getItem(GH_TOKEN_REMEMBER_KEY) === 'true';
+        const storedValue = localStorage.getItem(GH_TOKEN_REMEMBER_KEY);
+        if (storedValue === 'false') return false;
+        if (storedValue === 'true') return true;
+        return true;
       } catch (error) {
-        return false;
+        return true;
       }
     }
 
     function setGhTokenRemembered(remember) {
       const nextValue = Boolean(remember);
       try {
-        if (nextValue) localStorage.setItem(GH_TOKEN_REMEMBER_KEY, 'true');
-        else localStorage.removeItem(GH_TOKEN_REMEMBER_KEY);
+        localStorage.setItem(GH_TOKEN_REMEMBER_KEY, nextValue ? 'true' : 'false');
       } catch (error) {
       }
       return nextValue;
@@ -1393,7 +1398,7 @@
         settingsStack.innerHTML = `
           <div class="security-note">
             <strong>Security note:</strong>
-            This admin is still frontend-only. GitHub publishing can use a session-only token, or you can explicitly remember the token on this device.
+            This admin is still frontend-only. GitHub publishing now remembers the token on this device by default unless you turn that off.
           </div>
           <div class="s-card">
             <div class="s-card-title"><i class="fab fa-github"></i> GitHub Publish Settings</div>
@@ -1417,7 +1422,7 @@
                 <input type="checkbox" id="rememberToken">
                 <span>Remember this token on this device</span>
               </label>
-              <div class="form-hint">If unchecked, the token is stored only in this browser session.</div>
+              <div class="form-hint">Enabled by default. Uncheck only if you want the token to stay for this browser session only.</div>
             </div>
             <div style="display:flex;gap:8px;flex-wrap:wrap">
               <button class="btn btn-primary" onclick="updateToken()"><i class="fas fa-check"></i> Save GitHub Settings</button>
@@ -1444,6 +1449,7 @@
             </div>
           </div>
         `;
+        bindGitHubSettingsAutoSave();
       }
     }
 
@@ -2927,6 +2933,53 @@
       };
     }
 
+    function getGitHubSettingsFingerprint(settings, token) {
+      return JSON.stringify({
+        username: String(settings?.username || '').trim(),
+        repo: String(settings?.repo || '').trim(),
+        branch: String(settings?.branch || '').trim(),
+        rememberToken: Boolean(settings?.rememberToken),
+        token: String(token || '').trim()
+      });
+    }
+
+    function scheduleGitHubSettingsAutoSave() {
+      const tokenInput = document.getElementById('newToken');
+      const ownerInput = document.getElementById('newGhOwner');
+      const repoInput = document.getElementById('newGhRepo');
+      const branchInput = document.getElementById('newBranch');
+      const rememberInput = document.getElementById('rememberToken');
+      if (!tokenInput || !ownerInput || !repoInput || !branchInput || !rememberInput) return;
+
+      clearTimeout(ghSettingsAutoSaveTimer);
+      ghSettingsAutoSaveTimer = window.setTimeout(() => {
+        void saveGitHubSettings({ auto: true, silentSuccess: true, silentMissingInfo: true });
+      }, 250);
+    }
+
+    function bindGitHubSettingsAutoSave() {
+      [
+        document.getElementById('newToken'),
+        document.getElementById('newGhOwner'),
+        document.getElementById('newGhRepo'),
+        document.getElementById('newBranch'),
+        document.getElementById('rememberToken')
+      ].filter(Boolean).forEach(field => {
+        if (field.dataset.autoSaveBound === 'true') return;
+        field.dataset.autoSaveBound = 'true';
+
+        field.addEventListener('change', scheduleGitHubSettingsAutoSave);
+        if (field.tagName === 'INPUT' && field.type !== 'checkbox') {
+          field.addEventListener('keydown', event => {
+            if (event.key !== 'Enter') return;
+            event.preventDefault();
+            clearTimeout(ghSettingsAutoSaveTimer);
+            void saveGitHubSettings();
+          });
+        }
+      });
+    }
+
     async function refreshGitHubTokenHealth(forceToast = false) {
       const settings = getGitHubSettingsInputConfig();
       if (!settings.username || !settings.repo) {
@@ -3125,26 +3178,42 @@
       toast(message, 'error');
     }
 
-    async function updateToken() {
+    async function saveGitHubSettings(options = {}) {
+      const {
+        auto = false,
+        silentSuccess = false,
+        silentMissingInfo = false
+      } = options;
       const settings = getGitHubSettingsInputConfig();
       const tokenInput = document.getElementById('newToken');
       const typedToken = String(tokenInput?.value || '').trim();
       const activeToken = typedToken || getSessionGhToken() || getStoredGhToken();
+      const settingsFingerprint = getGitHubSettingsFingerprint(settings, activeToken);
 
       if (!settings.username || !settings.repo || !settings.branch) {
-        toast('Repository owner, repository name, and branch are required.', 'error');
-        return;
+        if (!auto) toast('Repository owner, repository name, and branch are required.', 'error');
+        return { ok: false, reason: 'missing-config' };
       }
 
       if (!activeToken) {
         ghConfig = persistGhConfig(settings, '', { rememberToken: settings.rememberToken });
         ghTokenHealth = { state: 'missing', source: 'none', detail: 'No GitHub token is saved yet.', checkedAt: Date.now() };
         updateGhStatus();
-        toast('GitHub repository settings were saved. Add a token before publishing.', 'info');
-        return;
+        syncSetupPrefill();
+        lastSavedGhSettingsFingerprint = settingsFingerprint;
+        if (!silentMissingInfo) toast('GitHub repository settings were saved. Add a token before publishing.', 'info');
+        return { ok: true, state: 'missing-token' };
       }
 
-      showLoad('Checking GitHub token...');
+      if (auto && ghSettingsSaveInFlight) {
+        return { ok: false, reason: 'save-in-flight' };
+      }
+      if (auto && settingsFingerprint === lastSavedGhSettingsFingerprint) {
+        return { ok: true, state: 'unchanged' };
+      }
+
+      ghSettingsSaveInFlight = true;
+      showLoad(auto ? 'Saving GitHub token...' : 'Checking GitHub token...');
       try {
         const validation = await validateGitHubTokenAccess(activeToken, settings.username, settings.repo, settings.branch);
         hideLoad();
@@ -3153,8 +3222,8 @@
           const detail = `${validation.hint}${validation.detail ? ` - ${validation.detail}` : ''}`;
           ghTokenHealth = { state: 'invalid', source: typedToken ? 'session' : getActiveGhTokenSource().source, detail, checkedAt: Date.now() };
           updateGhStatus();
-          toast(detail, 'error');
-          return;
+          if (!auto || typedToken) toast(detail, 'error');
+          return { ok: false, reason: 'invalid-token', detail };
         }
 
         ghConfig = persistGhConfig({
@@ -3165,7 +3234,9 @@
         ghTokenHealth = { state: 'valid', source: getActiveGhTokenSource().source, detail: '', checkedAt: Date.now() };
         updateGhStatus();
         syncSetupPrefill();
-        toast('GitHub settings saved and token verified', 'success');
+        lastSavedGhSettingsFingerprint = settingsFingerprint;
+        if (!silentSuccess) toast(auto ? 'GitHub token saved automatically' : 'GitHub settings saved and token verified', 'success');
+        return { ok: true, state: 'valid' };
       } catch (error) {
         hideLoad();
         ghTokenHealth = {
@@ -3175,20 +3246,27 @@
           checkedAt: Date.now()
         };
         updateGhStatus();
-        toast(ghTokenHealth.detail, 'error');
+        if (!auto || typedToken) toast(ghTokenHealth.detail, 'error');
+        return { ok: false, reason: 'request-failed', detail: ghTokenHealth.detail };
+      } finally {
+        ghSettingsSaveInFlight = false;
       }
+    }
+
+    async function updateToken() {
+      return saveGitHubSettings();
     }
 
     function clearStoredGhToken() {
       showConfirm('Clear GitHub token', 'The GitHub token will be removed from both this session and this device, but your draft will stay.', () => {
         setSessionGhToken('');
         setStoredGhToken('');
-        setGhTokenRemembered(false);
         ghConfig = persistGhConfig({
           ...(ghConfig || getStoredGhConfigMeta()),
           token: ''
-        }, '', { rememberToken: false });
+        }, '', { rememberToken: isGhTokenRemembered() });
         ghTokenHealth = { state: 'missing', source: 'none', detail: 'No GitHub token is saved yet.', checkedAt: Date.now() };
+        lastSavedGhSettingsFingerprint = '';
         updateGhStatus();
         syncSetupPrefill();
         toast('Stored GitHub token was cleared', 'info');
@@ -3200,11 +3278,15 @@
         clearLocalDraft();
         setSessionGhToken('');
         setStoredGhToken('');
-        setGhTokenRemembered(false);
+        try {
+          localStorage.removeItem(GH_TOKEN_REMEMBER_KEY);
+        } catch (error) {
+        }
         try {
           localStorage.removeItem(GH_CONFIG_KEY);
         } catch (error) {
         }
+        lastSavedGhSettingsFingerprint = '';
         clearAdminSession();
         location.reload();
       });
