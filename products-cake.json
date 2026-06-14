@@ -3,7 +3,7 @@
     "id": "cake-001",
     "name": "نەزەری دووقول",
     "description": "24 عەدەد",
-    "price": 5250,
+    "price": 5000,
     "image": "kek/IMG_0214.jpeg",
     "category": "cake",
     "hidden": false,
@@ -11,7 +11,7 @@
     "description_en": "",
     "image_webp": "",
     "createdAt": "2026-06-07T00:59:15.258Z",
-    "updatedAt": "2026-06-14T12:38:30.615Z"
+    "updatedAt": "2026-06-14T19:44:59.562Z"
   },
   {
     "id": "cake-002",
