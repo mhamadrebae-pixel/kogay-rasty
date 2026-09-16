@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ku" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>کۆگای ڕاستی — فرۆشگای ئۆنلاین</title>
+  
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+  
+  <link rel="stylesheet" href="store.css">
+  <link rel="icon" type="image/png" href="../icon-192.png">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="brand">
+        <div class="brand-logo">🛒</div>
+        <div>
+          <span class="brand-title">کۆگای ڕاستی</span>
+          <span class="brand-sub">فرۆشگای تایبەت</span>
+        </div>
+      </div>
+
+      <div class="nav-actions">
+        <button type="button" class="cart-btn" id="btnOpenCart">
+          <span class="cart-icon">🛍️</span>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero & Search Banner -->
+  <section class="hero-section">
+    <div class="hero-content">
+      <h1 class="hero-title">باشترین کاڵاکان بە کەمترین نرخ</h1>
+      <p class="hero-sub">داواکارییەکانت بە ئاسانی هەڵبژێرە و لە واتسئەپ بینێرە</p>
+      
+      <div class="search-box">
+        <input type="text" id="storeSearch" class="search-input" placeholder="گەڕان لە کاڵاکان (کێک، ساردی، بسکیت...)">
+      </div>
+    </div>
+  </section>
+
+  <!-- Category Nav Pills -->
+  <section class="category-nav">
+    <div class="cat-scroll">
+      <button type="button" class="cat-chip active" data-cat="all">هەمووی</button>
+      <button type="button" class="cat-chip" data-cat="cake">🎂 کێک</button>
+      <button type="button" class="cat-chip" data-cat="gaz">🍪 گەز و بسکیت</button>
+      <button type="button" class="cat-chip" data-cat="drink">🥤 خواردنەوە</button>
+      <button type="button" class="cat-chip" data-cat="chips">🍟 چیپس</button>
+      <button type="button" class="cat-chip" data-cat="baby">🍬 مناڵان</button>
+      <button type="button" class="cat-chip" data-cat="family">👨‍👩‍👧 عایلەیی</button>
+    </div>
+  </section>
+
+  <!-- Main Store Grid -->
+  <main class="store-container">
+    <div class="grid-header">
+      <h2 id="currentCategoryTitle">هەموو کاڵاکان</h2>
+      <span class="items-count-badge" id="itemsCountBadge">... کاڵا</span>
+    </div>
+
+    <div class="products-grid" id="productsGrid">
+      <div class="store-loading">
+        <div class="loader-spinner"></div>
+        <p>بارکردنی کاڵاکان لە سێرڤەرەوە...</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Shopping Cart Modal -->
+  <div class="cart-modal-overlay" id="cartModal" style="display:none">
+    <div class="cart-modal">
+      <div class="cart-header">
+        <h3>سەبەتەی کڕین</h3>
+        <button type="button" class="btn-close-cart" id="btnCloseCart">✕</button>
+      </div>
+
+      <div class="cart-items-list" id="cartItemsList">
+        <div class="empty-cart-msg">سەبەتەکەت بەتاڵە</div>
+      </div>
+
+      <div class="cart-footer">
+        <div class="cart-total-row">
+          <span>کۆی گشتی:</span>
+          <span class="cart-total-price" id="cartTotalPrice">0 IQD</span>
+        </div>
+        <button type="button" class="btn-whatsapp-order" id="btnWhatsappOrder">
+          <span>ناردنی داواکاری بۆ واتسئەپ</span>
+          <span>📲</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div class="store-toast" id="storeToast"></div>
+
+  <!-- Scripts -->
+  <script src="config.js"></script>
+  <script src="store.js"></script>
+</body>
+</html>
