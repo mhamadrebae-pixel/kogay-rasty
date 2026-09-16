@@ -811,7 +811,10 @@ async function loadCategoryProducts(category, { showSkeleton = false, allowFullC
     if (!VALID_CATEGORIES.has(category)) return false;
     if (showSkeleton && products.length === 0) showProductSkeletons();
 
-    const candidates = [{ url: getCategoryDataUrl(category), categoryOnly: true }];
+    const candidates = [
+        { url: 'https://kogay-raste-default-rtdb.firebaseio.com/products.json', categoryOnly: false, isFirebase: true },
+        { url: getCategoryDataUrl(category), categoryOnly: true }
+    ];
     if (allowFullCatalogFallback) {
         candidates.push({ url: PRODUCT_DATA_FALLBACK, categoryOnly: false });
     }
@@ -820,7 +823,9 @@ async function loadCategoryProducts(category, { showSkeleton = false, allowFullC
             try {
                 const res = await fetch(candidate.url, PRODUCT_REQUEST_OPTIONS);
                 if (!res.ok) throw new Error(`HTTP ${res.status}`);
-                const normalized = normalizeProducts(await res.json());
+                const rawData = await res.json();
+                const list = Array.isArray(rawData) ? rawData : (rawData ? Object.values(rawData) : []);
+                const normalized = normalizeProducts(list);
                 const nextProducts = candidate.categoryOnly
                     ? normalized.filter(product => product.category === category)
                     : normalized;
