@@ -1,242 +1,3416 @@
 <!DOCTYPE html>
 <html lang="ku" dir="rtl">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>پانێڵی بەڕێوەبردنی مۆبایل — کۆگای ڕاستی</title>
-  
-  <!-- Firebase SDKs (Official Google CDN) -->
-  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
-  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex,nofollow,noarchive">
+  <title>پانێلی ئەدمین — کۆگای ڕاستی</title>
+  <!--
+    SECURITY WARNING:
+    This admin panel is frontend-only and is suitable only for local/private use.
+    Any password, session, or GitHub token handled in browser JavaScript can be exposed
+    to anyone who can open this file or inspect the browser storage/network traffic.
+    For a real public deployment, move authentication and GitHub writes to a trusted server.
+  -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="admin.css">
-  <link rel="icon" type="image/png" href="../icon-192.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+  <link rel="apple-touch-icon" href="icon-192.png">
+ 
 </head>
-<body>
 
-  <!-- 1. PIN LOGIN SCREEN (بۆ پاراستنی ئەدمین) -->
-  <div class="pin-screen" id="pinScreen">
-    <div class="pin-box">
-      <div class="pin-logo">🛒</div>
-      <h2>چوونەژوورەوەی ئەدمین</h2>
-      <p>تکایە تێپەڕەوشە (PIN) بنووسە:</p>
-      <div class="pin-input-wrap">
-        <input type="password" id="pinInput" class="pin-input" placeholder="••••" maxlength="8" inputmode="numeric">
+<body>
+  <div class="blob blob1"></div>
+  <div class="blob blob2"></div>
+
+  <div class="loading-overlay" id="loadingOverlay">
+    <div class="spinner"></div>
+    <div class="loading-text" id="loadingText">چاوەڕێ بکە...</div>
+  </div>
+
+  <!-- SETUP PAGE -->
+  <div class="setup-page hidden" id="setupPage" hidden aria-hidden="true" style="display:none">
+    <div class="setup-box">
+      <div class="setup-logo">
+        <div class="setup-logo-icon"><i class="fab fa-github"></i></div>
+        <h1>دامەزراندنی GitHub</h1>
+        <p>تەنها یەک جار — دواتر ئۆتۆماتیکی</p>
       </div>
-      <button type="button" class="btn-pin-submit" id="btnPinSubmit">چوونەژوورەوە ➜</button>
-      <div class="pin-error" id="pinError" style="display:none">تێپەڕەوشەکە هەڵەیە!</div>
+      <div class="security-note">
+        <strong>تێبینی پاراستن:</strong>
+        ئەم پانێلە frontend-only ـە و تەنها بۆ local/private use گونجاوە.
+        GitHub Token و زانیاری login لە browserدا هەڵدەگیرێن، بۆیە بۆ public deployment پاراستنەکە تەواو نییە.
+      </div>
+      <div class="setup-step">
+        <div class="setup-step-title"><i class="fas fa-key"></i> چۆن Token دروست بکەیت؟</div>
+        <div class="setup-step-text">
+          ١. github.com → کلیک لە وێنەی خۆت<br>
+          ٢. Settings → Developer settings<br>
+          ٣. Personal access tokens → Tokens (classic)<br>
+          ٤. Generate new token → ناو بنووسە → <strong style="color:#4ade80">repo ✅</strong><br>
+          ٥. Generate → کۆدەکە کۆپی بکە
+        </div>
+      </div>
+      <div class="field">
+        <label><i class="fab fa-github" style="margin-left:6px;color:var(--primary)"></i> GitHub Token</label>
+        <input type="password" id="setupToken" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx" autocomplete="off">
+        <i class="fas fa-lock field-icon"></i>
+      </div>
+      <div class="field">
+        <label><i class="fas fa-user" style="margin-left:6px;color:var(--primary)"></i> GitHub Username</label>
+        <input type="text" id="setupUsername" placeholder="mhamadrebae-pixel" value="mhamadrebae-pixel">
+        <i class="fas fa-at field-icon"></i>
+      </div>
+      <div class="field">
+        <label><i class="fas fa-folder" style="margin-left:6px;color:var(--primary)"></i> Repository Name</label>
+        <input type="text" id="setupRepo" placeholder="kogay-rasty" value="kogay-rasty">
+        <i class="fas fa-database field-icon"></i>
+      </div>
+      <div class="field">
+        <label><i class="fas fa-code-branch" style="margin-left:6px;color:var(--primary)"></i> Branch</label>
+        <input type="text" id="setupBranch" placeholder="main" value="main" autocomplete="off">
+        <i class="fas fa-code-branch field-icon"></i>
+      </div>
+      <button class="btn-main" onclick="saveSetup()"><i class="fas fa-check-circle"></i> پاراستن و بەردەوامبوون</button>
+      <div class="error-box" id="setupError"></div>
+      <p style="text-align:center;margin-top:14px;font-size:11px;color:var(--text3)"><i class="fas fa-shield-halved"
+          style="color:var(--primary);margin-left:4px"></i> Token تەنها لە براوزەری خۆتدا پاراستە</p>
     </div>
   </div>
 
-  <!-- 2. MAIN ADMIN APP -->
-  <div class="app-layout" id="appLayout" style="display:none">
+  <!-- LOGIN PAGE -->
+  <div class="login-page hidden" id="loginPage">
+    <div class="login-box" id="loginBox">
+      <div class="login-logo">
+        <div class="login-logo-icon"><i class="fas fa-shield-halved"></i></div>
+        <h1>پانێلی ئەدمین</h1>
+        <p>کۆگای ڕاستی</p>
+      </div>
+      <div class="security-note">
+        <strong>تێبینی:</strong>
+        ئەم login ـە پاراستنی server-side نییە. لە webی publicدا پشتی پێ مەبەستە.
+      </div>
+      <div class="login-field">
+        <label>ناوی بەکارهێنەر</label>
+        <input type="text" id="loginUser" placeholder="admin" autocomplete="username">
+        <i class="fas fa-user field-icon"></i>
+      </div>
+      <div class="login-field">
+        <label>وشەی تێپەڕ</label>
+        <input type="password" id="loginPass" placeholder="••••••••" autocomplete="current-password"
+          onkeydown="if(event.key==='Enter')doLogin()">
+        <i class="fas fa-lock field-icon"></i>
+      </div>
+      <button class="btn-main" onclick="doLogin()"><i class="fas fa-sign-in-alt"></i> چوونە ژوورەوە</button>
+      <div class="error-box" id="loginError">وشەی تێپەڕ هەڵەیە</div>
+    </div>
+  </div>
 
-    <!-- Top App Bar -->
-    <header class="app-header">
-      <div class="header-inner">
-        <div class="header-brand">
-          <div class="logo-box">🛒</div>
-          <div>
-            <h1 class="header-title">کۆگای ڕاستی</h1>
-            <span class="header-sub">سێرڤەری هەوری بێبەرامبەر (Google Cloud)</span>
-          </div>
-        </div>
-        <div class="sync-badge" id="syncBadge">
-          <span class="dot"></span>
-          <span id="syncStatusText">ئۆنلاین</span>
+  <!-- MAIN APP -->
+  <div class="app" id="mainApp">
+    <div class="sidebar-overlay" id="sidebarOverlay" onclick="closeSidebar()"></div>
+
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-logo">
+        <div class="sidebar-logo-icon"><i class="fas fa-store"></i></div>
+        <div>
+          <div class="sidebar-logo-text">کۆگای ڕاستی</div>
+          <div class="sidebar-logo-sub">پانێلی بەڕێوەبردن</div>
         </div>
       </div>
-    </header>
-
-    <!-- Main Container -->
-    <main class="app-body">
-
-      <!-- TAB 1: ADD PRODUCT -->
-      <section class="tab-view active" id="tab-add">
-        <div class="section-title-row">
-          <h2>زیادکردنی کاڵای نوێ</h2>
-          <span class="total-badge" id="totalBadgeTop">... کاڵا</span>
+      <nav class="sidebar-nav">
+        <div class="nav-title">سەرەکی</div>
+        <button class="nav-item active" onclick="showPage('dashboard',this)"><i class="fas fa-gauge-high"></i>
+          داشبۆرد</button>
+        <button class="nav-item" onclick="showPage('products',this)"><i class="fas fa-box"></i> کاڵاکان <span
+            class="nav-badge" id="navBadge">0</span></button>
+        <button class="nav-item" onclick="showPage('add',this)"><i class="fas fa-plus-circle"></i> زیادکردنی
+          کاڵا</button>
+        <div class="nav-title">بەڕێوەبردن</div>
+        <button class="nav-item" onclick="showPage('settings',this)"><i class="fas fa-gear"></i> ڕێکخستن</button>
+      </nav>
+      <div class="sidebar-footer">
+        <div class="sidebar-user">
+          <div class="user-avatar"><i class="fas fa-user-tie"></i></div>
+          <div>
+            <div class="user-name">ئەدمین</div>
+            <div class="user-role" id="ghStatus">GitHub پەیوەستە ✅</div>
+          </div>
         </div>
+        <button class="logout-btn" onclick="doLogout()"><i class="fas fa-sign-out-alt"></i> چوونەدەرەوە</button>
+      </div>
+    </aside>
 
-        <form id="addForm" class="add-card" onsubmit="return false;">
-          
-          <!-- Image Camera / Picker Zone -->
-          <div class="camera-zone" id="cameraZone">
-            <input type="file" id="cameraInput" accept="image/*" capture="environment" style="display:none">
-            
-            <div class="zone-idle" id="zoneIdle">
-              <div class="zone-icon">📷</div>
-              <div class="zone-text">وێنە بگرە یان هەڵبژێرە</div>
-              <div class="zone-sub">کلیک بکە بۆ کامێرای مۆبایل یان گەلەری</div>
+    <main class="main">
+      <div class="topbar">
+        <div class="topbar-main">
+          <button class="mobile-menu-btn" onclick="openSidebar()"><i class="fas fa-bars"></i></button>
+          <div class="topbar-title" id="topTitle">داشبۆرد</div>
+        </div>
+        <div class="topbar-actions">
+          <div class="topbar-time" id="clock"></div>
+          <div class="changes-badge" id="changesBadge"><i class="fas fa-circle-dot"></i>&nbsp;<span
+              id="changesNum">!</span></div>
+          <button class="btn btn-secondary btn-sm icon-btn" onclick="manualRefresh()"><i class="fas fa-rotate-right"></i></button>
+        </div>
+      </div>
+
+      <!-- DASHBOARD -->
+      <div class="page active" id="page-dashboard">
+        <div class="page-header">
+          <div>
+            <div class="page-title">خۆشت هاتی! 👋</div>
+            <div class="page-sub">گۆڕانکارییەکانت بکە دوایشدا بڵاوی بکەرەوە</div>
+          </div>
+          <div class="page-header-actions">
+            <button class="btn btn-success" onclick="publishJSON()"><i class="fas fa-cloud-upload-alt"></i>
+              بڵاوکردنەوە</button>
+          </div>
+        </div>
+        <div class="publish-bar" id="publishBar">
+          <div class="publish-bar-inner">
+            <div class="publish-icon"><i class="fas fa-triangle-exclamation"></i></div>
+            <div>
+              <div style="font-size:14px;font-weight:700;color:white">گۆڕانکارییەکانت پاراستنیان نییە!</div>
+              <div style="font-size:12px;color:var(--text2);margin-top:2px">بڵاوی بکەرەوە تا سایتەکەت نوێ بێتەوە</div>
             </div>
+          </div>
+          <button class="btn btn-success" onclick="publishJSON()" style="width:100%;justify-content:center"><i
+              class="fas fa-cloud-upload-alt"></i> بڵاوکردنەوە ئێستا</button>
+        </div>
+        <div class="json-info">
+          <i class="fas fa-sync-alt"></i>
+          <span>کاڵاکان ئۆتۆماتیکی لە <strong style="color:white">products.json</strong> ی GitHub دەخوێنرێتەوە ✅</span>
+        </div>
+        <div class="stats-grid" id="statsGrid"></div>
+        <h3 class="section-heading"><i class="fas fa-grid-2"
+            style="color:var(--primary);margin-left:8px"></i> کاڵا بە بەش</h3>
+        <div class="cat-grid" id="catGrid"></div>
+        <div class="guide-card">
+          <div class="guide-card-head">
+            <i class="fas fa-circle-info" style="color:var(--primary)"></i>
+            <span style="font-size:13px;font-weight:700;color:white">چۆن کار دەکات؟</span>
+          </div>
+          <div style="font-size:12px;color:var(--text2);line-height:2.2">
+            ١. کاڵاکان ئۆتۆماتیکی لە <strong style="color:#60a5fa">products.json</strong> بار دەبن<br>
+            ٢. گۆڕانکارییەکانت بکە (زیادکردن، ئیدیت، شاراوەکردن)<br>
+            ٣. دوای تەواوکردن، <strong style="color:#4ade80">بڵاوکردنەوە</strong> بکە<br>
+            ٤. سایتەکەت <strong style="color:white">ئۆتۆماتیکی نوێ دەبێتەوە 🔄</strong>
+          </div>
+        </div>
+      </div>
 
-            <div class="zone-preview" id="zonePreview" style="display:none">
-              <img id="previewImg" class="preview-img" alt="Product Image">
-              <button type="button" class="btn-clear-img" id="btnClearImg" title="لابردن">✕</button>
-              <div class="comp-tag" id="compTag">ئامادەیە بۆ ناردن</div>
+      <!-- PRODUCTS -->
+      <div class="page" id="page-products">
+        <div class="page-header">
+          <div>
+            <div class="page-title">کاڵاکان</div>
+            <div class="page-sub" id="prodSub">بارکردن...</div>
+          </div>
+          <div class="page-header-actions">
+            <button class="btn btn-secondary" onclick="manualRefresh()"><i class="fas fa-rotate-right"></i> نوێ</button>
+            <button class="btn btn-primary" onclick="showPage('add',null)"><i class="fas fa-plus"></i> کاڵای
+              نوێ</button>
+          </div>
+        </div>
+        <div class="filters">
+          <div class="search-box">
+            <i class="fas fa-search"></i>
+            <input type="text" id="srch" placeholder="گەڕان لە کاڵاکان..." oninput="filterProds()">
+          </div>
+          <select class="f-select" id="catFilter" onchange="filterProds()">
+            <option value="">هەموو بەشەکان</option>
+            <option value="cake">کێک</option>
+            <option value="gaz">گەز و بسکیت</option>
+            <option value="drink">خواردنەوە</option>
+            <option value="chips">چیپس</option>
+            <option value="baby">مناڵان</option>
+            <option value="family">عایلەی</option>
+          </select>
+          <select class="f-select" id="statusFilter" onchange="filterProds()">
+            <option value="">هەموو حاڵەت</option>
+            <option value="active">نیشاندراو</option>
+            <option value="hidden">شاراوە</option>
+          </select>
+        </div>
+        <div class="table-wrap">
+          <div class="table-head">
+            <div class="table-title"><i class="fas fa-list" style="color:var(--primary)"></i> لیستی کاڵاکان</div>
+            <div class="table-count" id="tCount">0 کاڵا</div>
+          </div>
+          <!-- Desktop Table -->
+          <div class="prod-table-desktop">
+            <table>
+              <thead>
+                <tr>
+                  <th>کاڵا</th>
+                  <th>بەش</th>
+                  <th>وەسف</th>
+                  <th>نرخ</th>
+                  <th>حاڵەت</th>
+                  <th>کردارەکان</th>
+                </tr>
+              </thead>
+              <tbody id="prodBody"></tbody>
+            </table>
+          </div>
+          <!-- Mobile Cards -->
+          <div class="prod-cards-mobile" id="prodCardsMobile"></div>
+          <div class="empty-state" id="prodEmpty" style="display:none">
+            <div class="empty-icon"><i class="fas fa-box-open"></i></div>
+            <h3 style="color:var(--text2);font-size:15px">هیچ کاڵایەک نەدۆزرایەوە</h3>
+          </div>
+        </div>
+      </div>
+
+      <!-- ADD PRODUCT -->
+      <div class="page" id="page-add">
+        <div class="page-header">
+          <div>
+            <div class="page-title">زیادکردنی کاڵای نوێ</div>
+            <div class="page-sub">دوای زیادکردن فەرامووش مەکە بڵاوی بکەیتەوە</div>
+          </div>
+        </div>
+        <div class="add-page-wrap">
+          <div class="s-card">
+            <div class="s-card-title"><i class="fas fa-plus-circle"></i> زانیاری کاڵا</div>
+            <div class="form-group">
+              <label class="form-label"><span>*</span> Auto ID</label>
+              <input type="text" class="form-control" id="newId" placeholder="Generated automatically" readonly>
+              <div class="form-hint">ناسنامەی کاڵا دەبێت تایبەت بێت و دوبارە نەبێتەوە</div>
+            </div>
+            <div class="form-group">
+              <label class="form-label"><span>*</span> ناوی کاڵا</label>
+              <input type="text" class="form-control" id="newName" placeholder="ناوی کاڵاکەت بنووسە">
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label"><span>*</span> بەش</label>
+                <select class="form-control" id="newCat">
+                  <option value="cake">🎂 کێک</option>
+                  <option value="gaz">🍪 گەز و بسکیت</option>
+                  <option value="drink">🥤 خواردنەوە</option>
+                  <option value="chips">🍟 چیپس</option>
+                  <option value="baby">🍬 مناڵان</option>
+                  <option value="family">👨‍👩‍👧 عایلەی</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label"><span>*</span> نرخ (IQD)</label>
+                <input type="number" class="form-control" id="newPrice" placeholder="5000" min="0" inputmode="numeric">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label"><span>*</span> وەسف</label>
+              <input type="text" class="form-control" id="newDesc" placeholder="٢٤ عەدەد">
+            </div>
+            <div class="form-group">
+              <label class="form-label">ناونیشانی وێنە</label>
+              <input type="text" class="form-control" id="newImage" placeholder="kek/photo.jpg">
+              <div class="form-hint">وێنەکە دەبێت پێشتر لە GitHub ئەپلۆدی کردبێیت</div>
+              <!-- Add-product uploader: preview, validate, and upload the chosen file before saving the product. -->
+              <div class="upload-box" id="addImageUploadBox">
+                <div class="upload-picker-row">
+                  <div class="upload-picker-copy">
+                    <span class="upload-picker-title">Image file</span>
+                    <span class="upload-picker-subtitle">PNG / JPG / WebP</span>
+                  </div>
+                  <label class="upload-picker-btn" for="addImageFile">
+                    <i class="fas fa-folder-open"></i> Choose image
+                  </label>
+                </div>
+                <input type="file" class="upload-input" id="addImageFile" accept="image/*">
+                <div class="upload-preview" id="addImagePreview">
+                  <img id="addImagePreviewImg" alt="Add product preview">
+                  <div class="upload-preview-placeholder">
+                    <i class="fas fa-image"></i>
+                    <span>Preview وێنەی هەڵبژێردراو</span>
+                  </div>
+                </div>
+                <div class="upload-meta">
+                  <div class="upload-file-name" id="addImageFileName">هیچ فایلێک هەڵنەبژێردراوە</div>
+                  <div class="upload-state s-ready" id="addImageState">ئامادەیە</div>
+                </div>
+                <!-- Size info: shown after compression so the user sees original → WebP gain -->
+                <div class="upload-size-row" id="addImageSizeRow" style="display:none">
+                  سەرەتا: <span id="addImageOrigSize"></span> &rarr; WebP: <span class="comp" id="addImageCompSize"></span>
+                </div>
+                <!-- Indeterminate bar shown while the GitHub PUT request is in flight -->
+                <div class="upload-progress" id="addImageProgress" style="display:none">
+                  <div class="upload-progress-bar"></div>
+                </div>
+                <div style="display:flex;gap:10px;align-items:center;margin-top:10px;flex-wrap:wrap">
+                  <button type="button" class="upload-remove-btn" id="addImageRemoveBtn">لابردنی وێنە</button>
+                  <div class="form-hint" id="addImageHelp">PNG/JPG/WebP تەنها، قەبارەی سەرەتایی تا 5MB</div>
+                </div>
+              </div>
+            </div>
+            <div style="display:flex;gap:10px">
+              <button class="btn btn-primary" onclick="addProduct()" style="flex:1;justify-content:center"><i
+                  class="fas fa-plus"></i> زیادکردن</button>
+              <button class="btn btn-secondary" onclick="clearAdd()"><i class="fas fa-rotate-left"></i></button>
             </div>
           </div>
+        </div>
+      </div>
 
-          <!-- Progress Bar during upload -->
-          <div class="upload-progress-bar" id="uploadProgressBar" style="display:none">
-            <div class="progress-fill" id="progressFill"></div>
+      <!-- SETTINGS -->
+      <div class="page" id="page-settings">
+        <div class="page-header">
+          <div>
+            <div class="page-title">ڕێکخستن</div>
+            <div class="page-sub">ڕێکخستنی پانێل و GitHub</div>
           </div>
-
-          <!-- Category Selector -->
-          <div class="input-group">
-            <label class="group-label">بەش: <span class="req">*</span></label>
-            <div class="cat-grid" id="catGrid">
-              <button type="button" class="cat-btn active" data-cat="cake">🎂 کێک</button>
-              <button type="button" class="cat-btn" data-cat="gaz">🍪 گەز و بسکیت</button>
-              <button type="button" class="cat-btn" data-cat="drink">🥤 خواردنەوە</button>
-              <button type="button" class="cat-btn" data-cat="chips">🍟 چیپس</button>
-              <button type="button" class="cat-btn" data-cat="baby">🍬 مناڵان</button>
-              <button type="button" class="cat-btn" data-cat="family">👨‍👩‍👧 عایلەیی</button>
+        </div>
+        <div class="settings-stack">
+          <div class="security-note">
+            <strong>هۆشداری:</strong>
+            GitHub Token لێرە بۆ convenience لە هەمان browserدا هەڵدەگیرێت.
+            ئەمە چارەسەری ئەمن نییە و تەنها بۆ بەکارهێنانی تایبەتی یان ناوخۆیی پێشنیار دەکرێت.
+          </div>
+          <div class="s-card">
+            <div class="s-card-title"><i class="fab fa-github"></i> ڕێکخستنی GitHub</div>
+            <div id="ghInfo" style="margin-bottom:16px;font-size:13px;color:var(--text2)"></div>
+            <div class="form-group">
+              <label class="form-label">Token نوێ</label>
+              <input type="password" class="form-control" id="newToken" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx"
+                style="direction:ltr">
+              <div class="form-hint">ئەگەر دەتەوێت Token بگۆڕیت</div>
             </div>
-            <input type="hidden" id="selectedCat" value="cake">
-          </div>
-
-          <!-- Product Name -->
-          <div class="input-group">
-            <label class="group-label" for="prodName">ناوی کاڵا: <span class="req">*</span></label>
-            <input type="text" id="prodName" class="text-input" placeholder="بۆ نموونە: کێک کاکاو فامیلی" required>
-          </div>
-
-          <!-- Price -->
-          <div class="input-group">
-            <label class="group-label" for="prodPrice">نرخ بە دینار (IQD): <span class="req">*</span></label>
-            <div class="price-input-row">
-              <input type="number" id="prodPrice" class="text-input" placeholder="5000" min="0" step="250" inputmode="numeric" required>
-              <span class="price-suffix">د.ع</span>
+            <div class="form-group">
+              <label class="form-label">Branch</label>
+              <input type="text" class="form-control" id="newBranch" placeholder="main" value="main"
+                style="direction:ltr" autocomplete="off">
+              <div class="form-hint">If your repository uses another branch, enter it here.</div>
             </div>
-            <div class="price-words" id="priceWords">0 دیناری عێراقی</div>
+            <div style="display:flex;gap:8px;flex-wrap:wrap">
+              <button class="btn btn-primary" onclick="updateToken()"><i class="fas fa-check"></i> نوێکردنەوە</button>
+              <button class="btn btn-danger" onclick="clearSetup()"><i class="fas fa-trash"></i> سڕینەوەی
+                ڕێکخستن</button>
+            </div>
           </div>
-
-          <!-- Description -->
-          <div class="input-group">
-            <label class="group-label" for="prodDesc">وەسف / عەدەد:</label>
-            <input type="text" id="prodDesc" class="text-input" placeholder="بۆ نموونە: ٢٤ عەدەد، تامێکی تایبەت">
+          <div class="s-card">
+            <div class="s-card-title"><i class="fas fa-rotate-right"></i> ئۆتۆ-ڕیفرێش</div>
+            <p style="font-size:13px;color:var(--text2);margin-bottom:12px;line-height:1.8">کاتێک لا دەگەڕێیتەوە، پانێل
+              ئۆتۆماتیکی کاڵاکان لە GitHub دەخوێنێتەوە.</p>
+            <div
+              style="display:flex;align-items:center;gap:12px;background:rgba(34,197,94,0.08);border:1px solid rgba(34,197,94,0.2);border-radius:var(--radius);padding:12px 14px">
+              <i class="fas fa-check-circle" style="color:#4ade80;font-size:17px"></i>
+              <span style="font-size:13px;color:#4ade80;font-weight:600">چالاکە — ئۆتۆماتیکی نوێ دەبێتەوە</span>
+            </div>
           </div>
-
-          <!-- Submit Button -->
-          <button type="submit" class="btn-submit" id="btnSubmit">
-            <span class="btn-spinner" id="btnSpinner" style="display:none"></span>
-            <span id="btnSubmitText">➕ زیادکردن بۆ فرۆشگا</span>
-          </button>
-
-        </form>
-      </section>
-
-      <!-- TAB 2: PRODUCTS LIST -->
-      <section class="tab-view" id="tab-list">
-        <div class="section-title-row">
-          <h2>کاڵاکانی ناو فرۆشگا</h2>
-          <button type="button" class="btn-reload" id="btnReloadList">🔄 تازەکردنەوە</button>
+          <div class="s-card">
+            <div class="s-card-title"><i class="fas fa-key"></i> گۆڕینی وشەی تێپەڕ</div>
+            <div class="form-group"><label class="form-label">وشەی تێپەڕی ئێستا</label><input type="password"
+                class="form-control" id="curPass" placeholder="وشەی تێپەڕی ئێستا"></div>
+            <div class="form-group">
+              <label class="form-label">وشەی تێپەڕی نوێ</label>
+              <input type="password" class="form-control" id="newPass" placeholder="لانیکەم ٦ پیت"
+                oninput="checkStrength()">
+              <div class="pass-strength" id="passStr"></div>
+            </div>
+            <div class="form-group"><label class="form-label">دووبارەکردنەوە</label><input type="password"
+                class="form-control" id="confPass" placeholder="دووبارە بنووسە"></div>
+            <button class="btn btn-primary" onclick="changePass()"><i class="fas fa-check"></i> پاراستن</button>
+          </div>
+          <div class="s-card">
+            <div class="s-card-title"><i class="fas fa-rotate-left"></i> ڕیسێت</div>
+            <p style="font-size:13px;color:var(--text2);margin-bottom:14px;line-height:1.8">هەموو گۆڕانکارییەکان
+              دەسڕێتەوە و کاڵاکان دەگەڕێنەوە سەر حاڵی GitHub.</p>
+            <button class="btn btn-danger" onclick="doReset()"><i class="fas fa-rotate-left"></i> گەڕانەوەی
+              سەرەکی</button>
+          </div>
         </div>
-
-        <!-- Search Bar -->
-        <div class="search-wrap">
-          <input type="text" id="searchInput" class="search-field" placeholder="گەڕان لە کاڵاکان...">
-        </div>
-
-        <!-- Category Filter Chips -->
-        <div class="filter-chips-row">
-          <button type="button" class="chip active" data-filter="all">هەمووی</button>
-          <button type="button" class="chip" data-filter="cake">🎂 کێک</button>
-          <button type="button" class="chip" data-filter="gaz">🍪 گەز</button>
-          <button type="button" class="chip" data-filter="drink">🥤 خواردنەوە</button>
-          <button type="button" class="chip" data-filter="chips">🍟 چیپس</button>
-          <button type="button" class="chip" data-filter="baby">🍬 مناڵان</button>
-          <button type="button" class="chip" data-filter="family">👨‍👩‍👧 عایلەیی</button>
-        </div>
-
-        <!-- Products List Render Target -->
-        <div class="prod-cards-container" id="prodCardsContainer">
-          <div class="status-msg">چاوەڕوان بە، کاڵاکان بار دەکرێن...</div>
-        </div>
-      </section>
-
-      <!-- TAB 3: SETTINGS & BACKUP -->
-      <section class="tab-view" id="tab-settings">
-        <div class="section-title-row">
-          <h2>ڕێکخستن و گواستنەوەی داتا</h2>
-        </div>
-
-        <div class="setting-card">
-          <h3>📦 گواستنەوەی ٣٨١ کاڵا کۆنەکان بۆ ناو سێرڤەری ئۆنلاین</h3>
-          <p class="setting-desc">بە یەک کلیک هەموو کاڵاکانی پێشووی ناو فایلی `products.json` دەنێردرێتە ناو سێرڤەری گووگڵ تا هیچ کاڵایەکت نەفەوتێت:</p>
-          <button type="button" class="btn-import" id="btnImportExisting">
-            🚀 دەستپێکردنی گواستنەوەی کاڵاکان بۆ سێرڤەری گووگڵ
-          </button>
-          <div id="importStatus" class="import-status" style="display:none"></div>
-        </div>
-
-        <div class="setting-card">
-          <h3>🛒 بینینی فرۆشگای ئۆنلاین</h3>
-          <p class="setting-desc">دەتوانیت ماڵپەڕی فرۆشگاکە بکەیتەوە کە کڕیاران دەیبینن:</p>
-          <a href="store.html" target="_blank" class="btn-open-store">کردنەوەی فرۆشگای ئۆنلاین ➜</a>
-        </div>
-
-        <div class="setting-card">
-          <h3>🔒 دەرچوون لە ئەدمین</h3>
-          <button type="button" class="btn-logout" id="btnLogout">دەرچوون</button>
-        </div>
-      </section>
-
+      </div>
     </main>
 
-    <!-- Bottom Navigation Bar -->
-    <nav class="bottom-bar">
-      <button type="button" class="bar-btn active" data-tab="tab-add">
-        <span class="bar-icon">➕</span>
-        <span class="bar-text">زیادکردن</span>
+    <!-- BOTTOM NAV -->
+    <nav class="bottom-nav" id="bottomNav">
+      <button class="bottom-nav-item active" id="bn-dashboard"
+        onclick="showPage('dashboard',null);setBottomNav('dashboard')">
+        <i class="fas fa-gauge-high"></i><span>داشبۆرد</span>
       </button>
-      <button type="button" class="bar-btn" data-tab="tab-list">
-        <span class="bar-icon">📦</span>
-        <span class="bar-text">کاڵاکان</span>
+      <button class="bottom-nav-item" id="bn-products" onclick="showPage('products',null);setBottomNav('products')">
+        <i class="fas fa-box"></i><span>کاڵاکان</span>
+        <div class="bottom-nav-dot" id="bnDot" style="display:none"></div>
       </button>
-      <button type="button" class="bar-btn" data-tab="tab-settings">
-        <span class="bar-icon">⚙️</span>
-        <span class="bar-text">ڕێکخستن</span>
+      <button class="bottom-nav-item" id="bn-add" onclick="showPage('add',null);setBottomNav('add')">
+        <i class="fas fa-plus-circle"></i><span>زیادکردن</span>
+      </button>
+      <button class="bottom-nav-item" id="bn-settings" onclick="showPage('settings',null);setBottomNav('settings')">
+        <i class="fas fa-gear"></i><span>ڕێکخستن</span>
       </button>
     </nav>
-
   </div>
 
-  <!-- Toast Container -->
-  <div class="toast-box" id="toastBox"></div>
-
-  <!-- Edit Modal -->
-  <div class="modal-bg" id="editModal" style="display:none">
-    <div class="modal-content">
-      <div class="modal-title-row">
-        <h3>دەستکاریکردنی کاڵا</h3>
-        <button type="button" class="btn-modal-close" id="btnModalClose">✕</button>
+  <!-- EDIT MODAL -->
+  <div class="modal-overlay" id="editModal">
+    <div class="modal">
+      <div class="modal-hd">
+        <div class="modal-hd-title"><i class="fas fa-pen"></i> دەستکاری کاڵا</div>
+        <button class="modal-close" onclick="closeEdit()"><i class="fas fa-times"></i></button>
       </div>
-      <form id="editForm" onsubmit="return false;">
+      <div class="modal-body">
         <input type="hidden" id="editId">
-        <div class="input-group">
-          <label class="group-label">ناوی کاڵا:</label>
-          <input type="text" id="editName" class="text-input" required>
+        <div class="form-group"><label class="form-label"><span>*</span> ناوی کاڵا</label><input type="text"
+            class="form-control" id="editName"></div>
+        <div class="form-row">
+          <div class="form-group"><label class="form-label">بەش</label>
+            <select class="form-control" id="editCat">
+              <option value="cake">🎂 کێک</option>
+              <option value="gaz">🍪 گەز و بسکیت</option>
+              <option value="drink">🥤 خواردنەوە</option>
+              <option value="chips">🍟 چیپس</option>
+              <option value="baby">🍬 مناڵان</option>
+              <option value="family">👨‍👩‍👧 عایلەی</option>
+            </select>
+          </div>
+          <div class="form-group"><label class="form-label">نرخ (IQD)</label><input type="number" class="form-control"
+              id="editPrice" min="0" inputmode="numeric"></div>
         </div>
-        <div class="input-group">
-          <label class="group-label">نرخ (IQD):</label>
-          <input type="number" id="editPrice" class="text-input" required>
+        <div class="form-group"><label class="form-label">وەسف</label><input type="text" class="form-control"
+            id="editDesc"></div>
+        <div class="form-group"><label class="form-label">ناونیشانی وێنە</label><input type="text" class="form-control"
+            id="editImage">
+          <!-- Edit-product uploader: optionally replace the current image with a newly uploaded GitHub file. -->
+          <div class="upload-box" id="editImageUploadBox">
+            <div class="upload-picker-row">
+              <div class="upload-picker-copy">
+                <span class="upload-picker-title">Replace image</span>
+                <span class="upload-picker-subtitle">Choose a new file</span>
+              </div>
+              <label class="upload-picker-btn" for="editImageFile">
+                <i class="fas fa-folder-open"></i> Choose image
+              </label>
+            </div>
+            <input type="file" class="upload-input" id="editImageFile" accept="image/*">
+            <div class="upload-preview" id="editImagePreview">
+              <img id="editImagePreviewImg" alt="Edit product preview">
+              <div class="upload-preview-placeholder">
+                <i class="fas fa-image"></i>
+                <span>Preview وێنەی نوێ</span>
+              </div>
+            </div>
+            <div class="upload-meta">
+              <div class="upload-file-name" id="editImageFileName">هیچ فایلێک هەڵنەبژێردراوە</div>
+              <div class="upload-state s-ready" id="editImageState">بەبێ گۆڕانکاری</div>
+            </div>
+            <!-- Size info: shown after compression -->
+            <div class="upload-size-row" id="editImageSizeRow" style="display:none">
+              سەرەتا: <span id="editImageOrigSize"></span> &rarr; WebP: <span class="comp" id="editImageCompSize"></span>
+            </div>
+            <!-- Indeterminate bar shown during GitHub upload -->
+            <div class="upload-progress" id="editImageProgress" style="display:none">
+              <div class="upload-progress-bar"></div>
+            </div>
+            <div style="display:flex;gap:10px;align-items:center;margin-top:10px;flex-wrap:wrap">
+              <button type="button" class="upload-remove-btn" id="editImageRemoveBtn">لابردنی وێنەی نوێ</button>
+              <div class="form-hint" id="editImageHelp">ئەگەر فایلێک هەڵنەبژێریت، هەمان path ـی کۆن دەمێنێتەوە</div>
+            </div>
+          </div>
         </div>
-        <div class="input-group">
-          <label class="group-label">وەسف:</label>
-          <input type="text" id="editDesc" class="text-input">
-        </div>
-        <div class="modal-btns">
-          <button type="submit" class="btn-modal-save" id="btnModalSave">پاشەکەوتکردن</button>
-          <button type="button" class="btn-modal-cancel" id="btnModalCancel">پاشگەزبوونەوە</button>
-        </div>
-      </form>
+      </div>
+      <div class="modal-ft">
+        <button class="btn btn-secondary" onclick="closeEdit()">هەڵوەشاندنەوە</button>
+        <button class="btn btn-primary" onclick="saveEdit()"><i class="fas fa-check"></i> پاراستن</button>
+      </div>
     </div>
   </div>
 
-  <!-- Scripts -->
-  <script src="config.js"></script>
-  <script src="admin.js"></script>
+  <!-- CONFIRM MODAL -->
+  <div class="modal-overlay" id="confirmModal">
+    <div class="confirm-box">
+      <div class="confirm-icon"><i class="fas fa-triangle-exclamation"></i></div>
+      <div class="confirm-title" id="confTitle">دڵنیایت؟</div>
+      <div class="confirm-text" id="confText"></div>
+      <div style="display:flex;gap:10px;justify-content:center">
+        <button class="btn btn-secondary" onclick="closeConfirm()">نەخێر</button>
+        <button class="btn btn-danger" id="confOk">بەڵێ</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- IMAGE PREVIEW MODAL -->
+  <div class="img-preview-modal" id="imgPreviewModal" onclick="closeImgPreview(event)">
+    <div class="img-preview-wrap" onclick="event.stopPropagation()">
+      <div class="img-preview-header">
+        <div class="img-preview-title" id="imgPreviewName">بینینی وێنە</div>
+        <button class="img-preview-close" onclick="closeImgPreview()"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="img-preview-body">
+        <div id="imgPreviewContent"></div>
+        <div class="img-preview-path" id="imgPreviewPath"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast-wrap" id="toasts"></div>
+
+  <script src="auth.js?v=2026041002"></script>
+  <script>
+    // SECURITY NOTE:
+    // This panel remains frontend-only. Authentication and GitHub writes are still visible to
+    // anyone who can open this file, so treat this panel as local/private-use only.
+    const SESSION_KEY = 'adminSession_v3';
+    const LOGIN_AT_KEY = 'adminLoginAt';
+    const SESSION_TTL_MS = 8 * 60 * 60 * 1000;
+    const ADMIN_USER_KEY = 'adminUser';
+    const ADMIN_HASH_KEY = 'adminHash';
+    const GH_CONFIG_KEY = 'githubConfig_v1';
+    const GH_TOKEN_SESSION_KEY = 'githubToken_session_v1';
+    const GH_TOKEN_STORAGE_KEY = 'githubToken_v1';
+    const GH_TOKEN_REMEMBER_KEY = 'githubTokenRemember_v1';
+    const LOCAL_DRAFT_KEY = 'adminDraft_products_v1';
+    const HARDCODED_GH_TOKEN = '';
+    const HARDCODED_GH_USERNAME = 'mhamadrebae-pixel';
+    const HARDCODED_GH_REPO = 'kogay-rasty';
+    const HARDCODED_GH_BRANCH = 'main';
+
+    const catInfo = {
+      cake: { name: 'کێک', icon: 'fa-cake-candles', color: '#f97316' },
+      gaz: { name: 'گەز و بسکیت', icon: 'fa-cookie-bite', color: '#a78bfa' },
+      drink: { name: 'خواردنەوە', icon: 'fa-glass-water', color: '#60a5fa' },
+      chips: { name: 'چیپس', icon: 'fa-bowl-food', color: '#facc15' },
+      baby: { name: 'مناڵان', icon: 'fa-baby', color: '#f472b6' },
+      family: { name: 'عایلەی', icon: 'fa-users', color: '#4ade80' }
+    };
+
+    const PRODUCT_CATEGORY_FILES = Object.fromEntries(
+      Object.keys(catInfo).map(category => [category, `products-${category}.json`])
+    );
+    const DEFAULT_PRODUCT_CATEGORY = Object.keys(catInfo)[0] || 'cake';
+
+    // Keep uploaded product images organized in predictable category folders.
+    const CATEGORY_IMAGE_FOLDERS = {
+      cake:   'kek',
+      gaz:    'gaz',
+      drink:  'sardy',
+      chips:  'jbs',
+      baby:   'mnalan',
+      family: 'aylay'
+    };
+    // Original files larger than 5MB are rejected before any compression/upload work starts.
+    const MAX_IMAGE_SIZE = 5 * 1024 * 1024;
+    // Compressed WebP files stay well below 1.5 MB; larger means the source was extremely dense.
+    const MAX_COMPRESSED_IMAGE_SIZE = 1.5 * 1024 * 1024;
+    const PRODUCT_ID_PATTERN = /^[a-z0-9]+(?:[._-][a-z0-9]+)*$/i;
+
+    let currentProducts = [];
+    let ghConfig = null;
+    let confirmCb = null;
+    let hasUnsavedChanges = false;
+    let autoRefreshInterval = null;
+    const imgCache = {};
+    let undoStack = [];
+    let addImageObjectUrl = '';
+    let editImageObjectUrl = '';
+    let ghTokenHealth = { state: 'unknown', source: 'none', detail: '', checkedAt: 0 };
+    let lastLoadedRemoteFingerprint = '';
+    let lastLoadedRemoteSource = 'none';
+    let ghSettingsAutoSaveTimer = null;
+    let ghSettingsSaveInFlight = false;
+    let lastSavedGhSettingsFingerprint = '';
+
+    function escapeHtml(value) {
+      return String(value ?? '').replace(/[&<>"']/g, char => ({
+        '&': '&amp;',
+        '<': '&lt;',
+        '>': '&gt;',
+        '"': '&quot;',
+        "'": '&#39;'
+      }[char]));
+    }
+
+    function encodeInlineArg(value) {
+      return encodeURIComponent(String(value ?? ''));
+    }
+
+    function decodeUriSegmentSafe(value) {
+      try {
+        return decodeURIComponent(String(value ?? ''));
+      } catch (error) {
+        return String(value ?? '');
+      }
+    }
+
+    function splitPathSuffix(path) {
+      const queryIndex = path.indexOf('?');
+      const hashIndex = path.indexOf('#');
+      let cutIndex = -1;
+      if (queryIndex >= 0 && hashIndex >= 0) cutIndex = Math.min(queryIndex, hashIndex);
+      else if (queryIndex >= 0) cutIndex = queryIndex;
+      else if (hashIndex >= 0) cutIndex = hashIndex;
+      if (cutIndex < 0) return { basePath: path, suffix: '' };
+      return {
+        basePath: path.slice(0, cutIndex),
+        suffix: path.slice(cutIndex)
+      };
+    }
+
+    function encodePathPreservingSlashes(path) {
+      const cleanPath = String(path || '').trim();
+      if (!cleanPath || /^(data|blob):/i.test(cleanPath)) return cleanPath;
+      if (/^https?:\/\//i.test(cleanPath)) {
+        try {
+          const url = new URL(cleanPath);
+          url.pathname = url.pathname
+            .split('/')
+            .map(segment => (!segment || segment === '.' || segment === '..')
+              ? segment
+              : encodeURIComponent(decodeUriSegmentSafe(segment)))
+            .join('/');
+          return url.toString();
+        } catch (error) {
+          return encodeURI(cleanPath);
+        }
+      }
+      const { basePath, suffix } = splitPathSuffix(cleanPath);
+      const encodedBasePath = basePath
+        .split('/')
+        .map(segment => (!segment || segment === '.' || segment === '..')
+          ? segment
+          : encodeURIComponent(decodeUriSegmentSafe(segment)))
+        .join('/');
+      return `${encodedBasePath}${suffix}`;
+    }
+
+    function isValidProductId(value) {
+      return PRODUCT_ID_PATTERN.test(String(value || '').trim());
+    }
+
+    function slugifyProductIdPart(value) {
+      return String(value || '')
+        .normalize('NFKD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, '-')
+        .replace(/^-+|-+$/g, '');
+    }
+
+    function isProductIdTaken(candidate) {
+      const normalizedCandidate = String(candidate || '').trim().toLowerCase();
+      return currentProducts.some(product => String(product?.id || '').trim().toLowerCase() === normalizedCandidate);
+    }
+
+    function generateProductId(name, category) {
+      const categoryPart = slugifyProductIdPart(category) || 'product';
+      let maxSequence = 0;
+
+      currentProducts.forEach(product => {
+        const match = String(product?.id || '').trim().match(new RegExp(`^${categoryPart}-(\\d+)$`, 'i'));
+        if (!match) return;
+        const sequence = Number.parseInt(match[1], 10);
+        if (Number.isFinite(sequence) && sequence > maxSequence) {
+          maxSequence = sequence;
+        }
+      });
+
+      const nextSequence = String(maxSequence + 1).padStart(3, '0');
+      return `${categoryPart}-${nextSequence}`;
+    }
+
+    function refreshNewProductIdPreview() {
+      const idInput = document.getElementById('newId');
+      if (!idInput) return;
+      const name = document.getElementById('newName')?.value || '';
+      const category = document.getElementById('newCat')?.value || 'cake';
+      idInput.value = generateProductId(name, category);
+    }
+
+    function isValidCategory(category) {
+      return Object.prototype.hasOwnProperty.call(catInfo, String(category || '').trim());
+    }
+
+    function sortProductKeys(product = {}) {
+      return Object.keys(product)
+        .sort()
+        .reduce((acc, key) => {
+          acc[key] = product[key];
+          return acc;
+        }, {});
+    }
+
+    function getProductsFingerprint(products = []) {
+      const comparable = normalizeProductList(products)
+        .map(product => sortProductKeys(product))
+        .sort((a, b) => String(a.id || '').localeCompare(String(b.id || '')));
+      const json = JSON.stringify(comparable);
+      let hash = 2166136261;
+      for (let index = 0; index < json.length; index += 1) {
+        hash ^= json.charCodeAt(index);
+        hash = Math.imul(hash, 16777619);
+      }
+      return `${comparable.length}:${(hash >>> 0).toString(16)}`;
+    }
+
+    function normalizeProductRecord(product = {}, options = {}) {
+      const source = product && typeof product === 'object' ? product : {};
+      const touchUpdatedAt = Boolean(options.touchUpdatedAt);
+      const allowIdGeneration = options.allowIdGeneration !== false;
+      const rawCategory = String(source.category || '').trim();
+      const normalizedPrice = Number(source.price);
+      const now = new Date().toISOString();
+      const normalized = {
+        ...source,
+        id: String(source.id || '').trim(),
+        name: String(source.name || '').trim(),
+        name_en: String(source.name_en || '').trim(),
+        category: isValidCategory(rawCategory) ? rawCategory : DEFAULT_PRODUCT_CATEGORY,
+        price: Number.isFinite(normalizedPrice) && normalizedPrice >= 0 ? normalizedPrice : 0,
+        description: String(source.description || '').trim(),
+        description_en: String(source.description_en || '').trim(),
+        image: String(source.image || '').trim(),
+        image_webp: String(source.image_webp || '').trim(),
+        hidden: Boolean(source.hidden)
+      };
+
+      if (!normalized.id && allowIdGeneration) {
+        normalized.id = generateProductId(normalized.name || normalized.name_en, normalized.category);
+      }
+
+      if (touchUpdatedAt) {
+        if (!normalized.createdAt) {
+          normalized.createdAt = source.createdAt || now;
+        }
+        normalized.updatedAt = now;
+      }
+
+      return normalized;
+    }
+
+    function normalizeProductList(data) {
+      if (!Array.isArray(data)) return [];
+      const seenIds = new Set();
+      return data
+        .filter(product => product && typeof product === 'object')
+        .map(product => normalizeProductRecord(product, { allowIdGeneration: false }))
+        .filter(product => {
+          const id = String(product.id || '').trim();
+          const idKey = id.toLowerCase();
+          const hasName = Boolean(product.name || product.name_en);
+          if (!id || !hasName || !isValidCategory(product.category) || seenIds.has(idKey)) {
+            return false;
+          }
+          seenIds.add(idKey);
+          return true;
+        });
+    }
+
+    function buildProductFiles(products) {
+      const normalizedProducts = normalizeProductList(products);
+      const files = { 'products.json': normalizedProducts };
+      Object.entries(PRODUCT_CATEGORY_FILES).forEach(([category, fileName]) => {
+        files[fileName] = normalizedProducts.filter(product => product.category === category);
+      });
+      return files;
+    }
+
+    function getStoredAdminUser() {
+      return 'admin';
+    }
+
+    function getStoredAdminHash() {
+      return window.AdminAuth?.HARDCODED_PASS_HASH || '';
+    }
+
+    function hasAdminSetup() {
+      return true;
+    }
+
+    function hasRealHardcodedToken() {
+      return false;
+    }
+
+    function getHardcodedGhConfig() {
+      return {
+        token: '',
+        username: String(HARDCODED_GH_USERNAME || '').trim(),
+        repo: String(HARDCODED_GH_REPO || '').trim(),
+        branch: String(HARDCODED_GH_BRANCH || 'main').trim() || 'main'
+      };
+    }
+
+    function sanitizeGhConfig(config = {}) {
+      const source = config && typeof config === 'object' ? config : {};
+      return {
+        username: String(source.username || HARDCODED_GH_USERNAME || '').trim(),
+        repo: String(source.repo || HARDCODED_GH_REPO || '').trim(),
+        branch: String(source.branch || HARDCODED_GH_BRANCH || 'main').trim() || 'main',
+        token: String(source.token || '').trim()
+      };
+    }
+
+    function getConfiguredBranch(config = ghConfig) {
+      return String(config?.branch || HARDCODED_GH_BRANCH || 'main').trim() || 'main';
+    }
+
+    function buildGitHubRepoApiUrl(username, repo) {
+      const owner = encodeURIComponent(String(username || '').trim());
+      const repoName = encodeURIComponent(String(repo || '').trim());
+      return `https://api.github.com/repos/${owner}/${repoName}`;
+    }
+
+    function buildGitHubContentsApiUrl(path, config = ghConfig) {
+      const repoUrl = buildGitHubRepoApiUrl(config?.username, config?.repo);
+      const encodedPath = String(path || '')
+        .split('/')
+        .map(segment => encodeURIComponent(segment))
+        .join('/');
+      return `${repoUrl}/contents/${encodedPath}`;
+    }
+
+    function getGitHubAuthHeaders(token, contentType = '') {
+      const cleanToken = String(token || '').trim();
+      if (!cleanToken) {
+        throw new Error('GitHub token is missing.');
+      }
+      const headers = {
+        'Accept': 'application/vnd.github+json',
+        'Authorization': `Bearer ${cleanToken}`,
+        'X-GitHub-Api-Version': '2022-11-28'
+      };
+      if (contentType) headers['Content-Type'] = contentType;
+      return headers;
+    }
+
+    async function validateGitHubTokenAccess(token, username, repo, branch = '') {
+      const repoResponse = await fetch(buildGitHubRepoApiUrl(username, repo), {
+        headers: getGitHubAuthHeaders(token)
+      });
+
+      let repoDetail = '';
+      let repoData = null;
+      try {
+        repoData = await repoResponse.json();
+        repoDetail = String(repoData?.message || '').trim();
+      } catch (error) {
+      }
+
+      if (!repoResponse.ok) {
+        let hint = 'GitHub rejected this token for this repository.';
+        if (repoResponse.status === 401) {
+          hint = 'The token appears invalid, expired, or copied incompletely.';
+        } else if (repoResponse.status === 403) {
+          hint = 'The token does not have enough repository permission.';
+        } else if (repoResponse.status === 404) {
+          hint = 'Check the username/repository name and make sure the token can access this repo.';
+        }
+
+        return {
+          ok: false,
+          status: repoResponse.status,
+          detail: repoDetail,
+          hint
+        };
+      }
+
+      const resolvedBranch = String(branch || repoData?.default_branch || 'main').trim() || 'main';
+      const branchResponse = await fetch(
+        `${buildGitHubRepoApiUrl(username, repo)}/contents?ref=${encodeURIComponent(resolvedBranch)}`,
+        { headers: getGitHubAuthHeaders(token) }
+      );
+
+      if (branchResponse.ok) {
+        return {
+          ok: true,
+          status: branchResponse.status,
+          detail: '',
+          branch: resolvedBranch
+        };
+      }
+
+      let detail = '';
+      try {
+        const data = await branchResponse.json();
+        detail = String(data?.message || '').trim();
+      } catch (error) {
+      }
+
+      let hint = 'GitHub rejected repository contents access for this branch.';
+      if (branchResponse.status === 403) {
+        hint = 'The token needs repository Contents permission to publish JSON and upload images.';
+      } else if (branchResponse.status === 404) {
+        const defaultBranch = String(repoData?.default_branch || '').trim();
+        hint = defaultBranch && defaultBranch !== resolvedBranch
+          ? `The branch "${resolvedBranch}" was not found. Try the repository default branch "${defaultBranch}".`
+          : 'For fine-grained tokens, choose the exact repository and grant Contents: Read and write.';
+      }
+
+      return {
+        ok: false,
+        status: branchResponse.status,
+        detail,
+        hint,
+        branch: resolvedBranch
+      };
+    }
+
+    function readLocalDraft() {
+      try {
+        const raw = localStorage.getItem(LOCAL_DRAFT_KEY);
+        if (!raw) return null;
+        const parsed = JSON.parse(raw);
+        if (!Array.isArray(parsed?.products)) return null;
+        return {
+          reason: String(parsed.reason || 'unsaved').trim() || 'unsaved',
+          savedAt: Number(parsed.savedAt) || 0,
+          baseFingerprint: String(parsed.baseFingerprint || '').trim(),
+          repo: String(parsed.repo || '').trim(),
+          branch: String(parsed.branch || '').trim(),
+          products: normalizeProductList(parsed.products)
+        };
+      } catch (error) {
+        return null;
+      }
+    }
+
+    function saveLocalDraft(reason = 'unsaved') {
+      try {
+        if (!Array.isArray(currentProducts)) return;
+        const repoIdentity = ghConfig?.username && ghConfig?.repo
+          ? `${ghConfig.username}/${ghConfig.repo}`
+          : '';
+        localStorage.setItem(LOCAL_DRAFT_KEY, JSON.stringify({
+          reason,
+          savedAt: Date.now(),
+          baseFingerprint: lastLoadedRemoteFingerprint || getProductsFingerprint(currentProducts),
+          repo: repoIdentity,
+          branch: getConfiguredBranch(),
+          products: currentProducts.map(product => normalizeProductRecord(product, { allowIdGeneration: false }))
+        }));
+      } catch (error) {
+        console.warn('Could not save local draft', error);
+      }
+    }
+
+    function clearLocalDraft() {
+      try {
+        localStorage.removeItem(LOCAL_DRAFT_KEY);
+      } catch (error) {
+      }
+    }
+
+    function getDraftSavedAtLabel(draft) {
+      const timestamp = Number(draft?.savedAt) || 0;
+      if (!timestamp) return '';
+      try {
+        return new Date(timestamp).toLocaleString();
+      } catch (error) {
+        return '';
+      }
+    }
+
+    function applyDraftProducts(draft) {
+      if (!draft || !Array.isArray(draft.products)) return false;
+      currentProducts = normalizeProductList(draft.products);
+      hasUnsavedChanges = true;
+      document.getElementById('publishBar')?.classList.add('show');
+      updateChangesBadge();
+      document.getElementById('navBadge').textContent = currentProducts.length;
+      const dot = document.getElementById('bnDot');
+      if (dot) dot.style.display = currentProducts.length ? 'block' : 'none';
+      updateUndoButton();
+      refreshNewProductIdPreview();
+      return true;
+    }
+
+    function restoreSavedDraft(forcePrompt = true) {
+      const draft = readLocalDraft();
+      if (!draft) {
+        toast('No local draft is saved in this browser.', 'info');
+        return false;
+      }
+      const restoreNow = () => {
+        if (!applyDraftProducts(draft)) return;
+        renderDash();
+        if (document.getElementById('page-products')?.classList.contains('active')) renderTable();
+        updateGhStatus();
+        toast('Local draft restored. Publish when you are ready.', 'info');
+      };
+      if (!forcePrompt) {
+        restoreNow();
+        return true;
+      }
+      const savedAtLabel = getDraftSavedAtLabel(draft);
+      showConfirm(
+        'Restore local draft',
+        savedAtLabel
+          ? `Restore the local draft saved on ${savedAtLabel}? GitHub products will stay unchanged until you publish.`
+          : 'Restore the saved local draft? GitHub products will stay unchanged until you publish.',
+        restoreNow
+      );
+      return true;
+    }
+
+    function restoreLocalDraftIfAvailable(options = {}) {
+      const { remoteLoaded = false, allowPrompt = true } = options;
+      const draft = readLocalDraft();
+      if (!draft) return false;
+
+      if (!remoteLoaded) {
+        applyDraftProducts(draft);
+        toast('Local draft restored because GitHub products could not be loaded.', 'info');
+        return true;
+      }
+
+      const repoIdentity = ghConfig?.username && ghConfig?.repo
+        ? `${ghConfig.username}/${ghConfig.repo}`
+        : '';
+      const sameRepo = !draft.repo || draft.repo === repoIdentity;
+      const sameBranch = !draft.branch || draft.branch === getConfiguredBranch();
+      const remoteChanged = Boolean(
+        draft.baseFingerprint &&
+        lastLoadedRemoteFingerprint &&
+        draft.baseFingerprint !== lastLoadedRemoteFingerprint
+      );
+
+      if (sameRepo && sameBranch && !remoteChanged) {
+        applyDraftProducts(draft);
+        toast('Local draft restored.', 'info');
+        return true;
+      }
+
+      if (allowPrompt) {
+        const savedAtLabel = getDraftSavedAtLabel(draft);
+        toast('GitHub products were kept. A local draft is still available in this browser.', 'info');
+        showConfirm(
+          'Restore local draft',
+          savedAtLabel
+            ? `A local draft from ${savedAtLabel} is available, but GitHub products changed after it was saved. Restore the draft in admin?`
+            : 'A local draft is available, but GitHub products changed after it was saved. Restore the draft in admin?',
+          () => restoreSavedDraft(false)
+        );
+      }
+
+      return false;
+    }
+
+    // Persist repo identity plus the current GitHub token inside this browser so publish/upload keep working after reloads.
+    function persistGhConfig(config, tokenOverride) {
+      const normalized = sanitizeGhConfig(config);
+      if (!normalized) {
+        ghConfig = null;
+        localStorage.removeItem(GH_CONFIG_KEY);
+        setStoredGhToken('');
+        setSessionGhToken('');
+        return null;
+      }
+      const persistedToken = setStoredGhToken(typeof tokenOverride === 'string' ? tokenOverride : normalized.token);
+      const sessionToken = setSessionGhToken(persistedToken);
+      ghConfig = {
+        username: normalized.username,
+        repo: normalized.repo,
+        branch: normalized.branch,
+        token: sessionToken
+      };
+      localStorage.setItem(GH_CONFIG_KEY, JSON.stringify({
+        username: normalized.username,
+        repo: normalized.repo,
+        branch: normalized.branch
+      }));
+      return ghConfig;
+    }
+
+    // Patch the setup/settings screens with the extra local-auth inputs while preserving token support.
+    function ensureSetupFields() {
+      const setupRepoField = document.getElementById('setupRepo')?.closest('.field');
+      if (setupRepoField && !document.getElementById('setupAdminUser')) {
+        setupRepoField.insertAdjacentHTML('afterend', `
+          <div class="field">
+            <label><i class="fas fa-user-shield" style="margin-left:6px;color:var(--primary)"></i> Admin Username</label>
+            <input type="text" id="setupAdminUser" placeholder="admin" autocomplete="username">
+            <i class="fas fa-user field-icon"></i>
+          </div>
+          <div class="field">
+            <label><i class="fas fa-lock" style="margin-left:6px;color:var(--primary)"></i> Admin Password</label>
+            <input type="password" id="setupAdminPass" placeholder="Minimum 6 characters" autocomplete="new-password">
+            <i class="fas fa-lock field-icon"></i>
+          </div>
+          <div class="field">
+            <label><i class="fas fa-check" style="margin-left:6px;color:var(--primary)"></i> Confirm Password</label>
+            <input type="password" id="setupAdminPassConfirm" placeholder="Repeat password" autocomplete="new-password">
+            <i class="fas fa-lock field-icon"></i>
+          </div>
+        `);
+      }
+
+      const setupNote = document.querySelector('#setupPage .security-note');
+      if (setupNote) {
+        setupNote.innerHTML = `
+          <strong>Security note:</strong>
+          This panel still runs frontend-only, so it is still best for private use only.
+          Passwords are hashed locally, and the GitHub token can be saved in this browser so publish/image-upload keeps working.
+          Add the token later when you want publish/image-upload access.
+        `;
+      }
+
+      const settingsNote = document.querySelector('#page-settings .security-note');
+      if (settingsNote) {
+        settingsNote.innerHTML = `
+          <strong>GitHub note:</strong>
+          Publishing and image uploads reuse the token saved in this browser.
+          If the token is missing, the admin stays usable but publish/upload features will wait until you enter one.
+        `;
+      }
+
+      const setupHeading = document.querySelector('#setupPage h1');
+      if (setupHeading) setupHeading.textContent = 'Admin + GitHub Setup';
+
+      const setupSub = document.querySelector('#setupPage .setup-logo p');
+      if (setupSub) setupSub.textContent = 'Configure repo access and local admin login';
+
+      const loginUser = document.getElementById('loginUser');
+      if (loginUser && getStoredAdminUser()) loginUser.placeholder = getStoredAdminUser();
+
+      const ghTitle = document.querySelector('#page-settings .s-card-title');
+      if (ghTitle) ghTitle.innerHTML = '<i class="fab fa-github"></i> ڕێکخستنی GitHub + Upload';
+
+      const ghCard = document.getElementById('ghInfo')?.parentElement;
+      const hint = ghCard?.querySelector('.proxy-hint');
+      if (ghCard && !hint) {
+        const note = document.createElement('div');
+        note.className = 'form-hint proxy-hint';
+        note.style.marginBottom = '14px';
+        note.textContent = 'GitHub token is optional for setup, but required later for JSON publishing and automatic image uploads. Once entered, it stays saved in this browser.';
+        ghCard.appendChild(note);
+      }
+    }
+
+    function ensureLoginRecoveryButton() {
+      const loginBox = document.getElementById('loginBox');
+      const loginError = document.getElementById('loginError');
+      if (!loginBox || !loginError || document.getElementById('resetLoginBtn')) return;
+
+      const help = document.createElement('p');
+      help.className = 'login-help';
+      help.textContent = 'ئەگەر وشەی تێپەڕت لەبیرچووە، دەتوانیت تەنها login ـی لوکاڵ reset بکەیت و setup ـی نوێ دروست بکەیت.';
+
+      const button = document.createElement('button');
+      button.id = 'resetLoginBtn';
+      button.type = 'button';
+      button.className = 'btn btn-danger login-recovery-btn';
+      button.innerHTML = '<i class="fas fa-rotate-left"></i> ڕیسێتی login ـی ئەدمین';
+      button.addEventListener('click', resetLocalAdminLogin);
+
+      loginBox.insertBefore(help, loginError);
+      loginBox.insertBefore(button, loginError);
+    }
+
+    // Refill setup inputs from saved config when the page is reopened.
+    function syncSetupPrefill() {
+      const tokenInput = document.getElementById('setupToken');
+      const usernameInput = document.getElementById('setupUsername');
+      const repoInput = document.getElementById('setupRepo');
+      const branchInput = document.getElementById('setupBranch');
+      const settingsBranchInput = document.getElementById('newBranch');
+      const adminUserInput = document.getElementById('setupAdminUser');
+      if (tokenInput) tokenInput.value = ghConfig?.token || '';
+      if (usernameInput && ghConfig?.username) usernameInput.value = ghConfig.username;
+      if (repoInput && ghConfig?.repo) repoInput.value = ghConfig.repo;
+      if (branchInput) branchInput.value = getConfiguredBranch();
+      if (settingsBranchInput) settingsBranchInput.value = getConfiguredBranch();
+      if (adminUserInput && getStoredAdminUser()) adminUserInput.value = getStoredAdminUser();
+    }
+
+    function getBrowserStoredGhToken() {
+      try {
+        return localStorage.getItem(GH_TOKEN_STORAGE_KEY) || '';
+      } catch (error) {
+        return '';
+      }
+    }
+
+    function setBrowserStoredGhToken(token) {
+      const cleanToken = String(token || '').trim();
+      try {
+        if (cleanToken) localStorage.setItem(GH_TOKEN_STORAGE_KEY, cleanToken);
+        else localStorage.removeItem(GH_TOKEN_STORAGE_KEY);
+      } catch (error) {
+      }
+      return cleanToken;
+    }
+
+    function isGhTokenRemembered() {
+      try {
+        const storedValue = localStorage.getItem(GH_TOKEN_REMEMBER_KEY);
+        if (storedValue === 'false') return false;
+        if (storedValue === 'true') return true;
+        return true;
+      } catch (error) {
+        return true;
+      }
+    }
+
+    function setGhTokenRemembered(remember) {
+      const nextValue = Boolean(remember);
+      try {
+        localStorage.setItem(GH_TOKEN_REMEMBER_KEY, nextValue ? 'true' : 'false');
+      } catch (error) {
+      }
+      return nextValue;
+    }
+
+    function getStoredGhConfigMeta() {
+      try {
+        const raw = localStorage.getItem(GH_CONFIG_KEY);
+        const parsed = raw ? JSON.parse(raw) : {};
+        return parsed && typeof parsed === 'object' ? parsed : {};
+      } catch (error) {
+        return {};
+      }
+    }
+
+    function getActiveGhTokenSource() {
+      try {
+        const sessionToken = sessionStorage.getItem(GH_TOKEN_SESSION_KEY) || '';
+        if (sessionToken) return { token: sessionToken, source: 'session' };
+      } catch (error) {
+      }
+      const browserToken = getBrowserStoredGhToken();
+      if (browserToken) return { token: browserToken, source: 'local' };
+      return { token: '', source: 'none' };
+    }
+
+    // Override the older setup/token flow with a password-only hardcoded configuration.
+    function clearLegacyAdminStorage() {
+      try {
+        localStorage.removeItem(ADMIN_USER_KEY);
+        localStorage.removeItem(ADMIN_HASH_KEY);
+        localStorage.removeItem('adminSalt');
+        localStorage.removeItem('adminHashIterations');
+        localStorage.removeItem('adminHashScheme');
+        localStorage.removeItem('adminSession_v2');
+        sessionStorage.removeItem('adminSession_v2');
+      } catch (error) {
+      }
+    }
+
+    function clearAdminSession() {
+      try {
+        localStorage.removeItem(SESSION_KEY);
+        localStorage.removeItem(LOGIN_AT_KEY);
+      } catch (error) {
+      }
+    }
+
+    function isLoggedIn() {
+      try {
+        const loginAt = Number(localStorage.getItem(LOGIN_AT_KEY) || 0);
+        const isActive = localStorage.getItem(SESSION_KEY) === 'true';
+        if (!isActive || !loginAt || (Date.now() - loginAt) > SESSION_TTL_MS) {
+          clearAdminSession();
+          return false;
+        }
+        return true;
+      } catch (error) {
+        clearAdminSession();
+        return false;
+      }
+    }
+
+    function hideLoginError() {
+      const el = document.getElementById('loginError');
+      if (el) el.classList.remove('show');
+    }
+
+    function showLoginError(message) {
+      const el = document.getElementById('loginError');
+      if (!el) return;
+      el.textContent = message;
+      el.classList.add('show');
+    }
+
+    function showLoginPage() {
+      document.getElementById('setupPage')?.classList.add('hidden');
+      document.getElementById('setupPage')?.setAttribute('hidden', 'hidden');
+      document.getElementById('loginPage')?.classList.remove('hidden');
+      document.getElementById('mainApp')?.classList.remove('show');
+      const passInput = document.getElementById('loginPass');
+      if (passInput) passInput.value = '';
+      const loginUserField = document.getElementById('loginUser')?.closest('.login-field');
+      if (loginUserField) loginUserField.style.display = 'none';
+      hideLoginError();
+    }
+
+    function persistGhConfig(config = {}, tokenOverride, options = {}) {
+      const savedMeta = getStoredGhConfigMeta();
+      const fallbackConfig = sanitizeGhConfig({
+        username: savedMeta.username || HARDCODED_GH_USERNAME,
+        repo: savedMeta.repo || HARDCODED_GH_REPO,
+        branch: savedMeta.branch || HARDCODED_GH_BRANCH
+      });
+      const normalized = sanitizeGhConfig({
+        ...fallbackConfig,
+        ...config
+      });
+      const rememberToken = setGhTokenRemembered(
+        typeof options.rememberToken === 'boolean' ? options.rememberToken : isGhTokenRemembered()
+      );
+      const nextToken = String(
+        typeof tokenOverride === 'string'
+          ? tokenOverride
+          : (config?.token || getActiveGhTokenSource().token || '')
+      ).trim();
+
+      setSessionGhToken(nextToken);
+      if (rememberToken) setStoredGhToken(nextToken);
+      else setStoredGhToken('');
+
+      ghConfig = {
+        username: normalized.username,
+        repo: normalized.repo,
+        branch: normalized.branch,
+        token: getSessionGhToken() || getStoredGhToken() || ''
+      };
+
+      try {
+        localStorage.setItem(GH_CONFIG_KEY, JSON.stringify({
+          username: normalized.username,
+          repo: normalized.repo,
+          branch: normalized.branch
+        }));
+      } catch (error) {
+      }
+
+      return ghConfig;
+    }
+
+    function ensureSetupFields() {
+      const setupPage = document.getElementById('setupPage');
+      if (setupPage) {
+        setupPage.classList.add('hidden');
+        setupPage.setAttribute('hidden', 'hidden');
+        setupPage.setAttribute('aria-hidden', 'true');
+        setupPage.style.display = 'none';
+      }
+
+      const loginUserField = document.getElementById('loginUser')?.closest('.login-field');
+      if (loginUserField) loginUserField.style.display = 'none';
+
+      const loginUserInput = document.getElementById('loginUser');
+      if (loginUserInput) loginUserInput.value = getStoredAdminUser();
+
+      const settingsStack = document.querySelector('#page-settings .settings-stack');
+      if (settingsStack) {
+        settingsStack.innerHTML = `
+          <div class="security-note">
+            <strong>Security note:</strong>
+            This admin is still frontend-only. GitHub publishing now remembers the token on this device by default unless you turn that off.
+          </div>
+          <div class="s-card">
+            <div class="s-card-title"><i class="fab fa-github"></i> GitHub Publish Settings</div>
+            <div id="ghInfo" style="margin-bottom:16px;font-size:13px;color:var(--text2)"></div>
+            <div class="form-group">
+              <label class="form-label">Repository Owner</label>
+              <input type="text" class="form-control" id="newGhOwner" placeholder="mhamadrebae-pixel" autocomplete="off" style="direction:ltr">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Repository Name</label>
+              <input type="text" class="form-control" id="newGhRepo" placeholder="kogay-rasty" autocomplete="off" style="direction:ltr">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Branch</label>
+              <input type="text" class="form-control" id="newBranch" placeholder="main" autocomplete="off" style="direction:ltr">
+            </div>
+            <div class="form-group">
+              <label class="form-label">GitHub Token</label>
+              <input type="password" class="form-control" id="newToken" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx" style="direction:ltr" autocomplete="off">
+              <label style="display:flex;align-items:center;gap:8px;margin-top:10px;font-size:13px;color:var(--text2)">
+                <input type="checkbox" id="rememberToken">
+                <span>Remember this token on this device</span>
+              </label>
+              <div class="form-hint">Enabled by default. Uncheck only if you want the token to stay for this browser session only.</div>
+            </div>
+            <div style="display:flex;gap:8px;flex-wrap:wrap">
+              <button class="btn btn-primary" onclick="updateToken()"><i class="fas fa-check"></i> Save GitHub Settings</button>
+              <button class="btn btn-secondary" onclick="refreshGitHubTokenHealth(true)"><i class="fas fa-rotate-right"></i> Check Token</button>
+              <button class="btn btn-danger" onclick="clearStoredGhToken()"><i class="fas fa-trash"></i> Clear Token</button>
+              <button class="btn btn-secondary" onclick="restoreSavedDraft()"><i class="fas fa-clock-rotate-left"></i> Restore Draft</button>
+            </div>
+            <div class="form-hint" style="margin-top:12px">Publishing validates the exact owner/repo/branch shown here before any file is committed.</div>
+          </div>
+          <div class="s-card">
+            <div class="s-card-title"><i class="fas fa-rotate-right"></i> Auto Refresh</div>
+            <p style="font-size:13px;color:var(--text2);margin-bottom:12px;line-height:1.8">The panel still refreshes products automatically while you are logged in and there are no unsaved changes.</p>
+            <div style="display:flex;align-items:center;gap:12px;background:rgba(34,197,94,0.08);border:1px solid rgba(34,197,94,0.2);border-radius:var(--radius);padding:12px 14px">
+              <i class="fas fa-check-circle" style="color:#4ade80;font-size:17px"></i>
+              <span style="font-size:13px;color:#4ade80;font-weight:600">Auto refresh remains enabled</span>
+            </div>
+          </div>
+          <div class="s-card">
+            <div class="s-card-title"><i class="fas fa-rotate-left"></i> Local Reset</div>
+            <p style="font-size:13px;color:var(--text2);margin-bottom:14px;line-height:1.8">Clear the local session, browser-saved token, and draft from this browser. Password and repository settings stay in code.</p>
+            <div style="display:flex;gap:8px;flex-wrap:wrap">
+              <button class="btn btn-danger" onclick="clearSetup()"><i class="fas fa-trash"></i> Clear Session + Token + Draft</button>
+              <button class="btn btn-primary" onclick="doReset()"><i class="fas fa-rotate-left"></i> Reset Unsaved Changes</button>
+            </div>
+          </div>
+        `;
+        bindGitHubSettingsAutoSave();
+      }
+    }
+
+    function ensureLoginRecoveryButton() {
+    }
+
+    function syncSetupPrefill() {
+      const tokenInput = document.getElementById('newToken');
+      const ownerInput = document.getElementById('newGhOwner');
+      const repoInput = document.getElementById('newGhRepo');
+      const branchInput = document.getElementById('newBranch');
+      const rememberInput = document.getElementById('rememberToken');
+      if (tokenInput && document.activeElement !== tokenInput) tokenInput.value = getSessionGhToken() || getStoredGhToken();
+      if (ownerInput) ownerInput.value = String(ghConfig?.username || HARDCODED_GH_USERNAME || '').trim();
+      if (repoInput) repoInput.value = String(ghConfig?.repo || HARDCODED_GH_REPO || '').trim();
+      if (branchInput) branchInput.value = getConfiguredBranch();
+      if (rememberInput) rememberInput.checked = isGhTokenRemembered();
+    }
+
+    function getSessionGhToken() {
+      try {
+        return sessionStorage.getItem(GH_TOKEN_SESSION_KEY) || getStoredGhToken() || '';
+      } catch (error) {
+        return getStoredGhToken() || '';
+      }
+    }
+
+    function setSessionGhToken(token) {
+      const cleanToken = String(token || '').trim();
+      try {
+        if (cleanToken) sessionStorage.setItem(GH_TOKEN_SESSION_KEY, cleanToken);
+        else sessionStorage.removeItem(GH_TOKEN_SESSION_KEY);
+      } catch (error) {
+      }
+      return cleanToken;
+    }
+
+    function getStoredGhToken() {
+      return getBrowserStoredGhToken();
+    }
+
+    function setStoredGhToken(token) {
+      return setBrowserStoredGhToken(token);
+    }
+
+    // Add a quick undo control to the top bar without rewriting the full HTML template.
+    function ensureUndoButton() {
+      const actionWrap = document.querySelector('.topbar > div:last-child');
+      if (!actionWrap || document.getElementById('undoBtn')) return;
+      const btn = document.createElement('button');
+      btn.id = 'undoBtn';
+      btn.className = 'btn btn-secondary btn-sm';
+      btn.type = 'button';
+      btn.style.width = '38px';
+      btn.style.height = '38px';
+      btn.style.padding = '0';
+      btn.style.justifyContent = 'center';
+      btn.title = 'Undo last change';
+      btn.innerHTML = '<i class="fas fa-rotate-left"></i>';
+      btn.addEventListener('click', undoLastChange);
+      actionWrap.insertBefore(btn, actionWrap.lastElementChild);
+      updateUndoButton();
+    }
+
+    // Keep the undo button state in sync with the current snapshot stack.
+    function updateUndoButton() {
+      const btn = document.getElementById('undoBtn');
+      if (!btn) return;
+      btn.disabled = undoStack.length === 0;
+      btn.style.opacity = btn.disabled ? '0.45' : '1';
+      btn.style.cursor = btn.disabled ? 'not-allowed' : 'pointer';
+    }
+
+    // Save the current product list before any destructive edit.
+    function pushUndoState() {
+      undoStack.push(JSON.stringify(currentProducts));
+      if (undoStack.length > 40) undoStack.shift();
+      updateUndoButton();
+    }
+
+    // Restore the previous product snapshot if the user wants to undo the last change.
+    function undoLastChange() {
+      if (undoStack.length === 0) return;
+      const snapshot = undoStack.pop();
+      if (!snapshot) return;
+      try {
+        currentProducts = normalizeProductList(JSON.parse(snapshot));
+        hasUnsavedChanges = true;
+        document.getElementById('publishBar').classList.add('show');
+        updateChangesBadge();
+        renderTable();
+        renderDash();
+        saveLocalDraft('undo');
+        updateGhStatus();
+        toast('Undo complete ✓', 'info');
+      } catch (error) {
+        toast('Undo failed', 'error');
+      } finally {
+        updateUndoButton();
+      }
+    }
+
+    // Reusable warning for broken image paths in add/edit flows.
+    function showMissingImageWarning(path) {
+      toast(`Missing image: ${path}`, 'error');
+    }
+
+    // Probe image URLs in the background and warn the admin when a file is missing.
+    function validateImagePath(path) {
+      const cleanPath = String(path || '').trim();
+      if (!cleanPath || cleanPath === 'placeholder.jpg') return;
+      const img = new Image();
+      img.onerror = () => showMissingImageWarning(cleanPath);
+      img.src = getImgUrl(cleanPath) || encodePathPreservingSlashes(cleanPath);
+    }
+
+    // Resolve the target GitHub folder for a category, or fall back to a generic uploads folder.
+    function getCategoryImageFolder(category) {
+      return CATEGORY_IMAGE_FOLDERS[String(category || '').trim()] || 'uploads';
+    }
+
+    // Generate a predictable, safe filename that matches the encoded image format.
+    function generateSafeImageName(category, extension = 'webp') {
+      const cleanCat = String(category || 'product').toLowerCase().replace(/[^a-z0-9-]+/g, '-') || 'product';
+      const cleanExt = String(extension || 'webp').toLowerCase().replace(/[^a-z0-9]+/g, '') || 'webp';
+      const rand = Math.random().toString(36).slice(2, 8);
+      return `${cleanCat}-${Date.now()}-${rand}.${cleanExt}`;
+    }
+
+    // Update the small status pill used by both add/edit upload boxes.
+    function setImageUploadState(prefix, text, stateClass = 's-ready') {
+      const stateEl = document.getElementById(`${prefix}ImageState`);
+      if (!stateEl) return;
+      stateEl.className = `upload-state ${stateClass}`;
+      stateEl.textContent = text;
+    }
+
+    // Format raw byte counts into human-readable strings for the size info row.
+    function formatBytes(n) {
+      if (n < 1024) return `${n} B`;
+      if (n < 1024 * 1024) return `${(n / 1024).toFixed(1)} KB`;
+      return `${(n / (1024 * 1024)).toFixed(2)} MB`;
+    }
+
+    // Show original vs compressed size below the upload box after a successful compression.
+    function setImageSizeInfo(prefix, origText, compText) {
+      const row  = document.getElementById(`${prefix}ImageSizeRow`);
+      const orig = document.getElementById(`${prefix}ImageOrigSize`);
+      const comp = document.getElementById(`${prefix}ImageCompSize`);
+      if (!row || !orig || !comp) return;
+      orig.textContent = origText;
+      comp.textContent = compText;
+      row.style.display = origText ? 'block' : 'none';
+    }
+
+    // Show or hide the indeterminate progress bar during a GitHub upload.
+    function setUploadProgress(prefix, active) {
+      const bar = document.getElementById(`${prefix}ImageProgress`);
+      if (!bar) return;
+      bar.style.display = active ? 'block' : 'none';
+    }
+
+    // Revoke any temporary object URL to avoid memory leaks from local previews.
+    function revokePreviewUrl(prefix) {
+      if (prefix === 'add' && addImageObjectUrl) {
+        URL.revokeObjectURL(addImageObjectUrl);
+        addImageObjectUrl = '';
+      }
+      if (prefix === 'edit' && editImageObjectUrl) {
+        URL.revokeObjectURL(editImageObjectUrl);
+        editImageObjectUrl = '';
+      }
+    }
+
+    // Paint either a local preview or a current GitHub image path inside the shared preview widget.
+    function setImagePreview(prefix, src, fileName, boxState = '') {
+      const preview = document.getElementById(`${prefix}ImagePreview`);
+      const img = document.getElementById(`${prefix}ImagePreviewImg`);
+      const nameEl = document.getElementById(`${prefix}ImageFileName`);
+      const box = document.getElementById(`${prefix}ImageUploadBox`);
+      if (!preview || !img || !nameEl || !box) return;
+      preview.classList.toggle('is-filled', Boolean(src));
+      img.src = src || '';
+      nameEl.textContent = fileName || 'هیچ فایلێک هەڵنەبژێردراوە';
+      box.classList.remove('is-active', 'is-error');
+      if (boxState) box.classList.add(boxState);
+    }
+
+    // Shared local file selection handler used by add/edit image pickers.
+    function handleImageFileSelection(prefix, file) {
+      if (!file) {
+        if (prefix === 'add') resetAddImageUI();
+        else resetEditImageUI();
+        return;
+      }
+      try {
+        validateImageFile(file);
+        revokePreviewUrl(prefix);
+        const objectUrl = URL.createObjectURL(file);
+        if (prefix === 'add') addImageObjectUrl = objectUrl;
+        else editImageObjectUrl = objectUrl;
+        setImagePreview(prefix, objectUrl, file.name, 'is-active');
+        setImageUploadState(prefix, 'ئامادەی upload', 's-ready');
+      } catch (error) {
+        const input = document.getElementById(`${prefix}ImageFile`);
+        if (input) input.value = '';
+        if (prefix === 'add') resetAddImageUI();
+        else resetEditImageUI();
+        setImageUploadState(prefix, error.message, 's-error');
+        const box = document.getElementById(`${prefix}ImageUploadBox`);
+        if (box) box.classList.add('is-error');
+        toast(error.message, 'error');
+      }
+    }
+
+    // Attach the add/edit upload inputs once after the admin page is ready.
+    function initImageUploadUI() {
+      const addInput = document.getElementById('addImageFile');
+      const addRemove = document.getElementById('addImageRemoveBtn');
+      const editInput = document.getElementById('editImageFile');
+      const editRemove = document.getElementById('editImageRemoveBtn');
+      if (addInput && !addInput.dataset.bound) {
+        addInput.dataset.bound = 'true';
+        addInput.addEventListener('change', e => handleImageFileSelection('add', e.target.files?.[0]));
+      }
+      if (addRemove && !addRemove.dataset.bound) {
+        addRemove.dataset.bound = 'true';
+        addRemove.addEventListener('click', resetAddImageUI);
+      }
+      if (editInput && !editInput.dataset.bound) {
+        editInput.dataset.bound = 'true';
+        editInput.addEventListener('change', e => handleImageFileSelection('edit', e.target.files?.[0]));
+      }
+      if (editRemove && !editRemove.dataset.bound) {
+        editRemove.dataset.bound = 'true';
+        editRemove.addEventListener('click', resetEditImageUI);
+      }
+    }
+
+    // Reset the add-product upload widget after save/cancel.
+    function resetAddImageUI() {
+      revokePreviewUrl('add');
+      const input = document.getElementById('addImageFile');
+      if (input) input.value = '';
+      setImagePreview('add', '', 'هیچ فایلێک هەڵنەبژێردراوە');
+      setImageUploadState('add', 'ئامادەیە', 's-ready');
+      setImageSizeInfo('add', '', '');
+      setUploadProgress('add', false);
+    }
+
+    // Reset the edit upload picker while preserving the current saved path in the text field.
+    function resetEditImageUI() {
+      revokePreviewUrl('edit');
+      const input = document.getElementById('editImageFile');
+      if (input) input.value = '';
+      const currentPath = document.getElementById('editImage')?.value.trim();
+      if (currentPath) {
+        setImagePreview('edit', getImgUrl(currentPath) || encodePathPreservingSlashes(currentPath), currentPath, 'is-active');
+      } else {
+        setImagePreview('edit', '', 'هیچ فایلێک هەڵنەبژێردراوە');
+      }
+      setImageUploadState('edit', 'بەبێ گۆڕانکاری', 's-ready');
+      setImageSizeInfo('edit', '', '');
+      setUploadProgress('edit', false);
+    }
+
+    // Enforce image-only uploads, reject SVG, and block oversized originals early.
+    function validateImageFile(file) {
+      if (!file) throw new Error('تکایە وێنەیەک هەڵبژێرە');
+      if (!String(file.type || '').startsWith('image/')) throw new Error('فایلەکە دەبێت وێنە بێت');
+      if (file.type === 'image/svg+xml') throw new Error('SVG رێگەپێنەدراوە بۆ پاراستن');
+      if (file.size > MAX_IMAGE_SIZE) throw new Error('قەبارەی وێنەکە دەبێت لە 5MB کەمتر بێت');
+      return true;
+    }
+
+    // Convert a Blob into base64 using FileReader so large uploads stay safe in the browser.
+    async function blobToBase64(blob) {
+      return await new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onload = () => {
+          const result = String(reader.result || '');
+          const base64 = result.includes(',') ? result.split(',')[1] : result;
+          resolve(base64);
+        };
+        reader.onerror = () => reject(new Error('نەتوانرا فایلەکە بخوێندرێتەوە'));
+        reader.readAsDataURL(blob);
+      });
+    }
+
+    function dataUrlToBlob(dataUrl) {
+      const [header, payload] = String(dataUrl || '').split(',');
+      if (!header || !payload) return null;
+      const mimeMatch = header.match(/data:(.*?)(;base64)?$/i);
+      const mimeType = mimeMatch?.[1] || 'application/octet-stream';
+      const binary = atob(payload);
+      const bytes = new Uint8Array(binary.length);
+      for (let index = 0; index < binary.length; index += 1) {
+        bytes[index] = binary.charCodeAt(index);
+      }
+      return new Blob([bytes], { type: mimeType });
+    }
+
+    async function canvasToEncodedBlob(canvas, mimeType, quality) {
+      if (typeof canvas.toBlob === 'function') {
+        const blob = await new Promise(resolve => canvas.toBlob(resolve, mimeType, quality));
+        if (blob) return blob;
+      }
+      try {
+        const dataUrl = canvas.toDataURL(mimeType, quality);
+        return dataUrlToBlob(dataUrl);
+      } catch (error) {
+        return null;
+      }
+    }
+
+    function getImageExtensionFromMime(mimeType) {
+      const cleanType = String(mimeType || '').toLowerCase();
+      if (cleanType.includes('webp')) return 'webp';
+      if (cleanType.includes('png')) return 'png';
+      return 'jpg';
+    }
+
+    // Resize/compress images so uploads stay browser-friendly on desktop and mobile.
+    // WebP is preferred, but older/mobile browsers can fall back to JPEG when needed.
+    async function compressImage(file) {
+      validateImageFile(file);
+      const objectUrl = URL.createObjectURL(file);
+      try {
+        const image = await new Promise((resolve, reject) => {
+          const img = new Image();
+          img.onload = () => resolve(img);
+          img.onerror = () => reject(new Error('نەتوانرا preview ی وێنەکە بخوێندرێتەوە'));
+          img.src = objectUrl;
+        });
+
+        const MAX_W = 1200;
+        const scale = image.width > MAX_W ? (MAX_W / image.width) : 1;
+        const width  = Math.max(1, Math.round(image.width  * scale));
+        const height = Math.max(1, Math.round(image.height * scale));
+
+        const canvas = document.createElement('canvas');
+        canvas.width  = width;
+        canvas.height = height;
+        const ctx = canvas.getContext('2d');
+        if (!ctx) throw new Error('Canvas لە براوزەرەکەتدا بەردەست نییە');
+        ctx.fillStyle = '#ffffff';
+        ctx.fillRect(0, 0, width, height);
+        ctx.drawImage(image, 0, 0, width, height);
+
+        const blob = await new Promise((resolve, reject) => {
+          canvas.toBlob(
+            result => result ? resolve(result) : reject(new Error('فشاردانی وێنەکە سەرکەوتوو نەبوو')),
+            'image/webp', 0.78
+          );
+        });
+
+        if (blob.size > MAX_COMPRESSED_IMAGE_SIZE) {
+          throw new Error('وێنەکە دوای فشاردان زۆر گەورەیە');
+        }
+
+        return { blob, mimeType: 'image/webp' };
+      } finally {
+        URL.revokeObjectURL(objectUrl);
+      }
+    }
+
+    async function compressImageForUpload(file) {
+      validateImageFile(file);
+      const objectUrl = URL.createObjectURL(file);
+      try {
+        const image = await new Promise((resolve, reject) => {
+          const img = new Image();
+          img.onload = () => resolve(img);
+          img.onerror = () => reject(new Error('Could not preview the selected image'));
+          img.src = objectUrl;
+        });
+
+        const MAX_W = 1200;
+        const scale = image.width > MAX_W ? (MAX_W / image.width) : 1;
+        const width = Math.max(1, Math.round(image.width * scale));
+        const height = Math.max(1, Math.round(image.height * scale));
+
+        const canvas = document.createElement('canvas');
+        canvas.width = width;
+        canvas.height = height;
+        const ctx = canvas.getContext('2d');
+        if (!ctx) throw new Error('Canvas is not available in this browser');
+        ctx.fillStyle = '#ffffff';
+        ctx.fillRect(0, 0, width, height);
+        ctx.drawImage(image, 0, 0, width, height);
+
+        let blob = await canvasToEncodedBlob(canvas, 'image/webp', 0.78);
+        if (!blob || blob.type !== 'image/webp') {
+          blob = await canvasToEncodedBlob(canvas, 'image/jpeg', 0.84);
+        }
+        if (!blob) {
+          throw new Error('Image compression failed');
+        }
+        if (blob.size > MAX_COMPRESSED_IMAGE_SIZE) {
+          throw new Error('Compressed image is still too large');
+        }
+
+        const mimeType = blob.type || 'image/jpeg';
+        return { blob, mimeType, extension: getImageExtensionFromMime(mimeType) };
+      } finally {
+        URL.revokeObjectURL(objectUrl);
+      }
+    }
+
+    // Upload compressed WebP image directly to ImgBB cloud or matching GitHub category folder
+    async function uploadImageToGitHub(file, category, prefix = 'add') {
+      setImageUploadState(prefix, 'پشکنینی وێنە...', 's-uploading');
+      setUploadProgress(prefix, false);
+      toast('📷 پشکنینی وێنە...', 'info');
+
+      try {
+        setImageUploadState(prefix, 'فشاردن بە WebP...', 's-uploading');
+        toast('🗜️ فشاردنی وێنە بە WebP...', 'info');
+
+        const { blob, extension } = await compressImageForUpload(file);
+        setImageSizeInfo(prefix, formatBytes(file.size), formatBytes(blob.size));
+
+        setImageUploadState(prefix, 'بارکردن بۆ سێرڤەری هەور...', 's-uploading');
+        setUploadProgress(prefix, true);
+        toast('⬆️ بارکردنی وێنە...', 'info');
+
+        let path = '';
+        // 1. Upload to ImgBB (Free, fast 24/7 cloud CDN)
+        try {
+          const imgbbForm = new FormData();
+          imgbbForm.append('image', blob, `${category}_${Date.now()}.webp`);
+          const imgbbRes = await fetch('https://api.imgbb.com/1/upload?key=a31f3f04ad92c806d5c8851cf257ad66', {
+            method: 'POST',
+            body: imgbbForm
+          });
+          const imgbbData = await imgbbRes.json();
+          if (imgbbData?.data?.url) {
+            path = imgbbData.data.url;
+          }
+        } catch (imgbbErr) {
+          console.warn('ImgBB upload error:', imgbbErr);
+        }
+
+        // 2. Fallback to GitHub contents API if ImgBB failed and token is available
+        if (!path && ghConfig?.token && ghConfig?.username && ghConfig?.repo) {
+          const folder   = getCategoryImageFolder(category);
+          const fileName = generateSafeImageName(category, extension);
+          const ghPath   = `${folder}/${fileName}`;
+          const base64   = await blobToBase64(blob);
+
+          const res = await fetch(
+            buildGitHubContentsApiUrl(ghPath),
+            {
+              method: 'PUT',
+              headers: getGitHubAuthHeaders(ghConfig.token, 'application/json'),
+              body: JSON.stringify({
+                message: `Upload product image: ${fileName}`,
+                content: base64,
+                branch: getConfiguredBranch()
+              })
+            }
+          );
+
+          if (res.ok) {
+            path = ghPath;
+          }
+        }
+
+        if (!path) {
+          throw new Error('بارکردنی وێنە سەرکەوتوو نەبوو، تکایە دووبارە هەوڵ بدەوە');
+        }
+
+        setUploadProgress(prefix, false);
+        setImageUploadState(prefix, 'بارکرا ✓', 's-success');
+        toast('✅ وێنەکە بە سەرکەوتوویی بارکرا', 'success');
+
+        return {
+          path,
+          rawUrl: path
+        };
+      } catch (error) {
+        setUploadProgress(prefix, false);
+        setImageUploadState(prefix, error.message, 's-error');
+        toast(`❌ بارکردنی وێنە شکست: ${error.message}`, 'error');
+        throw error;
+      }
+    }
+
+    let prodSearchTimer = null;
+    // Debounce the product table search so large lists do not rerender on every keystroke.
+    function debounceFilterProds() {
+      clearTimeout(prodSearchTimer);
+      prodSearchTimer = setTimeout(filterProds, 250);
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      // Convert the original static setup screen into the hardened local-auth version.
+      ensureSetupFields();
+      ensureLoginRecoveryButton();
+      initImageUploadUI();
+      loadGhConfig();
+      syncSetupPrefill();
+      ensureUndoButton();
+      const searchInput = document.getElementById('srch');
+      if (searchInput) searchInput.oninput = debounceFilterProds;
+      const newNameInput = document.getElementById('newName');
+      if (newNameInput) newNameInput.addEventListener('input', refreshNewProductIdPreview);
+      const newCategoryInput = document.getElementById('newCat');
+      if (newCategoryInput) newCategoryInput.addEventListener('change', refreshNewProductIdPreview);
+      refreshNewProductIdPreview();
+      const updateClockDisplay = () => {
+        const el = document.getElementById('clock');
+        if (!el) return;
+        el.textContent = new Date().toLocaleTimeString('en-US', {
+          hour: 'numeric',
+          minute: '2-digit',
+          hour12: true
+        });
+      };
+      updateClockDisplay();
+      setInterval(updateClockDisplay, 1000);
+      document.addEventListener('visibilitychange', handleVisibilityChange);
+      document.addEventListener('keydown', e => {
+        if (e.key === 'Escape') { closeImgPreview(); closeEdit(); closeConfirm(); }
+        if (e.ctrlKey && e.key === 's') { e.preventDefault(); publishJSON(); }
+        // Standard desktop shortcut for undo inside the admin editor.
+        if (e.ctrlKey && e.key.toLowerCase() === 'z') { e.preventDefault(); undoLastChange(); }
+      });
+      startAutoRefresh();
+    });
+
+    // IMAGE PREVIEW
+    function getImgUrl(imgPath) {
+      if (!imgPath || imgPath === 'placeholder.jpg' || !ghConfig) return null;
+      if (imgPath.startsWith('http')) return encodePathPreservingSlashes(imgPath);
+      const { username, repo } = ghConfig;
+      return `https://raw.githubusercontent.com/${username}/${repo}/${encodeURIComponent(getConfiguredBranch())}/${encodePathPreservingSlashes(imgPath)}`;
+    }
+
+    function openImgPreview(prodId) {
+      const p = currentProducts.find(x => x.id === prodId);
+      if (!p) return;
+      const modal = document.getElementById('imgPreviewModal');
+      const content = document.getElementById('imgPreviewContent');
+      document.getElementById('imgPreviewName').textContent = p.name;
+      document.getElementById('imgPreviewPath').textContent = p.image || 'وێنەی نییە';
+      const url = getImgUrl(p.image);
+      if (!url) {
+        content.innerHTML = '<div class="img-preview-no"><i class="fas fa-image"></i><div>وێنەی نییە</div></div>';
+        modal.classList.add('open'); document.body.style.overflow = 'hidden'; return;
+      }
+      if (imgCache[url]) {
+        const cachedImg = document.createElement('img');
+        cachedImg.className = 'img-preview-img';
+        cachedImg.src = imgCache[url];
+        cachedImg.alt = p.name;
+        content.replaceChildren(cachedImg);
+        modal.classList.add('open'); document.body.style.overflow = 'hidden'; return;
+      }
+      content.innerHTML = '<div class="img-loading"><div class="spinner"></div></div>';
+      modal.classList.add('open'); document.body.style.overflow = 'hidden';
+      const img = new Image();
+      img.onload = () => {
+        imgCache[url] = url;
+        const loadedImg = document.createElement('img');
+        loadedImg.className = 'img-preview-img';
+        loadedImg.src = url;
+        loadedImg.alt = p.name;
+        content.replaceChildren(loadedImg);
+      };
+      img.onerror = () => {
+        const wrapper = document.createElement('div');
+        wrapper.className = 'img-err';
+        const icon = document.createElement('i');
+        icon.className = 'fas fa-image-slash';
+        const message = document.createElement('div');
+        message.textContent = 'وێنەکە نەدۆزرایەوە';
+        const detail = document.createElement('div');
+        detail.style.fontSize = '11px';
+        detail.style.marginTop = '4px';
+        detail.style.direction = 'ltr';
+        detail.textContent = p.image;
+        wrapper.append(icon, message, detail);
+        content.replaceChildren(wrapper);
+      };
+      img.src = url;
+    }
+
+    function closeImgPreview(e) {
+      if (e && e.target !== document.getElementById('imgPreviewModal')) return;
+      document.getElementById('imgPreviewModal').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    function thumbHtml(p) {
+      const hasImg = p.image && p.image !== 'placeholder.jpg';
+      return `<div class="p-thumb${hasImg ? ' has-img' : ''}" onclick="openImgPreview(decodeURIComponent('${encodeInlineArg(p.id)}'))" title="${hasImg ? 'کلیک بکە بۆ بینینی وێنە' : 'وێنەی نییە'}">
+    <div class="no-img"><i class="fas ${hasImg ? 'fa-image' : 'fa-image-slash'}"></i></div>
+    ${hasImg ? '<div class="img-dot"></div>' : ''}
+  </div>`;
+    }
+
+    // VISIBILITY / REFRESH
+    // These later declarations intentionally replace the earlier sessionStorage/setup handlers.
+    function handleVisibilityChange() {
+      if (!document.hidden && sessionStorage.getItem(SESSION_KEY) === 'true' && ghConfig) {
+        showRefreshBar();
+        loadProductsFromGitHub().then(() => {
+          renderDash();
+          if (document.getElementById('page-products').classList.contains('active')) renderTable();
+          hideRefreshBar();
+          toast('کاڵاکان نوێکرانەوە ✓', 'success');
+        });
+      }
+    }
+
+    let refreshBarEl = null;
+    function showRefreshBar() {
+      if (refreshBarEl) return;
+      refreshBarEl = document.createElement('div');
+      refreshBarEl.className = 'refresh-bar';
+      refreshBarEl.innerHTML = '<i class="fas fa-sync-alt"></i> <span>نوێکردنەوەی کاڵاکان لە GitHub...</span>';
+      const pg = document.querySelector('.page.active');
+      if (pg) pg.insertBefore(refreshBarEl, pg.firstChild);
+    }
+    function hideRefreshBar() {
+      if (refreshBarEl) { refreshBarEl.remove(); refreshBarEl = null; }
+    }
+
+    function startAutoRefresh() {
+      if (autoRefreshInterval) clearInterval(autoRefreshInterval);
+      autoRefreshInterval = setInterval(() => {
+        if (!hasUnsavedChanges && !document.hidden && ghConfig && sessionStorage.getItem(SESSION_KEY) === 'true') {
+          loadProductsFromGitHub().then(() => {
+            renderDash();
+            if (document.getElementById('page-products').classList.contains('active')) renderTable();
+          }).catch(() => { });
+        }
+      }, 300000);
+    }
+
+    async function manualRefresh() {
+      if (hasUnsavedChanges) {
+        showConfirm('نوێکردنەوە', 'گۆڕانکارییەکانت پاراستن نییە. ئایا دڵنیایت؟', async () => {
+          hasUnsavedChanges = false;
+          document.getElementById('publishBar').classList.remove('show');
+          clearLocalDraft();
+          await doRefresh();
+        }); return;
+      }
+      await doRefresh();
+    }
+
+    async function doRefresh() {
+      showLoad('نوێکردنەوەی کاڵاکان...');
+      const loaded = await loadProductsFromGitHub();
+      clearLocalDraft();
+      hideLoad();
+      renderDash();
+      if (document.getElementById('page-products').classList.contains('active')) renderTable();
+      updateGhStatus();
+      toast('کاڵاکان نوێکرانەوە ✓', 'success');
+    }
+
+    // SETUP
+    function loadGhConfig() {
+      try {
+        const s = localStorage.getItem(GH_CONFIG_KEY);
+        if (s) {
+          const parsed = sanitizeGhConfig(JSON.parse(s));
+          if (!parsed) throw new Error('Invalid config');
+          ghConfig = persistGhConfig(parsed, getSessionGhToken() || getStoredGhToken() || parsed.token);
+          syncSetupPrefill();
+          if (hasAdminSetup()) {
+            document.getElementById('setupPage').classList.add('hidden');
+            document.getElementById('loginPage').classList.remove('hidden');
+            checkSession();
+          }
+        }
+      } catch (e) {
+        ghConfig = null;
+        localStorage.removeItem(GH_CONFIG_KEY);
+        localStorage.removeItem(GH_TOKEN_STORAGE_KEY);
+        sessionStorage.removeItem(GH_TOKEN_SESSION_KEY);
+      }
+    }
+
+    async function loadProductsFromGitHub() {
+      if (!ghConfig) return false;
+
+      const applyProducts = (data, source = 'unknown') => {
+        currentProducts = normalizeProductList(data);
+        lastLoadedRemoteFingerprint = getProductsFingerprint(currentProducts);
+        lastLoadedRemoteSource = source;
+        document.getElementById('navBadge').textContent = currentProducts.length;
+        const dot = document.getElementById('bnDot');
+        if (dot) dot.style.display = currentProducts.length ? 'block' : 'none';
+        updateChangesBadge();
+        refreshNewProductIdPreview();
+        return true;
+      };
+
+      try {
+        const fbRes = await fetch(`https://kogay-raste-default-rtdb.firebaseio.com/products.json?v=${Date.now()}`, { cache: 'no-store' });
+        if (fbRes.ok) {
+          const raw = await fbRes.json();
+          if (raw) {
+            const list = Array.isArray(raw) ? raw : Object.values(raw);
+            return applyProducts(list, 'firebase-realtime');
+          }
+        }
+      } catch (e) {
+        console.warn('Firebase products fetch:', e);
+      }
+
+      try {
+        if (ghConfig?.token) {
+          const remoteProducts = await readGitHubJsonFile('products.json', ghConfig);
+          if (Array.isArray(remoteProducts)) return applyProducts(remoteProducts, 'contents-api');
+        }
+      } catch (e) {
+        console.warn('GitHub contents API fetch:', e);
+      }
+
+      try {
+        const { username, repo } = ghConfig;
+        const remoteUrl = `https://raw.githubusercontent.com/${username}/${repo}/${encodeURIComponent(getConfiguredBranch())}/products.json?v=${Date.now()}`;
+        const res = await fetch(remoteUrl, { cache: 'no-store' });
+        if (res.ok) return applyProducts(await res.json(), 'raw');
+        console.warn('GitHub products fetch failed:', res.status);
+      } catch (e) {
+        console.warn('GitHub fetch:', e);
+      }
+
+      // Fallback: when raw.githubusercontent.com is blocked, token is missing, or the repo is private,
+      // keep the admin panel usable from the local/GitHub Pages products.json file.
+      try {
+        const localRes = await fetch(`./products.json?v=${Date.now()}`, { cache: 'no-store' });
+        if (localRes.ok) return applyProducts(await localRes.json(), 'local-fallback');
+        console.warn('Local products fallback failed:', localRes.status);
+      } catch (e) {
+        console.warn('Local products fallback:', e);
+      }
+
+      return false;
+    }
+
+    function doLogout() {
+      showConfirm('چوونەدەرەوە', 'دڵنیایت؟', () => {
+        currentProducts = [];
+        sessionStorage.removeItem(SESSION_KEY);
+        location.reload();
+      });
+    }
+
+    function updateChangesBadge() {
+      const b = document.getElementById('changesBadge');
+      if (hasUnsavedChanges) b.classList.add('show');
+      else b.classList.remove('show');
+    }
+
+
+    function renderDash() {
+      const total = currentProducts.length;
+      const visible = currentProducts.filter(p => !p.hidden).length;
+      const hidden = currentProducts.filter(p => p.hidden).length;
+      // ★ Order Tracking Stats
+      const orderKeys = Object.keys(localStorage).filter(k => k.startsWith('ORD-'));
+      const totalOrders = orderKeys.length;
+      const orders = orderKeys.map(k => { try { return JSON.parse(localStorage.getItem(k)); } catch (e) { return null; } }).filter(Boolean);
+      const totalRevenue = orders.reduce((s, o) => s + (o.total || 0), 0);
+      document.getElementById('statsGrid').innerHTML = `
+    <div class="stat-card"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px"><div class="stat-icon" style="background:rgba(249,115,22,0.15)"><i class="fas fa-box" style="color:var(--primary)"></i></div><div class="stat-badge badge-orange">کۆی گشتی</div></div><div class="stat-number">${total}</div><div class="stat-label">کۆی کاڵاکان</div></div>
+    <div class="stat-card"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px"><div class="stat-icon" style="background:rgba(34,197,94,0.15)"><i class="fas fa-eye" style="color:#4ade80"></i></div><div class="stat-badge badge-green">چالاک</div></div><div class="stat-number">${visible}</div><div class="stat-label">نیشاندراو</div></div>
+    <div class="stat-card"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px"><div class="stat-icon" style="background:rgba(239,68,68,0.15)"><i class="fas fa-eye-slash" style="color:#fca5a5"></i></div><div class="stat-badge badge-pink">شاراوە</div></div><div class="stat-number">${hidden}</div><div class="stat-label">شاراوە</div></div>
+    <div class="stat-card"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px"><div class="stat-icon" style="background:rgba(59,130,246,0.15)"><i class="fas fa-tags" style="color:#60a5fa"></i></div><div class="stat-badge badge-blue">بەشەکان</div></div><div class="stat-number">6</div><div class="stat-label">بەشی جیاواز</div></div>
+    <div class="stat-card"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px"><div class="stat-icon" style="background:rgba(249,115,22,0.15)"><i class="fas fa-receipt" style="color:#fb923c"></i></div><div class="stat-badge badge-orange">داواکاری</div></div><div class="stat-number">${totalOrders}</div><div class="stat-label">داواکاری نێردراو</div></div>
+    <div class="stat-card"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px"><div class="stat-icon" style="background:rgba(34,197,94,0.15)"><i class="fas fa-coins" style="color:#4ade80"></i></div><div class="stat-badge badge-green">داهات</div></div><div class="stat-number" style="font-size:16px">${totalRevenue > 0 ? totalRevenue.toLocaleString() : '—'}</div><div class="stat-label">IQD کۆی داهات</div></div>`;
+      document.getElementById('catGrid').innerHTML = Object.keys(catInfo).map(cat => {
+        const info = catInfo[cat];
+        const c = currentProducts.filter(p => p.category === cat && !p.hidden).length;
+        return `<div class="cat-item"><div class="cat-icon" style="background:${info.color}22"><i class="fas ${info.icon}" style="color:${info.color}"></i></div><div><div style="font-size:11px;color:var(--text2)">${info.name}</div><div style="font-size:18px;font-weight:800;color:white">${c}</div></div></div>`;
+      }).join('');
+    }
+
+    // BOTTOM NAV
+    function setBottomNav(id) {
+      document.querySelectorAll('.bottom-nav-item').forEach(b => b.classList.remove('active'));
+      const el = document.getElementById('bn-' + id);
+      if (el) el.classList.add('active');
+    }
+
+    // SHOW PAGE
+    function showPage(id, btn) {
+      document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+      document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+      document.getElementById('page-' + id).classList.add('active');
+      if (btn) btn.classList.add('active');
+      const titles = { dashboard: 'داشبۆرد 📊', products: 'کاڵاکان 📦', add: 'زیادکردنی کاڵا ➕', settings: 'ڕێکخستن ⚙️' };
+      document.getElementById('topTitle').textContent = titles[id] || id;
+      if (id === 'products') renderTable();
+      if (id === 'settings') updateGhStatus();
+      setBottomNav(id);
+      closeSidebar();
+      window.scrollTo(0, 0);
+    }
+
+    // RENDER TABLE + MOBILE CARDS
+    function renderTable(list) {
+      const prods = list || currentProducts;
+      const tbody = document.getElementById('prodBody');
+      const cards = document.getElementById('prodCardsMobile');
+      document.getElementById('tCount').textContent = prods.length + ' کاڵا';
+      document.getElementById('prodSub').textContent = prods.length + ' کاڵا بوونە';
+      if (!prods.length) {
+        document.getElementById('prodEmpty').style.display = 'block';
+        tbody.innerHTML = '';
+        if (cards) cards.innerHTML = '';
+        return;
+      }
+      document.getElementById('prodEmpty').style.display = 'none';
+
+      // Desktop
+      tbody.innerHTML = prods.map(p => {
+        const encodedId = encodeInlineArg(p.id);
+        return `<tr>
+    <td><div class="p-name">${thumbHtml(p)}<div><div class="p-title">${escapeHtml(p.name)}</div><div class="p-id">${escapeHtml(p.id)}</div></div></div></td>
+    <td><span class="cat-badge c-${p.category}">${escapeHtml(catInfo[p.category]?.name || p.category)}</span></td>
+    <td style="color:var(--text2);max-width:120px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${escapeHtml(p.description)}</td>
+    <td><span class="price-badge">${escapeHtml(p.price.toLocaleString())} د.ع</span></td>
+    <td><span class="status-badge ${p.hidden ? 's-hidden' : 's-active'}">${p.hidden ? 'شاراوە' : 'نیشاندراو'}</span></td>
+    <td><div class="act-cell">
+      <button class="act-btn a-img" onclick="openImgPreview(decodeURIComponent('${encodedId}'))"><i class="fas fa-image"></i></button>
+      <button class="act-btn a-edit" onclick="openEdit(decodeURIComponent('${encodedId}'))"><i class="fas fa-pen"></i></button>
+      <button class="act-btn a-toggle" onclick="toggleProd(decodeURIComponent('${encodedId}'))"><i class="fas ${p.hidden ? 'fa-eye' : 'fa-eye-slash'}"></i></button>
+      <button class="act-btn a-del" onclick="delProd(decodeURIComponent('${encodedId}'))"><i class="fas fa-trash"></i></button>
+    </div></td>
+  </tr>`;
+      }).join('');
+
+      // Mobile Cards
+      if (cards) {
+        cards.innerHTML = prods.map(p => {
+          const encodedId = encodeInlineArg(p.id);
+          return `<div class="prod-card">
+      <div class="prod-card-top">
+        ${thumbHtml(p)}
+        <div class="prod-card-info">
+          <div class="prod-card-name">${escapeHtml(p.name)}</div>
+          <div class="prod-card-id">${escapeHtml(p.id)}</div>
+        </div>
+      </div>
+      <div class="prod-card-meta">
+        <span class="cat-badge c-${p.category}">${escapeHtml(catInfo[p.category]?.name || p.category)}</span>
+        <span class="price-badge">${escapeHtml(p.price.toLocaleString())} د.ع</span>
+        <span class="status-badge ${p.hidden ? 's-hidden' : 's-active'}">${p.hidden ? 'شاراوە' : 'نیشاندراو'}</span>
+      </div>
+      ${p.description ? `<div style="font-size:12px;color:var(--text2);margin-top:8px">${escapeHtml(p.description)}</div>` : ''}
+      <div class="prod-card-actions">
+        <button class="act-btn a-img" onclick="openImgPreview(decodeURIComponent('${encodedId}'))"><i class="fas fa-image"></i></button>
+        <button class="act-btn a-edit" onclick="openEdit(decodeURIComponent('${encodedId}'))"><i class="fas fa-pen"></i></button>
+        <button class="act-btn a-toggle" onclick="toggleProd(decodeURIComponent('${encodedId}'))"><i class="fas ${p.hidden ? 'fa-eye' : 'fa-eye-slash'}"></i></button>
+        <button class="act-btn a-del" onclick="delProd(decodeURIComponent('${encodedId}'))"><i class="fas fa-trash"></i></button>
+      </div>
+    </div>`;
+        }).join('');
+      }
+    }
+
+    function filterProds() {
+      const q = document.getElementById('srch').value.toLowerCase();
+      const cat = document.getElementById('catFilter').value;
+      const st = document.getElementById('statusFilter').value;
+      renderTable(currentProducts.filter(p => {
+        const mq = !q || p.name.toLowerCase().includes(q) || p.id.includes(q);
+        const mc = !cat || p.category === cat;
+        const ms = !st || (st === 'active' && !p.hidden) || (st === 'hidden' && p.hidden);
+        return mq && mc && ms;
+      }));
+    }
+
+    function checkStrength() {
+      const v = document.getElementById('newPass').value;
+      const b = document.getElementById('passStr');
+      if (!v) { b.style.background = 'var(--border)'; return; }
+      b.style.background = v.length < 6 ? '#ef4444' : v.length < 10 ? '#eab308' : '#22c55e';
+    }
+    // IMAGE UPLOAD + GITHUB OVERRIDES
+    // This final block wins over older declarations above so add/edit/publish all share
+    // the same GitHub-token-based upload workflow.
+    async function saveSetup() {
+      const token = document.getElementById('setupToken')?.value.trim();
+      const username = document.getElementById('setupUsername').value.trim();
+      const repo = document.getElementById('setupRepo').value.trim();
+      const branch = document.getElementById('setupBranch')?.value.trim() || 'main';
+      const adminUser = document.getElementById('setupAdminUser')?.value.trim();
+      const adminPass = document.getElementById('setupAdminPass')?.value || '';
+      const confirmPass = document.getElementById('setupAdminPassConfirm')?.value || '';
+      const errEl = document.getElementById('setupError');
+      // First setup only needs repo identity plus the local admin credentials.
+      if (!username || !repo || !adminUser || !adminPass || !confirmPass) {
+        errEl.textContent = 'Complete the repository and admin login fields first';
+        errEl.classList.add('show');
+        return;
+      }
+      if (adminPass.length < 6) {
+        errEl.textContent = 'Admin password must be at least 6 characters';
+        errEl.classList.add('show');
+        return;
+      }
+      if (adminPass !== confirmPass) {
+        errEl.textContent = 'Admin passwords do not match';
+        errEl.classList.add('show');
+        return;
+      }
+      errEl.classList.remove('show');
+      try {
+        let resolvedBranch = branch;
+        if (token) {
+          showLoad('Checking GitHub token...');
+          const validation = await validateGitHubTokenAccess(token, username, repo, branch);
+          if (!validation.ok) {
+            hideLoad();
+            errEl.textContent = `${validation.hint} (${validation.status})${validation.detail ? ` - ${validation.detail}` : ''}`;
+            errEl.classList.add('show');
+            return;
+          }
+          resolvedBranch = validation.branch || branch;
+        } else {
+          showLoad('Saving setup without token...');
+        }
+        ghConfig = persistGhConfig({ token, username, repo, branch: resolvedBranch }, token);
+        const saved = await window.AdminAuth?.saveAdminCredentials?.(adminUser, adminPass);
+        if (!saved) throw new Error('Could not save admin credentials');
+        hideLoad();
+        errEl.classList.remove('show');
+        document.getElementById('setupPage').classList.add('hidden');
+        document.getElementById('loginPage').classList.remove('hidden');
+        syncSetupPrefill();
+        updateGhStatus();
+        toast(token ? 'Setup saved successfully' : 'Setup saved. Add a GitHub token later for publish/upload.', 'success');
+      } catch (error) {
+        hideLoad();
+        errEl.textContent = error?.message || 'Could not verify the GitHub token right now';
+        errEl.classList.add('show');
+      }
+    }
+
+    function checkSession() {
+      if (sessionStorage.getItem(SESSION_KEY) === 'true' && ghConfig && hasAdminSetup()) showApp();
+    }
+
+    async function doLogin() {
+      const storedUser = getStoredAdminUser();
+      const u = document.getElementById('loginUser').value.trim() || storedUser;
+      const p = document.getElementById('loginPass').value;
+      const storedHash = getStoredAdminHash();
+      const verified = await window.verifyPassword?.(p, storedHash);
+      if (u === storedUser && verified) {
+        if (!window.AdminAuth?.getStoredSalt?.()) {
+          await window.AdminAuth?.migrateLegacyCredentials?.(u, p);
+        }
+        sessionStorage.setItem(SESSION_KEY, 'true');
+        await showApp();
+        toast('Login success', 'success');
+      } else {
+        const box = document.getElementById('loginBox');
+        box.classList.add('shake');
+        document.getElementById('loginError').classList.add('show');
+        setTimeout(() => box.classList.remove('shake'), 400);
+      }
+    }
+
+    async function showApp() {
+      document.getElementById('loginPage').classList.add('hidden');
+      document.getElementById('mainApp').classList.add('show');
+      showLoad('Loading products from GitHub...');
+      const ok = await loadProductsFromGitHub();
+      const restoredDraft = restoreLocalDraftIfAvailable();
+      hideLoad();
+      if (!ok && !restoredDraft) toast('Could not load products from GitHub', 'error');
+      undoStack = [];
+      updateUndoButton();
+      renderDash();
+      refreshNewProductIdPreview();
+      updateGhStatus();
+    }
+
+    function markUnsaved() {
+      hasUnsavedChanges = true;
+      document.getElementById('publishBar').classList.add('show');
+      updateChangesBadge();
+      document.getElementById('navBadge').textContent = currentProducts.length;
+      updateUndoButton();
+      saveLocalDraft('unsaved');
+      updateGhStatus();
+    }
+
+    // GitHub Contents API expects base64 text, so JSON is encoded in chunks to stay browser-safe.
+    function encodeStringToBase64(str) {
+      const bytes = new TextEncoder().encode(String(str || ''));
+      let binary = '';
+      const chunkSize = 0x8000;
+      for (let index = 0; index < bytes.length; index += chunkSize) {
+        binary += String.fromCharCode(...bytes.subarray(index, index + chunkSize));
+      }
+      return btoa(binary);
+    }
+
+    function decodeBase64ToString(base64Text) {
+      const sanitized = String(base64Text || '').replace(/\s+/g, '');
+      if (!sanitized) return '';
+      const binary = atob(sanitized);
+      const bytes = new Uint8Array(binary.length);
+      for (let index = 0; index < binary.length; index += 1) {
+        bytes[index] = binary.charCodeAt(index);
+      }
+      return new TextDecoder().decode(bytes);
+    }
+
+    async function readGitHubApiError(response) {
+      let detail = '';
+      try {
+        const data = await response.json();
+        detail = String(data?.message || '').trim();
+      } catch (error) {
+      }
+      return detail || response.statusText || 'Unknown GitHub error';
+    }
+
+    function formatGitHubApiError(status, path, detail, operation = 'publish') {
+      const cleanDetail = String(detail || '').trim();
+      if (status === 401) {
+        return `GitHub returned 401 for ${path}. The token is missing, invalid, expired, or copied incompletely.${cleanDetail ? ` ${cleanDetail}` : ''}`;
+      }
+      if (status === 403) {
+        return `GitHub returned 403 for ${path}. The token does not have repository contents permission or the API rate limit was reached.${cleanDetail ? ` ${cleanDetail}` : ''}`;
+      }
+      if (status === 404) {
+        return `GitHub returned 404 for ${path}. Check the owner, repository, branch, and file path.${cleanDetail ? ` ${cleanDetail}` : ''}`;
+      }
+      return `GitHub could not ${operation} ${path} (${status}).${cleanDetail ? ` ${cleanDetail}` : ''}`;
+    }
+
+    async function readGitHubJsonFile(path, config = ghConfig) {
+      const cleanPath = String(path || '').replace(/^\/+/, '');
+      const branch = getConfiguredBranch(config);
+      const res = await fetch(`${buildGitHubContentsApiUrl(cleanPath, config)}?ref=${encodeURIComponent(branch)}`, {
+        headers: getGitHubAuthHeaders(config?.token),
+        cache: 'no-store'
+      });
+      if (!res.ok) {
+        const detail = await readGitHubApiError(res);
+        throw new Error(formatGitHubApiError(res.status, cleanPath, detail, 'read'));
+      }
+      const file = await res.json();
+      const jsonText = decodeBase64ToString(file?.content || '');
+      return JSON.parse(jsonText || '[]');
+    }
+
+    async function putJsonFileToGitHub(path, data, config = ghConfig) {
+      const cleanPath = String(path || '').replace(/^\/+/, '');
+      const branch = getConfiguredBranch(config);
+      const url = buildGitHubContentsApiUrl(cleanPath, config);
+      let sha = null;
+
+      const getRes = await fetch(`${url}?ref=${encodeURIComponent(branch)}`, {
+        method: 'GET',
+        headers: getGitHubAuthHeaders(config?.token),
+        cache: 'no-store'
+      });
+
+      if (getRes.ok) {
+        const currentFile = await getRes.json();
+        sha = currentFile?.sha || null;
+      } else if (getRes.status !== 404) {
+        const detail = await readGitHubApiError(getRes);
+        throw new Error(formatGitHubApiError(getRes.status, cleanPath, detail, 'read'));
+      }
+
+      const body = {
+        message: `Update ${cleanPath}`,
+        content: encodeStringToBase64(JSON.stringify(data, null, 2) + '\n'),
+        branch
+      };
+      if (sha) body.sha = sha;
+
+      const putRes = await fetch(url, {
+        method: 'PUT',
+        headers: getGitHubAuthHeaders(config?.token, 'application/json'),
+        body: JSON.stringify(body)
+      });
+
+      if (!putRes.ok) {
+        const detail = await readGitHubApiError(putRes);
+        throw new Error(formatGitHubApiError(putRes.status, cleanPath, detail, 'publish'));
+      }
+
+      return putRes.json();
+    }
+
+    function getPublishReadyGhConfig() {
+      const activeToken = getSessionGhToken() || getStoredGhToken();
+      return sanitizeGhConfig({
+        ...(ghConfig || getStoredGhConfigMeta()),
+        token: activeToken
+      });
+    }
+
+    async function publishJSON() {
+      const publishConfig = getPublishReadyGhConfig();
+      if (!publishConfig.token) {
+        promptForGitHubToken('A GitHub token is required before publishing product files.');
+        return;
+      }
+      if (!publishConfig.username || !publishConfig.repo) {
+        toast('Repository owner or name is missing in GitHub settings.', 'error');
+        return;
+      }
+      showLoad('Preparing product files...');
+      try {
+        ghConfig = persistGhConfig(publishConfig, publishConfig.token, { rememberToken: isGhTokenRemembered() });
+        const normalizedProducts = normalizeProductList(currentProducts);
+        const visible = normalizedProducts.filter(product => !product.hidden);
+        const productFiles = buildProductFiles(normalizedProducts);
+        const entries = Object.entries(productFiles);
+
+        for (let index = 0; index < entries.length; index += 1) {
+          const [path, fileData] = entries[index];
+          document.getElementById('loadingText').textContent = `Publishing ${path} (${index + 1}/${entries.length})...`;
+          await putJsonFileToGitHub(path, fileData, ghConfig);
+        }
+
+        currentProducts = normalizedProducts;
+        lastLoadedRemoteFingerprint = getProductsFingerprint(normalizedProducts);
+        lastLoadedRemoteSource = 'publish';
+        hideLoad();
+        hasUnsavedChanges = false;
+        clearLocalDraft();
+        document.getElementById('publishBar')?.classList.remove('show');
+        updateChangesBadge();
+        updateGhStatus();
+        toast(`${entries.length} product files published successfully`, 'success');
+      } catch (error) {
+        hideLoad();
+        toast('Publish failed: ' + (error?.message || 'Unknown error'), 'error');
+      }
+    }
+
+    function validateProductInput({ id, name, category, price, image }, { existingId = '' } = {}) {
+      const cleanId = String(id || '').trim();
+      const cleanName = String(name || '').trim();
+      const cleanCategory = String(category || '').trim();
+      const cleanImage = String(image || '').trim();
+      const normalizedPrice = Number(price);
+
+      if (!cleanName) throw new Error('Product name is required.');
+      if (!cleanCategory || !isValidCategory(cleanCategory)) throw new Error('Select a valid product category.');
+      if (!cleanId || !isValidProductId(cleanId)) throw new Error('Product ID is invalid.');
+      if (!Number.isFinite(normalizedPrice) || normalizedPrice < 0) throw new Error('Product price must be a valid number greater than or equal to zero.');
+      if (!cleanImage) throw new Error('Select an image file or enter an existing image path.');
+
+      const duplicate = currentProducts.some(product =>
+        String(product?.id || '').trim().toLowerCase() === cleanId.toLowerCase() &&
+        String(product?.id || '').trim() !== String(existingId || '').trim()
+      );
+      if (duplicate) throw new Error('Product ID must stay unique.');
+
+      return {
+        id: cleanId,
+        name: cleanName,
+        category: cleanCategory,
+        price: normalizedPrice,
+        image: cleanImage
+      };
+    }
+
+    function openEdit(id) {
+      const p = currentProducts.find(x => x.id === id);
+      if (!p) return;
+      document.getElementById('editId').value = p.id;
+      document.getElementById('editName').value = p.name;
+      document.getElementById('editCat').value = p.category;
+      document.getElementById('editPrice').value = p.price;
+      document.getElementById('editDesc').value = p.description;
+      document.getElementById('editImage').value = p.image;
+      document.getElementById('editModal').classList.add('open');
+      document.body.style.overflow = 'hidden';
+      resetEditImageUI();
+    }
+
+    function closeEdit() {
+      document.getElementById('editModal').classList.remove('open');
+      document.body.style.overflow = '';
+      document.getElementById('editId').value = '';
+      document.getElementById('editName').value = '';
+      document.getElementById('editPrice').value = '';
+      document.getElementById('editDesc').value = '';
+      document.getElementById('editImage').value = '';
+      resetEditImageUI();
+    }
+
+    async function saveEdit() {
+      const id = document.getElementById('editId').value;
+      if (!id) { toast('Product ID is missing', 'error'); return; }
+      const i = currentProducts.findIndex(x => x.id === id);
+      if (i === -1) return;
+
+      const name = document.getElementById('editName').value.trim();
+      const category = document.getElementById('editCat').value;
+      const rawPrice = document.getElementById('editPrice').value.trim();
+      const price = rawPrice === '' ? 0 : Number(rawPrice);
+      const description = document.getElementById('editDesc').value.trim();
+      const editImageInput = document.getElementById('editImage');
+      const newFile = document.getElementById('editImageFile')?.files?.[0];
+      let uploadedPath = '';
+
+      try {
+        let imagePath = editImageInput.value.trim();
+        if (newFile) {
+          const upload = await uploadImageToGitHub(newFile, category, 'edit');
+          uploadedPath = upload.path;
+          imagePath = upload.path;
+          editImageInput.value = imagePath;
+        }
+
+        const validated = validateProductInput({
+          id,
+          name,
+          category,
+          price,
+          image: imagePath || currentProducts[i]?.image || ''
+        }, { existingId: id });
+
+        pushUndoState();
+        currentProducts[i] = normalizeProductRecord({
+          ...currentProducts[i],
+          id: validated.id,
+          name: validated.name,
+          category: validated.category,
+          price: validated.price,
+          description,
+          image: validated.image
+        }, { touchUpdatedAt: true, allowIdGeneration: false });
+        validateImagePath(currentProducts[i].image);
+        markUnsaved();
+        renderTable();
+        renderDash();
+        closeEdit();
+        toast('Product updated successfully', 'success');
+      } catch (error) {
+        if (uploadedPath) {
+          toast('Image uploaded but product update was not saved', 'info');
+        }
+        toast(error.message || 'Edit failed', 'error');
+      }
+    }
+
+    function toggleProd(id) {
+      const index = currentProducts.findIndex(x => x.id === id);
+      if (index === -1) return;
+      pushUndoState();
+      currentProducts[index] = normalizeProductRecord({
+        ...currentProducts[index],
+        hidden: !currentProducts[index].hidden
+      }, { touchUpdatedAt: true, allowIdGeneration: false });
+      markUnsaved();
+      renderTable();
+      renderDash();
+      toast(currentProducts[index].hidden ? 'Product hidden' : 'Product visible', 'info');
+    }
+
+    function delProd(id) {
+      showConfirm('Delete product', 'This product will be removed from the local admin list until you publish again.', () => {
+        pushUndoState();
+        currentProducts = currentProducts.filter(x => x.id !== id);
+        try {
+          fetch(`https://kogay-raste-default-rtdb.firebaseio.com/products/${encodeURIComponent(id)}.json`, {
+            method: 'DELETE'
+          }).catch(console.warn);
+        } catch (e) {}
+        markUnsaved();
+        renderTable();
+        renderDash();
+        toast('Product deleted', 'success');
+      });
+    }
+
+    async function addProduct() {
+      const name = document.getElementById('newName').value.trim();
+      const category = document.getElementById('newCat').value;
+      const id = generateProductId(name, category);
+      const rawPrice = document.getElementById('newPrice').value.trim();
+      const price = rawPrice === '' ? 0 : Number(rawPrice);
+      const description = document.getElementById('newDesc').value.trim();
+      const imageInput = document.getElementById('newImage');
+      const selectedFile = document.getElementById('addImageFile')?.files?.[0];
+      let uploadedPath = '';
+
+      document.getElementById('newId').value = id;
+
+      try {
+        let imagePath = imageInput.value.trim();
+        if (selectedFile) {
+          const upload = await uploadImageToGitHub(selectedFile, category, 'add');
+          uploadedPath = upload.path;
+          imagePath = upload.path;
+          imageInput.value = imagePath;
+        } else if (!imagePath) {
+          throw new Error('Select an image file or enter an existing image path');
+        }
+
+        const validated = validateProductInput({
+          id,
+          name,
+          category,
+          price,
+          image: imagePath
+        });
+
+        pushUndoState();
+        const newRecord = normalizeProductRecord({
+          id: validated.id,
+          name: validated.name,
+          category: validated.category,
+          price: validated.price,
+          description,
+          image: validated.image,
+          hidden: false
+        }, { touchUpdatedAt: true });
+        currentProducts.push(newRecord);
+
+        try {
+          fetch(`https://kogay-raste-default-rtdb.firebaseio.com/products/${encodeURIComponent(newRecord.id)}.json`, {
+            method: 'PUT',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(newRecord)
+          }).catch(console.warn);
+        } catch (e) {}
+
+        validateImagePath(validated.image);
+        markUnsaved();
+        renderTable();
+        renderDash();
+        clearAdd();
+        showPage('products', null);
+        setBottomNav('products');
+        toast('Product added successfully', 'success');
+      } catch (error) {
+        if (uploadedPath) {
+          toast('Image uploaded but product was not saved', 'info');
+        }
+        toast(error.message || 'Add product failed', 'error');
+      }
+    }
+
+    function clearAdd() {
+      ['newId', 'newName', 'newPrice', 'newDesc', 'newImage'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.value = '';
+      });
+      document.getElementById('newCat').value = 'cake';
+      resetAddImageUI();
+      refreshNewProductIdPreview();
+    }
+
+    function updateGhStatus() {
+      if (!ghConfig) return;
+      const hasToken = Boolean(ghConfig.token);
+      const branch = getConfiguredBranch();
+      const draft = readLocalDraft();
+      const draftStatus = draft?.products?.length ? `${draft.products.length} products waiting to publish` : 'No local draft';
+      // Surface the repository plus token/upload state so the admin knows image upload is ready.
+      document.getElementById('ghStatus').textContent = hasToken ? 'GitHub ready' : 'Token missing';
+      const branchField = document.getElementById('newBranch');
+      if (branchField) branchField.value = branch;
+      document.getElementById('ghInfo').innerHTML = `<div style="background:rgba(34,197,94,0.08);border:1px solid rgba(34,197,94,0.2);border-radius:var(--radius);padding:12px 14px;font-size:12px;line-height:2">
+    <div><i class="fas fa-check-circle" style="color:#4ade80;margin-left:6px"></i> <strong style="color:white">Image upload + publish mode</strong></div>
+    <div style="color:var(--text2)">Repository: <span style="color:white">${escapeHtml(ghConfig.username)}/${escapeHtml(ghConfig.repo)}</span></div>
+    <div style="color:var(--text3);font-size:11px">Branch: <span style="color:white">${escapeHtml(branch)}</span></div>
+    <div style="color:var(--text3);font-size:11px">Token: ${hasToken ? 'saved in this browser' : 'not configured yet'}</div>
+    <div style="color:var(--text3);font-size:11px">Local draft: ${escapeHtml(draftStatus)}</div>
+  </div>`;
+    }
+
+    function promptForGitHubToken(message = 'GitHub token is required for publish and image upload') {
+      showPage('settings', null);
+      updateGhStatus();
+      const tokenInput = document.getElementById('newToken');
+      if (tokenInput) {
+        window.setTimeout(() => {
+          tokenInput.focus();
+          tokenInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }, 80);
+      }
+      toast(message, 'error');
+    }
+
+    async function updateToken() {
+      const t = document.getElementById('newToken').value.trim();
+      const branch = document.getElementById('newBranch')?.value.trim() || getConfiguredBranch();
+      if (!t || !ghConfig?.username || !ghConfig?.repo) {
+        toast('Enter a token first', 'error');
+        return;
+      }
+
+      showLoad('Checking new token...');
+      try {
+        const validation = await validateGitHubTokenAccess(t, ghConfig.username, ghConfig.repo, branch);
+        hideLoad();
+
+        if (!validation.ok) {
+          toast(`${validation.hint} (${validation.status})${validation.detail ? ` - ${validation.detail}` : ''}`, 'error');
+          return;
+        }
+
+        ghConfig = persistGhConfig({ ...ghConfig, token: t, branch: validation.branch || branch }, t);
+        document.getElementById('newToken').value = '';
+        updateGhStatus();
+        toast('Token updated successfully', 'success');
+      } catch (error) {
+        hideLoad();
+        toast(error?.message || 'Could not verify the new token', 'error');
+      }
+    }
+
+    function clearSetup() {
+      showConfirm('Clear setup', 'This removes the saved GitHub token, repo settings, and the local admin login from this browser.', () => {
+        localStorage.removeItem(GH_CONFIG_KEY);
+        localStorage.removeItem(GH_TOKEN_STORAGE_KEY);
+        localStorage.removeItem(LOCAL_DRAFT_KEY);
+        localStorage.removeItem(ADMIN_USER_KEY);
+        localStorage.removeItem(ADMIN_HASH_KEY);
+        localStorage.removeItem(window.AdminAuth?.ADMIN_SALT_KEY || 'adminSalt');
+        localStorage.removeItem(window.AdminAuth?.ADMIN_ITERATIONS_KEY || 'adminHashIterations');
+        localStorage.removeItem(window.AdminAuth?.ADMIN_SCHEME_KEY || 'adminHashScheme');
+        sessionStorage.removeItem(GH_TOKEN_SESSION_KEY);
+        sessionStorage.removeItem(SESSION_KEY);
+        location.reload();
+      });
+    }
+
+    function resetLocalAdminLogin() {
+      showConfirm('Reset admin login', 'This clears only the saved admin username/password from this browser and reopens setup. Repository settings stay saved.', () => {
+        localStorage.removeItem(ADMIN_USER_KEY);
+        localStorage.removeItem(ADMIN_HASH_KEY);
+        localStorage.removeItem(window.AdminAuth?.ADMIN_SALT_KEY || 'adminSalt');
+        localStorage.removeItem(window.AdminAuth?.ADMIN_ITERATIONS_KEY || 'adminHashIterations');
+        localStorage.removeItem(window.AdminAuth?.ADMIN_SCHEME_KEY || 'adminHashScheme');
+        sessionStorage.removeItem(SESSION_KEY);
+        location.reload();
+      });
+    }
+
+    async function changePass() {
+      const cur = document.getElementById('curPass').value;
+      const nw = document.getElementById('newPass').value;
+      const conf = document.getElementById('confPass').value;
+      // Password changes still validate against the saved local hash.
+      if (!await window.verifyPassword?.(cur, getStoredAdminHash())) { toast('Current password is incorrect', 'error'); return; }
+      if (nw.length < 6) { toast('Password must be at least 6 characters', 'error'); return; }
+      if (nw !== conf) { toast('Passwords do not match', 'error'); return; }
+      const saved = await window.AdminAuth?.saveAdminCredentials?.(getStoredAdminUser(), nw);
+      if (!saved) { toast('Could not save the new password', 'error'); return; }
+      ['curPass', 'newPass', 'confPass'].forEach(id => document.getElementById(id).value = '');
+      document.getElementById('passStr').style.background = 'var(--border)';
+      toast('Password updated successfully', 'success');
+    }
+
+    async function doReset() {
+      showConfirm('Reset local changes', 'Unsaved edits will be discarded and products will be reloaded from GitHub.', async () => {
+        hasUnsavedChanges = false;
+        undoStack = [];
+        updateUndoButton();
+        showLoad('Reloading products from GitHub...');
+        await loadProductsFromGitHub();
+        clearLocalDraft();
+        hideLoad();
+        renderDash();
+        renderTable();
+        document.getElementById('publishBar')?.classList.remove('show');
+        updateChangesBadge();
+        updateGhStatus();
+        toast('Local changes reset', 'info');
+      });
+    }
+
+    function handleVisibilityChange() {
+      if (!document.hidden && isLoggedIn() && ghConfig) {
+        showRefreshBar();
+        loadProductsFromGitHub().then(loaded => {
+          renderDash();
+          if (document.getElementById('page-products').classList.contains('active')) renderTable();
+          hideRefreshBar();
+          if (loaded) toast('Products refreshed', 'success');
+        }).catch(() => {
+          hideRefreshBar();
+        });
+      }
+    }
+
+    function startAutoRefresh() {
+      if (autoRefreshInterval) clearInterval(autoRefreshInterval);
+      autoRefreshInterval = setInterval(() => {
+        if (!hasUnsavedChanges && !document.hidden && ghConfig && isLoggedIn()) {
+          loadProductsFromGitHub().then(() => {
+            renderDash();
+            if (document.getElementById('page-products').classList.contains('active')) renderTable();
+          }).catch(() => { });
+        }
+      }, 300000);
+    }
+
+    function getGitHubSettingsInputConfig() {
+      const saved = sanitizeGhConfig({
+        ...(ghConfig || {}),
+        ...getStoredGhConfigMeta()
+      });
+      return {
+        username: String(document.getElementById('newGhOwner')?.value || saved.username || '').trim(),
+        repo: String(document.getElementById('newGhRepo')?.value || saved.repo || '').trim(),
+        branch: String(document.getElementById('newBranch')?.value || saved.branch || 'main').trim() || 'main',
+        rememberToken: Boolean(document.getElementById('rememberToken')?.checked)
+      };
+    }
+
+    function getGitHubSettingsFingerprint(settings, token) {
+      return JSON.stringify({
+        username: String(settings?.username || '').trim(),
+        repo: String(settings?.repo || '').trim(),
+        branch: String(settings?.branch || '').trim(),
+        rememberToken: Boolean(settings?.rememberToken),
+        token: String(token || '').trim()
+      });
+    }
+
+    function scheduleGitHubSettingsAutoSave() {
+      const tokenInput = document.getElementById('newToken');
+      const ownerInput = document.getElementById('newGhOwner');
+      const repoInput = document.getElementById('newGhRepo');
+      const branchInput = document.getElementById('newBranch');
+      const rememberInput = document.getElementById('rememberToken');
+      if (!tokenInput || !ownerInput || !repoInput || !branchInput || !rememberInput) return;
+
+      clearTimeout(ghSettingsAutoSaveTimer);
+      ghSettingsAutoSaveTimer = window.setTimeout(() => {
+        void saveGitHubSettings({ auto: true, silentSuccess: true, silentMissingInfo: true });
+      }, 250);
+    }
+
+    function bindGitHubSettingsAutoSave() {
+      [
+        document.getElementById('newToken'),
+        document.getElementById('newGhOwner'),
+        document.getElementById('newGhRepo'),
+        document.getElementById('newBranch'),
+        document.getElementById('rememberToken')
+      ].filter(Boolean).forEach(field => {
+        if (field.dataset.autoSaveBound === 'true') return;
+        field.dataset.autoSaveBound = 'true';
+
+        field.addEventListener('change', scheduleGitHubSettingsAutoSave);
+        if (field.tagName === 'INPUT' && field.type !== 'checkbox') {
+          field.addEventListener('keydown', event => {
+            if (event.key !== 'Enter') return;
+            event.preventDefault();
+            clearTimeout(ghSettingsAutoSaveTimer);
+            void saveGitHubSettings();
+          });
+        }
+      });
+    }
+
+    async function refreshGitHubTokenHealth(forceToast = false) {
+      const settings = getGitHubSettingsInputConfig();
+      if (!settings.username || !settings.repo) {
+        ghTokenHealth = { state: 'missing', source: 'none', detail: 'Repository config is missing.', checkedAt: Date.now() };
+        updateGhStatus();
+        return ghTokenHealth;
+      }
+
+      const typedToken = String(document.getElementById('newToken')?.value || '').trim();
+      const activeToken = typedToken || getSessionGhToken() || getStoredGhToken();
+      ghConfig = sanitizeGhConfig({
+        ...(ghConfig || {}),
+        ...settings,
+        token: activeToken
+      });
+
+      if (!activeToken) {
+        ghTokenHealth = { state: 'missing', source: 'none', detail: 'No GitHub token is saved yet.', checkedAt: Date.now() };
+        updateGhStatus();
+        if (forceToast) toast('Add a GitHub token first', 'error');
+        return ghTokenHealth;
+      }
+
+      const active = getActiveGhTokenSource();
+      ghTokenHealth = { state: 'checking', source: active.source, detail: '', checkedAt: Date.now() };
+      updateGhStatus();
+
+      try {
+        const validation = await validateGitHubTokenAccess(activeToken, settings.username, settings.repo, settings.branch);
+        if (validation.ok) {
+          ghConfig = persistGhConfig({
+            username: settings.username,
+            repo: settings.repo,
+            branch: validation.branch || settings.branch
+          }, activeToken, { rememberToken: settings.rememberToken });
+          ghTokenHealth = { state: 'valid', source: active.source, detail: '', checkedAt: Date.now() };
+          updateGhStatus();
+          if (forceToast) toast('GitHub token works correctly', 'success');
+          return ghTokenHealth;
+        }
+
+        ghTokenHealth = {
+          state: 'invalid',
+          source: active.source,
+          detail: `${validation.hint}${validation.detail ? ` - ${validation.detail}` : ''}`,
+          checkedAt: Date.now()
+        };
+        updateGhStatus();
+        if (forceToast) toast(ghTokenHealth.detail, 'error');
+        return ghTokenHealth;
+      } catch (error) {
+        ghTokenHealth = {
+          state: 'invalid',
+          source: active.source,
+          detail: error?.message || 'Could not validate the token right now.',
+          checkedAt: Date.now()
+        };
+        updateGhStatus();
+        if (forceToast) toast(ghTokenHealth.detail, 'error');
+        return ghTokenHealth;
+      }
+    }
+
+    function loadGhConfig() {
+      clearLegacyAdminStorage();
+      ensureSetupFields();
+      const savedMeta = getStoredGhConfigMeta();
+      ghConfig = persistGhConfig(savedMeta, getSessionGhToken() || getStoredGhToken(), {
+        rememberToken: isGhTokenRemembered()
+      });
+      syncSetupPrefill();
+      updateGhStatus();
+      void refreshGitHubTokenHealth(false);
+      if (isLoggedIn()) showApp();
+      else showLoginPage();
+    }
+
+    function doLogout() {
+      showConfirm('Logout', 'You will need the admin password again.', () => {
+        currentProducts = [];
+        clearAdminSession();
+        location.reload();
+      });
+    }
+
+    async function saveSetup() {
+      toast('Setup is removed. Edit the hardcoded values in admin.html/auth.js instead.', 'info');
+    }
+
+    function checkSession() {
+      if (ghConfig && isLoggedIn()) showApp();
+      else showLoginPage();
+    }
+
+    async function doLogin() {
+      const p = document.getElementById('loginPass')?.value || '';
+      if (!p) {
+        showLoginError('Password is required');
+        return;
+      }
+
+      hideLoginError();
+      const verified = await window.AdminAuth?.verifyPassword?.(p);
+      if (verified) {
+        localStorage.setItem(SESSION_KEY, 'true');
+        localStorage.setItem(LOGIN_AT_KEY, String(Date.now()));
+        await showApp();
+        toast('Login success', 'success');
+      } else {
+        const box = document.getElementById('loginBox');
+        box?.classList.add('shake');
+        showLoginError('Password is incorrect');
+        setTimeout(() => box?.classList.remove('shake'), 400);
+      }
+    }
+
+    async function showApp() {
+      if (!isLoggedIn()) {
+        showLoginPage();
+        return;
+      }
+
+      document.getElementById('loginPage')?.classList.add('hidden');
+      document.getElementById('mainApp')?.classList.add('show');
+      showLoad('Loading products from GitHub...');
+      const ok = await loadProductsFromGitHub();
+      const restoredDraft = restoreLocalDraftIfAvailable({ remoteLoaded: ok, allowPrompt: ok });
+      hideLoad();
+      if (!ok && !restoredDraft) toast('Could not load products from GitHub', 'error');
+      undoStack = [];
+      updateUndoButton();
+      renderDash();
+      if (document.getElementById('page-products')?.classList.contains('active')) renderTable();
+      refreshNewProductIdPreview();
+      updateGhStatus();
+    }
+
+    function updateGhStatus() {
+      if (!ghConfig) return;
+      const active = getActiveGhTokenSource();
+      const branch = getConfiguredBranch();
+      const draft = readLocalDraft();
+      const hasDraft = Boolean(draft);
+      const hasToken = Boolean(active.token);
+      const tokenStorageLabel = !hasToken
+        ? 'not configured'
+        : isGhTokenRemembered()
+          ? 'session + localStorage'
+          : 'sessionStorage only';
+      const sourceLabel = active.source === 'session'
+        ? 'current browser session'
+        : active.source === 'local'
+          ? 'saved in localStorage'
+          : 'not configured';
+      const draftStatus = !hasDraft
+        ? 'No local draft'
+        : `${draft.products.length} products saved locally${hasUnsavedChanges ? ' (currently applied)' : ''}${draft.savedAt ? ` on ${getDraftSavedAtLabel(draft)}` : ''}`;
+      const statusMap = {
+        missing: { label: 'Token missing', detail: 'Add a valid token below to publish JSON and upload images.' },
+        checking: { label: 'Checking token', detail: `Validating the ${ghTokenHealth.source || 'current'} token with GitHub...` },
+        valid: { label: 'GitHub ready', detail: `Token is valid for ${ghConfig.username}/${ghConfig.repo} on branch ${branch}.` },
+        invalid: { label: 'Token invalid', detail: ghTokenHealth.detail || 'GitHub rejected the current token. Save a valid token below.' },
+        unknown: { label: hasToken ? 'Checking token' : 'Token missing', detail: hasToken ? 'Validating token status...' : 'Add a valid token below to publish JSON and upload images.' }
+      };
+      const currentStatus = statusMap[ghTokenHealth.state] || statusMap.unknown;
+      const ghStatusEl = document.getElementById('ghStatus');
+      if (ghStatusEl) ghStatusEl.textContent = currentStatus.label;
+      const ghInfoEl = document.getElementById('ghInfo');
+      if (!ghInfoEl) return;
+      ghInfoEl.innerHTML = `<div style="background:rgba(34,197,94,0.08);border:1px solid rgba(34,197,94,0.2);border-radius:var(--radius);padding:12px 14px;font-size:12px;line-height:2">
+    <div><i class="fas fa-check-circle" style="color:#4ade80;margin-left:6px"></i> <strong style="color:white">${escapeHtml(currentStatus.label)}</strong></div>
+    <div style="color:var(--text2)">Repository: <span style="color:white">${escapeHtml(ghConfig.username)}/${escapeHtml(ghConfig.repo)}</span></div>
+    <div style="color:var(--text3);font-size:11px">Branch: <span style="color:white">${escapeHtml(branch)}</span></div>
+    <div style="color:var(--text3);font-size:11px">Token source: ${escapeHtml(sourceLabel)}</div>
+    <div style="color:var(--text3);font-size:11px">Token storage: ${escapeHtml(tokenStorageLabel)}</div>
+    <div style="color:var(--text3);font-size:11px">${escapeHtml(currentStatus.detail)}</div>
+    <div style="color:var(--text3);font-size:11px">Password: hardcoded in auth.js</div>
+    <div style="color:var(--text3);font-size:11px">Session: 8 hours in localStorage</div>
+    <div style="color:var(--text3);font-size:11px">Last product source: ${escapeHtml(lastLoadedRemoteSource || 'none')}</div>
+    <div style="color:var(--text3);font-size:11px">Local draft: ${escapeHtml(draftStatus)}</div>
+  </div>`;
+      const tokenInput = document.getElementById('newToken');
+      if (tokenInput && document.activeElement !== tokenInput) tokenInput.value = getSessionGhToken() || getStoredGhToken();
+      const rememberInput = document.getElementById('rememberToken');
+      if (rememberInput) rememberInput.checked = isGhTokenRemembered();
+    }
+
+    function promptForGitHubToken(message = 'A valid GitHub token is required for publish and image upload') {
+      showPage('settings', null);
+      updateGhStatus();
+      const tokenInput = document.getElementById('newToken');
+      if (tokenInput) {
+        tokenInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        window.setTimeout(() => tokenInput.focus(), 80);
+      }
+      toast(message, 'error');
+    }
+
+    async function saveGitHubSettings(options = {}) {
+      const {
+        auto = false,
+        silentSuccess = false,
+        silentMissingInfo = false
+      } = options;
+      const settings = getGitHubSettingsInputConfig();
+      const tokenInput = document.getElementById('newToken');
+      const typedToken = String(tokenInput?.value || '').trim();
+      const activeToken = typedToken || getSessionGhToken() || getStoredGhToken();
+      const settingsFingerprint = getGitHubSettingsFingerprint(settings, activeToken);
+
+      if (!settings.username || !settings.repo || !settings.branch) {
+        if (!auto) toast('Repository owner, repository name, and branch are required.', 'error');
+        return { ok: false, reason: 'missing-config' };
+      }
+
+      if (!activeToken) {
+        ghConfig = persistGhConfig(settings, '', { rememberToken: settings.rememberToken });
+        ghTokenHealth = { state: 'missing', source: 'none', detail: 'No GitHub token is saved yet.', checkedAt: Date.now() };
+        updateGhStatus();
+        syncSetupPrefill();
+        lastSavedGhSettingsFingerprint = settingsFingerprint;
+        if (!silentMissingInfo) toast('GitHub repository settings were saved. Add a token before publishing.', 'info');
+        return { ok: true, state: 'missing-token' };
+      }
+
+      if (auto && ghSettingsSaveInFlight) {
+        return { ok: false, reason: 'save-in-flight' };
+      }
+      if (auto && settingsFingerprint === lastSavedGhSettingsFingerprint) {
+        return { ok: true, state: 'unchanged' };
+      }
+
+      ghSettingsSaveInFlight = true;
+      showLoad(auto ? 'Saving GitHub token...' : 'Checking GitHub token...');
+      try {
+        const validation = await validateGitHubTokenAccess(activeToken, settings.username, settings.repo, settings.branch);
+        hideLoad();
+
+        if (!validation.ok) {
+          const detail = `${validation.hint}${validation.detail ? ` - ${validation.detail}` : ''}`;
+          ghTokenHealth = { state: 'invalid', source: typedToken ? 'session' : getActiveGhTokenSource().source, detail, checkedAt: Date.now() };
+          updateGhStatus();
+          if (!auto || typedToken) toast(detail, 'error');
+          return { ok: false, reason: 'invalid-token', detail };
+        }
+
+        ghConfig = persistGhConfig({
+          username: settings.username,
+          repo: settings.repo,
+          branch: validation.branch || settings.branch
+        }, activeToken, { rememberToken: settings.rememberToken });
+        ghTokenHealth = { state: 'valid', source: getActiveGhTokenSource().source, detail: '', checkedAt: Date.now() };
+        updateGhStatus();
+        syncSetupPrefill();
+        lastSavedGhSettingsFingerprint = settingsFingerprint;
+        if (!silentSuccess) toast(auto ? 'GitHub token saved automatically' : 'GitHub settings saved and token verified', 'success');
+        return { ok: true, state: 'valid' };
+      } catch (error) {
+        hideLoad();
+        ghTokenHealth = {
+          state: 'invalid',
+          source: typedToken ? 'session' : getActiveGhTokenSource().source,
+          detail: error?.message || 'Could not verify the token right now.',
+          checkedAt: Date.now()
+        };
+        updateGhStatus();
+        if (!auto || typedToken) toast(ghTokenHealth.detail, 'error');
+        return { ok: false, reason: 'request-failed', detail: ghTokenHealth.detail };
+      } finally {
+        ghSettingsSaveInFlight = false;
+      }
+    }
+
+    async function updateToken() {
+      return saveGitHubSettings();
+    }
+
+    function clearStoredGhToken() {
+      showConfirm('Clear GitHub token', 'The GitHub token will be removed from both this session and this device, but your draft will stay.', () => {
+        setSessionGhToken('');
+        setStoredGhToken('');
+        ghConfig = persistGhConfig({
+          ...(ghConfig || getStoredGhConfigMeta()),
+          token: ''
+        }, '', { rememberToken: isGhTokenRemembered() });
+        ghTokenHealth = { state: 'missing', source: 'none', detail: 'No GitHub token is saved yet.', checkedAt: Date.now() };
+        lastSavedGhSettingsFingerprint = '';
+        updateGhStatus();
+        syncSetupPrefill();
+        toast('Stored GitHub token was cleared', 'info');
+      });
+    }
+
+    function clearSetup() {
+      showConfirm('Clear local admin data', 'This removes the local session, browser-saved GitHub token, and draft from this browser.', () => {
+        clearLocalDraft();
+        setSessionGhToken('');
+        setStoredGhToken('');
+        try {
+          localStorage.removeItem(GH_TOKEN_REMEMBER_KEY);
+        } catch (error) {
+        }
+        try {
+          localStorage.removeItem(GH_CONFIG_KEY);
+        } catch (error) {
+        }
+        lastSavedGhSettingsFingerprint = '';
+        clearAdminSession();
+        location.reload();
+      });
+    }
+
+    function resetLocalAdminLogin() {
+      clearSetup();
+    }
+
+    async function changePass() {
+      toast('Password changes from the UI are disabled. Edit auth.js to change the hardcoded password hash.', 'info');
+    }
+
+    // CONFIRM
+    function showConfirm(title, text, cb) {
+      document.getElementById('confTitle').textContent = title;
+      document.getElementById('confText').textContent = text;
+      confirmCb = cb;
+      document.getElementById('confOk').onclick = () => { closeConfirm(); if (confirmCb) confirmCb(); };
+      document.getElementById('confirmModal').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeConfirm() {
+      document.getElementById('confirmModal').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    // TOAST
+    function toast(msg, type = 'info') {
+      const icons = { success: 'fa-check', error: 'fa-times', info: 'fa-info' };
+      const wrap = document.getElementById('toasts');
+      if (!wrap) return;
+      const key = `${type}:${String(msg)}`;
+      const existing = Array.from(wrap.children).find(node => node.dataset.toastKey === key);
+      if (existing) {
+        existing.classList.remove('out');
+        const timeoutId = Number(existing.dataset.timeoutId || '0');
+        if (timeoutId) clearTimeout(timeoutId);
+        const nextTimeoutId = window.setTimeout(() => {
+          existing.classList.add('out');
+          window.setTimeout(() => existing.remove(), 300);
+        }, 3500);
+        existing.dataset.timeoutId = String(nextTimeoutId);
+        return;
+      }
+      const el = document.createElement('div');
+      el.className = `toast-item t-${type}`;
+      el.dataset.toastKey = key;
+      const iconWrap = document.createElement('div');
+      iconWrap.className = 'toast-icon';
+      const icon = document.createElement('i');
+      icon.className = `fas ${icons[type] || 'fa-info'}`;
+      iconWrap.appendChild(icon);
+      const text = document.createElement('div');
+      text.className = 'toast-text';
+      text.textContent = msg;
+      el.append(iconWrap, text);
+      wrap.appendChild(el);
+      const timeoutId = window.setTimeout(() => {
+        el.classList.add('out');
+        window.setTimeout(() => el.remove(), 300);
+      }, 3500);
+      el.dataset.timeoutId = String(timeoutId);
+    }
+
+    // LOADING
+    function showLoad(msg) { document.getElementById('loadingOverlay').classList.add('show'); document.getElementById('loadingText').textContent = msg || 'چاوەڕێ بکە...'; }
+    function hideLoad() { document.getElementById('loadingOverlay').classList.remove('show'); }
+
+    // SIDEBAR
+    function openSidebar() {
+      document.getElementById('sidebar').classList.add('open');
+      document.getElementById('sidebarOverlay').classList.add('show');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeSidebar() {
+      document.getElementById('sidebar').classList.remove('open');
+      document.getElementById('sidebarOverlay').classList.remove('show');
+      document.body.style.overflow = '';
+    }
+  </script>
 </body>
+
 </html>
