@@ -3,29 +3,21 @@
     "id": "cake-001",
     "name": "نەزەری دووقول",
     "description": "24 عەدەد",
-    "price": 5000,
+    "price": 5250,
     "image": "kek/IMG_0214.jpeg",
     "category": "cake",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": "",
-    "createdAt": "2026-06-07T00:59:15.258Z",
-    "updatedAt": "2026-06-14T19:44:59.562Z"
+    "image_webp": "kek/IMG_0214.webp"
   },
   {
     "id": "cake-002",
     "name": "کولیچەی دوانی",
     "description": "60 عەدەد",
-    "price": 6500,
+    "price": 5750,
     "image": "kek/IMG_0211.jpeg",
     "category": "cake",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": "",
-    "createdAt": "2026-06-14T07:19:18.495Z",
-    "updatedAt": "2026-06-14T07:19:18.495Z"
+    "image_webp": "kek/IMG_0211.webp"
   },
   {
     "id": "cake-003",
@@ -35,9 +27,7 @@
     "image": "kek/IMG_0212.jpeg",
     "category": "cake",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "kek/IMG_0212.webp"
   },
   {
     "id": "cake-004",
@@ -47,9 +37,7 @@
     "image": "kek/IMG_0213.jpeg",
     "category": "cake",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "kek/IMG_0213.webp"
   },
   {
     "id": "cake-005",
@@ -59,9 +47,7 @@
     "image": "kek/photo_1_2026-02-20_22-41-44.jpg",
     "category": "cake",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "kek/photo_1_2026-02-20_22-41-44.webp"
   },
   {
     "id": "cake-006",
@@ -71,9 +57,7 @@
     "image": "kek/photo_2_2026-02-20_22-41-44.jpg",
     "category": "cake",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "kek/photo_2_2026-02-20_22-41-44.webp"
   },
   {
     "id": "cake-007",
@@ -83,9 +67,7 @@
     "image": "kek/photo_3_2026-02-20_22-41-44.jpg",
     "category": "cake",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "kek/photo_3_2026-02-20_22-41-44.webp"
   },
   {
     "id": "cake-008",
@@ -95,9 +77,7 @@
     "image": "kek/photo_7_2026-02-20_22-41-44.jpg",
     "category": "cake",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "kek/photo_7_2026-02-20_22-41-44.webp"
   },
   {
     "id": "cake-009",
@@ -107,9 +87,7 @@
     "image": "kek/photo_5_2026-02-20_22-41-44.jpg",
     "category": "cake",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "kek/photo_5_2026-02-20_22-41-44.webp"
   },
   {
     "id": "cake-010",
@@ -119,9 +97,7 @@
     "image": "kek/photo_4_2026-02-20_22-41-44.jpg",
     "category": "cake",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "kek/photo_4_2026-02-20_22-41-44.webp"
   },
   {
     "id": "cake-011",
@@ -131,9 +107,7 @@
     "image": "kek/photo_6_2026-02-20_22-41-44.jpg",
     "category": "cake",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "kek/photo_6_2026-02-20_22-41-44.webp"
   },
   {
     "id": "cake-012",
@@ -143,9 +117,7 @@
     "image": "kek/photo_8_2026-02-20_22-41-44.jpg",
     "category": "cake",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "kek/photo_8_2026-02-20_22-41-44.webp"
   },
   {
     "id": "cake-013",
@@ -155,9 +127,7 @@
     "image": "kek/photo_9_2026-02-20_22-41-44.jpg",
     "category": "cake",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "kek/photo_9_2026-02-20_22-41-44.webp"
   },
   {
     "id": "cake-014",
@@ -167,9 +137,7 @@
     "image": "kek/photo_10_2026-02-20_22-41-44.jpg",
     "category": "cake",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "kek/photo_10_2026-02-20_22-41-44.webp"
   },
   {
     "id": "cake-015",
@@ -179,9 +147,7 @@
     "image": "kek/photo_11_2026-02-20_22-41-44.jpg",
     "category": "cake",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "kek/photo_11_2026-02-20_22-41-44.webp"
   },
   {
     "id": "cake-016",
@@ -191,9 +157,7 @@
     "image": "kek/photo_12_2026-02-20_22-41-44.jpg",
     "category": "cake",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "kek/photo_12_2026-02-20_22-41-44.webp"
   },
   {
     "id": "cake-017",
@@ -203,9 +167,7 @@
     "image": "kek/photo_14_2026-02-20_22-41-44.jpg",
     "category": "cake",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "kek/photo_14_2026-02-20_22-41-44.webp"
   },
   {
     "id": "cake-018",
@@ -215,9 +177,7 @@
     "image": "kek/photo_13_2026-02-20_22-41-44.jpg",
     "category": "cake",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "kek/photo_13_2026-02-20_22-41-44.webp"
   },
   {
     "id": "cake-019",
@@ -227,9 +187,7 @@
     "image": "kek/photo_15_2026-02-20_22-41-44.jpg",
     "category": "cake",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "kek/photo_15_2026-02-20_22-41-44.webp"
   },
   {
     "id": "cake-020",
@@ -239,9 +197,7 @@
     "image": "kek/photo_16_2026-02-20_22-41-44.jpg",
     "category": "cake",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "kek/photo_16_2026-02-20_22-41-44.webp"
   },
   {
     "id": "cake-021",
@@ -251,9 +207,7 @@
     "image": "kek/photo_18_2026-02-20_22-41-44.jpg",
     "category": "cake",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "kek/photo_18_2026-02-20_22-41-44.webp"
   },
   {
     "id": "cake-022",
@@ -263,9 +217,7 @@
     "image": "kek/photo_19_2026-02-20_22-41-44.jpg",
     "category": "cake",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "kek/photo_19_2026-02-20_22-41-44.webp"
   },
   {
     "id": "cake-023",
@@ -275,9 +227,7 @@
     "image": "kek/photo_17_2026-02-20_22-41-44.jpg",
     "category": "cake",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "kek/photo_17_2026-02-20_22-41-44.webp"
   },
   {
     "id": "cake-024",
@@ -287,9 +237,7 @@
     "image": "kek/photo_20_2026-02-20_22-41-44.jpg",
     "category": "cake",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "kek/photo_20_2026-02-20_22-41-44.webp"
   },
   {
     "id": "cake-025",
@@ -299,9 +247,7 @@
     "image": "kek/photo_21_2026-02-20_22-41-44.jpg",
     "category": "cake",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "kek/photo_21_2026-02-20_22-41-44.webp"
   },
   {
     "id": "cake-026",
@@ -311,9 +257,7 @@
     "image": "kek/photo_22_2026-02-20_22-41-44.jpg",
     "category": "cake",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "kek/photo_22_2026-02-20_22-41-44.webp"
   },
   {
     "id": "cake-027",
@@ -323,9 +267,7 @@
     "image": "kek/photo_24_2026-02-20_22-41-44.jpg",
     "category": "cake",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "kek/photo_24_2026-02-20_22-41-44.webp"
   },
   {
     "id": "cake-028",
@@ -335,9 +277,7 @@
     "image": "kek/photo_25_2026-02-20_22-41-44.jpg",
     "category": "cake",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "kek/photo_25_2026-02-20_22-41-44.webp"
   },
   {
     "id": "cake-029",
@@ -347,9 +287,7 @@
     "image": "kek/photo_27_2026-02-20_22-41-44.jpg",
     "category": "cake",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "kek/photo_27_2026-02-20_22-41-44.webp"
   },
   {
     "id": "cake-030",
@@ -359,9 +297,7 @@
     "image": "kek/photo_28_2026-02-20_22-41-44.jpg",
     "category": "cake",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "kek/photo_28_2026-02-20_22-41-44.webp"
   },
   {
     "id": "cake-031",
@@ -371,9 +307,7 @@
     "image": "kek/photo_29_2026-02-20_22-41-44.jpg",
     "category": "cake",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "kek/photo_29_2026-02-20_22-41-44.webp"
   },
   {
     "id": "cake-032",
@@ -383,9 +317,7 @@
     "image": "kek/photo_30_2026-02-20_22-41-44.jpg",
     "category": "cake",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "kek/photo_30_2026-02-20_22-41-44.webp"
   },
   {
     "id": "gaz-001",
@@ -395,9 +327,7 @@
     "image": "gaz/IMG_0215.jpeg",
     "category": "gaz",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "gaz/IMG_0215.webp"
   },
   {
     "id": "gaz-002",
@@ -407,9 +337,7 @@
     "image": "gaz/IMG_0216.jpeg",
     "category": "gaz",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "gaz/IMG_0216.webp"
   },
   {
     "id": "gaz-003",
@@ -419,9 +347,7 @@
     "image": "gaz/IMG_0217.jpeg",
     "category": "gaz",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "gaz/IMG_0217.webp"
   },
   {
     "id": "gaz-004",
@@ -431,9 +357,7 @@
     "image": "gaz/IMG_0218.jpeg",
     "category": "gaz",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "gaz/IMG_0218.webp"
   },
   {
     "id": "gaz-006",
@@ -443,9 +367,7 @@
     "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (1).jpeg",
     "category": "gaz",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (1).webp"
   },
   {
     "id": "gaz-007",
@@ -455,9 +377,7 @@
     "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (3).jpeg",
     "category": "gaz",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (3).webp"
   },
   {
     "id": "gaz-008",
@@ -467,9 +387,7 @@
     "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (4).jpeg",
     "category": "gaz",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (4).webp"
   },
   {
     "id": "gaz-009",
@@ -479,9 +397,7 @@
     "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (5).jpeg",
     "category": "gaz",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (5).webp"
   },
   {
     "id": "gaz-010",
@@ -491,9 +407,7 @@
     "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (6).jpeg",
     "category": "gaz",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (6).webp"
   },
   {
     "id": "gaz-011",
@@ -503,9 +417,7 @@
     "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (7).jpeg",
     "category": "gaz",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (7).webp"
   },
   {
     "id": "gaz-012",
@@ -515,9 +427,7 @@
     "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (8).jpeg",
     "category": "gaz",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (8).webp"
   },
   {
     "id": "gaz-013",
@@ -527,9 +437,7 @@
     "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (9).jpeg",
     "category": "gaz",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (9).webp"
   },
   {
     "id": "gaz-014",
@@ -539,9 +447,7 @@
     "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM.jpeg",
     "category": "gaz",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM.webp"
   },
   {
     "id": "gaz-015",
@@ -551,9 +457,7 @@
     "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (1).jpeg",
     "category": "gaz",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (1).webp"
   },
   {
     "id": "gaz-016",
@@ -563,9 +467,7 @@
     "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (2).jpeg",
     "category": "gaz",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (2).webp"
   },
   {
     "id": "gaz-017",
@@ -575,9 +477,7 @@
     "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM.jpeg",
     "category": "gaz",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM.webp"
   },
   {
     "id": "gaz-018",
@@ -587,9 +487,7 @@
     "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (3).jpeg",
     "category": "gaz",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (3).webp"
   },
   {
     "id": "gaz-019",
@@ -599,9 +497,7 @@
     "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (4).jpeg",
     "category": "gaz",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (4).webp"
   },
   {
     "id": "gaz-020",
@@ -611,9 +507,7 @@
     "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (5).jpeg",
     "category": "gaz",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (5).webp"
   },
   {
     "id": "gaz-021",
@@ -623,9 +517,7 @@
     "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (6).jpeg",
     "category": "gaz",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (6).webp"
   },
   {
     "id": "gaz-022",
@@ -635,9 +527,7 @@
     "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (7).jpeg",
     "category": "gaz",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (7).webp"
   },
   {
     "id": "gaz-023",
@@ -647,9 +537,7 @@
     "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (8).jpeg",
     "category": "gaz",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (8).webp"
   },
   {
     "id": "gaz-024",
@@ -659,9 +547,7 @@
     "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (9).jpeg",
     "category": "gaz",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (9).webp"
   },
   {
     "id": "gaz-025",
@@ -671,9 +557,7 @@
     "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (10).jpeg",
     "category": "gaz",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (10).webp"
   },
   {
     "id": "gaz-026",
@@ -683,9 +567,7 @@
     "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (11).jpeg",
     "category": "gaz",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (11).webp"
   },
   {
     "id": "gaz-027",
@@ -695,9 +577,7 @@
     "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (12).jpeg",
     "category": "gaz",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (12).webp"
   },
   {
     "id": "gaz-028",
@@ -707,9 +587,7 @@
     "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (15).jpeg",
     "category": "gaz",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (15).webp"
   },
   {
     "id": "gaz-029",
@@ -719,9 +597,7 @@
     "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (16).jpeg",
     "category": "gaz",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (16).webp"
   },
   {
     "id": "gaz-030",
@@ -731,9 +607,7 @@
     "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (17).jpeg",
     "category": "gaz",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (17).webp"
   },
   {
     "id": "gaz-031",
@@ -743,9 +617,7 @@
     "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (18).jpeg",
     "category": "gaz",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (18).webp"
   },
   {
     "id": "gaz-033",
@@ -755,9 +627,7 @@
     "image": "gaz/WhatsApp Image 2026-02-20 at 10.03.27 PM.jpeg",
     "category": "gaz",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.03.27 PM.webp"
   },
   {
     "id": "drink-001",
@@ -767,9 +637,7 @@
     "image": "sardy/IMG_0188.jpeg",
     "category": "drink",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "sardy/IMG_0188.webp"
   },
   {
     "id": "drink-002",
@@ -779,9 +647,7 @@
     "image": "sardy/IMG_0189.jpeg",
     "category": "drink",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "sardy/IMG_0189.webp"
   },
   {
     "id": "drink-003",
@@ -791,9 +657,7 @@
     "image": "sardy/IMG_6192.jpeg",
     "category": "drink",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "sardy/IMG_6192.webp"
   },
   {
     "id": "drink-004",
@@ -803,9 +667,7 @@
     "image": "sardy/IMG_6193.jpeg",
     "category": "drink",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "sardy/IMG_6193.webp"
   },
   {
     "id": "drink-005",
@@ -815,9 +677,7 @@
     "image": "sardy/IMG_6194.jpeg",
     "category": "drink",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "sardy/IMG_6194.webp"
   },
   {
     "id": "drink-006",
@@ -827,9 +687,7 @@
     "image": "sardy/IMG_6195.jpeg",
     "category": "drink",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "sardy/IMG_6195.webp"
   },
   {
     "id": "drink-007",
@@ -839,9 +697,7 @@
     "image": "sardy/IMG_6196.jpeg",
     "category": "drink",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "sardy/IMG_6196.webp"
   },
   {
     "id": "drink-008",
@@ -851,9 +707,7 @@
     "image": "sardy/IMG_6197.jpeg",
     "category": "drink",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "sardy/IMG_6197.webp"
   },
   {
     "id": "drink-009",
@@ -863,9 +717,7 @@
     "image": "sardy/IMG_6220.jpeg",
     "category": "drink",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "sardy/IMG_6220.webp"
   },
   {
     "id": "drink-010",
@@ -875,9 +727,7 @@
     "image": "sardy/IMG_6198.jpeg",
     "category": "drink",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "sardy/IMG_6198.webp"
   },
   {
     "id": "drink-011",
@@ -887,9 +737,7 @@
     "image": "sardy/IMG_6199.jpeg",
     "category": "drink",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "sardy/IMG_6199.webp"
   },
   {
     "id": "drink-012",
@@ -899,9 +747,7 @@
     "image": "sardy/IMG_6200.jpeg",
     "category": "drink",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "sardy/IMG_6200.webp"
   },
   {
     "id": "drink-013",
@@ -911,9 +757,7 @@
     "image": "sardy/IMG_6201.jpeg",
     "category": "drink",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "sardy/IMG_6201.webp"
   },
   {
     "id": "drink-014",
@@ -923,9 +767,7 @@
     "image": "sardy/IMG_6202.jpeg",
     "category": "drink",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "sardy/IMG_6202.webp"
   },
   {
     "id": "drink-015",
@@ -935,9 +777,7 @@
     "image": "sardy/IMG_6203.jpeg",
     "category": "drink",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "sardy/IMG_6203.webp"
   },
   {
     "id": "drink-016",
@@ -947,9 +787,7 @@
     "image": "sardy/IMG_6204.jpeg",
     "category": "drink",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "sardy/IMG_6204.webp"
   },
   {
     "id": "drink-017",
@@ -959,9 +797,7 @@
     "image": "sardy/IMG_6205.jpeg",
     "category": "drink",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "sardy/IMG_6205.webp"
   },
   {
     "id": "drink-018",
@@ -971,9 +807,7 @@
     "image": "sardy/IMG_6219.jpeg",
     "category": "drink",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "sardy/IMG_6219.webp"
   },
   {
     "id": "drink-019",
@@ -983,9 +817,7 @@
     "image": "sardy/IMG_6206.jpeg",
     "category": "drink",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "sardy/IMG_6206.webp"
   },
   {
     "id": "drink-020",
@@ -995,9 +827,7 @@
     "image": "sardy/IMG_6207.jpeg",
     "category": "drink",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "sardy/IMG_6207.webp"
   },
   {
     "id": "drink-021",
@@ -1007,9 +837,7 @@
     "image": "sardy/IMG_6208.jpeg",
     "category": "drink",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "sardy/IMG_6208.webp"
   },
   {
     "id": "drink-022",
@@ -1019,9 +847,7 @@
     "image": "sardy/IMG_6209.jpeg",
     "category": "drink",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "sardy/IMG_6209.webp"
   },
   {
     "id": "drink-023",
@@ -1031,9 +857,7 @@
     "image": "sardy/IMG_6210.jpeg",
     "category": "drink",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "sardy/IMG_6210.webp"
   },
   {
     "id": "drink-024",
@@ -1043,9 +867,7 @@
     "image": "sardy/IMG_6218.jpeg",
     "category": "drink",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "sardy/IMG_6218.webp"
   },
   {
     "id": "drink-025",
@@ -1055,9 +877,7 @@
     "image": "sardy/IMG_6211.jpeg",
     "category": "drink",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "sardy/IMG_6211.webp"
   },
   {
     "id": "drink-026",
@@ -1067,9 +887,7 @@
     "image": "sardy/IMG_6212.jpeg",
     "category": "drink",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "sardy/IMG_6212.webp"
   },
   {
     "id": "drink-027",
@@ -1079,9 +897,7 @@
     "image": "sardy/IMG_6213.jpeg",
     "category": "drink",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "sardy/IMG_6213.webp"
   },
   {
     "id": "drink-028",
@@ -1091,9 +907,7 @@
     "image": "sardy/IMG_6238.jpeg",
     "category": "drink",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "sardy/IMG_6238.webp"
   },
   {
     "id": "drink-029",
@@ -1103,9 +917,7 @@
     "image": "sardy/IMG_6214.jpeg",
     "category": "drink",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "sardy/IMG_6214.webp"
   },
   {
     "id": "drink-030",
@@ -1115,9 +927,7 @@
     "image": "sardy/IMG_6215.jpeg",
     "category": "drink",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "sardy/IMG_6215.webp"
   },
   {
     "id": "drink-031",
@@ -1127,9 +937,7 @@
     "image": "sardy/IMG_6216.jpeg",
     "category": "drink",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "sardy/IMG_6216.webp"
   },
   {
     "id": "drink-032",
@@ -1139,9 +947,7 @@
     "image": "sardy/IMG_6217.jpeg",
     "category": "drink",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "sardy/IMG_6217.webp"
   },
   {
     "id": "drink-033",
@@ -1151,9 +957,7 @@
     "image": "sardy/IMG_6221.jpeg",
     "category": "drink",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "sardy/IMG_6221.webp"
   },
   {
     "id": "drink-034",
@@ -1163,9 +967,7 @@
     "image": "sardy/IMG_6222.jpeg",
     "category": "drink",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "sardy/IMG_6222.webp"
   },
   {
     "id": "drink-035",
@@ -1175,9 +977,7 @@
     "image": "sardy/IMG_6223.jpeg",
     "category": "drink",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "sardy/IMG_6223.webp"
   },
   {
     "id": "drink-036",
@@ -1187,9 +987,7 @@
     "image": "sardy/IMG_6224.jpeg",
     "category": "drink",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "sardy/IMG_6224.webp"
   },
   {
     "id": "drink-037",
@@ -1199,9 +997,7 @@
     "image": "sardy/IMG_6225.jpeg",
     "category": "drink",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "sardy/IMG_6225.webp"
   },
   {
     "id": "drink-038",
@@ -1211,9 +1007,7 @@
     "image": "sardy/IMG_6226.jpeg",
     "category": "drink",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "sardy/IMG_6226.webp"
   },
   {
     "id": "drink-039",
@@ -1223,9 +1017,7 @@
     "image": "sardy/IMG_6227.jpeg",
     "category": "drink",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "sardy/IMG_6227.webp"
   },
   {
     "id": "drink-040",
@@ -1235,9 +1027,7 @@
     "image": "sardy/IMG_6228.jpeg",
     "category": "drink",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "sardy/IMG_6228.webp"
   },
   {
     "id": "drink-041",
@@ -1247,9 +1037,7 @@
     "image": "sardy/IMG_6229.jpeg",
     "category": "drink",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "sardy/IMG_6229.webp"
   },
   {
     "id": "drink-042",
@@ -1259,9 +1047,7 @@
     "image": "sardy/IMG_6230.jpeg",
     "category": "drink",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "sardy/IMG_6230.webp"
   },
   {
     "id": "drink-043",
@@ -1271,9 +1057,7 @@
     "image": "sardy/IMG_6231.jpeg",
     "category": "drink",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "sardy/IMG_6231.webp"
   },
   {
     "id": "drink-044",
@@ -1283,9 +1067,7 @@
     "image": "sardy/IMG_6232.jpeg",
     "category": "drink",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "sardy/IMG_6232.webp"
   },
   {
     "id": "drink-045",
@@ -1295,9 +1077,7 @@
     "image": "sardy/IMG_6233.jpeg",
     "category": "drink",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "sardy/IMG_6233.webp"
   },
   {
     "id": "drink-046",
@@ -1307,9 +1087,7 @@
     "image": "sardy/IMG_6234.jpeg",
     "category": "drink",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "sardy/IMG_6234.webp"
   },
   {
     "id": "drink-047",
@@ -1319,9 +1097,7 @@
     "image": "sardy/IMG_6235.jpeg",
     "category": "drink",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "sardy/IMG_6235.webp"
   },
   {
     "id": "drink-048",
@@ -1331,9 +1107,7 @@
     "image": "sardy/IMG_6237.jpeg",
     "category": "drink",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "sardy/IMG_6237.webp"
   },
   {
     "id": "drink-049",
@@ -1343,9 +1117,7 @@
     "image": "sardy/IMG_6236.jpeg",
     "category": "drink",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "sardy/IMG_6236.webp"
   },
   {
     "id": "drink-050",
@@ -1355,9 +1127,7 @@
     "image": "sardy/IMG_6239.jpeg",
     "category": "drink",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "sardy/IMG_6239.webp"
   },
   {
     "id": "drink-051",
@@ -1367,9 +1137,7 @@
     "image": "sardy/IMG_6240.jpeg",
     "category": "drink",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "sardy/IMG_6240.webp"
   },
   {
     "id": "drink-052",
@@ -1379,9 +1147,7 @@
     "image": "sardy/IMG_6241.jpeg",
     "category": "drink",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "sardy/IMG_6241.webp"
   },
   {
     "id": "drink-053",
@@ -1391,9 +1157,7 @@
     "image": "sardy/IMG_6242.jpeg",
     "category": "drink",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "sardy/IMG_6242.webp"
   },
   {
     "id": "drink-054",
@@ -1403,9 +1167,7 @@
     "image": "sardy/IMG_6243.jpeg",
     "category": "drink",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "sardy/IMG_6243.webp"
   },
   {
     "id": "drink-055",
@@ -1415,9 +1177,7 @@
     "image": "sardy/IMG_6245.jpeg",
     "category": "drink",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "sardy/IMG_6245.webp"
   },
   {
     "id": "drink-056",
@@ -1427,9 +1187,7 @@
     "image": "sardy/IMG_6246.jpeg",
     "category": "drink",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "sardy/IMG_6246.webp"
   },
   {
     "id": "drink-057",
@@ -1439,9 +1197,7 @@
     "image": "sardy/IMG_6244.jpeg",
     "category": "drink",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "sardy/IMG_6244.webp"
   },
   {
     "id": "drink-058",
@@ -1451,9 +1207,7 @@
     "image": "sardy/IMG_6247.jpeg",
     "category": "drink",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "sardy/IMG_6247.webp"
   },
   {
     "id": "drink-059",
@@ -1463,9 +1217,7 @@
     "image": "sardy/IMG_6248.jpeg",
     "category": "drink",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "sardy/IMG_6248.webp"
   },
   {
     "id": "drink-060",
@@ -1475,9 +1227,7 @@
     "image": "sardy/IMG_6249.jpeg",
     "category": "drink",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "sardy/IMG_6249.webp"
   },
   {
     "id": "drink-061",
@@ -1487,9 +1237,7 @@
     "image": "sardy/IMG_6250.jpeg",
     "category": "drink",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "sardy/IMG_6250.webp"
   },
   {
     "id": "drink-062",
@@ -1499,9 +1247,7 @@
     "image": "sardy/IMG_6252.jpeg",
     "category": "drink",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "sardy/IMG_6252.webp"
   },
   {
     "id": "drink-063",
@@ -1511,9 +1257,7 @@
     "image": "sardy/IMG_6253.jpeg",
     "category": "drink",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "sardy/IMG_6253.webp"
   },
   {
     "id": "drink-064",
@@ -1523,9 +1267,7 @@
     "image": "sardy/IMG_6254.jpeg",
     "category": "drink",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "sardy/IMG_6254.webp"
   },
   {
     "id": "drink-065",
@@ -1535,9 +1277,7 @@
     "image": "sardy/IMG_6255.jpeg",
     "category": "drink",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "sardy/IMG_6255.webp"
   },
   {
     "id": "drink-066",
@@ -1547,9 +1287,7 @@
     "image": "sardy/IMG_6256.jpeg",
     "category": "drink",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "sardy/IMG_6256.webp"
   },
   {
     "id": "drink-067",
@@ -1559,9 +1297,7 @@
     "image": "sardy/IMG_6257.jpeg",
     "category": "drink",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "sardy/IMG_6257.webp"
   },
   {
     "id": "drink-068",
@@ -1571,9 +1307,7 @@
     "image": "sardy/IMG_6258.jpeg",
     "category": "drink",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "sardy/IMG_6258.webp"
   },
   {
     "id": "drink-069",
@@ -1583,9 +1317,7 @@
     "image": "sardy/IMG_6259.jpeg",
     "category": "drink",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "sardy/IMG_6259.webp"
   },
   {
     "id": "drink-070",
@@ -1595,9 +1327,7 @@
     "image": "sardy/IMG_6260.jpeg",
     "category": "drink",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "sardy/IMG_6260.webp"
   },
   {
     "id": "drink-071",
@@ -1607,9 +1337,7 @@
     "image": "sardy/IMG_6261.jpeg",
     "category": "drink",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "sardy/IMG_6261.webp"
   },
   {
     "id": "drink-072",
@@ -1619,9 +1347,7 @@
     "image": "sardy/IMG_6262.jpeg",
     "category": "drink",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "sardy/IMG_6262.webp"
   },
   {
     "id": "drink-073",
@@ -1631,9 +1357,7 @@
     "image": "sardy/IMG_6263.jpeg",
     "category": "drink",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "sardy/IMG_6263.webp"
   },
   {
     "id": "drink-074",
@@ -1643,9 +1367,7 @@
     "image": "sardy/IMG_6264.jpeg",
     "category": "drink",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "sardy/IMG_6264.webp"
   },
   {
     "id": "drink-075",
@@ -1655,9 +1377,7 @@
     "image": "sardy/IMG_6265.jpeg",
     "category": "drink",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "sardy/IMG_6265.webp"
   },
   {
     "id": "drink-076",
@@ -1667,9 +1387,7 @@
     "image": "sardy/IMG_6266.jpeg",
     "category": "drink",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "sardy/IMG_6266.webp"
   },
   {
     "id": "drink-077",
@@ -1679,9 +1397,7 @@
     "image": "sardy/IMG_6267.jpeg",
     "category": "drink",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "sardy/IMG_6267.webp"
   },
   {
     "id": "drink-078",
@@ -1691,9 +1407,7 @@
     "image": "sardy/IMG_6268.jpeg",
     "category": "drink",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "sardy/IMG_6268.webp"
   },
   {
     "id": "drink-079",
@@ -1703,9 +1417,7 @@
     "image": "sardy/IMG_6269.jpeg",
     "category": "drink",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "sardy/IMG_6269.webp"
   },
   {
     "id": "drink-080",
@@ -1715,9 +1427,7 @@
     "image": "sardy/IMG_6270.jpeg",
     "category": "drink",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "sardy/IMG_6270.webp"
   },
   {
     "id": "drink-081",
@@ -1727,9 +1437,7 @@
     "image": "sardy/IMG_6271.jpeg",
     "category": "drink",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "sardy/IMG_6271.webp"
   },
   {
     "id": "drink-082",
@@ -1739,9 +1447,7 @@
     "image": "sardy/IMG_6272.jpeg",
     "category": "drink",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "sardy/IMG_6272.webp"
   },
   {
     "id": "drink-083",
@@ -1751,9 +1457,7 @@
     "image": "sardy/IMG_6274.jpeg",
     "category": "drink",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "sardy/IMG_6274.webp"
   },
   {
     "id": "drink-084",
@@ -1763,9 +1467,7 @@
     "image": "sardy/IMG_6275.jpeg",
     "category": "drink",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "sardy/IMG_6275.webp"
   },
   {
     "id": "drink-085",
@@ -1775,9 +1477,7 @@
     "image": "sardy/IMG_6276.jpeg",
     "category": "drink",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "sardy/IMG_6276.webp"
   },
   {
     "id": "drink-086",
@@ -1787,9 +1487,7 @@
     "image": "sardy/IMG_6277.jpeg",
     "category": "drink",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "sardy/IMG_6277.webp"
   },
   {
     "id": "drink-087",
@@ -1799,9 +1497,7 @@
     "image": "sardy/IMG_6278.jpeg",
     "category": "drink",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "sardy/IMG_6278.webp"
   },
   {
     "id": "drink-088",
@@ -1811,9 +1507,7 @@
     "image": "sardy/IMG_6279.jpeg",
     "category": "drink",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "sardy/IMG_6279.webp"
   },
   {
     "id": "drink-089",
@@ -1823,9 +1517,7 @@
     "image": "sardy/IMG_6280.jpeg",
     "category": "drink",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "sardy/IMG_6280.webp"
   },
   {
     "id": "drink-090",
@@ -1835,9 +1527,7 @@
     "image": "sardy/IMG_6281.jpeg",
     "category": "drink",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "sardy/IMG_6281.webp"
   },
   {
     "id": "drink-091",
@@ -1847,9 +1537,7 @@
     "image": "sardy/IMG_6282.jpeg",
     "category": "drink",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "sardy/IMG_6282.webp"
   },
   {
     "id": "drink-092",
@@ -1859,9 +1547,7 @@
     "image": "sardy/IMG_6283.jpeg",
     "category": "drink",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "sardy/IMG_6283.webp"
   },
   {
     "id": "drink-093",
@@ -1871,9 +1557,7 @@
     "image": "sardy/IMG_6284.jpeg",
     "category": "drink",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "sardy/IMG_6284.webp"
   },
   {
     "id": "drink-094",
@@ -1883,9 +1567,7 @@
     "image": "sardy/IMG_6285.jpeg",
     "category": "drink",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "sardy/IMG_6285.webp"
   },
   {
     "id": "drink-095",
@@ -1895,9 +1577,7 @@
     "image": "sardy/IMG_6286.jpeg",
     "category": "drink",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "sardy/IMG_6286.webp"
   },
   {
     "id": "drink-096",
@@ -1907,9 +1587,7 @@
     "image": "sardy/IMG_6287.jpeg",
     "category": "drink",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "sardy/IMG_6287.webp"
   },
   {
     "id": "chips-001",
@@ -1919,9 +1597,7 @@
     "image": "jbs/IMG_0223.jpeg",
     "category": "chips",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "jbs/IMG_0223.webp"
   },
   {
     "id": "chips-002",
@@ -1931,9 +1607,7 @@
     "image": "jbs/IMG_0224.jpeg",
     "category": "chips",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "jbs/IMG_0224.webp"
   },
   {
     "id": "chips-003",
@@ -1943,9 +1617,7 @@
     "image": "jbs/IMG_0225.jpeg",
     "category": "chips",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "jbs/IMG_0225.webp"
   },
   {
     "id": "chips-004",
@@ -1955,9 +1627,7 @@
     "image": "jbs/IMG_0226.jpeg",
     "category": "chips",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "jbs/IMG_0226.webp"
   },
   {
     "id": "chips-005",
@@ -1967,9 +1637,7 @@
     "image": "jbs/IMG_0227.jpeg",
     "category": "chips",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "jbs/IMG_0227.webp"
   },
   {
     "id": "chips-006",
@@ -1979,9 +1647,7 @@
     "image": "jbs/photo_2_2026-02-20_22-38-05.jpg",
     "category": "chips",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "jbs/photo_2_2026-02-20_22-38-05.webp"
   },
   {
     "id": "chips-007",
@@ -1991,9 +1657,7 @@
     "image": "jbs/photo_3_2026-02-20_22-38-05.jpg",
     "category": "chips",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "jbs/photo_3_2026-02-20_22-38-05.webp"
   },
   {
     "id": "chips-008",
@@ -2003,9 +1667,7 @@
     "image": "jbs/photo_4_2026-02-20_22-38-05.jpg",
     "category": "chips",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "jbs/photo_4_2026-02-20_22-38-05.webp"
   },
   {
     "id": "chips-009",
@@ -2015,9 +1677,7 @@
     "image": "jbs/photo_10_2026-02-20_22-38-05.jpg",
     "category": "chips",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "jbs/photo_10_2026-02-20_22-38-05.webp"
   },
   {
     "id": "chips-010",
@@ -2027,9 +1687,7 @@
     "image": "jbs/IMG_0206.jpeg",
     "category": "chips",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "jbs/IMG_0206.webp"
   },
   {
     "id": "chips-011",
@@ -2039,9 +1697,7 @@
     "image": "jbs/IMG_0207.jpeg",
     "category": "chips",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "jbs/IMG_0207.webp"
   },
   {
     "id": "chips-012",
@@ -2051,9 +1707,7 @@
     "image": "jbs/IMG_0208.jpeg",
     "category": "chips",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "jbs/IMG_0208.webp"
   },
   {
     "id": "chips-013",
@@ -2063,9 +1717,7 @@
     "image": "jbs/IMG_0209.jpeg",
     "category": "chips",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "jbs/IMG_0209.webp"
   },
   {
     "id": "chips-014",
@@ -2075,9 +1727,7 @@
     "image": "jbs/IMG_0219.jpeg",
     "category": "chips",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "jbs/IMG_0219.webp"
   },
   {
     "id": "chips-015",
@@ -2087,9 +1737,7 @@
     "image": "jbs/IMG_0228.jpeg",
     "category": "chips",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "jbs/IMG_0228.webp"
   },
   {
     "id": "chips-016",
@@ -2099,9 +1747,7 @@
     "image": "jbs/IMG_0229.jpeg",
     "category": "chips",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "jbs/IMG_0229.webp"
   },
   {
     "id": "chips-017",
@@ -2111,9 +1757,7 @@
     "image": "jbs/IMG_0230.jpeg",
     "category": "chips",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "jbs/IMG_0230.webp"
   },
   {
     "id": "chips-018",
@@ -2123,9 +1767,7 @@
     "image": "jbs/IMG_0232.jpeg",
     "category": "chips",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "jbs/IMG_0232.webp"
   },
   {
     "id": "chips-019",
@@ -2135,9 +1777,7 @@
     "image": "jbs/photo_6_2026-02-20_22-38-05.jpg",
     "category": "chips",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "jbs/photo_6_2026-02-20_22-38-05.webp"
   },
   {
     "id": "chips-020",
@@ -2147,9 +1787,7 @@
     "image": "jbs/photo_7_2026-02-20_22-38-05.jpg",
     "category": "chips",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "jbs/photo_7_2026-02-20_22-38-05.webp"
   },
   {
     "id": "chips-021",
@@ -2159,9 +1797,7 @@
     "image": "jbs/photo_9_2026-02-20_22-38-05.jpg",
     "category": "chips",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "jbs/photo_9_2026-02-20_22-38-05.webp"
   },
   {
     "id": "chips-022",
@@ -2171,9 +1807,7 @@
     "image": "jbs/photo_11_2026-02-20_22-38-05.jpg",
     "category": "chips",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "jbs/photo_11_2026-02-20_22-38-05.webp"
   },
   {
     "id": "chips-023",
@@ -2183,9 +1817,7 @@
     "image": "jbs/photo_12_2026-02-20_22-38-05.jpg",
     "category": "chips",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "jbs/photo_12_2026-02-20_22-38-05.webp"
   },
   {
     "id": "chips-024",
@@ -2195,9 +1827,7 @@
     "image": "jbs/photo_13_2026-02-20_22-38-05.jpg",
     "category": "chips",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "jbs/photo_13_2026-02-20_22-38-05.webp"
   },
   {
     "id": "chips-025",
@@ -2207,9 +1837,7 @@
     "image": "jbs/photo_14_2026-02-20_22-38-05.jpg",
     "category": "chips",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "jbs/photo_14_2026-02-20_22-38-05.webp"
   },
   {
     "id": "chips-026",
@@ -2219,9 +1847,7 @@
     "image": "jbs/photo_15_2026-02-20_22-38-05.jpg",
     "category": "chips",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "jbs/photo_15_2026-02-20_22-38-05.webp"
   },
   {
     "id": "chips-027",
@@ -2231,9 +1857,7 @@
     "image": "jbs/photo_16_2026-02-20_22-38-05.jpg",
     "category": "chips",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "jbs/photo_16_2026-02-20_22-38-05.webp"
   },
   {
     "id": "chips-028",
@@ -2243,9 +1867,7 @@
     "image": "jbs/photo_17_2026-02-20_22-38-05.jpg",
     "category": "chips",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "jbs/photo_17_2026-02-20_22-38-05.webp"
   },
   {
     "id": "chips-029",
@@ -2255,9 +1877,7 @@
     "image": "jbs/photo_18_2026-02-20_22-38-05.jpg",
     "category": "chips",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "jbs/photo_18_2026-02-20_22-38-05.webp"
   },
   {
     "id": "chips-030",
@@ -2267,9 +1887,7 @@
     "image": "jbs/photo_19_2026-02-20_22-38-05.jpg",
     "category": "chips",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "jbs/photo_19_2026-02-20_22-38-05.webp"
   },
   {
     "id": "chips-031",
@@ -2279,9 +1897,7 @@
     "image": "jbs/photo_20_2026-02-20_22-38-05.jpg",
     "category": "chips",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "jbs/photo_20_2026-02-20_22-38-05.webp"
   },
   {
     "id": "chips-032",
@@ -2291,9 +1907,7 @@
     "image": "jbs/photo_21_2026-02-20_22-38-05.jpg",
     "category": "chips",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "jbs/photo_21_2026-02-20_22-38-05.webp"
   },
   {
     "id": "chips-033",
@@ -2303,9 +1917,7 @@
     "image": "jbs/photo_23_2026-02-20_22-38-05.jpg",
     "category": "chips",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "jbs/photo_23_2026-02-20_22-38-05.webp"
   },
   {
     "id": "chips-034",
@@ -2315,9 +1927,7 @@
     "image": "jbs/photo_8_2026-02-20_22-38-05.jpg",
     "category": "chips",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "jbs/photo_8_2026-02-20_22-38-05.webp"
   },
   {
     "id": "chips-035",
@@ -2327,9 +1937,7 @@
     "image": "jbs/photo_22_2026-02-20_22-38-05.jpg",
     "category": "chips",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "jbs/photo_22_2026-02-20_22-38-05.webp"
   },
   {
     "id": "chips-036",
@@ -2339,9 +1947,7 @@
     "image": "jbs/photo_24_2026-02-20_22-38-05.jpg",
     "category": "chips",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "jbs/photo_24_2026-02-20_22-38-05.webp"
   },
   {
     "id": "chips-037",
@@ -2351,9 +1957,7 @@
     "image": "jbs/photo_25_2026-02-20_22-38-05.jpg",
     "category": "chips",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "jbs/photo_25_2026-02-20_22-38-05.webp"
   },
   {
     "id": "chips-038",
@@ -2363,9 +1967,7 @@
     "image": "jbs/photo_26_2026-02-20_22-38-05.jpg",
     "category": "chips",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "jbs/photo_26_2026-02-20_22-38-05.webp"
   },
   {
     "id": "chips-039",
@@ -2375,9 +1977,7 @@
     "image": "jbs/photo_27_2026-02-20_22-38-05.jpg",
     "category": "chips",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "jbs/photo_27_2026-02-20_22-38-05.webp"
   },
   {
     "id": "chips-040",
@@ -2387,9 +1987,7 @@
     "image": "jbs/photo_28_2026-02-20_22-38-05.jpg",
     "category": "chips",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "jbs/photo_28_2026-02-20_22-38-05.webp"
   },
   {
     "id": "chips-041",
@@ -2399,9 +1997,7 @@
     "image": "jbs/photo_30_2026-02-20_22-38-05.jpg",
     "category": "chips",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "jbs/photo_30_2026-02-20_22-38-05.webp"
   },
   {
     "id": "chips-042",
@@ -2411,9 +2007,7 @@
     "image": "jbs/photo_31_2026-02-20_22-38-05.jpg",
     "category": "chips",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "jbs/photo_31_2026-02-20_22-38-05.webp"
   },
   {
     "id": "chips-043",
@@ -2423,9 +2017,7 @@
     "image": "jbs/photo_32_2026-02-20_22-38-05.jpg",
     "category": "chips",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "jbs/photo_32_2026-02-20_22-38-05.webp"
   },
   {
     "id": "chips-044",
@@ -2435,9 +2027,7 @@
     "image": "jbs/photo_33_2026-02-20_22-38-05.jpg",
     "category": "chips",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "jbs/photo_33_2026-02-20_22-38-05.webp"
   },
   {
     "id": "chips-045",
@@ -2447,9 +2037,7 @@
     "image": "jbs/photo_34_2026-02-20_22-38-05.jpg",
     "category": "chips",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "jbs/photo_34_2026-02-20_22-38-05.webp"
   },
   {
     "id": "chips-046",
@@ -2459,9 +2047,7 @@
     "image": "jbs/photo_35_2026-02-20_22-38-05.jpg",
     "category": "chips",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "jbs/photo_35_2026-02-20_22-38-05.webp"
   },
   {
     "id": "chips-047",
@@ -2471,9 +2057,7 @@
     "image": "jbs/photo_36_2026-02-20_22-38-05.jpg",
     "category": "chips",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "jbs/photo_36_2026-02-20_22-38-05.webp"
   },
   {
     "id": "chips-048",
@@ -2483,9 +2067,7 @@
     "image": "jbs/photo_2026-02-20_22-39-15.jpg",
     "category": "chips",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "jbs/photo_2026-02-20_22-39-15.webp"
   },
   {
     "id": "baby-001",
@@ -2495,9 +2077,7 @@
     "image": "mnalan/photo_1_2026-02-21_00-54-52.jpg",
     "category": "baby",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "mnalan/photo_1_2026-02-21_00-54-52.webp"
   },
   {
     "id": "baby-002",
@@ -2507,9 +2087,7 @@
     "image": "mnalan/photo_2_2026-02-21_00-54-52.jpg",
     "category": "baby",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "mnalan/photo_2_2026-02-21_00-54-52.webp"
   },
   {
     "id": "baby-003",
@@ -2519,9 +2097,7 @@
     "image": "mnalan/photo_3_2026-02-21_00-54-52.jpg",
     "category": "baby",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "mnalan/photo_3_2026-02-21_00-54-52.webp"
   },
   {
     "id": "baby-004",
@@ -2531,9 +2107,7 @@
     "image": "mnalan/photo_4_2026-02-21_00-54-52.jpg",
     "category": "baby",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "mnalan/photo_4_2026-02-21_00-54-52.webp"
   },
   {
     "id": "baby-005",
@@ -2543,9 +2117,7 @@
     "image": "mnalan/photo_5_2026-02-21_00-54-52.jpg",
     "category": "baby",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "mnalan/photo_5_2026-02-21_00-54-52.webp"
   },
   {
     "id": "baby-006",
@@ -2555,9 +2127,7 @@
     "image": "mnalan/photo_7_2026-02-21_00-54-52.jpg",
     "category": "baby",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "mnalan/photo_7_2026-02-21_00-54-52.webp"
   },
   {
     "id": "baby-007",
@@ -2567,9 +2137,7 @@
     "image": "mnalan/photo_17_2026-02-21_00-54-52.jpg",
     "category": "baby",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "mnalan/photo_17_2026-02-21_00-54-52.webp"
   },
   {
     "id": "baby-008",
@@ -2579,9 +2147,7 @@
     "image": "mnalan/photo_8_2026-02-21_00-54-52.jpg",
     "category": "baby",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "mnalan/photo_8_2026-02-21_00-54-52.webp"
   },
   {
     "id": "baby-009",
@@ -2591,9 +2157,7 @@
     "image": "mnalan/photo_9_2026-02-21_00-54-52.jpg",
     "category": "baby",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "mnalan/photo_9_2026-02-21_00-54-52.webp"
   },
   {
     "id": "baby-010",
@@ -2603,9 +2167,7 @@
     "image": "mnalan/photo_11_2026-02-21_00-54-52.jpg",
     "category": "baby",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "mnalan/photo_11_2026-02-21_00-54-52.webp"
   },
   {
     "id": "baby-011",
@@ -2615,9 +2177,7 @@
     "image": "mnalan/photo_12_2026-02-21_00-54-52.jpg",
     "category": "baby",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "mnalan/photo_12_2026-02-21_00-54-52.webp"
   },
   {
     "id": "baby-012",
@@ -2627,9 +2187,7 @@
     "image": "mnalan/photo_13_2026-02-21_00-54-52.jpg",
     "category": "baby",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "mnalan/photo_13_2026-02-21_00-54-52.webp"
   },
   {
     "id": "baby-013",
@@ -2639,9 +2197,7 @@
     "image": "mnalan/photo_14_2026-02-21_00-54-52.jpg",
     "category": "baby",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "mnalan/photo_14_2026-02-21_00-54-52.webp"
   },
   {
     "id": "baby-014",
@@ -2651,9 +2207,7 @@
     "image": "mnalan/photo_15_2026-02-21_00-54-52.jpg",
     "category": "baby",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "mnalan/photo_15_2026-02-21_00-54-52.webp"
   },
   {
     "id": "baby-015",
@@ -2663,9 +2217,7 @@
     "image": "mnalan/photo_16_2026-02-21_00-54-52.jpg",
     "category": "baby",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "mnalan/photo_16_2026-02-21_00-54-52.webp"
   },
   {
     "id": "baby-016",
@@ -2675,9 +2227,7 @@
     "image": "mnalan/photo_19_2026-02-21_00-54-52.jpg",
     "category": "baby",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "mnalan/photo_19_2026-02-21_00-54-52.webp"
   },
   {
     "id": "baby-017",
@@ -2687,9 +2237,7 @@
     "image": "mnalan/photo_20_2026-02-21_00-54-52.jpg",
     "category": "baby",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "mnalan/photo_20_2026-02-21_00-54-52.webp"
   },
   {
     "id": "baby-018",
@@ -2699,9 +2247,7 @@
     "image": "mnalan/photo_21_2026-02-21_00-54-52.jpg",
     "category": "baby",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "mnalan/photo_21_2026-02-21_00-54-52.webp"
   },
   {
     "id": "baby-019",
@@ -2711,9 +2257,7 @@
     "image": "mnalan/photo_22_2026-02-21_00-54-52.jpg",
     "category": "baby",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "mnalan/photo_22_2026-02-21_00-54-52.webp"
   },
   {
     "id": "baby-020",
@@ -2723,9 +2267,7 @@
     "image": "mnalan/photo_24_2026-02-21_00-54-52.jpg",
     "category": "baby",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "mnalan/photo_24_2026-02-21_00-54-52.webp"
   },
   {
     "id": "baby-021",
@@ -2735,9 +2277,7 @@
     "image": "mnalan/photo_25_2026-02-21_00-54-52.jpg",
     "category": "baby",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "mnalan/photo_25_2026-02-21_00-54-52.webp"
   },
   {
     "id": "baby-022",
@@ -2747,9 +2287,7 @@
     "image": "mnalan/photo_26_2026-02-21_00-54-52.jpg",
     "category": "baby",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "mnalan/photo_26_2026-02-21_00-54-52.webp"
   },
   {
     "id": "baby-023",
@@ -2759,9 +2297,7 @@
     "image": "mnalan/photo_27_2026-02-21_00-54-52.jpg",
     "category": "baby",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "mnalan/photo_27_2026-02-21_00-54-52.webp"
   },
   {
     "id": "baby-024",
@@ -2771,9 +2307,7 @@
     "image": "mnalan/photo_28_2026-02-21_00-54-52.jpg",
     "category": "baby",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "mnalan/photo_28_2026-02-21_00-54-52.webp"
   },
   {
     "id": "baby-025",
@@ -2783,9 +2317,7 @@
     "image": "mnalan/photo_29_2026-02-21_00-54-52.jpg",
     "category": "baby",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "mnalan/photo_29_2026-02-21_00-54-52.webp"
   },
   {
     "id": "baby-026",
@@ -2795,9 +2327,7 @@
     "image": "mnalan/photo_30_2026-02-21_00-54-52.jpg",
     "category": "baby",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "mnalan/photo_30_2026-02-21_00-54-52.webp"
   },
   {
     "id": "family-001",
@@ -2807,9 +2337,7 @@
     "image": "aylay/photo_1_2026-02-20_22-54-38.jpg",
     "category": "family",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "aylay/photo_1_2026-02-20_22-54-38.webp"
   },
   {
     "id": "family-002",
@@ -2819,9 +2347,7 @@
     "image": "aylay/photo_2_2026-02-20_22-54-38.jpg",
     "category": "family",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "aylay/photo_2_2026-02-20_22-54-38.webp"
   },
   {
     "id": "family-003",
@@ -2831,9 +2357,7 @@
     "image": "aylay/photo_3_2026-02-20_22-54-38.jpg",
     "category": "family",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "aylay/photo_3_2026-02-20_22-54-38.webp"
   },
   {
     "id": "family-004",
@@ -2843,9 +2367,7 @@
     "image": "aylay/photo_4_2026-02-20_22-54-38.jpg",
     "category": "family",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "aylay/photo_4_2026-02-20_22-54-38.webp"
   },
   {
     "id": "family-005",
@@ -2855,9 +2377,7 @@
     "image": "aylay/photo_16_2026-02-20_22-54-38.jpg",
     "category": "family",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "aylay/photo_16_2026-02-20_22-54-38.webp"
   },
   {
     "id": "family-006",
@@ -2867,9 +2387,7 @@
     "image": "aylay/photo_17_2026-02-20_22-54-38.jpg",
     "category": "family",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "aylay/photo_17_2026-02-20_22-54-38.webp"
   },
   {
     "id": "family-007",
@@ -2879,9 +2397,7 @@
     "image": "aylay/photo_7_2026-02-20_22-54-38.jpg",
     "category": "family",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "aylay/photo_7_2026-02-20_22-54-38.webp"
   },
   {
     "id": "family-008",
@@ -2891,9 +2407,7 @@
     "image": "aylay/photo_9_2026-02-20_22-54-38.jpg",
     "category": "family",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "aylay/photo_9_2026-02-20_22-54-38.webp"
   },
   {
     "id": "family-009",
@@ -2903,9 +2417,7 @@
     "image": "aylay/photo_10_2026-02-20_22-54-38.jpg",
     "category": "family",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "aylay/photo_10_2026-02-20_22-54-38.webp"
   },
   {
     "id": "family-010",
@@ -2915,9 +2427,7 @@
     "image": "aylay/photo_11_2026-02-20_22-54-38.jpg",
     "category": "family",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "aylay/photo_11_2026-02-20_22-54-38.webp"
   },
   {
     "id": "family-011",
@@ -2927,9 +2437,7 @@
     "image": "aylay/photo_12_2026-02-20_22-54-38.jpg",
     "category": "family",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "aylay/photo_12_2026-02-20_22-54-38.webp"
   },
   {
     "id": "family-012",
@@ -2939,9 +2447,7 @@
     "image": "aylay/photo_8_2026-02-20_22-54-38.jpg",
     "category": "family",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "aylay/photo_8_2026-02-20_22-54-38.webp"
   },
   {
     "id": "family-013",
@@ -2951,9 +2457,7 @@
     "image": "aylay/photo_13_2026-02-20_22-54-38.jpg",
     "category": "family",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "aylay/photo_13_2026-02-20_22-54-38.webp"
   },
   {
     "id": "family-014",
@@ -2963,9 +2467,7 @@
     "image": "aylay/photo_14_2026-02-20_22-54-38.jpg",
     "category": "family",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "aylay/photo_14_2026-02-20_22-54-38.webp"
   },
   {
     "id": "family-015",
@@ -2975,9 +2477,7 @@
     "image": "aylay/photo_18_2026-02-20_22-54-38.jpg",
     "category": "family",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "aylay/photo_18_2026-02-20_22-54-38.webp"
   },
   {
     "id": "drink-1772043001326",
@@ -2987,9 +2487,7 @@
     "image": "sardy/IMG_6341.jpeg",
     "category": "drink",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "sardy/IMG_6341.webp"
   },
   {
     "id": "drink-1772043505832",
@@ -2999,9 +2497,7 @@
     "image": "sardy/IMG_6342.jpeg",
     "category": "drink",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "sardy/IMG_6342.webp"
   },
   {
     "id": "drink-1772053943960",
@@ -3011,9 +2507,7 @@
     "image": "sardy/IMG_6374.jpeg",
     "category": "drink",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "sardy/IMG_6374.webp"
   },
   {
     "id": "drink-1772053977838",
@@ -3023,9 +2517,7 @@
     "image": "sardy/IMG_6373.jpeg",
     "category": "drink",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "sardy/IMG_6373.webp"
   },
   {
     "id": "drink-1772054011207",
@@ -3035,9 +2527,7 @@
     "image": "sardy/IMG_6372.jpeg",
     "category": "drink",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "sardy/IMG_6372.webp"
   },
   {
     "id": "cake-033",
@@ -3047,9 +2537,7 @@
     "image": "kek/IMG_6343.jpeg",
     "category": "cake",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "kek/IMG_6343.webp"
   },
   {
     "id": "cake-034",
@@ -3059,9 +2547,7 @@
     "image": "kek/IMG_6344.jpeg",
     "category": "cake",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "kek/IMG_6344.webp"
   },
   {
     "id": "cake-035",
@@ -3071,9 +2557,7 @@
     "image": "kek/IMG_6345.jpeg",
     "category": "cake",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "kek/IMG_6345.webp"
   },
   {
     "id": "cake-036",
@@ -3083,9 +2567,7 @@
     "image": "kek/IMG_6347.jpeg",
     "category": "cake",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "kek/IMG_6347.webp"
   },
   {
     "id": "cake-037",
@@ -3095,9 +2577,7 @@
     "image": "kek/IMG_6353.jpeg",
     "category": "cake",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "kek/IMG_6353.webp"
   },
   {
     "id": "cake-038",
@@ -3107,9 +2587,7 @@
     "image": "kek/IMG_6357.jpeg",
     "category": "cake",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "kek/IMG_6357.webp"
   },
   {
     "id": "cake-039",
@@ -3119,9 +2597,7 @@
     "image": "kek/IMG_6388.jpeg",
     "category": "cake",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "kek/IMG_6388.webp"
   },
   {
     "id": "cake-040",
@@ -3131,9 +2607,7 @@
     "image": "kek/IMG_6389.jpeg",
     "category": "cake",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "kek/IMG_6389.webp"
   },
   {
     "id": "cake-041",
@@ -3143,9 +2617,7 @@
     "image": "kek/IMG_6391.jpeg",
     "category": "cake",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "kek/IMG_6391.webp"
   },
   {
     "id": "cake-042",
@@ -3155,9 +2627,7 @@
     "image": "kek/IMG_6392.jpeg",
     "category": "cake",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "kek/IMG_6392.webp"
   },
   {
     "id": "cake-044",
@@ -3167,9 +2637,7 @@
     "image": "kek/IMG_6395.jpeg",
     "category": "cake",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "kek/IMG_6395.webp"
   },
   {
     "id": "cake-045",
@@ -3179,9 +2647,7 @@
     "image": "kek/IMG_6396.jpeg",
     "category": "cake",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "kek/IMG_6396.webp"
   },
   {
     "id": "cake-046",
@@ -3191,9 +2657,7 @@
     "image": "kek/IMG_6397.jpeg",
     "category": "cake",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "kek/IMG_6397.webp"
   },
   {
     "id": "cake-047",
@@ -3203,9 +2667,7 @@
     "image": "kek/IMG_6398.jpeg",
     "category": "cake",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "kek/IMG_6398.webp"
   },
   {
     "id": "cake-048",
@@ -3215,9 +2677,7 @@
     "image": "kek/IMG_6399.jpeg",
     "category": "cake",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "kek/IMG_6399.webp"
   },
   {
     "id": "gaz-034",
@@ -3227,9 +2687,7 @@
     "image": "gaz/IMG_6349.jpeg",
     "category": "gaz",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "gaz/IMG_6349.webp"
   },
   {
     "id": "gaz-035",
@@ -3239,9 +2697,7 @@
     "image": "gaz/IMG_6355.jpeg",
     "category": "gaz",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "gaz/IMG_6355.webp"
   },
   {
     "id": "gaz-036",
@@ -3251,9 +2707,7 @@
     "image": "gaz/IMG_6356.jpeg",
     "category": "gaz",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "gaz/IMG_6356.webp"
   },
   {
     "id": "gaz-037",
@@ -3263,9 +2717,7 @@
     "image": "gaz/IMG_6364.jpeg",
     "category": "gaz",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "gaz/IMG_6364.webp"
   },
   {
     "id": "gaz-038",
@@ -3275,9 +2727,7 @@
     "image": "gaz/IMG_6366.jpeg",
     "category": "gaz",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "gaz/IMG_6366.webp"
   },
   {
     "id": "gaz-039",
@@ -3287,9 +2737,7 @@
     "image": "gaz/IMG_6385.jpeg",
     "category": "gaz",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "gaz/IMG_6385.webp"
   },
   {
     "id": "gaz-040",
@@ -3299,9 +2747,7 @@
     "image": "gaz/IMG_6386.jpeg",
     "category": "gaz",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "gaz/IMG_6386.webp"
   },
   {
     "id": "gaz-041",
@@ -3311,9 +2757,7 @@
     "image": "gaz/IMG_6387.jpeg",
     "category": "gaz",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "gaz/IMG_6387.webp"
   },
   {
     "id": "gaz-042",
@@ -3323,9 +2767,7 @@
     "image": "gaz/IMG_6390.jpeg",
     "category": "gaz",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "gaz/IMG_6390.webp"
   },
   {
     "id": "gaz-043",
@@ -3335,9 +2777,7 @@
     "image": "gaz/IMG_6394.jpeg",
     "category": "gaz",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "gaz/IMG_6394.webp"
   },
   {
     "id": "gaz-044",
@@ -3347,9 +2787,7 @@
     "image": "gaz/IMG_6400.jpeg",
     "category": "gaz",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "gaz/IMG_6400.webp"
   },
   {
     "id": "gaz-045",
@@ -3359,9 +2797,7 @@
     "image": "gaz/IMG_6401.jpeg",
     "category": "gaz",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "gaz/IMG_6401.webp"
   },
   {
     "id": "gaz-046",
@@ -3371,9 +2807,7 @@
     "image": "gaz/IMG_6402.jpeg",
     "category": "gaz",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "gaz/IMG_6402.webp"
   },
   {
     "id": "gaz-047",
@@ -3383,9 +2817,7 @@
     "image": "gaz/IMG_6403.jpeg",
     "category": "gaz",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "gaz/IMG_6403.webp"
   },
   {
     "id": "gaz-048",
@@ -3395,9 +2827,7 @@
     "image": "gaz/IMG_6404.jpeg",
     "category": "gaz",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "gaz/IMG_6404.webp"
   },
   {
     "id": "gaz-049",
@@ -3407,9 +2837,7 @@
     "image": "gaz/IMG_6423.jpeg",
     "category": "gaz",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "gaz/IMG_6423.webp"
   },
   {
     "id": "gaz-050",
@@ -3419,9 +2847,7 @@
     "image": "gaz/IMG_6426.jpeg",
     "category": "gaz",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "gaz/IMG_6426.webp"
   },
   {
     "id": "gaz-051",
@@ -3431,9 +2857,7 @@
     "image": "gaz/IMG_6427.jpeg",
     "category": "gaz",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "gaz/IMG_6427.webp"
   },
   {
     "id": "gaz-052",
@@ -3443,9 +2867,7 @@
     "image": "gaz/IMG_6431.jpeg",
     "category": "gaz",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "gaz/IMG_6431.webp"
   },
   {
     "id": "gaz-053",
@@ -3455,9 +2877,7 @@
     "image": "gaz/IMG_6432.jpeg",
     "category": "gaz",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "gaz/IMG_6432.webp"
   },
   {
     "id": "gaz-054",
@@ -3467,9 +2887,7 @@
     "image": "gaz/IMG_6433.jpeg",
     "category": "gaz",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "gaz/IMG_6433.webp"
   },
   {
     "id": "gaz-055",
@@ -3479,9 +2897,7 @@
     "image": "gaz/IMG_6434.jpeg",
     "category": "gaz",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "gaz/IMG_6434.webp"
   },
   {
     "id": "gaz-056",
@@ -3491,9 +2907,7 @@
     "image": "gaz/IMG_6435.jpeg",
     "category": "gaz",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "gaz/IMG_6435.webp"
   },
   {
     "id": "gaz-057",
@@ -3503,9 +2917,7 @@
     "image": "gaz/IMG_6436.jpeg",
     "category": "gaz",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "gaz/IMG_6436.webp"
   },
   {
     "id": "gaz-058",
@@ -3515,9 +2927,7 @@
     "image": "gaz/IMG_6438.jpeg",
     "category": "gaz",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "gaz/IMG_6438.webp"
   },
   {
     "id": "gaz-059",
@@ -3527,9 +2937,7 @@
     "image": "gaz/IMG_6439.jpeg",
     "category": "gaz",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "gaz/IMG_6439.webp"
   },
   {
     "id": "gaz-060",
@@ -3539,9 +2947,7 @@
     "image": "gaz/IMG_6440.jpeg",
     "category": "gaz",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "gaz/IMG_6440.webp"
   },
   {
     "id": "gaz-061",
@@ -3551,9 +2957,7 @@
     "image": "gaz/IMG_6441.jpeg",
     "category": "gaz",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "gaz/IMG_6441.webp"
   },
   {
     "id": "gaz-062",
@@ -3563,9 +2967,7 @@
     "image": "gaz/IMG_6442.jpeg",
     "category": "gaz",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "gaz/IMG_6442.webp"
   },
   {
     "id": "gaz-063",
@@ -3575,9 +2977,7 @@
     "image": "gaz/IMG_6443.jpeg",
     "category": "gaz",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "gaz/IMG_6443.webp"
   },
   {
     "id": "gaz-064",
@@ -3587,9 +2987,7 @@
     "image": "gaz/IMG_6444.jpeg",
     "category": "gaz",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "gaz/IMG_6444.webp"
   },
   {
     "id": "gaz-065",
@@ -3599,9 +2997,7 @@
     "image": "gaz/IMG_6445.jpeg",
     "category": "gaz",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "gaz/IMG_6445.webp"
   },
   {
     "id": "gaz-066",
@@ -3611,9 +3007,7 @@
     "image": "gaz/IMG_6446.jpeg",
     "category": "gaz",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "gaz/IMG_6446.webp"
   },
   {
     "id": "gaz-067",
@@ -3623,9 +3017,7 @@
     "image": "gaz/IMG_6447.jpeg",
     "category": "gaz",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "gaz/IMG_6447.webp"
   },
   {
     "id": "gaz-068",
@@ -3635,9 +3027,7 @@
     "image": "gaz/IMG_6471.jpeg",
     "category": "gaz",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "gaz/IMG_6471.webp"
   },
   {
     "id": "gaz-069",
@@ -3647,9 +3037,7 @@
     "image": "gaz/IMG_6472.jpeg",
     "category": "gaz",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "gaz/IMG_6472.webp"
   },
   {
     "id": "gaz-070",
@@ -3659,9 +3047,7 @@
     "image": "gaz/IMG_6473.jpeg",
     "category": "gaz",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "gaz/IMG_6473.webp"
   },
   {
     "id": "gaz-071",
@@ -3671,9 +3057,7 @@
     "image": "gaz/IMG_6474.jpeg",
     "category": "gaz",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "gaz/IMG_6474.webp"
   },
   {
     "id": "gaz-072",
@@ -3683,9 +3067,7 @@
     "image": "gaz/IMG_6475.jpeg",
     "category": "gaz",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "gaz/IMG_6475.webp"
   },
   {
     "id": "family-016",
@@ -3695,9 +3077,7 @@
     "image": "aylay/IMG_6375.jpeg",
     "category": "family",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "aylay/IMG_6375.webp"
   },
   {
     "id": "family-017",
@@ -3707,9 +3087,7 @@
     "image": "aylay/IMG_6376.jpeg",
     "category": "family",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "aylay/IMG_6376.webp"
   },
   {
     "id": "family-018",
@@ -3719,9 +3097,7 @@
     "image": "aylay/IMG_6377.jpeg",
     "category": "family",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "aylay/IMG_6377.webp"
   },
   {
     "id": "family-019",
@@ -3731,9 +3107,7 @@
     "image": "aylay/IMG_6378.jpeg",
     "category": "family",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "aylay/IMG_6378.webp"
   },
   {
     "id": "family-020",
@@ -3743,9 +3117,7 @@
     "image": "aylay/IMG_6379.jpeg",
     "category": "family",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "aylay/IMG_6379.webp"
   },
   {
     "id": "family-021",
@@ -3755,9 +3127,7 @@
     "image": "aylay/IMG_6380.jpeg",
     "category": "family",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "aylay/IMG_6380.webp"
   },
   {
     "id": "family-022",
@@ -3767,9 +3137,7 @@
     "image": "aylay/IMG_6381.jpeg",
     "category": "family",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "aylay/IMG_6381.webp"
   },
   {
     "id": "family-023",
@@ -3779,9 +3147,7 @@
     "image": "aylay/IMG_6382.jpeg",
     "category": "family",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "aylay/IMG_6382.webp"
   },
   {
     "id": "family-024",
@@ -3791,9 +3157,7 @@
     "image": "aylay/IMG_6383.jpeg",
     "category": "family",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "aylay/IMG_6383.webp"
   },
   {
     "id": "family-025",
@@ -3803,9 +3167,7 @@
     "image": "aylay/IMG_6384.jpeg",
     "category": "family",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "aylay/IMG_6384.webp"
   },
   {
     "id": "baby-027",
@@ -3815,9 +3177,7 @@
     "image": "mnalan/IMG_6346.jpeg",
     "category": "baby",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "mnalan/IMG_6346.webp"
   },
   {
     "id": "baby-028",
@@ -3827,9 +3187,7 @@
     "image": "mnalan/IMG_6348.jpeg",
     "category": "baby",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "mnalan/IMG_6348.webp"
   },
   {
     "id": "baby-029",
@@ -3839,9 +3197,7 @@
     "image": "mnalan/IMG_6350.jpeg",
     "category": "baby",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "mnalan/IMG_6350.webp"
   },
   {
     "id": "baby-030",
@@ -3851,9 +3207,7 @@
     "image": "mnalan/IMG_6351.jpeg",
     "category": "baby",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "mnalan/IMG_6351.webp"
   },
   {
     "id": "baby-031",
@@ -3863,9 +3217,7 @@
     "image": "mnalan/IMG_6352.jpeg",
     "category": "baby",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "mnalan/IMG_6352.webp"
   },
   {
     "id": "baby-032",
@@ -3875,9 +3227,7 @@
     "image": "mnalan/IMG_6354.jpeg",
     "category": "baby",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "mnalan/IMG_6354.webp"
   },
   {
     "id": "baby-033",
@@ -3887,9 +3237,7 @@
     "image": "mnalan/IMG_6358.jpeg",
     "category": "baby",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "mnalan/IMG_6358.webp"
   },
   {
     "id": "baby-034",
@@ -3899,9 +3247,7 @@
     "image": "mnalan/IMG_6359.jpeg",
     "category": "baby",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "mnalan/IMG_6359.webp"
   },
   {
     "id": "baby-035",
@@ -3911,9 +3257,7 @@
     "image": "mnalan/IMG_6360.jpeg",
     "category": "baby",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "mnalan/IMG_6360.webp"
   },
   {
     "id": "baby-036",
@@ -3923,9 +3267,7 @@
     "image": "mnalan/IMG_6361.jpeg",
     "category": "baby",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "mnalan/IMG_6361.webp"
   },
   {
     "id": "baby-037",
@@ -3935,9 +3277,7 @@
     "image": "mnalan/IMG_6362.jpeg",
     "category": "baby",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "mnalan/IMG_6362.webp"
   },
   {
     "id": "baby-038",
@@ -3947,9 +3287,7 @@
     "image": "mnalan/IMG_6363.jpeg",
     "category": "baby",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "mnalan/IMG_6363.webp"
   },
   {
     "id": "baby-039",
@@ -3959,9 +3297,7 @@
     "image": "mnalan/IMG_6365.jpeg",
     "category": "baby",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "mnalan/IMG_6365.webp"
   },
   {
     "id": "baby-040",
@@ -3971,9 +3307,7 @@
     "image": "mnalan/IMG_6367.jpeg",
     "category": "baby",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "mnalan/IMG_6367.webp"
   },
   {
     "id": "baby-041",
@@ -3983,9 +3317,7 @@
     "image": "mnalan/IMG_6368.jpeg",
     "category": "baby",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "mnalan/IMG_6368.webp"
   },
   {
     "id": "baby-042",
@@ -3995,9 +3327,7 @@
     "image": "mnalan/IMG_6369.jpeg",
     "category": "baby",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "mnalan/IMG_6369.webp"
   },
   {
     "id": "baby-043",
@@ -4007,9 +3337,7 @@
     "image": "mnalan/IMG_6370.jpeg",
     "category": "baby",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "mnalan/IMG_6370.webp"
   },
   {
     "id": "baby-044",
@@ -4019,9 +3347,7 @@
     "image": "mnalan/IMG_6371.jpeg",
     "category": "baby",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "mnalan/IMG_6371.webp"
   },
   {
     "id": "baby-045",
@@ -4031,9 +3357,7 @@
     "image": "mnalan/IMG_6405.jpeg",
     "category": "baby",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "mnalan/IMG_6405.webp"
   },
   {
     "id": "baby-046",
@@ -4043,9 +3367,7 @@
     "image": "mnalan/IMG_6406.jpeg",
     "category": "baby",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "mnalan/IMG_6406.webp"
   },
   {
     "id": "baby-047",
@@ -4055,9 +3377,7 @@
     "image": "mnalan/IMG_6407.jpeg",
     "category": "baby",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "mnalan/IMG_6407.webp"
   },
   {
     "id": "baby-048",
@@ -4067,9 +3387,7 @@
     "image": "mnalan/IMG_6408.jpeg",
     "category": "baby",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "mnalan/IMG_6408.webp"
   },
   {
     "id": "baby-049",
@@ -4079,9 +3397,7 @@
     "image": "mnalan/IMG_6409.jpeg",
     "category": "baby",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "mnalan/IMG_6409.webp"
   },
   {
     "id": "baby-050",
@@ -4091,9 +3407,7 @@
     "image": "mnalan/IMG_6410.jpeg",
     "category": "baby",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "mnalan/IMG_6410.webp"
   },
   {
     "id": "baby-051",
@@ -4103,9 +3417,7 @@
     "image": "mnalan/IMG_6411.jpeg",
     "category": "baby",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "mnalan/IMG_6411.webp"
   },
   {
     "id": "baby-052",
@@ -4115,9 +3427,7 @@
     "image": "mnalan/IMG_6412.jpeg",
     "category": "baby",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "mnalan/IMG_6412.webp"
   },
   {
     "id": "baby-053",
@@ -4127,9 +3437,7 @@
     "image": "mnalan/IMG_6413.jpeg",
     "category": "baby",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "mnalan/IMG_6413.webp"
   },
   {
     "id": "baby-054",
@@ -4139,9 +3447,7 @@
     "image": "mnalan/IMG_6414.jpeg",
     "category": "baby",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "mnalan/IMG_6414.webp"
   },
   {
     "id": "baby-055",
@@ -4151,9 +3457,7 @@
     "image": "mnalan/IMG_6415.jpeg",
     "category": "baby",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "mnalan/IMG_6415.webp"
   },
   {
     "id": "baby-056",
@@ -4163,9 +3467,7 @@
     "image": "mnalan/IMG_6416.jpeg",
     "category": "baby",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "mnalan/IMG_6416.webp"
   },
   {
     "id": "baby-057",
@@ -4175,9 +3477,7 @@
     "image": "mnalan/IMG_6417.jpeg",
     "category": "baby",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "mnalan/IMG_6417.webp"
   },
   {
     "id": "baby-058",
@@ -4187,9 +3487,7 @@
     "image": "mnalan/IMG_6418.jpeg",
     "category": "baby",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "mnalan/IMG_6418.webp"
   },
   {
     "id": "baby-059",
@@ -4199,9 +3497,7 @@
     "image": "mnalan/IMG_6419.jpeg",
     "category": "baby",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "mnalan/IMG_6419.webp"
   },
   {
     "id": "baby-060",
@@ -4211,9 +3507,7 @@
     "image": "mnalan/IMG_6420.jpeg",
     "category": "baby",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "mnalan/IMG_6420.webp"
   },
   {
     "id": "baby-061",
@@ -4223,9 +3517,7 @@
     "image": "mnalan/IMG_6421.jpeg",
     "category": "baby",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "mnalan/IMG_6421.webp"
   },
   {
     "id": "baby-062",
@@ -4235,9 +3527,7 @@
     "image": "mnalan/IMG_6422.jpeg",
     "category": "baby",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "mnalan/IMG_6422.webp"
   },
   {
     "id": "baby-063",
@@ -4247,9 +3537,7 @@
     "image": "mnalan/IMG_6424.jpeg",
     "category": "baby",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "mnalan/IMG_6424.webp"
   },
   {
     "id": "baby-064",
@@ -4259,9 +3547,7 @@
     "image": "mnalan/IMG_6425.jpeg",
     "category": "baby",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "mnalan/IMG_6425.webp"
   },
   {
     "id": "baby-065",
@@ -4271,9 +3557,7 @@
     "image": "mnalan/IMG_6428.jpeg",
     "category": "baby",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "mnalan/IMG_6428.webp"
   },
   {
     "id": "baby-066",
@@ -4283,9 +3567,7 @@
     "image": "mnalan/IMG_6429.jpeg",
     "category": "baby",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "mnalan/IMG_6429.webp"
   },
   {
     "id": "baby-067",
@@ -4295,9 +3577,7 @@
     "image": "mnalan/IMG_6430.jpeg",
     "category": "baby",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "mnalan/IMG_6430.webp"
   },
   {
     "id": "baby-068",
@@ -4307,9 +3587,7 @@
     "image": "mnalan/IMG_6448.jpeg",
     "category": "baby",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "mnalan/IMG_6448.webp"
   },
   {
     "id": "baby-069",
@@ -4319,9 +3597,7 @@
     "image": "mnalan/IMG_6449.jpeg",
     "category": "baby",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "mnalan/IMG_6449.webp"
   },
   {
     "id": "baby-070",
@@ -4331,9 +3607,7 @@
     "image": "mnalan/IMG_6450.jpeg",
     "category": "baby",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "mnalan/IMG_6450.webp"
   },
   {
     "id": "baby-071",
@@ -4343,9 +3617,7 @@
     "image": "mnalan/IMG_6451.jpeg",
     "category": "baby",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "mnalan/IMG_6451.webp"
   },
   {
     "id": "baby-072",
@@ -4355,9 +3627,7 @@
     "image": "mnalan/IMG_6452.jpeg",
     "category": "baby",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "mnalan/IMG_6452.webp"
   },
   {
     "id": "baby-073",
@@ -4367,9 +3637,7 @@
     "image": "mnalan/IMG_6453.jpeg",
     "category": "baby",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "mnalan/IMG_6453.webp"
   },
   {
     "id": "baby-074",
@@ -4379,9 +3647,7 @@
     "image": "mnalan/IMG_6454.jpeg",
     "category": "baby",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "mnalan/IMG_6454.webp"
   },
   {
     "id": "baby-075",
@@ -4391,9 +3657,7 @@
     "image": "mnalan/IMG_6455.jpeg",
     "category": "baby",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "mnalan/IMG_6455.webp"
   },
   {
     "id": "baby-076",
@@ -4403,9 +3667,7 @@
     "image": "mnalan/IMG_6456.jpeg",
     "category": "baby",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "mnalan/IMG_6456.webp"
   },
   {
     "id": "baby-077",
@@ -4415,9 +3677,7 @@
     "image": "mnalan/IMG_6457.jpeg",
     "category": "baby",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "mnalan/IMG_6457.webp"
   },
   {
     "id": "baby-078",
@@ -4427,9 +3687,7 @@
     "image": "mnalan/IMG_6458.jpeg",
     "category": "baby",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "mnalan/IMG_6458.webp"
   },
   {
     "id": "baby-079",
@@ -4439,9 +3697,7 @@
     "image": "mnalan/IMG_6459.jpeg",
     "category": "baby",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "mnalan/IMG_6459.webp"
   },
   {
     "id": "baby-080",
@@ -4451,9 +3707,7 @@
     "image": "mnalan/IMG_6460.jpeg",
     "category": "baby",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "mnalan/IMG_6460.webp"
   },
   {
     "id": "baby-081",
@@ -4463,9 +3717,7 @@
     "image": "mnalan/IMG_6461.jpeg",
     "category": "baby",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "mnalan/IMG_6461.webp"
   },
   {
     "id": "baby-082",
@@ -4475,9 +3727,7 @@
     "image": "mnalan/IMG_6462.jpeg",
     "category": "baby",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "mnalan/IMG_6462.webp"
   },
   {
     "id": "baby-083",
@@ -4487,9 +3737,7 @@
     "image": "mnalan/IMG_6463.jpeg",
     "category": "baby",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "mnalan/IMG_6463.webp"
   },
   {
     "id": "baby-084",
@@ -4499,9 +3747,7 @@
     "image": "mnalan/IMG_6464.jpeg",
     "category": "baby",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "mnalan/IMG_6464.webp"
   },
   {
     "id": "baby-085",
@@ -4511,9 +3757,7 @@
     "image": "mnalan/IMG_6465.jpeg",
     "category": "baby",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "mnalan/IMG_6465.webp"
   },
   {
     "id": "baby-086",
@@ -4523,9 +3767,7 @@
     "image": "mnalan/IMG_6466.jpeg",
     "category": "baby",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "mnalan/IMG_6466.webp"
   },
   {
     "id": "baby-087",
@@ -4535,9 +3777,7 @@
     "image": "mnalan/IMG_6467.jpeg",
     "category": "baby",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "mnalan/IMG_6467.webp"
   },
   {
     "id": "baby-088",
@@ -4547,9 +3787,7 @@
     "image": "mnalan/IMG_6468.jpeg",
     "category": "baby",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "mnalan/IMG_6468.webp"
   },
   {
     "id": "baby-089",
@@ -4559,9 +3797,7 @@
     "image": "mnalan/IMG_6469.jpeg",
     "category": "baby",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "mnalan/IMG_6469.webp"
   },
   {
     "id": "baby-090",
@@ -4571,8 +3807,6 @@
     "image": "mnalan/IMG_6470.jpeg",
     "category": "baby",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "mnalan/IMG_6470.webp"
   }
 ]

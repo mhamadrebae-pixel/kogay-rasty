@@ -811,10 +811,7 @@ async function loadCategoryProducts(category, { showSkeleton = false, allowFullC
     if (!VALID_CATEGORIES.has(category)) return false;
     if (showSkeleton && products.length === 0) showProductSkeletons();
 
-    const candidates = [
-        { url: 'https://kogay-raste-default-rtdb.firebaseio.com/products.json', categoryOnly: false, isFirebase: true },
-        { url: getCategoryDataUrl(category), categoryOnly: true }
-    ];
+    const candidates = [{ url: getCategoryDataUrl(category), categoryOnly: true }];
     if (allowFullCatalogFallback) {
         candidates.push({ url: PRODUCT_DATA_FALLBACK, categoryOnly: false });
     }
@@ -823,9 +820,7 @@ async function loadCategoryProducts(category, { showSkeleton = false, allowFullC
             try {
                 const res = await fetch(candidate.url, PRODUCT_REQUEST_OPTIONS);
                 if (!res.ok) throw new Error(`HTTP ${res.status}`);
-                const rawData = await res.json();
-                const list = Array.isArray(rawData) ? rawData : (rawData ? Object.values(rawData) : []);
-                const normalized = normalizeProducts(list);
+                const normalized = normalizeProducts(await res.json());
                 const nextProducts = candidate.categoryOnly
                     ? normalized.filter(product => product.category === category)
                     : normalized;
@@ -1050,11 +1045,14 @@ function updateCartButtonAccessibility() {
     cartBtn.setAttribute('title', LANG[currentLang]?.cart || 'Cart');
 }
 
-// Only use a WebP source when the product data explicitly provides one.
+// Only use a WebP source when the product data explicitly provides one or points to local image.
 function getWebpImagePath(product) {
     const explicit = String(product?.image_webp || '').trim();
     if (explicit) return explicit;
     const original = String(product?.image || '').trim();
+    if (/\.(jpe?g|png)$/i.test(original) && !/^https?:\/\//i.test(original)) {
+        return original.replace(/\.(jpe?g|png)$/i, '.webp');
+    }
     return /\.webp$/i.test(original) ? original : '';
 }
 
@@ -1214,7 +1212,8 @@ function openImageModal(productId) {
         modal.classList.add('has-image');
         img.onerror = null;
     };
-    img.src = getSafeImageSrc(product.image || PLACEHOLDER);
+    const modalImgSrc = getWebpImagePath(product) || product.image || PLACEHOLDER;
+    img.src = getSafeImageSrc(modalImgSrc);
 }
  
 function closeImageModal() {

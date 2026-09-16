@@ -3,29 +3,21 @@
     "id": "cake-001",
     "name": "نەزەری دووقول",
     "description": "24 عەدەد",
-    "price": 5000,
+    "price": 5250,
     "image": "kek/IMG_0214.jpeg",
     "category": "cake",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": "",
-    "createdAt": "2026-06-07T00:59:15.258Z",
-    "updatedAt": "2026-06-14T19:44:59.562Z"
+    "image_webp": "kek/IMG_0214.webp"
   },
   {
     "id": "cake-002",
     "name": "کولیچەی دوانی",
     "description": "60 عەدەد",
-    "price": 6500,
+    "price": 5750,
     "image": "kek/IMG_0211.jpeg",
     "category": "cake",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": "",
-    "createdAt": "2026-06-14T07:19:18.495Z",
-    "updatedAt": "2026-06-14T07:19:18.495Z"
+    "image_webp": "kek/IMG_0211.webp"
   },
   {
     "id": "cake-003",
@@ -35,9 +27,7 @@
     "image": "kek/IMG_0212.jpeg",
     "category": "cake",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "kek/IMG_0212.webp"
   },
   {
     "id": "cake-004",
@@ -47,9 +37,7 @@
     "image": "kek/IMG_0213.jpeg",
     "category": "cake",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "kek/IMG_0213.webp"
   },
   {
     "id": "cake-005",
@@ -59,9 +47,7 @@
     "image": "kek/photo_1_2026-02-20_22-41-44.jpg",
     "category": "cake",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "kek/photo_1_2026-02-20_22-41-44.webp"
   },
   {
     "id": "cake-006",
@@ -71,9 +57,7 @@
     "image": "kek/photo_2_2026-02-20_22-41-44.jpg",
     "category": "cake",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "kek/photo_2_2026-02-20_22-41-44.webp"
   },
   {
     "id": "cake-007",
@@ -83,9 +67,7 @@
     "image": "kek/photo_3_2026-02-20_22-41-44.jpg",
     "category": "cake",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "kek/photo_3_2026-02-20_22-41-44.webp"
   },
   {
     "id": "cake-008",
@@ -95,9 +77,7 @@
     "image": "kek/photo_7_2026-02-20_22-41-44.jpg",
     "category": "cake",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "kek/photo_7_2026-02-20_22-41-44.webp"
   },
   {
     "id": "cake-009",
@@ -107,9 +87,7 @@
     "image": "kek/photo_5_2026-02-20_22-41-44.jpg",
     "category": "cake",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "kek/photo_5_2026-02-20_22-41-44.webp"
   },
   {
     "id": "cake-010",
@@ -119,9 +97,7 @@
     "image": "kek/photo_4_2026-02-20_22-41-44.jpg",
     "category": "cake",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "kek/photo_4_2026-02-20_22-41-44.webp"
   },
   {
     "id": "cake-011",
@@ -131,9 +107,7 @@
     "image": "kek/photo_6_2026-02-20_22-41-44.jpg",
     "category": "cake",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "kek/photo_6_2026-02-20_22-41-44.webp"
   },
   {
     "id": "cake-012",
@@ -143,9 +117,7 @@
     "image": "kek/photo_8_2026-02-20_22-41-44.jpg",
     "category": "cake",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "kek/photo_8_2026-02-20_22-41-44.webp"
   },
   {
     "id": "cake-013",
@@ -155,9 +127,7 @@
     "image": "kek/photo_9_2026-02-20_22-41-44.jpg",
     "category": "cake",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "kek/photo_9_2026-02-20_22-41-44.webp"
   },
   {
     "id": "cake-014",
@@ -167,9 +137,7 @@
     "image": "kek/photo_10_2026-02-20_22-41-44.jpg",
     "category": "cake",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "kek/photo_10_2026-02-20_22-41-44.webp"
   },
   {
     "id": "cake-015",
@@ -179,9 +147,7 @@
     "image": "kek/photo_11_2026-02-20_22-41-44.jpg",
     "category": "cake",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "kek/photo_11_2026-02-20_22-41-44.webp"
   },
   {
     "id": "cake-016",
@@ -191,9 +157,7 @@
     "image": "kek/photo_12_2026-02-20_22-41-44.jpg",
     "category": "cake",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "kek/photo_12_2026-02-20_22-41-44.webp"
   },
   {
     "id": "cake-017",
@@ -203,9 +167,7 @@
     "image": "kek/photo_14_2026-02-20_22-41-44.jpg",
     "category": "cake",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "kek/photo_14_2026-02-20_22-41-44.webp"
   },
   {
     "id": "cake-018",
@@ -215,9 +177,7 @@
     "image": "kek/photo_13_2026-02-20_22-41-44.jpg",
     "category": "cake",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "kek/photo_13_2026-02-20_22-41-44.webp"
   },
   {
     "id": "cake-019",
@@ -227,9 +187,7 @@
     "image": "kek/photo_15_2026-02-20_22-41-44.jpg",
     "category": "cake",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "kek/photo_15_2026-02-20_22-41-44.webp"
   },
   {
     "id": "cake-020",
@@ -239,9 +197,7 @@
     "image": "kek/photo_16_2026-02-20_22-41-44.jpg",
     "category": "cake",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "kek/photo_16_2026-02-20_22-41-44.webp"
   },
   {
     "id": "cake-021",
@@ -251,9 +207,7 @@
     "image": "kek/photo_18_2026-02-20_22-41-44.jpg",
     "category": "cake",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "kek/photo_18_2026-02-20_22-41-44.webp"
   },
   {
     "id": "cake-022",
@@ -263,9 +217,7 @@
     "image": "kek/photo_19_2026-02-20_22-41-44.jpg",
     "category": "cake",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "kek/photo_19_2026-02-20_22-41-44.webp"
   },
   {
     "id": "cake-023",
@@ -275,9 +227,7 @@
     "image": "kek/photo_17_2026-02-20_22-41-44.jpg",
     "category": "cake",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "kek/photo_17_2026-02-20_22-41-44.webp"
   },
   {
     "id": "cake-024",
@@ -287,9 +237,7 @@
     "image": "kek/photo_20_2026-02-20_22-41-44.jpg",
     "category": "cake",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "kek/photo_20_2026-02-20_22-41-44.webp"
   },
   {
     "id": "cake-025",
@@ -299,9 +247,7 @@
     "image": "kek/photo_21_2026-02-20_22-41-44.jpg",
     "category": "cake",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "kek/photo_21_2026-02-20_22-41-44.webp"
   },
   {
     "id": "cake-026",
@@ -311,9 +257,7 @@
     "image": "kek/photo_22_2026-02-20_22-41-44.jpg",
     "category": "cake",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "kek/photo_22_2026-02-20_22-41-44.webp"
   },
   {
     "id": "cake-027",
@@ -323,9 +267,7 @@
     "image": "kek/photo_24_2026-02-20_22-41-44.jpg",
     "category": "cake",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "kek/photo_24_2026-02-20_22-41-44.webp"
   },
   {
     "id": "cake-028",
@@ -335,9 +277,7 @@
     "image": "kek/photo_25_2026-02-20_22-41-44.jpg",
     "category": "cake",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "kek/photo_25_2026-02-20_22-41-44.webp"
   },
   {
     "id": "cake-029",
@@ -347,9 +287,7 @@
     "image": "kek/photo_27_2026-02-20_22-41-44.jpg",
     "category": "cake",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "kek/photo_27_2026-02-20_22-41-44.webp"
   },
   {
     "id": "cake-030",
@@ -359,9 +297,7 @@
     "image": "kek/photo_28_2026-02-20_22-41-44.jpg",
     "category": "cake",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "kek/photo_28_2026-02-20_22-41-44.webp"
   },
   {
     "id": "cake-031",
@@ -371,9 +307,7 @@
     "image": "kek/photo_29_2026-02-20_22-41-44.jpg",
     "category": "cake",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "kek/photo_29_2026-02-20_22-41-44.webp"
   },
   {
     "id": "cake-032",
@@ -383,9 +317,7 @@
     "image": "kek/photo_30_2026-02-20_22-41-44.jpg",
     "category": "cake",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "kek/photo_30_2026-02-20_22-41-44.webp"
   },
   {
     "id": "cake-033",
@@ -395,9 +327,7 @@
     "image": "kek/IMG_6343.jpeg",
     "category": "cake",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "kek/IMG_6343.webp"
   },
   {
     "id": "cake-034",
@@ -407,9 +337,7 @@
     "image": "kek/IMG_6344.jpeg",
     "category": "cake",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "kek/IMG_6344.webp"
   },
   {
     "id": "cake-035",
@@ -419,9 +347,7 @@
     "image": "kek/IMG_6345.jpeg",
     "category": "cake",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "kek/IMG_6345.webp"
   },
   {
     "id": "cake-036",
@@ -431,9 +357,7 @@
     "image": "kek/IMG_6347.jpeg",
     "category": "cake",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "kek/IMG_6347.webp"
   },
   {
     "id": "cake-037",
@@ -443,9 +367,7 @@
     "image": "kek/IMG_6353.jpeg",
     "category": "cake",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "kek/IMG_6353.webp"
   },
   {
     "id": "cake-038",
@@ -455,9 +377,7 @@
     "image": "kek/IMG_6357.jpeg",
     "category": "cake",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "kek/IMG_6357.webp"
   },
   {
     "id": "cake-039",
@@ -467,9 +387,7 @@
     "image": "kek/IMG_6388.jpeg",
     "category": "cake",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "kek/IMG_6388.webp"
   },
   {
     "id": "cake-040",
@@ -479,9 +397,7 @@
     "image": "kek/IMG_6389.jpeg",
     "category": "cake",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "kek/IMG_6389.webp"
   },
   {
     "id": "cake-041",
@@ -491,9 +407,7 @@
     "image": "kek/IMG_6391.jpeg",
     "category": "cake",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "kek/IMG_6391.webp"
   },
   {
     "id": "cake-042",
@@ -503,9 +417,7 @@
     "image": "kek/IMG_6392.jpeg",
     "category": "cake",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "kek/IMG_6392.webp"
   },
   {
     "id": "cake-044",
@@ -515,9 +427,7 @@
     "image": "kek/IMG_6395.jpeg",
     "category": "cake",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "kek/IMG_6395.webp"
   },
   {
     "id": "cake-045",
@@ -527,9 +437,7 @@
     "image": "kek/IMG_6396.jpeg",
     "category": "cake",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "kek/IMG_6396.webp"
   },
   {
     "id": "cake-046",
@@ -539,9 +447,7 @@
     "image": "kek/IMG_6397.jpeg",
     "category": "cake",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "kek/IMG_6397.webp"
   },
   {
     "id": "cake-047",
@@ -551,9 +457,7 @@
     "image": "kek/IMG_6398.jpeg",
     "category": "cake",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "kek/IMG_6398.webp"
   },
   {
     "id": "cake-048",
@@ -563,8 +467,6 @@
     "image": "kek/IMG_6399.jpeg",
     "category": "cake",
     "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "image_webp": ""
+    "image_webp": "kek/IMG_6399.webp"
   }
 ]
