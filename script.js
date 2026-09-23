@@ -657,9 +657,10 @@ function encodeInlineArg(value) {
 }
 
 function normalizeProducts(data) {
-    if (!Array.isArray(data)) return [];
+    const list = Array.isArray(data) ? data : (data && typeof data === 'object' ? Object.values(data) : []);
+    if (!list.length) return [];
     const seenIds = new Set();
-    return data
+    return list
         .map((product, index) => ({
             ...product,
             id: String(product?.id || `product-${index + 1}`),
@@ -801,6 +802,37 @@ function getCategoryDataUrl(category) {
     return PRODUCT_CATEGORY_FILES[category] || PRODUCT_DATA_FALLBACK;
 }
 
+const FIREBASE_PRODUCTS_URL = 'https://kogay-raste-default-rtdb.firebaseio.com/products.json';
+let firebaseLoadedOnce = false;
+
+// Attempt live fetch from Firebase so admin changes appear immediately for customers
+async function tryLoadFromFirebase() {
+    if (firebaseLoadedOnce || isOffline) return false;
+    try {
+        const controller = new AbortController();
+        const timeout = setTimeout(() => controller.abort(), 2800);
+        const res = await fetch(`${FIREBASE_PRODUCTS_URL}?v=${Date.now()}`, {
+            signal: controller.signal,
+            cache: 'no-store'
+        });
+        clearTimeout(timeout);
+        if (res.ok) {
+            const data = await res.json();
+            const normalized = normalizeProducts(data);
+            if (normalized.length > 0) {
+                mergeProducts(normalized, { replaceAll: true });
+                markLoadedCategories(Object.keys(categories));
+                firebaseLoadedOnce = true;
+                lastProductLoadSource = 'firebase-realtime';
+                return true;
+            }
+        }
+    } catch (e) {
+        // Fallback to local files gracefully on timeout or offline
+    }
+    return false;
+}
+
 // Use cached products as an offline fallback when a category request fails.
 function getCachedCategoryProducts(category) {
     return readStoredProducts().filter(product => product.category === category);
@@ -810,6 +842,12 @@ function getCachedCategoryProducts(category) {
 async function loadCategoryProducts(category, { showSkeleton = false, allowFullCatalogFallback = !isMobileViewport() && !shouldUseLiteMode() } = {}) {
     if (!VALID_CATEGORIES.has(category)) return false;
     if (showSkeleton && products.length === 0) showProductSkeletons();
+
+    // 1. Live Firebase sync: loads latest catalog on startup/refresh
+    if (!firebaseLoadedOnce && !isOffline) {
+        const liveLoaded = await tryLoadFromFirebase();
+        if (liveLoaded) return true;
+    }
 
     const candidates = [{ url: getCategoryDataUrl(category), categoryOnly: true }];
     if (allowFullCatalogFallback) {
@@ -1368,7 +1406,8 @@ function goToPage(page) {
 async function handleConnectionChange() {
     isOffline = !navigator.onLine;
     updateOfflineBanner();
-    if (!isOffline && lastProductLoadSource === 'unavailable') {
+    if (!isOffline) {
+        firebaseLoadedOnce = false;
         await loadProducts({ showSkeleton: products.length === 0 });
         updateCategoryCounts();
         updateHeroStats();

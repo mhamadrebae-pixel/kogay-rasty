@@ -393,6 +393,19 @@
             </div>
           </div>
           <div class="s-card">
+            <div class="s-card-title"><i class="fas fa-image"></i> ڕێکخستنی سێرڤەری وێنە (ImgBB)</div>
+            <p style="font-size:13px;color:var(--text2);margin-bottom:12px;line-height:1.8">دەتوانیت کلیلی خۆڕایی ImgBB لێرە دابنێیت بۆ ئەوەی وێنەکان لەسەر هەور هەڵبگیرێن. ئەگەر کلیل نەبێت، وێنەکان بە شێوازی WebP ڕاستەوخۆ دەپارێزرێن.</p>
+            <div class="form-group">
+              <label class="form-label">ImgBB API Key</label>
+              <input type="text" class="form-control" id="newImgbbKey" placeholder="کلیلی ImgBB لێرە بنووسە..." style="direction:ltr">
+              <div class="form-hint">بۆ وەرگرتنی کلیل بەخۆڕایی: سەردانی <a href="https://api.imgbb.com" target="_blank" rel="noopener" style="color:var(--primary);text-decoration:underline;">api.imgbb.com</a> بکە و دوگمەی Get API Key دابگرە.</div>
+            </div>
+            <div style="display:flex;gap:8px;flex-wrap:wrap">
+              <button class="btn btn-primary" onclick="saveImgbbKey()"><i class="fas fa-check"></i> پاشەکەوتکردنی کلیل</button>
+              <button class="btn btn-danger" onclick="clearImgbbKey()"><i class="fas fa-trash"></i> سڕینەوە</button>
+            </div>
+          </div>
+          <div class="s-card">
             <div class="s-card-title"><i class="fas fa-rotate-right"></i> ئۆتۆ-ڕیفرێش</div>
             <p style="font-size:13px;color:var(--text2);margin-bottom:12px;line-height:1.8">کاتێک لا دەگەڕێیتەوە، پانێل
               ئۆتۆماتیکی کاڵاکان لە GitHub دەخوێنێتەوە.</p>
@@ -1046,45 +1059,11 @@
     }
 
     function restoreLocalDraftIfAvailable(options = {}) {
-      const { remoteLoaded = false, allowPrompt = true } = options;
-      const draft = readLocalDraft();
-      if (!draft) return false;
-
-      if (!remoteLoaded) {
-        applyDraftProducts(draft);
-        toast('Local draft restored because GitHub products could not be loaded.', 'info');
-        return true;
+      // Local draft popup disabled: cloud/remote database always takes precedence
+      const { remoteLoaded = false } = options;
+      if (remoteLoaded) {
+        clearLocalDraft();
       }
-
-      const repoIdentity = ghConfig?.username && ghConfig?.repo
-        ? `${ghConfig.username}/${ghConfig.repo}`
-        : '';
-      const sameRepo = !draft.repo || draft.repo === repoIdentity;
-      const sameBranch = !draft.branch || draft.branch === getConfiguredBranch();
-      const remoteChanged = Boolean(
-        draft.baseFingerprint &&
-        lastLoadedRemoteFingerprint &&
-        draft.baseFingerprint !== lastLoadedRemoteFingerprint
-      );
-
-      if (sameRepo && sameBranch && !remoteChanged) {
-        applyDraftProducts(draft);
-        toast('Local draft restored.', 'info');
-        return true;
-      }
-
-      if (allowPrompt) {
-        const savedAtLabel = getDraftSavedAtLabel(draft);
-        toast('GitHub products were kept. A local draft is still available in this browser.', 'info');
-        showConfirm(
-          'Restore local draft',
-          savedAtLabel
-            ? `A local draft from ${savedAtLabel} is available, but GitHub products changed after it was saved. Restore the draft in admin?`
-            : 'A local draft is available, but GitHub products changed after it was saved. Restore the draft in admin?',
-          () => restoreSavedDraft(false)
-        );
-      }
-
       return false;
     }
 
@@ -1859,7 +1838,7 @@
       }
     }
 
-    // Upload compressed WebP image directly to ImgBB cloud or matching GitHub category folder
+    // Upload compressed WebP image directly to ImgBB cloud, GitHub repo, or inline WebP data URL
     async function uploadImageToGitHub(file, category, prefix = 'add') {
       setImageUploadState(prefix, 'پشکنینی وێنە...', 's-uploading');
       setUploadProgress(prefix, false);
@@ -1869,53 +1848,73 @@
         setImageUploadState(prefix, 'فشاردن بە WebP...', 's-uploading');
         toast('🗜️ فشاردنی وێنە بە WebP...', 'info');
 
-        const { blob, extension } = await compressImageForUpload(file);
+        const { blob, extension, mimeType } = await compressImageForUpload(file);
         setImageSizeInfo(prefix, formatBytes(file.size), formatBytes(blob.size));
 
-        setImageUploadState(prefix, 'بارکردن بۆ سێرڤەری هەور...', 's-uploading');
+        setImageUploadState(prefix, 'ئامادەکردنی وێنە...', 's-uploading');
         setUploadProgress(prefix, true);
-        toast('⬆️ بارکردنی وێنە...', 'info');
 
         let path = '';
-        // 1. Upload to ImgBB (Free, fast 24/7 cloud CDN)
-        try {
-          const imgbbForm = new FormData();
-          imgbbForm.append('image', blob, `${category}_${Date.now()}.webp`);
-          const imgbbRes = await fetch('https://api.imgbb.com/1/upload?key=a31f3f04ad92c806d5c8851cf257ad66', {
-            method: 'POST',
-            body: imgbbForm
-          });
-          const imgbbData = await imgbbRes.json();
-          if (imgbbData?.data?.url) {
-            path = imgbbData.data.url;
+        const customImgbbKey = getImgbbKey();
+
+        // 1. Upload to ImgBB if key is provided
+        if (customImgbbKey) {
+          try {
+            toast('⬆️ بارکردنی وێنە بۆ ImgBB...', 'info');
+            const imgbbForm = new FormData();
+            imgbbForm.append('image', blob, `${category}_${Date.now()}.webp`);
+            const imgbbRes = await fetch(`https://api.imgbb.com/1/upload?key=${customImgbbKey}`, {
+              method: 'POST',
+              body: imgbbForm
+            });
+            const imgbbData = await imgbbRes.json();
+            if (imgbbData?.data?.url) {
+              path = imgbbData.data.url;
+            } else {
+              console.warn('ImgBB upload notice:', imgbbData);
+            }
+          } catch (imgbbErr) {
+            console.warn('ImgBB upload error:', imgbbErr);
           }
-        } catch (imgbbErr) {
-          console.warn('ImgBB upload error:', imgbbErr);
         }
 
         // 2. Fallback to GitHub contents API if ImgBB failed and token is available
         if (!path && ghConfig?.token && ghConfig?.username && ghConfig?.repo) {
-          const folder   = getCategoryImageFolder(category);
-          const fileName = generateSafeImageName(category, extension);
-          const ghPath   = `${folder}/${fileName}`;
-          const base64   = await blobToBase64(blob);
+          try {
+            toast('⬆️ بارکردنی وێنە بۆ GitHub...', 'info');
+            const folder   = getCategoryImageFolder(category);
+            const fileName = generateSafeImageName(category, extension);
+            const ghPath   = `${folder}/${fileName}`;
+            const base64   = await blobToBase64(blob);
 
-          const res = await fetch(
-            buildGitHubContentsApiUrl(ghPath),
-            {
-              method: 'PUT',
-              headers: getGitHubAuthHeaders(ghConfig.token, 'application/json'),
-              body: JSON.stringify({
-                message: `Upload product image: ${fileName}`,
-                content: base64,
-                branch: getConfiguredBranch()
-              })
+            const res = await fetch(
+              buildGitHubContentsApiUrl(ghPath),
+              {
+                method: 'PUT',
+                headers: getGitHubAuthHeaders(ghConfig.token, 'application/json'),
+                body: JSON.stringify({
+                  message: `Upload product image: ${fileName}`,
+                  content: base64,
+                  branch: getConfiguredBranch()
+                })
+              }
+            );
+
+            if (res.ok) {
+              path = ghPath;
             }
-          );
-
-          if (res.ok) {
-            path = ghPath;
+          } catch (ghErr) {
+            console.warn('GitHub upload error:', ghErr);
           }
+        }
+
+        // 3. Fallback: Save compressed WebP Data URL directly!
+        // Guaranteed to work 100% offline and without any external API keys
+        if (!path && blob) {
+          const base64 = await blobToBase64(blob);
+          const mime = mimeType || 'image/webp';
+          path = `data:${mime};base64,${base64}`;
+          toast('ℹ️ وێنەکە بە شێوازی WebP لە بنکەی دراوە پاشەکەوت کرا', 'info');
         }
 
         if (!path) {
@@ -1924,7 +1923,7 @@
 
         setUploadProgress(prefix, false);
         setImageUploadState(prefix, 'بارکرا ✓', 's-success');
-        toast('✅ وێنەکە بە سەرکەوتوویی بارکرا', 'success');
+        toast('✅ وێنەکە بە سەرکەوتوویی ئامادەکرا', 'success');
 
         return {
           path,
@@ -1935,6 +1934,34 @@
         setImageUploadState(prefix, error.message, 's-error');
         toast(`❌ بارکردنی وێنە شکست: ${error.message}`, 'error');
         throw error;
+      }
+    }
+
+    function getImgbbKey() {
+      return (localStorage.getItem('kogay_imgbb_api_key') || '').trim();
+    }
+
+    function saveImgbbKey() {
+      const key = (document.getElementById('newImgbbKey')?.value || '').trim();
+      if (!key) {
+        toast('تکایە کلیلی ImgBB بنووسە', 'error');
+        return;
+      }
+      localStorage.setItem('kogay_imgbb_api_key', key);
+      toast('کلیلی ImgBB بە سەرکەوتوویی پاشەکەوت کرا', 'success');
+    }
+
+    function clearImgbbKey() {
+      localStorage.removeItem('kogay_imgbb_api_key');
+      const input = document.getElementById('newImgbbKey');
+      if (input) input.value = '';
+      toast('کلیلی ImgBB سڕایەوە', 'info');
+    }
+
+    function initImgbbKeyUI() {
+      const input = document.getElementById('newImgbbKey');
+      if (input) {
+        input.value = getImgbbKey();
       }
     }
 
@@ -1950,6 +1977,7 @@
       ensureSetupFields();
       ensureLoginRecoveryButton();
       initImageUploadUI();
+      initImgbbKeyUI();
       loadGhConfig();
       syncSetupPrefill();
       ensureUndoButton();
@@ -2695,6 +2723,13 @@
           image: validated.image
         }, { touchUpdatedAt: true, allowIdGeneration: false });
         validateImagePath(currentProducts[i].image);
+        try {
+          fetch(`https://kogay-raste-default-rtdb.firebaseio.com/products/${encodeURIComponent(currentProducts[i].id)}.json`, {
+            method: 'PUT',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(currentProducts[i])
+          }).catch(console.warn);
+        } catch (e) {}
         markUnsaved();
         renderTable();
         renderDash();
@@ -2716,6 +2751,13 @@
         ...currentProducts[index],
         hidden: !currentProducts[index].hidden
       }, { touchUpdatedAt: true, allowIdGeneration: false });
+      try {
+        fetch(`https://kogay-raste-default-rtdb.firebaseio.com/products/${encodeURIComponent(currentProducts[index].id)}.json`, {
+          method: 'PUT',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(currentProducts[index])
+        }).catch(console.warn);
+      } catch (e) {}
       markUnsaved();
       renderTable();
       renderDash();
