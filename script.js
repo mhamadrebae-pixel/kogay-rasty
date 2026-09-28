@@ -981,6 +981,19 @@ function getProductPriceText(product) {
 function handleProductImageError(img) {
     if (!img) return;
     img.onerror = null;
+    const currentSrc = img.src || '';
+    if (!currentSrc.includes('raw.githubusercontent.com') && !currentSrc.startsWith('data:')) {
+        const match = currentSrc.match(/(?:kek|gaz|sardy|jbs|mnalan|aylay)\/[^?#]+/i);
+        if (match) {
+            img.onerror = () => {
+                img.onerror = null;
+                img.src = PLACEHOLDER;
+                img.style.opacity = '0.55';
+            };
+            img.src = `https://raw.githubusercontent.com/mhamadrebae-pixel/kogay-rasty/main/${match[0]}`;
+            return;
+        }
+    }
     img.src = PLACEHOLDER;
     img.style.opacity = '0.55';
 }
@@ -1085,9 +1098,12 @@ function updateCartButtonAccessibility() {
 
 // Only use a WebP source when the product data explicitly provides one or points to local image.
 function getWebpImagePath(product) {
-    const explicit = String(product?.image_webp || '').trim();
-    if (explicit) return explicit;
     const original = String(product?.image || '').trim();
+    const explicit = String(product?.image_webp || '').trim();
+    if (/^(https?|data):/i.test(original) && !/^(https?|data):/i.test(explicit)) {
+        return /^(https?|data):.*webp/i.test(original) ? original : '';
+    }
+    if (explicit) return explicit;
     if (/\.(jpe?g|png)$/i.test(original) && !/^https?:\/\//i.test(original)) {
         return original.replace(/\.(jpe?g|png)$/i, '.webp');
     }

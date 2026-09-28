@@ -209,10 +209,21 @@
             <div class="page-sub" id="prodSub">بارکردن...</div>
           </div>
           <div class="page-header-actions">
+            <button class="btn btn-success" onclick="publishJSON()"><i class="fas fa-cloud-upload-alt"></i> بڵاوکردنەوە</button>
+            <button class="btn btn-primary" onclick="showPage('add',null)"><i class="fas fa-plus"></i> کاڵای نوێ</button>
             <button class="btn btn-secondary" onclick="manualRefresh()"><i class="fas fa-rotate-right"></i> نوێ</button>
-            <button class="btn btn-primary" onclick="showPage('add',null)"><i class="fas fa-plus"></i> کاڵای
-              نوێ</button>
           </div>
+        </div>
+        <div class="publish-bar" id="prodPublishBar">
+          <div class="publish-bar-inner">
+            <div class="publish-icon"><i class="fas fa-triangle-exclamation"></i></div>
+            <div>
+              <div style="font-size:14px;font-weight:700;color:white">گۆڕانکارییەکانت پاراستنیان نییە!</div>
+              <div style="font-size:12px;color:var(--text2);margin-top:2px">بڵاوی بکەرەوە تا سایتەکەت نوێ بێتەوە</div>
+            </div>
+          </div>
+          <button class="btn btn-success" onclick="publishJSON()" style="width:100%;justify-content:center"><i
+              class="fas fa-cloud-upload-alt"></i> بڵاوکردنەوە ئێستا</button>
         </div>
         <div class="filters">
           <div class="search-box">
@@ -720,13 +731,18 @@
         const match = String(product?.id || '').trim().match(new RegExp(`^${categoryPart}-(\\d+)$`, 'i'));
         if (!match) return;
         const sequence = Number.parseInt(match[1], 10);
-        if (Number.isFinite(sequence) && sequence > maxSequence) {
+        if (Number.isFinite(sequence) && sequence < 1000000 && sequence > maxSequence) {
           maxSequence = sequence;
         }
       });
 
-      const nextSequence = String(maxSequence + 1).padStart(3, '0');
-      return `${categoryPart}-${nextSequence}`;
+      let nextNum = maxSequence + 1;
+      let candidate = `${categoryPart}-${String(nextNum).padStart(3, '0')}`;
+      while (isProductIdTaken(candidate)) {
+        nextNum += 1;
+        candidate = `${categoryPart}-${String(nextNum).padStart(3, '0')}`;
+      }
+      return candidate;
     }
 
     function refreshNewProductIdPreview() {
@@ -1081,13 +1097,16 @@
         setSessionGhToken('');
         return null;
       }
-      const persistedToken = setStoredGhToken(typeof tokenOverride === 'string' ? tokenOverride : normalized.token);
-      const sessionToken = setSessionGhToken(persistedToken);
+      const candidateToken = (typeof tokenOverride === 'string' && tokenOverride.trim())
+        ? tokenOverride.trim()
+        : (normalized.token || HARDCODED_GH_TOKEN || '');
+      const persistedToken = setStoredGhToken(candidateToken);
+      const sessionToken = setSessionGhToken(persistedToken || HARDCODED_GH_TOKEN);
       ghConfig = {
         username: normalized.username,
         repo: normalized.repo,
         branch: normalized.branch,
-        token: sessionToken
+        token: sessionToken || HARDCODED_GH_TOKEN
       };
       localStorage.setItem(GH_CONFIG_KEY, JSON.stringify({
         username: normalized.username,
@@ -1456,9 +1475,9 @@
 
     function getSessionGhToken() {
       try {
-        return sessionStorage.getItem(GH_TOKEN_SESSION_KEY) || getStoredGhToken() || '';
+        return sessionStorage.getItem(GH_TOKEN_SESSION_KEY) || getStoredGhToken() || HARDCODED_GH_TOKEN || '';
       } catch (error) {
-        return getStoredGhToken() || '';
+        return getStoredGhToken() || HARDCODED_GH_TOKEN || '';
       }
     }
 
@@ -1473,7 +1492,7 @@
     }
 
     function getStoredGhToken() {
-      return getBrowserStoredGhToken();
+      return getBrowserStoredGhToken() || HARDCODED_GH_TOKEN || '';
     }
 
     function setStoredGhToken(token) {
@@ -1671,6 +1690,24 @@
       if (editRemove && !editRemove.dataset.bound) {
         editRemove.dataset.bound = 'true';
         editRemove.addEventListener('click', resetEditImageUI);
+      }
+      const addPathInput = document.getElementById('newImage');
+      if (addPathInput && !addPathInput.dataset.bound) {
+        addPathInput.dataset.bound = 'true';
+        addPathInput.addEventListener('input', e => {
+          const val = e.target.value.trim();
+          if (val) setImagePreview('add', getImgUrl(val) || encodePathPreservingSlashes(val), val, 'is-active');
+          else if (!document.getElementById('addImageFile')?.files?.[0]) resetAddImageUI();
+        });
+      }
+      const editPathInput = document.getElementById('editImage');
+      if (editPathInput && !editPathInput.dataset.bound) {
+        editPathInput.dataset.bound = 'true';
+        editPathInput.addEventListener('input', e => {
+          const val = e.target.value.trim();
+          if (val) setImagePreview('edit', getImgUrl(val) || encodePathPreservingSlashes(val), val, 'is-active');
+          else if (!document.getElementById('editImageFile')?.files?.[0]) resetEditImageUI();
+        });
       }
     }
 
@@ -1885,7 +1922,12 @@
         }
 
         // 2. Fallback to GitHub contents API if ImgBB failed and token is available
-        if (!path && ghConfig?.token && ghConfig?.username && ghConfig?.repo) {
+        const token = ghConfig?.token || getSessionGhToken() || getStoredGhToken() || HARDCODED_GH_TOKEN;
+        const owner = ghConfig?.username || HARDCODED_GH_USERNAME;
+        const repo = ghConfig?.repo || HARDCODED_GH_REPO;
+        const branch = getConfiguredBranch() || 'main';
+
+        if (!path && token && owner && repo) {
           try {
             toast('⬆️ بارکردنی وێنە بۆ GitHub...', 'info');
             const folder   = getCategoryImageFolder(category);
@@ -1894,20 +1936,24 @@
             const base64   = await blobToBase64(blob);
 
             const res = await fetch(
-              buildGitHubContentsApiUrl(ghPath),
+              `https://api.github.com/repos/${encodeURIComponent(owner)}/${encodeURIComponent(repo)}/contents/${encodeURIComponent(folder)}/${encodeURIComponent(fileName)}`,
               {
                 method: 'PUT',
-                headers: getGitHubAuthHeaders(ghConfig.token, 'application/json'),
+                headers: getGitHubAuthHeaders(token, 'application/json'),
                 body: JSON.stringify({
                   message: `Upload product image: ${fileName}`,
                   content: base64,
-                  branch: getConfiguredBranch()
+                  branch
                 })
               }
             );
 
             if (res.ok) {
               path = ghPath;
+            } else {
+              const errData = await res.json().catch(() => ({}));
+              console.warn('GitHub upload failed:', res.status, errData);
+              toast(`بارکردنی وێنە بۆ گیتهەب سەرکەوتوو نەبوو (${res.status}): ${errData.message || res.statusText}`, 'error');
             }
           } catch (ghErr) {
             console.warn('GitHub upload error:', ghErr);
@@ -2017,10 +2063,12 @@
 
     // IMAGE PREVIEW
     function getImgUrl(imgPath) {
-      if (!imgPath || imgPath === 'placeholder.jpg' || !ghConfig) return null;
-      if (imgPath.startsWith('http')) return encodePathPreservingSlashes(imgPath);
-      const { username, repo } = ghConfig;
-      return `https://raw.githubusercontent.com/${username}/${repo}/${encodeURIComponent(getConfiguredBranch())}/${encodePathPreservingSlashes(imgPath)}`;
+      if (!imgPath || imgPath === 'placeholder.jpg') return null;
+      if (/^(data|blob|https?):/i.test(imgPath)) return encodePathPreservingSlashes(imgPath);
+      const username = ghConfig?.username || HARDCODED_GH_USERNAME;
+      const repo = ghConfig?.repo || HARDCODED_GH_REPO;
+      const branch = getConfiguredBranch() || 'main';
+      return `https://raw.githubusercontent.com/${username}/${repo}/${encodeURIComponent(branch)}/${encodePathPreservingSlashes(imgPath)}`;
     }
 
     function openImgPreview(prodId) {
@@ -2080,8 +2128,10 @@
 
     function thumbHtml(p) {
       const hasImg = p.image && p.image !== 'placeholder.jpg';
+      const imgSrc = hasImg ? (getImgUrl(p.image) || encodePathPreservingSlashes(p.image)) : '';
       return `<div class="p-thumb${hasImg ? ' has-img' : ''}" onclick="openImgPreview(decodeURIComponent('${encodeInlineArg(p.id)}'))" title="${hasImg ? 'کلیک بکە بۆ بینینی وێنە' : 'وێنەی نییە'}">
-    <div class="no-img"><i class="fas ${hasImg ? 'fa-image' : 'fa-image-slash'}"></i></div>
+    ${hasImg && imgSrc ? `<img src="${escapeHtml(imgSrc)}" alt="" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:inherit;" onerror="this.style.display='none';if(this.nextElementSibling)this.nextElementSibling.style.display='flex';">` : ''}
+    <div class="no-img" style="${hasImg && imgSrc ? 'display:none;' : ''}"><i class="fas ${hasImg ? 'fa-image' : 'fa-image-slash'}"></i></div>
     ${hasImg ? '<div class="img-dot"></div>' : ''}
   </div>`;
     }
@@ -2176,7 +2226,9 @@
     }
 
     async function loadProductsFromGitHub() {
-      if (!ghConfig) return false;
+      if (!ghConfig) {
+        ghConfig = getHardcodedGhConfig();
+      }
 
       const applyProducts = (data, source = 'unknown') => {
         currentProducts = normalizeProductList(data);
@@ -2245,8 +2297,14 @@
 
     function updateChangesBadge() {
       const b = document.getElementById('changesBadge');
-      if (hasUnsavedChanges) b.classList.add('show');
-      else b.classList.remove('show');
+      if (b) {
+        if (hasUnsavedChanges) b.classList.add('show');
+        else b.classList.remove('show');
+      }
+      document.querySelectorAll('.publish-bar').forEach(el => {
+        if (hasUnsavedChanges) el.classList.add('show');
+        else el.classList.remove('show');
+      });
     }
 
 
@@ -2635,14 +2693,14 @@
     async function publishJSON() {
       const publishConfig = getPublishReadyGhConfig();
       if (!publishConfig.token) {
-        promptForGitHubToken('A GitHub token is required before publishing product files.');
+        promptForGitHubToken('کلیلی GitHub پێویستە پێش بڵاوکردنەوەی فایلی کاڵاکان.');
         return;
       }
       if (!publishConfig.username || !publishConfig.repo) {
-        toast('Repository owner or name is missing in GitHub settings.', 'error');
+        toast('ناوی خاوەنی کۆگا یان ناوی کۆگا لە ڕێکخستنی GitHub دیاری نەکراوە.', 'error');
         return;
       }
-      showLoad('Preparing product files...');
+      showLoad('ئامادەکردنی فایلی کاڵاکان...');
       try {
         ghConfig = persistGhConfig(publishConfig, publishConfig.token, { rememberToken: isGhTokenRemembered() });
         const normalizedProducts = normalizeProductList(currentProducts);
@@ -2652,8 +2710,21 @@
 
         for (let index = 0; index < entries.length; index += 1) {
           const [path, fileData] = entries[index];
-          document.getElementById('loadingText').textContent = `Publishing ${path} (${index + 1}/${entries.length})...`;
+          document.getElementById('loadingText').textContent = `بڵاوکردنەوەی ${path} (${index + 1}/${entries.length})...`;
           await putJsonFileToGitHub(path, fileData, ghConfig);
+        }
+
+        // Also sync the full product catalog to Firebase for consistency
+        try {
+          const fbMap = {};
+          normalizedProducts.forEach(p => { if (p?.id) fbMap[p.id] = p; });
+          await fetch('https://kogay-raste-default-rtdb.firebaseio.com/products.json', {
+            method: 'PUT',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(fbMap)
+          });
+        } catch (fbErr) {
+          console.warn('Firebase batch sync warning:', fbErr);
         }
 
         currentProducts = normalizedProducts;
@@ -2665,10 +2736,10 @@
         document.getElementById('publishBar')?.classList.remove('show');
         updateChangesBadge();
         updateGhStatus();
-        toast(`${entries.length} product files published successfully`, 'success');
+        toast(`${entries.length} فایلی کاڵا بە سەرکەوتوویی بڵاوکرانەوە ✓`, 'success');
       } catch (error) {
         hideLoad();
-        toast('Publish failed: ' + (error?.message || 'Unknown error'), 'error');
+        toast('بڵاوکردنەوە سەرکەوتوو نەبوو: ' + (error?.message || 'هەڵەی نەزانراو'), 'error');
       }
     }
 
@@ -2679,17 +2750,17 @@
       const cleanImage = String(image || '').trim();
       const normalizedPrice = Number(price);
 
-      if (!cleanName) throw new Error('Product name is required.');
-      if (!cleanCategory || !isValidCategory(cleanCategory)) throw new Error('Select a valid product category.');
-      if (!cleanId || !isValidProductId(cleanId)) throw new Error('Product ID is invalid.');
-      if (!Number.isFinite(normalizedPrice) || normalizedPrice < 0) throw new Error('Product price must be a valid number greater than or equal to zero.');
-      if (!cleanImage) throw new Error('Select an image file or enter an existing image path.');
+      if (!cleanName) throw new Error('تکایە ناوی کاڵا بنووسە');
+      if (!cleanCategory || !isValidCategory(cleanCategory)) throw new Error('تکایە بەشێکی دروست بۆ کاڵاکە هەڵبژێرە');
+      if (!cleanId || (!existingId && !isValidProductId(cleanId))) throw new Error('کۆدی کاڵا دروست نییە');
+      if (!Number.isFinite(normalizedPrice) || normalizedPrice < 0) throw new Error('نرخی کاڵا دەبێت ژمارەیەکی دروست بێت (٠ یان زیاتر)');
+      if (!cleanImage) throw new Error('تکایە وێنەیەک هەڵبژێرە یان ناونیشانی وێنە بنووسە');
 
       const duplicate = currentProducts.some(product =>
         String(product?.id || '').trim().toLowerCase() === cleanId.toLowerCase() &&
         String(product?.id || '').trim() !== String(existingId || '').trim()
       );
-      if (duplicate) throw new Error('Product ID must stay unique.');
+      if (duplicate) throw new Error('کۆدی ئەم کاڵایە پێشتر هەیە، تکایە کۆدێکی تر بەکاربهێنە');
 
       return {
         id: cleanId,
@@ -2703,12 +2774,12 @@
     function openEdit(id) {
       const p = currentProducts.find(x => x.id === id);
       if (!p) return;
-      document.getElementById('editId').value = p.id;
-      document.getElementById('editName').value = p.name;
-      document.getElementById('editCat').value = p.category;
-      document.getElementById('editPrice').value = p.price;
-      document.getElementById('editDesc').value = p.description;
-      document.getElementById('editImage').value = p.image;
+      document.getElementById('editId').value = p.id || '';
+      document.getElementById('editName').value = p.name || '';
+      document.getElementById('editCat').value = p.category || 'cake';
+      document.getElementById('editPrice').value = p.price ?? '';
+      document.getElementById('editDesc').value = p.description || '';
+      document.getElementById('editImage').value = p.image || '';
       document.getElementById('editModal').classList.add('open');
       document.body.style.overflow = 'hidden';
       resetEditImageUI();
@@ -2726,10 +2797,26 @@
     }
 
     async function saveEdit() {
+      const saveBtn = document.querySelector('#editModal .btn-primary');
+      const origBtnHtml = saveBtn ? saveBtn.innerHTML : '';
+      if (saveBtn) {
+        if (saveBtn.disabled) return;
+        saveBtn.disabled = true;
+        saveBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> لە پاراستندایە...';
+      }
+
       const id = document.getElementById('editId').value;
-      if (!id) { toast('Product ID is missing', 'error'); return; }
+      if (!id) {
+        toast('کۆدی کاڵا دیاری نەکراوە', 'error');
+        if (saveBtn) { saveBtn.disabled = false; saveBtn.innerHTML = origBtnHtml; }
+        return;
+      }
       const i = currentProducts.findIndex(x => x.id === id);
-      if (i === -1) return;
+      if (i === -1) {
+        toast('کاڵاکە لە لیستەکەدا نەدۆزرایەوە', 'error');
+        if (saveBtn) { saveBtn.disabled = false; saveBtn.innerHTML = origBtnHtml; }
+        return;
+      }
 
       const name = document.getElementById('editName').value.trim();
       const category = document.getElementById('editCat').value;
@@ -2758,6 +2845,12 @@
         }, { existingId: id });
 
         pushUndoState();
+        const hasNewImage = Boolean(newFile || (imagePath && imagePath !== currentProducts[i]?.image));
+        let nextImageWebp = currentProducts[i]?.image_webp || '';
+        if (hasNewImage) {
+          nextImageWebp = validated.image.endsWith('.webp') ? validated.image : '';
+        }
+
         currentProducts[i] = normalizeProductRecord({
           ...currentProducts[i],
           id: validated.id,
@@ -2765,26 +2858,41 @@
           category: validated.category,
           price: validated.price,
           description,
-          image: validated.image
+          image: validated.image,
+          image_webp: nextImageWebp
         }, { touchUpdatedAt: true, allowIdGeneration: false });
         validateImagePath(currentProducts[i].image);
+
+        // Realtime sync to Firebase with timeout
         try {
-          fetch(`https://kogay-raste-default-rtdb.firebaseio.com/products/${encodeURIComponent(currentProducts[i].id)}.json`, {
+          const controller = new AbortController();
+          const tId = setTimeout(() => controller.abort(), 6000);
+          await fetch(`https://kogay-raste-default-rtdb.firebaseio.com/products/${encodeURIComponent(currentProducts[i].id)}.json`, {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(currentProducts[i])
-          }).catch(console.warn);
-        } catch (e) {}
+            body: JSON.stringify(currentProducts[i]),
+            signal: controller.signal
+          });
+          clearTimeout(tId);
+        } catch (e) {
+          console.warn('Firebase update warning:', e);
+        }
+
         markUnsaved();
         renderTable();
         renderDash();
         closeEdit();
-        toast('Product updated successfully', 'success');
+        toast('دەستکاری کاڵاکە بە سەرکەوتوویی پاشەکەوت کرا ✓', 'success');
       } catch (error) {
         if (uploadedPath) {
-          toast('Image uploaded but product update was not saved', 'info');
+          toast('وێنەکە بارکرا بەڵام کاڵاکە نوێ نەکرایەوە', 'info');
         }
-        toast(error.message || 'Edit failed', 'error');
+        toast(error.message || 'دەستکاریکردن سەرکەوتوو نەبوو', 'error');
+      } finally {
+        if (saveBtn) {
+          saveBtn.disabled = false;
+          saveBtn.innerHTML = origBtnHtml;
+        }
       }
     }
 
@@ -2806,11 +2914,11 @@
       markUnsaved();
       renderTable();
       renderDash();
-      toast(currentProducts[index].hidden ? 'Product hidden' : 'Product visible', 'info');
+      toast(currentProducts[index].hidden ? 'کاڵاکە شاردراوەتەوە' : 'کاڵاکە نیشاندراوە', 'info');
     }
 
     function delProd(id) {
-      showConfirm('Delete product', 'This product will be removed from the local admin list until you publish again.', () => {
+      showConfirm('سڕینەوەی کاڵا', 'ئەم کاڵایە لە کۆگا دەسڕدرێتەوە. ئایا دڵنیایت؟', () => {
         pushUndoState();
         currentProducts = currentProducts.filter(x => x.id !== id);
         try {
@@ -2821,11 +2929,19 @@
         markUnsaved();
         renderTable();
         renderDash();
-        toast('Product deleted', 'success');
+        toast('کاڵاکە سڕایەوە', 'success');
       });
     }
 
     async function addProduct() {
+      const addBtn = document.querySelector('button[onclick="addProduct()"]');
+      const origBtnHtml = addBtn ? addBtn.innerHTML : '';
+      if (addBtn) {
+        if (addBtn.disabled) return;
+        addBtn.disabled = true;
+        addBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> لە زیادکردندایە...';
+      }
+
       const name = document.getElementById('newName').value.trim();
       const category = document.getElementById('newCat').value;
       const id = generateProductId(name, category);
@@ -2846,7 +2962,7 @@
           imagePath = upload.path;
           imageInput.value = imagePath;
         } else if (!imagePath) {
-          throw new Error('Select an image file or enter an existing image path');
+          throw new Error('تکایە وێنەیەک هەڵبژێرە یان ناونیشانی وێنە بنووسە');
         }
 
         const validated = validateProductInput({
@@ -2865,17 +2981,25 @@
           price: validated.price,
           description,
           image: validated.image,
+          image_webp: validated.image.endsWith('.webp') ? validated.image : '',
           hidden: false
         }, { touchUpdatedAt: true });
         currentProducts.push(newRecord);
 
+        // Realtime sync to Firebase with timeout
         try {
-          fetch(`https://kogay-raste-default-rtdb.firebaseio.com/products/${encodeURIComponent(newRecord.id)}.json`, {
+          const controller = new AbortController();
+          const tId = setTimeout(() => controller.abort(), 6000);
+          await fetch(`https://kogay-raste-default-rtdb.firebaseio.com/products/${encodeURIComponent(newRecord.id)}.json`, {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(newRecord)
-          }).catch(console.warn);
-        } catch (e) {}
+            body: JSON.stringify(newRecord),
+            signal: controller.signal
+          });
+          clearTimeout(tId);
+        } catch (e) {
+          console.warn('Firebase add warning:', e);
+        }
 
         validateImagePath(validated.image);
         markUnsaved();
@@ -2884,12 +3008,17 @@
         clearAdd();
         showPage('products', null);
         setBottomNav('products');
-        toast('Product added successfully', 'success');
+        toast('کاڵاکە بە سەرکەوتوویی زیادکرا ✓', 'success');
       } catch (error) {
         if (uploadedPath) {
-          toast('Image uploaded but product was not saved', 'info');
+          toast('وێنەکە بارکرا بەڵام کاڵاکە پاشەکەوت نەکرا', 'info');
         }
-        toast(error.message || 'Add product failed', 'error');
+        toast(error.message || 'زیادکردنی کاڵا سەرکەوتوو نەبوو', 'error');
+      } finally {
+        if (addBtn) {
+          addBtn.disabled = false;
+          addBtn.innerHTML = origBtnHtml;
+        }
       }
     }
 
