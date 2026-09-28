@@ -562,19 +562,5 @@
     "price": 5250,
     "name_en": "",
     "description_en": ""
-  },
-  {
-    "category": "cake",
-    "createdAt": "2026-09-23T18:13:06.753Z",
-    "description": "24",
-    "description_en": "",
-    "hidden": false,
-    "id": "cake-050",
-    "image": "https://i.ibb.co/G4MgyKKs/cake-1790187185065.jpg",
-    "image_webp": "",
-    "name": "Aaa",
-    "name_en": "",
-    "price": 50000,
-    "updatedAt": "2026-09-23T18:13:06.753Z"
   }
 ]
