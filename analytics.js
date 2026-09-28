@@ -33,19 +33,24 @@
         return Number(localStorage.getItem(TOTAL_VIEWS_KEY) || 0);
     }
 
+    let cachedProductViewsMap = null;
+
     // Increment a per-product counter for lightweight popularity tracking.
     function trackProductView(productId) {
         if (!productId) return 0;
         const map = readJson(PRODUCT_VIEWS_KEY, {});
         map[productId] = Number(map[productId] || 0) + 1;
+        cachedProductViewsMap = map;
         writeJson(PRODUCT_VIEWS_KEY, map);
         return map[productId];
     }
 
     // Return the saved popularity count for one product.
     function getProductViewCount(productId) {
-        const map = readJson(PRODUCT_VIEWS_KEY, {});
-        return Number(map[productId] || 0);
+        if (!cachedProductViewsMap) {
+            cachedProductViewsMap = readJson(PRODUCT_VIEWS_KEY, {});
+        }
+        return Number(cachedProductViewsMap[productId] || 0);
     }
 
     window.trackView = trackView;

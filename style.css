@@ -1,4 +1,4 @@
-﻿/* ==========================================
+/* ==========================================
    فرۆشگای ئێمە - Mobile Optimized CSS v3 Glass
    ========================================== */
 /* style */
@@ -107,7 +107,7 @@ input:focus-visible {
     display: flex; align-items: center; justify-content: center;
     font-size: 28px; color: white;
     margin: 0 auto 16px;
-    animation: pulse 1.5s ease-in-out infinite;
+    animation: none;
 }
 .loader-text {
     color: white; font-size: 22px; font-weight: 700;
@@ -1440,9 +1440,9 @@ html.lite-mode .product-card {
     .navbar { position: fixed; top:12px;left:16px;right:16px; padding: 0; }
     .nav-container {
         padding:12px 18px;
-        background: rgba(15,15,18,0.84);
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
+        background: rgba(15,15,18,0.96);
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
         box-shadow: 0 10px 22px rgba(0,0,0,0.18);
     }
     .logo-text { display:none; }
@@ -1490,7 +1490,7 @@ html.lite-mode .product-card {
     .hero-stats { justify-content: center; }
     .hero-badge { margin: 0 auto 14px; }
     .hero-decoration { display: none; }
-    .floating-card { position:absolute;background:rgba(255,255,255,0.05);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.1);border-radius:var(--radius-lg);padding:12px 18px;display:flex;align-items:center;gap:10px;color:white;font-weight:600;font-size:13px;white-space:nowrap; }
+    .floating-card { position:absolute;background:rgba(255,255,255,0.08);backdrop-filter:none;border:1px solid rgba(255,255,255,0.1);border-radius:var(--radius-lg);padding:12px 18px;display:flex;align-items:center;gap:10px;color:white;font-weight:600;font-size:13px;white-space:nowrap; }
     .floating-card i { font-size:20px;color:var(--primary); }
     .card-1{top:20%;right:10%} .card-2{top:50%;left:5%;animation-delay:-2s} .card-3{bottom:15%;right:20%;animation-delay:-4s}
     .categories-section,.products-section { padding:18px 40px;max-width:1180px;margin:0 auto; }
@@ -1549,7 +1549,7 @@ html.lite-mode .product-card {
     .hero-badge { margin: 0 0 14px; }
     .hero-decoration { display:block;position:relative;width:280px;height:280px;flex-shrink:0; }
     @keyframes cardFloat { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-15px)} }
-    .floating-card { animation: cardFloat 8s ease-in-out infinite; }
+    .floating-card { animation: none; }
 }
  
 ::-webkit-scrollbar { width:4px; }
@@ -2556,9 +2556,8 @@ html[lang="en"] .footer-social { direction:ltr; }
         right: -120px;
         top: -150px;
         background: radial-gradient(circle, rgba(249, 115, 22, 0.18), transparent 64%);
-        filter: blur(8px);
         pointer-events: none;
-        animation: heroGlowDrift 9s ease-in-out infinite;
+        animation: none;
     }
 
     body:not(.light-mode) .hero::after {
@@ -2570,9 +2569,8 @@ html[lang="en"] .footer-social { direction:ltr; }
         left: -90px;
         bottom: -120px;
         background: radial-gradient(circle, rgba(244, 63, 94, 0.12), transparent 65%);
-        filter: blur(10px);
         pointer-events: none;
-        animation: heroGlowDrift 11s ease-in-out infinite reverse;
+        animation: none;
     }
 
     body:not(.light-mode) .hero-content {
@@ -2582,7 +2580,7 @@ html[lang="en"] .footer-social { direction:ltr; }
     }
 
     body:not(.light-mode) .hero-badge {
-        animation: heroSoftIn 0.45s ease 0.05s both, heroBadgePulse 3.2s ease-in-out 0.85s infinite;
+        animation: heroSoftIn 0.45s ease 0.05s both;
         background: rgba(249, 115, 22, 0.13);
         border-color: rgba(249, 115, 22, 0.35);
     }
@@ -2711,6 +2709,21 @@ html[lang="en"] .footer-social { direction:ltr; }
     body:not(.light-mode) .hero-title,
     body:not(.light-mode) .hero-subtitle,
     body:not(.light-mode) .hero-stats {
+        animation: none !important;
+    }
+}
+
+/* ==========================================
+   Thermal Protection & Mobile Overrides
+   ========================================== */
+@media (max-width: 1024px) {
+    *, *::before, *::after {
+        -webkit-backdrop-filter: none !important;
+        backdrop-filter: none !important;
+    }
+    .hero::before,
+    .hero::after {
+        display: none !important;
         animation: none !important;
     }
 }

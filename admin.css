@@ -45,30 +45,9 @@ body {
   -webkit-font-smoothing: antialiased
 }
 
-/* BLOBS */
+/* BLOBS - Disabled for high mobile performance and thermal protection */
 .blob {
-  position: fixed;
-  border-radius: 50%;
-  filter: blur(120px);
-  opacity: .2;
-  pointer-events: none;
-  z-index: 0
-}
-
-.blob1 {
-  width: 400px;
-  height: 400px;
-  background: radial-gradient(circle, rgba(249, 115, 22, .6), transparent);
-  top: -100px;
-  right: -100px
-}
-
-.blob2 {
-  width: 350px;
-  height: 350px;
-  background: radial-gradient(circle, rgba(244, 63, 94, .5), transparent);
-  bottom: -100px;
-  left: -100px
+  display: none !important;
 }
 
 /* SETUP PAGE */
@@ -91,8 +70,7 @@ body {
 .setup-box {
   position: relative;
   z-index: 1;
-  background: rgba(255, 255, 255, 0.04);
-  backdrop-filter: blur(30px);
+  background: rgba(15, 23, 42, 0.96);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: var(--radius-lg);
   padding: 32px 24px;
@@ -233,8 +211,7 @@ body {
 .login-box {
   position: relative;
   z-index: 1;
-  background: rgba(255, 255, 255, 0.04);
-  backdrop-filter: blur(30px);
+  background: rgba(15, 23, 42, 0.96);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: var(--radius-lg);
   padding: 36px 28px;
@@ -2362,26 +2339,6 @@ body::after {
   z-index: -1;
 }
 
-.blob {
-  filter: blur(150px);
-  opacity: 0.34;
-  mix-blend-mode: screen;
-}
-
-.blob1 {
-  width: 440px;
-  height: 440px;
-  top: -160px;
-  right: -120px;
-}
-
-.blob2 {
-  width: 390px;
-  height: 390px;
-  bottom: -160px;
-  left: -120px;
-}
-
 .setup-page,
 .login-page {
   background: transparent;
@@ -2399,7 +2356,7 @@ body::after {
   border-radius: 32px;
   padding: clamp(28px, 3.5vw, 38px);
   box-shadow: var(--shadow), inset 0 1px 0 rgba(255, 255, 255, 0.06);
-  backdrop-filter: blur(28px) saturate(150%);
+  backdrop-filter: none;
   overflow: hidden;
 }
 
@@ -3504,5 +3461,13 @@ tr:hover td {
 
   .changes-badge {
     padding: 0 10px;
+  }
+}
+
+/* Thermal protection & mobile performance override */
+@media (max-width: 1024px) {
+  *, *::before, *::after {
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
   }
 }

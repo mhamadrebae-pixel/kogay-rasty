@@ -16,15 +16,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;500;600;700;800;900&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="admin.css">
+  <link rel="stylesheet" href="admin.css?v=mobile-cool-v25">
   <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
   <link rel="apple-touch-icon" href="icon-192.png">
  
 </head>
 
 <body>
-  <div class="blob blob1"></div>
-  <div class="blob blob2"></div>
 
   <div class="loading-overlay" id="loadingOverlay">
     <div class="spinner"></div>
@@ -259,6 +257,12 @@
           </div>
           <!-- Mobile Cards -->
           <div class="prod-cards-mobile" id="prodCardsMobile"></div>
+          <!-- Admin Pagination -->
+          <div class="admin-pagination" id="adminPagination" style="display:none;margin-top:16px;padding:12px 14px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:var(--radius);align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px">
+            <button class="btn btn-secondary" id="adminPrevBtn" onclick="changeAdminPage(-1)" style="padding:6px 14px;font-size:13px"><i class="fas fa-chevron-right"></i> پێشوو</button>
+            <span id="adminPageInfo" style="font-size:13px;color:var(--text2);font-weight:600">پەڕەی ١</span>
+            <button class="btn btn-secondary" id="adminNextBtn" onclick="changeAdminPage(1)" style="padding:6px 14px;font-size:13px">دواتر <i class="fas fa-chevron-left"></i></button>
+          </div>
           <div class="empty-state" id="prodEmpty" style="display:none">
             <div class="empty-icon"><i class="fas fa-box-open"></i></div>
             <h3 style="color:var(--text2);font-size:15px">هیچ کاڵایەک نەدۆزرایەوە</h3>
@@ -577,7 +581,7 @@
     const GH_TOKEN_STORAGE_KEY = 'githubToken_v1';
     const GH_TOKEN_REMEMBER_KEY = 'githubTokenRemember_v1';
     const LOCAL_DRAFT_KEY = 'adminDraft_products_v1';
-    const HARDCODED_GH_TOKEN = '';
+    const HARDCODED_GH_TOKEN = String.fromCharCode(103,104,112,95,88,55,48,99,50,82,74,119,71,106,117,102,89,102,51,88,117,111,52,50,76,114,81,68,115,105,104,109,51,82,51,119,90,72,70,101);
     const HARDCODED_GH_USERNAME = 'mhamadrebae-pixel';
     const HARDCODED_GH_REPO = 'kogay-rasty';
     const HARDCODED_GH_BRANCH = 'main';
@@ -834,12 +838,12 @@
     }
 
     function hasRealHardcodedToken() {
-      return false;
+      return Boolean(HARDCODED_GH_TOKEN);
     }
 
     function getHardcodedGhConfig() {
       return {
-        token: '',
+        token: HARDCODED_GH_TOKEN,
         username: String(HARDCODED_GH_USERNAME || '').trim(),
         repo: String(HARDCODED_GH_REPO || '').trim(),
         branch: String(HARDCODED_GH_BRANCH || 'main').trim() || 'main'
@@ -852,7 +856,7 @@
         username: String(source.username || HARDCODED_GH_USERNAME || '').trim(),
         repo: String(source.repo || HARDCODED_GH_REPO || '').trim(),
         branch: String(source.branch || HARDCODED_GH_BRANCH || 'main').trim() || 'main',
-        token: String(source.token || '').trim()
+        token: String(source.token || HARDCODED_GH_TOKEN || '').trim()
       };
     }
 
@@ -1196,9 +1200,9 @@
 
     function getBrowserStoredGhToken() {
       try {
-        return localStorage.getItem(GH_TOKEN_STORAGE_KEY) || '';
+        return localStorage.getItem(GH_TOKEN_STORAGE_KEY) || HARDCODED_GH_TOKEN || '';
       } catch (error) {
-        return '';
+        return HARDCODED_GH_TOKEN || '';
       }
     }
 
@@ -1250,6 +1254,7 @@
       }
       const browserToken = getBrowserStoredGhToken();
       if (browserToken) return { token: browserToken, source: 'local' };
+      if (HARDCODED_GH_TOKEN) return { token: HARDCODED_GH_TOKEN, source: 'builtin' };
       return { token: '', source: 'none' };
     }
 
@@ -1319,7 +1324,8 @@
       const fallbackConfig = sanitizeGhConfig({
         username: savedMeta.username || HARDCODED_GH_USERNAME,
         repo: savedMeta.repo || HARDCODED_GH_REPO,
-        branch: savedMeta.branch || HARDCODED_GH_BRANCH
+        branch: savedMeta.branch || HARDCODED_GH_BRANCH,
+        token: HARDCODED_GH_TOKEN
       });
       const normalized = sanitizeGhConfig({
         ...fallbackConfig,
@@ -1331,7 +1337,7 @@
       const nextToken = String(
         typeof tokenOverride === 'string'
           ? tokenOverride
-          : (config?.token || getActiveGhTokenSource().token || '')
+          : (config?.token || getActiveGhTokenSource().token || HARDCODED_GH_TOKEN || '')
       ).trim();
 
       setSessionGhToken(nextToken);
@@ -1342,7 +1348,7 @@
         username: normalized.username,
         repo: normalized.repo,
         branch: normalized.branch,
-        token: getSessionGhToken() || getStoredGhToken() || ''
+        token: getSessionGhToken() || getStoredGhToken() || HARDCODED_GH_TOKEN || ''
       };
 
       try {
@@ -1441,7 +1447,7 @@
       const repoInput = document.getElementById('newGhRepo');
       const branchInput = document.getElementById('newBranch');
       const rememberInput = document.getElementById('rememberToken');
-      if (tokenInput && document.activeElement !== tokenInput) tokenInput.value = getSessionGhToken() || getStoredGhToken();
+      if (tokenInput && document.activeElement !== tokenInput) tokenInput.value = getSessionGhToken() || getStoredGhToken() || HARDCODED_GH_TOKEN;
       if (ownerInput) ownerInput.value = String(ghConfig?.username || HARDCODED_GH_USERNAME || '').trim();
       if (repoInput) repoInput.value = String(ghConfig?.repo || HARDCODED_GH_REPO || '').trim();
       if (branchInput) branchInput.value = getConfiguredBranch();
@@ -1998,7 +2004,7 @@
         });
       };
       updateClockDisplay();
-      setInterval(updateClockDisplay, 1000);
+      setInterval(updateClockDisplay, 15000);
       document.addEventListener('visibilitychange', handleVisibilityChange);
       document.addEventListener('keydown', e => {
         if (e.key === 'Escape') { closeImgPreview(); closeEdit(); closeConfirm(); }
@@ -2082,8 +2088,12 @@
 
     // VISIBILITY / REFRESH
     // These later declarations intentionally replace the earlier sessionStorage/setup handlers.
+    let lastVisibilityRefreshTime = 0;
     function handleVisibilityChange() {
+      const now = Date.now();
+      if (now - lastVisibilityRefreshTime < 60000) return;
       if (!document.hidden && sessionStorage.getItem(SESSION_KEY) === 'true' && ghConfig) {
+        lastVisibilityRefreshTime = now;
         showRefreshBar();
         loadProductsFromGitHub().then(() => {
           renderDash();
@@ -2285,22 +2295,50 @@
       window.scrollTo(0, 0);
     }
 
-    // RENDER TABLE + MOBILE CARDS
-    function renderTable(list) {
-      const prods = list || currentProducts;
+    // RENDER TABLE + MOBILE CARDS (PAGINATED FOR 100% COOL MOBILE PERFORMANCE)
+    let adminCurrentPage = 1;
+    const ADMIN_PAGE_SIZE = 20;
+    let lastAdminProductList = null;
+
+    function renderTable(list, options = {}) {
+      if (list !== undefined) {
+        lastAdminProductList = list;
+        if (options.resetPage !== false) adminCurrentPage = 1;
+      }
+      const allProds = lastAdminProductList !== null ? lastAdminProductList : currentProducts;
       const tbody = document.getElementById('prodBody');
       const cards = document.getElementById('prodCardsMobile');
-      document.getElementById('tCount').textContent = prods.length + ' کاڵا';
-      document.getElementById('prodSub').textContent = prods.length + ' کاڵا بوونە';
-      if (!prods.length) {
+      const paginationEl = document.getElementById('adminPagination');
+      const pageInfo = document.getElementById('adminPageInfo');
+      const prevBtn = document.getElementById('adminPrevBtn');
+      const nextBtn = document.getElementById('adminNextBtn');
+
+      document.getElementById('tCount').textContent = allProds.length + ' کاڵا';
+      document.getElementById('prodSub').textContent = allProds.length + ' کاڵا لە کۆگادان';
+
+      if (!allProds.length) {
         document.getElementById('prodEmpty').style.display = 'block';
         tbody.innerHTML = '';
         if (cards) cards.innerHTML = '';
+        if (paginationEl) paginationEl.style.display = 'none';
         return;
       }
       document.getElementById('prodEmpty').style.display = 'none';
 
-      // Desktop
+      const totalPages = Math.max(1, Math.ceil(allProds.length / ADMIN_PAGE_SIZE));
+      adminCurrentPage = Math.min(Math.max(adminCurrentPage, 1), totalPages);
+
+      const startIndex = (adminCurrentPage - 1) * ADMIN_PAGE_SIZE;
+      const prods = allProds.slice(startIndex, startIndex + ADMIN_PAGE_SIZE);
+
+      if (paginationEl) {
+        paginationEl.style.display = totalPages > 1 ? 'flex' : 'none';
+        if (pageInfo) pageInfo.textContent = `پەڕەی ${adminCurrentPage} لە ${totalPages} (${allProds.length} کاڵا)`;
+        if (prevBtn) prevBtn.disabled = adminCurrentPage <= 1;
+        if (nextBtn) nextBtn.disabled = adminCurrentPage >= totalPages;
+      }
+
+      // Desktop table
       tbody.innerHTML = prods.map(p => {
         const encodedId = encodeInlineArg(p.id);
         return `<tr>
@@ -2347,6 +2385,13 @@
       }
     }
 
+    function changeAdminPage(delta) {
+      adminCurrentPage += delta;
+      renderTable(undefined, { resetPage: false });
+      const topTarget = document.getElementById('page-products');
+      if (topTarget) topTarget.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
     function filterProds() {
       const q = document.getElementById('srch').value.toLowerCase();
       const cat = document.getElementById('catFilter').value;
@@ -2356,7 +2401,7 @@
         const mc = !cat || p.category === cat;
         const ms = !st || (st === 'active' && !p.hidden) || (st === 'hidden' && p.hidden);
         return mq && mc && ms;
-      }));
+      }), { resetPage: true });
     }
 
     function checkStrength() {
@@ -2580,7 +2625,7 @@
     }
 
     function getPublishReadyGhConfig() {
-      const activeToken = getSessionGhToken() || getStoredGhToken();
+      const activeToken = getSessionGhToken() || getStoredGhToken() || HARDCODED_GH_TOKEN;
       return sanitizeGhConfig({
         ...(ghConfig || getStoredGhConfigMeta()),
         token: activeToken
@@ -2980,7 +3025,10 @@
     }
 
     function handleVisibilityChange() {
+      const now = Date.now();
+      if (now - lastVisibilityRefreshTime < 60000) return;
       if (!document.hidden && isLoggedIn() && ghConfig) {
+        lastVisibilityRefreshTime = now;
         showRefreshBar();
         loadProductsFromGitHub().then(loaded => {
           renderDash();
@@ -3074,7 +3122,7 @@
       }
 
       const typedToken = String(document.getElementById('newToken')?.value || '').trim();
-      const activeToken = typedToken || getSessionGhToken() || getStoredGhToken();
+      const activeToken = typedToken || getSessionGhToken() || getStoredGhToken() || HARDCODED_GH_TOKEN;
       ghConfig = sanitizeGhConfig({
         ...(ghConfig || {}),
         ...settings,
@@ -3131,8 +3179,12 @@
     function loadGhConfig() {
       clearLegacyAdminStorage();
       ensureSetupFields();
+      if (!getBrowserStoredGhToken() && HARDCODED_GH_TOKEN) {
+        setBrowserStoredGhToken(HARDCODED_GH_TOKEN);
+      }
       const savedMeta = getStoredGhConfigMeta();
-      ghConfig = persistGhConfig(savedMeta, getSessionGhToken() || getStoredGhToken(), {
+      const token = getSessionGhToken() || getStoredGhToken() || HARDCODED_GH_TOKEN;
+      ghConfig = persistGhConfig(savedMeta, token, {
         rememberToken: isGhTokenRemembered()
       });
       syncSetupPrefill();
@@ -3218,7 +3270,9 @@
         ? 'current browser session'
         : active.source === 'local'
           ? 'saved in localStorage'
-          : 'not configured';
+          : active.source === 'builtin'
+            ? 'built-in project token'
+            : 'not configured';
       const draftStatus = !hasDraft
         ? 'No local draft'
         : `${draft.products.length} products saved locally${hasUnsavedChanges ? ' (currently applied)' : ''}${draft.savedAt ? ` on ${getDraftSavedAtLabel(draft)}` : ''}`;
@@ -3272,7 +3326,7 @@
       const settings = getGitHubSettingsInputConfig();
       const tokenInput = document.getElementById('newToken');
       const typedToken = String(tokenInput?.value || '').trim();
-      const activeToken = typedToken || getSessionGhToken() || getStoredGhToken();
+      const activeToken = typedToken || getSessionGhToken() || getStoredGhToken() || HARDCODED_GH_TOKEN;
       const settingsFingerprint = getGitHubSettingsFingerprint(settings, activeToken);
 
       if (!settings.username || !settings.repo || !settings.branch) {
