@@ -2,4587 +2,4573 @@
   {
     "category": "baby",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "baby-001",
     "image": "mnalan/photo_1_2026-02-21_00-54-52.webp",
     "image_webp": "mnalan/photo_1_2026-02-21_00-54-52.webp",
     "name": "تەمەرندی پاکان",
-    "price": 1000,
     "name_en": "",
-    "description_en": ""
+    "price": 1000
   },
   {
     "category": "baby",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "baby-002",
     "image": "mnalan/photo_2_2026-02-21_00-54-52.webp",
     "image_webp": "mnalan/photo_2_2026-02-21_00-54-52.webp",
     "name": "پەشمەک سپی",
-    "price": 4750,
     "name_en": "",
-    "description_en": ""
+    "price": 4750
   },
   {
     "category": "baby",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "baby-003",
     "image": "mnalan/photo_3_2026-02-21_00-54-52.webp",
     "image_webp": "mnalan/photo_3_2026-02-21_00-54-52.webp",
     "name": "قاوەی زۆۆ",
-    "price": 3500,
     "name_en": "",
-    "description_en": ""
+    "price": 3500
   },
   {
     "category": "baby",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "baby-004",
     "image": "mnalan/photo_4_2026-02-21_00-54-52.webp",
     "image_webp": "mnalan/photo_4_2026-02-21_00-54-52.webp",
     "name": "کۆلا بۆن",
-    "price": 5000,
     "name_en": "",
-    "description_en": ""
+    "price": 5000
   },
   {
     "category": "baby",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "baby-005",
     "image": "mnalan/photo_5_2026-02-21_00-54-52.webp",
     "image_webp": "mnalan/photo_5_2026-02-21_00-54-52.webp",
     "name": "تەمەرندی لول",
-    "price": 4750,
     "name_en": "",
-    "description_en": ""
+    "price": 4750
   },
   {
     "category": "baby",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "baby-006",
     "image": "mnalan/photo_7_2026-02-21_00-54-52.webp",
     "image_webp": "mnalan/photo_7_2026-02-21_00-54-52.webp",
     "name": "نەستەلەی ئۆتۆن قاوە",
-    "price": 5250,
     "name_en": "",
-    "description_en": ""
+    "price": 5250
   },
   {
     "category": "baby",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "baby-007",
     "image": "mnalan/photo_17_2026-02-21_00-54-52.webp",
     "image_webp": "mnalan/photo_17_2026-02-21_00-54-52.webp",
     "name": "نەستەلەی ئۆتۆن سپی",
-    "price": 5000,
     "name_en": "",
-    "description_en": ""
+    "price": 5000
   },
   {
     "category": "baby",
     "description": "48 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "baby-008",
     "image": "mnalan/photo_8_2026-02-21_00-54-52.webp",
     "image_webp": "mnalan/photo_8_2026-02-21_00-54-52.webp",
     "name": "تەمەرندی تەخت",
-    "price": 2500,
     "name_en": "",
-    "description_en": ""
+    "price": 2500
   },
   {
     "category": "baby",
     "description": "45 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "baby-009",
     "image": "mnalan/photo_9_2026-02-21_00-54-52.webp",
     "image_webp": "mnalan/photo_9_2026-02-21_00-54-52.webp",
     "name": "مەساسەی سوور عادی",
-    "price": 3000,
     "name_en": "",
-    "description_en": ""
+    "price": 3000
   },
   {
     "category": "baby",
     "description": "60 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "baby-010",
     "image": "mnalan/photo_11_2026-02-21_00-54-52.webp",
     "image_webp": "mnalan/photo_11_2026-02-21_00-54-52.webp",
     "name": "مەساسەی دەبە کۆلا",
-    "price": 5000,
     "name_en": "",
-    "description_en": ""
+    "price": 5000
   },
   {
     "category": "baby",
     "description": "60 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "baby-011",
     "image": "mnalan/photo_12_2026-02-21_00-54-52.webp",
     "image_webp": "mnalan/photo_12_2026-02-21_00-54-52.webp",
     "name": "مەساسەی دەبە گێلاس",
-    "price": 5000,
     "name_en": "",
-    "description_en": ""
+    "price": 5000
   },
   {
     "category": "baby",
     "description": "60 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "baby-012",
     "image": "mnalan/photo_13_2026-02-21_00-54-52.webp",
     "image_webp": "mnalan/photo_13_2026-02-21_00-54-52.webp",
     "name": "مەساسەی دەبە ڕەش",
-    "price": 5000,
     "name_en": "",
-    "description_en": ""
+    "price": 5000
   },
   {
     "category": "baby",
     "description": "100 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "baby-013",
     "image": "mnalan/photo_14_2026-02-21_00-54-52.webp",
     "image_webp": "mnalan/photo_14_2026-02-21_00-54-52.webp",
     "name": "مەساسەی ورد",
-    "price": 2000,
     "name_en": "",
-    "description_en": ""
+    "price": 2000
   },
   {
     "category": "baby",
     "description": "60 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "baby-014",
     "image": "mnalan/photo_15_2026-02-21_00-54-52.webp",
     "image_webp": "mnalan/photo_15_2026-02-21_00-54-52.webp",
     "name": "مەساسەی دەبە شاتوو",
-    "price": 5000,
     "name_en": "",
-    "description_en": ""
+    "price": 5000
   },
   {
     "category": "baby",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "baby-015",
     "image": "mnalan/photo_16_2026-02-21_00-54-52.webp",
     "image_webp": "mnalan/photo_16_2026-02-21_00-54-52.webp",
     "name": "نوقڵی ورد ئایدین",
-    "price": 5000,
     "name_en": "",
-    "description_en": ""
+    "price": 5000
   },
   {
     "category": "baby",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "baby-016",
     "image": "mnalan/photo_19_2026-02-21_00-54-52.webp",
     "image_webp": "mnalan/photo_19_2026-02-21_00-54-52.webp",
     "name": "تەمەرندی ڕوڵ",
-    "price": 5000,
     "name_en": "",
-    "description_en": ""
+    "price": 5000
   },
   {
     "category": "baby",
     "description": "12 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "baby-017",
     "image": "mnalan/photo_20_2026-02-21_00-54-52.webp",
     "image_webp": "mnalan/photo_20_2026-02-21_00-54-52.webp",
     "name": "نوقڵی ڕانا",
-    "price": 2250,
     "name_en": "",
-    "description_en": ""
+    "price": 2250
   },
   {
     "category": "baby",
     "description": "100 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "baby-018",
     "image": "mnalan/photo_21_2026-02-21_00-54-52.webp",
     "image_webp": "mnalan/photo_21_2026-02-21_00-54-52.webp",
     "name": "چوکلێتی ئایدن",
-    "price": 2500,
     "name_en": "",
-    "description_en": ""
+    "price": 2500
   },
   {
     "category": "baby",
     "description": "100 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "baby-019",
     "image": "mnalan/photo_22_2026-02-21_00-54-52.webp",
     "image_webp": "mnalan/photo_22_2026-02-21_00-54-52.webp",
     "name": "بنێشتی یوبی 100",
-    "price": 2500,
     "name_en": "",
-    "description_en": ""
+    "price": 2500
   },
   {
     "category": "baby",
     "description": "12 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "baby-020",
     "image": "mnalan/photo_24_2026-02-21_00-54-52.webp",
     "image_webp": "mnalan/photo_24_2026-02-21_00-54-52.webp",
     "name": "تەمەرندی ڕستە",
-    "price": 2500,
     "name_en": "",
-    "description_en": ""
+    "price": 2500
   },
   {
     "category": "baby",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "baby-021",
     "image": "mnalan/photo_25_2026-02-21_00-54-52.webp",
     "image_webp": "mnalan/photo_25_2026-02-21_00-54-52.webp",
     "name": "قاوەی زۆۆ ٢",
-    "price": 3500,
     "name_en": "",
-    "description_en": ""
+    "price": 3500
   },
   {
     "category": "baby",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "baby-022",
     "image": "mnalan/photo_26_2026-02-21_00-54-52.webp",
     "image_webp": "mnalan/photo_26_2026-02-21_00-54-52.webp",
     "name": "سەمیریری",
-    "price": 3500,
     "name_en": "",
-    "description_en": ""
+    "price": 3500
   },
   {
     "category": "baby",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "baby-023",
     "image": "mnalan/photo_27_2026-02-21_00-54-52.webp",
     "image_webp": "mnalan/photo_27_2026-02-21_00-54-52.webp",
     "name": "نوقڵی ئاناتا شیر",
-    "price": 5000,
     "name_en": "",
-    "description_en": ""
+    "price": 5000
   },
   {
     "category": "baby",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "baby-024",
     "image": "mnalan/photo_28_2026-02-21_00-54-52.webp",
     "image_webp": "mnalan/photo_28_2026-02-21_00-54-52.webp",
     "name": "نەوقڵی ئاناتا قاوە",
-    "price": 5000,
     "name_en": "",
-    "description_en": ""
+    "price": 5000
   },
   {
     "category": "baby",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "baby-025",
     "image": "mnalan/photo_29_2026-02-21_00-54-52.webp",
     "image_webp": "mnalan/photo_29_2026-02-21_00-54-52.webp",
     "name": "تەمەرندی سرنج",
-    "price": 4500,
     "name_en": "",
-    "description_en": ""
+    "price": 4500
   },
   {
     "category": "baby",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "baby-026",
     "image": "mnalan/photo_30_2026-02-21_00-54-52.webp",
     "image_webp": "mnalan/photo_30_2026-02-21_00-54-52.webp",
     "name": "نەستەلەی بستە",
-    "price": 5000,
     "name_en": "",
-    "description_en": ""
+    "price": 5000
   },
   {
     "category": "baby",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "baby-027",
     "image": "mnalan/IMG_6346.webp",
     "image_webp": "mnalan/IMG_6346.webp",
     "name": "مۆتەی قاوە",
-    "price": 5000,
     "name_en": "",
-    "description_en": ""
+    "price": 5000
   },
   {
     "category": "baby",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "baby-028",
     "image": "mnalan/IMG_6348.webp",
     "image_webp": "mnalan/IMG_6348.webp",
     "name": "کەفاو",
-    "price": 4500,
     "name_en": "",
-    "description_en": ""
+    "price": 4500
   },
   {
     "category": "baby",
     "description": "40 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "baby-029",
     "image": "mnalan/IMG_6350.webp",
     "image_webp": "mnalan/IMG_6350.webp",
     "name": "مارشمیلۆ ورج",
-    "price": 8000,
     "name_en": "",
-    "description_en": ""
+    "price": 8000
   },
   {
     "category": "baby",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "baby-030",
     "image": "mnalan/IMG_6351.webp",
     "image_webp": "mnalan/IMG_6351.webp",
     "name": "لینکەر",
-    "price": 5250,
     "name_en": "",
-    "description_en": ""
+    "price": 5250
   },
   {
     "category": "baby",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "baby-031",
     "image": "mnalan/IMG_6352.webp",
     "image_webp": "mnalan/IMG_6352.webp",
     "name": "ڕامتین",
-    "price": 3000,
     "name_en": "",
-    "description_en": ""
+    "price": 3000
   },
   {
     "category": "baby",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "baby-032",
     "image": "mnalan/IMG_6354.webp",
     "image_webp": "mnalan/IMG_6354.webp",
     "name": "جەلی مەتری لولە",
-    "price": 5000,
     "name_en": "",
-    "description_en": ""
+    "price": 5000
   },
   {
     "category": "baby",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "baby-033",
     "image": "mnalan/IMG_6358.webp",
     "image_webp": "mnalan/IMG_6358.webp",
     "name": "قاوە مەڵهەم",
-    "price": 5000,
     "name_en": "",
-    "description_en": ""
+    "price": 5000
   },
   {
     "category": "baby",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "baby-034",
     "image": "mnalan/IMG_6359.webp",
     "image_webp": "mnalan/IMG_6359.webp",
     "name": "نەستەلەئ چەکوش",
-    "price": 5250,
     "name_en": "",
-    "description_en": ""
+    "price": 5250
   },
   {
     "category": "baby",
     "description": "60 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "baby-035",
     "image": "mnalan/IMG_6360.webp",
     "image_webp": "mnalan/IMG_6360.webp",
     "name": "تۆپ",
-    "price": 8000,
     "name_en": "",
-    "description_en": ""
+    "price": 8000
   },
   {
     "category": "baby",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "baby-036",
     "image": "mnalan/IMG_6361.webp",
     "image_webp": "mnalan/IMG_6361.webp",
     "name": "ناوکە کولەکە پاشا",
-    "price": 5250,
     "name_en": "",
-    "description_en": ""
+    "price": 5250
   },
   {
     "category": "baby",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "baby-037",
     "image": "mnalan/IMG_6362.webp",
     "image_webp": "mnalan/IMG_6362.webp",
     "name": "شەربەتی ئیتالی",
-    "price": 5250,
     "name_en": "",
-    "description_en": ""
+    "price": 5250
   },
   {
     "category": "baby",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "baby-038",
     "image": "mnalan/IMG_6363.webp",
     "image_webp": "mnalan/IMG_6363.webp",
     "name": "بستە پاشا",
-    "price": 5250,
     "name_en": "",
-    "description_en": ""
+    "price": 5250
   },
   {
     "category": "baby",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "baby-039",
     "image": "mnalan/IMG_6365.webp",
     "image_webp": "mnalan/IMG_6365.webp",
     "name": "ئاماسی",
-    "price": 5250,
     "name_en": "",
-    "description_en": ""
+    "price": 5250
   },
   {
     "category": "baby",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "baby-040",
     "image": "mnalan/IMG_6367.webp",
     "image_webp": "mnalan/IMG_6367.webp",
     "name": "کۆکۆسی میکسی",
-    "price": 5000,
     "name_en": "",
-    "description_en": ""
+    "price": 5000
   },
   {
     "category": "baby",
     "description": "20عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "baby-041",
     "image": "mnalan/IMG_6368.webp",
     "image_webp": "mnalan/IMG_6368.webp",
     "name": "جەلی هەمبەرگر",
-    "price": 4000,
     "name_en": "",
-    "description_en": ""
+    "price": 4000
   },
   {
     "category": "baby",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "baby-042",
     "image": "mnalan/IMG_6369.webp",
     "image_webp": "mnalan/IMG_6369.webp",
     "name": "X.5",
-    "price": 5250,
     "name_en": "",
-    "description_en": ""
+    "price": 5250
   },
   {
     "category": "baby",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "baby-043",
     "image": "mnalan/IMG_6370.webp",
     "image_webp": "mnalan/IMG_6370.webp",
     "name": "ناوکە پاش",
-    "price": 5250,
     "name_en": "",
-    "description_en": ""
+    "price": 5250
   },
   {
     "category": "baby",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "baby-044",
     "image": "mnalan/IMG_6371.webp",
     "image_webp": "mnalan/IMG_6371.webp",
     "name": "جلکەی سۆلار",
-    "price": 4500,
     "name_en": "",
-    "description_en": ""
+    "price": 4500
   },
   {
     "category": "baby",
     "description": "40 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "baby-045",
     "image": "mnalan/IMG_6405.webp",
     "image_webp": "mnalan/IMG_6405.webp",
     "name": "کونجی سپی",
-    "price": 7000,
     "name_en": "",
-    "description_en": ""
+    "price": 7000
   },
   {
     "category": "baby",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "baby-046",
     "image": "mnalan/IMG_6406.webp",
     "image_webp": "mnalan/IMG_6406.webp",
     "name": "مارشمیلۆ کیس لولە",
-    "price": 5250,
     "name_en": "",
-    "description_en": ""
+    "price": 5250
   },
   {
     "category": "baby",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "baby-047",
     "image": "mnalan/IMG_6407.webp",
     "image_webp": "mnalan/IMG_6407.webp",
     "name": "جەلی میکس ڕوڵ",
-    "price": 5000,
     "name_en": "",
-    "description_en": ""
+    "price": 5000
   },
   {
     "category": "baby",
     "description": "48 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "baby-048",
     "image": "mnalan/IMG_6408.webp",
     "image_webp": "mnalan/IMG_6408.webp",
     "name": "جەلی کەباب",
-    "price": 5000,
     "name_en": "",
-    "description_en": ""
+    "price": 5000
   },
   {
     "category": "baby",
     "description": "40عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "baby-049",
     "image": "mnalan/IMG_6409.webp",
     "image_webp": "mnalan/IMG_6409.webp",
     "name": "کونجی ڕەش",
-    "price": 7000,
     "name_en": "",
-    "description_en": ""
+    "price": 7000
   },
   {
     "category": "baby",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "baby-050",
     "image": "mnalan/IMG_6410.webp",
     "image_webp": "mnalan/IMG_6410.webp",
     "name": "جەلی هەمبەرگر",
-    "price": 5000,
     "name_en": "",
-    "description_en": ""
+    "price": 5000
   },
   {
     "category": "baby",
     "description": "20 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "baby-051",
     "image": "mnalan/IMG_6411.webp",
     "image_webp": "mnalan/IMG_6411.webp",
     "name": "جەلئ قەلەم",
-    "price": 4250,
     "name_en": "",
-    "description_en": ""
+    "price": 4250
   },
   {
     "category": "baby",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "baby-052",
     "image": "mnalan/IMG_6412.webp",
     "image_webp": "mnalan/IMG_6412.webp",
     "name": "جەلی پیزا قتو",
-    "price": 5000,
     "name_en": "",
-    "description_en": ""
+    "price": 5000
   },
   {
     "category": "baby",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "baby-053",
     "image": "mnalan/IMG_6413.webp",
     "image_webp": "mnalan/IMG_6413.webp",
     "name": "جەلی ڕستە شەیبا",
-    "price": 4500,
     "name_en": "",
-    "description_en": ""
+    "price": 4500
   },
   {
     "category": "baby",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "baby-054",
     "image": "mnalan/IMG_6414.webp",
     "image_webp": "mnalan/IMG_6414.webp",
     "name": "جەلی ڕستە",
-    "price": 5000,
     "name_en": "",
-    "description_en": ""
+    "price": 5000
   },
   {
     "category": "baby",
     "description": "12 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "baby-055",
     "image": "mnalan/IMG_6415.webp",
     "image_webp": "mnalan/IMG_6415.webp",
     "name": "مارشمیلۆ ڕستە",
-    "price": 2500,
     "name_en": "",
-    "description_en": ""
+    "price": 2500
   },
   {
     "category": "baby",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "baby-056",
     "image": "mnalan/IMG_6416.webp",
     "image_webp": "mnalan/IMG_6416.webp",
     "name": "شەربەتی جەلی کیس",
-    "price": 5000,
     "name_en": "",
-    "description_en": ""
+    "price": 5000
   },
   {
     "category": "baby",
     "description": "60 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "baby-057",
     "image": "mnalan/IMG_6417.webp",
     "image_webp": "mnalan/IMG_6417.webp",
     "name": "ڕەسم",
-    "price": 9000,
     "name_en": "",
-    "description_en": ""
+    "price": 9000
   },
   {
     "category": "baby",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "baby-058",
     "image": "mnalan/IMG_6418.webp",
     "image_webp": "mnalan/IMG_6418.webp",
     "name": "وەن حەب",
-    "price": 5000,
     "name_en": "",
-    "description_en": ""
+    "price": 5000
   },
   {
     "category": "baby",
     "description": "48 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "baby-059",
     "image": "mnalan/IMG_6419.webp",
     "image_webp": "mnalan/IMG_6419.webp",
     "name": "بوبی لاکیشە",
-    "price": 2000,
     "name_en": "",
-    "description_en": ""
+    "price": 2000
   },
   {
     "category": "baby",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "baby-060",
     "image": "mnalan/IMG_6420.webp",
     "image_webp": "mnalan/IMG_6420.webp",
     "name": "جەلی پیتزا",
-    "price": 5000,
     "name_en": "",
-    "description_en": ""
+    "price": 5000
   },
   {
     "category": "baby",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "baby-061",
     "image": "mnalan/IMG_6421.webp",
     "image_webp": "mnalan/IMG_6421.webp",
     "name": "جەلئ کوبرا",
-    "price": 5000,
     "name_en": "",
-    "description_en": ""
+    "price": 5000
   },
   {
     "category": "baby",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "baby-062",
     "image": "mnalan/IMG_6422.webp",
     "image_webp": "mnalan/IMG_6422.webp",
     "name": "جەلی کرم کۆکتیل",
-    "price": 0,
     "name_en": "",
-    "description_en": ""
+    "price": 0
   },
   {
     "category": "baby",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "baby-063",
     "image": "mnalan/IMG_6424.webp",
     "image_webp": "mnalan/IMG_6424.webp",
     "name": "جەلی کرم بلوبیری",
-    "price": 5000,
     "name_en": "",
-    "description_en": ""
+    "price": 5000
   },
   {
     "category": "baby",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "baby-064",
     "image": "mnalan/IMG_6425.webp",
     "image_webp": "mnalan/IMG_6425.webp",
     "name": "جەلی زمان",
-    "price": 5000,
     "name_en": "",
-    "description_en": ""
+    "price": 5000
   },
   {
     "category": "baby",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "baby-065",
     "image": "mnalan/IMG_6428.webp",
     "image_webp": "mnalan/IMG_6428.webp",
     "name": "نوقولی کیس تیکەلە",
-    "price": 5000,
     "name_en": "",
-    "description_en": ""
+    "price": 5000
   },
   {
     "category": "baby",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "baby-066",
     "image": "mnalan/IMG_6429.webp",
     "image_webp": "mnalan/IMG_6429.webp",
     "name": "نوقولی کیس قاوە",
-    "price": 5000,
     "name_en": "",
-    "description_en": ""
+    "price": 5000
   },
   {
     "category": "baby",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "baby-067",
     "image": "mnalan/IMG_6430.webp",
     "image_webp": "mnalan/IMG_6430.webp",
     "name": "نوقولی کیس شیر",
-    "price": 5000,
     "name_en": "",
-    "description_en": ""
+    "price": 5000
   },
   {
     "category": "baby",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "baby-068",
     "image": "mnalan/IMG_6448.webp",
     "image_webp": "mnalan/IMG_6448.webp",
     "name": "ستیکی بلوبیری",
-    "price": 4000,
     "name_en": "",
-    "description_en": ""
+    "price": 4000
   },
   {
     "category": "baby",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "baby-069",
     "image": "mnalan/IMG_6449.webp",
     "image_webp": "mnalan/IMG_6449.webp",
     "name": "ستیکی تیکەلە",
-    "price": 4000,
     "name_en": "",
-    "description_en": ""
+    "price": 4000
   },
   {
     "category": "baby",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "baby-070",
     "image": "mnalan/IMG_6450.webp",
     "image_webp": "mnalan/IMG_6450.webp",
     "name": "ستیکی کۆلا",
-    "price": 4000,
     "name_en": "",
-    "description_en": ""
+    "price": 4000
   },
   {
     "category": "baby",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "baby-071",
     "image": "mnalan/IMG_6451.webp",
     "image_webp": "mnalan/IMG_6451.webp",
     "name": "ستیکی لیمۆ",
-    "price": 4000,
     "name_en": "",
-    "description_en": ""
+    "price": 4000
   },
   {
     "category": "baby",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "baby-072",
     "image": "mnalan/IMG_6452.webp",
     "image_webp": "mnalan/IMG_6452.webp",
     "name": "ستیکی قەزوان",
-    "price": 4000,
     "name_en": "",
-    "description_en": ""
+    "price": 4000
   },
   {
     "category": "baby",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "baby-073",
     "image": "mnalan/IMG_6453.webp",
     "image_webp": "mnalan/IMG_6453.webp",
     "name": "ستیکی نەعنا",
-    "price": 4000,
     "name_en": "",
-    "description_en": ""
+    "price": 4000
   },
   {
     "category": "baby",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "baby-074",
     "image": "mnalan/IMG_6454.webp",
     "image_webp": "mnalan/IMG_6454.webp",
     "name": "ستیکی شوتی",
-    "price": 4000,
     "name_en": "",
-    "description_en": ""
+    "price": 4000
   },
   {
     "category": "baby",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "baby-075",
     "image": "mnalan/IMG_6455.webp",
     "image_webp": "mnalan/IMG_6455.webp",
     "name": "ڕیلاکسی شوتی",
-    "price": 4000,
     "name_en": "",
-    "description_en": ""
+    "price": 4000
   },
   {
     "category": "baby",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "baby-076",
     "image": "mnalan/IMG_6456.webp",
     "image_webp": "mnalan/IMG_6456.webp",
     "name": "ستیکی شلک",
-    "price": 4000,
     "name_en": "",
-    "description_en": ""
+    "price": 4000
   },
   {
     "category": "baby",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "baby-077",
     "image": "mnalan/IMG_6457.webp",
     "image_webp": "mnalan/IMG_6457.webp",
     "name": "ڕیلاکس نەعنا شین",
-    "price": 4000,
     "name_en": "",
-    "description_en": ""
+    "price": 4000
   },
   {
     "category": "baby",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "baby-078",
     "image": "mnalan/IMG_6458.webp",
     "image_webp": "mnalan/IMG_6458.webp",
     "name": "ڕیلاکسی شلک",
-    "price": 4000,
     "name_en": "",
-    "description_en": ""
+    "price": 4000
   },
   {
     "category": "baby",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "baby-079",
     "image": "mnalan/IMG_6459.webp",
     "image_webp": "mnalan/IMG_6459.webp",
     "name": "ستیکی پرتەقاڵ",
-    "price": 4000,
     "name_en": "",
-    "description_en": ""
+    "price": 4000
   },
   {
     "category": "baby",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "baby-080",
     "image": "mnalan/IMG_6460.webp",
     "image_webp": "mnalan/IMG_6460.webp",
     "name": "ستیکی بوبی",
-    "price": 4000,
     "name_en": "",
-    "description_en": ""
+    "price": 4000
   },
   {
     "category": "baby",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "baby-081",
     "image": "mnalan/IMG_6461.webp",
     "image_webp": "mnalan/IMG_6461.webp",
     "name": "ستیکی دارچینی",
-    "price": 4000,
     "name_en": "",
-    "description_en": ""
+    "price": 4000
   },
   {
     "category": "baby",
     "description": "20 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "baby-082",
     "image": "mnalan/IMG_6462.webp",
     "image_webp": "mnalan/IMG_6462.webp",
     "name": "سەمیری قتو",
-    "price": 4250,
     "name_en": "",
-    "description_en": ""
+    "price": 4250
   },
   {
     "category": "baby",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "baby-083",
     "image": "mnalan/IMG_6463.webp",
     "image_webp": "mnalan/IMG_6463.webp",
     "name": "ستیکی حێل",
-    "price": 4000,
     "name_en": "",
-    "description_en": ""
+    "price": 4000
   },
   {
     "category": "baby",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "baby-084",
     "image": "mnalan/IMG_6464.webp",
     "image_webp": "mnalan/IMG_6464.webp",
     "name": "ستیکی تایگەر",
-    "price": 4000,
     "name_en": "",
-    "description_en": ""
+    "price": 4000
   },
   {
     "category": "baby",
     "description": "100 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "baby-085",
     "image": "mnalan/IMG_6465.webp",
     "image_webp": "mnalan/IMG_6465.webp",
     "name": "بنێشتی بۆین ٤غرام",
-    "price": 16000,
     "name_en": "",
-    "description_en": ""
+    "price": 16000
   },
   {
     "category": "baby",
     "description": "100 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "baby-086",
     "image": "mnalan/IMG_6466.webp",
     "image_webp": "mnalan/IMG_6466.webp",
     "name": "بنیشتی سینی شوتی",
-    "price": 3000,
     "name_en": "",
-    "description_en": ""
+    "price": 3000
   },
   {
     "category": "baby",
     "description": "100 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "baby-087",
     "image": "mnalan/IMG_6467.webp",
     "image_webp": "mnalan/IMG_6467.webp",
     "name": "بنێشتی سینی بلوبیری",
-    "price": 3000,
     "name_en": "",
-    "description_en": ""
+    "price": 3000
   },
   {
     "category": "baby",
     "description": "100 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "baby-088",
     "image": "mnalan/IMG_6468.webp",
     "image_webp": "mnalan/IMG_6468.webp",
     "name": "بنێشتی سینی کۆلا",
-    "price": 3500,
     "name_en": "",
-    "description_en": ""
+    "price": 3500
   },
   {
     "category": "baby",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "baby-089",
     "image": "mnalan/IMG_6469.webp",
     "image_webp": "mnalan/IMG_6469.webp",
     "name": "سەمیری لول پاکەت",
-    "price": 5250,
     "name_en": "",
-    "description_en": ""
+    "price": 5250
   },
   {
     "category": "baby",
     "description": "100 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "baby-090",
     "image": "mnalan/IMG_6470.webp",
     "image_webp": "mnalan/IMG_6470.webp",
     "name": "لیرەی بنیشت",
-    "price": 3500,
     "name_en": "",
-    "description_en": ""
+    "price": 3500
   },
   {
     "category": "cake",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "cake-001",
     "image": "kek/IMG_0214.webp",
     "image_webp": "kek/IMG_0214.webp",
     "name": "نەزەری دووقول",
-    "price": 5250,
     "name_en": "",
-    "description_en": ""
+    "price": 5250
   },
   {
     "category": "cake",
     "description": "60 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "cake-002",
     "image": "kek/IMG_0211.webp",
     "image_webp": "kek/IMG_0211.webp",
     "name": "کولیچەی دوانی",
-    "price": 5750,
     "name_en": "",
-    "description_en": ""
+    "price": 5750
   },
   {
     "category": "cake",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "cake-003",
     "image": "kek/IMG_0212.webp",
     "image_webp": "kek/IMG_0212.webp",
     "name": "کێکی ئادرین",
-    "price": 5000,
     "name_en": "",
-    "description_en": ""
+    "price": 5000
   },
   {
     "category": "cake",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "cake-004",
     "image": "kek/IMG_0213.webp",
     "image_webp": "kek/IMG_0213.webp",
     "name": "لۆپۆچۆکۆ",
-    "price": 5250,
     "name_en": "",
-    "description_en": ""
+    "price": 5250
   },
   {
     "category": "cake",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "cake-005",
     "image": "kek/photo_1_2026-02-20_22-41-44.webp",
     "image_webp": "kek/photo_1_2026-02-20_22-41-44.webp",
     "name": "کێکی دوانی قاوە",
-    "price": 2500,
     "name_en": "",
-    "description_en": ""
+    "price": 2500
   },
   {
     "category": "cake",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "cake-006",
     "image": "kek/photo_2_2026-02-20_22-41-44.webp",
     "image_webp": "kek/photo_2_2026-02-20_22-41-44.webp",
     "name": "موفید شلیک",
-    "price": 4750,
     "name_en": "",
-    "description_en": ""
+    "price": 4750
   },
   {
     "category": "cake",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "cake-007",
     "image": "kek/photo_3_2026-02-20_22-41-44.webp",
     "image_webp": "kek/photo_3_2026-02-20_22-41-44.webp",
     "name": "موفید پرتەقاڵ",
-    "price": 4750,
     "name_en": "",
-    "description_en": ""
+    "price": 4750
   },
   {
     "category": "cake",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "cake-008",
     "image": "kek/photo_7_2026-02-20_22-41-44.webp",
     "image_webp": "kek/photo_7_2026-02-20_22-41-44.webp",
     "name": "موفید پەنیر",
-    "price": 4750,
     "name_en": "",
-    "description_en": ""
+    "price": 4750
   },
   {
     "category": "cake",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "cake-009",
     "image": "kek/photo_5_2026-02-20_22-41-44.webp",
     "image_webp": "kek/photo_5_2026-02-20_22-41-44.webp",
     "name": "موفید پڵەس کەرەمێڵ",
-    "price": 4750,
     "name_en": "",
-    "description_en": ""
+    "price": 4750
   },
   {
     "category": "cake",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "cake-010",
     "image": "kek/photo_4_2026-02-20_22-41-44.webp",
     "image_webp": "kek/photo_4_2026-02-20_22-41-44.webp",
     "name": "کێکی جەلی",
-    "price": 5000,
     "name_en": "",
-    "description_en": ""
+    "price": 5000
   },
   {
     "category": "cake",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "cake-011",
     "image": "kek/photo_6_2026-02-20_22-41-44.webp",
     "image_webp": "kek/photo_6_2026-02-20_22-41-44.webp",
     "name": "دوو قول",
-    "price": 5000,
     "name_en": "",
-    "description_en": ""
+    "price": 5000
   },
   {
     "category": "cake",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "cake-012",
     "image": "kek/photo_8_2026-02-20_22-41-44.webp",
     "image_webp": "kek/photo_8_2026-02-20_22-41-44.webp",
     "name": "فۆڕچن تەخت سور",
-    "price": 5000,
     "name_en": "",
-    "description_en": ""
+    "price": 5000
   },
   {
     "category": "cake",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "cake-013",
     "image": "kek/photo_9_2026-02-20_22-41-44.webp",
     "image_webp": "kek/photo_9_2026-02-20_22-41-44.webp",
     "name": "فۆڕچت دوبەی",
-    "price": 5000,
     "name_en": "",
-    "description_en": ""
+    "price": 5000
   },
   {
     "category": "cake",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "cake-014",
     "image": "kek/photo_10_2026-02-20_22-41-44.webp",
     "image_webp": "kek/photo_10_2026-02-20_22-41-44.webp",
     "name": "کێکی روزینا کرێم",
-    "price": 5000,
     "name_en": "",
-    "description_en": ""
+    "price": 5000
   },
   {
     "category": "cake",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "cake-015",
     "image": "kek/photo_11_2026-02-20_22-41-44.webp",
     "image_webp": "kek/photo_11_2026-02-20_22-41-44.webp",
     "name": "دیل کێک سور",
-    "price": 5000,
     "name_en": "",
-    "description_en": ""
+    "price": 5000
   },
   {
     "category": "cake",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "cake-016",
     "image": "kek/photo_12_2026-02-20_22-41-44.webp",
     "image_webp": "kek/photo_12_2026-02-20_22-41-44.webp",
     "name": "دیل کێک ڕەش",
-    "price": 5000,
     "name_en": "",
-    "description_en": ""
+    "price": 5000
   },
   {
     "category": "cake",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "cake-017",
     "image": "kek/photo_14_2026-02-20_22-41-44.webp",
     "image_webp": "kek/photo_14_2026-02-20_22-41-44.webp",
     "name": "دیل کێک گۆڵد",
-    "price": 5000,
     "name_en": "",
-    "description_en": ""
+    "price": 5000
   },
   {
     "category": "cake",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "cake-018",
     "image": "kek/photo_13_2026-02-20_22-41-44.webp",
     "image_webp": "kek/photo_13_2026-02-20_22-41-44.webp",
     "name": "رۆزینا گوێزی",
-    "price": 4750,
     "name_en": "",
-    "description_en": ""
+    "price": 4750
   },
   {
     "category": "cake",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "cake-019",
     "image": "kek/photo_15_2026-02-20_22-41-44.webp",
     "image_webp": "kek/photo_15_2026-02-20_22-41-44.webp",
     "name": "فۆڕچن فستق خڕ",
-    "price": 5000,
     "name_en": "",
-    "description_en": ""
+    "price": 5000
   },
   {
     "category": "cake",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "cake-020",
     "image": "kek/photo_16_2026-02-20_22-41-44.webp",
     "image_webp": "kek/photo_16_2026-02-20_22-41-44.webp",
     "name": "فۆڕچن بسکیت",
-    "price": 5000,
     "name_en": "",
-    "description_en": ""
+    "price": 5000
   },
   {
     "category": "cake",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "cake-021",
     "image": "kek/photo_18_2026-02-20_22-41-44.webp",
     "image_webp": "kek/photo_18_2026-02-20_22-41-44.webp",
     "name": "فۆڕچن شلک",
-    "price": 5000,
     "name_en": "",
-    "description_en": ""
+    "price": 5000
   },
   {
     "category": "cake",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "cake-022",
     "image": "kek/photo_19_2026-02-20_22-41-44.webp",
     "image_webp": "kek/photo_19_2026-02-20_22-41-44.webp",
     "name": "فۆڕچن پەنیر",
-    "price": 5000,
     "name_en": "",
-    "description_en": ""
+    "price": 5000
   },
   {
     "category": "cake",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "cake-023",
     "image": "kek/photo_17_2026-02-20_22-41-44.webp",
     "image_webp": "kek/photo_17_2026-02-20_22-41-44.webp",
     "name": "کێکی مۆتۆ ٥٠٠",
-    "price": 10000,
     "name_en": "",
-    "description_en": ""
+    "price": 10000
   },
   {
     "category": "cake",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "cake-024",
     "image": "kek/photo_20_2026-02-20_22-41-44.webp",
     "image_webp": "kek/photo_20_2026-02-20_22-41-44.webp",
     "name": "دۆناتی ئەڵقە",
-    "price": 4250,
     "name_en": "",
-    "description_en": ""
+    "price": 4250
   },
   {
     "category": "cake",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "cake-025",
     "image": "kek/photo_21_2026-02-20_22-41-44.webp",
     "image_webp": "kek/photo_21_2026-02-20_22-41-44.webp",
     "name": "نەزەڕی دڵ پەمەی",
-    "price": 5250,
     "name_en": "",
-    "description_en": ""
+    "price": 5250
   },
   {
     "category": "cake",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "cake-026",
     "image": "kek/photo_22_2026-02-20_22-41-44.webp",
     "image_webp": "kek/photo_22_2026-02-20_22-41-44.webp",
     "name": "نەزەڕی دڵ ڕەش",
-    "price": 5250,
     "name_en": "",
-    "description_en": ""
+    "price": 5250
   },
   {
     "category": "cake",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "cake-027",
     "image": "kek/photo_24_2026-02-20_22-41-44.webp",
     "image_webp": "kek/photo_24_2026-02-20_22-41-44.webp",
     "name": "پاوەن کێک",
-    "price": 5000,
     "name_en": "",
-    "description_en": ""
+    "price": 5000
   },
   {
     "category": "cake",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "cake-028",
     "image": "kek/photo_25_2026-02-20_22-41-44.webp",
     "image_webp": "kek/photo_25_2026-02-20_22-41-44.webp",
     "name": "نەزەڕی سەتڵ",
-    "price": 5250,
     "name_en": "",
-    "description_en": ""
+    "price": 5250
   },
   {
     "category": "cake",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "cake-029",
     "image": "kek/photo_27_2026-02-20_22-41-44.webp",
     "image_webp": "kek/photo_27_2026-02-20_22-41-44.webp",
     "name": "کێکی مهیار",
-    "price": 5000,
     "name_en": "",
-    "description_en": ""
+    "price": 5000
   },
   {
     "category": "cake",
     "description": "12 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "cake-030",
     "image": "kek/photo_28_2026-02-20_22-41-44.webp",
     "image_webp": "kek/photo_28_2026-02-20_22-41-44.webp",
     "name": "کێک تایگەر",
-    "price": 2500,
     "name_en": "",
-    "description_en": ""
+    "price": 2500
   },
   {
     "category": "cake",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "cake-031",
     "image": "kek/photo_29_2026-02-20_22-41-44.webp",
     "image_webp": "kek/photo_29_2026-02-20_22-41-44.webp",
     "name": "کێک رۆز جەلی",
-    "price": 4750,
     "name_en": "",
-    "description_en": ""
+    "price": 4750
   },
   {
     "category": "cake",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "cake-032",
     "image": "kek/photo_30_2026-02-20_22-41-44.webp",
     "image_webp": "kek/photo_30_2026-02-20_22-41-44.webp",
     "name": "تۆپ کێک",
-    "price": 4750,
     "name_en": "",
-    "description_en": ""
+    "price": 4750
   },
   {
     "category": "cake",
     "description": "12 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "cake-033",
     "image": "kek/IMG_6343.webp",
     "image_webp": "kek/IMG_6343.webp",
     "name": "میکس ڕوڵی پرتەقاڵ",
-    "price": 2500,
     "name_en": "",
-    "description_en": ""
+    "price": 2500
   },
   {
     "category": "cake",
     "description": "12 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "cake-034",
     "image": "kek/IMG_6344.webp",
     "image_webp": "kek/IMG_6344.webp",
     "name": "میکس ڕوڵی مۆر",
-    "price": 2500,
     "name_en": "",
-    "description_en": ""
+    "price": 2500
   },
   {
     "category": "cake",
     "description": "12 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "cake-035",
     "image": "kek/IMG_6345.webp",
     "image_webp": "kek/IMG_6345.webp",
     "name": "میکس ڕوڵ قاوە",
-    "price": 2500,
     "name_en": "",
-    "description_en": ""
+    "price": 2500
   },
   {
     "category": "cake",
     "description": "12 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "cake-036",
     "image": "kek/IMG_6347.webp",
     "image_webp": "kek/IMG_6347.webp",
     "name": "میکس ڕوڵ ئەنەناس",
-    "price": 2500,
     "name_en": "",
-    "description_en": ""
+    "price": 2500
   },
   {
     "category": "cake",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "cake-037",
     "image": "kek/IMG_6353.webp",
     "image_webp": "kek/IMG_6353.webp",
     "name": "کێک ڕۆکی",
-    "price": 4500,
     "name_en": "",
-    "description_en": ""
+    "price": 4500
   },
   {
     "category": "cake",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "cake-038",
     "image": "kek/IMG_6357.webp",
     "image_webp": "kek/IMG_6357.webp",
     "name": "کێکی دوبەی شعری",
-    "price": 5000,
     "name_en": "",
-    "description_en": ""
+    "price": 5000
   },
   {
     "category": "cake",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "cake-039",
     "image": "kek/IMG_6388.webp",
     "image_webp": "kek/IMG_6388.webp",
     "name": "نەزەری کشمیش",
-    "price": 5250,
     "name_en": "",
-    "description_en": ""
+    "price": 5250
   },
   {
     "category": "cake",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "cake-040",
     "image": "kek/IMG_6389.webp",
     "image_webp": "kek/IMG_6389.webp",
     "name": "نەزەری بریک فاست",
-    "price": 5250,
     "name_en": "",
-    "description_en": ""
+    "price": 5250
   },
   {
     "category": "cake",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "cake-041",
     "image": "kek/IMG_6391.webp",
     "image_webp": "kek/IMG_6391.webp",
     "name": "بۆبۆتۆی سور",
-    "price": 5000,
     "name_en": "",
-    "description_en": ""
+    "price": 5000
   },
   {
     "category": "cake",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "cake-042",
     "image": "kek/IMG_6392.webp",
     "image_webp": "kek/IMG_6392.webp",
     "name": "کیک دوبەی",
-    "price": 5000,
     "name_en": "",
-    "description_en": ""
+    "price": 5000
   },
   {
     "category": "cake",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "cake-044",
     "image": "kek/IMG_6395.webp",
     "image_webp": "kek/IMG_6395.webp",
     "name": "نەزەری خر شلک",
-    "price": 5250,
     "name_en": "",
-    "description_en": ""
+    "price": 5250
   },
   {
     "category": "cake",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "cake-045",
     "image": "kek/IMG_6396.webp",
     "image_webp": "kek/IMG_6396.webp",
     "name": "نەزەری خر قاوە",
-    "price": 5250,
     "name_en": "",
-    "description_en": ""
+    "price": 5250
   },
   {
     "category": "cake",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "cake-046",
     "image": "kek/IMG_6397.webp",
     "image_webp": "kek/IMG_6397.webp",
     "name": "نەزەری خر شیر",
-    "price": 5250,
     "name_en": "",
-    "description_en": ""
+    "price": 5250
   },
   {
     "category": "cake",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "cake-047",
     "image": "kek/IMG_6398.webp",
     "image_webp": "kek/IMG_6398.webp",
     "name": "پۆپ کیک لیمۆ",
-    "price": 5250,
     "name_en": "",
-    "description_en": ""
+    "price": 5250
   },
   {
     "category": "cake",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "cake-048",
     "image": "kek/IMG_6399.webp",
     "image_webp": "kek/IMG_6399.webp",
     "name": "پۆپ کیک مۆز",
-    "price": 5250,
     "name_en": "",
-    "description_en": ""
+    "price": 5250
   },
   {
     "category": "chips",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "chips-001",
     "image": "jbs/IMG_0223.webp",
     "image_webp": "jbs/IMG_0223.webp",
     "name": "کیش تەماتە 500",
-    "price": 9500,
     "name_en": "",
-    "description_en": ""
+    "price": 9500
   },
   {
     "category": "chips",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "chips-002",
     "image": "jbs/IMG_0224.webp",
     "image_webp": "jbs/IMG_0224.webp",
     "name": "کیش سرکە 500",
-    "price": 9500,
     "name_en": "",
-    "description_en": ""
+    "price": 9500
   },
   {
     "category": "chips",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "chips-003",
     "image": "jbs/IMG_0225.webp",
     "image_webp": "jbs/IMG_0225.webp",
     "name": "کیش بیبەر 500",
-    "price": 9500,
     "name_en": "",
-    "description_en": ""
+    "price": 9500
   },
   {
     "category": "chips",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "chips-004",
     "image": "jbs/IMG_0226.webp",
     "image_webp": "jbs/IMG_0226.webp",
     "name": "کیش سادە 500",
-    "price": 9500,
     "name_en": "",
-    "description_en": ""
+    "price": 9500
   },
   {
     "category": "chips",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "chips-005",
     "image": "jbs/IMG_0227.webp",
     "image_webp": "jbs/IMG_0227.webp",
     "name": "کیش لیمۆ 500",
-    "price": 9500,
     "name_en": "",
-    "description_en": ""
+    "price": 9500
   },
   {
     "category": "chips",
     "description": "48 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "chips-006",
     "image": "jbs/photo_2_2026-02-20_22-38-05.webp",
     "image_webp": "jbs/photo_2_2026-02-20_22-38-05.webp",
     "name": "کیش بیبەر 250",
-    "price": 9500,
     "name_en": "",
-    "description_en": ""
+    "price": 9500
   },
   {
     "category": "chips",
     "description": "48 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "chips-007",
     "image": "jbs/photo_3_2026-02-20_22-38-05.webp",
     "image_webp": "jbs/photo_3_2026-02-20_22-38-05.webp",
     "name": "کیش سادە 250",
-    "price": 9500,
     "name_en": "",
-    "description_en": ""
+    "price": 9500
   },
   {
     "category": "chips",
     "description": "48 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "chips-008",
     "image": "jbs/photo_4_2026-02-20_22-38-05.webp",
     "image_webp": "jbs/photo_4_2026-02-20_22-38-05.webp",
     "name": "کیش لیمۆ 250",
-    "price": 9500,
     "name_en": "",
-    "description_en": ""
+    "price": 9500
   },
   {
     "category": "chips",
     "description": "48 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "chips-009",
     "image": "jbs/photo_10_2026-02-20_22-38-05.webp",
     "image_webp": "jbs/photo_10_2026-02-20_22-38-05.webp",
     "name": "کیش سرکە 250",
-    "price": 9500,
     "name_en": "",
-    "description_en": ""
+    "price": 9500
   },
   {
     "category": "chips",
     "description": "48 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "chips-010",
     "image": "jbs/IMG_0206.webp",
     "image_webp": "jbs/IMG_0206.webp",
     "name": "لیزا کۆکتێل",
-    "price": 7500,
     "name_en": "",
-    "description_en": ""
+    "price": 7500
   },
   {
     "category": "chips",
     "description": "45 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "chips-011",
     "image": "jbs/IMG_0207.webp",
     "image_webp": "jbs/IMG_0207.webp",
     "name": "زەڕاتی شامی",
-    "price": 9000,
     "name_en": "",
-    "description_en": ""
+    "price": 9000
   },
   {
     "category": "chips",
     "description": "40 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "chips-012",
     "image": "jbs/IMG_0208.webp",
     "image_webp": "jbs/IMG_0208.webp",
     "name": "سناپ",
-    "price": 7500,
     "name_en": "",
-    "description_en": ""
+    "price": 7500
   },
   {
     "category": "chips",
     "description": "40 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "chips-013",
     "image": "jbs/IMG_0209.webp",
     "image_webp": "jbs/IMG_0209.webp",
     "name": "تیک تۆک",
-    "price": 7500,
     "name_en": "",
-    "description_en": ""
+    "price": 7500
   },
   {
     "category": "chips",
     "description": "36 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "chips-014",
     "image": "jbs/IMG_0219.webp",
     "image_webp": "jbs/IMG_0219.webp",
     "name": "نینی",
-    "price": 6750,
     "name_en": "",
-    "description_en": ""
+    "price": 6750
   },
   {
     "category": "chips",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "chips-015",
     "image": "jbs/IMG_0228.webp",
     "image_webp": "jbs/IMG_0228.webp",
     "name": "مانشی سپی 500",
-    "price": 9500,
     "name_en": "",
-    "description_en": ""
+    "price": 9500
   },
   {
     "category": "chips",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "chips-016",
     "image": "jbs/IMG_0229.webp",
     "image_webp": "jbs/IMG_0229.webp",
     "name": "مانشی زەرد 500",
-    "price": 9500,
     "name_en": "",
-    "description_en": ""
+    "price": 9500
   },
   {
     "category": "chips",
     "description": "48 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "chips-017",
     "image": "jbs/IMG_0230.webp",
     "image_webp": "jbs/IMG_0230.webp",
     "name": "مزمز چلکە سرکە",
-    "price": 9000,
     "name_en": "",
-    "description_en": ""
+    "price": 9000
   },
   {
     "category": "chips",
     "description": "48 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "chips-018",
     "image": "jbs/IMG_0232.webp",
     "image_webp": "jbs/IMG_0232.webp",
     "name": "لابوبو",
-    "price": 9000,
     "name_en": "",
-    "description_en": ""
+    "price": 9000
   },
   {
     "category": "chips",
     "description": "60 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "chips-019",
     "image": "jbs/photo_6_2026-02-20_22-38-05.webp",
     "image_webp": "jbs/photo_6_2026-02-20_22-38-05.webp",
     "name": "شامی دوانی",
-    "price": 6250,
     "name_en": "",
-    "description_en": ""
+    "price": 6250
   },
   {
     "category": "chips",
     "description": "40 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "chips-020",
     "image": "jbs/photo_7_2026-02-20_22-38-05.webp",
     "image_webp": "jbs/photo_7_2026-02-20_22-38-05.webp",
     "name": "عەڵقەی کەباب",
-    "price": 8000,
     "name_en": "",
-    "description_en": ""
+    "price": 8000
   },
   {
     "category": "chips",
     "description": "45 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "chips-021",
     "image": "jbs/photo_9_2026-02-20_22-38-05.webp",
     "image_webp": "jbs/photo_9_2026-02-20_22-38-05.webp",
     "name": "لوسی",
-    "price": 9500,
     "name_en": "",
-    "description_en": ""
+    "price": 9500
   },
   {
     "category": "chips",
     "description": "22 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "chips-022",
     "image": "jbs/photo_11_2026-02-20_22-38-05.webp",
     "image_webp": "jbs/photo_11_2026-02-20_22-38-05.webp",
     "name": "من و تۆ کیس",
-    "price": 4000,
     "name_en": "",
-    "description_en": ""
+    "price": 4000
   },
   {
     "category": "chips",
     "description": "40 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "chips-023",
     "image": "jbs/photo_12_2026-02-20_22-38-05.webp",
     "image_webp": "jbs/photo_12_2026-02-20_22-38-05.webp",
     "name": "لیزا",
-    "price": 7500,
     "name_en": "",
-    "description_en": ""
+    "price": 7500
   },
   {
     "category": "chips",
     "description": "22 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "chips-024",
     "image": "jbs/photo_13_2026-02-20_22-38-05.webp",
     "image_webp": "jbs/photo_13_2026-02-20_22-38-05.webp",
     "name": "بانو کیس",
-    "price": 4000,
     "name_en": "",
-    "description_en": ""
+    "price": 4000
   },
   {
     "category": "chips",
     "description": "45 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "chips-025",
     "image": "jbs/photo_14_2026-02-20_22-38-05.webp",
     "image_webp": "jbs/photo_14_2026-02-20_22-38-05.webp",
     "name": "مانچیس مۆر",
-    "price": 9500,
     "name_en": "",
-    "description_en": ""
+    "price": 9500
   },
   {
     "category": "chips",
     "description": "48 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "chips-026",
     "image": "jbs/photo_15_2026-02-20_22-38-05.webp",
     "image_webp": "jbs/photo_15_2026-02-20_22-38-05.webp",
     "name": "ئەمرەک",
-    "price": 9000,
     "name_en": "",
-    "description_en": ""
+    "price": 9000
   },
   {
     "category": "chips",
     "description": "40 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "chips-027",
     "image": "jbs/photo_16_2026-02-20_22-38-05.webp",
     "image_webp": "jbs/photo_16_2026-02-20_22-38-05.webp",
     "name": "عەڵقەی لیمۆ",
-    "price": 8000,
     "name_en": "",
-    "description_en": ""
+    "price": 8000
   },
   {
     "category": "chips",
     "description": "40 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "chips-028",
     "image": "jbs/photo_17_2026-02-20_22-38-05.webp",
     "image_webp": "jbs/photo_17_2026-02-20_22-38-05.webp",
     "name": "بوشاری دوانی",
-    "price": 4500,
     "name_en": "",
-    "description_en": ""
+    "price": 4500
   },
   {
     "category": "chips",
     "description": "40 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "chips-029",
     "image": "jbs/photo_18_2026-02-20_22-38-05.webp",
     "image_webp": "jbs/photo_18_2026-02-20_22-38-05.webp",
     "name": "مسک مریشک",
-    "price": 8000,
     "name_en": "",
-    "description_en": ""
+    "price": 8000
   },
   {
     "category": "chips",
     "description": "40 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "chips-030",
     "image": "jbs/photo_19_2026-02-20_22-38-05.webp",
     "image_webp": "jbs/photo_19_2026-02-20_22-38-05.webp",
     "name": "مسک سرکە",
-    "price": 8000,
     "name_en": "",
-    "description_en": ""
+    "price": 8000
   },
   {
     "category": "chips",
     "description": "40 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "chips-031",
     "image": "jbs/photo_20_2026-02-20_22-38-05.webp",
     "image_webp": "jbs/photo_20_2026-02-20_22-38-05.webp",
     "name": "مسک پەنیر",
-    "price": 8000,
     "name_en": "",
-    "description_en": ""
+    "price": 8000
   },
   {
     "category": "chips",
     "description": "40 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "chips-032",
     "image": "jbs/photo_21_2026-02-20_22-38-05.webp",
     "image_webp": "jbs/photo_21_2026-02-20_22-38-05.webp",
     "name": "مسک لیمۆ",
-    "price": 8000,
     "name_en": "",
-    "description_en": ""
+    "price": 8000
   },
   {
     "category": "chips",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "chips-033",
     "image": "jbs/photo_23_2026-02-20_22-38-05.webp",
     "image_webp": "jbs/photo_23_2026-02-20_22-38-05.webp",
     "name": "دانەن دانەی عایلەی",
-    "price": 8000,
     "name_en": "",
-    "description_en": ""
+    "price": 8000
   },
   {
     "category": "chips",
     "description": "40 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "chips-034",
     "image": "jbs/photo_8_2026-02-20_22-38-05.webp",
     "image_webp": "jbs/photo_8_2026-02-20_22-38-05.webp",
     "name": "دانە دانە پرتەقاڵ",
-    "price": 8000,
     "name_en": "",
-    "description_en": ""
+    "price": 8000
   },
   {
     "category": "chips",
     "description": "40 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "chips-035",
     "image": "jbs/photo_22_2026-02-20_22-38-05.webp",
     "image_webp": "jbs/photo_22_2026-02-20_22-38-05.webp",
     "name": "دانە دانە سور",
-    "price": 8000,
     "name_en": "",
-    "description_en": ""
+    "price": 8000
   },
   {
     "category": "chips",
     "description": "40 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "chips-036",
     "image": "jbs/photo_24_2026-02-20_22-38-05.webp",
     "image_webp": "jbs/photo_24_2026-02-20_22-38-05.webp",
     "name": "دانە دانە شین",
-    "price": 8000,
     "name_en": "",
-    "description_en": ""
+    "price": 8000
   },
   {
     "category": "chips",
     "description": "40 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "chips-037",
     "image": "jbs/photo_25_2026-02-20_22-38-05.webp",
     "image_webp": "jbs/photo_25_2026-02-20_22-38-05.webp",
     "name": "دانە دانە زەرد",
-    "price": 8000,
     "name_en": "",
-    "description_en": ""
+    "price": 8000
   },
   {
     "category": "chips",
     "description": "48 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "chips-038",
     "image": "jbs/photo_26_2026-02-20_22-38-05.webp",
     "image_webp": "jbs/photo_26_2026-02-20_22-38-05.webp",
     "name": "تۆرتێلا سەوز",
-    "price": 8500,
     "name_en": "",
-    "description_en": ""
+    "price": 8500
   },
   {
     "category": "chips",
     "description": "36 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "chips-039",
     "image": "jbs/photo_27_2026-02-20_22-38-05.webp",
     "image_webp": "jbs/photo_27_2026-02-20_22-38-05.webp",
     "name": "نینی لیمۆ",
-    "price": 7000,
     "name_en": "",
-    "description_en": ""
+    "price": 7000
   },
   {
     "category": "chips",
     "description": "36 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "chips-040",
     "image": "jbs/photo_28_2026-02-20_22-38-05.webp",
     "image_webp": "jbs/photo_28_2026-02-20_22-38-05.webp",
     "name": "نینی بوشار",
-    "price": 7000,
     "name_en": "",
-    "description_en": ""
+    "price": 7000
   },
   {
     "category": "chips",
     "description": "40 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "chips-041",
     "image": "jbs/photo_30_2026-02-20_22-38-05.webp",
     "image_webp": "jbs/photo_30_2026-02-20_22-38-05.webp",
     "name": "زەڕاتی پەرداخ",
-    "price": 8000,
     "name_en": "",
-    "description_en": ""
+    "price": 8000
   },
   {
     "category": "chips",
     "description": "48 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "chips-042",
     "image": "jbs/photo_31_2026-02-20_22-38-05.webp",
     "image_webp": "jbs/photo_31_2026-02-20_22-38-05.webp",
     "name": "تۆرتێلای شین",
-    "price": 9500,
     "name_en": "",
-    "description_en": ""
+    "price": 9500
   },
   {
     "category": "chips",
     "description": "45 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "chips-043",
     "image": "jbs/photo_32_2026-02-20_22-38-05.webp",
     "image_webp": "jbs/photo_32_2026-02-20_22-38-05.webp",
     "name": "مانشی سپی",
-    "price": 9500,
     "name_en": "",
-    "description_en": ""
+    "price": 9500
   },
   {
     "category": "chips",
     "description": "45 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "chips-044",
     "image": "jbs/photo_33_2026-02-20_22-38-05.webp",
     "image_webp": "jbs/photo_33_2026-02-20_22-38-05.webp",
     "name": "مانشی زەرد",
-    "price": 9500,
     "name_en": "",
-    "description_en": ""
+    "price": 9500
   },
   {
     "category": "chips",
     "description": "40 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "chips-045",
     "image": "jbs/photo_34_2026-02-20_22-38-05.webp",
     "image_webp": "jbs/photo_34_2026-02-20_22-38-05.webp",
     "name": "من من ڕان",
-    "price": 7500,
     "name_en": "",
-    "description_en": ""
+    "price": 7500
   },
   {
     "category": "chips",
     "description": "40 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "chips-046",
     "image": "jbs/photo_35_2026-02-20_22-38-05.webp",
     "image_webp": "jbs/photo_35_2026-02-20_22-38-05.webp",
     "name": "من من پیتزا",
-    "price": 7500,
     "name_en": "",
-    "description_en": ""
+    "price": 7500
   },
   {
     "category": "chips",
     "description": "40 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "chips-047",
     "image": "jbs/photo_36_2026-02-20_22-38-05.webp",
     "image_webp": "jbs/photo_36_2026-02-20_22-38-05.webp",
     "name": "بوشاری بانوو",
-    "price": 4500,
     "name_en": "",
-    "description_en": ""
+    "price": 4500
   },
   {
     "category": "chips",
     "description": "48 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "chips-048",
     "image": "jbs/photo_2026-02-20_22-39-15.webp",
     "image_webp": "jbs/photo_2026-02-20_22-39-15.webp",
     "name": "لابوبو دوانی",
-    "price": 9000,
     "name_en": "",
-    "description_en": ""
+    "price": 9000
   },
   {
     "category": "drink",
     "description": "12 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "drink-001",
     "image": "sardy/IMG_0188.webp",
     "image_webp": "sardy/IMG_0188.webp",
     "name": "ئاوی دەبە",
-    "price": 750,
     "name_en": "",
-    "description_en": ""
+    "price": 750
   },
   {
     "category": "drink",
     "description": "60 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "drink-002",
     "image": "sardy/IMG_0189.webp",
     "image_webp": "sardy/IMG_0189.webp",
     "name": "ئاوی کارتۆن",
-    "price": 1500,
     "name_en": "",
-    "description_en": ""
+    "price": 1500
   },
   {
     "category": "drink",
     "description": "30 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "drink-003",
     "image": "sardy/IMG_6192.webp",
     "image_webp": "sardy/IMG_6192.webp",
     "name": "پیپسی سلڤەر قەزەم",
-    "price": 6500,
     "name_en": "",
-    "description_en": ""
+    "price": 6500
   },
   {
     "category": "drink",
     "description": "30 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "drink-004",
     "image": "sardy/IMG_6193.webp",
     "image_webp": "sardy/IMG_6193.webp",
     "name": "پیپسی شین قەزەم",
-    "price": 6500,
     "name_en": "",
-    "description_en": ""
+    "price": 6500
   },
   {
     "category": "drink",
     "description": "30 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "drink-005",
     "image": "sardy/IMG_6194.webp",
     "image_webp": "sardy/IMG_6194.webp",
     "name": "میرندا پرتەقال قەزەم",
-    "price": 6500,
     "name_en": "",
-    "description_en": ""
+    "price": 6500
   },
   {
     "category": "drink",
     "description": "30 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "drink-006",
     "image": "sardy/IMG_6195.webp",
     "image_webp": "sardy/IMG_6195.webp",
     "name": "دیو قەزەم",
-    "price": 6500,
     "name_en": "",
-    "description_en": ""
+    "price": 6500
   },
   {
     "category": "drink",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "drink-007",
     "image": "sardy/IMG_6196.webp",
     "image_webp": "sardy/IMG_6196.webp",
     "name": "ڕاجی قۆخ",
-    "price": 5000,
     "name_en": "",
-    "description_en": ""
+    "price": 5000
   },
   {
     "category": "drink",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "drink-008",
     "image": "sardy/IMG_6197.webp",
     "image_webp": "sardy/IMG_6197.webp",
     "name": "ڕانی قتو",
-    "price": 9750,
     "name_en": "",
-    "description_en": ""
+    "price": 9750
   },
   {
     "category": "drink",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "drink-009",
     "image": "sardy/IMG_6220.webp",
     "image_webp": "sardy/IMG_6220.webp",
     "name": "ڕانی شوشە",
-    "price": 9750,
     "name_en": "",
-    "description_en": ""
+    "price": 9750
   },
   {
     "category": "drink",
     "description": "30 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "drink-010",
     "image": "sardy/IMG_6198.webp",
     "image_webp": "sardy/IMG_6198.webp",
     "name": "لالە شین",
-    "price": 6000,
     "name_en": "",
-    "description_en": ""
+    "price": 6000
   },
   {
     "category": "drink",
     "description": "30 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "drink-011",
     "image": "sardy/IMG_6199.webp",
     "image_webp": "sardy/IMG_6199.webp",
     "name": "لالە دیو",
-    "price": 6000,
     "name_en": "",
-    "description_en": ""
+    "price": 6000
   },
   {
     "category": "drink",
     "description": "30 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "drink-012",
     "image": "sardy/IMG_6200.webp",
     "image_webp": "sardy/IMG_6200.webp",
     "name": "دیوی قەڵەو",
-    "price": 10000,
     "name_en": "",
-    "description_en": ""
+    "price": 10000
   },
   {
     "category": "drink",
     "description": "30 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "drink-013",
     "image": "sardy/IMG_6201.webp",
     "image_webp": "sardy/IMG_6201.webp",
     "name": "پیپسی قەڵەو",
-    "price": 10000,
     "name_en": "",
-    "description_en": ""
+    "price": 10000
   },
   {
     "category": "drink",
     "description": "30 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "drink-014",
     "image": "sardy/IMG_6202.webp",
     "image_webp": "sardy/IMG_6202.webp",
     "name": "تازجی قتو قۆخ",
-    "price": 6500,
     "name_en": "",
-    "description_en": ""
+    "price": 6500
   },
   {
     "category": "drink",
     "description": "30 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "drink-015",
     "image": "sardy/IMG_6203.webp",
     "image_webp": "sardy/IMG_6203.webp",
     "name": "تازجی قتو پرتەقاڵ",
-    "price": 6500,
     "name_en": "",
-    "description_en": ""
+    "price": 6500
   },
   {
     "category": "drink",
     "description": "30 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "drink-016",
     "image": "sardy/IMG_6204.webp",
     "image_webp": "sardy/IMG_6204.webp",
     "name": "تازجی قتو هەنار",
-    "price": 6500,
     "name_en": "",
-    "description_en": ""
+    "price": 6500
   },
   {
     "category": "drink",
     "description": "30 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "drink-017",
     "image": "sardy/IMG_6205.webp",
     "image_webp": "sardy/IMG_6205.webp",
     "name": "RC شوشە ڕەش",
-    "price": 6500,
     "name_en": "",
-    "description_en": ""
+    "price": 6500
   },
   {
     "category": "drink",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "drink-018",
     "image": "sardy/IMG_6219.webp",
     "image_webp": "sardy/IMG_6219.webp",
     "name": "RC شوشە پرتەقاڵ",
-    "price": 6500,
     "name_en": "",
-    "description_en": ""
+    "price": 6500
   },
   {
     "category": "drink",
     "description": "30 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "drink-019",
     "image": "sardy/IMG_6206.webp",
     "image_webp": "sardy/IMG_6206.webp",
     "name": "ساردی بەغدادی",
-    "price": 6500,
     "name_en": "",
-    "description_en": ""
+    "price": 6500
   },
   {
     "category": "drink",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "drink-020",
     "image": "sardy/IMG_6207.webp",
     "image_webp": "sardy/IMG_6207.webp",
     "name": "پیپسی شوشە",
-    "price": 9750,
     "name_en": "",
-    "description_en": ""
+    "price": 9750
   },
   {
     "category": "drink",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "drink-021",
     "image": "sardy/IMG_6208.webp",
     "image_webp": "sardy/IMG_6208.webp",
     "name": "دیوی شوشە",
-    "price": 9750,
     "name_en": "",
-    "description_en": ""
+    "price": 9750
   },
   {
     "category": "drink",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "drink-022",
     "image": "sardy/IMG_6209.webp",
     "image_webp": "sardy/IMG_6209.webp",
     "name": "زەمزەمی شوشە ڕەش",
-    "price": 10000,
     "name_en": "",
-    "description_en": ""
+    "price": 10000
   },
   {
     "category": "drink",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "drink-023",
     "image": "sardy/IMG_6210.webp",
     "image_webp": "sardy/IMG_6210.webp",
     "name": "زەمزەمی شوشە پرتەقاڵ",
-    "price": 10000,
     "name_en": "",
-    "description_en": ""
+    "price": 10000
   },
   {
     "category": "drink",
     "description": "12 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "drink-024",
     "image": "sardy/IMG_6218.webp",
     "image_webp": "sardy/IMG_6218.webp",
     "name": "زەمزەم شوشە لیمۆ",
-    "price": 5000,
     "name_en": "",
-    "description_en": ""
+    "price": 5000
   },
   {
     "category": "drink",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "drink-025",
     "image": "sardy/IMG_6211.webp",
     "image_webp": "sardy/IMG_6211.webp",
     "name": "ئاسان شین",
-    "price": 9750,
     "name_en": "",
-    "description_en": ""
+    "price": 9750
   },
   {
     "category": "drink",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "drink-026",
     "image": "sardy/IMG_6212.webp",
     "image_webp": "sardy/IMG_6212.webp",
     "name": "ئاسان مۆر",
-    "price": 9750,
     "name_en": "",
-    "description_en": ""
+    "price": 9750
   },
   {
     "category": "drink",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "drink-027",
     "image": "sardy/IMG_6213.webp",
     "image_webp": "sardy/IMG_6213.webp",
     "name": "تایگەری تام پەمەی",
-    "price": 5000,
     "name_en": "",
-    "description_en": ""
+    "price": 5000
   },
   {
     "category": "drink",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "drink-028",
     "image": "sardy/IMG_6238.webp",
     "image_webp": "sardy/IMG_6238.webp",
     "name": "تام شین",
-    "price": 5000,
     "name_en": "",
-    "description_en": ""
+    "price": 5000
   },
   {
     "category": "drink",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "drink-029",
     "image": "sardy/IMG_6214.webp",
     "image_webp": "sardy/IMG_6214.webp",
     "name": "وینەر گەورە",
-    "price": 9500,
     "name_en": "",
-    "description_en": ""
+    "price": 9500
   },
   {
     "category": "drink",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "drink-030",
     "image": "sardy/IMG_6215.webp",
     "image_webp": "sardy/IMG_6215.webp",
     "name": "وینەر بچوک",
-    "price": 5250,
     "name_en": "",
-    "description_en": ""
+    "price": 5250
   },
   {
     "category": "drink",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "drink-031",
     "image": "sardy/IMG_6216.webp",
     "image_webp": "sardy/IMG_6216.webp",
     "name": "سۆدەی فروتلی",
-    "price": 8250,
     "name_en": "",
-    "description_en": ""
+    "price": 8250
   },
   {
     "category": "drink",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "drink-032",
     "image": "sardy/IMG_6217.webp",
     "image_webp": "sardy/IMG_6217.webp",
     "name": "سۆدەی مستەر",
-    "price": 5500,
     "name_en": "",
-    "description_en": ""
+    "price": 5500
   },
   {
     "category": "drink",
     "description": "12 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "drink-033",
     "image": "sardy/IMG_6221.webp",
     "image_webp": "sardy/IMG_6221.webp",
     "name": "شەربەتی تۆ شلک",
-    "price": 5000,
     "name_en": "",
-    "description_en": ""
+    "price": 5000
   },
   {
     "category": "drink",
     "description": "12 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "drink-034",
     "image": "sardy/IMG_6222.webp",
     "image_webp": "sardy/IMG_6222.webp",
     "name": "شەربەتی تۆ کاڵەک",
-    "price": 5000,
     "name_en": "",
-    "description_en": ""
+    "price": 5000
   },
   {
     "category": "drink",
     "description": "12 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "drink-035",
     "image": "sardy/IMG_6223.webp",
     "image_webp": "sardy/IMG_6223.webp",
     "name": "شەربەتی تۆ بلوبێری",
-    "price": 5000,
     "name_en": "",
-    "description_en": ""
+    "price": 5000
   },
   {
     "category": "drink",
     "description": "12 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "drink-036",
     "image": "sardy/IMG_6224.webp",
     "image_webp": "sardy/IMG_6224.webp",
     "name": "شەربەتی تۆ پرتەقاڵ",
-    "price": 5000,
     "name_en": "",
-    "description_en": ""
+    "price": 5000
   },
   {
     "category": "drink",
     "description": "12 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "drink-037",
     "image": "sardy/IMG_6225.webp",
     "image_webp": "sardy/IMG_6225.webp",
     "name": "شەربەتی تۆ ئەنەناس",
-    "price": 5000,
     "name_en": "",
-    "description_en": ""
+    "price": 5000
   },
   {
     "category": "drink",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "drink-038",
     "image": "sardy/IMG_6226.webp",
     "image_webp": "sardy/IMG_6226.webp",
     "name": "سۆدەی مستار",
-    "price": 10000,
     "name_en": "",
-    "description_en": ""
+    "price": 10000
   },
   {
     "category": "drink",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "drink-039",
     "image": "sardy/IMG_6227.webp",
     "image_webp": "sardy/IMG_6227.webp",
     "name": "ساردی تورکی پرتەقاڵ",
-    "price": 9500,
     "name_en": "",
-    "description_en": ""
+    "price": 9500
   },
   {
     "category": "drink",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "drink-040",
     "image": "sardy/IMG_6228.webp",
     "image_webp": "sardy/IMG_6228.webp",
     "name": "تازج شوشە هەنار",
-    "price": 9500,
     "name_en": "",
-    "description_en": ""
+    "price": 9500
   },
   {
     "category": "drink",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "drink-041",
     "image": "sardy/IMG_6229.webp",
     "image_webp": "sardy/IMG_6229.webp",
     "name": "تازج شوشە قۆخ",
-    "price": 9500,
     "name_en": "",
-    "description_en": ""
+    "price": 9500
   },
   {
     "category": "drink",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "drink-042",
     "image": "sardy/IMG_6230.webp",
     "image_webp": "sardy/IMG_6230.webp",
     "name": "تازج شوشە پرتەقاڵ",
-    "price": 9500,
     "name_en": "",
-    "description_en": ""
+    "price": 9500
   },
   {
     "category": "drink",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "drink-043",
     "image": "sardy/IMG_6231.webp",
     "image_webp": "sardy/IMG_6231.webp",
     "name": "تازج شوشە گێزەر",
-    "price": 9500,
     "name_en": "",
-    "description_en": ""
+    "price": 9500
   },
   {
     "category": "drink",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "drink-044",
     "image": "sardy/IMG_6232.webp",
     "image_webp": "sardy/IMG_6232.webp",
     "name": "ماڵت جۆ",
-    "price": 10000,
     "name_en": "",
-    "description_en": ""
+    "price": 10000
   },
   {
     "category": "drink",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "drink-045",
     "image": "sardy/IMG_6233.webp",
     "image_webp": "sardy/IMG_6233.webp",
     "name": "ماڵت لیمۆ",
-    "price": 10000,
     "name_en": "",
-    "description_en": ""
+    "price": 10000
   },
   {
     "category": "drink",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "drink-046",
     "image": "sardy/IMG_6234.webp",
     "image_webp": "sardy/IMG_6234.webp",
     "name": "ماڵت قۆخ",
-    "price": 10000,
     "name_en": "",
-    "description_en": ""
+    "price": 10000
   },
   {
     "category": "drink",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "drink-047",
     "image": "sardy/IMG_6235.webp",
     "image_webp": "sardy/IMG_6235.webp",
     "name": "K9 پەمەی",
-    "price": 9500,
     "name_en": "",
-    "description_en": ""
+    "price": 9500
   },
   {
     "category": "drink",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "drink-048",
     "image": "sardy/IMG_6237.webp",
     "image_webp": "sardy/IMG_6237.webp",
     "name": "K9 شین",
-    "price": 9500,
     "name_en": "",
-    "description_en": ""
+    "price": 9500
   },
   {
     "category": "drink",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "drink-049",
     "image": "sardy/IMG_6236.webp",
     "image_webp": "sardy/IMG_6236.webp",
     "name": "تایگەر ئەسڵ",
-    "price": 21000,
     "name_en": "",
-    "description_en": ""
+    "price": 21000
   },
   {
     "category": "drink",
     "description": "12 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "drink-050",
     "image": "sardy/IMG_6239.webp",
     "image_webp": "sardy/IMG_6239.webp",
     "name": "دەبە سێڤن",
-    "price": 2250,
     "name_en": "",
-    "description_en": ""
+    "price": 2250
   },
   {
     "category": "drink",
     "description": "12 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "drink-051",
     "image": "sardy/IMG_6240.webp",
     "image_webp": "sardy/IMG_6240.webp",
     "name": "ساردی نیو",
-    "price": 2250,
     "name_en": "",
-    "description_en": ""
+    "price": 2250
   },
   {
     "category": "drink",
     "description": "12 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "drink-052",
     "image": "sardy/IMG_6241.webp",
     "image_webp": "sardy/IMG_6241.webp",
     "name": "ساردی K",
-    "price": 2250,
     "name_en": "",
-    "description_en": ""
+    "price": 2250
   },
   {
     "category": "drink",
     "description": "30 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "drink-053",
     "image": "sardy/IMG_6242.webp",
     "image_webp": "sardy/IMG_6242.webp",
     "name": "ئارسۆ تایگەر",
-    "price": 6500,
     "name_en": "",
-    "description_en": ""
+    "price": 6500
   },
   {
     "category": "drink",
     "description": "30 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "drink-054",
     "image": "sardy/IMG_6243.webp",
     "image_webp": "sardy/IMG_6243.webp",
     "name": "ئارسۆ پرتەقاڵ",
-    "price": 6500,
     "name_en": "",
-    "description_en": ""
+    "price": 6500
   },
   {
     "category": "drink",
     "description": "30 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "drink-055",
     "image": "sardy/IMG_6245.webp",
     "image_webp": "sardy/IMG_6245.webp",
     "name": "ئارسۆ لیمۆ",
-    "price": 6500,
     "name_en": "",
-    "description_en": ""
+    "price": 6500
   },
   {
     "category": "drink",
     "description": "30 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "drink-056",
     "image": "sardy/IMG_6246.webp",
     "image_webp": "sardy/IMG_6246.webp",
     "name": "ئارسۆ ئاوی",
-    "price": 6500,
     "name_en": "",
-    "description_en": ""
+    "price": 6500
   },
   {
     "category": "drink",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "drink-057",
     "image": "sardy/IMG_6244.webp",
     "image_webp": "sardy/IMG_6244.webp",
     "name": "ترابی",
-    "price": 9500,
     "name_en": "",
-    "description_en": ""
+    "price": 9500
   },
   {
     "category": "drink",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "drink-058",
     "image": "sardy/IMG_6247.webp",
     "image_webp": "sardy/IMG_6247.webp",
     "name": "تورکی ڕەش",
-    "price": 9500,
     "name_en": "",
-    "description_en": ""
+    "price": 9500
   },
   {
     "category": "drink",
     "description": "36 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "drink-059",
     "image": "sardy/IMG_6248.webp",
     "image_webp": "sardy/IMG_6248.webp",
     "name": "زاکی",
-    "price": 6000,
     "name_en": "",
-    "description_en": ""
+    "price": 6000
   },
   {
     "category": "drink",
     "description": "36 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "drink-060",
     "image": "sardy/IMG_6249.webp",
     "image_webp": "sardy/IMG_6249.webp",
     "name": "سەمناکی قۆخ",
-    "price": 3000,
     "name_en": "",
-    "description_en": ""
+    "price": 3000
   },
   {
     "category": "drink",
     "description": "36 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "drink-061",
     "image": "sardy/IMG_6250.webp",
     "image_webp": "sardy/IMG_6250.webp",
     "name": "تازجی پاکەت قۆخ",
-    "price": 4000,
     "name_en": "",
-    "description_en": ""
+    "price": 4000
   },
   {
     "category": "drink",
     "description": "36 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "drink-062",
     "image": "sardy/IMG_6252.webp",
     "image_webp": "sardy/IMG_6252.webp",
     "name": "تازجی پاکەت کۆکتێل",
-    "price": 4000,
     "name_en": "",
-    "description_en": ""
+    "price": 4000
   },
   {
     "category": "drink",
     "description": "36 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "drink-063",
     "image": "sardy/IMG_6253.webp",
     "image_webp": "sardy/IMG_6253.webp",
     "name": "تازجی پاکەت پرتەقاڵ",
-    "price": 4000,
     "name_en": "",
-    "description_en": ""
+    "price": 4000
   },
   {
     "category": "drink",
     "description": "36 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "drink-064",
     "image": "sardy/IMG_6254.webp",
     "image_webp": "sardy/IMG_6254.webp",
     "name": "کاڵبی مۆز",
-    "price": 8000,
     "name_en": "",
-    "description_en": ""
+    "price": 8000
   },
   {
     "category": "drink",
     "description": "36 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "drink-065",
     "image": "sardy/IMG_6255.webp",
     "image_webp": "sardy/IMG_6255.webp",
     "name": "کاڵبی شلک",
-    "price": 8000,
     "name_en": "",
-    "description_en": ""
+    "price": 8000
   },
   {
     "category": "drink",
     "description": "36 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "drink-066",
     "image": "sardy/IMG_6256.webp",
     "image_webp": "sardy/IMG_6256.webp",
     "name": "کاڵبی قاوە",
-    "price": 8000,
     "name_en": "",
-    "description_en": ""
+    "price": 8000
   },
   {
     "category": "drink",
     "description": "36 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "drink-067",
     "image": "sardy/IMG_6257.webp",
     "image_webp": "sardy/IMG_6257.webp",
     "name": "کاڵبی کاڵەک",
-    "price": 8000,
     "name_en": "",
-    "description_en": ""
+    "price": 8000
   },
   {
     "category": "drink",
     "description": "36 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "drink-068",
     "image": "sardy/IMG_6258.webp",
     "image_webp": "sardy/IMG_6258.webp",
     "name": "زۆزۆ پرتەقاڵ",
-    "price": 3250,
     "name_en": "",
-    "description_en": ""
+    "price": 3250
   },
   {
     "category": "drink",
     "description": "36 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "drink-069",
     "image": "sardy/IMG_6259.webp",
     "image_webp": "sardy/IMG_6259.webp",
     "name": "زۆزۆ ئەنەناش",
-    "price": 3250,
     "name_en": "",
-    "description_en": ""
+    "price": 3250
   },
   {
     "category": "drink",
     "description": "36 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "drink-070",
     "image": "sardy/IMG_6260.webp",
     "image_webp": "sardy/IMG_6260.webp",
     "name": "زۆزۆ کۆکتێل",
-    "price": 3250,
     "name_en": "",
-    "description_en": ""
+    "price": 3250
   },
   {
     "category": "drink",
     "description": "36 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "drink-071",
     "image": "sardy/IMG_6261.webp",
     "image_webp": "sardy/IMG_6261.webp",
     "name": "زۆزۆ ترێ",
-    "price": 3250,
     "name_en": "",
-    "description_en": ""
+    "price": 3250
   },
   {
     "category": "drink",
     "description": "36 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "drink-072",
     "image": "sardy/IMG_6262.webp",
     "image_webp": "sardy/IMG_6262.webp",
     "name": "زۆزۆ شلک",
-    "price": 3250,
     "name_en": "",
-    "description_en": ""
+    "price": 3250
   },
   {
     "category": "drink",
     "description": "36 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "drink-073",
     "image": "sardy/IMG_6263.webp",
     "image_webp": "sardy/IMG_6263.webp",
     "name": "زۆزۆ قۆخ",
-    "price": 3250,
     "name_en": "",
-    "description_en": ""
+    "price": 3250
   },
   {
     "category": "drink",
     "description": "36 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "drink-074",
     "image": "sardy/IMG_6264.webp",
     "image_webp": "sardy/IMG_6264.webp",
     "name": "زۆزۆ سێو",
-    "price": 3250,
     "name_en": "",
-    "description_en": ""
+    "price": 3250
   },
   {
     "category": "drink",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "drink-075",
     "image": "sardy/IMG_6265.webp",
     "image_webp": "sardy/IMG_6265.webp",
     "name": "مەکسیکی لیمۆ",
-    "price": 14500,
     "name_en": "",
-    "description_en": ""
+    "price": 14500
   },
   {
     "category": "drink",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "drink-076",
     "image": "sardy/IMG_6266.webp",
     "image_webp": "sardy/IMG_6266.webp",
     "name": "مەکسیکی شلک",
-    "price": 14500,
     "name_en": "",
-    "description_en": ""
+    "price": 14500
   },
   {
     "category": "drink",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "drink-077",
     "image": "sardy/IMG_6267.webp",
     "image_webp": "sardy/IMG_6267.webp",
     "name": "مەکسیکی مانگۆ",
-    "price": 14500,
     "name_en": "",
-    "description_en": ""
+    "price": 14500
   },
   {
     "category": "drink",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "drink-078",
     "image": "sardy/IMG_6268.webp",
     "image_webp": "sardy/IMG_6268.webp",
     "name": "مەکسیکی بوبی",
-    "price": 14500,
     "name_en": "",
-    "description_en": ""
+    "price": 14500
   },
   {
     "category": "drink",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "drink-079",
     "image": "sardy/IMG_6269.webp",
     "image_webp": "sardy/IMG_6269.webp",
     "name": "مەکسیکی هەنار",
-    "price": 14500,
     "name_en": "",
-    "description_en": ""
+    "price": 14500
   },
   {
     "category": "drink",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "drink-080",
     "image": "sardy/IMG_6270.webp",
     "image_webp": "sardy/IMG_6270.webp",
     "name": "مەکسیکی قاوە",
-    "price": 14500,
     "name_en": "",
-    "description_en": ""
+    "price": 14500
   },
   {
     "category": "drink",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "drink-081",
     "image": "sardy/IMG_6271.webp",
     "image_webp": "sardy/IMG_6271.webp",
     "name": "ڕێد",
-    "price": 9500,
     "name_en": "",
-    "description_en": ""
+    "price": 9500
   },
   {
     "category": "drink",
     "description": "6 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "drink-082",
     "image": "sardy/IMG_6272.webp",
     "image_webp": "sardy/IMG_6272.webp",
     "name": "پیپسی دەبڵ",
-    "price": 6500,
     "name_en": "",
-    "description_en": ""
+    "price": 6500
   },
   {
     "category": "drink",
     "description": "6 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "drink-083",
     "image": "sardy/IMG_6274.webp",
     "image_webp": "sardy/IMG_6274.webp",
     "name": "پیپسی 1000",
-    "price": 4500,
     "name_en": "",
-    "description_en": ""
+    "price": 4500
   },
   {
     "category": "drink",
     "description": "12 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "drink-084",
     "image": "sardy/IMG_6275.webp",
     "image_webp": "sardy/IMG_6275.webp",
     "name": "پیپسی وەصەت",
-    "price": 6500,
     "name_en": "",
-    "description_en": ""
+    "price": 6500
   },
   {
     "category": "drink",
     "description": "6 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "drink-085",
     "image": "sardy/IMG_6276.webp",
     "image_webp": "sardy/IMG_6276.webp",
     "name": "دیوی دەبڵ",
-    "price": 6500,
     "name_en": "",
-    "description_en": ""
+    "price": 6500
   },
   {
     "category": "drink",
     "description": "6 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "drink-086",
     "image": "sardy/IMG_6277.webp",
     "image_webp": "sardy/IMG_6277.webp",
     "name": "دیوی 1000",
-    "price": 4500,
     "name_en": "",
-    "description_en": ""
+    "price": 4500
   },
   {
     "category": "drink",
     "description": "12 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "drink-087",
     "image": "sardy/IMG_6278.webp",
     "image_webp": "sardy/IMG_6278.webp",
     "name": "دیوی وەصەت",
-    "price": 6500,
     "name_en": "",
-    "description_en": ""
+    "price": 6500
   },
   {
     "category": "drink",
     "description": "6 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "drink-088",
     "image": "sardy/IMG_6279.webp",
     "image_webp": "sardy/IMG_6279.webp",
     "name": "ئەفرا",
-    "price": 3000,
     "name_en": "",
-    "description_en": ""
+    "price": 3000
   },
   {
     "category": "drink",
     "description": "6 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "drink-089",
     "image": "sardy/IMG_6280.webp",
     "image_webp": "sardy/IMG_6280.webp",
     "name": "یەومی ڕەش",
-    "price": 3000,
     "name_en": "",
-    "description_en": ""
+    "price": 3000
   },
   {
     "category": "drink",
     "description": "6 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "drink-090",
     "image": "sardy/IMG_6281.webp",
     "image_webp": "sardy/IMG_6281.webp",
     "name": "زەمزامی پرتەقاڵ",
-    "price": 5500,
     "name_en": "",
-    "description_en": ""
+    "price": 5500
   },
   {
     "category": "drink",
     "description": "12 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "drink-091",
     "image": "sardy/IMG_6282.webp",
     "image_webp": "sardy/IMG_6282.webp",
     "name": "زاگرۆزی دیو",
-    "price": 2250,
     "name_en": "",
-    "description_en": ""
+    "price": 2250
   },
   {
     "category": "drink",
     "description": "12 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "drink-092",
     "image": "sardy/IMG_6283.webp",
     "image_webp": "sardy/IMG_6283.webp",
     "name": "زاگرۆزی لیمۆ",
-    "price": 2250,
     "name_en": "",
-    "description_en": ""
+    "price": 2250
   },
   {
     "category": "drink",
     "description": "12 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "drink-093",
     "image": "sardy/IMG_6284.webp",
     "image_webp": "sardy/IMG_6284.webp",
     "name": "زاگرۆزی شین",
-    "price": 2250,
     "name_en": "",
-    "description_en": ""
+    "price": 2250
   },
   {
     "category": "drink",
     "description": "16 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "drink-094",
     "image": "sardy/IMG_6285.webp",
     "image_webp": "sardy/IMG_6285.webp",
     "name": "دۆی بچوک",
-    "price": 3000,
     "name_en": "",
-    "description_en": ""
+    "price": 3000
   },
   {
     "category": "drink",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "drink-095",
     "image": "sardy/IMG_6286.webp",
     "image_webp": "sardy/IMG_6286.webp",
     "name": "شەربەتی بۆبۆتۆ",
-    "price": 4500,
     "name_en": "",
-    "description_en": ""
+    "price": 4500
   },
   {
     "category": "drink",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "drink-096",
     "image": "sardy/IMG_6287.webp",
     "image_webp": "sardy/IMG_6287.webp",
     "name": "شیر کاڵەکی دەبە",
-    "price": 4500,
     "name_en": "",
-    "description_en": ""
+    "price": 4500
   },
   {
     "category": "drink",
     "description": "6عدد",
+    "description_en": "",
     "hidden": false,
     "id": "drink-1772043001326",
     "image": "sardy/IMG_6341.webp",
     "image_webp": "sardy/IMG_6341.webp",
     "name": "زم زم دەبە ڕەش",
-    "price": 5500,
     "name_en": "",
-    "description_en": ""
+    "price": 5500
   },
   {
     "category": "drink",
     "description": "6 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "drink-1772043505832",
     "image": "sardy/IMG_6342.webp",
     "image_webp": "sardy/IMG_6342.webp",
     "name": "یەومی پرتەقاڵی",
-    "price": 3000,
     "name_en": "",
-    "description_en": ""
+    "price": 3000
   },
   {
     "category": "drink",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "drink-1772053943960",
     "image": "sardy/IMG_6374.webp",
     "image_webp": "sardy/IMG_6374.webp",
     "name": "شیر قاوە دەبە",
-    "price": 4500,
     "name_en": "",
-    "description_en": ""
+    "price": 4500
   },
   {
     "category": "drink",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "drink-1772053977838",
     "image": "sardy/IMG_6373.webp",
     "image_webp": "sardy/IMG_6373.webp",
     "name": "شیر شلک دەبە",
-    "price": 4500,
     "name_en": "",
-    "description_en": ""
+    "price": 4500
   },
   {
     "category": "drink",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "drink-1772054011207",
     "image": "sardy/IMG_6372.webp",
     "image_webp": "sardy/IMG_6372.webp",
     "name": "شیر مۆز دەبە",
-    "price": 4500,
     "name_en": "",
-    "description_en": ""
+    "price": 4500
   },
   {
     "category": "family",
     "description": "8 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "family-001",
     "image": "aylay/photo_1_2026-02-20_22-54-38.webp",
     "image_webp": "aylay/photo_1_2026-02-20_22-54-38.webp",
     "name": "جکلیتی پۆپۆ",
-    "price": 12000,
     "name_en": "",
-    "description_en": ""
+    "price": 12000
   },
   {
     "category": "family",
     "description": "20 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "family-002",
     "image": "aylay/photo_2_2026-02-20_22-54-38.webp",
     "image_webp": "aylay/photo_2_2026-02-20_22-54-38.webp",
     "name": "نوقولی ورد",
-    "price": 18000,
     "name_en": "",
-    "description_en": ""
+    "price": 18000
   },
   {
     "category": "family",
     "description": "12 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "family-003",
     "image": "aylay/photo_3_2026-02-20_22-54-38.webp",
     "image_webp": "aylay/photo_3_2026-02-20_22-54-38.webp",
     "name": "وایفەر عایلە قاوە",
-    "price": 10000,
     "name_en": "",
-    "description_en": ""
+    "price": 10000
   },
   {
     "category": "family",
     "description": "12 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "family-004",
     "image": "aylay/photo_4_2026-02-20_22-54-38.webp",
     "image_webp": "aylay/photo_4_2026-02-20_22-54-38.webp",
     "name": "چەمەک مۆز",
-    "price": 10000,
     "name_en": "",
-    "description_en": ""
+    "price": 10000
   },
   {
     "category": "family",
     "description": "12 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "family-005",
     "image": "aylay/photo_16_2026-02-20_22-54-38.webp",
     "image_webp": "aylay/photo_16_2026-02-20_22-54-38.webp",
     "name": "چەمەکی قاوە",
-    "price": 10000,
     "name_en": "",
-    "description_en": ""
+    "price": 10000
   },
   {
     "category": "family",
     "description": "12 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "family-006",
     "image": "aylay/photo_17_2026-02-20_22-54-38.webp",
     "image_webp": "aylay/photo_17_2026-02-20_22-54-38.webp",
     "name": "چەمەکی گوێز",
-    "price": 10000,
     "name_en": "",
-    "description_en": ""
+    "price": 10000
   },
   {
     "category": "family",
     "description": "12 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "family-007",
     "image": "aylay/photo_7_2026-02-20_22-54-38.webp",
     "image_webp": "aylay/photo_7_2026-02-20_22-54-38.webp",
     "name": "نوقڵی مینۆ",
-    "price": 10000,
     "name_en": "",
-    "description_en": ""
+    "price": 10000
   },
   {
     "category": "family",
     "description": "18 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "family-008",
     "image": "aylay/photo_9_2026-02-20_22-54-38.webp",
     "image_webp": "aylay/photo_9_2026-02-20_22-54-38.webp",
     "name": "مادەر لاکێشە",
-    "price": 15000,
     "name_en": "",
-    "description_en": ""
+    "price": 15000
   },
   {
     "category": "family",
     "description": "12 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "family-009",
     "image": "aylay/photo_10_2026-02-20_22-54-38.webp",
     "image_webp": "aylay/photo_10_2026-02-20_22-54-38.webp",
     "name": "ئیسپانی عادی",
-    "price": 10000,
     "name_en": "",
-    "description_en": ""
+    "price": 10000
   },
   {
     "category": "family",
     "description": "12 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "family-010",
     "image": "aylay/photo_11_2026-02-20_22-54-38.webp",
     "image_webp": "aylay/photo_11_2026-02-20_22-54-38.webp",
     "name": "فینگەری عایلە",
-    "price": 10000,
     "name_en": "",
-    "description_en": ""
+    "price": 10000
   },
   {
     "category": "family",
     "description": "12 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "family-011",
     "image": "aylay/photo_12_2026-02-20_22-54-38.webp",
     "image_webp": "aylay/photo_12_2026-02-20_22-54-38.webp",
     "name": "بسكیتی چای سەوز",
-    "price": 8500,
     "name_en": "",
-    "description_en": ""
+    "price": 8500
   },
   {
     "category": "family",
     "description": "12 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "family-012",
     "image": "aylay/photo_8_2026-02-20_22-54-38.webp",
     "image_webp": "aylay/photo_8_2026-02-20_22-54-38.webp",
     "name": "پیتی پور عایلە",
-    "price": 10000,
     "name_en": "",
-    "description_en": ""
+    "price": 10000
   },
   {
     "category": "family",
     "description": "12 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "family-013",
     "image": "aylay/photo_13_2026-02-20_22-54-38.webp",
     "image_webp": "aylay/photo_13_2026-02-20_22-54-38.webp",
     "name": "پیتی پوری قاوە",
-    "price": 10000,
     "name_en": "",
-    "description_en": ""
+    "price": 10000
   },
   {
     "category": "family",
     "description": "12 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "family-014",
     "image": "aylay/photo_14_2026-02-20_22-54-38.webp",
     "image_webp": "aylay/photo_14_2026-02-20_22-54-38.webp",
     "name": "پیتی پور سادە",
-    "price": 10000,
     "name_en": "",
-    "description_en": ""
+    "price": 10000
   },
   {
     "category": "family",
     "description": "8 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "family-015",
     "image": "aylay/photo_18_2026-02-20_22-54-38.webp",
     "image_webp": "aylay/photo_18_2026-02-20_22-54-38.webp",
     "name": "ئاناتای بەڵەم",
-    "price": 11500,
     "name_en": "",
-    "description_en": ""
+    "price": 11500
   },
   {
     "category": "family",
     "description": "12 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "family-016",
     "image": "aylay/IMG_6375.webp",
     "image_webp": "aylay/IMG_6375.webp",
     "name": "نەستەلەی یەک کیلۆی",
-    "price": 47000,
     "name_en": "",
-    "description_en": ""
+    "price": 47000
   },
   {
     "category": "family",
     "description": "12 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "family-017",
     "image": "aylay/IMG_6376.webp",
     "image_webp": "aylay/IMG_6376.webp",
     "name": "لامیان عایلە مۆز",
-    "price": 9000,
     "name_en": "",
-    "description_en": ""
+    "price": 9000
   },
   {
     "category": "family",
     "description": "12 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "family-018",
     "image": "aylay/IMG_6377.webp",
     "image_webp": "aylay/IMG_6377.webp",
     "name": "لامیان عایلە پرتەقال",
-    "price": 9000,
     "name_en": "",
-    "description_en": ""
+    "price": 9000
   },
   {
     "category": "family",
     "description": "12 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "family-019",
     "image": "aylay/IMG_6378.webp",
     "image_webp": "aylay/IMG_6378.webp",
     "name": "لامیان عایلە شلک",
-    "price": 9000,
     "name_en": "",
-    "description_en": ""
+    "price": 9000
   },
   {
     "category": "family",
     "description": "12 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "family-020",
     "image": "aylay/IMG_6379.webp",
     "image_webp": "aylay/IMG_6379.webp",
     "name": "وایفەر عایلە پرتەقاڵ",
-    "price": 10000,
     "name_en": "",
-    "description_en": ""
+    "price": 10000
   },
   {
     "category": "family",
     "description": "12 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "family-021",
     "image": "aylay/IMG_6380.webp",
     "image_webp": "aylay/IMG_6380.webp",
     "name": "وایفەر عایلە مۆز",
-    "price": 10000,
     "name_en": "",
-    "description_en": ""
+    "price": 10000
   },
   {
     "category": "family",
     "description": "12 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "family-022",
     "image": "aylay/IMG_6381.webp",
     "image_webp": "aylay/IMG_6381.webp",
     "name": "وایفەر عایلە شلک",
-    "price": 10000,
     "name_en": "",
-    "description_en": ""
+    "price": 10000
   },
   {
     "category": "family",
     "description": "12 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "family-023",
     "image": "aylay/IMG_6382.webp",
     "image_webp": "aylay/IMG_6382.webp",
     "name": "وایفەر عایلە گویزهیند",
-    "price": 10000,
     "name_en": "",
-    "description_en": ""
+    "price": 10000
   },
   {
     "category": "family",
     "description": "12عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "family-024",
     "image": "aylay/IMG_6383.webp",
     "image_webp": "aylay/IMG_6383.webp",
     "name": "وایفەر عایلە مۆتە",
-    "price": 10000,
     "name_en": "",
-    "description_en": ""
+    "price": 10000
   },
   {
     "category": "family",
     "description": "6عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "family-025",
     "image": "aylay/IMG_6384.webp",
     "image_webp": "aylay/IMG_6384.webp",
     "name": "ئاناتا کیس",
-    "price": 12500,
     "name_en": "",
-    "description_en": ""
+    "price": 12500
   },
   {
     "category": "gaz",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "gaz-001",
     "image": "gaz/IMG_0215.webp",
     "image_webp": "gaz/IMG_0215.webp",
     "name": "ویتان",
-    "price": 5250,
     "name_en": "",
-    "description_en": ""
+    "price": 5250
   },
   {
     "category": "gaz",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "gaz-002",
     "image": "gaz/IMG_0216.webp",
     "image_webp": "gaz/IMG_0216.webp",
     "name": "تایکۆی شەشی",
-    "price": 4500,
     "name_en": "",
-    "description_en": ""
+    "price": 4500
   },
   {
     "category": "gaz",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "gaz-003",
     "image": "gaz/IMG_0217.webp",
     "image_webp": "gaz/IMG_0217.webp",
     "name": "دایجستۆ",
-    "price": 5000,
     "name_en": "",
-    "description_en": ""
+    "price": 5000
   },
   {
     "category": "gaz",
     "description": "40 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "gaz-004",
     "image": "gaz/IMG_0218.webp",
     "image_webp": "gaz/IMG_0218.webp",
     "name": "پاپڵی گەورە",
-    "price": 9000,
     "name_en": "",
-    "description_en": ""
+    "price": 9000
   },
   {
     "category": "gaz",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "gaz-006",
     "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (1).webp",
     "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (1).webp",
     "name": "کەزی لامیا",
-    "price": 5000,
     "name_en": "",
-    "description_en": ""
+    "price": 5000
   },
   {
     "category": "gaz",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "gaz-007",
     "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (3).webp",
     "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (3).webp",
     "name": "پاپڵ",
-    "price": 5250,
     "name_en": "",
-    "description_en": ""
+    "price": 5250
   },
   {
     "category": "gaz",
     "description": "80 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "gaz-008",
     "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (4).webp",
     "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (4).webp",
     "name": "پاڵشتی",
-    "price": 7500,
     "name_en": "",
-    "description_en": ""
+    "price": 7500
   },
   {
     "category": "gaz",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "gaz-009",
     "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (5).webp",
     "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (5).webp",
     "name": "ناستەلەی نانی",
-    "price": 2500,
     "name_en": "",
-    "description_en": ""
+    "price": 2500
   },
   {
     "category": "gaz",
     "description": "40 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "gaz-010",
     "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (6).webp",
     "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (6).webp",
     "name": "ستار مۆز",
-    "price": 8000,
     "name_en": "",
-    "description_en": ""
+    "price": 8000
   },
   {
     "category": "gaz",
     "description": "40 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "gaz-011",
     "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (7).webp",
     "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (7).webp",
     "name": "ستار شلیک",
-    "price": 8000,
     "name_en": "",
-    "description_en": ""
+    "price": 8000
   },
   {
     "category": "gaz",
     "description": "40 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "gaz-012",
     "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (8).webp",
     "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (8).webp",
     "name": "ستار پرتەقاڵ",
-    "price": 8000,
     "name_en": "",
-    "description_en": ""
+    "price": 8000
   },
   {
     "category": "gaz",
     "description": "40 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "gaz-013",
     "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (9).webp",
     "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (9).webp",
     "name": "بسکیتی ترد",
-    "price": 7500,
     "name_en": "",
-    "description_en": ""
+    "price": 7500
   },
   {
     "category": "gaz",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "gaz-014",
     "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM.webp",
     "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM.webp",
     "name": "چیلکەی دوانی",
-    "price": 5000,
     "name_en": "",
-    "description_en": ""
+    "price": 5000
   },
   {
     "category": "gaz",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "gaz-015",
     "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (1).webp",
     "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (1).webp",
     "name": "وایفەر ئەزرا شلیک",
-    "price": 5000,
     "name_en": "",
-    "description_en": ""
+    "price": 5000
   },
   {
     "category": "gaz",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "gaz-016",
     "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (2).webp",
     "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (2).webp",
     "name": "وایفەر ئەزرا مۆز",
-    "price": 5000,
     "name_en": "",
-    "description_en": ""
+    "price": 5000
   },
   {
     "category": "gaz",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "gaz-017",
     "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM.webp",
     "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM.webp",
     "name": "وایفەر ئەزرا پرتەقاڵ",
-    "price": 5000,
     "name_en": "",
-    "description_en": ""
+    "price": 5000
   },
   {
     "category": "gaz",
     "description": "40 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "gaz-018",
     "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (3).webp",
     "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (3).webp",
     "name": "شیرین عەسەل مۆز",
-    "price": 8000,
     "name_en": "",
-    "description_en": ""
+    "price": 8000
   },
   {
     "category": "gaz",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "gaz-019",
     "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (4).webp",
     "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (4).webp",
     "name": "بسکت پیتی پور وار",
-    "price": 5000,
     "name_en": "",
-    "description_en": ""
+    "price": 5000
   },
   {
     "category": "gaz",
     "description": "48 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "gaz-020",
     "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (5).webp",
     "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (5).webp",
     "name": "تایستێلی قاوە",
-    "price": 5000,
     "name_en": "",
-    "description_en": ""
+    "price": 5000
   },
   {
     "category": "gaz",
     "description": "60 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "gaz-021",
     "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (6).webp",
     "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (6).webp",
     "name": "چلکەی دوانی",
-    "price": 6500,
     "name_en": "",
-    "description_en": ""
+    "price": 6500
   },
   {
     "category": "gaz",
     "description": "60 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "gaz-022",
     "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (7).webp",
     "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (7).webp",
     "name": "ویکی دوانی",
-    "price": 6500,
     "name_en": "",
-    "description_en": ""
+    "price": 6500
   },
   {
     "category": "gaz",
     "description": "60 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "gaz-023",
     "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (8).webp",
     "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (8).webp",
     "name": "ویکی گەورە",
-    "price": 11500,
     "name_en": "",
-    "description_en": ""
+    "price": 11500
   },
   {
     "category": "gaz",
     "description": "12 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "gaz-024",
     "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (9).webp",
     "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (9).webp",
     "name": "شەمائیڵ",
-    "price": 2500,
     "name_en": "",
-    "description_en": ""
+    "price": 2500
   },
   {
     "category": "gaz",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "gaz-025",
     "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (10).webp",
     "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (10).webp",
     "name": "بسکیتی دەموو چاو",
-    "price": 5250,
     "name_en": "",
-    "description_en": ""
+    "price": 5250
   },
   {
     "category": "gaz",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "gaz-026",
     "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (11).webp",
     "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (11).webp",
     "name": "بسکیتی کالیتی",
-    "price": 4750,
     "name_en": "",
-    "description_en": ""
+    "price": 4750
   },
   {
     "category": "gaz",
     "description": "32 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "gaz-027",
     "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (12).webp",
     "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (12).webp",
     "name": "بورادا",
-    "price": 6250,
     "name_en": "",
-    "description_en": ""
+    "price": 6250
   },
   {
     "category": "gaz",
     "description": "60 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "gaz-028",
     "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (15).webp",
     "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (15).webp",
     "name": "شەوائیل",
-    "price": 6500,
     "name_en": "",
-    "description_en": ""
+    "price": 6500
   },
   {
     "category": "gaz",
     "description": "40 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "gaz-029",
     "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (16).webp",
     "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (16).webp",
     "name": "هایبای",
-    "price": 8000,
     "name_en": "",
-    "description_en": ""
+    "price": 8000
   },
   {
     "category": "gaz",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "gaz-030",
     "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (17).webp",
     "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (17).webp",
     "name": "هەپی عادی",
-    "price": 4500,
     "name_en": "",
-    "description_en": ""
+    "price": 4500
   },
   {
     "category": "gaz",
     "description": "40 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "gaz-031",
     "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (18).webp",
     "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (18).webp",
     "name": "ستاکی شەفاف 500",
-    "price": 10000,
     "name_en": "",
-    "description_en": ""
+    "price": 10000
   },
   {
     "category": "gaz",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "gaz-033",
     "image": "gaz/WhatsApp Image 2026-02-20 at 10.03.27 PM.webp",
     "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.03.27 PM.webp",
     "name": "مەڕەکان",
-    "price": 4750,
     "name_en": "",
-    "description_en": ""
+    "price": 4750
   },
   {
     "category": "gaz",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "gaz-034",
     "image": "gaz/IMG_6349.webp",
     "image_webp": "gaz/IMG_6349.webp",
     "name": "ئەنگڵس",
-    "price": 3500,
     "name_en": "",
-    "description_en": ""
+    "price": 3500
   },
   {
     "category": "gaz",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "gaz-035",
     "image": "gaz/IMG_6355.webp",
     "image_webp": "gaz/IMG_6355.webp",
     "name": "جین",
-    "price": 5250,
     "name_en": "",
-    "description_en": ""
+    "price": 5250
   },
   {
     "category": "gaz",
     "description": "40 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "gaz-036",
     "image": "gaz/IMG_6356.webp",
     "image_webp": "gaz/IMG_6356.webp",
     "name": "ئەندۆمی",
-    "price": 9250,
     "name_en": "",
-    "description_en": ""
+    "price": 9250
   },
   {
     "category": "gaz",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "gaz-037",
     "image": "gaz/IMG_6364.webp",
     "image_webp": "gaz/IMG_6364.webp",
     "name": "مستەر بایت ڕەش",
-    "price": 5250,
     "name_en": "",
-    "description_en": ""
+    "price": 5250
   },
   {
     "category": "gaz",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "gaz-038",
     "image": "gaz/IMG_6366.webp",
     "image_webp": "gaz/IMG_6366.webp",
     "name": "مستەربایت شیر",
-    "price": 5250,
     "name_en": "",
-    "description_en": ""
+    "price": 5250
   },
   {
     "category": "gaz",
     "description": "40 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "gaz-039",
     "image": "gaz/IMG_6385.webp",
     "image_webp": "gaz/IMG_6385.webp",
     "name": "بسکیتی تونس",
-    "price": 8000,
     "name_en": "",
-    "description_en": ""
+    "price": 8000
   },
   {
     "category": "gaz",
     "description": "32 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "gaz-040",
     "image": "gaz/IMG_6386.webp",
     "image_webp": "gaz/IMG_6386.webp",
     "name": "مادر",
-    "price": 6250,
     "name_en": "",
-    "description_en": ""
+    "price": 6250
   },
   {
     "category": "gaz",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "gaz-041",
     "image": "gaz/IMG_6387.webp",
     "image_webp": "gaz/IMG_6387.webp",
     "name": "کولیچەی فەل",
-    "price": 5250,
     "name_en": "",
-    "description_en": ""
+    "price": 5250
   },
   {
     "category": "gaz",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "gaz-042",
     "image": "gaz/IMG_6390.webp",
     "image_webp": "gaz/IMG_6390.webp",
     "name": "بورمەی وایفەر",
-    "price": 5000,
     "name_en": "",
-    "description_en": ""
+    "price": 5000
   },
   {
     "category": "gaz",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "gaz-043",
     "image": "gaz/IMG_6394.webp",
     "image_webp": "gaz/IMG_6394.webp",
     "name": "الیوەم خورما",
-    "price": 5000,
     "name_en": "",
-    "description_en": ""
+    "price": 5000
   },
   {
     "category": "gaz",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "gaz-044",
     "image": "gaz/IMG_6400.webp",
     "image_webp": "gaz/IMG_6400.webp",
     "name": "وایف ئەپ شین",
-    "price": 5250,
     "name_en": "",
-    "description_en": ""
+    "price": 5250
   },
   {
     "category": "gaz",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "gaz-045",
     "image": "gaz/IMG_6401.webp",
     "image_webp": "gaz/IMG_6401.webp",
     "name": "وقیف ئەپ قاوە",
-    "price": 5250,
     "name_en": "",
-    "description_en": ""
+    "price": 5250
   },
   {
     "category": "gaz",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "gaz-046",
     "image": "gaz/IMG_6402.webp",
     "image_webp": "gaz/IMG_6402.webp",
     "name": "وایف ئەپ بندوق",
-    "price": 5250,
     "name_en": "",
-    "description_en": ""
+    "price": 5250
   },
   {
     "category": "gaz",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "gaz-047",
     "image": "gaz/IMG_6403.webp",
     "image_webp": "gaz/IMG_6403.webp",
     "name": "وایف ئەپ شیر",
-    "price": 5250,
     "name_en": "",
-    "description_en": ""
+    "price": 5250
   },
   {
     "category": "gaz",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "gaz-048",
     "image": "gaz/IMG_6404.webp",
     "image_webp": "gaz/IMG_6404.webp",
     "name": "وایف ئەپ شلک",
-    "price": 5250,
     "name_en": "",
-    "description_en": ""
+    "price": 5250
   },
   {
     "category": "gaz",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "gaz-049",
     "image": "gaz/IMG_6423.webp",
     "image_webp": "gaz/IMG_6423.webp",
     "name": "پاپل قاوە",
-    "price": 5250,
     "name_en": "",
-    "description_en": ""
+    "price": 5250
   },
   {
     "category": "gaz",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "gaz-050",
     "image": "gaz/IMG_6426.webp",
     "image_webp": "gaz/IMG_6426.webp",
     "name": "بسکیتی ئۆریۆ عادی",
-    "price": 5000,
     "name_en": "",
-    "description_en": ""
+    "price": 5000
   },
   {
     "category": "gaz",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "gaz-051",
     "image": "gaz/IMG_6427.webp",
     "image_webp": "gaz/IMG_6427.webp",
     "name": "براوستاری زەرد",
-    "price": 5000,
     "name_en": "",
-    "description_en": ""
+    "price": 5000
   },
   {
     "category": "gaz",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "gaz-052",
     "image": "gaz/IMG_6431.webp",
     "image_webp": "gaz/IMG_6431.webp",
     "name": "فول تۆپ شین",
-    "price": 5000,
     "name_en": "",
-    "description_en": ""
+    "price": 5000
   },
   {
     "category": "gaz",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "gaz-053",
     "image": "gaz/IMG_6432.webp",
     "image_webp": "gaz/IMG_6432.webp",
     "name": "فول تۆپ شین قاوە",
-    "price": 5000,
     "name_en": "",
-    "description_en": ""
+    "price": 5000
   },
   {
     "category": "gaz",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "gaz-054",
     "image": "gaz/IMG_6433.webp",
     "image_webp": "gaz/IMG_6433.webp",
     "name": "فول تۆپ پەمەی",
-    "price": 5000,
     "name_en": "",
-    "description_en": ""
+    "price": 5000
   },
   {
     "category": "gaz",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "gaz-055",
     "image": "gaz/IMG_6434.webp",
     "image_webp": "gaz/IMG_6434.webp",
     "name": "فول تۆپ سور",
-    "price": 5000,
     "name_en": "",
-    "description_en": ""
+    "price": 5000
   },
   {
     "category": "gaz",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "gaz-056",
     "image": "gaz/IMG_6435.webp",
     "image_webp": "gaz/IMG_6435.webp",
     "name": "وایفەر توران قاوە",
-    "price": 5250,
     "name_en": "",
-    "description_en": ""
+    "price": 5250
   },
   {
     "category": "gaz",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "gaz-057",
     "image": "gaz/IMG_6436.webp",
     "image_webp": "gaz/IMG_6436.webp",
     "name": "وایفەر توران بندوق",
-    "price": 5250,
     "name_en": "",
-    "description_en": ""
+    "price": 5250
   },
   {
     "category": "gaz",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "gaz-058",
     "image": "gaz/IMG_6438.webp",
     "image_webp": "gaz/IMG_6438.webp",
     "name": "وایفەر توران لیمۆ",
-    "price": 5250,
     "name_en": "",
-    "description_en": ""
+    "price": 5250
   },
   {
     "category": "gaz",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "gaz-059",
     "image": "gaz/IMG_6439.webp",
     "image_webp": "gaz/IMG_6439.webp",
     "name": "وایفەر  توران شلک",
-    "price": 5250,
     "name_en": "",
-    "description_en": ""
+    "price": 5250
   },
   {
     "category": "gaz",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "gaz-060",
     "image": "gaz/IMG_6440.webp",
     "image_webp": "gaz/IMG_6440.webp",
     "name": "وایفەر توران شیر",
-    "price": 5250,
     "name_en": "",
-    "description_en": ""
+    "price": 5250
   },
   {
     "category": "gaz",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "gaz-061",
     "image": "gaz/IMG_6441.webp",
     "image_webp": "gaz/IMG_6441.webp",
     "name": "وایفەر ئەزرا لیمۆ",
-    "price": 5000,
     "name_en": "",
-    "description_en": ""
+    "price": 5000
   },
   {
     "category": "gaz",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "gaz-062",
     "image": "gaz/IMG_6442.webp",
     "image_webp": "gaz/IMG_6442.webp",
     "name": "وایفەر ئەزرا شلک",
-    "price": 5000,
     "name_en": "",
-    "description_en": ""
+    "price": 5000
   },
   {
     "category": "gaz",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "gaz-063",
     "image": "gaz/IMG_6443.webp",
     "image_webp": "gaz/IMG_6443.webp",
     "name": "وایفەر ئەزرا گویزهیند",
-    "price": 5000,
     "name_en": "",
-    "description_en": ""
+    "price": 5000
   },
   {
     "category": "gaz",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "gaz-064",
     "image": "gaz/IMG_6444.webp",
     "image_webp": "gaz/IMG_6444.webp",
     "name": "وایفەر ئەزرا بندوق",
-    "price": 5000,
     "name_en": "",
-    "description_en": ""
+    "price": 5000
   },
   {
     "category": "gaz",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "gaz-065",
     "image": "gaz/IMG_6445.webp",
     "image_webp": "gaz/IMG_6445.webp",
     "name": "وایفەر ئەزرا قاوە",
-    "price": 5000,
     "name_en": "",
-    "description_en": ""
+    "price": 5000
   },
   {
     "category": "gaz",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "gaz-066",
     "image": "gaz/IMG_6446.webp",
     "image_webp": "gaz/IMG_6446.webp",
     "name": "وایفەر ئەزرا مۆتە",
-    "price": 5000,
     "name_en": "",
-    "description_en": ""
+    "price": 5000
   },
   {
     "category": "gaz",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "gaz-067",
     "image": "gaz/IMG_6447.webp",
     "image_webp": "gaz/IMG_6447.webp",
     "name": "وایفەر ئەزرا گیلاس",
-    "price": 5000,
     "name_en": "",
-    "description_en": ""
+    "price": 5000
   },
   {
     "category": "gaz",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "gaz-068",
     "image": "gaz/IMG_6471.webp",
     "image_webp": "gaz/IMG_6471.webp",
     "name": "مستەر بایت قاوە",
-    "price": 5250,
     "name_en": "",
-    "description_en": ""
+    "price": 5250
   },
   {
     "category": "gaz",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "gaz-069",
     "image": "gaz/IMG_6472.webp",
     "image_webp": "gaz/IMG_6472.webp",
     "name": "مستەر بایت بندوق زەرد",
-    "price": 5250,
     "name_en": "",
-    "description_en": ""
+    "price": 5250
   },
   {
     "category": "gaz",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "gaz-070",
     "image": "gaz/IMG_6473.webp",
     "image_webp": "gaz/IMG_6473.webp",
     "name": "مستەر بایت گویزهیند",
-    "price": 5250,
     "name_en": "",
-    "description_en": ""
+    "price": 5250
   },
   {
     "category": "gaz",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "gaz-071",
     "image": "gaz/IMG_6474.webp",
     "image_webp": "gaz/IMG_6474.webp",
     "name": "مستەر بایت بندوق",
-    "price": 5250,
     "name_en": "",
-    "description_en": ""
+    "price": 5250
   },
   {
     "category": "gaz",
     "description": "24 عەدەد",
+    "description_en": "",
     "hidden": false,
     "id": "gaz-072",
     "image": "gaz/IMG_6475.webp",
     "image_webp": "gaz/IMG_6475.webp",
     "name": "مستەر بایت فستەق",
-    "price": 5250,
     "name_en": "",
-    "description_en": ""
-  },
-  {
-    "id": "cake-049",
-    "name": "aaa",
-    "category": "cake",
-    "price": 75000,
-    "description": "52",
-    "image": "kek/cake-1790642727798-xizkz6.webp",
-    "image_webp": "kek/cake-1790642727798-xizkz6.webp",
-    "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "createdAt": "2026-09-29T00:45:29.153Z",
-    "updatedAt": "2026-09-29T00:45:29.153Z"
+    "price": 5250
   }
 ]
