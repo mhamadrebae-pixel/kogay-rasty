@@ -879,7 +879,10 @@ async function applyLiveCatalogUpdate(reason = 'live') {
             }).catch(() => {});
         }
 
-        const success = await tryLoadFromFirebase(true);
+        let success = await tryLoadFromFirebase(true);
+        if (!success) {
+            success = await loadProducts({ showSkeleton: false });
+        }
         if (success) {
             renderCurrentView({ resetPage: false });
             updateCategoryCounts();
@@ -953,20 +956,21 @@ function setupStorefrontLiveSync() {
         } catch (e) {}
     }, 8000);
 
-    // 5. Visibility change (when customer returns to tab)
+    // 5. Direct auto-refresh when customer leaves and comes back to the tab/window/app
+    let lastReturnRefreshTime = 0;
+    const handleReturnToStorefront = () => {
+        if (document.hidden || isOffline) return;
+        const now = Date.now();
+        if (now - lastReturnRefreshTime < 1500) return;
+        lastReturnRefreshTime = now;
+        applyLiveCatalogUpdate('return_to_tab');
+    };
+
     document.addEventListener('visibilitychange', () => {
-        if (!document.hidden && !isOffline) {
-            fetch(`${FIREBASE_META_URL}?v=${Date.now()}`)
-                .then(r => r.json())
-                .then(meta => {
-                    const remoteTime = Number(meta?.updatedAt || 0);
-                    if (remoteTime > (lastKnownCatalogUpdatedAt || 0)) {
-                        lastKnownCatalogUpdatedAt = remoteTime;
-                        applyLiveCatalogUpdate('visibility');
-                    }
-                }).catch(() => {});
-        }
+        if (!document.hidden) handleReturnToStorefront();
     });
+    window.addEventListener('focus', handleReturnToStorefront);
+    window.addEventListener('pageshow', handleReturnToStorefront);
 }
 
 // Use cached products as an offline fallback when a category request fails.
