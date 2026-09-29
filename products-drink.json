@@ -4,7 +4,7 @@
     "name": "ئاوی دەبە",
     "description": "12 عەدەد",
     "price": 750,
-    "image": "sardy/IMG_0188.jpeg",
+    "image": "sardy/IMG_0188.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_0188.webp"
@@ -14,7 +14,7 @@
     "name": "ئاوی کارتۆن",
     "description": "60 عەدەد",
     "price": 1500,
-    "image": "sardy/IMG_0189.jpeg",
+    "image": "sardy/IMG_0189.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_0189.webp"
@@ -24,7 +24,7 @@
     "name": "پیپسی سلڤەر قەزەم",
     "description": "30 عەدەد",
     "price": 6500,
-    "image": "sardy/IMG_6192.jpeg",
+    "image": "sardy/IMG_6192.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6192.webp"
@@ -34,7 +34,7 @@
     "name": "پیپسی شین قەزەم",
     "description": "30 عەدەد",
     "price": 6500,
-    "image": "sardy/IMG_6193.jpeg",
+    "image": "sardy/IMG_6193.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6193.webp"
@@ -44,7 +44,7 @@
     "name": "میرندا پرتەقال قەزەم",
     "description": "30 عەدەد",
     "price": 6500,
-    "image": "sardy/IMG_6194.jpeg",
+    "image": "sardy/IMG_6194.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6194.webp"
@@ -54,7 +54,7 @@
     "name": "دیو قەزەم",
     "description": "30 عەدەد",
     "price": 6500,
-    "image": "sardy/IMG_6195.jpeg",
+    "image": "sardy/IMG_6195.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6195.webp"
@@ -64,7 +64,7 @@
     "name": "ڕاجی قۆخ",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "sardy/IMG_6196.jpeg",
+    "image": "sardy/IMG_6196.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6196.webp"
@@ -74,7 +74,7 @@
     "name": "ڕانی قتو",
     "description": "24 عەدەد",
     "price": 9750,
-    "image": "sardy/IMG_6197.jpeg",
+    "image": "sardy/IMG_6197.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6197.webp"
@@ -84,7 +84,7 @@
     "name": "ڕانی شوشە",
     "description": "24 عەدەد",
     "price": 9750,
-    "image": "sardy/IMG_6220.jpeg",
+    "image": "sardy/IMG_6220.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6220.webp"
@@ -94,7 +94,7 @@
     "name": "لالە شین",
     "description": "30 عەدەد",
     "price": 6000,
-    "image": "sardy/IMG_6198.jpeg",
+    "image": "sardy/IMG_6198.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6198.webp"
@@ -104,7 +104,7 @@
     "name": "لالە دیو",
     "description": "30 عەدەد",
     "price": 6000,
-    "image": "sardy/IMG_6199.jpeg",
+    "image": "sardy/IMG_6199.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6199.webp"
@@ -114,7 +114,7 @@
     "name": "دیوی قەڵەو",
     "description": "30 عەدەد",
     "price": 10000,
-    "image": "sardy/IMG_6200.jpeg",
+    "image": "sardy/IMG_6200.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6200.webp"
@@ -124,7 +124,7 @@
     "name": "پیپسی قەڵەو",
     "description": "30 عەدەد",
     "price": 10000,
-    "image": "sardy/IMG_6201.jpeg",
+    "image": "sardy/IMG_6201.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6201.webp"
@@ -134,7 +134,7 @@
     "name": "تازجی قتو قۆخ",
     "description": "30 عەدەد",
     "price": 6500,
-    "image": "sardy/IMG_6202.jpeg",
+    "image": "sardy/IMG_6202.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6202.webp"
@@ -144,7 +144,7 @@
     "name": "تازجی قتو پرتەقاڵ",
     "description": "30 عەدەد",
     "price": 6500,
-    "image": "sardy/IMG_6203.jpeg",
+    "image": "sardy/IMG_6203.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6203.webp"
@@ -154,7 +154,7 @@
     "name": "تازجی قتو هەنار",
     "description": "30 عەدەد",
     "price": 6500,
-    "image": "sardy/IMG_6204.jpeg",
+    "image": "sardy/IMG_6204.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6204.webp"
@@ -164,7 +164,7 @@
     "name": "RC شوشە ڕەش",
     "description": "30 عەدەد",
     "price": 6500,
-    "image": "sardy/IMG_6205.jpeg",
+    "image": "sardy/IMG_6205.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6205.webp"
@@ -174,7 +174,7 @@
     "name": "RC شوشە پرتەقاڵ",
     "description": "24 عەدەد",
     "price": 6500,
-    "image": "sardy/IMG_6219.jpeg",
+    "image": "sardy/IMG_6219.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6219.webp"
@@ -184,7 +184,7 @@
     "name": "ساردی بەغدادی",
     "description": "30 عەدەد",
     "price": 6500,
-    "image": "sardy/IMG_6206.jpeg",
+    "image": "sardy/IMG_6206.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6206.webp"
@@ -194,7 +194,7 @@
     "name": "پیپسی شوشە",
     "description": "24 عەدەد",
     "price": 9750,
-    "image": "sardy/IMG_6207.jpeg",
+    "image": "sardy/IMG_6207.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6207.webp"
@@ -204,7 +204,7 @@
     "name": "دیوی شوشە",
     "description": "24 عەدەد",
     "price": 9750,
-    "image": "sardy/IMG_6208.jpeg",
+    "image": "sardy/IMG_6208.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6208.webp"
@@ -214,7 +214,7 @@
     "name": "زەمزەمی شوشە ڕەش",
     "description": "24 عەدەد",
     "price": 10000,
-    "image": "sardy/IMG_6209.jpeg",
+    "image": "sardy/IMG_6209.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6209.webp"
@@ -224,7 +224,7 @@
     "name": "زەمزەمی شوشە پرتەقاڵ",
     "description": "24 عەدەد",
     "price": 10000,
-    "image": "sardy/IMG_6210.jpeg",
+    "image": "sardy/IMG_6210.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6210.webp"
@@ -234,7 +234,7 @@
     "name": "زەمزەم شوشە لیمۆ",
     "description": "12 عەدەد",
     "price": 5000,
-    "image": "sardy/IMG_6218.jpeg",
+    "image": "sardy/IMG_6218.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6218.webp"
@@ -244,7 +244,7 @@
     "name": "ئاسان شین",
     "description": "24 عەدەد",
     "price": 9750,
-    "image": "sardy/IMG_6211.jpeg",
+    "image": "sardy/IMG_6211.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6211.webp"
@@ -254,7 +254,7 @@
     "name": "ئاسان مۆر",
     "description": "24 عەدەد",
     "price": 9750,
-    "image": "sardy/IMG_6212.jpeg",
+    "image": "sardy/IMG_6212.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6212.webp"
@@ -264,7 +264,7 @@
     "name": "تایگەری تام پەمەی",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "sardy/IMG_6213.jpeg",
+    "image": "sardy/IMG_6213.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6213.webp"
@@ -274,7 +274,7 @@
     "name": "تام شین",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "sardy/IMG_6238.jpeg",
+    "image": "sardy/IMG_6238.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6238.webp"
@@ -284,7 +284,7 @@
     "name": "وینەر گەورە",
     "description": "24 عەدەد",
     "price": 9500,
-    "image": "sardy/IMG_6214.jpeg",
+    "image": "sardy/IMG_6214.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6214.webp"
@@ -294,7 +294,7 @@
     "name": "وینەر بچوک",
     "description": "24 عەدەد",
     "price": 5250,
-    "image": "sardy/IMG_6215.jpeg",
+    "image": "sardy/IMG_6215.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6215.webp"
@@ -304,7 +304,7 @@
     "name": "سۆدەی فروتلی",
     "description": "24 عەدەد",
     "price": 8250,
-    "image": "sardy/IMG_6216.jpeg",
+    "image": "sardy/IMG_6216.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6216.webp"
@@ -314,7 +314,7 @@
     "name": "سۆدەی مستەر",
     "description": "24 عەدەد",
     "price": 5500,
-    "image": "sardy/IMG_6217.jpeg",
+    "image": "sardy/IMG_6217.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6217.webp"
@@ -324,7 +324,7 @@
     "name": "شەربەتی تۆ شلک",
     "description": "12 عەدەد",
     "price": 5000,
-    "image": "sardy/IMG_6221.jpeg",
+    "image": "sardy/IMG_6221.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6221.webp"
@@ -334,7 +334,7 @@
     "name": "شەربەتی تۆ کاڵەک",
     "description": "12 عەدەد",
     "price": 5000,
-    "image": "sardy/IMG_6222.jpeg",
+    "image": "sardy/IMG_6222.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6222.webp"
@@ -344,7 +344,7 @@
     "name": "شەربەتی تۆ بلوبێری",
     "description": "12 عەدەد",
     "price": 5000,
-    "image": "sardy/IMG_6223.jpeg",
+    "image": "sardy/IMG_6223.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6223.webp"
@@ -354,7 +354,7 @@
     "name": "شەربەتی تۆ پرتەقاڵ",
     "description": "12 عەدەد",
     "price": 5000,
-    "image": "sardy/IMG_6224.jpeg",
+    "image": "sardy/IMG_6224.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6224.webp"
@@ -364,7 +364,7 @@
     "name": "شەربەتی تۆ ئەنەناس",
     "description": "12 عەدەد",
     "price": 5000,
-    "image": "sardy/IMG_6225.jpeg",
+    "image": "sardy/IMG_6225.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6225.webp"
@@ -374,7 +374,7 @@
     "name": "سۆدەی مستار",
     "description": "24 عەدەد",
     "price": 10000,
-    "image": "sardy/IMG_6226.jpeg",
+    "image": "sardy/IMG_6226.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6226.webp"
@@ -384,7 +384,7 @@
     "name": "ساردی تورکی پرتەقاڵ",
     "description": "24 عەدەد",
     "price": 9500,
-    "image": "sardy/IMG_6227.jpeg",
+    "image": "sardy/IMG_6227.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6227.webp"
@@ -394,7 +394,7 @@
     "name": "تازج شوشە هەنار",
     "description": "24 عەدەد",
     "price": 9500,
-    "image": "sardy/IMG_6228.jpeg",
+    "image": "sardy/IMG_6228.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6228.webp"
@@ -404,7 +404,7 @@
     "name": "تازج شوشە قۆخ",
     "description": "24 عەدەد",
     "price": 9500,
-    "image": "sardy/IMG_6229.jpeg",
+    "image": "sardy/IMG_6229.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6229.webp"
@@ -414,7 +414,7 @@
     "name": "تازج شوشە پرتەقاڵ",
     "description": "24 عەدەد",
     "price": 9500,
-    "image": "sardy/IMG_6230.jpeg",
+    "image": "sardy/IMG_6230.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6230.webp"
@@ -424,7 +424,7 @@
     "name": "تازج شوشە گێزەر",
     "description": "24 عەدەد",
     "price": 9500,
-    "image": "sardy/IMG_6231.jpeg",
+    "image": "sardy/IMG_6231.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6231.webp"
@@ -434,7 +434,7 @@
     "name": "ماڵت جۆ",
     "description": "24 عەدەد",
     "price": 10000,
-    "image": "sardy/IMG_6232.jpeg",
+    "image": "sardy/IMG_6232.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6232.webp"
@@ -444,7 +444,7 @@
     "name": "ماڵت لیمۆ",
     "description": "24 عەدەد",
     "price": 10000,
-    "image": "sardy/IMG_6233.jpeg",
+    "image": "sardy/IMG_6233.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6233.webp"
@@ -454,7 +454,7 @@
     "name": "ماڵت قۆخ",
     "description": "24 عەدەد",
     "price": 10000,
-    "image": "sardy/IMG_6234.jpeg",
+    "image": "sardy/IMG_6234.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6234.webp"
@@ -464,7 +464,7 @@
     "name": "K9 پەمەی",
     "description": "24 عەدەد",
     "price": 9500,
-    "image": "sardy/IMG_6235.jpeg",
+    "image": "sardy/IMG_6235.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6235.webp"
@@ -474,7 +474,7 @@
     "name": "K9 شین",
     "description": "24 عەدەد",
     "price": 9500,
-    "image": "sardy/IMG_6237.jpeg",
+    "image": "sardy/IMG_6237.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6237.webp"
@@ -484,7 +484,7 @@
     "name": "تایگەر ئەسڵ",
     "description": "24 عەدەد",
     "price": 21000,
-    "image": "sardy/IMG_6236.jpeg",
+    "image": "sardy/IMG_6236.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6236.webp"
@@ -494,7 +494,7 @@
     "name": "دەبە سێڤن",
     "description": "12 عەدەد",
     "price": 2250,
-    "image": "sardy/IMG_6239.jpeg",
+    "image": "sardy/IMG_6239.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6239.webp"
@@ -504,7 +504,7 @@
     "name": "ساردی نیو",
     "description": "12 عەدەد",
     "price": 2250,
-    "image": "sardy/IMG_6240.jpeg",
+    "image": "sardy/IMG_6240.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6240.webp"
@@ -514,7 +514,7 @@
     "name": "ساردی K",
     "description": "12 عەدەد",
     "price": 2250,
-    "image": "sardy/IMG_6241.jpeg",
+    "image": "sardy/IMG_6241.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6241.webp"
@@ -524,7 +524,7 @@
     "name": "ئارسۆ تایگەر",
     "description": "30 عەدەد",
     "price": 6500,
-    "image": "sardy/IMG_6242.jpeg",
+    "image": "sardy/IMG_6242.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6242.webp"
@@ -534,7 +534,7 @@
     "name": "ئارسۆ پرتەقاڵ",
     "description": "30 عەدەد",
     "price": 6500,
-    "image": "sardy/IMG_6243.jpeg",
+    "image": "sardy/IMG_6243.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6243.webp"
@@ -544,7 +544,7 @@
     "name": "ئارسۆ لیمۆ",
     "description": "30 عەدەد",
     "price": 6500,
-    "image": "sardy/IMG_6245.jpeg",
+    "image": "sardy/IMG_6245.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6245.webp"
@@ -554,7 +554,7 @@
     "name": "ئارسۆ ئاوی",
     "description": "30 عەدەد",
     "price": 6500,
-    "image": "sardy/IMG_6246.jpeg",
+    "image": "sardy/IMG_6246.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6246.webp"
@@ -564,7 +564,7 @@
     "name": "ترابی",
     "description": "24 عەدەد",
     "price": 9500,
-    "image": "sardy/IMG_6244.jpeg",
+    "image": "sardy/IMG_6244.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6244.webp"
@@ -574,7 +574,7 @@
     "name": "تورکی ڕەش",
     "description": "24 عەدەد",
     "price": 9500,
-    "image": "sardy/IMG_6247.jpeg",
+    "image": "sardy/IMG_6247.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6247.webp"
@@ -584,7 +584,7 @@
     "name": "زاکی",
     "description": "36 عەدەد",
     "price": 6000,
-    "image": "sardy/IMG_6248.jpeg",
+    "image": "sardy/IMG_6248.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6248.webp"
@@ -594,7 +594,7 @@
     "name": "سەمناکی قۆخ",
     "description": "36 عەدەد",
     "price": 3000,
-    "image": "sardy/IMG_6249.jpeg",
+    "image": "sardy/IMG_6249.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6249.webp"
@@ -604,7 +604,7 @@
     "name": "تازجی پاکەت قۆخ",
     "description": "36 عەدەد",
     "price": 4000,
-    "image": "sardy/IMG_6250.jpeg",
+    "image": "sardy/IMG_6250.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6250.webp"
@@ -614,7 +614,7 @@
     "name": "تازجی پاکەت کۆکتێل",
     "description": "36 عەدەد",
     "price": 4000,
-    "image": "sardy/IMG_6252.jpeg",
+    "image": "sardy/IMG_6252.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6252.webp"
@@ -624,7 +624,7 @@
     "name": "تازجی پاکەت پرتەقاڵ",
     "description": "36 عەدەد",
     "price": 4000,
-    "image": "sardy/IMG_6253.jpeg",
+    "image": "sardy/IMG_6253.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6253.webp"
@@ -634,7 +634,7 @@
     "name": "کاڵبی مۆز",
     "description": "36 عەدەد",
     "price": 8000,
-    "image": "sardy/IMG_6254.jpeg",
+    "image": "sardy/IMG_6254.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6254.webp"
@@ -644,7 +644,7 @@
     "name": "کاڵبی شلک",
     "description": "36 عەدەد",
     "price": 8000,
-    "image": "sardy/IMG_6255.jpeg",
+    "image": "sardy/IMG_6255.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6255.webp"
@@ -654,7 +654,7 @@
     "name": "کاڵبی قاوە",
     "description": "36 عەدەد",
     "price": 8000,
-    "image": "sardy/IMG_6256.jpeg",
+    "image": "sardy/IMG_6256.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6256.webp"
@@ -664,7 +664,7 @@
     "name": "کاڵبی کاڵەک",
     "description": "36 عەدەد",
     "price": 8000,
-    "image": "sardy/IMG_6257.jpeg",
+    "image": "sardy/IMG_6257.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6257.webp"
@@ -674,7 +674,7 @@
     "name": "زۆزۆ پرتەقاڵ",
     "description": "36 عەدەد",
     "price": 3250,
-    "image": "sardy/IMG_6258.jpeg",
+    "image": "sardy/IMG_6258.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6258.webp"
@@ -684,7 +684,7 @@
     "name": "زۆزۆ ئەنەناش",
     "description": "36 عەدەد",
     "price": 3250,
-    "image": "sardy/IMG_6259.jpeg",
+    "image": "sardy/IMG_6259.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6259.webp"
@@ -694,7 +694,7 @@
     "name": "زۆزۆ کۆکتێل",
     "description": "36 عەدەد",
     "price": 3250,
-    "image": "sardy/IMG_6260.jpeg",
+    "image": "sardy/IMG_6260.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6260.webp"
@@ -704,7 +704,7 @@
     "name": "زۆزۆ ترێ",
     "description": "36 عەدەد",
     "price": 3250,
-    "image": "sardy/IMG_6261.jpeg",
+    "image": "sardy/IMG_6261.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6261.webp"
@@ -714,7 +714,7 @@
     "name": "زۆزۆ شلک",
     "description": "36 عەدەد",
     "price": 3250,
-    "image": "sardy/IMG_6262.jpeg",
+    "image": "sardy/IMG_6262.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6262.webp"
@@ -724,7 +724,7 @@
     "name": "زۆزۆ قۆخ",
     "description": "36 عەدەد",
     "price": 3250,
-    "image": "sardy/IMG_6263.jpeg",
+    "image": "sardy/IMG_6263.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6263.webp"
@@ -734,7 +734,7 @@
     "name": "زۆزۆ سێو",
     "description": "36 عەدەد",
     "price": 3250,
-    "image": "sardy/IMG_6264.jpeg",
+    "image": "sardy/IMG_6264.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6264.webp"
@@ -744,7 +744,7 @@
     "name": "مەکسیکی لیمۆ",
     "description": "24 عەدەد",
     "price": 14500,
-    "image": "sardy/IMG_6265.jpeg",
+    "image": "sardy/IMG_6265.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6265.webp"
@@ -754,7 +754,7 @@
     "name": "مەکسیکی شلک",
     "description": "24 عەدەد",
     "price": 14500,
-    "image": "sardy/IMG_6266.jpeg",
+    "image": "sardy/IMG_6266.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6266.webp"
@@ -764,7 +764,7 @@
     "name": "مەکسیکی مانگۆ",
     "description": "24 عەدەد",
     "price": 14500,
-    "image": "sardy/IMG_6267.jpeg",
+    "image": "sardy/IMG_6267.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6267.webp"
@@ -774,7 +774,7 @@
     "name": "مەکسیکی بوبی",
     "description": "24 عەدەد",
     "price": 14500,
-    "image": "sardy/IMG_6268.jpeg",
+    "image": "sardy/IMG_6268.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6268.webp"
@@ -784,7 +784,7 @@
     "name": "مەکسیکی هەنار",
     "description": "24 عەدەد",
     "price": 14500,
-    "image": "sardy/IMG_6269.jpeg",
+    "image": "sardy/IMG_6269.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6269.webp"
@@ -794,7 +794,7 @@
     "name": "مەکسیکی قاوە",
     "description": "24 عەدەد",
     "price": 14500,
-    "image": "sardy/IMG_6270.jpeg",
+    "image": "sardy/IMG_6270.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6270.webp"
@@ -804,7 +804,7 @@
     "name": "ڕێد",
     "description": "24 عەدەد",
     "price": 9500,
-    "image": "sardy/IMG_6271.jpeg",
+    "image": "sardy/IMG_6271.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6271.webp"
@@ -814,7 +814,7 @@
     "name": "پیپسی دەبڵ",
     "description": "6 عەدەد",
     "price": 6500,
-    "image": "sardy/IMG_6272.jpeg",
+    "image": "sardy/IMG_6272.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6272.webp"
@@ -824,7 +824,7 @@
     "name": "پیپسی 1000",
     "description": "6 عەدەد",
     "price": 4500,
-    "image": "sardy/IMG_6274.jpeg",
+    "image": "sardy/IMG_6274.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6274.webp"
@@ -834,7 +834,7 @@
     "name": "پیپسی وەصەت",
     "description": "12 عەدەد",
     "price": 6500,
-    "image": "sardy/IMG_6275.jpeg",
+    "image": "sardy/IMG_6275.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6275.webp"
@@ -844,7 +844,7 @@
     "name": "دیوی دەبڵ",
     "description": "6 عەدەد",
     "price": 6500,
-    "image": "sardy/IMG_6276.jpeg",
+    "image": "sardy/IMG_6276.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6276.webp"
@@ -854,7 +854,7 @@
     "name": "دیوی 1000",
     "description": "6 عەدەد",
     "price": 4500,
-    "image": "sardy/IMG_6277.jpeg",
+    "image": "sardy/IMG_6277.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6277.webp"
@@ -864,7 +864,7 @@
     "name": "دیوی وەصەت",
     "description": "12 عەدەد",
     "price": 6500,
-    "image": "sardy/IMG_6278.jpeg",
+    "image": "sardy/IMG_6278.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6278.webp"
@@ -874,7 +874,7 @@
     "name": "ئەفرا",
     "description": "6 عەدەد",
     "price": 3000,
-    "image": "sardy/IMG_6279.jpeg",
+    "image": "sardy/IMG_6279.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6279.webp"
@@ -884,7 +884,7 @@
     "name": "یەومی ڕەش",
     "description": "6 عەدەد",
     "price": 3000,
-    "image": "sardy/IMG_6280.jpeg",
+    "image": "sardy/IMG_6280.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6280.webp"
@@ -894,7 +894,7 @@
     "name": "زەمزامی پرتەقاڵ",
     "description": "6 عەدەد",
     "price": 5500,
-    "image": "sardy/IMG_6281.jpeg",
+    "image": "sardy/IMG_6281.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6281.webp"
@@ -904,7 +904,7 @@
     "name": "زاگرۆزی دیو",
     "description": "12 عەدەد",
     "price": 2250,
-    "image": "sardy/IMG_6282.jpeg",
+    "image": "sardy/IMG_6282.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6282.webp"
@@ -914,7 +914,7 @@
     "name": "زاگرۆزی لیمۆ",
     "description": "12 عەدەد",
     "price": 2250,
-    "image": "sardy/IMG_6283.jpeg",
+    "image": "sardy/IMG_6283.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6283.webp"
@@ -924,7 +924,7 @@
     "name": "زاگرۆزی شین",
     "description": "12 عەدەد",
     "price": 2250,
-    "image": "sardy/IMG_6284.jpeg",
+    "image": "sardy/IMG_6284.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6284.webp"
@@ -934,7 +934,7 @@
     "name": "دۆی بچوک",
     "description": "16 عەدەد",
     "price": 3000,
-    "image": "sardy/IMG_6285.jpeg",
+    "image": "sardy/IMG_6285.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6285.webp"
@@ -944,7 +944,7 @@
     "name": "شەربەتی بۆبۆتۆ",
     "description": "24 عەدەد",
     "price": 4500,
-    "image": "sardy/IMG_6286.jpeg",
+    "image": "sardy/IMG_6286.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6286.webp"
@@ -954,7 +954,7 @@
     "name": "شیر کاڵەکی دەبە",
     "description": "24 عەدەد",
     "price": 4500,
-    "image": "sardy/IMG_6287.jpeg",
+    "image": "sardy/IMG_6287.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6287.webp"
@@ -964,7 +964,7 @@
     "name": "زم زم دەبە ڕەش",
     "description": "6عدد",
     "price": 5500,
-    "image": "sardy/IMG_6341.jpeg",
+    "image": "sardy/IMG_6341.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6341.webp"
@@ -974,7 +974,7 @@
     "name": "یەومی پرتەقاڵی",
     "description": "6 عەدەد",
     "price": 3000,
-    "image": "sardy/IMG_6342.jpeg",
+    "image": "sardy/IMG_6342.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6342.webp"
@@ -984,7 +984,7 @@
     "name": "شیر قاوە دەبە",
     "description": "24 عەدەد",
     "price": 4500,
-    "image": "sardy/IMG_6374.jpeg",
+    "image": "sardy/IMG_6374.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6374.webp"
@@ -994,7 +994,7 @@
     "name": "شیر شلک دەبە",
     "description": "24 عەدەد",
     "price": 4500,
-    "image": "sardy/IMG_6373.jpeg",
+    "image": "sardy/IMG_6373.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6373.webp"
@@ -1004,7 +1004,7 @@
     "name": "شیر مۆز دەبە",
     "description": "24 عەدەد",
     "price": 4500,
-    "image": "sardy/IMG_6372.jpeg",
+    "image": "sardy/IMG_6372.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6372.webp"

@@ -4,7 +4,7 @@
     "name": "نەزەری دووقول",
     "description": "24 عەدەد",
     "price": 5250,
-    "image": "kek/IMG_0214.jpeg",
+    "image": "kek/IMG_0214.webp",
     "category": "cake",
     "hidden": false,
     "image_webp": "kek/IMG_0214.webp"
@@ -14,7 +14,7 @@
     "name": "کولیچەی دوانی",
     "description": "60 عەدەد",
     "price": 5750,
-    "image": "kek/IMG_0211.jpeg",
+    "image": "kek/IMG_0211.webp",
     "category": "cake",
     "hidden": false,
     "image_webp": "kek/IMG_0211.webp"
@@ -24,7 +24,7 @@
     "name": "کێکی ئادرین",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "kek/IMG_0212.jpeg",
+    "image": "kek/IMG_0212.webp",
     "category": "cake",
     "hidden": false,
     "image_webp": "kek/IMG_0212.webp"
@@ -34,7 +34,7 @@
     "name": "لۆپۆچۆکۆ",
     "description": "24 عەدەد",
     "price": 5250,
-    "image": "kek/IMG_0213.jpeg",
+    "image": "kek/IMG_0213.webp",
     "category": "cake",
     "hidden": false,
     "image_webp": "kek/IMG_0213.webp"
@@ -44,7 +44,7 @@
     "name": "کێکی دوانی قاوە",
     "description": "24 عەدەد",
     "price": 2500,
-    "image": "kek/photo_1_2026-02-20_22-41-44.jpg",
+    "image": "kek/photo_1_2026-02-20_22-41-44.webp",
     "category": "cake",
     "hidden": false,
     "image_webp": "kek/photo_1_2026-02-20_22-41-44.webp"
@@ -54,7 +54,7 @@
     "name": "موفید شلیک",
     "description": "24 عەدەد",
     "price": 4750,
-    "image": "kek/photo_2_2026-02-20_22-41-44.jpg",
+    "image": "kek/photo_2_2026-02-20_22-41-44.webp",
     "category": "cake",
     "hidden": false,
     "image_webp": "kek/photo_2_2026-02-20_22-41-44.webp"
@@ -64,7 +64,7 @@
     "name": "موفید پرتەقاڵ",
     "description": "24 عەدەد",
     "price": 4750,
-    "image": "kek/photo_3_2026-02-20_22-41-44.jpg",
+    "image": "kek/photo_3_2026-02-20_22-41-44.webp",
     "category": "cake",
     "hidden": false,
     "image_webp": "kek/photo_3_2026-02-20_22-41-44.webp"
@@ -74,7 +74,7 @@
     "name": "موفید پەنیر",
     "description": "24 عەدەد",
     "price": 4750,
-    "image": "kek/photo_7_2026-02-20_22-41-44.jpg",
+    "image": "kek/photo_7_2026-02-20_22-41-44.webp",
     "category": "cake",
     "hidden": false,
     "image_webp": "kek/photo_7_2026-02-20_22-41-44.webp"
@@ -84,7 +84,7 @@
     "name": "موفید پڵەس کەرەمێڵ",
     "description": "24 عەدەد",
     "price": 4750,
-    "image": "kek/photo_5_2026-02-20_22-41-44.jpg",
+    "image": "kek/photo_5_2026-02-20_22-41-44.webp",
     "category": "cake",
     "hidden": false,
     "image_webp": "kek/photo_5_2026-02-20_22-41-44.webp"
@@ -94,7 +94,7 @@
     "name": "کێکی جەلی",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "kek/photo_4_2026-02-20_22-41-44.jpg",
+    "image": "kek/photo_4_2026-02-20_22-41-44.webp",
     "category": "cake",
     "hidden": false,
     "image_webp": "kek/photo_4_2026-02-20_22-41-44.webp"
@@ -104,7 +104,7 @@
     "name": "دوو قول",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "kek/photo_6_2026-02-20_22-41-44.jpg",
+    "image": "kek/photo_6_2026-02-20_22-41-44.webp",
     "category": "cake",
     "hidden": false,
     "image_webp": "kek/photo_6_2026-02-20_22-41-44.webp"
@@ -114,7 +114,7 @@
     "name": "فۆڕچن تەخت سور",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "kek/photo_8_2026-02-20_22-41-44.jpg",
+    "image": "kek/photo_8_2026-02-20_22-41-44.webp",
     "category": "cake",
     "hidden": false,
     "image_webp": "kek/photo_8_2026-02-20_22-41-44.webp"
@@ -124,7 +124,7 @@
     "name": "فۆڕچت دوبەی",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "kek/photo_9_2026-02-20_22-41-44.jpg",
+    "image": "kek/photo_9_2026-02-20_22-41-44.webp",
     "category": "cake",
     "hidden": false,
     "image_webp": "kek/photo_9_2026-02-20_22-41-44.webp"
@@ -134,7 +134,7 @@
     "name": "کێکی روزینا کرێم",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "kek/photo_10_2026-02-20_22-41-44.jpg",
+    "image": "kek/photo_10_2026-02-20_22-41-44.webp",
     "category": "cake",
     "hidden": false,
     "image_webp": "kek/photo_10_2026-02-20_22-41-44.webp"
@@ -144,7 +144,7 @@
     "name": "دیل کێک سور",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "kek/photo_11_2026-02-20_22-41-44.jpg",
+    "image": "kek/photo_11_2026-02-20_22-41-44.webp",
     "category": "cake",
     "hidden": false,
     "image_webp": "kek/photo_11_2026-02-20_22-41-44.webp"
@@ -154,7 +154,7 @@
     "name": "دیل کێک ڕەش",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "kek/photo_12_2026-02-20_22-41-44.jpg",
+    "image": "kek/photo_12_2026-02-20_22-41-44.webp",
     "category": "cake",
     "hidden": false,
     "image_webp": "kek/photo_12_2026-02-20_22-41-44.webp"
@@ -164,7 +164,7 @@
     "name": "دیل کێک گۆڵد",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "kek/photo_14_2026-02-20_22-41-44.jpg",
+    "image": "kek/photo_14_2026-02-20_22-41-44.webp",
     "category": "cake",
     "hidden": false,
     "image_webp": "kek/photo_14_2026-02-20_22-41-44.webp"
@@ -174,7 +174,7 @@
     "name": "رۆزینا گوێزی",
     "description": "24 عەدەد",
     "price": 4750,
-    "image": "kek/photo_13_2026-02-20_22-41-44.jpg",
+    "image": "kek/photo_13_2026-02-20_22-41-44.webp",
     "category": "cake",
     "hidden": false,
     "image_webp": "kek/photo_13_2026-02-20_22-41-44.webp"
@@ -184,7 +184,7 @@
     "name": "فۆڕچن فستق خڕ",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "kek/photo_15_2026-02-20_22-41-44.jpg",
+    "image": "kek/photo_15_2026-02-20_22-41-44.webp",
     "category": "cake",
     "hidden": false,
     "image_webp": "kek/photo_15_2026-02-20_22-41-44.webp"
@@ -194,7 +194,7 @@
     "name": "فۆڕچن بسکیت",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "kek/photo_16_2026-02-20_22-41-44.jpg",
+    "image": "kek/photo_16_2026-02-20_22-41-44.webp",
     "category": "cake",
     "hidden": false,
     "image_webp": "kek/photo_16_2026-02-20_22-41-44.webp"
@@ -204,7 +204,7 @@
     "name": "فۆڕچن شلک",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "kek/photo_18_2026-02-20_22-41-44.jpg",
+    "image": "kek/photo_18_2026-02-20_22-41-44.webp",
     "category": "cake",
     "hidden": false,
     "image_webp": "kek/photo_18_2026-02-20_22-41-44.webp"
@@ -214,7 +214,7 @@
     "name": "فۆڕچن پەنیر",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "kek/photo_19_2026-02-20_22-41-44.jpg",
+    "image": "kek/photo_19_2026-02-20_22-41-44.webp",
     "category": "cake",
     "hidden": false,
     "image_webp": "kek/photo_19_2026-02-20_22-41-44.webp"
@@ -224,7 +224,7 @@
     "name": "کێکی مۆتۆ ٥٠٠",
     "description": "24 عەدەد",
     "price": 10000,
-    "image": "kek/photo_17_2026-02-20_22-41-44.jpg",
+    "image": "kek/photo_17_2026-02-20_22-41-44.webp",
     "category": "cake",
     "hidden": false,
     "image_webp": "kek/photo_17_2026-02-20_22-41-44.webp"
@@ -234,7 +234,7 @@
     "name": "دۆناتی ئەڵقە",
     "description": "24 عەدەد",
     "price": 4250,
-    "image": "kek/photo_20_2026-02-20_22-41-44.jpg",
+    "image": "kek/photo_20_2026-02-20_22-41-44.webp",
     "category": "cake",
     "hidden": false,
     "image_webp": "kek/photo_20_2026-02-20_22-41-44.webp"
@@ -244,7 +244,7 @@
     "name": "نەزەڕی دڵ پەمەی",
     "description": "24 عەدەد",
     "price": 5250,
-    "image": "kek/photo_21_2026-02-20_22-41-44.jpg",
+    "image": "kek/photo_21_2026-02-20_22-41-44.webp",
     "category": "cake",
     "hidden": false,
     "image_webp": "kek/photo_21_2026-02-20_22-41-44.webp"
@@ -254,7 +254,7 @@
     "name": "نەزەڕی دڵ ڕەش",
     "description": "24 عەدەد",
     "price": 5250,
-    "image": "kek/photo_22_2026-02-20_22-41-44.jpg",
+    "image": "kek/photo_22_2026-02-20_22-41-44.webp",
     "category": "cake",
     "hidden": false,
     "image_webp": "kek/photo_22_2026-02-20_22-41-44.webp"
@@ -264,7 +264,7 @@
     "name": "پاوەن کێک",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "kek/photo_24_2026-02-20_22-41-44.jpg",
+    "image": "kek/photo_24_2026-02-20_22-41-44.webp",
     "category": "cake",
     "hidden": false,
     "image_webp": "kek/photo_24_2026-02-20_22-41-44.webp"
@@ -274,7 +274,7 @@
     "name": "نەزەڕی سەتڵ",
     "description": "24 عەدەد",
     "price": 5250,
-    "image": "kek/photo_25_2026-02-20_22-41-44.jpg",
+    "image": "kek/photo_25_2026-02-20_22-41-44.webp",
     "category": "cake",
     "hidden": false,
     "image_webp": "kek/photo_25_2026-02-20_22-41-44.webp"
@@ -284,7 +284,7 @@
     "name": "کێکی مهیار",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "kek/photo_27_2026-02-20_22-41-44.jpg",
+    "image": "kek/photo_27_2026-02-20_22-41-44.webp",
     "category": "cake",
     "hidden": false,
     "image_webp": "kek/photo_27_2026-02-20_22-41-44.webp"
@@ -294,7 +294,7 @@
     "name": "کێک تایگەر",
     "description": "12 عەدەد",
     "price": 2500,
-    "image": "kek/photo_28_2026-02-20_22-41-44.jpg",
+    "image": "kek/photo_28_2026-02-20_22-41-44.webp",
     "category": "cake",
     "hidden": false,
     "image_webp": "kek/photo_28_2026-02-20_22-41-44.webp"
@@ -304,7 +304,7 @@
     "name": "کێک رۆز جەلی",
     "description": "24 عەدەد",
     "price": 4750,
-    "image": "kek/photo_29_2026-02-20_22-41-44.jpg",
+    "image": "kek/photo_29_2026-02-20_22-41-44.webp",
     "category": "cake",
     "hidden": false,
     "image_webp": "kek/photo_29_2026-02-20_22-41-44.webp"
@@ -314,7 +314,7 @@
     "name": "تۆپ کێک",
     "description": "24 عەدەد",
     "price": 4750,
-    "image": "kek/photo_30_2026-02-20_22-41-44.jpg",
+    "image": "kek/photo_30_2026-02-20_22-41-44.webp",
     "category": "cake",
     "hidden": false,
     "image_webp": "kek/photo_30_2026-02-20_22-41-44.webp"
@@ -324,7 +324,7 @@
     "name": "ویتان",
     "description": "24 عەدەد",
     "price": 5250,
-    "image": "gaz/IMG_0215.jpeg",
+    "image": "gaz/IMG_0215.webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/IMG_0215.webp"
@@ -334,7 +334,7 @@
     "name": "تایکۆی شەشی",
     "description": "24 عەدەد",
     "price": 4500,
-    "image": "gaz/IMG_0216.jpeg",
+    "image": "gaz/IMG_0216.webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/IMG_0216.webp"
@@ -344,7 +344,7 @@
     "name": "دایجستۆ",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "gaz/IMG_0217.jpeg",
+    "image": "gaz/IMG_0217.webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/IMG_0217.webp"
@@ -354,7 +354,7 @@
     "name": "پاپڵی گەورە",
     "description": "40 عەدەد",
     "price": 9000,
-    "image": "gaz/IMG_0218.jpeg",
+    "image": "gaz/IMG_0218.webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/IMG_0218.webp"
@@ -364,7 +364,7 @@
     "name": "کەزی لامیا",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (1).jpeg",
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (1).webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (1).webp"
@@ -374,7 +374,7 @@
     "name": "پاپڵ",
     "description": "24 عەدەد",
     "price": 5250,
-    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (3).jpeg",
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (3).webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (3).webp"
@@ -384,7 +384,7 @@
     "name": "پاڵشتی",
     "description": "80 عەدەد",
     "price": 7500,
-    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (4).jpeg",
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (4).webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (4).webp"
@@ -394,7 +394,7 @@
     "name": "ناستەلەی نانی",
     "description": "24 عەدەد",
     "price": 2500,
-    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (5).jpeg",
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (5).webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (5).webp"
@@ -404,7 +404,7 @@
     "name": "ستار مۆز",
     "description": "40 عەدەد",
     "price": 8000,
-    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (6).jpeg",
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (6).webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (6).webp"
@@ -414,7 +414,7 @@
     "name": "ستار شلیک",
     "description": "40 عەدەد",
     "price": 8000,
-    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (7).jpeg",
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (7).webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (7).webp"
@@ -424,7 +424,7 @@
     "name": "ستار پرتەقاڵ",
     "description": "40 عەدەد",
     "price": 8000,
-    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (8).jpeg",
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (8).webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (8).webp"
@@ -434,7 +434,7 @@
     "name": "بسکیتی ترد",
     "description": "40 عەدەد",
     "price": 7500,
-    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (9).jpeg",
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (9).webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (9).webp"
@@ -444,7 +444,7 @@
     "name": "چیلکەی دوانی",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM.jpeg",
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM.webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM.webp"
@@ -454,7 +454,7 @@
     "name": "وایفەر ئەزرا شلیک",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (1).jpeg",
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (1).webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (1).webp"
@@ -464,7 +464,7 @@
     "name": "وایفەر ئەزرا مۆز",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (2).jpeg",
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (2).webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (2).webp"
@@ -474,7 +474,7 @@
     "name": "وایفەر ئەزرا پرتەقاڵ",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM.jpeg",
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM.webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM.webp"
@@ -484,7 +484,7 @@
     "name": "شیرین عەسەل مۆز",
     "description": "40 عەدەد",
     "price": 8000,
-    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (3).jpeg",
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (3).webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (3).webp"
@@ -494,7 +494,7 @@
     "name": "بسکت پیتی پور وار",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (4).jpeg",
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (4).webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (4).webp"
@@ -504,7 +504,7 @@
     "name": "تایستێلی قاوە",
     "description": "48 عەدەد",
     "price": 5000,
-    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (5).jpeg",
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (5).webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (5).webp"
@@ -514,7 +514,7 @@
     "name": "چلکەی دوانی",
     "description": "60 عەدەد",
     "price": 6500,
-    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (6).jpeg",
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (6).webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (6).webp"
@@ -524,7 +524,7 @@
     "name": "ویکی دوانی",
     "description": "60 عەدەد",
     "price": 6500,
-    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (7).jpeg",
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (7).webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (7).webp"
@@ -534,7 +534,7 @@
     "name": "ویکی گەورە",
     "description": "60 عەدەد",
     "price": 11500,
-    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (8).jpeg",
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (8).webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (8).webp"
@@ -544,7 +544,7 @@
     "name": "شەمائیڵ",
     "description": "12 عەدەد",
     "price": 2500,
-    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (9).jpeg",
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (9).webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (9).webp"
@@ -554,7 +554,7 @@
     "name": "بسکیتی دەموو چاو",
     "description": "24 عەدەد",
     "price": 5250,
-    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (10).jpeg",
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (10).webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (10).webp"
@@ -564,7 +564,7 @@
     "name": "بسکیتی کالیتی",
     "description": "24 عەدەد",
     "price": 4750,
-    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (11).jpeg",
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (11).webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (11).webp"
@@ -574,7 +574,7 @@
     "name": "بورادا",
     "description": "32 عەدەد",
     "price": 6250,
-    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (12).jpeg",
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (12).webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (12).webp"
@@ -584,7 +584,7 @@
     "name": "شەوائیل",
     "description": "60 عەدەد",
     "price": 6500,
-    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (15).jpeg",
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (15).webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (15).webp"
@@ -594,7 +594,7 @@
     "name": "هایبای",
     "description": "40 عەدەد",
     "price": 8000,
-    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (16).jpeg",
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (16).webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (16).webp"
@@ -604,7 +604,7 @@
     "name": "هەپی عادی",
     "description": "24 عەدەد",
     "price": 4500,
-    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (17).jpeg",
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (17).webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (17).webp"
@@ -614,7 +614,7 @@
     "name": "ستاکی شەفاف 500",
     "description": "40 عەدەد",
     "price": 10000,
-    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (18).jpeg",
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (18).webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (18).webp"
@@ -624,7 +624,7 @@
     "name": "مەڕەکان",
     "description": "24 عەدەد",
     "price": 4750,
-    "image": "gaz/WhatsApp Image 2026-02-20 at 10.03.27 PM.jpeg",
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.03.27 PM.webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.03.27 PM.webp"
@@ -634,7 +634,7 @@
     "name": "ئاوی دەبە",
     "description": "12 عەدەد",
     "price": 750,
-    "image": "sardy/IMG_0188.jpeg",
+    "image": "sardy/IMG_0188.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_0188.webp"
@@ -644,7 +644,7 @@
     "name": "ئاوی کارتۆن",
     "description": "60 عەدەد",
     "price": 1500,
-    "image": "sardy/IMG_0189.jpeg",
+    "image": "sardy/IMG_0189.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_0189.webp"
@@ -654,7 +654,7 @@
     "name": "پیپسی سلڤەر قەزەم",
     "description": "30 عەدەد",
     "price": 6500,
-    "image": "sardy/IMG_6192.jpeg",
+    "image": "sardy/IMG_6192.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6192.webp"
@@ -664,7 +664,7 @@
     "name": "پیپسی شین قەزەم",
     "description": "30 عەدەد",
     "price": 6500,
-    "image": "sardy/IMG_6193.jpeg",
+    "image": "sardy/IMG_6193.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6193.webp"
@@ -674,7 +674,7 @@
     "name": "میرندا پرتەقال قەزەم",
     "description": "30 عەدەد",
     "price": 6500,
-    "image": "sardy/IMG_6194.jpeg",
+    "image": "sardy/IMG_6194.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6194.webp"
@@ -684,7 +684,7 @@
     "name": "دیو قەزەم",
     "description": "30 عەدەد",
     "price": 6500,
-    "image": "sardy/IMG_6195.jpeg",
+    "image": "sardy/IMG_6195.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6195.webp"
@@ -694,7 +694,7 @@
     "name": "ڕاجی قۆخ",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "sardy/IMG_6196.jpeg",
+    "image": "sardy/IMG_6196.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6196.webp"
@@ -704,7 +704,7 @@
     "name": "ڕانی قتو",
     "description": "24 عەدەد",
     "price": 9750,
-    "image": "sardy/IMG_6197.jpeg",
+    "image": "sardy/IMG_6197.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6197.webp"
@@ -714,7 +714,7 @@
     "name": "ڕانی شوشە",
     "description": "24 عەدەد",
     "price": 9750,
-    "image": "sardy/IMG_6220.jpeg",
+    "image": "sardy/IMG_6220.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6220.webp"
@@ -724,7 +724,7 @@
     "name": "لالە شین",
     "description": "30 عەدەد",
     "price": 6000,
-    "image": "sardy/IMG_6198.jpeg",
+    "image": "sardy/IMG_6198.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6198.webp"
@@ -734,7 +734,7 @@
     "name": "لالە دیو",
     "description": "30 عەدەد",
     "price": 6000,
-    "image": "sardy/IMG_6199.jpeg",
+    "image": "sardy/IMG_6199.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6199.webp"
@@ -744,7 +744,7 @@
     "name": "دیوی قەڵەو",
     "description": "30 عەدەد",
     "price": 10000,
-    "image": "sardy/IMG_6200.jpeg",
+    "image": "sardy/IMG_6200.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6200.webp"
@@ -754,7 +754,7 @@
     "name": "پیپسی قەڵەو",
     "description": "30 عەدەد",
     "price": 10000,
-    "image": "sardy/IMG_6201.jpeg",
+    "image": "sardy/IMG_6201.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6201.webp"
@@ -764,7 +764,7 @@
     "name": "تازجی قتو قۆخ",
     "description": "30 عەدەد",
     "price": 6500,
-    "image": "sardy/IMG_6202.jpeg",
+    "image": "sardy/IMG_6202.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6202.webp"
@@ -774,7 +774,7 @@
     "name": "تازجی قتو پرتەقاڵ",
     "description": "30 عەدەد",
     "price": 6500,
-    "image": "sardy/IMG_6203.jpeg",
+    "image": "sardy/IMG_6203.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6203.webp"
@@ -784,7 +784,7 @@
     "name": "تازجی قتو هەنار",
     "description": "30 عەدەد",
     "price": 6500,
-    "image": "sardy/IMG_6204.jpeg",
+    "image": "sardy/IMG_6204.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6204.webp"
@@ -794,7 +794,7 @@
     "name": "RC شوشە ڕەش",
     "description": "30 عەدەد",
     "price": 6500,
-    "image": "sardy/IMG_6205.jpeg",
+    "image": "sardy/IMG_6205.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6205.webp"
@@ -804,7 +804,7 @@
     "name": "RC شوشە پرتەقاڵ",
     "description": "24 عەدەد",
     "price": 6500,
-    "image": "sardy/IMG_6219.jpeg",
+    "image": "sardy/IMG_6219.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6219.webp"
@@ -814,7 +814,7 @@
     "name": "ساردی بەغدادی",
     "description": "30 عەدەد",
     "price": 6500,
-    "image": "sardy/IMG_6206.jpeg",
+    "image": "sardy/IMG_6206.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6206.webp"
@@ -824,7 +824,7 @@
     "name": "پیپسی شوشە",
     "description": "24 عەدەد",
     "price": 9750,
-    "image": "sardy/IMG_6207.jpeg",
+    "image": "sardy/IMG_6207.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6207.webp"
@@ -834,7 +834,7 @@
     "name": "دیوی شوشە",
     "description": "24 عەدەد",
     "price": 9750,
-    "image": "sardy/IMG_6208.jpeg",
+    "image": "sardy/IMG_6208.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6208.webp"
@@ -844,7 +844,7 @@
     "name": "زەمزەمی شوشە ڕەش",
     "description": "24 عەدەد",
     "price": 10000,
-    "image": "sardy/IMG_6209.jpeg",
+    "image": "sardy/IMG_6209.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6209.webp"
@@ -854,7 +854,7 @@
     "name": "زەمزەمی شوشە پرتەقاڵ",
     "description": "24 عەدەد",
     "price": 10000,
-    "image": "sardy/IMG_6210.jpeg",
+    "image": "sardy/IMG_6210.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6210.webp"
@@ -864,7 +864,7 @@
     "name": "زەمزەم شوشە لیمۆ",
     "description": "12 عەدەد",
     "price": 5000,
-    "image": "sardy/IMG_6218.jpeg",
+    "image": "sardy/IMG_6218.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6218.webp"
@@ -874,7 +874,7 @@
     "name": "ئاسان شین",
     "description": "24 عەدەد",
     "price": 9750,
-    "image": "sardy/IMG_6211.jpeg",
+    "image": "sardy/IMG_6211.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6211.webp"
@@ -884,7 +884,7 @@
     "name": "ئاسان مۆر",
     "description": "24 عەدەد",
     "price": 9750,
-    "image": "sardy/IMG_6212.jpeg",
+    "image": "sardy/IMG_6212.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6212.webp"
@@ -894,7 +894,7 @@
     "name": "تایگەری تام پەمەی",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "sardy/IMG_6213.jpeg",
+    "image": "sardy/IMG_6213.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6213.webp"
@@ -904,7 +904,7 @@
     "name": "تام شین",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "sardy/IMG_6238.jpeg",
+    "image": "sardy/IMG_6238.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6238.webp"
@@ -914,7 +914,7 @@
     "name": "وینەر گەورە",
     "description": "24 عەدەد",
     "price": 9500,
-    "image": "sardy/IMG_6214.jpeg",
+    "image": "sardy/IMG_6214.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6214.webp"
@@ -924,7 +924,7 @@
     "name": "وینەر بچوک",
     "description": "24 عەدەد",
     "price": 5250,
-    "image": "sardy/IMG_6215.jpeg",
+    "image": "sardy/IMG_6215.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6215.webp"
@@ -934,7 +934,7 @@
     "name": "سۆدەی فروتلی",
     "description": "24 عەدەد",
     "price": 8250,
-    "image": "sardy/IMG_6216.jpeg",
+    "image": "sardy/IMG_6216.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6216.webp"
@@ -944,7 +944,7 @@
     "name": "سۆدەی مستەر",
     "description": "24 عەدەد",
     "price": 5500,
-    "image": "sardy/IMG_6217.jpeg",
+    "image": "sardy/IMG_6217.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6217.webp"
@@ -954,7 +954,7 @@
     "name": "شەربەتی تۆ شلک",
     "description": "12 عەدەد",
     "price": 5000,
-    "image": "sardy/IMG_6221.jpeg",
+    "image": "sardy/IMG_6221.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6221.webp"
@@ -964,7 +964,7 @@
     "name": "شەربەتی تۆ کاڵەک",
     "description": "12 عەدەد",
     "price": 5000,
-    "image": "sardy/IMG_6222.jpeg",
+    "image": "sardy/IMG_6222.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6222.webp"
@@ -974,7 +974,7 @@
     "name": "شەربەتی تۆ بلوبێری",
     "description": "12 عەدەد",
     "price": 5000,
-    "image": "sardy/IMG_6223.jpeg",
+    "image": "sardy/IMG_6223.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6223.webp"
@@ -984,7 +984,7 @@
     "name": "شەربەتی تۆ پرتەقاڵ",
     "description": "12 عەدەد",
     "price": 5000,
-    "image": "sardy/IMG_6224.jpeg",
+    "image": "sardy/IMG_6224.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6224.webp"
@@ -994,7 +994,7 @@
     "name": "شەربەتی تۆ ئەنەناس",
     "description": "12 عەدەد",
     "price": 5000,
-    "image": "sardy/IMG_6225.jpeg",
+    "image": "sardy/IMG_6225.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6225.webp"
@@ -1004,7 +1004,7 @@
     "name": "سۆدەی مستار",
     "description": "24 عەدەد",
     "price": 10000,
-    "image": "sardy/IMG_6226.jpeg",
+    "image": "sardy/IMG_6226.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6226.webp"
@@ -1014,7 +1014,7 @@
     "name": "ساردی تورکی پرتەقاڵ",
     "description": "24 عەدەد",
     "price": 9500,
-    "image": "sardy/IMG_6227.jpeg",
+    "image": "sardy/IMG_6227.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6227.webp"
@@ -1024,7 +1024,7 @@
     "name": "تازج شوشە هەنار",
     "description": "24 عەدەد",
     "price": 9500,
-    "image": "sardy/IMG_6228.jpeg",
+    "image": "sardy/IMG_6228.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6228.webp"
@@ -1034,7 +1034,7 @@
     "name": "تازج شوشە قۆخ",
     "description": "24 عەدەد",
     "price": 9500,
-    "image": "sardy/IMG_6229.jpeg",
+    "image": "sardy/IMG_6229.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6229.webp"
@@ -1044,7 +1044,7 @@
     "name": "تازج شوشە پرتەقاڵ",
     "description": "24 عەدەد",
     "price": 9500,
-    "image": "sardy/IMG_6230.jpeg",
+    "image": "sardy/IMG_6230.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6230.webp"
@@ -1054,7 +1054,7 @@
     "name": "تازج شوشە گێزەر",
     "description": "24 عەدەد",
     "price": 9500,
-    "image": "sardy/IMG_6231.jpeg",
+    "image": "sardy/IMG_6231.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6231.webp"
@@ -1064,7 +1064,7 @@
     "name": "ماڵت جۆ",
     "description": "24 عەدەد",
     "price": 10000,
-    "image": "sardy/IMG_6232.jpeg",
+    "image": "sardy/IMG_6232.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6232.webp"
@@ -1074,7 +1074,7 @@
     "name": "ماڵت لیمۆ",
     "description": "24 عەدەد",
     "price": 10000,
-    "image": "sardy/IMG_6233.jpeg",
+    "image": "sardy/IMG_6233.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6233.webp"
@@ -1084,7 +1084,7 @@
     "name": "ماڵت قۆخ",
     "description": "24 عەدەد",
     "price": 10000,
-    "image": "sardy/IMG_6234.jpeg",
+    "image": "sardy/IMG_6234.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6234.webp"
@@ -1094,7 +1094,7 @@
     "name": "K9 پەمەی",
     "description": "24 عەدەد",
     "price": 9500,
-    "image": "sardy/IMG_6235.jpeg",
+    "image": "sardy/IMG_6235.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6235.webp"
@@ -1104,7 +1104,7 @@
     "name": "K9 شین",
     "description": "24 عەدەد",
     "price": 9500,
-    "image": "sardy/IMG_6237.jpeg",
+    "image": "sardy/IMG_6237.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6237.webp"
@@ -1114,7 +1114,7 @@
     "name": "تایگەر ئەسڵ",
     "description": "24 عەدەد",
     "price": 21000,
-    "image": "sardy/IMG_6236.jpeg",
+    "image": "sardy/IMG_6236.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6236.webp"
@@ -1124,7 +1124,7 @@
     "name": "دەبە سێڤن",
     "description": "12 عەدەد",
     "price": 2250,
-    "image": "sardy/IMG_6239.jpeg",
+    "image": "sardy/IMG_6239.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6239.webp"
@@ -1134,7 +1134,7 @@
     "name": "ساردی نیو",
     "description": "12 عەدەد",
     "price": 2250,
-    "image": "sardy/IMG_6240.jpeg",
+    "image": "sardy/IMG_6240.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6240.webp"
@@ -1144,7 +1144,7 @@
     "name": "ساردی K",
     "description": "12 عەدەد",
     "price": 2250,
-    "image": "sardy/IMG_6241.jpeg",
+    "image": "sardy/IMG_6241.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6241.webp"
@@ -1154,7 +1154,7 @@
     "name": "ئارسۆ تایگەر",
     "description": "30 عەدەد",
     "price": 6500,
-    "image": "sardy/IMG_6242.jpeg",
+    "image": "sardy/IMG_6242.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6242.webp"
@@ -1164,7 +1164,7 @@
     "name": "ئارسۆ پرتەقاڵ",
     "description": "30 عەدەد",
     "price": 6500,
-    "image": "sardy/IMG_6243.jpeg",
+    "image": "sardy/IMG_6243.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6243.webp"
@@ -1174,7 +1174,7 @@
     "name": "ئارسۆ لیمۆ",
     "description": "30 عەدەد",
     "price": 6500,
-    "image": "sardy/IMG_6245.jpeg",
+    "image": "sardy/IMG_6245.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6245.webp"
@@ -1184,7 +1184,7 @@
     "name": "ئارسۆ ئاوی",
     "description": "30 عەدەد",
     "price": 6500,
-    "image": "sardy/IMG_6246.jpeg",
+    "image": "sardy/IMG_6246.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6246.webp"
@@ -1194,7 +1194,7 @@
     "name": "ترابی",
     "description": "24 عەدەد",
     "price": 9500,
-    "image": "sardy/IMG_6244.jpeg",
+    "image": "sardy/IMG_6244.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6244.webp"
@@ -1204,7 +1204,7 @@
     "name": "تورکی ڕەش",
     "description": "24 عەدەد",
     "price": 9500,
-    "image": "sardy/IMG_6247.jpeg",
+    "image": "sardy/IMG_6247.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6247.webp"
@@ -1214,7 +1214,7 @@
     "name": "زاکی",
     "description": "36 عەدەد",
     "price": 6000,
-    "image": "sardy/IMG_6248.jpeg",
+    "image": "sardy/IMG_6248.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6248.webp"
@@ -1224,7 +1224,7 @@
     "name": "سەمناکی قۆخ",
     "description": "36 عەدەد",
     "price": 3000,
-    "image": "sardy/IMG_6249.jpeg",
+    "image": "sardy/IMG_6249.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6249.webp"
@@ -1234,7 +1234,7 @@
     "name": "تازجی پاکەت قۆخ",
     "description": "36 عەدەد",
     "price": 4000,
-    "image": "sardy/IMG_6250.jpeg",
+    "image": "sardy/IMG_6250.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6250.webp"
@@ -1244,7 +1244,7 @@
     "name": "تازجی پاکەت کۆکتێل",
     "description": "36 عەدەد",
     "price": 4000,
-    "image": "sardy/IMG_6252.jpeg",
+    "image": "sardy/IMG_6252.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6252.webp"
@@ -1254,7 +1254,7 @@
     "name": "تازجی پاکەت پرتەقاڵ",
     "description": "36 عەدەد",
     "price": 4000,
-    "image": "sardy/IMG_6253.jpeg",
+    "image": "sardy/IMG_6253.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6253.webp"
@@ -1264,7 +1264,7 @@
     "name": "کاڵبی مۆز",
     "description": "36 عەدەد",
     "price": 8000,
-    "image": "sardy/IMG_6254.jpeg",
+    "image": "sardy/IMG_6254.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6254.webp"
@@ -1274,7 +1274,7 @@
     "name": "کاڵبی شلک",
     "description": "36 عەدەد",
     "price": 8000,
-    "image": "sardy/IMG_6255.jpeg",
+    "image": "sardy/IMG_6255.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6255.webp"
@@ -1284,7 +1284,7 @@
     "name": "کاڵبی قاوە",
     "description": "36 عەدەد",
     "price": 8000,
-    "image": "sardy/IMG_6256.jpeg",
+    "image": "sardy/IMG_6256.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6256.webp"
@@ -1294,7 +1294,7 @@
     "name": "کاڵبی کاڵەک",
     "description": "36 عەدەد",
     "price": 8000,
-    "image": "sardy/IMG_6257.jpeg",
+    "image": "sardy/IMG_6257.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6257.webp"
@@ -1304,7 +1304,7 @@
     "name": "زۆزۆ پرتەقاڵ",
     "description": "36 عەدەد",
     "price": 3250,
-    "image": "sardy/IMG_6258.jpeg",
+    "image": "sardy/IMG_6258.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6258.webp"
@@ -1314,7 +1314,7 @@
     "name": "زۆزۆ ئەنەناش",
     "description": "36 عەدەد",
     "price": 3250,
-    "image": "sardy/IMG_6259.jpeg",
+    "image": "sardy/IMG_6259.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6259.webp"
@@ -1324,7 +1324,7 @@
     "name": "زۆزۆ کۆکتێل",
     "description": "36 عەدەد",
     "price": 3250,
-    "image": "sardy/IMG_6260.jpeg",
+    "image": "sardy/IMG_6260.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6260.webp"
@@ -1334,7 +1334,7 @@
     "name": "زۆزۆ ترێ",
     "description": "36 عەدەد",
     "price": 3250,
-    "image": "sardy/IMG_6261.jpeg",
+    "image": "sardy/IMG_6261.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6261.webp"
@@ -1344,7 +1344,7 @@
     "name": "زۆزۆ شلک",
     "description": "36 عەدەد",
     "price": 3250,
-    "image": "sardy/IMG_6262.jpeg",
+    "image": "sardy/IMG_6262.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6262.webp"
@@ -1354,7 +1354,7 @@
     "name": "زۆزۆ قۆخ",
     "description": "36 عەدەد",
     "price": 3250,
-    "image": "sardy/IMG_6263.jpeg",
+    "image": "sardy/IMG_6263.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6263.webp"
@@ -1364,7 +1364,7 @@
     "name": "زۆزۆ سێو",
     "description": "36 عەدەد",
     "price": 3250,
-    "image": "sardy/IMG_6264.jpeg",
+    "image": "sardy/IMG_6264.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6264.webp"
@@ -1374,7 +1374,7 @@
     "name": "مەکسیکی لیمۆ",
     "description": "24 عەدەد",
     "price": 14500,
-    "image": "sardy/IMG_6265.jpeg",
+    "image": "sardy/IMG_6265.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6265.webp"
@@ -1384,7 +1384,7 @@
     "name": "مەکسیکی شلک",
     "description": "24 عەدەد",
     "price": 14500,
-    "image": "sardy/IMG_6266.jpeg",
+    "image": "sardy/IMG_6266.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6266.webp"
@@ -1394,7 +1394,7 @@
     "name": "مەکسیکی مانگۆ",
     "description": "24 عەدەد",
     "price": 14500,
-    "image": "sardy/IMG_6267.jpeg",
+    "image": "sardy/IMG_6267.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6267.webp"
@@ -1404,7 +1404,7 @@
     "name": "مەکسیکی بوبی",
     "description": "24 عەدەد",
     "price": 14500,
-    "image": "sardy/IMG_6268.jpeg",
+    "image": "sardy/IMG_6268.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6268.webp"
@@ -1414,7 +1414,7 @@
     "name": "مەکسیکی هەنار",
     "description": "24 عەدەد",
     "price": 14500,
-    "image": "sardy/IMG_6269.jpeg",
+    "image": "sardy/IMG_6269.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6269.webp"
@@ -1424,7 +1424,7 @@
     "name": "مەکسیکی قاوە",
     "description": "24 عەدەد",
     "price": 14500,
-    "image": "sardy/IMG_6270.jpeg",
+    "image": "sardy/IMG_6270.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6270.webp"
@@ -1434,7 +1434,7 @@
     "name": "ڕێد",
     "description": "24 عەدەد",
     "price": 9500,
-    "image": "sardy/IMG_6271.jpeg",
+    "image": "sardy/IMG_6271.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6271.webp"
@@ -1444,7 +1444,7 @@
     "name": "پیپسی دەبڵ",
     "description": "6 عەدەد",
     "price": 6500,
-    "image": "sardy/IMG_6272.jpeg",
+    "image": "sardy/IMG_6272.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6272.webp"
@@ -1454,7 +1454,7 @@
     "name": "پیپسی 1000",
     "description": "6 عەدەد",
     "price": 4500,
-    "image": "sardy/IMG_6274.jpeg",
+    "image": "sardy/IMG_6274.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6274.webp"
@@ -1464,7 +1464,7 @@
     "name": "پیپسی وەصەت",
     "description": "12 عەدەد",
     "price": 6500,
-    "image": "sardy/IMG_6275.jpeg",
+    "image": "sardy/IMG_6275.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6275.webp"
@@ -1474,7 +1474,7 @@
     "name": "دیوی دەبڵ",
     "description": "6 عەدەد",
     "price": 6500,
-    "image": "sardy/IMG_6276.jpeg",
+    "image": "sardy/IMG_6276.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6276.webp"
@@ -1484,7 +1484,7 @@
     "name": "دیوی 1000",
     "description": "6 عەدەد",
     "price": 4500,
-    "image": "sardy/IMG_6277.jpeg",
+    "image": "sardy/IMG_6277.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6277.webp"
@@ -1494,7 +1494,7 @@
     "name": "دیوی وەصەت",
     "description": "12 عەدەد",
     "price": 6500,
-    "image": "sardy/IMG_6278.jpeg",
+    "image": "sardy/IMG_6278.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6278.webp"
@@ -1504,7 +1504,7 @@
     "name": "ئەفرا",
     "description": "6 عەدەد",
     "price": 3000,
-    "image": "sardy/IMG_6279.jpeg",
+    "image": "sardy/IMG_6279.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6279.webp"
@@ -1514,7 +1514,7 @@
     "name": "یەومی ڕەش",
     "description": "6 عەدەد",
     "price": 3000,
-    "image": "sardy/IMG_6280.jpeg",
+    "image": "sardy/IMG_6280.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6280.webp"
@@ -1524,7 +1524,7 @@
     "name": "زەمزامی پرتەقاڵ",
     "description": "6 عەدەد",
     "price": 5500,
-    "image": "sardy/IMG_6281.jpeg",
+    "image": "sardy/IMG_6281.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6281.webp"
@@ -1534,7 +1534,7 @@
     "name": "زاگرۆزی دیو",
     "description": "12 عەدەد",
     "price": 2250,
-    "image": "sardy/IMG_6282.jpeg",
+    "image": "sardy/IMG_6282.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6282.webp"
@@ -1544,7 +1544,7 @@
     "name": "زاگرۆزی لیمۆ",
     "description": "12 عەدەد",
     "price": 2250,
-    "image": "sardy/IMG_6283.jpeg",
+    "image": "sardy/IMG_6283.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6283.webp"
@@ -1554,7 +1554,7 @@
     "name": "زاگرۆزی شین",
     "description": "12 عەدەد",
     "price": 2250,
-    "image": "sardy/IMG_6284.jpeg",
+    "image": "sardy/IMG_6284.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6284.webp"
@@ -1564,7 +1564,7 @@
     "name": "دۆی بچوک",
     "description": "16 عەدەد",
     "price": 3000,
-    "image": "sardy/IMG_6285.jpeg",
+    "image": "sardy/IMG_6285.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6285.webp"
@@ -1574,7 +1574,7 @@
     "name": "شەربەتی بۆبۆتۆ",
     "description": "24 عەدەد",
     "price": 4500,
-    "image": "sardy/IMG_6286.jpeg",
+    "image": "sardy/IMG_6286.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6286.webp"
@@ -1584,7 +1584,7 @@
     "name": "شیر کاڵەکی دەبە",
     "description": "24 عەدەد",
     "price": 4500,
-    "image": "sardy/IMG_6287.jpeg",
+    "image": "sardy/IMG_6287.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6287.webp"
@@ -1594,7 +1594,7 @@
     "name": "کیش تەماتە 500",
     "description": "24 عەدەد",
     "price": 9500,
-    "image": "jbs/IMG_0223.jpeg",
+    "image": "jbs/IMG_0223.webp",
     "category": "chips",
     "hidden": false,
     "image_webp": "jbs/IMG_0223.webp"
@@ -1604,7 +1604,7 @@
     "name": "کیش سرکە 500",
     "description": "24 عەدەد",
     "price": 9500,
-    "image": "jbs/IMG_0224.jpeg",
+    "image": "jbs/IMG_0224.webp",
     "category": "chips",
     "hidden": false,
     "image_webp": "jbs/IMG_0224.webp"
@@ -1614,7 +1614,7 @@
     "name": "کیش بیبەر 500",
     "description": "24 عەدەد",
     "price": 9500,
-    "image": "jbs/IMG_0225.jpeg",
+    "image": "jbs/IMG_0225.webp",
     "category": "chips",
     "hidden": false,
     "image_webp": "jbs/IMG_0225.webp"
@@ -1624,7 +1624,7 @@
     "name": "کیش سادە 500",
     "description": "24 عەدەد",
     "price": 9500,
-    "image": "jbs/IMG_0226.jpeg",
+    "image": "jbs/IMG_0226.webp",
     "category": "chips",
     "hidden": false,
     "image_webp": "jbs/IMG_0226.webp"
@@ -1634,7 +1634,7 @@
     "name": "کیش لیمۆ 500",
     "description": "24 عەدەد",
     "price": 9500,
-    "image": "jbs/IMG_0227.jpeg",
+    "image": "jbs/IMG_0227.webp",
     "category": "chips",
     "hidden": false,
     "image_webp": "jbs/IMG_0227.webp"
@@ -1644,7 +1644,7 @@
     "name": "کیش بیبەر 250",
     "description": "48 عەدەد",
     "price": 9500,
-    "image": "jbs/photo_2_2026-02-20_22-38-05.jpg",
+    "image": "jbs/photo_2_2026-02-20_22-38-05.webp",
     "category": "chips",
     "hidden": false,
     "image_webp": "jbs/photo_2_2026-02-20_22-38-05.webp"
@@ -1654,7 +1654,7 @@
     "name": "کیش سادە 250",
     "description": "48 عەدەد",
     "price": 9500,
-    "image": "jbs/photo_3_2026-02-20_22-38-05.jpg",
+    "image": "jbs/photo_3_2026-02-20_22-38-05.webp",
     "category": "chips",
     "hidden": false,
     "image_webp": "jbs/photo_3_2026-02-20_22-38-05.webp"
@@ -1664,7 +1664,7 @@
     "name": "کیش لیمۆ 250",
     "description": "48 عەدەد",
     "price": 9500,
-    "image": "jbs/photo_4_2026-02-20_22-38-05.jpg",
+    "image": "jbs/photo_4_2026-02-20_22-38-05.webp",
     "category": "chips",
     "hidden": false,
     "image_webp": "jbs/photo_4_2026-02-20_22-38-05.webp"
@@ -1674,7 +1674,7 @@
     "name": "کیش سرکە 250",
     "description": "48 عەدەد",
     "price": 9500,
-    "image": "jbs/photo_10_2026-02-20_22-38-05.jpg",
+    "image": "jbs/photo_10_2026-02-20_22-38-05.webp",
     "category": "chips",
     "hidden": false,
     "image_webp": "jbs/photo_10_2026-02-20_22-38-05.webp"
@@ -1684,7 +1684,7 @@
     "name": "لیزا کۆکتێل",
     "description": "48 عەدەد",
     "price": 7500,
-    "image": "jbs/IMG_0206.jpeg",
+    "image": "jbs/IMG_0206.webp",
     "category": "chips",
     "hidden": false,
     "image_webp": "jbs/IMG_0206.webp"
@@ -1694,7 +1694,7 @@
     "name": "زەڕاتی شامی",
     "description": "45 عەدەد",
     "price": 9000,
-    "image": "jbs/IMG_0207.jpeg",
+    "image": "jbs/IMG_0207.webp",
     "category": "chips",
     "hidden": false,
     "image_webp": "jbs/IMG_0207.webp"
@@ -1704,7 +1704,7 @@
     "name": "سناپ",
     "description": "40 عەدەد",
     "price": 7500,
-    "image": "jbs/IMG_0208.jpeg",
+    "image": "jbs/IMG_0208.webp",
     "category": "chips",
     "hidden": false,
     "image_webp": "jbs/IMG_0208.webp"
@@ -1714,7 +1714,7 @@
     "name": "تیک تۆک",
     "description": "40 عەدەد",
     "price": 7500,
-    "image": "jbs/IMG_0209.jpeg",
+    "image": "jbs/IMG_0209.webp",
     "category": "chips",
     "hidden": false,
     "image_webp": "jbs/IMG_0209.webp"
@@ -1724,7 +1724,7 @@
     "name": "نینی",
     "description": "36 عەدەد",
     "price": 6750,
-    "image": "jbs/IMG_0219.jpeg",
+    "image": "jbs/IMG_0219.webp",
     "category": "chips",
     "hidden": false,
     "image_webp": "jbs/IMG_0219.webp"
@@ -1734,7 +1734,7 @@
     "name": "مانشی سپی 500",
     "description": "24 عەدەد",
     "price": 9500,
-    "image": "jbs/IMG_0228.jpeg",
+    "image": "jbs/IMG_0228.webp",
     "category": "chips",
     "hidden": false,
     "image_webp": "jbs/IMG_0228.webp"
@@ -1744,7 +1744,7 @@
     "name": "مانشی زەرد 500",
     "description": "24 عەدەد",
     "price": 9500,
-    "image": "jbs/IMG_0229.jpeg",
+    "image": "jbs/IMG_0229.webp",
     "category": "chips",
     "hidden": false,
     "image_webp": "jbs/IMG_0229.webp"
@@ -1754,7 +1754,7 @@
     "name": "مزمز چلکە سرکە",
     "description": "48 عەدەد",
     "price": 9000,
-    "image": "jbs/IMG_0230.jpeg",
+    "image": "jbs/IMG_0230.webp",
     "category": "chips",
     "hidden": false,
     "image_webp": "jbs/IMG_0230.webp"
@@ -1764,7 +1764,7 @@
     "name": "لابوبو",
     "description": "48 عەدەد",
     "price": 9000,
-    "image": "jbs/IMG_0232.jpeg",
+    "image": "jbs/IMG_0232.webp",
     "category": "chips",
     "hidden": false,
     "image_webp": "jbs/IMG_0232.webp"
@@ -1774,7 +1774,7 @@
     "name": "شامی دوانی",
     "description": "60 عەدەد",
     "price": 6250,
-    "image": "jbs/photo_6_2026-02-20_22-38-05.jpg",
+    "image": "jbs/photo_6_2026-02-20_22-38-05.webp",
     "category": "chips",
     "hidden": false,
     "image_webp": "jbs/photo_6_2026-02-20_22-38-05.webp"
@@ -1784,7 +1784,7 @@
     "name": "عەڵقەی کەباب",
     "description": "40 عەدەد",
     "price": 8000,
-    "image": "jbs/photo_7_2026-02-20_22-38-05.jpg",
+    "image": "jbs/photo_7_2026-02-20_22-38-05.webp",
     "category": "chips",
     "hidden": false,
     "image_webp": "jbs/photo_7_2026-02-20_22-38-05.webp"
@@ -1794,7 +1794,7 @@
     "name": "لوسی",
     "description": "45 عەدەد",
     "price": 9500,
-    "image": "jbs/photo_9_2026-02-20_22-38-05.jpg",
+    "image": "jbs/photo_9_2026-02-20_22-38-05.webp",
     "category": "chips",
     "hidden": false,
     "image_webp": "jbs/photo_9_2026-02-20_22-38-05.webp"
@@ -1804,7 +1804,7 @@
     "name": "من و تۆ کیس",
     "description": "22 عەدەد",
     "price": 4000,
-    "image": "jbs/photo_11_2026-02-20_22-38-05.jpg",
+    "image": "jbs/photo_11_2026-02-20_22-38-05.webp",
     "category": "chips",
     "hidden": false,
     "image_webp": "jbs/photo_11_2026-02-20_22-38-05.webp"
@@ -1814,7 +1814,7 @@
     "name": "لیزا",
     "description": "40 عەدەد",
     "price": 7500,
-    "image": "jbs/photo_12_2026-02-20_22-38-05.jpg",
+    "image": "jbs/photo_12_2026-02-20_22-38-05.webp",
     "category": "chips",
     "hidden": false,
     "image_webp": "jbs/photo_12_2026-02-20_22-38-05.webp"
@@ -1824,7 +1824,7 @@
     "name": "بانو کیس",
     "description": "22 عەدەد",
     "price": 4000,
-    "image": "jbs/photo_13_2026-02-20_22-38-05.jpg",
+    "image": "jbs/photo_13_2026-02-20_22-38-05.webp",
     "category": "chips",
     "hidden": false,
     "image_webp": "jbs/photo_13_2026-02-20_22-38-05.webp"
@@ -1834,7 +1834,7 @@
     "name": "مانچیس مۆر",
     "description": "45 عەدەد",
     "price": 9500,
-    "image": "jbs/photo_14_2026-02-20_22-38-05.jpg",
+    "image": "jbs/photo_14_2026-02-20_22-38-05.webp",
     "category": "chips",
     "hidden": false,
     "image_webp": "jbs/photo_14_2026-02-20_22-38-05.webp"
@@ -1844,7 +1844,7 @@
     "name": "ئەمرەک",
     "description": "48 عەدەد",
     "price": 9000,
-    "image": "jbs/photo_15_2026-02-20_22-38-05.jpg",
+    "image": "jbs/photo_15_2026-02-20_22-38-05.webp",
     "category": "chips",
     "hidden": false,
     "image_webp": "jbs/photo_15_2026-02-20_22-38-05.webp"
@@ -1854,7 +1854,7 @@
     "name": "عەڵقەی لیمۆ",
     "description": "40 عەدەد",
     "price": 8000,
-    "image": "jbs/photo_16_2026-02-20_22-38-05.jpg",
+    "image": "jbs/photo_16_2026-02-20_22-38-05.webp",
     "category": "chips",
     "hidden": false,
     "image_webp": "jbs/photo_16_2026-02-20_22-38-05.webp"
@@ -1864,7 +1864,7 @@
     "name": "بوشاری دوانی",
     "description": "40 عەدەد",
     "price": 4500,
-    "image": "jbs/photo_17_2026-02-20_22-38-05.jpg",
+    "image": "jbs/photo_17_2026-02-20_22-38-05.webp",
     "category": "chips",
     "hidden": false,
     "image_webp": "jbs/photo_17_2026-02-20_22-38-05.webp"
@@ -1874,7 +1874,7 @@
     "name": "مسک مریشک",
     "description": "40 عەدەد",
     "price": 8000,
-    "image": "jbs/photo_18_2026-02-20_22-38-05.jpg",
+    "image": "jbs/photo_18_2026-02-20_22-38-05.webp",
     "category": "chips",
     "hidden": false,
     "image_webp": "jbs/photo_18_2026-02-20_22-38-05.webp"
@@ -1884,7 +1884,7 @@
     "name": "مسک سرکە",
     "description": "40 عەدەد",
     "price": 8000,
-    "image": "jbs/photo_19_2026-02-20_22-38-05.jpg",
+    "image": "jbs/photo_19_2026-02-20_22-38-05.webp",
     "category": "chips",
     "hidden": false,
     "image_webp": "jbs/photo_19_2026-02-20_22-38-05.webp"
@@ -1894,7 +1894,7 @@
     "name": "مسک پەنیر",
     "description": "40 عەدەد",
     "price": 8000,
-    "image": "jbs/photo_20_2026-02-20_22-38-05.jpg",
+    "image": "jbs/photo_20_2026-02-20_22-38-05.webp",
     "category": "chips",
     "hidden": false,
     "image_webp": "jbs/photo_20_2026-02-20_22-38-05.webp"
@@ -1904,7 +1904,7 @@
     "name": "مسک لیمۆ",
     "description": "40 عەدەد",
     "price": 8000,
-    "image": "jbs/photo_21_2026-02-20_22-38-05.jpg",
+    "image": "jbs/photo_21_2026-02-20_22-38-05.webp",
     "category": "chips",
     "hidden": false,
     "image_webp": "jbs/photo_21_2026-02-20_22-38-05.webp"
@@ -1914,7 +1914,7 @@
     "name": "دانەن دانەی عایلەی",
     "description": "24 عەدەد",
     "price": 8000,
-    "image": "jbs/photo_23_2026-02-20_22-38-05.jpg",
+    "image": "jbs/photo_23_2026-02-20_22-38-05.webp",
     "category": "chips",
     "hidden": false,
     "image_webp": "jbs/photo_23_2026-02-20_22-38-05.webp"
@@ -1924,7 +1924,7 @@
     "name": "دانە دانە پرتەقاڵ",
     "description": "40 عەدەد",
     "price": 8000,
-    "image": "jbs/photo_8_2026-02-20_22-38-05.jpg",
+    "image": "jbs/photo_8_2026-02-20_22-38-05.webp",
     "category": "chips",
     "hidden": false,
     "image_webp": "jbs/photo_8_2026-02-20_22-38-05.webp"
@@ -1934,7 +1934,7 @@
     "name": "دانە دانە سور",
     "description": "40 عەدەد",
     "price": 8000,
-    "image": "jbs/photo_22_2026-02-20_22-38-05.jpg",
+    "image": "jbs/photo_22_2026-02-20_22-38-05.webp",
     "category": "chips",
     "hidden": false,
     "image_webp": "jbs/photo_22_2026-02-20_22-38-05.webp"
@@ -1944,7 +1944,7 @@
     "name": "دانە دانە شین",
     "description": "40 عەدەد",
     "price": 8000,
-    "image": "jbs/photo_24_2026-02-20_22-38-05.jpg",
+    "image": "jbs/photo_24_2026-02-20_22-38-05.webp",
     "category": "chips",
     "hidden": false,
     "image_webp": "jbs/photo_24_2026-02-20_22-38-05.webp"
@@ -1954,7 +1954,7 @@
     "name": "دانە دانە زەرد",
     "description": "40 عەدەد",
     "price": 8000,
-    "image": "jbs/photo_25_2026-02-20_22-38-05.jpg",
+    "image": "jbs/photo_25_2026-02-20_22-38-05.webp",
     "category": "chips",
     "hidden": false,
     "image_webp": "jbs/photo_25_2026-02-20_22-38-05.webp"
@@ -1964,7 +1964,7 @@
     "name": "تۆرتێلا سەوز",
     "description": "48 عەدەد",
     "price": 8500,
-    "image": "jbs/photo_26_2026-02-20_22-38-05.jpg",
+    "image": "jbs/photo_26_2026-02-20_22-38-05.webp",
     "category": "chips",
     "hidden": false,
     "image_webp": "jbs/photo_26_2026-02-20_22-38-05.webp"
@@ -1974,7 +1974,7 @@
     "name": "نینی لیمۆ",
     "description": "36 عەدەد",
     "price": 7000,
-    "image": "jbs/photo_27_2026-02-20_22-38-05.jpg",
+    "image": "jbs/photo_27_2026-02-20_22-38-05.webp",
     "category": "chips",
     "hidden": false,
     "image_webp": "jbs/photo_27_2026-02-20_22-38-05.webp"
@@ -1984,7 +1984,7 @@
     "name": "نینی بوشار",
     "description": "36 عەدەد",
     "price": 7000,
-    "image": "jbs/photo_28_2026-02-20_22-38-05.jpg",
+    "image": "jbs/photo_28_2026-02-20_22-38-05.webp",
     "category": "chips",
     "hidden": false,
     "image_webp": "jbs/photo_28_2026-02-20_22-38-05.webp"
@@ -1994,7 +1994,7 @@
     "name": "زەڕاتی پەرداخ",
     "description": "40 عەدەد",
     "price": 8000,
-    "image": "jbs/photo_30_2026-02-20_22-38-05.jpg",
+    "image": "jbs/photo_30_2026-02-20_22-38-05.webp",
     "category": "chips",
     "hidden": false,
     "image_webp": "jbs/photo_30_2026-02-20_22-38-05.webp"
@@ -2004,7 +2004,7 @@
     "name": "تۆرتێلای شین",
     "description": "48 عەدەد",
     "price": 9500,
-    "image": "jbs/photo_31_2026-02-20_22-38-05.jpg",
+    "image": "jbs/photo_31_2026-02-20_22-38-05.webp",
     "category": "chips",
     "hidden": false,
     "image_webp": "jbs/photo_31_2026-02-20_22-38-05.webp"
@@ -2014,7 +2014,7 @@
     "name": "مانشی سپی",
     "description": "45 عەدەد",
     "price": 9500,
-    "image": "jbs/photo_32_2026-02-20_22-38-05.jpg",
+    "image": "jbs/photo_32_2026-02-20_22-38-05.webp",
     "category": "chips",
     "hidden": false,
     "image_webp": "jbs/photo_32_2026-02-20_22-38-05.webp"
@@ -2024,7 +2024,7 @@
     "name": "مانشی زەرد",
     "description": "45 عەدەد",
     "price": 9500,
-    "image": "jbs/photo_33_2026-02-20_22-38-05.jpg",
+    "image": "jbs/photo_33_2026-02-20_22-38-05.webp",
     "category": "chips",
     "hidden": false,
     "image_webp": "jbs/photo_33_2026-02-20_22-38-05.webp"
@@ -2034,7 +2034,7 @@
     "name": "من من ڕان",
     "description": "40 عەدەد",
     "price": 7500,
-    "image": "jbs/photo_34_2026-02-20_22-38-05.jpg",
+    "image": "jbs/photo_34_2026-02-20_22-38-05.webp",
     "category": "chips",
     "hidden": false,
     "image_webp": "jbs/photo_34_2026-02-20_22-38-05.webp"
@@ -2044,7 +2044,7 @@
     "name": "من من پیتزا",
     "description": "40 عەدەد",
     "price": 7500,
-    "image": "jbs/photo_35_2026-02-20_22-38-05.jpg",
+    "image": "jbs/photo_35_2026-02-20_22-38-05.webp",
     "category": "chips",
     "hidden": false,
     "image_webp": "jbs/photo_35_2026-02-20_22-38-05.webp"
@@ -2054,7 +2054,7 @@
     "name": "بوشاری بانوو",
     "description": "40 عەدەد",
     "price": 4500,
-    "image": "jbs/photo_36_2026-02-20_22-38-05.jpg",
+    "image": "jbs/photo_36_2026-02-20_22-38-05.webp",
     "category": "chips",
     "hidden": false,
     "image_webp": "jbs/photo_36_2026-02-20_22-38-05.webp"
@@ -2064,7 +2064,7 @@
     "name": "لابوبو دوانی",
     "description": "48 عەدەد",
     "price": 9000,
-    "image": "jbs/photo_2026-02-20_22-39-15.jpg",
+    "image": "jbs/photo_2026-02-20_22-39-15.webp",
     "category": "chips",
     "hidden": false,
     "image_webp": "jbs/photo_2026-02-20_22-39-15.webp"
@@ -2074,7 +2074,7 @@
     "name": "تەمەرندی پاکان",
     "description": "24 عەدەد",
     "price": 1000,
-    "image": "mnalan/photo_1_2026-02-21_00-54-52.jpg",
+    "image": "mnalan/photo_1_2026-02-21_00-54-52.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/photo_1_2026-02-21_00-54-52.webp"
@@ -2084,7 +2084,7 @@
     "name": "پەشمەک سپی",
     "description": "24 عەدەد",
     "price": 4750,
-    "image": "mnalan/photo_2_2026-02-21_00-54-52.jpg",
+    "image": "mnalan/photo_2_2026-02-21_00-54-52.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/photo_2_2026-02-21_00-54-52.webp"
@@ -2094,7 +2094,7 @@
     "name": "قاوەی زۆۆ",
     "description": "24 عەدەد",
     "price": 3500,
-    "image": "mnalan/photo_3_2026-02-21_00-54-52.jpg",
+    "image": "mnalan/photo_3_2026-02-21_00-54-52.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/photo_3_2026-02-21_00-54-52.webp"
@@ -2104,7 +2104,7 @@
     "name": "کۆلا بۆن",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "mnalan/photo_4_2026-02-21_00-54-52.jpg",
+    "image": "mnalan/photo_4_2026-02-21_00-54-52.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/photo_4_2026-02-21_00-54-52.webp"
@@ -2114,7 +2114,7 @@
     "name": "تەمەرندی لول",
     "description": "24 عەدەد",
     "price": 4750,
-    "image": "mnalan/photo_5_2026-02-21_00-54-52.jpg",
+    "image": "mnalan/photo_5_2026-02-21_00-54-52.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/photo_5_2026-02-21_00-54-52.webp"
@@ -2124,7 +2124,7 @@
     "name": "نەستەلەی ئۆتۆن قاوە",
     "description": "24 عەدەد",
     "price": 5250,
-    "image": "mnalan/photo_7_2026-02-21_00-54-52.jpg",
+    "image": "mnalan/photo_7_2026-02-21_00-54-52.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/photo_7_2026-02-21_00-54-52.webp"
@@ -2134,7 +2134,7 @@
     "name": "نەستەلەی ئۆتۆن سپی",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "mnalan/photo_17_2026-02-21_00-54-52.jpg",
+    "image": "mnalan/photo_17_2026-02-21_00-54-52.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/photo_17_2026-02-21_00-54-52.webp"
@@ -2144,7 +2144,7 @@
     "name": "تەمەرندی تەخت",
     "description": "48 عەدەد",
     "price": 2500,
-    "image": "mnalan/photo_8_2026-02-21_00-54-52.jpg",
+    "image": "mnalan/photo_8_2026-02-21_00-54-52.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/photo_8_2026-02-21_00-54-52.webp"
@@ -2154,7 +2154,7 @@
     "name": "مەساسەی سوور عادی",
     "description": "45 عەدەد",
     "price": 3000,
-    "image": "mnalan/photo_9_2026-02-21_00-54-52.jpg",
+    "image": "mnalan/photo_9_2026-02-21_00-54-52.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/photo_9_2026-02-21_00-54-52.webp"
@@ -2164,7 +2164,7 @@
     "name": "مەساسەی دەبە کۆلا",
     "description": "60 عەدەد",
     "price": 5000,
-    "image": "mnalan/photo_11_2026-02-21_00-54-52.jpg",
+    "image": "mnalan/photo_11_2026-02-21_00-54-52.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/photo_11_2026-02-21_00-54-52.webp"
@@ -2174,7 +2174,7 @@
     "name": "مەساسەی دەبە گێلاس",
     "description": "60 عەدەد",
     "price": 5000,
-    "image": "mnalan/photo_12_2026-02-21_00-54-52.jpg",
+    "image": "mnalan/photo_12_2026-02-21_00-54-52.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/photo_12_2026-02-21_00-54-52.webp"
@@ -2184,7 +2184,7 @@
     "name": "مەساسەی دەبە ڕەش",
     "description": "60 عەدەد",
     "price": 5000,
-    "image": "mnalan/photo_13_2026-02-21_00-54-52.jpg",
+    "image": "mnalan/photo_13_2026-02-21_00-54-52.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/photo_13_2026-02-21_00-54-52.webp"
@@ -2194,7 +2194,7 @@
     "name": "مەساسەی ورد",
     "description": "100 عەدەد",
     "price": 2000,
-    "image": "mnalan/photo_14_2026-02-21_00-54-52.jpg",
+    "image": "mnalan/photo_14_2026-02-21_00-54-52.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/photo_14_2026-02-21_00-54-52.webp"
@@ -2204,7 +2204,7 @@
     "name": "مەساسەی دەبە شاتوو",
     "description": "60 عەدەد",
     "price": 5000,
-    "image": "mnalan/photo_15_2026-02-21_00-54-52.jpg",
+    "image": "mnalan/photo_15_2026-02-21_00-54-52.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/photo_15_2026-02-21_00-54-52.webp"
@@ -2214,7 +2214,7 @@
     "name": "نوقڵی ورد ئایدین",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "mnalan/photo_16_2026-02-21_00-54-52.jpg",
+    "image": "mnalan/photo_16_2026-02-21_00-54-52.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/photo_16_2026-02-21_00-54-52.webp"
@@ -2224,7 +2224,7 @@
     "name": "تەمەرندی ڕوڵ",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "mnalan/photo_19_2026-02-21_00-54-52.jpg",
+    "image": "mnalan/photo_19_2026-02-21_00-54-52.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/photo_19_2026-02-21_00-54-52.webp"
@@ -2234,7 +2234,7 @@
     "name": "نوقڵی ڕانا",
     "description": "12 عەدەد",
     "price": 2250,
-    "image": "mnalan/photo_20_2026-02-21_00-54-52.jpg",
+    "image": "mnalan/photo_20_2026-02-21_00-54-52.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/photo_20_2026-02-21_00-54-52.webp"
@@ -2244,7 +2244,7 @@
     "name": "چوکلێتی ئایدن",
     "description": "100 عەدەد",
     "price": 2500,
-    "image": "mnalan/photo_21_2026-02-21_00-54-52.jpg",
+    "image": "mnalan/photo_21_2026-02-21_00-54-52.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/photo_21_2026-02-21_00-54-52.webp"
@@ -2254,7 +2254,7 @@
     "name": "بنێشتی یوبی 100",
     "description": "100 عەدەد",
     "price": 2500,
-    "image": "mnalan/photo_22_2026-02-21_00-54-52.jpg",
+    "image": "mnalan/photo_22_2026-02-21_00-54-52.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/photo_22_2026-02-21_00-54-52.webp"
@@ -2264,7 +2264,7 @@
     "name": "تەمەرندی ڕستە",
     "description": "12 عەدەد",
     "price": 2500,
-    "image": "mnalan/photo_24_2026-02-21_00-54-52.jpg",
+    "image": "mnalan/photo_24_2026-02-21_00-54-52.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/photo_24_2026-02-21_00-54-52.webp"
@@ -2274,7 +2274,7 @@
     "name": "قاوەی زۆۆ ٢",
     "description": "24 عەدەد",
     "price": 3500,
-    "image": "mnalan/photo_25_2026-02-21_00-54-52.jpg",
+    "image": "mnalan/photo_25_2026-02-21_00-54-52.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/photo_25_2026-02-21_00-54-52.webp"
@@ -2284,7 +2284,7 @@
     "name": "سەمیریری",
     "description": "24 عەدەد",
     "price": 3500,
-    "image": "mnalan/photo_26_2026-02-21_00-54-52.jpg",
+    "image": "mnalan/photo_26_2026-02-21_00-54-52.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/photo_26_2026-02-21_00-54-52.webp"
@@ -2294,7 +2294,7 @@
     "name": "نوقڵی ئاناتا شیر",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "mnalan/photo_27_2026-02-21_00-54-52.jpg",
+    "image": "mnalan/photo_27_2026-02-21_00-54-52.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/photo_27_2026-02-21_00-54-52.webp"
@@ -2304,7 +2304,7 @@
     "name": "نەوقڵی ئاناتا قاوە",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "mnalan/photo_28_2026-02-21_00-54-52.jpg",
+    "image": "mnalan/photo_28_2026-02-21_00-54-52.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/photo_28_2026-02-21_00-54-52.webp"
@@ -2314,7 +2314,7 @@
     "name": "تەمەرندی سرنج",
     "description": "24 عەدەد",
     "price": 4500,
-    "image": "mnalan/photo_29_2026-02-21_00-54-52.jpg",
+    "image": "mnalan/photo_29_2026-02-21_00-54-52.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/photo_29_2026-02-21_00-54-52.webp"
@@ -2324,7 +2324,7 @@
     "name": "نەستەلەی بستە",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "mnalan/photo_30_2026-02-21_00-54-52.jpg",
+    "image": "mnalan/photo_30_2026-02-21_00-54-52.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/photo_30_2026-02-21_00-54-52.webp"
@@ -2334,7 +2334,7 @@
     "name": "جکلیتی پۆپۆ",
     "description": "8 عەدەد",
     "price": 12000,
-    "image": "aylay/photo_1_2026-02-20_22-54-38.jpg",
+    "image": "aylay/photo_1_2026-02-20_22-54-38.webp",
     "category": "family",
     "hidden": false,
     "image_webp": "aylay/photo_1_2026-02-20_22-54-38.webp"
@@ -2344,7 +2344,7 @@
     "name": "نوقولی ورد",
     "description": "20 عەدەد",
     "price": 18000,
-    "image": "aylay/photo_2_2026-02-20_22-54-38.jpg",
+    "image": "aylay/photo_2_2026-02-20_22-54-38.webp",
     "category": "family",
     "hidden": false,
     "image_webp": "aylay/photo_2_2026-02-20_22-54-38.webp"
@@ -2354,7 +2354,7 @@
     "name": "وایفەر عایلە قاوە",
     "description": "12 عەدەد",
     "price": 10000,
-    "image": "aylay/photo_3_2026-02-20_22-54-38.jpg",
+    "image": "aylay/photo_3_2026-02-20_22-54-38.webp",
     "category": "family",
     "hidden": false,
     "image_webp": "aylay/photo_3_2026-02-20_22-54-38.webp"
@@ -2364,7 +2364,7 @@
     "name": "چەمەک مۆز",
     "description": "12 عەدەد",
     "price": 10000,
-    "image": "aylay/photo_4_2026-02-20_22-54-38.jpg",
+    "image": "aylay/photo_4_2026-02-20_22-54-38.webp",
     "category": "family",
     "hidden": false,
     "image_webp": "aylay/photo_4_2026-02-20_22-54-38.webp"
@@ -2374,7 +2374,7 @@
     "name": "چەمەکی قاوە",
     "description": "12 عەدەد",
     "price": 10000,
-    "image": "aylay/photo_16_2026-02-20_22-54-38.jpg",
+    "image": "aylay/photo_16_2026-02-20_22-54-38.webp",
     "category": "family",
     "hidden": false,
     "image_webp": "aylay/photo_16_2026-02-20_22-54-38.webp"
@@ -2384,7 +2384,7 @@
     "name": "چەمەکی گوێز",
     "description": "12 عەدەد",
     "price": 10000,
-    "image": "aylay/photo_17_2026-02-20_22-54-38.jpg",
+    "image": "aylay/photo_17_2026-02-20_22-54-38.webp",
     "category": "family",
     "hidden": false,
     "image_webp": "aylay/photo_17_2026-02-20_22-54-38.webp"
@@ -2394,7 +2394,7 @@
     "name": "نوقڵی مینۆ",
     "description": "12 عەدەد",
     "price": 10000,
-    "image": "aylay/photo_7_2026-02-20_22-54-38.jpg",
+    "image": "aylay/photo_7_2026-02-20_22-54-38.webp",
     "category": "family",
     "hidden": false,
     "image_webp": "aylay/photo_7_2026-02-20_22-54-38.webp"
@@ -2404,7 +2404,7 @@
     "name": "مادەر لاکێشە",
     "description": "18 عەدەد",
     "price": 15000,
-    "image": "aylay/photo_9_2026-02-20_22-54-38.jpg",
+    "image": "aylay/photo_9_2026-02-20_22-54-38.webp",
     "category": "family",
     "hidden": false,
     "image_webp": "aylay/photo_9_2026-02-20_22-54-38.webp"
@@ -2414,7 +2414,7 @@
     "name": "ئیسپانی عادی",
     "description": "12 عەدەد",
     "price": 10000,
-    "image": "aylay/photo_10_2026-02-20_22-54-38.jpg",
+    "image": "aylay/photo_10_2026-02-20_22-54-38.webp",
     "category": "family",
     "hidden": false,
     "image_webp": "aylay/photo_10_2026-02-20_22-54-38.webp"
@@ -2424,7 +2424,7 @@
     "name": "فینگەری عایلە",
     "description": "12 عەدەد",
     "price": 10000,
-    "image": "aylay/photo_11_2026-02-20_22-54-38.jpg",
+    "image": "aylay/photo_11_2026-02-20_22-54-38.webp",
     "category": "family",
     "hidden": false,
     "image_webp": "aylay/photo_11_2026-02-20_22-54-38.webp"
@@ -2434,7 +2434,7 @@
     "name": "بسكیتی چای سەوز",
     "description": "12 عەدەد",
     "price": 8500,
-    "image": "aylay/photo_12_2026-02-20_22-54-38.jpg",
+    "image": "aylay/photo_12_2026-02-20_22-54-38.webp",
     "category": "family",
     "hidden": false,
     "image_webp": "aylay/photo_12_2026-02-20_22-54-38.webp"
@@ -2444,7 +2444,7 @@
     "name": "پیتی پور عایلە",
     "description": "12 عەدەد",
     "price": 10000,
-    "image": "aylay/photo_8_2026-02-20_22-54-38.jpg",
+    "image": "aylay/photo_8_2026-02-20_22-54-38.webp",
     "category": "family",
     "hidden": false,
     "image_webp": "aylay/photo_8_2026-02-20_22-54-38.webp"
@@ -2454,7 +2454,7 @@
     "name": "پیتی پوری قاوە",
     "description": "12 عەدەد",
     "price": 10000,
-    "image": "aylay/photo_13_2026-02-20_22-54-38.jpg",
+    "image": "aylay/photo_13_2026-02-20_22-54-38.webp",
     "category": "family",
     "hidden": false,
     "image_webp": "aylay/photo_13_2026-02-20_22-54-38.webp"
@@ -2464,7 +2464,7 @@
     "name": "پیتی پور سادە",
     "description": "12 عەدەد",
     "price": 10000,
-    "image": "aylay/photo_14_2026-02-20_22-54-38.jpg",
+    "image": "aylay/photo_14_2026-02-20_22-54-38.webp",
     "category": "family",
     "hidden": false,
     "image_webp": "aylay/photo_14_2026-02-20_22-54-38.webp"
@@ -2474,7 +2474,7 @@
     "name": "ئاناتای بەڵەم",
     "description": "8 عەدەد",
     "price": 11500,
-    "image": "aylay/photo_18_2026-02-20_22-54-38.jpg",
+    "image": "aylay/photo_18_2026-02-20_22-54-38.webp",
     "category": "family",
     "hidden": false,
     "image_webp": "aylay/photo_18_2026-02-20_22-54-38.webp"
@@ -2484,7 +2484,7 @@
     "name": "زم زم دەبە ڕەش",
     "description": "6عدد",
     "price": 5500,
-    "image": "sardy/IMG_6341.jpeg",
+    "image": "sardy/IMG_6341.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6341.webp"
@@ -2494,7 +2494,7 @@
     "name": "یەومی پرتەقاڵی",
     "description": "6 عەدەد",
     "price": 3000,
-    "image": "sardy/IMG_6342.jpeg",
+    "image": "sardy/IMG_6342.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6342.webp"
@@ -2504,7 +2504,7 @@
     "name": "شیر قاوە دەبە",
     "description": "24 عەدەد",
     "price": 4500,
-    "image": "sardy/IMG_6374.jpeg",
+    "image": "sardy/IMG_6374.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6374.webp"
@@ -2514,7 +2514,7 @@
     "name": "شیر شلک دەبە",
     "description": "24 عەدەد",
     "price": 4500,
-    "image": "sardy/IMG_6373.jpeg",
+    "image": "sardy/IMG_6373.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6373.webp"
@@ -2524,7 +2524,7 @@
     "name": "شیر مۆز دەبە",
     "description": "24 عەدەد",
     "price": 4500,
-    "image": "sardy/IMG_6372.jpeg",
+    "image": "sardy/IMG_6372.webp",
     "category": "drink",
     "hidden": false,
     "image_webp": "sardy/IMG_6372.webp"
@@ -2534,7 +2534,7 @@
     "name": "میکس ڕوڵی پرتەقاڵ",
     "description": "12 عەدەد",
     "price": 2500,
-    "image": "kek/IMG_6343.jpeg",
+    "image": "kek/IMG_6343.webp",
     "category": "cake",
     "hidden": false,
     "image_webp": "kek/IMG_6343.webp"
@@ -2544,7 +2544,7 @@
     "name": "میکس ڕوڵی مۆر",
     "description": "12 عەدەد",
     "price": 2500,
-    "image": "kek/IMG_6344.jpeg",
+    "image": "kek/IMG_6344.webp",
     "category": "cake",
     "hidden": false,
     "image_webp": "kek/IMG_6344.webp"
@@ -2554,7 +2554,7 @@
     "name": "میکس ڕوڵ قاوە",
     "description": "12 عەدەد",
     "price": 2500,
-    "image": "kek/IMG_6345.jpeg",
+    "image": "kek/IMG_6345.webp",
     "category": "cake",
     "hidden": false,
     "image_webp": "kek/IMG_6345.webp"
@@ -2564,7 +2564,7 @@
     "name": "میکس ڕوڵ ئەنەناس",
     "description": "12 عەدەد",
     "price": 2500,
-    "image": "kek/IMG_6347.jpeg",
+    "image": "kek/IMG_6347.webp",
     "category": "cake",
     "hidden": false,
     "image_webp": "kek/IMG_6347.webp"
@@ -2574,7 +2574,7 @@
     "name": "کێک ڕۆکی",
     "description": "24 عەدەد",
     "price": 4500,
-    "image": "kek/IMG_6353.jpeg",
+    "image": "kek/IMG_6353.webp",
     "category": "cake",
     "hidden": false,
     "image_webp": "kek/IMG_6353.webp"
@@ -2584,7 +2584,7 @@
     "name": "کێکی دوبەی شعری",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "kek/IMG_6357.jpeg",
+    "image": "kek/IMG_6357.webp",
     "category": "cake",
     "hidden": false,
     "image_webp": "kek/IMG_6357.webp"
@@ -2594,7 +2594,7 @@
     "name": "نەزەری کشمیش",
     "description": "24 عەدەد",
     "price": 5250,
-    "image": "kek/IMG_6388.jpeg",
+    "image": "kek/IMG_6388.webp",
     "category": "cake",
     "hidden": false,
     "image_webp": "kek/IMG_6388.webp"
@@ -2604,7 +2604,7 @@
     "name": "نەزەری بریک فاست",
     "description": "24 عەدەد",
     "price": 5250,
-    "image": "kek/IMG_6389.jpeg",
+    "image": "kek/IMG_6389.webp",
     "category": "cake",
     "hidden": false,
     "image_webp": "kek/IMG_6389.webp"
@@ -2614,7 +2614,7 @@
     "name": "بۆبۆتۆی سور",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "kek/IMG_6391.jpeg",
+    "image": "kek/IMG_6391.webp",
     "category": "cake",
     "hidden": false,
     "image_webp": "kek/IMG_6391.webp"
@@ -2624,7 +2624,7 @@
     "name": "کیک دوبەی",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "kek/IMG_6392.jpeg",
+    "image": "kek/IMG_6392.webp",
     "category": "cake",
     "hidden": false,
     "image_webp": "kek/IMG_6392.webp"
@@ -2634,7 +2634,7 @@
     "name": "نەزەری خر شلک",
     "description": "24 عەدەد",
     "price": 5250,
-    "image": "kek/IMG_6395.jpeg",
+    "image": "kek/IMG_6395.webp",
     "category": "cake",
     "hidden": false,
     "image_webp": "kek/IMG_6395.webp"
@@ -2644,7 +2644,7 @@
     "name": "نەزەری خر قاوە",
     "description": "24 عەدەد",
     "price": 5250,
-    "image": "kek/IMG_6396.jpeg",
+    "image": "kek/IMG_6396.webp",
     "category": "cake",
     "hidden": false,
     "image_webp": "kek/IMG_6396.webp"
@@ -2654,7 +2654,7 @@
     "name": "نەزەری خر شیر",
     "description": "24 عەدەد",
     "price": 5250,
-    "image": "kek/IMG_6397.jpeg",
+    "image": "kek/IMG_6397.webp",
     "category": "cake",
     "hidden": false,
     "image_webp": "kek/IMG_6397.webp"
@@ -2664,7 +2664,7 @@
     "name": "پۆپ کیک لیمۆ",
     "description": "24 عەدەد",
     "price": 5250,
-    "image": "kek/IMG_6398.jpeg",
+    "image": "kek/IMG_6398.webp",
     "category": "cake",
     "hidden": false,
     "image_webp": "kek/IMG_6398.webp"
@@ -2674,7 +2674,7 @@
     "name": "پۆپ کیک مۆز",
     "description": "24 عەدەد",
     "price": 5250,
-    "image": "kek/IMG_6399.jpeg",
+    "image": "kek/IMG_6399.webp",
     "category": "cake",
     "hidden": false,
     "image_webp": "kek/IMG_6399.webp"
@@ -2684,7 +2684,7 @@
     "name": "ئەنگڵس",
     "description": "24 عەدەد",
     "price": 3500,
-    "image": "gaz/IMG_6349.jpeg",
+    "image": "gaz/IMG_6349.webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/IMG_6349.webp"
@@ -2694,7 +2694,7 @@
     "name": "جین",
     "description": "24 عەدەد",
     "price": 5250,
-    "image": "gaz/IMG_6355.jpeg",
+    "image": "gaz/IMG_6355.webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/IMG_6355.webp"
@@ -2704,7 +2704,7 @@
     "name": "ئەندۆمی",
     "description": "40 عەدەد",
     "price": 9250,
-    "image": "gaz/IMG_6356.jpeg",
+    "image": "gaz/IMG_6356.webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/IMG_6356.webp"
@@ -2714,7 +2714,7 @@
     "name": "مستەر بایت ڕەش",
     "description": "24 عەدەد",
     "price": 5250,
-    "image": "gaz/IMG_6364.jpeg",
+    "image": "gaz/IMG_6364.webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/IMG_6364.webp"
@@ -2724,7 +2724,7 @@
     "name": "مستەربایت شیر",
     "description": "24 عەدەد",
     "price": 5250,
-    "image": "gaz/IMG_6366.jpeg",
+    "image": "gaz/IMG_6366.webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/IMG_6366.webp"
@@ -2734,7 +2734,7 @@
     "name": "بسکیتی تونس",
     "description": "40 عەدەد",
     "price": 8000,
-    "image": "gaz/IMG_6385.jpeg",
+    "image": "gaz/IMG_6385.webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/IMG_6385.webp"
@@ -2744,7 +2744,7 @@
     "name": "مادر",
     "description": "32 عەدەد",
     "price": 6250,
-    "image": "gaz/IMG_6386.jpeg",
+    "image": "gaz/IMG_6386.webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/IMG_6386.webp"
@@ -2754,7 +2754,7 @@
     "name": "کولیچەی فەل",
     "description": "24 عەدەد",
     "price": 5250,
-    "image": "gaz/IMG_6387.jpeg",
+    "image": "gaz/IMG_6387.webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/IMG_6387.webp"
@@ -2764,7 +2764,7 @@
     "name": "بورمەی وایفەر",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "gaz/IMG_6390.jpeg",
+    "image": "gaz/IMG_6390.webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/IMG_6390.webp"
@@ -2774,7 +2774,7 @@
     "name": "الیوەم خورما",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "gaz/IMG_6394.jpeg",
+    "image": "gaz/IMG_6394.webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/IMG_6394.webp"
@@ -2784,7 +2784,7 @@
     "name": "وایف ئەپ شین",
     "description": "24 عەدەد",
     "price": 5250,
-    "image": "gaz/IMG_6400.jpeg",
+    "image": "gaz/IMG_6400.webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/IMG_6400.webp"
@@ -2794,7 +2794,7 @@
     "name": "وقیف ئەپ قاوە",
     "description": "24 عەدەد",
     "price": 5250,
-    "image": "gaz/IMG_6401.jpeg",
+    "image": "gaz/IMG_6401.webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/IMG_6401.webp"
@@ -2804,7 +2804,7 @@
     "name": "وایف ئەپ بندوق",
     "description": "24 عەدەد",
     "price": 5250,
-    "image": "gaz/IMG_6402.jpeg",
+    "image": "gaz/IMG_6402.webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/IMG_6402.webp"
@@ -2814,7 +2814,7 @@
     "name": "وایف ئەپ شیر",
     "description": "24 عەدەد",
     "price": 5250,
-    "image": "gaz/IMG_6403.jpeg",
+    "image": "gaz/IMG_6403.webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/IMG_6403.webp"
@@ -2824,7 +2824,7 @@
     "name": "وایف ئەپ شلک",
     "description": "24 عەدەد",
     "price": 5250,
-    "image": "gaz/IMG_6404.jpeg",
+    "image": "gaz/IMG_6404.webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/IMG_6404.webp"
@@ -2834,7 +2834,7 @@
     "name": "پاپل قاوە",
     "description": "24 عەدەد",
     "price": 5250,
-    "image": "gaz/IMG_6423.jpeg",
+    "image": "gaz/IMG_6423.webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/IMG_6423.webp"
@@ -2844,7 +2844,7 @@
     "name": "بسکیتی ئۆریۆ عادی",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "gaz/IMG_6426.jpeg",
+    "image": "gaz/IMG_6426.webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/IMG_6426.webp"
@@ -2854,7 +2854,7 @@
     "name": "براوستاری زەرد",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "gaz/IMG_6427.jpeg",
+    "image": "gaz/IMG_6427.webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/IMG_6427.webp"
@@ -2864,7 +2864,7 @@
     "name": "فول تۆپ شین",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "gaz/IMG_6431.jpeg",
+    "image": "gaz/IMG_6431.webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/IMG_6431.webp"
@@ -2874,7 +2874,7 @@
     "name": "فول تۆپ شین قاوە",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "gaz/IMG_6432.jpeg",
+    "image": "gaz/IMG_6432.webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/IMG_6432.webp"
@@ -2884,7 +2884,7 @@
     "name": "فول تۆپ پەمەی",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "gaz/IMG_6433.jpeg",
+    "image": "gaz/IMG_6433.webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/IMG_6433.webp"
@@ -2894,7 +2894,7 @@
     "name": "فول تۆپ سور",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "gaz/IMG_6434.jpeg",
+    "image": "gaz/IMG_6434.webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/IMG_6434.webp"
@@ -2904,7 +2904,7 @@
     "name": "وایفەر توران قاوە",
     "description": "24 عەدەد",
     "price": 5250,
-    "image": "gaz/IMG_6435.jpeg",
+    "image": "gaz/IMG_6435.webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/IMG_6435.webp"
@@ -2914,7 +2914,7 @@
     "name": "وایفەر توران بندوق",
     "description": "24 عەدەد",
     "price": 5250,
-    "image": "gaz/IMG_6436.jpeg",
+    "image": "gaz/IMG_6436.webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/IMG_6436.webp"
@@ -2924,7 +2924,7 @@
     "name": "وایفەر توران لیمۆ",
     "description": "24 عەدەد",
     "price": 5250,
-    "image": "gaz/IMG_6438.jpeg",
+    "image": "gaz/IMG_6438.webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/IMG_6438.webp"
@@ -2934,7 +2934,7 @@
     "name": "وایفەر  توران شلک",
     "description": "24 عەدەد",
     "price": 5250,
-    "image": "gaz/IMG_6439.jpeg",
+    "image": "gaz/IMG_6439.webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/IMG_6439.webp"
@@ -2944,7 +2944,7 @@
     "name": "وایفەر توران شیر",
     "description": "24 عەدەد",
     "price": 5250,
-    "image": "gaz/IMG_6440.jpeg",
+    "image": "gaz/IMG_6440.webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/IMG_6440.webp"
@@ -2954,7 +2954,7 @@
     "name": "وایفەر ئەزرا لیمۆ",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "gaz/IMG_6441.jpeg",
+    "image": "gaz/IMG_6441.webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/IMG_6441.webp"
@@ -2964,7 +2964,7 @@
     "name": "وایفەر ئەزرا شلک",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "gaz/IMG_6442.jpeg",
+    "image": "gaz/IMG_6442.webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/IMG_6442.webp"
@@ -2974,7 +2974,7 @@
     "name": "وایفەر ئەزرا گویزهیند",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "gaz/IMG_6443.jpeg",
+    "image": "gaz/IMG_6443.webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/IMG_6443.webp"
@@ -2984,7 +2984,7 @@
     "name": "وایفەر ئەزرا بندوق",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "gaz/IMG_6444.jpeg",
+    "image": "gaz/IMG_6444.webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/IMG_6444.webp"
@@ -2994,7 +2994,7 @@
     "name": "وایفەر ئەزرا قاوە",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "gaz/IMG_6445.jpeg",
+    "image": "gaz/IMG_6445.webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/IMG_6445.webp"
@@ -3004,7 +3004,7 @@
     "name": "وایفەر ئەزرا مۆتە",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "gaz/IMG_6446.jpeg",
+    "image": "gaz/IMG_6446.webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/IMG_6446.webp"
@@ -3014,7 +3014,7 @@
     "name": "وایفەر ئەزرا گیلاس",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "gaz/IMG_6447.jpeg",
+    "image": "gaz/IMG_6447.webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/IMG_6447.webp"
@@ -3024,7 +3024,7 @@
     "name": "مستەر بایت قاوە",
     "description": "24 عەدەد",
     "price": 5250,
-    "image": "gaz/IMG_6471.jpeg",
+    "image": "gaz/IMG_6471.webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/IMG_6471.webp"
@@ -3034,7 +3034,7 @@
     "name": "مستەر بایت بندوق زەرد",
     "description": "24 عەدەد",
     "price": 5250,
-    "image": "gaz/IMG_6472.jpeg",
+    "image": "gaz/IMG_6472.webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/IMG_6472.webp"
@@ -3044,7 +3044,7 @@
     "name": "مستەر بایت گویزهیند",
     "description": "24 عەدەد",
     "price": 5250,
-    "image": "gaz/IMG_6473.jpeg",
+    "image": "gaz/IMG_6473.webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/IMG_6473.webp"
@@ -3054,7 +3054,7 @@
     "name": "مستەر بایت بندوق",
     "description": "24 عەدەد",
     "price": 5250,
-    "image": "gaz/IMG_6474.jpeg",
+    "image": "gaz/IMG_6474.webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/IMG_6474.webp"
@@ -3064,7 +3064,7 @@
     "name": "مستەر بایت فستەق",
     "description": "24 عەدەد",
     "price": 5250,
-    "image": "gaz/IMG_6475.jpeg",
+    "image": "gaz/IMG_6475.webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/IMG_6475.webp"
@@ -3074,7 +3074,7 @@
     "name": "نەستەلەی یەک کیلۆی",
     "description": "12 عەدەد",
     "price": 47000,
-    "image": "aylay/IMG_6375.jpeg",
+    "image": "aylay/IMG_6375.webp",
     "category": "family",
     "hidden": false,
     "image_webp": "aylay/IMG_6375.webp"
@@ -3084,7 +3084,7 @@
     "name": "لامیان عایلە مۆز",
     "description": "12 عەدەد",
     "price": 9000,
-    "image": "aylay/IMG_6376.jpeg",
+    "image": "aylay/IMG_6376.webp",
     "category": "family",
     "hidden": false,
     "image_webp": "aylay/IMG_6376.webp"
@@ -3094,7 +3094,7 @@
     "name": "لامیان عایلە پرتەقال",
     "description": "12 عەدەد",
     "price": 9000,
-    "image": "aylay/IMG_6377.jpeg",
+    "image": "aylay/IMG_6377.webp",
     "category": "family",
     "hidden": false,
     "image_webp": "aylay/IMG_6377.webp"
@@ -3104,7 +3104,7 @@
     "name": "لامیان عایلە شلک",
     "description": "12 عەدەد",
     "price": 9000,
-    "image": "aylay/IMG_6378.jpeg",
+    "image": "aylay/IMG_6378.webp",
     "category": "family",
     "hidden": false,
     "image_webp": "aylay/IMG_6378.webp"
@@ -3114,7 +3114,7 @@
     "name": "وایفەر عایلە پرتەقاڵ",
     "description": "12 عەدەد",
     "price": 10000,
-    "image": "aylay/IMG_6379.jpeg",
+    "image": "aylay/IMG_6379.webp",
     "category": "family",
     "hidden": false,
     "image_webp": "aylay/IMG_6379.webp"
@@ -3124,7 +3124,7 @@
     "name": "وایفەر عایلە مۆز",
     "description": "12 عەدەد",
     "price": 10000,
-    "image": "aylay/IMG_6380.jpeg",
+    "image": "aylay/IMG_6380.webp",
     "category": "family",
     "hidden": false,
     "image_webp": "aylay/IMG_6380.webp"
@@ -3134,7 +3134,7 @@
     "name": "وایفەر عایلە شلک",
     "description": "12 عەدەد",
     "price": 10000,
-    "image": "aylay/IMG_6381.jpeg",
+    "image": "aylay/IMG_6381.webp",
     "category": "family",
     "hidden": false,
     "image_webp": "aylay/IMG_6381.webp"
@@ -3144,7 +3144,7 @@
     "name": "وایفەر عایلە گویزهیند",
     "description": "12 عەدەد",
     "price": 10000,
-    "image": "aylay/IMG_6382.jpeg",
+    "image": "aylay/IMG_6382.webp",
     "category": "family",
     "hidden": false,
     "image_webp": "aylay/IMG_6382.webp"
@@ -3154,7 +3154,7 @@
     "name": "وایفەر عایلە مۆتە",
     "description": "12عەدەد",
     "price": 10000,
-    "image": "aylay/IMG_6383.jpeg",
+    "image": "aylay/IMG_6383.webp",
     "category": "family",
     "hidden": false,
     "image_webp": "aylay/IMG_6383.webp"
@@ -3164,7 +3164,7 @@
     "name": "ئاناتا کیس",
     "description": "6عەدەد",
     "price": 12500,
-    "image": "aylay/IMG_6384.jpeg",
+    "image": "aylay/IMG_6384.webp",
     "category": "family",
     "hidden": false,
     "image_webp": "aylay/IMG_6384.webp"
@@ -3174,7 +3174,7 @@
     "name": "مۆتەی قاوە",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "mnalan/IMG_6346.jpeg",
+    "image": "mnalan/IMG_6346.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6346.webp"
@@ -3184,7 +3184,7 @@
     "name": "کەفاو",
     "description": "24 عەدەد",
     "price": 4500,
-    "image": "mnalan/IMG_6348.jpeg",
+    "image": "mnalan/IMG_6348.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6348.webp"
@@ -3194,7 +3194,7 @@
     "name": "مارشمیلۆ ورج",
     "description": "40 عەدەد",
     "price": 8000,
-    "image": "mnalan/IMG_6350.jpeg",
+    "image": "mnalan/IMG_6350.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6350.webp"
@@ -3204,7 +3204,7 @@
     "name": "لینکەر",
     "description": "24 عەدەد",
     "price": 5250,
-    "image": "mnalan/IMG_6351.jpeg",
+    "image": "mnalan/IMG_6351.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6351.webp"
@@ -3214,7 +3214,7 @@
     "name": "ڕامتین",
     "description": "24 عەدەد",
     "price": 3000,
-    "image": "mnalan/IMG_6352.jpeg",
+    "image": "mnalan/IMG_6352.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6352.webp"
@@ -3224,7 +3224,7 @@
     "name": "جەلی مەتری لولە",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "mnalan/IMG_6354.jpeg",
+    "image": "mnalan/IMG_6354.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6354.webp"
@@ -3234,7 +3234,7 @@
     "name": "قاوە مەڵهەم",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "mnalan/IMG_6358.jpeg",
+    "image": "mnalan/IMG_6358.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6358.webp"
@@ -3244,7 +3244,7 @@
     "name": "نەستەلەئ چەکوش",
     "description": "24 عەدەد",
     "price": 5250,
-    "image": "mnalan/IMG_6359.jpeg",
+    "image": "mnalan/IMG_6359.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6359.webp"
@@ -3254,7 +3254,7 @@
     "name": "تۆپ",
     "description": "60 عەدەد",
     "price": 8000,
-    "image": "mnalan/IMG_6360.jpeg",
+    "image": "mnalan/IMG_6360.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6360.webp"
@@ -3264,7 +3264,7 @@
     "name": "ناوکە کولەکە پاشا",
     "description": "24 عەدەد",
     "price": 5250,
-    "image": "mnalan/IMG_6361.jpeg",
+    "image": "mnalan/IMG_6361.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6361.webp"
@@ -3274,7 +3274,7 @@
     "name": "شەربەتی ئیتالی",
     "description": "24 عەدەد",
     "price": 5250,
-    "image": "mnalan/IMG_6362.jpeg",
+    "image": "mnalan/IMG_6362.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6362.webp"
@@ -3284,7 +3284,7 @@
     "name": "بستە پاشا",
     "description": "24 عەدەد",
     "price": 5250,
-    "image": "mnalan/IMG_6363.jpeg",
+    "image": "mnalan/IMG_6363.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6363.webp"
@@ -3294,7 +3294,7 @@
     "name": "ئاماسی",
     "description": "24 عەدەد",
     "price": 5250,
-    "image": "mnalan/IMG_6365.jpeg",
+    "image": "mnalan/IMG_6365.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6365.webp"
@@ -3304,7 +3304,7 @@
     "name": "کۆکۆسی میکسی",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "mnalan/IMG_6367.jpeg",
+    "image": "mnalan/IMG_6367.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6367.webp"
@@ -3314,7 +3314,7 @@
     "name": "جەلی هەمبەرگر",
     "description": "20عەدەد",
     "price": 4000,
-    "image": "mnalan/IMG_6368.jpeg",
+    "image": "mnalan/IMG_6368.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6368.webp"
@@ -3324,7 +3324,7 @@
     "name": "X.5",
     "description": "24 عەدەد",
     "price": 5250,
-    "image": "mnalan/IMG_6369.jpeg",
+    "image": "mnalan/IMG_6369.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6369.webp"
@@ -3334,7 +3334,7 @@
     "name": "ناوکە پاش",
     "description": "24 عەدەد",
     "price": 5250,
-    "image": "mnalan/IMG_6370.jpeg",
+    "image": "mnalan/IMG_6370.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6370.webp"
@@ -3344,7 +3344,7 @@
     "name": "جلکەی سۆلار",
     "description": "24 عەدەد",
     "price": 4500,
-    "image": "mnalan/IMG_6371.jpeg",
+    "image": "mnalan/IMG_6371.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6371.webp"
@@ -3354,7 +3354,7 @@
     "name": "کونجی سپی",
     "description": "40 عەدەد",
     "price": 7000,
-    "image": "mnalan/IMG_6405.jpeg",
+    "image": "mnalan/IMG_6405.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6405.webp"
@@ -3364,7 +3364,7 @@
     "name": "مارشمیلۆ کیس لولە",
     "description": "24 عەدەد",
     "price": 5250,
-    "image": "mnalan/IMG_6406.jpeg",
+    "image": "mnalan/IMG_6406.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6406.webp"
@@ -3374,7 +3374,7 @@
     "name": "جەلی میکس ڕوڵ",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "mnalan/IMG_6407.jpeg",
+    "image": "mnalan/IMG_6407.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6407.webp"
@@ -3384,7 +3384,7 @@
     "name": "جەلی کەباب",
     "description": "48 عەدەد",
     "price": 5000,
-    "image": "mnalan/IMG_6408.jpeg",
+    "image": "mnalan/IMG_6408.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6408.webp"
@@ -3394,7 +3394,7 @@
     "name": "کونجی ڕەش",
     "description": "40عەدەد",
     "price": 7000,
-    "image": "mnalan/IMG_6409.jpeg",
+    "image": "mnalan/IMG_6409.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6409.webp"
@@ -3404,7 +3404,7 @@
     "name": "جەلی هەمبەرگر",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "mnalan/IMG_6410.jpeg",
+    "image": "mnalan/IMG_6410.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6410.webp"
@@ -3414,7 +3414,7 @@
     "name": "جەلئ قەلەم",
     "description": "20 عەدەد",
     "price": 4250,
-    "image": "mnalan/IMG_6411.jpeg",
+    "image": "mnalan/IMG_6411.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6411.webp"
@@ -3424,7 +3424,7 @@
     "name": "جەلی پیزا قتو",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "mnalan/IMG_6412.jpeg",
+    "image": "mnalan/IMG_6412.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6412.webp"
@@ -3434,7 +3434,7 @@
     "name": "جەلی ڕستە شەیبا",
     "description": "24 عەدەد",
     "price": 4500,
-    "image": "mnalan/IMG_6413.jpeg",
+    "image": "mnalan/IMG_6413.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6413.webp"
@@ -3444,7 +3444,7 @@
     "name": "جەلی ڕستە",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "mnalan/IMG_6414.jpeg",
+    "image": "mnalan/IMG_6414.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6414.webp"
@@ -3454,7 +3454,7 @@
     "name": "مارشمیلۆ ڕستە",
     "description": "12 عەدەد",
     "price": 2500,
-    "image": "mnalan/IMG_6415.jpeg",
+    "image": "mnalan/IMG_6415.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6415.webp"
@@ -3464,7 +3464,7 @@
     "name": "شەربەتی جەلی کیس",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "mnalan/IMG_6416.jpeg",
+    "image": "mnalan/IMG_6416.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6416.webp"
@@ -3474,7 +3474,7 @@
     "name": "ڕەسم",
     "description": "60 عەدەد",
     "price": 9000,
-    "image": "mnalan/IMG_6417.jpeg",
+    "image": "mnalan/IMG_6417.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6417.webp"
@@ -3484,7 +3484,7 @@
     "name": "وەن حەب",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "mnalan/IMG_6418.jpeg",
+    "image": "mnalan/IMG_6418.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6418.webp"
@@ -3494,7 +3494,7 @@
     "name": "بوبی لاکیشە",
     "description": "48 عەدەد",
     "price": 2000,
-    "image": "mnalan/IMG_6419.jpeg",
+    "image": "mnalan/IMG_6419.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6419.webp"
@@ -3504,7 +3504,7 @@
     "name": "جەلی پیتزا",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "mnalan/IMG_6420.jpeg",
+    "image": "mnalan/IMG_6420.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6420.webp"
@@ -3514,7 +3514,7 @@
     "name": "جەلئ کوبرا",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "mnalan/IMG_6421.jpeg",
+    "image": "mnalan/IMG_6421.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6421.webp"
@@ -3524,7 +3524,7 @@
     "name": "جەلی کرم کۆکتیل",
     "description": "24 عەدەد",
     "price": 0,
-    "image": "mnalan/IMG_6422.jpeg",
+    "image": "mnalan/IMG_6422.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6422.webp"
@@ -3534,7 +3534,7 @@
     "name": "جەلی کرم بلوبیری",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "mnalan/IMG_6424.jpeg",
+    "image": "mnalan/IMG_6424.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6424.webp"
@@ -3544,7 +3544,7 @@
     "name": "جەلی زمان",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "mnalan/IMG_6425.jpeg",
+    "image": "mnalan/IMG_6425.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6425.webp"
@@ -3554,7 +3554,7 @@
     "name": "نوقولی کیس تیکەلە",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "mnalan/IMG_6428.jpeg",
+    "image": "mnalan/IMG_6428.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6428.webp"
@@ -3564,7 +3564,7 @@
     "name": "نوقولی کیس قاوە",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "mnalan/IMG_6429.jpeg",
+    "image": "mnalan/IMG_6429.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6429.webp"
@@ -3574,7 +3574,7 @@
     "name": "نوقولی کیس شیر",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "mnalan/IMG_6430.jpeg",
+    "image": "mnalan/IMG_6430.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6430.webp"
@@ -3584,7 +3584,7 @@
     "name": "ستیکی بلوبیری",
     "description": "24 عەدەد",
     "price": 4000,
-    "image": "mnalan/IMG_6448.jpeg",
+    "image": "mnalan/IMG_6448.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6448.webp"
@@ -3594,7 +3594,7 @@
     "name": "ستیکی تیکەلە",
     "description": "24 عەدەد",
     "price": 4000,
-    "image": "mnalan/IMG_6449.jpeg",
+    "image": "mnalan/IMG_6449.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6449.webp"
@@ -3604,7 +3604,7 @@
     "name": "ستیکی کۆلا",
     "description": "24 عەدەد",
     "price": 4000,
-    "image": "mnalan/IMG_6450.jpeg",
+    "image": "mnalan/IMG_6450.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6450.webp"
@@ -3614,7 +3614,7 @@
     "name": "ستیکی لیمۆ",
     "description": "24 عەدەد",
     "price": 4000,
-    "image": "mnalan/IMG_6451.jpeg",
+    "image": "mnalan/IMG_6451.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6451.webp"
@@ -3624,7 +3624,7 @@
     "name": "ستیکی قەزوان",
     "description": "24 عەدەد",
     "price": 4000,
-    "image": "mnalan/IMG_6452.jpeg",
+    "image": "mnalan/IMG_6452.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6452.webp"
@@ -3634,7 +3634,7 @@
     "name": "ستیکی نەعنا",
     "description": "24 عەدەد",
     "price": 4000,
-    "image": "mnalan/IMG_6453.jpeg",
+    "image": "mnalan/IMG_6453.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6453.webp"
@@ -3644,7 +3644,7 @@
     "name": "ستیکی شوتی",
     "description": "24 عەدەد",
     "price": 4000,
-    "image": "mnalan/IMG_6454.jpeg",
+    "image": "mnalan/IMG_6454.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6454.webp"
@@ -3654,7 +3654,7 @@
     "name": "ڕیلاکسی شوتی",
     "description": "24 عەدەد",
     "price": 4000,
-    "image": "mnalan/IMG_6455.jpeg",
+    "image": "mnalan/IMG_6455.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6455.webp"
@@ -3664,7 +3664,7 @@
     "name": "ستیکی شلک",
     "description": "24 عەدەد",
     "price": 4000,
-    "image": "mnalan/IMG_6456.jpeg",
+    "image": "mnalan/IMG_6456.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6456.webp"
@@ -3674,7 +3674,7 @@
     "name": "ڕیلاکس نەعنا شین",
     "description": "24 عەدەد",
     "price": 4000,
-    "image": "mnalan/IMG_6457.jpeg",
+    "image": "mnalan/IMG_6457.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6457.webp"
@@ -3684,7 +3684,7 @@
     "name": "ڕیلاکسی شلک",
     "description": "24 عەدەد",
     "price": 4000,
-    "image": "mnalan/IMG_6458.jpeg",
+    "image": "mnalan/IMG_6458.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6458.webp"
@@ -3694,7 +3694,7 @@
     "name": "ستیکی پرتەقاڵ",
     "description": "24 عەدەد",
     "price": 4000,
-    "image": "mnalan/IMG_6459.jpeg",
+    "image": "mnalan/IMG_6459.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6459.webp"
@@ -3704,7 +3704,7 @@
     "name": "ستیکی بوبی",
     "description": "24 عەدەد",
     "price": 4000,
-    "image": "mnalan/IMG_6460.jpeg",
+    "image": "mnalan/IMG_6460.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6460.webp"
@@ -3714,7 +3714,7 @@
     "name": "ستیکی دارچینی",
     "description": "24 عەدەد",
     "price": 4000,
-    "image": "mnalan/IMG_6461.jpeg",
+    "image": "mnalan/IMG_6461.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6461.webp"
@@ -3724,7 +3724,7 @@
     "name": "سەمیری قتو",
     "description": "20 عەدەد",
     "price": 4250,
-    "image": "mnalan/IMG_6462.jpeg",
+    "image": "mnalan/IMG_6462.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6462.webp"
@@ -3734,7 +3734,7 @@
     "name": "ستیکی حێل",
     "description": "24 عەدەد",
     "price": 4000,
-    "image": "mnalan/IMG_6463.jpeg",
+    "image": "mnalan/IMG_6463.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6463.webp"
@@ -3744,7 +3744,7 @@
     "name": "ستیکی تایگەر",
     "description": "24 عەدەد",
     "price": 4000,
-    "image": "mnalan/IMG_6464.jpeg",
+    "image": "mnalan/IMG_6464.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6464.webp"
@@ -3754,7 +3754,7 @@
     "name": "بنێشتی بۆین ٤غرام",
     "description": "100 عەدەد",
     "price": 16000,
-    "image": "mnalan/IMG_6465.jpeg",
+    "image": "mnalan/IMG_6465.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6465.webp"
@@ -3764,7 +3764,7 @@
     "name": "بنیشتی سینی شوتی",
     "description": "100 عەدەد",
     "price": 3000,
-    "image": "mnalan/IMG_6466.jpeg",
+    "image": "mnalan/IMG_6466.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6466.webp"
@@ -3774,7 +3774,7 @@
     "name": "بنێشتی سینی بلوبیری",
     "description": "100 عەدەد",
     "price": 3000,
-    "image": "mnalan/IMG_6467.jpeg",
+    "image": "mnalan/IMG_6467.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6467.webp"
@@ -3784,7 +3784,7 @@
     "name": "بنێشتی سینی کۆلا",
     "description": "100 عەدەد",
     "price": 3500,
-    "image": "mnalan/IMG_6468.jpeg",
+    "image": "mnalan/IMG_6468.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6468.webp"
@@ -3794,7 +3794,7 @@
     "name": "سەمیری لول پاکەت",
     "description": "24 عەدەد",
     "price": 5250,
-    "image": "mnalan/IMG_6469.jpeg",
+    "image": "mnalan/IMG_6469.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6469.webp"
@@ -3804,7 +3804,7 @@
     "name": "لیرەی بنیشت",
     "description": "100 عەدەد",
     "price": 3500,
-    "image": "mnalan/IMG_6470.jpeg",
+    "image": "mnalan/IMG_6470.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6470.webp"

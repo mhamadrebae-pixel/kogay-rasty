@@ -641,6 +641,7 @@
     let ghSettingsAutoSaveTimer = null;
     let ghSettingsSaveInFlight = false;
     let lastSavedGhSettingsFingerprint = '';
+    let lastCatalogMetaTime = 0;
 
     function escapeHtml(value) {
       return String(value ?? '').replace(/[&<>"']/g, char => ({
@@ -2226,6 +2227,77 @@
       }
     }
 
+    function notifyCatalogChange(reason = 'update') {
+      const timestamp = Date.now();
+      try {
+        fetch('https://kogay-raste-default-rtdb.firebaseio.com/catalogMeta.json', {
+          method: 'PUT',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            updatedAt: timestamp,
+            reason,
+            count: currentProducts.length
+          })
+        }).catch(console.warn);
+      } catch (e) {}
+
+      try {
+        if ('BroadcastChannel' in window) {
+          const bc = new BroadcastChannel('kogay_rasty_sync');
+          bc.postMessage({ type: 'CATALOG_UPDATED', updatedAt: timestamp, reason, source: 'admin' });
+          bc.close();
+        }
+      } catch (e) {}
+
+      try {
+        localStorage.setItem('kogay_catalog_updated_at', String(timestamp));
+        localStorage.setItem('kogay_sync_ping', JSON.stringify({ timestamp, reason, source: 'admin' }));
+      } catch (e) {}
+    }
+
+    function setupAdminLiveSync() {
+      const handleExternalUpdate = () => {
+        if (hasUnsavedChanges) return;
+        loadProductsFromGitHub().then(() => {
+          renderDash();
+          if (document.getElementById('page-products')?.classList.contains('active')) renderTable();
+        }).catch(() => {});
+      };
+
+      try {
+        if ('BroadcastChannel' in window) {
+          const bc = new BroadcastChannel('kogay_rasty_sync');
+          bc.onmessage = (event) => {
+            if (event.data?.type === 'CATALOG_UPDATED' && event.data?.source !== 'admin') {
+              handleExternalUpdate();
+            }
+          };
+        }
+      } catch (e) {}
+
+      window.addEventListener('storage', (event) => {
+        if (event.key === 'kogay_sync_ping' || event.key === 'kogay_catalog_updated_at') {
+          handleExternalUpdate();
+        }
+      });
+
+      // Background poll catalogMeta every 8 seconds for live updates from other devices
+      setInterval(async () => {
+        if (hasUnsavedChanges || document.hidden || !isLoggedIn()) return;
+        try {
+          const res = await fetch(`https://kogay-raste-default-rtdb.firebaseio.com/catalogMeta.json?v=${Date.now()}`);
+          if (res.ok) {
+            const meta = await res.json();
+            const remoteTime = Number(meta?.updatedAt || 0);
+            if (remoteTime > (lastCatalogMetaTime || 0)) {
+              lastCatalogMetaTime = remoteTime;
+              handleExternalUpdate();
+            }
+          }
+        } catch (e) {}
+      }, 8000);
+    }
+
     async function loadProductsFromGitHub() {
       if (!ghConfig) {
         ghConfig = getHardcodedGhConfig();
@@ -2729,6 +2801,7 @@
         document.getElementById('publishBar')?.classList.remove('show');
         updateChangesBadge();
         updateGhStatus();
+        notifyCatalogChange('publish');
         toast(`${entries.length} فایلی کاڵا بە سەرکەوتوویی بڵاوکرانەوە ✓`, 'success');
       } catch (error) {
         hideLoad();
@@ -2875,6 +2948,7 @@
         renderTable();
         renderDash();
         closeEdit();
+        notifyCatalogChange('edit');
         toast('دەستکاری کاڵاکە بە سەرکەوتوویی پاشەکەوت کرا ✓', 'success');
       } catch (error) {
         if (uploadedPath) {
@@ -2907,6 +2981,7 @@
       markUnsaved();
       renderTable();
       renderDash();
+      notifyCatalogChange('toggle');
       toast(currentProducts[index].hidden ? 'کاڵاکە شاردراوەتەوە' : 'کاڵاکە نیشاندراوە', 'info');
     }
 
@@ -2922,6 +2997,7 @@
         markUnsaved();
         renderTable();
         renderDash();
+        notifyCatalogChange('delete');
         toast('کاڵاکە سڕایەوە', 'success');
       });
     }
@@ -3001,6 +3077,7 @@
         clearAdd();
         showPage('products', null);
         setBottomNav('products');
+        notifyCatalogChange('add');
         toast('کاڵاکە بە سەرکەوتوویی زیادکرا ✓', 'success');
       } catch (error) {
         if (uploadedPath) {
@@ -3311,6 +3388,7 @@
       });
       syncSetupPrefill();
       updateGhStatus();
+      setupAdminLiveSync();
       void refreshGitHubTokenHealth(false);
       if (isLoggedIn()) showApp();
       else showLoginPage();

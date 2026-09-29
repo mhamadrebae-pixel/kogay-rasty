@@ -4,7 +4,7 @@
     "name": "ویتان",
     "description": "24 عەدەد",
     "price": 5250,
-    "image": "gaz/IMG_0215.jpeg",
+    "image": "gaz/IMG_0215.webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/IMG_0215.webp"
@@ -14,7 +14,7 @@
     "name": "تایکۆی شەشی",
     "description": "24 عەدەد",
     "price": 4500,
-    "image": "gaz/IMG_0216.jpeg",
+    "image": "gaz/IMG_0216.webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/IMG_0216.webp"
@@ -24,7 +24,7 @@
     "name": "دایجستۆ",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "gaz/IMG_0217.jpeg",
+    "image": "gaz/IMG_0217.webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/IMG_0217.webp"
@@ -34,7 +34,7 @@
     "name": "پاپڵی گەورە",
     "description": "40 عەدەد",
     "price": 9000,
-    "image": "gaz/IMG_0218.jpeg",
+    "image": "gaz/IMG_0218.webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/IMG_0218.webp"
@@ -44,7 +44,7 @@
     "name": "کەزی لامیا",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (1).jpeg",
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (1).webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (1).webp"
@@ -54,7 +54,7 @@
     "name": "پاپڵ",
     "description": "24 عەدەد",
     "price": 5250,
-    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (3).jpeg",
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (3).webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (3).webp"
@@ -64,7 +64,7 @@
     "name": "پاڵشتی",
     "description": "80 عەدەد",
     "price": 7500,
-    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (4).jpeg",
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (4).webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (4).webp"
@@ -74,7 +74,7 @@
     "name": "ناستەلەی نانی",
     "description": "24 عەدەد",
     "price": 2500,
-    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (5).jpeg",
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (5).webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (5).webp"
@@ -84,7 +84,7 @@
     "name": "ستار مۆز",
     "description": "40 عەدەد",
     "price": 8000,
-    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (6).jpeg",
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (6).webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (6).webp"
@@ -94,7 +94,7 @@
     "name": "ستار شلیک",
     "description": "40 عەدەد",
     "price": 8000,
-    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (7).jpeg",
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (7).webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (7).webp"
@@ -104,7 +104,7 @@
     "name": "ستار پرتەقاڵ",
     "description": "40 عەدەد",
     "price": 8000,
-    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (8).jpeg",
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (8).webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (8).webp"
@@ -114,7 +114,7 @@
     "name": "بسکیتی ترد",
     "description": "40 عەدەد",
     "price": 7500,
-    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (9).jpeg",
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (9).webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (9).webp"
@@ -124,7 +124,7 @@
     "name": "چیلکەی دوانی",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM.jpeg",
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM.webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM.webp"
@@ -134,7 +134,7 @@
     "name": "وایفەر ئەزرا شلیک",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (1).jpeg",
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (1).webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (1).webp"
@@ -144,7 +144,7 @@
     "name": "وایفەر ئەزرا مۆز",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (2).jpeg",
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (2).webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (2).webp"
@@ -154,7 +154,7 @@
     "name": "وایفەر ئەزرا پرتەقاڵ",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM.jpeg",
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM.webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM.webp"
@@ -164,7 +164,7 @@
     "name": "شیرین عەسەل مۆز",
     "description": "40 عەدەد",
     "price": 8000,
-    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (3).jpeg",
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (3).webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (3).webp"
@@ -174,7 +174,7 @@
     "name": "بسکت پیتی پور وار",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (4).jpeg",
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (4).webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (4).webp"
@@ -184,7 +184,7 @@
     "name": "تایستێلی قاوە",
     "description": "48 عەدەد",
     "price": 5000,
-    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (5).jpeg",
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (5).webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (5).webp"
@@ -194,7 +194,7 @@
     "name": "چلکەی دوانی",
     "description": "60 عەدەد",
     "price": 6500,
-    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (6).jpeg",
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (6).webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (6).webp"
@@ -204,7 +204,7 @@
     "name": "ویکی دوانی",
     "description": "60 عەدەد",
     "price": 6500,
-    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (7).jpeg",
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (7).webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (7).webp"
@@ -214,7 +214,7 @@
     "name": "ویکی گەورە",
     "description": "60 عەدەد",
     "price": 11500,
-    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (8).jpeg",
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (8).webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (8).webp"
@@ -224,7 +224,7 @@
     "name": "شەمائیڵ",
     "description": "12 عەدەد",
     "price": 2500,
-    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (9).jpeg",
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (9).webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (9).webp"
@@ -234,7 +234,7 @@
     "name": "بسکیتی دەموو چاو",
     "description": "24 عەدەد",
     "price": 5250,
-    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (10).jpeg",
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (10).webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (10).webp"
@@ -244,7 +244,7 @@
     "name": "بسکیتی کالیتی",
     "description": "24 عەدەد",
     "price": 4750,
-    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (11).jpeg",
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (11).webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (11).webp"
@@ -254,7 +254,7 @@
     "name": "بورادا",
     "description": "32 عەدەد",
     "price": 6250,
-    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (12).jpeg",
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (12).webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (12).webp"
@@ -264,7 +264,7 @@
     "name": "شەوائیل",
     "description": "60 عەدەد",
     "price": 6500,
-    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (15).jpeg",
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (15).webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (15).webp"
@@ -274,7 +274,7 @@
     "name": "هایبای",
     "description": "40 عەدەد",
     "price": 8000,
-    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (16).jpeg",
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (16).webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (16).webp"
@@ -284,7 +284,7 @@
     "name": "هەپی عادی",
     "description": "24 عەدەد",
     "price": 4500,
-    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (17).jpeg",
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (17).webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (17).webp"
@@ -294,7 +294,7 @@
     "name": "ستاکی شەفاف 500",
     "description": "40 عەدەد",
     "price": 10000,
-    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (18).jpeg",
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (18).webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (18).webp"
@@ -304,7 +304,7 @@
     "name": "مەڕەکان",
     "description": "24 عەدەد",
     "price": 4750,
-    "image": "gaz/WhatsApp Image 2026-02-20 at 10.03.27 PM.jpeg",
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.03.27 PM.webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.03.27 PM.webp"
@@ -314,7 +314,7 @@
     "name": "ئەنگڵس",
     "description": "24 عەدەد",
     "price": 3500,
-    "image": "gaz/IMG_6349.jpeg",
+    "image": "gaz/IMG_6349.webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/IMG_6349.webp"
@@ -324,7 +324,7 @@
     "name": "جین",
     "description": "24 عەدەد",
     "price": 5250,
-    "image": "gaz/IMG_6355.jpeg",
+    "image": "gaz/IMG_6355.webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/IMG_6355.webp"
@@ -334,7 +334,7 @@
     "name": "ئەندۆمی",
     "description": "40 عەدەد",
     "price": 9250,
-    "image": "gaz/IMG_6356.jpeg",
+    "image": "gaz/IMG_6356.webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/IMG_6356.webp"
@@ -344,7 +344,7 @@
     "name": "مستەر بایت ڕەش",
     "description": "24 عەدەد",
     "price": 5250,
-    "image": "gaz/IMG_6364.jpeg",
+    "image": "gaz/IMG_6364.webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/IMG_6364.webp"
@@ -354,7 +354,7 @@
     "name": "مستەربایت شیر",
     "description": "24 عەدەد",
     "price": 5250,
-    "image": "gaz/IMG_6366.jpeg",
+    "image": "gaz/IMG_6366.webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/IMG_6366.webp"
@@ -364,7 +364,7 @@
     "name": "بسکیتی تونس",
     "description": "40 عەدەد",
     "price": 8000,
-    "image": "gaz/IMG_6385.jpeg",
+    "image": "gaz/IMG_6385.webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/IMG_6385.webp"
@@ -374,7 +374,7 @@
     "name": "مادر",
     "description": "32 عەدەد",
     "price": 6250,
-    "image": "gaz/IMG_6386.jpeg",
+    "image": "gaz/IMG_6386.webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/IMG_6386.webp"
@@ -384,7 +384,7 @@
     "name": "کولیچەی فەل",
     "description": "24 عەدەد",
     "price": 5250,
-    "image": "gaz/IMG_6387.jpeg",
+    "image": "gaz/IMG_6387.webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/IMG_6387.webp"
@@ -394,7 +394,7 @@
     "name": "بورمەی وایفەر",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "gaz/IMG_6390.jpeg",
+    "image": "gaz/IMG_6390.webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/IMG_6390.webp"
@@ -404,7 +404,7 @@
     "name": "الیوەم خورما",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "gaz/IMG_6394.jpeg",
+    "image": "gaz/IMG_6394.webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/IMG_6394.webp"
@@ -414,7 +414,7 @@
     "name": "وایف ئەپ شین",
     "description": "24 عەدەد",
     "price": 5250,
-    "image": "gaz/IMG_6400.jpeg",
+    "image": "gaz/IMG_6400.webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/IMG_6400.webp"
@@ -424,7 +424,7 @@
     "name": "وقیف ئەپ قاوە",
     "description": "24 عەدەد",
     "price": 5250,
-    "image": "gaz/IMG_6401.jpeg",
+    "image": "gaz/IMG_6401.webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/IMG_6401.webp"
@@ -434,7 +434,7 @@
     "name": "وایف ئەپ بندوق",
     "description": "24 عەدەد",
     "price": 5250,
-    "image": "gaz/IMG_6402.jpeg",
+    "image": "gaz/IMG_6402.webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/IMG_6402.webp"
@@ -444,7 +444,7 @@
     "name": "وایف ئەپ شیر",
     "description": "24 عەدەد",
     "price": 5250,
-    "image": "gaz/IMG_6403.jpeg",
+    "image": "gaz/IMG_6403.webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/IMG_6403.webp"
@@ -454,7 +454,7 @@
     "name": "وایف ئەپ شلک",
     "description": "24 عەدەد",
     "price": 5250,
-    "image": "gaz/IMG_6404.jpeg",
+    "image": "gaz/IMG_6404.webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/IMG_6404.webp"
@@ -464,7 +464,7 @@
     "name": "پاپل قاوە",
     "description": "24 عەدەد",
     "price": 5250,
-    "image": "gaz/IMG_6423.jpeg",
+    "image": "gaz/IMG_6423.webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/IMG_6423.webp"
@@ -474,7 +474,7 @@
     "name": "بسکیتی ئۆریۆ عادی",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "gaz/IMG_6426.jpeg",
+    "image": "gaz/IMG_6426.webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/IMG_6426.webp"
@@ -484,7 +484,7 @@
     "name": "براوستاری زەرد",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "gaz/IMG_6427.jpeg",
+    "image": "gaz/IMG_6427.webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/IMG_6427.webp"
@@ -494,7 +494,7 @@
     "name": "فول تۆپ شین",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "gaz/IMG_6431.jpeg",
+    "image": "gaz/IMG_6431.webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/IMG_6431.webp"
@@ -504,7 +504,7 @@
     "name": "فول تۆپ شین قاوە",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "gaz/IMG_6432.jpeg",
+    "image": "gaz/IMG_6432.webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/IMG_6432.webp"
@@ -514,7 +514,7 @@
     "name": "فول تۆپ پەمەی",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "gaz/IMG_6433.jpeg",
+    "image": "gaz/IMG_6433.webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/IMG_6433.webp"
@@ -524,7 +524,7 @@
     "name": "فول تۆپ سور",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "gaz/IMG_6434.jpeg",
+    "image": "gaz/IMG_6434.webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/IMG_6434.webp"
@@ -534,7 +534,7 @@
     "name": "وایفەر توران قاوە",
     "description": "24 عەدەد",
     "price": 5250,
-    "image": "gaz/IMG_6435.jpeg",
+    "image": "gaz/IMG_6435.webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/IMG_6435.webp"
@@ -544,7 +544,7 @@
     "name": "وایفەر توران بندوق",
     "description": "24 عەدەد",
     "price": 5250,
-    "image": "gaz/IMG_6436.jpeg",
+    "image": "gaz/IMG_6436.webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/IMG_6436.webp"
@@ -554,7 +554,7 @@
     "name": "وایفەر توران لیمۆ",
     "description": "24 عەدەد",
     "price": 5250,
-    "image": "gaz/IMG_6438.jpeg",
+    "image": "gaz/IMG_6438.webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/IMG_6438.webp"
@@ -564,7 +564,7 @@
     "name": "وایفەر  توران شلک",
     "description": "24 عەدەد",
     "price": 5250,
-    "image": "gaz/IMG_6439.jpeg",
+    "image": "gaz/IMG_6439.webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/IMG_6439.webp"
@@ -574,7 +574,7 @@
     "name": "وایفەر توران شیر",
     "description": "24 عەدەد",
     "price": 5250,
-    "image": "gaz/IMG_6440.jpeg",
+    "image": "gaz/IMG_6440.webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/IMG_6440.webp"
@@ -584,7 +584,7 @@
     "name": "وایفەر ئەزرا لیمۆ",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "gaz/IMG_6441.jpeg",
+    "image": "gaz/IMG_6441.webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/IMG_6441.webp"
@@ -594,7 +594,7 @@
     "name": "وایفەر ئەزرا شلک",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "gaz/IMG_6442.jpeg",
+    "image": "gaz/IMG_6442.webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/IMG_6442.webp"
@@ -604,7 +604,7 @@
     "name": "وایفەر ئەزرا گویزهیند",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "gaz/IMG_6443.jpeg",
+    "image": "gaz/IMG_6443.webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/IMG_6443.webp"
@@ -614,7 +614,7 @@
     "name": "وایفەر ئەزرا بندوق",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "gaz/IMG_6444.jpeg",
+    "image": "gaz/IMG_6444.webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/IMG_6444.webp"
@@ -624,7 +624,7 @@
     "name": "وایفەر ئەزرا قاوە",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "gaz/IMG_6445.jpeg",
+    "image": "gaz/IMG_6445.webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/IMG_6445.webp"
@@ -634,7 +634,7 @@
     "name": "وایفەر ئەزرا مۆتە",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "gaz/IMG_6446.jpeg",
+    "image": "gaz/IMG_6446.webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/IMG_6446.webp"
@@ -644,7 +644,7 @@
     "name": "وایفەر ئەزرا گیلاس",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "gaz/IMG_6447.jpeg",
+    "image": "gaz/IMG_6447.webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/IMG_6447.webp"
@@ -654,7 +654,7 @@
     "name": "مستەر بایت قاوە",
     "description": "24 عەدەد",
     "price": 5250,
-    "image": "gaz/IMG_6471.jpeg",
+    "image": "gaz/IMG_6471.webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/IMG_6471.webp"
@@ -664,7 +664,7 @@
     "name": "مستەر بایت بندوق زەرد",
     "description": "24 عەدەد",
     "price": 5250,
-    "image": "gaz/IMG_6472.jpeg",
+    "image": "gaz/IMG_6472.webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/IMG_6472.webp"
@@ -674,7 +674,7 @@
     "name": "مستەر بایت گویزهیند",
     "description": "24 عەدەد",
     "price": 5250,
-    "image": "gaz/IMG_6473.jpeg",
+    "image": "gaz/IMG_6473.webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/IMG_6473.webp"
@@ -684,7 +684,7 @@
     "name": "مستەر بایت بندوق",
     "description": "24 عەدەد",
     "price": 5250,
-    "image": "gaz/IMG_6474.jpeg",
+    "image": "gaz/IMG_6474.webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/IMG_6474.webp"
@@ -694,7 +694,7 @@
     "name": "مستەر بایت فستەق",
     "description": "24 عەدەد",
     "price": 5250,
-    "image": "gaz/IMG_6475.jpeg",
+    "image": "gaz/IMG_6475.webp",
     "category": "gaz",
     "hidden": false,
     "image_webp": "gaz/IMG_6475.webp"

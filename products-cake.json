@@ -4,7 +4,7 @@
     "name": "نەزەری دووقول",
     "description": "24 عەدەد",
     "price": 5250,
-    "image": "kek/IMG_0214.jpeg",
+    "image": "kek/IMG_0214.webp",
     "category": "cake",
     "hidden": false,
     "image_webp": "kek/IMG_0214.webp"
@@ -14,7 +14,7 @@
     "name": "کولیچەی دوانی",
     "description": "60 عەدەد",
     "price": 5750,
-    "image": "kek/IMG_0211.jpeg",
+    "image": "kek/IMG_0211.webp",
     "category": "cake",
     "hidden": false,
     "image_webp": "kek/IMG_0211.webp"
@@ -24,7 +24,7 @@
     "name": "کێکی ئادرین",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "kek/IMG_0212.jpeg",
+    "image": "kek/IMG_0212.webp",
     "category": "cake",
     "hidden": false,
     "image_webp": "kek/IMG_0212.webp"
@@ -34,7 +34,7 @@
     "name": "لۆپۆچۆکۆ",
     "description": "24 عەدەد",
     "price": 5250,
-    "image": "kek/IMG_0213.jpeg",
+    "image": "kek/IMG_0213.webp",
     "category": "cake",
     "hidden": false,
     "image_webp": "kek/IMG_0213.webp"
@@ -44,7 +44,7 @@
     "name": "کێکی دوانی قاوە",
     "description": "24 عەدەد",
     "price": 2500,
-    "image": "kek/photo_1_2026-02-20_22-41-44.jpg",
+    "image": "kek/photo_1_2026-02-20_22-41-44.webp",
     "category": "cake",
     "hidden": false,
     "image_webp": "kek/photo_1_2026-02-20_22-41-44.webp"
@@ -54,7 +54,7 @@
     "name": "موفید شلیک",
     "description": "24 عەدەد",
     "price": 4750,
-    "image": "kek/photo_2_2026-02-20_22-41-44.jpg",
+    "image": "kek/photo_2_2026-02-20_22-41-44.webp",
     "category": "cake",
     "hidden": false,
     "image_webp": "kek/photo_2_2026-02-20_22-41-44.webp"
@@ -64,7 +64,7 @@
     "name": "موفید پرتەقاڵ",
     "description": "24 عەدەد",
     "price": 4750,
-    "image": "kek/photo_3_2026-02-20_22-41-44.jpg",
+    "image": "kek/photo_3_2026-02-20_22-41-44.webp",
     "category": "cake",
     "hidden": false,
     "image_webp": "kek/photo_3_2026-02-20_22-41-44.webp"
@@ -74,7 +74,7 @@
     "name": "موفید پەنیر",
     "description": "24 عەدەد",
     "price": 4750,
-    "image": "kek/photo_7_2026-02-20_22-41-44.jpg",
+    "image": "kek/photo_7_2026-02-20_22-41-44.webp",
     "category": "cake",
     "hidden": false,
     "image_webp": "kek/photo_7_2026-02-20_22-41-44.webp"
@@ -84,7 +84,7 @@
     "name": "موفید پڵەس کەرەمێڵ",
     "description": "24 عەدەد",
     "price": 4750,
-    "image": "kek/photo_5_2026-02-20_22-41-44.jpg",
+    "image": "kek/photo_5_2026-02-20_22-41-44.webp",
     "category": "cake",
     "hidden": false,
     "image_webp": "kek/photo_5_2026-02-20_22-41-44.webp"
@@ -94,7 +94,7 @@
     "name": "کێکی جەلی",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "kek/photo_4_2026-02-20_22-41-44.jpg",
+    "image": "kek/photo_4_2026-02-20_22-41-44.webp",
     "category": "cake",
     "hidden": false,
     "image_webp": "kek/photo_4_2026-02-20_22-41-44.webp"
@@ -104,7 +104,7 @@
     "name": "دوو قول",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "kek/photo_6_2026-02-20_22-41-44.jpg",
+    "image": "kek/photo_6_2026-02-20_22-41-44.webp",
     "category": "cake",
     "hidden": false,
     "image_webp": "kek/photo_6_2026-02-20_22-41-44.webp"
@@ -114,7 +114,7 @@
     "name": "فۆڕچن تەخت سور",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "kek/photo_8_2026-02-20_22-41-44.jpg",
+    "image": "kek/photo_8_2026-02-20_22-41-44.webp",
     "category": "cake",
     "hidden": false,
     "image_webp": "kek/photo_8_2026-02-20_22-41-44.webp"
@@ -124,7 +124,7 @@
     "name": "فۆڕچت دوبەی",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "kek/photo_9_2026-02-20_22-41-44.jpg",
+    "image": "kek/photo_9_2026-02-20_22-41-44.webp",
     "category": "cake",
     "hidden": false,
     "image_webp": "kek/photo_9_2026-02-20_22-41-44.webp"
@@ -134,7 +134,7 @@
     "name": "کێکی روزینا کرێم",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "kek/photo_10_2026-02-20_22-41-44.jpg",
+    "image": "kek/photo_10_2026-02-20_22-41-44.webp",
     "category": "cake",
     "hidden": false,
     "image_webp": "kek/photo_10_2026-02-20_22-41-44.webp"
@@ -144,7 +144,7 @@
     "name": "دیل کێک سور",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "kek/photo_11_2026-02-20_22-41-44.jpg",
+    "image": "kek/photo_11_2026-02-20_22-41-44.webp",
     "category": "cake",
     "hidden": false,
     "image_webp": "kek/photo_11_2026-02-20_22-41-44.webp"
@@ -154,7 +154,7 @@
     "name": "دیل کێک ڕەش",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "kek/photo_12_2026-02-20_22-41-44.jpg",
+    "image": "kek/photo_12_2026-02-20_22-41-44.webp",
     "category": "cake",
     "hidden": false,
     "image_webp": "kek/photo_12_2026-02-20_22-41-44.webp"
@@ -164,7 +164,7 @@
     "name": "دیل کێک گۆڵد",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "kek/photo_14_2026-02-20_22-41-44.jpg",
+    "image": "kek/photo_14_2026-02-20_22-41-44.webp",
     "category": "cake",
     "hidden": false,
     "image_webp": "kek/photo_14_2026-02-20_22-41-44.webp"
@@ -174,7 +174,7 @@
     "name": "رۆزینا گوێزی",
     "description": "24 عەدەد",
     "price": 4750,
-    "image": "kek/photo_13_2026-02-20_22-41-44.jpg",
+    "image": "kek/photo_13_2026-02-20_22-41-44.webp",
     "category": "cake",
     "hidden": false,
     "image_webp": "kek/photo_13_2026-02-20_22-41-44.webp"
@@ -184,7 +184,7 @@
     "name": "فۆڕچن فستق خڕ",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "kek/photo_15_2026-02-20_22-41-44.jpg",
+    "image": "kek/photo_15_2026-02-20_22-41-44.webp",
     "category": "cake",
     "hidden": false,
     "image_webp": "kek/photo_15_2026-02-20_22-41-44.webp"
@@ -194,7 +194,7 @@
     "name": "فۆڕچن بسکیت",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "kek/photo_16_2026-02-20_22-41-44.jpg",
+    "image": "kek/photo_16_2026-02-20_22-41-44.webp",
     "category": "cake",
     "hidden": false,
     "image_webp": "kek/photo_16_2026-02-20_22-41-44.webp"
@@ -204,7 +204,7 @@
     "name": "فۆڕچن شلک",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "kek/photo_18_2026-02-20_22-41-44.jpg",
+    "image": "kek/photo_18_2026-02-20_22-41-44.webp",
     "category": "cake",
     "hidden": false,
     "image_webp": "kek/photo_18_2026-02-20_22-41-44.webp"
@@ -214,7 +214,7 @@
     "name": "فۆڕچن پەنیر",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "kek/photo_19_2026-02-20_22-41-44.jpg",
+    "image": "kek/photo_19_2026-02-20_22-41-44.webp",
     "category": "cake",
     "hidden": false,
     "image_webp": "kek/photo_19_2026-02-20_22-41-44.webp"
@@ -224,7 +224,7 @@
     "name": "کێکی مۆتۆ ٥٠٠",
     "description": "24 عەدەد",
     "price": 10000,
-    "image": "kek/photo_17_2026-02-20_22-41-44.jpg",
+    "image": "kek/photo_17_2026-02-20_22-41-44.webp",
     "category": "cake",
     "hidden": false,
     "image_webp": "kek/photo_17_2026-02-20_22-41-44.webp"
@@ -234,7 +234,7 @@
     "name": "دۆناتی ئەڵقە",
     "description": "24 عەدەد",
     "price": 4250,
-    "image": "kek/photo_20_2026-02-20_22-41-44.jpg",
+    "image": "kek/photo_20_2026-02-20_22-41-44.webp",
     "category": "cake",
     "hidden": false,
     "image_webp": "kek/photo_20_2026-02-20_22-41-44.webp"
@@ -244,7 +244,7 @@
     "name": "نەزەڕی دڵ پەمەی",
     "description": "24 عەدەد",
     "price": 5250,
-    "image": "kek/photo_21_2026-02-20_22-41-44.jpg",
+    "image": "kek/photo_21_2026-02-20_22-41-44.webp",
     "category": "cake",
     "hidden": false,
     "image_webp": "kek/photo_21_2026-02-20_22-41-44.webp"
@@ -254,7 +254,7 @@
     "name": "نەزەڕی دڵ ڕەش",
     "description": "24 عەدەد",
     "price": 5250,
-    "image": "kek/photo_22_2026-02-20_22-41-44.jpg",
+    "image": "kek/photo_22_2026-02-20_22-41-44.webp",
     "category": "cake",
     "hidden": false,
     "image_webp": "kek/photo_22_2026-02-20_22-41-44.webp"
@@ -264,7 +264,7 @@
     "name": "پاوەن کێک",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "kek/photo_24_2026-02-20_22-41-44.jpg",
+    "image": "kek/photo_24_2026-02-20_22-41-44.webp",
     "category": "cake",
     "hidden": false,
     "image_webp": "kek/photo_24_2026-02-20_22-41-44.webp"
@@ -274,7 +274,7 @@
     "name": "نەزەڕی سەتڵ",
     "description": "24 عەدەد",
     "price": 5250,
-    "image": "kek/photo_25_2026-02-20_22-41-44.jpg",
+    "image": "kek/photo_25_2026-02-20_22-41-44.webp",
     "category": "cake",
     "hidden": false,
     "image_webp": "kek/photo_25_2026-02-20_22-41-44.webp"
@@ -284,7 +284,7 @@
     "name": "کێکی مهیار",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "kek/photo_27_2026-02-20_22-41-44.jpg",
+    "image": "kek/photo_27_2026-02-20_22-41-44.webp",
     "category": "cake",
     "hidden": false,
     "image_webp": "kek/photo_27_2026-02-20_22-41-44.webp"
@@ -294,7 +294,7 @@
     "name": "کێک تایگەر",
     "description": "12 عەدەد",
     "price": 2500,
-    "image": "kek/photo_28_2026-02-20_22-41-44.jpg",
+    "image": "kek/photo_28_2026-02-20_22-41-44.webp",
     "category": "cake",
     "hidden": false,
     "image_webp": "kek/photo_28_2026-02-20_22-41-44.webp"
@@ -304,7 +304,7 @@
     "name": "کێک رۆز جەلی",
     "description": "24 عەدەد",
     "price": 4750,
-    "image": "kek/photo_29_2026-02-20_22-41-44.jpg",
+    "image": "kek/photo_29_2026-02-20_22-41-44.webp",
     "category": "cake",
     "hidden": false,
     "image_webp": "kek/photo_29_2026-02-20_22-41-44.webp"
@@ -314,7 +314,7 @@
     "name": "تۆپ کێک",
     "description": "24 عەدەد",
     "price": 4750,
-    "image": "kek/photo_30_2026-02-20_22-41-44.jpg",
+    "image": "kek/photo_30_2026-02-20_22-41-44.webp",
     "category": "cake",
     "hidden": false,
     "image_webp": "kek/photo_30_2026-02-20_22-41-44.webp"
@@ -324,7 +324,7 @@
     "name": "میکس ڕوڵی پرتەقاڵ",
     "description": "12 عەدەد",
     "price": 2500,
-    "image": "kek/IMG_6343.jpeg",
+    "image": "kek/IMG_6343.webp",
     "category": "cake",
     "hidden": false,
     "image_webp": "kek/IMG_6343.webp"
@@ -334,7 +334,7 @@
     "name": "میکس ڕوڵی مۆر",
     "description": "12 عەدەد",
     "price": 2500,
-    "image": "kek/IMG_6344.jpeg",
+    "image": "kek/IMG_6344.webp",
     "category": "cake",
     "hidden": false,
     "image_webp": "kek/IMG_6344.webp"
@@ -344,7 +344,7 @@
     "name": "میکس ڕوڵ قاوە",
     "description": "12 عەدەد",
     "price": 2500,
-    "image": "kek/IMG_6345.jpeg",
+    "image": "kek/IMG_6345.webp",
     "category": "cake",
     "hidden": false,
     "image_webp": "kek/IMG_6345.webp"
@@ -354,7 +354,7 @@
     "name": "میکس ڕوڵ ئەنەناس",
     "description": "12 عەدەد",
     "price": 2500,
-    "image": "kek/IMG_6347.jpeg",
+    "image": "kek/IMG_6347.webp",
     "category": "cake",
     "hidden": false,
     "image_webp": "kek/IMG_6347.webp"
@@ -364,7 +364,7 @@
     "name": "کێک ڕۆکی",
     "description": "24 عەدەد",
     "price": 4500,
-    "image": "kek/IMG_6353.jpeg",
+    "image": "kek/IMG_6353.webp",
     "category": "cake",
     "hidden": false,
     "image_webp": "kek/IMG_6353.webp"
@@ -374,7 +374,7 @@
     "name": "کێکی دوبەی شعری",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "kek/IMG_6357.jpeg",
+    "image": "kek/IMG_6357.webp",
     "category": "cake",
     "hidden": false,
     "image_webp": "kek/IMG_6357.webp"
@@ -384,7 +384,7 @@
     "name": "نەزەری کشمیش",
     "description": "24 عەدەد",
     "price": 5250,
-    "image": "kek/IMG_6388.jpeg",
+    "image": "kek/IMG_6388.webp",
     "category": "cake",
     "hidden": false,
     "image_webp": "kek/IMG_6388.webp"
@@ -394,7 +394,7 @@
     "name": "نەزەری بریک فاست",
     "description": "24 عەدەد",
     "price": 5250,
-    "image": "kek/IMG_6389.jpeg",
+    "image": "kek/IMG_6389.webp",
     "category": "cake",
     "hidden": false,
     "image_webp": "kek/IMG_6389.webp"
@@ -404,7 +404,7 @@
     "name": "بۆبۆتۆی سور",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "kek/IMG_6391.jpeg",
+    "image": "kek/IMG_6391.webp",
     "category": "cake",
     "hidden": false,
     "image_webp": "kek/IMG_6391.webp"
@@ -414,7 +414,7 @@
     "name": "کیک دوبەی",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "kek/IMG_6392.jpeg",
+    "image": "kek/IMG_6392.webp",
     "category": "cake",
     "hidden": false,
     "image_webp": "kek/IMG_6392.webp"
@@ -424,7 +424,7 @@
     "name": "نەزەری خر شلک",
     "description": "24 عەدەد",
     "price": 5250,
-    "image": "kek/IMG_6395.jpeg",
+    "image": "kek/IMG_6395.webp",
     "category": "cake",
     "hidden": false,
     "image_webp": "kek/IMG_6395.webp"
@@ -434,7 +434,7 @@
     "name": "نەزەری خر قاوە",
     "description": "24 عەدەد",
     "price": 5250,
-    "image": "kek/IMG_6396.jpeg",
+    "image": "kek/IMG_6396.webp",
     "category": "cake",
     "hidden": false,
     "image_webp": "kek/IMG_6396.webp"
@@ -444,7 +444,7 @@
     "name": "نەزەری خر شیر",
     "description": "24 عەدەد",
     "price": 5250,
-    "image": "kek/IMG_6397.jpeg",
+    "image": "kek/IMG_6397.webp",
     "category": "cake",
     "hidden": false,
     "image_webp": "kek/IMG_6397.webp"
@@ -454,7 +454,7 @@
     "name": "پۆپ کیک لیمۆ",
     "description": "24 عەدەد",
     "price": 5250,
-    "image": "kek/IMG_6398.jpeg",
+    "image": "kek/IMG_6398.webp",
     "category": "cake",
     "hidden": false,
     "image_webp": "kek/IMG_6398.webp"
@@ -464,7 +464,7 @@
     "name": "پۆپ کیک مۆز",
     "description": "24 عەدەد",
     "price": 5250,
-    "image": "kek/IMG_6399.jpeg",
+    "image": "kek/IMG_6399.webp",
     "category": "cake",
     "hidden": false,
     "image_webp": "kek/IMG_6399.webp"

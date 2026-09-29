@@ -787,14 +787,16 @@ function getCategoryDataUrl(category) {
 }
 
 const FIREBASE_PRODUCTS_URL = 'https://kogay-raste-default-rtdb.firebaseio.com/products.json';
+const FIREBASE_META_URL = 'https://kogay-raste-default-rtdb.firebaseio.com/catalogMeta.json';
 let firebaseLoadedOnce = false;
+let lastKnownCatalogUpdatedAt = 0;
 
 // Attempt live fetch from Firebase so admin changes appear immediately for customers
-async function tryLoadFromFirebase() {
-    if (firebaseLoadedOnce || isOffline) return false;
+async function tryLoadFromFirebase(force = false) {
+    if ((firebaseLoadedOnce && !force) || isOffline) return false;
     try {
         const controller = new AbortController();
-        const timeout = setTimeout(() => controller.abort(), 2800);
+        const timeout = setTimeout(() => controller.abort(), 4000);
         const res = await fetch(`${FIREBASE_PRODUCTS_URL}?v=${Date.now()}`, {
             signal: controller.signal,
             cache: 'no-store'
@@ -808,6 +810,7 @@ async function tryLoadFromFirebase() {
                 markLoadedCategories(Object.keys(categories));
                 firebaseLoadedOnce = true;
                 lastProductLoadSource = 'firebase-realtime';
+                lastKnownCatalogUpdatedAt = Date.now();
                 return true;
             }
         }
@@ -815,6 +818,155 @@ async function tryLoadFromFirebase() {
         // Fallback to local files gracefully on timeout or offline
     }
     return false;
+}
+
+function showLiveSyncToast(message = '') {
+    const existing = document.getElementById('liveSyncToast');
+    if (existing) existing.remove();
+
+    const toast = document.createElement('div');
+    toast.id = 'liveSyncToast';
+    toast.style.cssText = `
+        position: fixed;
+        bottom: 84px;
+        left: 50%;
+        transform: translateX(-50%) translateY(20px);
+        background: rgba(16, 185, 129, 0.96);
+        color: #ffffff;
+        padding: 9px 20px;
+        border-radius: 999px;
+        font-size: 13px;
+        font-weight: 700;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+        z-index: 99999;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        opacity: 0;
+        transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        pointer-events: none;
+        backdrop-filter: blur(8px);
+    `;
+    const label = message || (currentLang === 'en' ? 'Products updated live ✓' : 'کاڵاکان بە شێوەی ڕاستەوخۆ نوێکرانەوە ✓');
+    toast.innerHTML = `<i class="fas fa-rotate" style="animation: spin 1s linear infinite;"></i> <span>${escapeHtml(label)}</span>`;
+    document.body.appendChild(toast);
+
+    requestAnimationFrame(() => {
+        toast.style.opacity = '1';
+        toast.style.transform = 'translateX(-50%) translateY(0)';
+    });
+
+    setTimeout(() => {
+        toast.style.opacity = '0';
+        toast.style.transform = 'translateX(-50%) translateY(20px)';
+        setTimeout(() => toast.remove(), 400);
+    }, 2500);
+}
+
+let isLiveCatalogUpdating = false;
+async function applyLiveCatalogUpdate(reason = 'live') {
+    if (isLiveCatalogUpdating) return false;
+    isLiveCatalogUpdating = true;
+    try {
+        try {
+            localStorage.removeItem(PRODUCT_CACHE_KEY);
+            localStorage.removeItem(PRODUCT_CACHE_META_KEY);
+        } catch (e) {}
+
+        if ('caches' in window) {
+            caches.keys().then(keys => {
+                keys.filter(k => k.includes('data')).forEach(k => caches.delete(k));
+            }).catch(() => {});
+        }
+
+        const success = await tryLoadFromFirebase(true);
+        if (success) {
+            renderCurrentView({ resetPage: false });
+            updateCategoryCounts();
+            updateHeroStats();
+            showLiveSyncToast();
+            console.log(`[LiveSync] Storefront products updated (${reason})`);
+            return true;
+        }
+    } catch (err) {
+        console.warn('[LiveSync] Update error:', err);
+    } finally {
+        isLiveCatalogUpdating = false;
+    }
+    return false;
+}
+
+let liveEventSource = null;
+function setupStorefrontLiveSync() {
+    // 1. Cross-tab BroadcastChannel
+    try {
+        if ('BroadcastChannel' in window) {
+            const bc = new BroadcastChannel('kogay_rasty_sync');
+            bc.onmessage = (event) => {
+                if (event.data?.type === 'CATALOG_UPDATED') {
+                    applyLiveCatalogUpdate(event.data?.reason || 'broadcast');
+                }
+            };
+        }
+    } catch (e) {}
+
+    // 2. Cross-tab localStorage storage event
+    window.addEventListener('storage', (event) => {
+        if (event.key === 'kogay_sync_ping' || event.key === 'kogay_catalog_updated_at') {
+            applyLiveCatalogUpdate('storage');
+        }
+    });
+
+    // 3. Real-time Firebase EventSource (SSE)
+    try {
+        if ('EventSource' in window && !isOffline) {
+            liveEventSource = new EventSource(FIREBASE_META_URL);
+            liveEventSource.addEventListener('put', (event) => {
+                try {
+                    const data = JSON.parse(event.data);
+                    const remoteTime = Number(data?.data?.updatedAt || data?.updatedAt || 0);
+                    if (remoteTime && remoteTime > (lastKnownCatalogUpdatedAt || 0)) {
+                        lastKnownCatalogUpdatedAt = remoteTime;
+                        applyLiveCatalogUpdate('sse');
+                    }
+                } catch (e) {}
+            });
+            liveEventSource.onerror = () => {
+                // Polling handles fallback
+            };
+        }
+    } catch (e) {}
+
+    // 4. Background polling every 8 seconds
+    setInterval(async () => {
+        if (document.hidden || isOffline) return;
+        try {
+            const res = await fetch(`${FIREBASE_META_URL}?v=${Date.now()}`);
+            if (res.ok) {
+                const meta = await res.json();
+                const remoteTime = Number(meta?.updatedAt || 0);
+                if (remoteTime > (lastKnownCatalogUpdatedAt || 0)) {
+                    lastKnownCatalogUpdatedAt = remoteTime;
+                    applyLiveCatalogUpdate('polling');
+                }
+            }
+        } catch (e) {}
+    }, 8000);
+
+    // 5. Visibility change (when customer returns to tab)
+    document.addEventListener('visibilitychange', () => {
+        if (!document.hidden && !isOffline) {
+            fetch(`${FIREBASE_META_URL}?v=${Date.now()}`)
+                .then(r => r.json())
+                .then(meta => {
+                    const remoteTime = Number(meta?.updatedAt || 0);
+                    if (remoteTime > (lastKnownCatalogUpdatedAt || 0)) {
+                        lastKnownCatalogUpdatedAt = remoteTime;
+                        applyLiveCatalogUpdate('visibility');
+                    }
+                }).catch(() => {});
+        }
+    });
 }
 
 // Use cached products as an offline fallback when a category request fails.
@@ -1404,6 +1556,7 @@ document.addEventListener('DOMContentLoaded', async function () {
         initLazyObserver();
         ensureOfflineRetryButton();
         prepareOrderInputs();
+        setupStorefrontLiveSync();
         const successModal = document.getElementById('successModal');
         if (successModal) {
             successModal.addEventListener('click', event => {

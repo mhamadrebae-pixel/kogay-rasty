@@ -4,7 +4,7 @@
     "name": "تەمەرندی پاکان",
     "description": "24 عەدەد",
     "price": 1000,
-    "image": "mnalan/photo_1_2026-02-21_00-54-52.jpg",
+    "image": "mnalan/photo_1_2026-02-21_00-54-52.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/photo_1_2026-02-21_00-54-52.webp"
@@ -14,7 +14,7 @@
     "name": "پەشمەک سپی",
     "description": "24 عەدەد",
     "price": 4750,
-    "image": "mnalan/photo_2_2026-02-21_00-54-52.jpg",
+    "image": "mnalan/photo_2_2026-02-21_00-54-52.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/photo_2_2026-02-21_00-54-52.webp"
@@ -24,7 +24,7 @@
     "name": "قاوەی زۆۆ",
     "description": "24 عەدەد",
     "price": 3500,
-    "image": "mnalan/photo_3_2026-02-21_00-54-52.jpg",
+    "image": "mnalan/photo_3_2026-02-21_00-54-52.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/photo_3_2026-02-21_00-54-52.webp"
@@ -34,7 +34,7 @@
     "name": "کۆلا بۆن",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "mnalan/photo_4_2026-02-21_00-54-52.jpg",
+    "image": "mnalan/photo_4_2026-02-21_00-54-52.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/photo_4_2026-02-21_00-54-52.webp"
@@ -44,7 +44,7 @@
     "name": "تەمەرندی لول",
     "description": "24 عەدەد",
     "price": 4750,
-    "image": "mnalan/photo_5_2026-02-21_00-54-52.jpg",
+    "image": "mnalan/photo_5_2026-02-21_00-54-52.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/photo_5_2026-02-21_00-54-52.webp"
@@ -54,7 +54,7 @@
     "name": "نەستەلەی ئۆتۆن قاوە",
     "description": "24 عەدەد",
     "price": 5250,
-    "image": "mnalan/photo_7_2026-02-21_00-54-52.jpg",
+    "image": "mnalan/photo_7_2026-02-21_00-54-52.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/photo_7_2026-02-21_00-54-52.webp"
@@ -64,7 +64,7 @@
     "name": "نەستەلەی ئۆتۆن سپی",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "mnalan/photo_17_2026-02-21_00-54-52.jpg",
+    "image": "mnalan/photo_17_2026-02-21_00-54-52.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/photo_17_2026-02-21_00-54-52.webp"
@@ -74,7 +74,7 @@
     "name": "تەمەرندی تەخت",
     "description": "48 عەدەد",
     "price": 2500,
-    "image": "mnalan/photo_8_2026-02-21_00-54-52.jpg",
+    "image": "mnalan/photo_8_2026-02-21_00-54-52.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/photo_8_2026-02-21_00-54-52.webp"
@@ -84,7 +84,7 @@
     "name": "مەساسەی سوور عادی",
     "description": "45 عەدەد",
     "price": 3000,
-    "image": "mnalan/photo_9_2026-02-21_00-54-52.jpg",
+    "image": "mnalan/photo_9_2026-02-21_00-54-52.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/photo_9_2026-02-21_00-54-52.webp"
@@ -94,7 +94,7 @@
     "name": "مەساسەی دەبە کۆلا",
     "description": "60 عەدەد",
     "price": 5000,
-    "image": "mnalan/photo_11_2026-02-21_00-54-52.jpg",
+    "image": "mnalan/photo_11_2026-02-21_00-54-52.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/photo_11_2026-02-21_00-54-52.webp"
@@ -104,7 +104,7 @@
     "name": "مەساسەی دەبە گێلاس",
     "description": "60 عەدەد",
     "price": 5000,
-    "image": "mnalan/photo_12_2026-02-21_00-54-52.jpg",
+    "image": "mnalan/photo_12_2026-02-21_00-54-52.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/photo_12_2026-02-21_00-54-52.webp"
@@ -114,7 +114,7 @@
     "name": "مەساسەی دەبە ڕەش",
     "description": "60 عەدەد",
     "price": 5000,
-    "image": "mnalan/photo_13_2026-02-21_00-54-52.jpg",
+    "image": "mnalan/photo_13_2026-02-21_00-54-52.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/photo_13_2026-02-21_00-54-52.webp"
@@ -124,7 +124,7 @@
     "name": "مەساسەی ورد",
     "description": "100 عەدەد",
     "price": 2000,
-    "image": "mnalan/photo_14_2026-02-21_00-54-52.jpg",
+    "image": "mnalan/photo_14_2026-02-21_00-54-52.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/photo_14_2026-02-21_00-54-52.webp"
@@ -134,7 +134,7 @@
     "name": "مەساسەی دەبە شاتوو",
     "description": "60 عەدەد",
     "price": 5000,
-    "image": "mnalan/photo_15_2026-02-21_00-54-52.jpg",
+    "image": "mnalan/photo_15_2026-02-21_00-54-52.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/photo_15_2026-02-21_00-54-52.webp"
@@ -144,7 +144,7 @@
     "name": "نوقڵی ورد ئایدین",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "mnalan/photo_16_2026-02-21_00-54-52.jpg",
+    "image": "mnalan/photo_16_2026-02-21_00-54-52.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/photo_16_2026-02-21_00-54-52.webp"
@@ -154,7 +154,7 @@
     "name": "تەمەرندی ڕوڵ",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "mnalan/photo_19_2026-02-21_00-54-52.jpg",
+    "image": "mnalan/photo_19_2026-02-21_00-54-52.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/photo_19_2026-02-21_00-54-52.webp"
@@ -164,7 +164,7 @@
     "name": "نوقڵی ڕانا",
     "description": "12 عەدەد",
     "price": 2250,
-    "image": "mnalan/photo_20_2026-02-21_00-54-52.jpg",
+    "image": "mnalan/photo_20_2026-02-21_00-54-52.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/photo_20_2026-02-21_00-54-52.webp"
@@ -174,7 +174,7 @@
     "name": "چوکلێتی ئایدن",
     "description": "100 عەدەد",
     "price": 2500,
-    "image": "mnalan/photo_21_2026-02-21_00-54-52.jpg",
+    "image": "mnalan/photo_21_2026-02-21_00-54-52.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/photo_21_2026-02-21_00-54-52.webp"
@@ -184,7 +184,7 @@
     "name": "بنێشتی یوبی 100",
     "description": "100 عەدەد",
     "price": 2500,
-    "image": "mnalan/photo_22_2026-02-21_00-54-52.jpg",
+    "image": "mnalan/photo_22_2026-02-21_00-54-52.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/photo_22_2026-02-21_00-54-52.webp"
@@ -194,7 +194,7 @@
     "name": "تەمەرندی ڕستە",
     "description": "12 عەدەد",
     "price": 2500,
-    "image": "mnalan/photo_24_2026-02-21_00-54-52.jpg",
+    "image": "mnalan/photo_24_2026-02-21_00-54-52.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/photo_24_2026-02-21_00-54-52.webp"
@@ -204,7 +204,7 @@
     "name": "قاوەی زۆۆ ٢",
     "description": "24 عەدەد",
     "price": 3500,
-    "image": "mnalan/photo_25_2026-02-21_00-54-52.jpg",
+    "image": "mnalan/photo_25_2026-02-21_00-54-52.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/photo_25_2026-02-21_00-54-52.webp"
@@ -214,7 +214,7 @@
     "name": "سەمیریری",
     "description": "24 عەدەد",
     "price": 3500,
-    "image": "mnalan/photo_26_2026-02-21_00-54-52.jpg",
+    "image": "mnalan/photo_26_2026-02-21_00-54-52.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/photo_26_2026-02-21_00-54-52.webp"
@@ -224,7 +224,7 @@
     "name": "نوقڵی ئاناتا شیر",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "mnalan/photo_27_2026-02-21_00-54-52.jpg",
+    "image": "mnalan/photo_27_2026-02-21_00-54-52.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/photo_27_2026-02-21_00-54-52.webp"
@@ -234,7 +234,7 @@
     "name": "نەوقڵی ئاناتا قاوە",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "mnalan/photo_28_2026-02-21_00-54-52.jpg",
+    "image": "mnalan/photo_28_2026-02-21_00-54-52.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/photo_28_2026-02-21_00-54-52.webp"
@@ -244,7 +244,7 @@
     "name": "تەمەرندی سرنج",
     "description": "24 عەدەد",
     "price": 4500,
-    "image": "mnalan/photo_29_2026-02-21_00-54-52.jpg",
+    "image": "mnalan/photo_29_2026-02-21_00-54-52.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/photo_29_2026-02-21_00-54-52.webp"
@@ -254,7 +254,7 @@
     "name": "نەستەلەی بستە",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "mnalan/photo_30_2026-02-21_00-54-52.jpg",
+    "image": "mnalan/photo_30_2026-02-21_00-54-52.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/photo_30_2026-02-21_00-54-52.webp"
@@ -264,7 +264,7 @@
     "name": "مۆتەی قاوە",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "mnalan/IMG_6346.jpeg",
+    "image": "mnalan/IMG_6346.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6346.webp"
@@ -274,7 +274,7 @@
     "name": "کەفاو",
     "description": "24 عەدەد",
     "price": 4500,
-    "image": "mnalan/IMG_6348.jpeg",
+    "image": "mnalan/IMG_6348.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6348.webp"
@@ -284,7 +284,7 @@
     "name": "مارشمیلۆ ورج",
     "description": "40 عەدەد",
     "price": 8000,
-    "image": "mnalan/IMG_6350.jpeg",
+    "image": "mnalan/IMG_6350.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6350.webp"
@@ -294,7 +294,7 @@
     "name": "لینکەر",
     "description": "24 عەدەد",
     "price": 5250,
-    "image": "mnalan/IMG_6351.jpeg",
+    "image": "mnalan/IMG_6351.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6351.webp"
@@ -304,7 +304,7 @@
     "name": "ڕامتین",
     "description": "24 عەدەد",
     "price": 3000,
-    "image": "mnalan/IMG_6352.jpeg",
+    "image": "mnalan/IMG_6352.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6352.webp"
@@ -314,7 +314,7 @@
     "name": "جەلی مەتری لولە",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "mnalan/IMG_6354.jpeg",
+    "image": "mnalan/IMG_6354.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6354.webp"
@@ -324,7 +324,7 @@
     "name": "قاوە مەڵهەم",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "mnalan/IMG_6358.jpeg",
+    "image": "mnalan/IMG_6358.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6358.webp"
@@ -334,7 +334,7 @@
     "name": "نەستەلەئ چەکوش",
     "description": "24 عەدەد",
     "price": 5250,
-    "image": "mnalan/IMG_6359.jpeg",
+    "image": "mnalan/IMG_6359.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6359.webp"
@@ -344,7 +344,7 @@
     "name": "تۆپ",
     "description": "60 عەدەد",
     "price": 8000,
-    "image": "mnalan/IMG_6360.jpeg",
+    "image": "mnalan/IMG_6360.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6360.webp"
@@ -354,7 +354,7 @@
     "name": "ناوکە کولەکە پاشا",
     "description": "24 عەدەد",
     "price": 5250,
-    "image": "mnalan/IMG_6361.jpeg",
+    "image": "mnalan/IMG_6361.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6361.webp"
@@ -364,7 +364,7 @@
     "name": "شەربەتی ئیتالی",
     "description": "24 عەدەد",
     "price": 5250,
-    "image": "mnalan/IMG_6362.jpeg",
+    "image": "mnalan/IMG_6362.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6362.webp"
@@ -374,7 +374,7 @@
     "name": "بستە پاشا",
     "description": "24 عەدەد",
     "price": 5250,
-    "image": "mnalan/IMG_6363.jpeg",
+    "image": "mnalan/IMG_6363.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6363.webp"
@@ -384,7 +384,7 @@
     "name": "ئاماسی",
     "description": "24 عەدەد",
     "price": 5250,
-    "image": "mnalan/IMG_6365.jpeg",
+    "image": "mnalan/IMG_6365.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6365.webp"
@@ -394,7 +394,7 @@
     "name": "کۆکۆسی میکسی",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "mnalan/IMG_6367.jpeg",
+    "image": "mnalan/IMG_6367.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6367.webp"
@@ -404,7 +404,7 @@
     "name": "جەلی هەمبەرگر",
     "description": "20عەدەد",
     "price": 4000,
-    "image": "mnalan/IMG_6368.jpeg",
+    "image": "mnalan/IMG_6368.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6368.webp"
@@ -414,7 +414,7 @@
     "name": "X.5",
     "description": "24 عەدەد",
     "price": 5250,
-    "image": "mnalan/IMG_6369.jpeg",
+    "image": "mnalan/IMG_6369.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6369.webp"
@@ -424,7 +424,7 @@
     "name": "ناوکە پاش",
     "description": "24 عەدەد",
     "price": 5250,
-    "image": "mnalan/IMG_6370.jpeg",
+    "image": "mnalan/IMG_6370.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6370.webp"
@@ -434,7 +434,7 @@
     "name": "جلکەی سۆلار",
     "description": "24 عەدەد",
     "price": 4500,
-    "image": "mnalan/IMG_6371.jpeg",
+    "image": "mnalan/IMG_6371.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6371.webp"
@@ -444,7 +444,7 @@
     "name": "کونجی سپی",
     "description": "40 عەدەد",
     "price": 7000,
-    "image": "mnalan/IMG_6405.jpeg",
+    "image": "mnalan/IMG_6405.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6405.webp"
@@ -454,7 +454,7 @@
     "name": "مارشمیلۆ کیس لولە",
     "description": "24 عەدەد",
     "price": 5250,
-    "image": "mnalan/IMG_6406.jpeg",
+    "image": "mnalan/IMG_6406.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6406.webp"
@@ -464,7 +464,7 @@
     "name": "جەلی میکس ڕوڵ",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "mnalan/IMG_6407.jpeg",
+    "image": "mnalan/IMG_6407.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6407.webp"
@@ -474,7 +474,7 @@
     "name": "جەلی کەباب",
     "description": "48 عەدەد",
     "price": 5000,
-    "image": "mnalan/IMG_6408.jpeg",
+    "image": "mnalan/IMG_6408.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6408.webp"
@@ -484,7 +484,7 @@
     "name": "کونجی ڕەش",
     "description": "40عەدەد",
     "price": 7000,
-    "image": "mnalan/IMG_6409.jpeg",
+    "image": "mnalan/IMG_6409.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6409.webp"
@@ -494,7 +494,7 @@
     "name": "جەلی هەمبەرگر",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "mnalan/IMG_6410.jpeg",
+    "image": "mnalan/IMG_6410.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6410.webp"
@@ -504,7 +504,7 @@
     "name": "جەلئ قەلەم",
     "description": "20 عەدەد",
     "price": 4250,
-    "image": "mnalan/IMG_6411.jpeg",
+    "image": "mnalan/IMG_6411.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6411.webp"
@@ -514,7 +514,7 @@
     "name": "جەلی پیزا قتو",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "mnalan/IMG_6412.jpeg",
+    "image": "mnalan/IMG_6412.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6412.webp"
@@ -524,7 +524,7 @@
     "name": "جەلی ڕستە شەیبا",
     "description": "24 عەدەد",
     "price": 4500,
-    "image": "mnalan/IMG_6413.jpeg",
+    "image": "mnalan/IMG_6413.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6413.webp"
@@ -534,7 +534,7 @@
     "name": "جەلی ڕستە",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "mnalan/IMG_6414.jpeg",
+    "image": "mnalan/IMG_6414.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6414.webp"
@@ -544,7 +544,7 @@
     "name": "مارشمیلۆ ڕستە",
     "description": "12 عەدەد",
     "price": 2500,
-    "image": "mnalan/IMG_6415.jpeg",
+    "image": "mnalan/IMG_6415.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6415.webp"
@@ -554,7 +554,7 @@
     "name": "شەربەتی جەلی کیس",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "mnalan/IMG_6416.jpeg",
+    "image": "mnalan/IMG_6416.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6416.webp"
@@ -564,7 +564,7 @@
     "name": "ڕەسم",
     "description": "60 عەدەد",
     "price": 9000,
-    "image": "mnalan/IMG_6417.jpeg",
+    "image": "mnalan/IMG_6417.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6417.webp"
@@ -574,7 +574,7 @@
     "name": "وەن حەب",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "mnalan/IMG_6418.jpeg",
+    "image": "mnalan/IMG_6418.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6418.webp"
@@ -584,7 +584,7 @@
     "name": "بوبی لاکیشە",
     "description": "48 عەدەد",
     "price": 2000,
-    "image": "mnalan/IMG_6419.jpeg",
+    "image": "mnalan/IMG_6419.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6419.webp"
@@ -594,7 +594,7 @@
     "name": "جەلی پیتزا",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "mnalan/IMG_6420.jpeg",
+    "image": "mnalan/IMG_6420.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6420.webp"
@@ -604,7 +604,7 @@
     "name": "جەلئ کوبرا",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "mnalan/IMG_6421.jpeg",
+    "image": "mnalan/IMG_6421.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6421.webp"
@@ -614,7 +614,7 @@
     "name": "جەلی کرم کۆکتیل",
     "description": "24 عەدەد",
     "price": 0,
-    "image": "mnalan/IMG_6422.jpeg",
+    "image": "mnalan/IMG_6422.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6422.webp"
@@ -624,7 +624,7 @@
     "name": "جەلی کرم بلوبیری",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "mnalan/IMG_6424.jpeg",
+    "image": "mnalan/IMG_6424.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6424.webp"
@@ -634,7 +634,7 @@
     "name": "جەلی زمان",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "mnalan/IMG_6425.jpeg",
+    "image": "mnalan/IMG_6425.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6425.webp"
@@ -644,7 +644,7 @@
     "name": "نوقولی کیس تیکەلە",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "mnalan/IMG_6428.jpeg",
+    "image": "mnalan/IMG_6428.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6428.webp"
@@ -654,7 +654,7 @@
     "name": "نوقولی کیس قاوە",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "mnalan/IMG_6429.jpeg",
+    "image": "mnalan/IMG_6429.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6429.webp"
@@ -664,7 +664,7 @@
     "name": "نوقولی کیس شیر",
     "description": "24 عەدەد",
     "price": 5000,
-    "image": "mnalan/IMG_6430.jpeg",
+    "image": "mnalan/IMG_6430.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6430.webp"
@@ -674,7 +674,7 @@
     "name": "ستیکی بلوبیری",
     "description": "24 عەدەد",
     "price": 4000,
-    "image": "mnalan/IMG_6448.jpeg",
+    "image": "mnalan/IMG_6448.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6448.webp"
@@ -684,7 +684,7 @@
     "name": "ستیکی تیکەلە",
     "description": "24 عەدەد",
     "price": 4000,
-    "image": "mnalan/IMG_6449.jpeg",
+    "image": "mnalan/IMG_6449.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6449.webp"
@@ -694,7 +694,7 @@
     "name": "ستیکی کۆلا",
     "description": "24 عەدەد",
     "price": 4000,
-    "image": "mnalan/IMG_6450.jpeg",
+    "image": "mnalan/IMG_6450.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6450.webp"
@@ -704,7 +704,7 @@
     "name": "ستیکی لیمۆ",
     "description": "24 عەدەد",
     "price": 4000,
-    "image": "mnalan/IMG_6451.jpeg",
+    "image": "mnalan/IMG_6451.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6451.webp"
@@ -714,7 +714,7 @@
     "name": "ستیکی قەزوان",
     "description": "24 عەدەد",
     "price": 4000,
-    "image": "mnalan/IMG_6452.jpeg",
+    "image": "mnalan/IMG_6452.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6452.webp"
@@ -724,7 +724,7 @@
     "name": "ستیکی نەعنا",
     "description": "24 عەدەد",
     "price": 4000,
-    "image": "mnalan/IMG_6453.jpeg",
+    "image": "mnalan/IMG_6453.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6453.webp"
@@ -734,7 +734,7 @@
     "name": "ستیکی شوتی",
     "description": "24 عەدەد",
     "price": 4000,
-    "image": "mnalan/IMG_6454.jpeg",
+    "image": "mnalan/IMG_6454.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6454.webp"
@@ -744,7 +744,7 @@
     "name": "ڕیلاکسی شوتی",
     "description": "24 عەدەد",
     "price": 4000,
-    "image": "mnalan/IMG_6455.jpeg",
+    "image": "mnalan/IMG_6455.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6455.webp"
@@ -754,7 +754,7 @@
     "name": "ستیکی شلک",
     "description": "24 عەدەد",
     "price": 4000,
-    "image": "mnalan/IMG_6456.jpeg",
+    "image": "mnalan/IMG_6456.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6456.webp"
@@ -764,7 +764,7 @@
     "name": "ڕیلاکس نەعنا شین",
     "description": "24 عەدەد",
     "price": 4000,
-    "image": "mnalan/IMG_6457.jpeg",
+    "image": "mnalan/IMG_6457.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6457.webp"
@@ -774,7 +774,7 @@
     "name": "ڕیلاکسی شلک",
     "description": "24 عەدەد",
     "price": 4000,
-    "image": "mnalan/IMG_6458.jpeg",
+    "image": "mnalan/IMG_6458.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6458.webp"
@@ -784,7 +784,7 @@
     "name": "ستیکی پرتەقاڵ",
     "description": "24 عەدەد",
     "price": 4000,
-    "image": "mnalan/IMG_6459.jpeg",
+    "image": "mnalan/IMG_6459.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6459.webp"
@@ -794,7 +794,7 @@
     "name": "ستیکی بوبی",
     "description": "24 عەدەد",
     "price": 4000,
-    "image": "mnalan/IMG_6460.jpeg",
+    "image": "mnalan/IMG_6460.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6460.webp"
@@ -804,7 +804,7 @@
     "name": "ستیکی دارچینی",
     "description": "24 عەدەد",
     "price": 4000,
-    "image": "mnalan/IMG_6461.jpeg",
+    "image": "mnalan/IMG_6461.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6461.webp"
@@ -814,7 +814,7 @@
     "name": "سەمیری قتو",
     "description": "20 عەدەد",
     "price": 4250,
-    "image": "mnalan/IMG_6462.jpeg",
+    "image": "mnalan/IMG_6462.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6462.webp"
@@ -824,7 +824,7 @@
     "name": "ستیکی حێل",
     "description": "24 عەدەد",
     "price": 4000,
-    "image": "mnalan/IMG_6463.jpeg",
+    "image": "mnalan/IMG_6463.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6463.webp"
@@ -834,7 +834,7 @@
     "name": "ستیکی تایگەر",
     "description": "24 عەدەد",
     "price": 4000,
-    "image": "mnalan/IMG_6464.jpeg",
+    "image": "mnalan/IMG_6464.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6464.webp"
@@ -844,7 +844,7 @@
     "name": "بنێشتی بۆین ٤غرام",
     "description": "100 عەدەد",
     "price": 16000,
-    "image": "mnalan/IMG_6465.jpeg",
+    "image": "mnalan/IMG_6465.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6465.webp"
@@ -854,7 +854,7 @@
     "name": "بنیشتی سینی شوتی",
     "description": "100 عەدەد",
     "price": 3000,
-    "image": "mnalan/IMG_6466.jpeg",
+    "image": "mnalan/IMG_6466.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6466.webp"
@@ -864,7 +864,7 @@
     "name": "بنێشتی سینی بلوبیری",
     "description": "100 عەدەد",
     "price": 3000,
-    "image": "mnalan/IMG_6467.jpeg",
+    "image": "mnalan/IMG_6467.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6467.webp"
@@ -874,7 +874,7 @@
     "name": "بنێشتی سینی کۆلا",
     "description": "100 عەدەد",
     "price": 3500,
-    "image": "mnalan/IMG_6468.jpeg",
+    "image": "mnalan/IMG_6468.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6468.webp"
@@ -884,7 +884,7 @@
     "name": "سەمیری لول پاکەت",
     "description": "24 عەدەد",
     "price": 5250,
-    "image": "mnalan/IMG_6469.jpeg",
+    "image": "mnalan/IMG_6469.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6469.webp"
@@ -894,7 +894,7 @@
     "name": "لیرەی بنیشت",
     "description": "100 عەدەد",
     "price": 3500,
-    "image": "mnalan/IMG_6470.jpeg",
+    "image": "mnalan/IMG_6470.webp",
     "category": "baby",
     "hidden": false,
     "image_webp": "mnalan/IMG_6470.webp"
