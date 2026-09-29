@@ -139,11 +139,8 @@ let products = [];
 let cart = [];
 let currentCategory = 'cake';
 let currentPage = 1;
-// Returns the right page size for the current viewport so mobile gets lighter pages.
 function getItemsPerPage() {
-    if (window.innerWidth < 600) return 8;
-    if (window.innerWidth < 1024) return 12;
-    return 20;
+    return Infinity;
 }
 let wishlist = [];
 let showingWishlist = false;
@@ -562,7 +559,7 @@ function getSafeImageSrc(source) {
 }
 
 function shouldUseCustomLazyImages() {
-    return !shouldUseLiteMode() && !isMobileViewport();
+    return !shouldUseLiteMode();
 }
 
 let lazyObserver = null;
@@ -591,7 +588,7 @@ function initLazyObserver() {
             lazyObserver.unobserve(img);
             img.setAttribute('data-lazy-bound', 'loaded');
         });
-    }, { rootMargin: shouldUseLiteMode() ? '180px 0px' : '320px 0px', threshold: 0 });
+    }, { rootMargin: shouldUseLiteMode() ? '180px 0px' : '280px 0px', threshold: 0 });
 }
  
 function loadLazyImageNow(img) {
@@ -630,19 +627,6 @@ function observeNewImages(root = document) {
         img.setAttribute('data-lazy-bound', 'pending');
         lazyObserver.observe(img);
     });
-
-    // Mobile/Safari جاروبارە لەگەڵ content-visibility + IntersectionObserver وێنەکان repaint ناکات.
-    // ئەم fallback ـە دوای کەمێک چاوەڕوانی هەر وێنەیەکی هێشتا pending بار دەکات.
-    if (lazyImages.length) {
-        const delay = (isMobileViewport() || shouldUseLiteMode()) ? 650 : 1400;
-        window.setTimeout(() => {
-            lazyImages.forEach(img => {
-                if (img.getAttribute('data-lazy-bound') === 'pending' && img.getAttribute('data-lazy-src')) {
-                    loadLazyImageNow(img);
-                }
-            });
-        }, delay);
-    }
 }
  
 // ==========================================
@@ -1021,9 +1005,7 @@ function findProductsByQuery(query) {
 
 // Central pagination helper used by category, wishlist, and search views.
 function paginate(items) {
-    const ipp = getItemsPerPage();
-    const start = (currentPage - 1) * ipp;
-    return items.slice(start, start + ipp);
+    return items;
 }
 
 // Restrict WhatsApp orders to a clean 10-15 digit phone number.
@@ -1112,9 +1094,10 @@ function getWebpImagePath(product) {
 
 // Render product media inside <picture> so future WebP assets can slot in safely.
 function buildProductPicture(product, productName, priority = 'low') {
-    const imageSrc = escapeHtml(getSafeImageSrc(product.image || PLACEHOLDER));
     const rawWebpSrc = getWebpImagePath(product);
     const webpSrc = rawWebpSrc ? getSafeImageSrc(rawWebpSrc) : '';
+    const imageSrc = escapeHtml(getSafeImageSrc(product.image || PLACEHOLDER));
+    const effectiveSrc = webpSrc ? escapeHtml(webpSrc) : imageSrc;
     const eager = priority === 'high';
     const useDeferredSourceSwap = shouldUseCustomLazyImages() && !eager;
     const sourceMarkup = webpSrc
@@ -1126,8 +1109,8 @@ function buildProductPicture(product, productName, priority = 'low') {
     return `<picture>
         ${sourceMarkup}
         <img
-            src="${useDeferredSourceSwap ? PLACEHOLDER : imageSrc}"
-            ${useDeferredSourceSwap ? `data-lazy-src="${imageSrc}"` : ''}
+            src="${useDeferredSourceSwap ? PLACEHOLDER : effectiveSrc}"
+            ${useDeferredSourceSwap ? `data-lazy-src="${effectiveSrc}"` : ''}
             alt="${escapeHtml(productName)}"
             loading="${eager ? 'eager' : 'lazy'}"
             decoding="async"
@@ -1379,29 +1362,11 @@ function renderEmptyState(viewState) {
     hydrateIcons(emptyState);
 }
 
-function renderPagination(totalItems) {
+function renderPagination() {
     const paginationWrap = document.getElementById('paginationWrap');
     if (!paginationWrap) return;
-    const ipp = getItemsPerPage();
-    if (totalItems <= ipp) {
-        paginationWrap.style.display = 'none';
-        paginationWrap.innerHTML = '';
-        return;
-    }
-
-    const totalPages = Math.max(1, Math.ceil(totalItems / ipp));
-    currentPage = Math.min(Math.max(currentPage, 1), totalPages);
-    paginationWrap.style.display = 'flex';
-    paginationWrap.innerHTML = `
-        <div class="pagination">
-            <button class="pagination-btn" onclick="goToPage(${currentPage - 1})" ${currentPage === 1 ? 'disabled' : ''}>${escapeHtml(LANG[currentLang]?.paginationPrev || 'Previous')}</button>
-            <div class="pagination-status">
-                ${escapeHtml((LANG[currentLang]?.paginationStatus || ((current, total) => `${current} / ${total}`))(currentPage, totalPages))}
-                <small>${escapeHtml(LANG[currentLang]?.paginationHint || 'Page')}</small>
-            </div>
-            <button class="pagination-btn" onclick="goToPage(${currentPage + 1})" ${currentPage === totalPages ? 'disabled' : ''}>${escapeHtml(LANG[currentLang]?.paginationNext || 'Next')}</button>
-        </div>
-    `;
+    paginationWrap.style.display = 'none';
+    paginationWrap.innerHTML = '';
 }
 
 function scrollProductsIntoView() {

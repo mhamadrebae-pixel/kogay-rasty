@@ -39,8 +39,10 @@
 html { scroll-behavior: auto; -webkit-text-size-adjust: 100%; }
  
 body {
-   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Tahoma, Arial, sans-serif;
-    background: linear-gradient(135deg, #12131a, #111827 55%, #0f172a);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Tahoma, Arial, sans-serif;
+    background: #0b0d14;
+    background-image: radial-gradient(circle at 50% 0%, #171b2b 0%, #0b0d14 75%);
+    background-attachment: scroll;
     color: var(--text-primary);
     min-height: 100vh;
     min-height: 100dvh;
@@ -150,13 +152,13 @@ input:focus-visible {
    ========================================== */
 .navbar { position: sticky; top: 0; left: 0; right: 0; z-index: 1000; padding: 8px 8px 0; }
 .nav-container {
-    background: rgba(15,15,18,0.96);
+    background: #111420;
     padding: 9px 12px;
     display: flex; align-items: center;
     justify-content: space-between; gap: 10px;
     border: 1px solid rgba(255,255,255,0.08);
     border-radius: 22px;
-    box-shadow: none;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.05);
 }
 .logo { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
 .logo-icon {
@@ -194,12 +196,12 @@ input:focus-visible {
     z-index: 1;
 }
 .mobile-search-inner {
-    background: rgba(14,15,22,0.96);
+    background: #141724;
     border: 1px solid rgba(255,255,255,0.08);
     border-radius: 18px;
     display: flex; align-items: center; gap: 12px;
     padding: 12px 16px;
-    box-shadow: none;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.04);
 }
 .mobile-search-inner i { color: var(--text-muted); font-size: 16px; flex-shrink: 0; }
 .mobile-search-inner input {
@@ -394,8 +396,8 @@ input:focus-visible {
 }
  
 .category-card {
-    background: rgba(255,255,255,0.045);
-    border: 1px solid rgba(255,255,255,0.1);
+    background: #141724;
+    border: 1px solid rgba(255,255,255,0.08);
     border-radius: 16px;
     padding: 12px 11px;
     display: flex !important;
@@ -403,16 +405,16 @@ input:focus-visible {
     align-items: center;
     gap: 10px;
     cursor: pointer;
-    transition: border-color 0.18s ease, background 0.18s ease;
+    transition: border-color 0.16s ease, transform 0.16s ease, background 0.16s ease;
     text-align: right;
-    box-shadow: none;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.03);
 }
 .category-card.active {
-    background: linear-gradient(135deg, rgba(249,115,22,0.16), rgba(244,63,94,0.05));
-    border-color: rgba(249,115,22,0.32);
-    box-shadow: none;
+    background: linear-gradient(135deg, rgba(249,115,22,0.18), rgba(244,63,94,0.08));
+    border-color: rgba(249,115,22,0.45);
+    box-shadow: 0 4px 14px rgba(249,115,22,0.15);
 }
-.category-card:hover { border-color: rgba(255,255,255,0.1); }
+.category-card:hover { border-color: rgba(255,255,255,0.15); }
 .category-card:active { transform: scale(0.975); }
 .category-icon {
     width: 40px; height: 40px; flex-shrink: 0;
@@ -532,18 +534,18 @@ input:focus-visible {
     background: rgba(249,115,22,0.24);
 }
 
-/* کارتی کاڵا - گلاس مۆرفیزم */
+/* کارتی کاڵا - مۆدێرن و سووک */
 .product-card {
-    background: rgba(255, 255, 255, 0.055);
+    background: #141824;
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
-    border: 1px solid rgba(255, 255, 255, 0.11);
+    border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 18px;
     overflow: hidden;
     position: relative;
-    transition: transform 0.18s ease, background 0.18s ease, border-color 0.18s ease;
+    transition: transform 0.16s ease, border-color 0.16s ease, box-shadow 0.16s ease;
     opacity: 1;                           /* ★ animation بسڕدرایەوە */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.04);
 }
  
 /* ★ cardAppear تەواو لابرا — contain/content-visibility بۆ renderی سبوک */
@@ -553,7 +555,7 @@ input:focus-visible {
     contain-intrinsic-size: 320px 360px;
 }
  
-.product-card:active { transform: scale(0.985); }
+.product-card:active { transform: scale(0.975); }
  
 /* ڕەسمی کاڵا */
 .product-image {
@@ -561,7 +563,7 @@ input:focus-visible {
     aspect-ratio: 4 / 3;
     overflow: hidden;
     cursor: pointer;
-    background: rgba(255,255,255,0.03);
+    background: #0d101a;
 }
 .product-image picture {
     display: block;
@@ -588,11 +590,11 @@ input:focus-visible {
  
 /* ناوی کاڵا */
 .product-content {
-    padding: 14px;
-    background: rgba(0, 0, 0, 0.12);
+    padding: 12px 14px 14px;
+    background: #141824;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 8px;
 }
  
 .product-name {
@@ -631,31 +633,27 @@ input:focus-visible {
 .price-label { font-size: 10px; font-weight: 600; color: rgba(255,255,255,0.4); }
 .price-value {
     font-size: 16px; line-height: 1.1; font-weight: 800;
-    background: var(--gradient-primary);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #fb923c;
 }
  
 /* دوگمەی زیادکردن بۆ سەبەتە */
 .add-btn {
-    width: 42px; height: 42px;
-    background: rgba(249, 115, 22, 0.12);
-    border: 1px solid rgba(249, 115, 22, 0.24);
+    width: 38px; height: 38px;
+    background: rgba(249, 115, 22, 0.14);
+    border: 1px solid rgba(249, 115, 22, 0.28);
     border-radius: 50%;
     display: flex; align-items: center; justify-content: center;
-    color: var(--primary);
-    font-size: 16px;
+    color: var(--primary-light);
+    font-size: 15px;
     cursor: pointer;
-    transition: background 0.18s ease, border-color 0.18s ease, color 0.18s ease, transform 0.18s ease;
+    transition: background 0.16s ease, border-color 0.16s ease, color 0.16s ease, transform 0.16s ease;
     flex-shrink: 0;
-    box-shadow: none;
 }
 .add-btn:active {
     background: var(--gradient-primary);
     border-color: transparent;
     color: white;
-    transform: scale(0.95);
-    box-shadow: none;
+    transform: scale(0.92);
 }
  
 /* کارتی overlay دوگمە */
@@ -1244,13 +1242,13 @@ h3, .h3 { font-size: 18px; font-weight: 700; line-height: 1.3; }
         -webkit-backdrop-filter: none;
     }
     .nav-container {
-        box-shadow: none;
+        box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
     }
     .mobile-search-inner {
-        box-shadow: none;
+        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.22);
     }
     .product-card {
-        box-shadow: none;
+        box-shadow: 0 4px 18px rgba(0, 0, 0, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.04);
     }
     .cart-btn,
     .category-card.active,
@@ -1342,7 +1340,9 @@ html.lite-mode .bg-container {
 }
 
 html.lite-mode body {
-    background: linear-gradient(180deg, #12131a, #0f172a 58%, #0f172a);
+    background: #0b0d14;
+    background-image: radial-gradient(circle at 50% 0%, #171b2b 0%, #0b0d14 75%);
+    background-attachment: scroll;
 }
 
 html.lite-mode .mobile-search {
@@ -1354,7 +1354,12 @@ html.lite-mode .nav-container,
 html.lite-mode .mobile-search-inner,
 html.lite-mode .product-card,
 html.lite-mode .category-card,
-html.lite-mode .cart-item,
+html.lite-mode .cart-item {
+    background: #141724;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.26), inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
 html.lite-mode .toast,
 html.lite-mode .install-banner-inner,
 html.lite-mode .image-modal-stage,
@@ -1362,7 +1367,7 @@ html.lite-mode .image-modal-info,
 html.lite-mode .developer-card,
 html.lite-mode .profile-btn,
 html.lite-mode .social-link {
-    box-shadow: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 html.lite-mode .nav-container,
