@@ -2053,6 +2053,8 @@
       updateClockDisplay();
       setInterval(updateClockDisplay, 15000);
       document.addEventListener('visibilitychange', handleVisibilityChange);
+      window.addEventListener('focus', handleVisibilityChange);
+      window.addEventListener('pageshow', handleVisibilityChange);
       document.addEventListener('keydown', e => {
         if (e.key === 'Escape') { closeImgPreview(); closeEdit(); closeConfirm(); }
         if (e.ctrlKey && e.key === 's') { e.preventDefault(); publishJSON(); }
@@ -2142,17 +2144,18 @@
     // These later declarations intentionally replace the earlier sessionStorage/setup handlers.
     let lastVisibilityRefreshTime = 0;
     function handleVisibilityChange() {
+      if (document.hidden) return;
       const now = Date.now();
-      if (now - lastVisibilityRefreshTime < 60000) return;
-      if (!document.hidden && sessionStorage.getItem(SESSION_KEY) === 'true' && ghConfig) {
+      if (now - lastVisibilityRefreshTime < 2000) return;
+      if (hasUnsavedChanges) return;
+      if (sessionStorage.getItem(SESSION_KEY) === 'true' && ghConfig) {
         lastVisibilityRefreshTime = now;
-        showRefreshBar();
         loadProductsFromGitHub().then(() => {
           renderDash();
-          if (document.getElementById('page-products').classList.contains('active')) renderTable();
-          hideRefreshBar();
-          toast('کاڵاکان نوێکرانەوە ✓', 'success');
-        });
+          if (document.getElementById('page-products')?.classList.contains('active')) renderTable();
+          updateGhStatus();
+          toast('کاڵاکان خۆکارانە نوێکرانەوە ✓', 'info');
+        }).catch(() => {});
       }
     }
 
@@ -2755,17 +2758,18 @@
       });
     }
 
-    async function publishJSON() {
+    async function publishJSON(options = {}) {
+      const isBackground = options?.background === true;
       const publishConfig = getPublishReadyGhConfig();
       if (!publishConfig.token) {
-        promptForGitHubToken('کلیلی GitHub پێویستە پێش بڵاوکردنەوەی فایلی کاڵاکان.');
+        if (!isBackground) promptForGitHubToken('کلیلی GitHub پێویستە پێش بڵاوکردنەوەی فایلی کاڵاکان.');
         return;
       }
       if (!publishConfig.username || !publishConfig.repo) {
-        toast('ناوی خاوەنی کۆگا یان ناوی کۆگا لە ڕێکخستنی GitHub دیاری نەکراوە.', 'error');
+        if (!isBackground) toast('ناوی خاوەنی کۆگا یان ناوی کۆگا لە ڕێکخستنی GitHub دیاری نەکراوە.', 'error');
         return;
       }
-      showLoad('ئامادەکردنی فایلی کاڵاکان...');
+      if (!isBackground) showLoad('ئامادەکردنی فایلی کاڵاکان...');
       try {
         ghConfig = persistGhConfig(publishConfig, publishConfig.token, { rememberToken: isGhTokenRemembered() });
         const normalizedProducts = normalizeProductList(currentProducts);
@@ -2775,7 +2779,9 @@
 
         for (let index = 0; index < entries.length; index += 1) {
           const [path, fileData] = entries[index];
-          document.getElementById('loadingText').textContent = `بڵاوکردنەوەی ${path} (${index + 1}/${entries.length})...`;
+          if (!isBackground) {
+            document.getElementById('loadingText').textContent = `بڵاوکردنەوەی ${path} (${index + 1}/${entries.length})...`;
+          }
           await putJsonFileToGitHub(path, fileData, ghConfig);
         }
 
@@ -2795,17 +2801,24 @@
         currentProducts = normalizedProducts;
         lastLoadedRemoteFingerprint = getProductsFingerprint(normalizedProducts);
         lastLoadedRemoteSource = 'publish';
-        hideLoad();
+        if (!isBackground) hideLoad();
         hasUnsavedChanges = false;
         clearLocalDraft();
         document.getElementById('publishBar')?.classList.remove('show');
         updateChangesBadge();
         updateGhStatus();
         notifyCatalogChange('publish');
-        toast(`${entries.length} فایلی کاڵا بە سەرکەوتوویی بڵاوکرانەوە ✓`, 'success');
+        if (isBackground) {
+          toast('گۆڕانکارییەکان ڕاستەوخۆ لە کۆگا و گیت‌هەب پاشەکەوت کران ✓', 'success');
+        } else {
+          toast(`${entries.length} فایلی کاڵا بە سەرکەوتوویی بڵاوکرانەوە ✓`, 'success');
+        }
       } catch (error) {
-        hideLoad();
-        toast('بڵاوکردنەوە سەرکەوتوو نەبوو: ' + (error?.message || 'هەڵەی نەزانراو'), 'error');
+        if (!isBackground) hideLoad();
+        console.warn('Publish error:', error);
+        if (!isBackground) {
+          toast('بڵاوکردنەوە سەرکەوتوو نەبوو: ' + (error?.message || 'هەڵەی نەزانراو'), 'error');
+        }
       }
     }
 
@@ -2944,12 +2957,12 @@
           console.warn('Firebase update warning:', e);
         }
 
-        markUnsaved();
         renderTable();
         renderDash();
         closeEdit();
         notifyCatalogChange('edit');
         toast('دەستکاری کاڵاکە بە سەرکەوتوویی پاشەکەوت کرا ✓', 'success');
+        publishJSON({ background: true });
       } catch (error) {
         if (uploadedPath) {
           toast('وێنەکە بارکرا بەڵام کاڵاکە نوێ نەکرایەوە', 'info');
@@ -2978,15 +2991,15 @@
           body: JSON.stringify(currentProducts[index])
         }).catch(console.warn);
       } catch (e) {}
-      markUnsaved();
       renderTable();
       renderDash();
       notifyCatalogChange('toggle');
       toast(currentProducts[index].hidden ? 'کاڵاکە شاردراوەتەوە' : 'کاڵاکە نیشاندراوە', 'info');
+      publishJSON({ background: true });
     }
 
     function delProd(id) {
-      showConfirm('سڕینەوەی کاڵا', 'ئەم کاڵایە لە کۆگا دەسڕدرێتەوە. ئایا دڵنیایت؟', () => {
+      showConfirm('سڕینەوەی کاڵا', 'ئەم کاڵایە دەستبەجێ لە کۆگا و گیت‌هەب دەسڕدرێتەوە. ئایا دڵنیایت؟', () => {
         pushUndoState();
         currentProducts = currentProducts.filter(x => x.id !== id);
         try {
@@ -2994,11 +3007,11 @@
             method: 'DELETE'
           }).catch(console.warn);
         } catch (e) {}
-        markUnsaved();
         renderTable();
         renderDash();
         notifyCatalogChange('delete');
-        toast('کاڵاکە سڕایەوە', 'success');
+        toast('کاڵاکە دەستبەجێ سڕایەوە ✓', 'success');
+        publishJSON({ background: true });
       });
     }
 
@@ -3071,7 +3084,6 @@
         }
 
         validateImagePath(validated.image);
-        markUnsaved();
         renderTable();
         renderDash();
         clearAdd();
@@ -3079,6 +3091,7 @@
         setBottomNav('products');
         notifyCatalogChange('add');
         toast('کاڵاکە بە سەرکەوتوویی زیادکرا ✓', 'success');
+        publishJSON({ background: true });
       } catch (error) {
         if (uploadedPath) {
           toast('وێنەکە بارکرا بەڵام کاڵاکە پاشەکەوت نەکرا', 'info');
@@ -3224,19 +3237,18 @@
     }
 
     function handleVisibilityChange() {
+      if (document.hidden) return;
       const now = Date.now();
-      if (now - lastVisibilityRefreshTime < 60000) return;
-      if (!document.hidden && isLoggedIn() && ghConfig) {
+      if (now - lastVisibilityRefreshTime < 2000) return;
+      if (hasUnsavedChanges) return;
+      if (isLoggedIn() && ghConfig) {
         lastVisibilityRefreshTime = now;
-        showRefreshBar();
         loadProductsFromGitHub().then(loaded => {
           renderDash();
-          if (document.getElementById('page-products').classList.contains('active')) renderTable();
-          hideRefreshBar();
-          if (loaded) toast('Products refreshed', 'success');
-        }).catch(() => {
-          hideRefreshBar();
-        });
+          if (document.getElementById('page-products')?.classList.contains('active')) renderTable();
+          updateGhStatus();
+          if (loaded) toast('کاڵاکان خۆکارانە نوێکرانەوە ✓', 'info');
+        }).catch(() => {});
       }
     }
 
@@ -3246,10 +3258,10 @@
         if (!hasUnsavedChanges && !document.hidden && ghConfig && isLoggedIn()) {
           loadProductsFromGitHub().then(() => {
             renderDash();
-            if (document.getElementById('page-products').classList.contains('active')) renderTable();
+            if (document.getElementById('page-products')?.classList.contains('active')) renderTable();
           }).catch(() => { });
         }
-      }, 300000);
+      }, 15000);
     }
 
     function getGitHubSettingsInputConfig() {
