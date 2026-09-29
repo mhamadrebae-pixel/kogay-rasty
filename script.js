@@ -868,17 +868,6 @@ async function applyLiveCatalogUpdate(reason = 'live') {
     if (isLiveCatalogUpdating) return false;
     isLiveCatalogUpdating = true;
     try {
-        try {
-            localStorage.removeItem(PRODUCT_CACHE_KEY);
-            localStorage.removeItem(PRODUCT_CACHE_META_KEY);
-        } catch (e) {}
-
-        if ('caches' in window) {
-            caches.keys().then(keys => {
-                keys.filter(k => k.includes('data')).forEach(k => caches.delete(k));
-            }).catch(() => {});
-        }
-
         let success = await tryLoadFromFirebase(true);
         if (!success) {
             success = await loadProducts({ showSkeleton: false });
@@ -899,9 +888,8 @@ async function applyLiveCatalogUpdate(reason = 'live') {
     return false;
 }
 
-let liveEventSource = null;
 function setupStorefrontLiveSync() {
-    // 1. Cross-tab BroadcastChannel
+    // 1. Cross-tab BroadcastChannel (instant for admin on same origin)
     try {
         if ('BroadcastChannel' in window) {
             const bc = new BroadcastChannel('kogay_rasty_sync');
@@ -920,27 +908,7 @@ function setupStorefrontLiveSync() {
         }
     });
 
-    // 3. Real-time Firebase EventSource (SSE)
-    try {
-        if ('EventSource' in window && !isOffline) {
-            liveEventSource = new EventSource(FIREBASE_META_URL);
-            liveEventSource.addEventListener('put', (event) => {
-                try {
-                    const data = JSON.parse(event.data);
-                    const remoteTime = Number(data?.data?.updatedAt || data?.updatedAt || 0);
-                    if (remoteTime && remoteTime > (lastKnownCatalogUpdatedAt || 0)) {
-                        lastKnownCatalogUpdatedAt = remoteTime;
-                        applyLiveCatalogUpdate('sse');
-                    }
-                } catch (e) {}
-            });
-            liveEventSource.onerror = () => {
-                // Polling handles fallback
-            };
-        }
-    } catch (e) {}
-
-    // 4. Background polling every 8 seconds
+    // 3. Gentle background polling every 30 seconds
     setInterval(async () => {
         if (document.hidden || isOffline) return;
         try {
@@ -954,23 +922,27 @@ function setupStorefrontLiveSync() {
                 }
             }
         } catch (e) {}
-    }, 8000);
+    }, 30000);
 
-    // 5. Direct auto-refresh when customer leaves and comes back to the tab/window/app
-    let lastReturnRefreshTime = 0;
-    const handleReturnToStorefront = () => {
+    // 4. Check for updates on visibilitychange if 30s have elapsed
+    let lastVisibilityCheckTime = 0;
+    document.addEventListener('visibilitychange', async () => {
         if (document.hidden || isOffline) return;
         const now = Date.now();
-        if (now - lastReturnRefreshTime < 1500) return;
-        lastReturnRefreshTime = now;
-        applyLiveCatalogUpdate('return_to_tab');
-    };
-
-    document.addEventListener('visibilitychange', () => {
-        if (!document.hidden) handleReturnToStorefront();
+        if (now - lastVisibilityCheckTime < 30000) return;
+        lastVisibilityCheckTime = now;
+        try {
+            const res = await fetch(`${FIREBASE_META_URL}?v=${now}`);
+            if (res.ok) {
+                const meta = await res.json();
+                const remoteTime = Number(meta?.updatedAt || 0);
+                if (remoteTime > (lastKnownCatalogUpdatedAt || 0)) {
+                    lastKnownCatalogUpdatedAt = remoteTime;
+                    applyLiveCatalogUpdate('return_to_tab');
+                }
+            }
+        } catch (e) {}
     });
-    window.addEventListener('focus', handleReturnToStorefront);
-    window.addEventListener('pageshow', handleReturnToStorefront);
 }
 
 // Use cached products as an offline fallback when a category request fails.
@@ -1261,7 +1233,7 @@ function getWebpImagePath(product) {
     return '';
 }
 
-// Render product media inside <picture> so WebP assets can slot in safely, but fallback to real image.
+// Render product media inside <picture> with direct src and native lazy loading.
 function buildProductPicture(product, productName, priority = 'low') {
     const rawWebpSrc = getWebpImagePath(product);
     const webpSrc = rawWebpSrc ? getSafeImageSrc(rawWebpSrc) : '';
@@ -1269,26 +1241,20 @@ function buildProductPicture(product, productName, priority = 'low') {
     const imageSrc = escapeHtml(getSafeImageSrc(rawImgSrc));
     const effectiveSrc = webpSrc ? escapeHtml(webpSrc) : imageSrc;
     const eager = priority === 'high';
-    const useDeferredSourceSwap = shouldUseCustomLazyImages() && !eager;
     const sourceMarkup = (webpSrc && webpSrc !== imageSrc)
-        ? useDeferredSourceSwap
-            ? `<source data-lazy-srcset="${escapeHtml(webpSrc)}" type="image/webp">`
-            : `<source srcset="${escapeHtml(webpSrc)}" type="image/webp">`
+        ? `<source srcset="${escapeHtml(webpSrc)}" type="image/webp">`
         : '';
 
     return `<picture>
         ${sourceMarkup}
         <img
-            src="${useDeferredSourceSwap ? PLACEHOLDER : effectiveSrc}"
-            ${useDeferredSourceSwap ? `data-lazy-src="${effectiveSrc}"` : ''}
+            src="${effectiveSrc}"
             alt="${escapeHtml(productName)}"
             loading="${eager ? 'eager' : 'lazy'}"
             decoding="async"
             fetchpriority="${priority}"
             onerror="handleProductImageError(this, '${escapeHtml(encodeURIComponent(rawImgSrc))}')"
-            width="400" height="280"
-            style="opacity:${useDeferredSourceSwap ? '0.56' : '1'}"
-        >
+            width="400" height="280">
     </picture>`;
 }
 

@@ -2,8 +2,8 @@
 // کۆگای ڕاستی - Offline Storefront Cache
 // ==========================================
 
-const CACHE_VERSION = 'v30';
-const ASSET_VERSION = 'mobile-cool-v28';
+const CACHE_VERSION = 'v31';
+const ASSET_VERSION = 'mobile-cool-v29';
 const APP_CACHE = `kogay-rasti-app-${CACHE_VERSION}`;
 const DATA_CACHE = `kogay-rasti-data-${CACHE_VERSION}`;
 const IMAGE_CACHE = `kogay-rasti-images-${CACHE_VERSION}`;
@@ -64,12 +64,16 @@ async function putInCache(cacheName, request, response) {
     return response;
 }
 
-async function networkFirst(request, cacheName, fallbackUrl, fetchOptions) {
+async function networkFirst(request, cacheName, fallbackUrl, fetchOptions = {}) {
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 2500);
     try {
-        const response = await fetch(request, fetchOptions);
+        const response = await fetch(request, { ...fetchOptions, signal: controller.signal });
+        clearTimeout(timeout);
         if (!isCacheable(response)) throw new Error(`Uncacheable response: ${response.status}`);
         return putInCache(cacheName, request, response);
     } catch (error) {
+        clearTimeout(timeout);
         const cached = await getCached(request, fallbackUrl);
         return cached || Response.error();
     }
