@@ -1118,10 +1118,24 @@ function getProductPriceText(product) {
         : (LANG[currentLang]?.priceAsk || 'پرسیار بکە');
 }
 
-function handleProductImageError(img) {
+function handleProductImageError(img, fallbackPathArg) {
     if (!img) return;
     img.onerror = null;
+    img.closest('picture')?.querySelectorAll('source').forEach(s => s.remove());
+    
+    let fallbackPath = '';
+    if (fallbackPathArg) {
+        try { fallbackPath = decodeURIComponent(fallbackPathArg); } catch(e) {}
+    }
+
     const currentSrc = img.src || '';
+
+    if (fallbackPath && fallbackPath !== currentSrc && !currentSrc.endsWith(fallbackPath)) {
+        img.onerror = () => handleProductImageError(img);
+        img.src = getSafeImageSrc(fallbackPath);
+        return;
+    }
+
     if (!currentSrc.includes('raw.githubusercontent.com') && !currentSrc.startsWith('data:')) {
         const match = currentSrc.match(/(?:kek|gaz|sardy|jbs|mnalan|aylay)\/[^?#]+/i);
         if (match) {
@@ -1234,29 +1248,29 @@ function updateCartButtonAccessibility() {
     cartBtn.setAttribute('title', LANG[currentLang]?.cart || 'Cart');
 }
 
-// Only use a WebP source when the product data explicitly provides one or points to local image.
+// Only use a WebP source when the product data explicitly provides one or points to a webp image.
 function getWebpImagePath(product) {
-    const original = String(product?.image || '').trim();
     const explicit = String(product?.image_webp || '').trim();
-    if (/^(https?|data):/i.test(original) && !/^(https?|data):/i.test(explicit)) {
-        return /^(https?|data):.*webp/i.test(original) ? original : '';
+    if (explicit && /\.webp$/i.test(explicit)) {
+        return explicit;
     }
-    if (explicit) return explicit;
-    if (/\.(jpe?g|png)$/i.test(original) && !/^https?:\/\//i.test(original)) {
-        return original.replace(/\.(jpe?g|png)$/i, '.webp');
+    const original = String(product?.image || '').trim();
+    if (original && /\.webp$/i.test(original)) {
+        return original;
     }
-    return /\.webp$/i.test(original) ? original : '';
+    return '';
 }
 
-// Render product media inside <picture> so future WebP assets can slot in safely.
+// Render product media inside <picture> so WebP assets can slot in safely, but fallback to real image.
 function buildProductPicture(product, productName, priority = 'low') {
     const rawWebpSrc = getWebpImagePath(product);
     const webpSrc = rawWebpSrc ? getSafeImageSrc(rawWebpSrc) : '';
-    const imageSrc = escapeHtml(getSafeImageSrc(product.image || PLACEHOLDER));
+    const rawImgSrc = product?.image || PLACEHOLDER;
+    const imageSrc = escapeHtml(getSafeImageSrc(rawImgSrc));
     const effectiveSrc = webpSrc ? escapeHtml(webpSrc) : imageSrc;
     const eager = priority === 'high';
     const useDeferredSourceSwap = shouldUseCustomLazyImages() && !eager;
-    const sourceMarkup = webpSrc
+    const sourceMarkup = (webpSrc && webpSrc !== imageSrc)
         ? useDeferredSourceSwap
             ? `<source data-lazy-srcset="${escapeHtml(webpSrc)}" type="image/webp">`
             : `<source srcset="${escapeHtml(webpSrc)}" type="image/webp">`
@@ -1271,7 +1285,7 @@ function buildProductPicture(product, productName, priority = 'low') {
             loading="${eager ? 'eager' : 'lazy'}"
             decoding="async"
             fetchpriority="${priority}"
-            onerror="handleProductImageError(this)"
+            onerror="handleProductImageError(this, '${escapeHtml(encodeURIComponent(rawImgSrc))}')"
             width="400" height="280"
             style="opacity:${useDeferredSourceSwap ? '0.56' : '1'}"
         >
