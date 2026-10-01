@@ -1932,7 +1932,7 @@
           img.src = objectUrl;
         });
 
-        const MAX_W = 1200;
+        const MAX_W = 800;
         const scale = image.width > MAX_W ? (MAX_W / image.width) : 1;
         const width  = Math.max(1, Math.round(image.width  * scale));
         const height = Math.max(1, Math.round(image.height * scale));
@@ -1949,7 +1949,7 @@
         const blob = await new Promise((resolve, reject) => {
           canvas.toBlob(
             result => result ? resolve(result) : reject(new Error('فشاردانی وێنەکە سەرکەوتوو نەبوو')),
-            'image/webp', 0.78
+            'image/webp', 0.80
           );
         });
 
@@ -1974,7 +1974,7 @@
           img.src = objectUrl;
         });
 
-        const MAX_W = 1200;
+        const MAX_W = 800;
         const scale = image.width > MAX_W ? (MAX_W / image.width) : 1;
         const width = Math.max(1, Math.round(image.width * scale));
         const height = Math.max(1, Math.round(image.height * scale));
@@ -1988,7 +1988,7 @@
         ctx.fillRect(0, 0, width, height);
         ctx.drawImage(image, 0, 0, width, height);
 
-        let blob = await canvasToEncodedBlob(canvas, 'image/webp', 0.78);
+        let blob = await canvasToEncodedBlob(canvas, 'image/webp', 0.80);
         if (!blob || blob.type !== 'image/webp') {
           blob = await canvasToEncodedBlob(canvas, 'image/jpeg', 0.84);
         }
@@ -2840,45 +2840,159 @@
       return JSON.parse(jsonText || '[]');
     }
 
-    async function putJsonFileToGitHub(path, data, config = ghConfig) {
+    async function putJsonFileToGitHub(path, data, config = ghConfig, maxRetries = 3) {
       const cleanPath = String(path || '').replace(/^\/+/, '');
       const branch = getConfiguredBranch(config);
       const url = buildGitHubContentsApiUrl(cleanPath, config);
-      let sha = null;
 
-      const getRes = await fetch(`${url}?ref=${encodeURIComponent(branch)}`, {
-        method: 'GET',
-        headers: getGitHubAuthHeaders(config?.token),
-        cache: 'no-store'
-      });
+      for (let attempt = 1; attempt <= maxRetries; attempt++) {
+        let sha = null;
+        const getRes = await fetch(`${url}?ref=${encodeURIComponent(branch)}&_=${Date.now()}`, {
+          method: 'GET',
+          headers: getGitHubAuthHeaders(config?.token),
+          cache: 'no-store'
+        });
 
-      if (getRes.ok) {
-        const currentFile = await getRes.json();
-        sha = currentFile?.sha || null;
-      } else if (getRes.status !== 404) {
-        const detail = await readGitHubApiError(getRes);
-        throw new Error(formatGitHubApiError(getRes.status, cleanPath, detail, 'read'));
-      }
+        if (getRes.ok) {
+          const currentFile = await getRes.json();
+          sha = currentFile?.sha || null;
+        } else if (getRes.status !== 404) {
+          const detail = await readGitHubApiError(getRes);
+          throw new Error(formatGitHubApiError(getRes.status, cleanPath, detail, 'read'));
+        }
 
-      const body = {
-        message: `Update ${cleanPath}`,
-        content: encodeStringToBase64(JSON.stringify(data, null, 2) + '\n'),
-        branch
-      };
-      if (sha) body.sha = sha;
+        const body = {
+          message: `Update ${cleanPath}`,
+          content: encodeStringToBase64(JSON.stringify(data, null, 2) + '\n'),
+          branch
+        };
+        if (sha) body.sha = sha;
 
-      const putRes = await fetch(url, {
-        method: 'PUT',
-        headers: getGitHubAuthHeaders(config?.token, 'application/json'),
-        body: JSON.stringify(body)
-      });
+        const putRes = await fetch(url, {
+          method: 'PUT',
+          headers: getGitHubAuthHeaders(config?.token, 'application/json'),
+          body: JSON.stringify(body)
+        });
 
-      if (!putRes.ok) {
+        if (putRes.ok) {
+          return putRes.json();
+        }
+
+        if (putRes.status === 409 && attempt < maxRetries) {
+          await new Promise(r => setTimeout(r, 700 * attempt));
+          continue;
+        }
+
         const detail = await readGitHubApiError(putRes);
         throw new Error(formatGitHubApiError(putRes.status, cleanPath, detail, 'publish'));
       }
+    }
 
-      return putRes.json();
+    async function publishCatalogAtomic(filesMap, config = ghConfig, maxRetries = 3) {
+      const owner = config?.username || HARDCODED_GH_USERNAME;
+      const repo = config?.repo || HARDCODED_GH_REPO;
+      const branch = getConfiguredBranch(config) || 'main';
+      const token = config?.token || getSessionGhToken() || getStoredGhToken() || HARDCODED_GH_TOKEN;
+      const apiBase = `https://api.github.com/repos/${encodeURIComponent(owner)}/${encodeURIComponent(repo)}`;
+
+      for (let attempt = 1; attempt <= maxRetries; attempt++) {
+        try {
+          // 1. Fetch latest branch reference with cache buster
+          const refRes = await fetch(`${apiBase}/git/ref/heads/${encodeURIComponent(branch)}?_=${Date.now()}`, {
+            headers: getGitHubAuthHeaders(token),
+            cache: 'no-store'
+          });
+          if (!refRes.ok) {
+            const err = await readGitHubApiError(refRes);
+            throw new Error(`Failed to read branch ref (${refRes.status}): ${err}`);
+          }
+          const refData = await refRes.json();
+          const parentSha = refData?.object?.sha;
+          if (!parentSha) throw new Error('Could not resolve branch parent commit SHA');
+
+          // 2. Fetch parent commit to extract base tree SHA
+          const commitRes = await fetch(`${apiBase}/git/commits/${parentSha}?_=${Date.now()}`, {
+            headers: getGitHubAuthHeaders(token),
+            cache: 'no-store'
+          });
+          if (!commitRes.ok) {
+            const err = await readGitHubApiError(commitRes);
+            throw new Error(`Failed to read commit (${commitRes.status}): ${err}`);
+          }
+          const commitData = await commitRes.json();
+          const baseTreeSha = commitData?.tree?.sha;
+
+          // 3. Create a single new Git tree with all catalog JSON files
+          const tree = Object.entries(filesMap).map(([filePath, data]) => ({
+            path: filePath.replace(/^\/+/, ''),
+            mode: '100644',
+            type: 'blob',
+            content: JSON.stringify(data, null, 2) + '\n'
+          }));
+
+          const treeRes = await fetch(`${apiBase}/git/trees`, {
+            method: 'POST',
+            headers: getGitHubAuthHeaders(token, 'application/json'),
+            body: JSON.stringify({
+              base_tree: baseTreeSha,
+              tree
+            })
+          });
+          if (!treeRes.ok) {
+            const err = await readGitHubApiError(treeRes);
+            throw new Error(`Failed to create git tree (${treeRes.status}): ${err}`);
+          }
+          const treeData = await treeRes.json();
+          const newTreeSha = treeData?.sha;
+          if (!newTreeSha) throw new Error('GitHub did not return tree SHA');
+
+          // 4. Create single atomic commit pointing to the new tree
+          const newCommitRes = await fetch(`${apiBase}/git/commits`, {
+            method: 'POST',
+            headers: getGitHubAuthHeaders(token, 'application/json'),
+            body: JSON.stringify({
+              message: 'Update product catalog (atomic publish)',
+              tree: newTreeSha,
+              parents: [parentSha]
+            })
+          });
+          if (!newCommitRes.ok) {
+            const err = await readGitHubApiError(newCommitRes);
+            throw new Error(`Failed to create commit (${newCommitRes.status}): ${err}`);
+          }
+          const newCommitData = await newCommitRes.json();
+          const newCommitSha = newCommitData?.sha;
+          if (!newCommitSha) throw new Error('GitHub did not return commit SHA');
+
+          // 5. Advance branch reference to new commit
+          const updateRefRes = await fetch(`${apiBase}/git/refs/heads/${encodeURIComponent(branch)}`, {
+            method: 'PATCH',
+            headers: getGitHubAuthHeaders(token, 'application/json'),
+            body: JSON.stringify({
+              sha: newCommitSha,
+              force: false
+            })
+          });
+
+          if (updateRefRes.ok) {
+            return { success: true, commitSha: newCommitSha };
+          }
+
+          if ((updateRefRes.status === 409 || updateRefRes.status === 422) && attempt < maxRetries) {
+            await new Promise(r => setTimeout(r, 700 * attempt));
+            continue;
+          }
+
+          const refErr = await readGitHubApiError(updateRefRes);
+          throw new Error(`Failed to update branch ref (${updateRefRes.status}): ${refErr}`);
+        } catch (err) {
+          if (attempt < maxRetries) {
+            await new Promise(r => setTimeout(r, 700 * attempt));
+            continue;
+          }
+          throw err;
+        }
+      }
     }
 
     function getPublishReadyGhConfig() {
@@ -2908,12 +3022,22 @@
         const productFiles = buildProductFiles(normalizedProducts);
         const entries = Object.entries(productFiles);
 
-        for (let index = 0; index < entries.length; index += 1) {
-          const [path, fileData] = entries[index];
-          if (!isBackground) {
-            document.getElementById('loadingText').textContent = `بڵاوکردنەوەی ${path} (${index + 1}/${entries.length})...`;
+        if (!isBackground) {
+          document.getElementById('loadingText').textContent = 'بڵاوکردنەوەی خێرای سەرجەم فایلەکان لە گیت‌هەب...';
+        }
+
+        // Fast atomic publish (single Git Tree commit for all files in 1 shot)
+        try {
+          await publishCatalogAtomic(productFiles, ghConfig);
+        } catch (atomicErr) {
+          console.warn('Atomic publish failed, falling back to sequential put:', atomicErr);
+          for (let index = 0; index < entries.length; index += 1) {
+            const [path, fileData] = entries[index];
+            if (!isBackground) {
+              document.getElementById('loadingText').textContent = `بڵاوکردنەوەی ${path} (${index + 1}/${entries.length})...`;
+            }
+            await putJsonFileToGitHub(path, fileData, ghConfig);
           }
-          await putJsonFileToGitHub(path, fileData, ghConfig);
         }
 
         // Also sync the full product catalog to Firebase for consistency
