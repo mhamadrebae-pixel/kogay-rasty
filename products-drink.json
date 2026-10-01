@@ -118,14 +118,14 @@
     "createdAt": "2026-09-30T22:58:37.405Z",
     "description": "30 عەدەد",
     "description_en": "",
-    "hidden": true,
+    "hidden": false,
     "id": "drink-011",
     "image": "sardy/IMG_6199.webp",
     "image_webp": "sardy/IMG_6199.webp",
     "name": "لالە دیو",
     "name_en": "",
     "price": 6000,
-    "updatedAt": "2026-10-01T10:42:47.052Z"
+    "updatedAt": "2026-10-01T11:25:01.045Z"
   },
   {
     "category": "drink",
