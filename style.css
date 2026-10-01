@@ -3174,6 +3174,12 @@ body.light-mode .mobile-bottom-nav {
     box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.04);
 }
 @media (max-width: 767px) {
+    .cart-btn {
+        display: none !important;
+    }
+    .wishlist-filter-btn {
+        display: none !important;
+    }
     .mobile-bottom-nav {
         display: flex;
     }
