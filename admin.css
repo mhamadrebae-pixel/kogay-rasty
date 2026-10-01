@@ -3461,3 +3461,25 @@ tr:hover td {
     backdrop-filter: none !important;
   }
 }
+
+/* Add Product Page Modern Layout & Live Preview */
+.add-layout-grid {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 22px;
+  align-items: start;
+}
+
+.add-preview-card {
+  position: sticky;
+  top: 90px;
+}
+
+@media (max-width: 992px) {
+  .add-layout-grid {
+    grid-template-columns: 1fr;
+  }
+  .add-preview-card {
+    position: static;
+  }
+}

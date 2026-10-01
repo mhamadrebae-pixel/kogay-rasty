@@ -16,7 +16,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;500;600;700;800;900&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="admin.css?v=mobile-cool-v26">
+  <link rel="stylesheet" href="admin.css?v=mobile-cool-v35">
   <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
   <link rel="apple-touch-icon" href="icon-192.png">
  
@@ -289,14 +289,18 @@
             <div class="page-sub">دوای زیادکردن فەرامووش مەکە بڵاوی بکەیتەوە</div>
           </div>
         </div>
-        <div class="add-page-wrap">
-          <div class="s-card">
+        <div class="add-layout-grid">
+          <!-- Main Form Card -->
+          <div class="s-card" style="margin-bottom:0">
             <div class="s-card-title"><i class="fas fa-plus-circle"></i> زانیاری کاڵا</div>
             <input type="hidden" id="newId">
+            <input type="hidden" id="newImage">
+
             <div class="form-group">
               <label class="form-label"><span>*</span> ناوی کاڵا</label>
-              <input type="text" class="form-control" id="newName" placeholder="ناوی کاڵاکەت بنووسە">
+              <input type="text" class="form-control" id="newName" placeholder="ناوی کاڵاکەت بنووسە (نموونە: کێکی شوکۆلاتە)">
             </div>
+
             <div class="form-row">
               <div class="form-group">
                 <label class="form-label"><span>*</span> بەش</label>
@@ -314,31 +318,31 @@
                 <input type="number" class="form-control" id="newPrice" placeholder="5000" min="0" inputmode="numeric">
               </div>
             </div>
+
             <div class="form-group">
-              <label class="form-label"><span>*</span> وەسف</label>
-              <input type="text" class="form-control" id="newDesc" placeholder="٢٤ عەدەد">
+              <label class="form-label">وەسف / بڕ</label>
+              <input type="text" class="form-control" id="newDesc" placeholder="وەسفی کاڵا یان بڕەکەی (نموونە: ٢٤ دانە)">
             </div>
+
             <div class="form-group">
-              <label class="form-label">ناونیشانی وێنە</label>
-              <input type="text" class="form-control" id="newImage" placeholder="kek/photo.jpg">
-              <div class="form-hint">وێنەکە دەبێت پێشتر لە GitHub ئەپلۆدی کردبێیت</div>
+              <label class="form-label"><span>*</span> وێنەی کاڵا</label>
               <!-- Add-product uploader: preview, validate, and upload the chosen file before saving the product. -->
               <div class="upload-box" id="addImageUploadBox">
                 <div class="upload-picker-row">
                   <div class="upload-picker-copy">
-                    <span class="upload-picker-title">Image file</span>
-                    <span class="upload-picker-subtitle">PNG / JPG / WebP</span>
+                    <span class="upload-picker-title"><i class="fas fa-camera"></i> وێنەی بەرهەم</span>
+                    <span class="upload-picker-subtitle">PNG, JPG, WebP (ئۆتۆماتیکی دەپەسترێتەوە)</span>
                   </div>
                   <label class="upload-picker-btn" for="addImageFile">
-                    <i class="fas fa-folder-open"></i> Choose image
+                    <i class="fas fa-cloud-arrow-up"></i> هەڵبژاردنی وێنە
                   </label>
                 </div>
                 <input type="file" class="upload-input" id="addImageFile" accept="image/*">
                 <div class="upload-preview" id="addImagePreview">
                   <img id="addImagePreviewImg" alt="Add product preview">
                   <div class="upload-preview-placeholder">
-                    <i class="fas fa-image"></i>
-                    <span>Preview وێنەی هەڵبژێردراو</span>
+                    <i class="fas fa-cloud-arrow-up" style="font-size:28px;color:var(--primary);margin-bottom:6px"></i>
+                    <span>کلیک لە «هەڵبژاردنی وێنە» بکە بۆ دانانی وێنەی کاڵا</span>
                   </div>
                 </div>
                 <div class="upload-meta">
@@ -347,22 +351,76 @@
                 </div>
                 <!-- Size info: shown after compression so the user sees original → WebP gain -->
                 <div class="upload-size-row" id="addImageSizeRow" style="display:none">
-                  سەرەتا: <span id="addImageOrigSize"></span> &rarr; WebP: <span class="comp" id="addImageCompSize"></span>
+                  سەرەتا: <span id="addImageOrigSize"></span> &rarr; پەستێنراو (WebP): <span class="comp" id="addImageCompSize"></span>
                 </div>
                 <!-- Indeterminate bar shown while the GitHub PUT request is in flight -->
                 <div class="upload-progress" id="addImageProgress" style="display:none">
                   <div class="upload-progress-bar"></div>
                 </div>
-                <div style="display:flex;gap:10px;align-items:center;margin-top:10px;flex-wrap:wrap">
-                  <button type="button" class="upload-remove-btn" id="addImageRemoveBtn">لابردنی وێنە</button>
-                  <div class="form-hint" id="addImageHelp">PNG/JPG/WebP تەنها، قەبارەی سەرەتایی تا 5MB</div>
+                <div style="display:flex;gap:10px;align-items:center;margin-top:12px;flex-wrap:wrap">
+                  <button type="button" class="upload-remove-btn" id="addImageRemoveBtn"><i class="fas fa-trash-alt"></i> لابردنی وێنە</button>
+                  <div class="form-hint" id="addImageHelp">وێنەکە خۆکارانە دەبێتە WebP بە کەمترین قەبارە</div>
                 </div>
               </div>
             </div>
-            <div style="display:flex;gap:10px">
-              <button class="btn btn-primary" onclick="addProduct()" style="flex:1;justify-content:center"><i
-                  class="fas fa-plus"></i> زیادکردن</button>
-              <button class="btn btn-secondary" onclick="clearAdd()"><i class="fas fa-rotate-left"></i></button>
+
+            <!-- Product Visibility Switch -->
+            <div class="form-group" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:18px;padding:14px 18px;display:flex;align-items:center;justify-content:space-between;margin-top:14px;margin-bottom:24px">
+              <div>
+                <div style="font-weight:700;font-size:14px;color:white;display:flex;align-items:center;gap:8px">
+                  <i class="fas fa-eye" style="color:#4ade80"></i> دۆخی نیشاندان لە وێبسایت
+                </div>
+                <div style="font-size:12px;color:var(--text3);margin-top:4px">ئایا ئەم کاڵایە دەستبەجێ بۆ کڕیاران دەربکەوێت؟</div>
+              </div>
+              <label style="display:inline-flex;align-items:center;cursor:pointer;gap:8px;user-select:none">
+                <input type="checkbox" id="newStatusActive" checked style="width:20px;height:20px;accent-color:var(--primary);cursor:pointer">
+                <span id="newStatusLabel" style="font-size:13px;font-weight:700;color:#4ade80">نیشاندراو</span>
+              </label>
+            </div>
+
+            <div style="display:flex;gap:12px">
+              <button class="btn btn-primary" onclick="addProduct()" style="flex:1;justify-content:center;font-size:15px;font-weight:800;padding:14px 20px">
+                <i class="fas fa-plus-circle"></i> زیادکردنی کاڵا
+              </button>
+              <button class="btn btn-secondary" onclick="clearAdd()" title="پاککردنەوەی فۆرم" style="padding:0 20px">
+                <i class="fas fa-rotate-left"></i> پاککردنەوە
+              </button>
+            </div>
+          </div>
+
+          <!-- Live Storefront Preview Card -->
+          <div class="s-card add-preview-card" style="margin-bottom:0">
+            <div class="s-card-title"><i class="fas fa-desktop"></i> پێشبینینی کاڵاکە لە وێبسایت</div>
+            <div style="font-size:12px;color:var(--text3);margin-bottom:16px;line-height:1.7">
+              بەپێی ئەو زانیارییانەی دەینوسیت، کاڵاکە بۆ کڕیاران لە ناو ماڵپەڕ بەم شێوازە دەردەکەوێت:
+            </div>
+            <div class="live-preview-box" style="background:rgba(255,255,255,0.02);border:1px dashed rgba(255,122,24,0.3);border-radius:22px;padding:16px;display:flex;justify-content:center">
+              <div class="product-card" id="addLivePreviewCard" style="width:100%;max-width:280px;background:#181c2b;border:1px solid rgba(255,255,255,0.08);border-radius:20px;overflow:hidden;box-shadow:0 14px 30px rgba(0,0,0,0.3)">
+                <div style="position:relative;width:100%;height:180px;background:rgba(255,255,255,0.04);display:flex;align-items:center;justify-content:center;overflow:hidden">
+                  <img id="livePreviewImg" src="" alt="Live Preview" style="width:100%;height:100%;object-fit:cover;display:none">
+                  <div id="livePreviewPlaceholder" style="display:flex;flex-direction:column;align-items:center;gap:8px;color:var(--text3);font-size:12px">
+                    <i class="fas fa-image" style="font-size:32px;color:rgba(255,255,255,0.15)"></i>
+                    <span>وێنەی کاڵا</span>
+                  </div>
+                  <span id="livePreviewBadge" style="position:absolute;top:10px;right:10px;background:var(--primary);color:white;font-size:11px;font-weight:700;padding:3px 8px;border-radius:50px">کێک</span>
+                </div>
+                <div style="padding:14px">
+                  <h3 id="livePreviewName" style="font-size:15px;font-weight:800;color:white;margin:0 0 6px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">ناوی کاڵا</h3>
+                  <p id="livePreviewDesc" style="font-size:12px;color:var(--text3);margin:0 0 12px;min-height:18px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">وەسفی کاڵا لێرە دەبێت</p>
+                  <div style="display:flex;align-items:center;justify-content:space-between;padding-top:10px;border-top:1px solid rgba(255,255,255,0.06)">
+                    <div>
+                      <div style="font-size:10px;color:var(--text3)">نرخ</div>
+                      <div id="livePreviewPrice" style="font-size:15px;font-weight:800;color:var(--primary)">0 IQD</div>
+                    </div>
+                    <div style="width:34px;height:34px;border-radius:10px;background:var(--primary);display:flex;align-items:center;justify-content:center;color:white">
+                      <i class="fas fa-cart-plus"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="livePreviewStatusNotice" style="margin-top:14px;padding:8px 12px;border-radius:12px;font-size:11px;background:rgba(34,197,94,0.1);color:#4ade80;text-align:center;font-weight:600">
+              <i class="fas fa-check-circle"></i> ئەم کاڵایە لە وێبسایت بۆ هەمووان دەردەکەوێت
             </div>
           </div>
         </div>
@@ -497,17 +555,18 @@
         </div>
         <div class="form-group"><label class="form-label">وەسف</label><input type="text" class="form-control"
             id="editDesc"></div>
-        <div class="form-group"><label class="form-label">ناونیشانی وێنە</label><input type="text" class="form-control"
-            id="editImage">
+        <div class="form-group">
+          <input type="hidden" id="editImage">
+          <label class="form-label">وێنەی کاڵا</label>
           <!-- Edit-product uploader: optionally replace the current image with a newly uploaded GitHub file. -->
           <div class="upload-box" id="editImageUploadBox">
             <div class="upload-picker-row">
               <div class="upload-picker-copy">
-                <span class="upload-picker-title">Replace image</span>
-                <span class="upload-picker-subtitle">Choose a new file</span>
+                <span class="upload-picker-title"><i class="fas fa-camera"></i> گۆڕینی وێنەی کاڵا</span>
+                <span class="upload-picker-subtitle">PNG, JPG, WebP (ئۆتۆماتیکی دەپەسترێتەوە)</span>
               </div>
               <label class="upload-picker-btn" for="editImageFile">
-                <i class="fas fa-folder-open"></i> Choose image
+                <i class="fas fa-cloud-arrow-up"></i> هەڵبژاردنی وێنەی نوێ
               </label>
             </div>
             <input type="file" class="upload-input" id="editImageFile" accept="image/*">
@@ -515,7 +574,7 @@
               <img id="editImagePreviewImg" alt="Edit product preview">
               <div class="upload-preview-placeholder">
                 <i class="fas fa-image"></i>
-                <span>Preview وێنەی نوێ</span>
+                <span>وێنەی کاڵا لێرە دەردەکەوێت</span>
               </div>
             </div>
             <div class="upload-meta">
@@ -531,8 +590,8 @@
               <div class="upload-progress-bar"></div>
             </div>
             <div style="display:flex;gap:10px;align-items:center;margin-top:10px;flex-wrap:wrap">
-              <button type="button" class="upload-remove-btn" id="editImageRemoveBtn">لابردنی وێنەی نوێ</button>
-              <div class="form-hint" id="editImageHelp">ئەگەر فایلێک هەڵنەبژێریت، هەمان path ـی کۆن دەمێنێتەوە</div>
+              <button type="button" class="upload-remove-btn" id="editImageRemoveBtn"><i class="fas fa-trash-alt"></i> لابردنی وێنەی نوێ</button>
+              <div class="form-hint" id="editImageHelp">ئەگەر وێنەی نوێ دانەنێیت، وێنەی ئێستای کاڵاکە دەمێنێتەوە</div>
             </div>
           </div>
         </div>
@@ -748,6 +807,69 @@
       const name = document.getElementById('newName')?.value || '';
       const category = document.getElementById('newCat')?.value || 'cake';
       idInput.value = generateProductId(name, category);
+    }
+
+    function updateAddProductLivePreview() {
+      const name = document.getElementById('newName')?.value.trim() || 'ناوی کاڵا';
+      const cat = document.getElementById('newCat')?.value || 'cake';
+      const rawPrice = document.getElementById('newPrice')?.value.trim();
+      const desc = document.getElementById('newDesc')?.value.trim() || 'وەسفی کاڵا لێرە دەبێت';
+      const isActive = document.getElementById('newStatusActive')?.checked ?? true;
+
+      const nameEl = document.getElementById('livePreviewName');
+      const descEl = document.getElementById('livePreviewDesc');
+      const priceEl = document.getElementById('livePreviewPrice');
+      const badgeEl = document.getElementById('livePreviewBadge');
+      const noticeEl = document.getElementById('livePreviewStatusNotice');
+      const statusLabel = document.getElementById('newStatusLabel');
+
+      if (nameEl) nameEl.textContent = name;
+      if (descEl) descEl.textContent = desc;
+      if (priceEl) {
+        const priceNum = Number(rawPrice);
+        priceEl.textContent = (rawPrice && !isNaN(priceNum) && priceNum > 0)
+          ? `${priceNum.toLocaleString()} IQD`
+          : '0 IQD';
+      }
+      if (badgeEl) {
+        const catMap = { cake: 'کێک', gaz: 'گەز و بسکیت', drink: 'خواردنەوە', chips: 'چیپس', baby: 'مناڵان', family: 'عایلەی' };
+        badgeEl.textContent = catMap[cat] || cat;
+      }
+
+      if (statusLabel) {
+        statusLabel.textContent = isActive ? 'نیشاندراو' : 'شاراوە';
+        statusLabel.style.color = isActive ? '#4ade80' : '#fca5a5';
+      }
+
+      if (noticeEl) {
+        if (isActive) {
+          noticeEl.style.background = 'rgba(34,197,94,0.1)';
+          noticeEl.style.color = '#4ade80';
+          noticeEl.innerHTML = '<i class="fas fa-check-circle"></i> ئەم کاڵایە لە وێبسایت بۆ هەمووان دەردەکەوێت';
+        } else {
+          noticeEl.style.background = 'rgba(239,68,68,0.1)';
+          noticeEl.style.color = '#fca5a5';
+          noticeEl.innerHTML = '<i class="fas fa-eye-slash"></i> ئەم کاڵایە شاردراوەتەوە و کڕیاران نایبینن';
+        }
+      }
+
+      const imgEl = document.getElementById('livePreviewImg');
+      const placeholderEl = document.getElementById('livePreviewPlaceholder');
+      const previewImgEl = document.getElementById('addImagePreviewImg');
+      const previewFilled = document.getElementById('addImagePreview')?.classList.contains('is-filled');
+      const hasImage = previewFilled && previewImgEl && previewImgEl.src && previewImgEl.src.length > 10;
+
+      if (imgEl && placeholderEl) {
+        if (hasImage) {
+          imgEl.src = previewImgEl.src;
+          imgEl.style.display = 'block';
+          placeholderEl.style.display = 'none';
+        } else {
+          imgEl.src = '';
+          imgEl.style.display = 'none';
+          placeholderEl.style.display = 'flex';
+        }
+      }
     }
 
     function isValidCategory(category) {
@@ -1637,6 +1759,9 @@
       nameEl.textContent = fileName || 'هیچ فایلێک هەڵنەبژێردراوە';
       box.classList.remove('is-active', 'is-error');
       if (boxState) box.classList.add(boxState);
+      if (prefix === 'add' && typeof updateAddProductLivePreview === 'function') {
+        updateAddProductLivePreview();
+      }
     }
 
     // Shared local file selection handler used by add/edit image pickers.
@@ -1717,6 +1842,9 @@
       setImageUploadState('add', 'ئامادەیە', 's-ready');
       setImageSizeInfo('add', '', '');
       setUploadProgress('add', false);
+      if (typeof updateAddProductLivePreview === 'function') {
+        updateAddProductLivePreview();
+      }
     }
 
     // Reset the edit upload picker while preserving the current saved path in the text field.
@@ -2033,10 +2161,17 @@
       const searchInput = document.getElementById('srch');
       if (searchInput) searchInput.oninput = debounceFilterProds;
       const newNameInput = document.getElementById('newName');
-      if (newNameInput) newNameInput.addEventListener('input', refreshNewProductIdPreview);
+      if (newNameInput) newNameInput.addEventListener('input', () => { refreshNewProductIdPreview(); updateAddProductLivePreview(); });
       const newCategoryInput = document.getElementById('newCat');
-      if (newCategoryInput) newCategoryInput.addEventListener('change', refreshNewProductIdPreview);
+      if (newCategoryInput) newCategoryInput.addEventListener('change', () => { refreshNewProductIdPreview(); updateAddProductLivePreview(); });
+      const newPriceInput = document.getElementById('newPrice');
+      if (newPriceInput) newPriceInput.addEventListener('input', updateAddProductLivePreview);
+      const newDescInput = document.getElementById('newDesc');
+      if (newDescInput) newDescInput.addEventListener('input', updateAddProductLivePreview);
+      const newStatusInput = document.getElementById('newStatusActive');
+      if (newStatusInput) newStatusInput.addEventListener('change', updateAddProductLivePreview);
       refreshNewProductIdPreview();
+      updateAddProductLivePreview();
       const updateClockDisplay = () => {
         const el = document.getElementById('clock');
         if (!el) return;
@@ -2829,7 +2964,7 @@
       if (!cleanCategory || !isValidCategory(cleanCategory)) throw new Error('تکایە بەشێکی دروست بۆ کاڵاکە هەڵبژێرە');
       if (!cleanId || (!existingId && !isValidProductId(cleanId))) throw new Error('کۆدی کاڵا دروست نییە');
       if (!Number.isFinite(normalizedPrice) || normalizedPrice < 0) throw new Error('نرخی کاڵا دەبێت ژمارەیەکی دروست بێت (٠ یان زیاتر)');
-      if (!cleanImage) throw new Error('تکایە وێنەیەک هەڵبژێرە یان ناونیشانی وێنە بنووسە');
+      if (!cleanImage) throw new Error('تکایە وێنەیەک بۆ کاڵاکە هەڵبژێرە');
 
       const duplicate = currentProducts.some(product =>
         String(product?.id || '').trim().toLowerCase() === cleanId.toLowerCase() &&
@@ -3040,7 +3175,7 @@
           imagePath = upload.path;
           imageInput.value = imagePath;
         } else if (!imagePath) {
-          throw new Error('تکایە وێنەیەک هەڵبژێرە یان ناونیشانی وێنە بنووسە');
+          throw new Error('تکایە وێنەیەک بۆ کاڵاکە هەڵبژێرە');
         }
 
         const validated = validateProductInput({
@@ -3051,6 +3186,8 @@
           image: imagePath
         });
 
+        const isHidden = !(document.getElementById('newStatusActive')?.checked ?? true);
+
         pushUndoState();
         const newRecord = normalizeProductRecord({
           id: validated.id,
@@ -3060,7 +3197,7 @@
           description,
           image: validated.image,
           image_webp: validated.image.endsWith('.webp') ? validated.image : '',
-          hidden: false
+          hidden: isHidden
         }, { touchUpdatedAt: true });
         currentProducts.push(newRecord);
 
@@ -3107,8 +3244,18 @@
         if (el) el.value = '';
       });
       document.getElementById('newCat').value = 'cake';
+      const statusCheckbox = document.getElementById('newStatusActive');
+      if (statusCheckbox) statusCheckbox.checked = true;
+      const statusLabel = document.getElementById('newStatusLabel');
+      if (statusLabel) {
+        statusLabel.textContent = 'نیشاندراو';
+        statusLabel.style.color = '#4ade80';
+      }
       resetAddImageUI();
       refreshNewProductIdPreview();
+      if (typeof updateAddProductLivePreview === 'function') {
+        updateAddProductLivePreview();
+      }
     }
 
     function updateGhStatus() {
