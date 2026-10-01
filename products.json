@@ -3090,19 +3090,5 @@
     "name_en": "",
     "price": 5500,
     "updatedAt": "2026-09-30T23:23:29.109Z"
-  },
-  {
-    "id": "cake-049",
-    "name": "دددد",
-    "category": "cake",
-    "price": 50000,
-    "description": "55",
-    "image": "kek/cake-1790854732497-jico5c.webp",
-    "image_webp": "kek/cake-1790854732497-jico5c.webp",
-    "hidden": false,
-    "name_en": "",
-    "description_en": "",
-    "createdAt": "2026-10-01T11:38:54.538Z",
-    "updatedAt": "2026-10-01T11:38:54.538Z"
   }
 ]
