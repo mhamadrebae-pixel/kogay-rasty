@@ -34,10 +34,10 @@
         })();
     </script>
     <!-- جیاتی v=1, v=2 -->
-    <link rel="stylesheet" href="style.css?v=mobile-cool-v31">
-    <link rel="icon" type="image/png" sizes="192x192" href="./icon-192.png?v=mobile-cool-v31">
-    <link rel="apple-touch-icon" href="./icon-192.png?v=mobile-cool-v31">
-    <link rel="manifest" href="manifest.json?v=mobile-cool-v31">
+    <link rel="stylesheet" href="style.css?v=mobile-cool-v32">
+    <link rel="icon" type="image/png" sizes="192x192" href="./icon-192.png?v=mobile-cool-v32">
+    <link rel="apple-touch-icon" href="./icon-192.png?v=mobile-cool-v32">
+    <link rel="manifest" href="manifest.json?v=mobile-cool-v32">
     <meta name="description" content="کۆگای ڕاستی — باشترین کاڵاکان بەنرخی گونجاو">
     <!-- Open Graph / Social Share -->
     <meta property="og:title" content="کۆگای ڕاستی">
@@ -49,8 +49,8 @@
     <meta name="twitter:title" content="کۆگای ڕاستی">
     <meta name="twitter:image" content="./icon-512.png">
     <meta name="theme-color" content="#f97316">
-    <script src="analytics.js?v=mobile-cool-v31" defer></script>
-    <script src="script.js?v=mobile-cool-v31" defer></script>
+    <script src="analytics.js?v=mobile-cool-v32" defer></script>
+    <script src="script.js?v=mobile-cool-v32" defer></script>
 </head>
  
 <body>
@@ -166,6 +166,13 @@
             </button>
         </div>
         <div class="categories-container" id="categoriesContainer">
+            <button class="category-card" data-category="all" onclick="showCategory('all', this)">
+                <div class="category-icon"><i class="fas fa-boxes-stacked"></i></div>
+                <div class="category-info">
+                    <span class="category-name">هەموو</span>
+                    <span class="category-count">0 کاڵا</span>
+                </div>
+            </button>
             <button class="category-card active" data-category="cake" onclick="showCategory('cake', this)">
                 <div class="category-icon"><i class="fas fa-cake-candles"></i></div>
                 <div class="category-info">
@@ -229,6 +236,7 @@
             </div>
         </div>
         <div class="products-grid" id="productsGrid"></div>
+        <div class="load-more-wrap" id="loadMoreWrap" style="display:none;"></div>
         <div class="pagination-wrap" id="paginationWrap" style="display:none;"></div>
         <div class="empty-state" id="emptyState" style="display:none;">
             <div class="empty-icon"><i class="fas fa-box-open"></i></div>
@@ -446,7 +454,7 @@
                         });
                     }
 
-                    navigator.serviceWorker.register('./sw.js?v=realtime-sync-v31')
+                    navigator.serviceWorker.register('./sw.js?v=realtime-sync-v32')
                         .then(reg => {
                             console.log('[SW] Registered:', reg.scope);
                             reg.update().catch(() => { });

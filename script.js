@@ -61,7 +61,8 @@ const ICON_SVG_MAP = {
     'fa-fire': '<path fill="currentColor" stroke="none" d="M12 2c.5 2.5-.5 4.5-2 6 2.5.5 5 2.5 5 6a6 6 0 1 1-12 0c0-3.5 2.5-6.5 4-8 .5 1.5 1.5 2.5 2.5 3 0-2.5 1-5.5 2.5-7Z"/>',
     'fa-sparkles': '<path fill="currentColor" stroke="none" d="m12 2 1.8 4.2L18 8l-4.2 1.8L12 14l-1.8-4.2L6 8l4.2-1.8L12 2Z"/>',
     'fa-sort': '<path d="M7 4v16M7 4l-4 4M7 4l4 4M13 6h8M13 11h6M13 16h4M13 21h2"/>',
-    'fa-arrow-left': '<path d="M19 12H5M12 19l-7-7 7-7"/>'
+    'fa-arrow-left': '<path d="M19 12H5M12 19l-7-7 7-7"/>',
+    'fa-boxes-stacked': '<path d="M4 14h8v6H4zM12 14h8v6h-8zM8 4h8v6H8z"/><path d="M4 17h16M8 7h8"/>'
 };
 
 function shouldUseLiteMode() {
@@ -269,6 +270,10 @@ const LANG = {
         sortPriceAsc: 'نرخ: کەم بۆ زۆر ⬆',
         sortPriceDesc: 'نرخ: زۆر بۆ کەم ⬇',
         sortNewest: 'نوێترین کاڵاکان ✨',
+        catAll: 'هەموو',
+        catAllTitle: 'هەموو بەشەکان',
+        loadMore: 'کاڵای زیاتر ببینە',
+        allLoaded: 'هەموو کاڵاکان نیشان دراون ✓',
     },
     en: {
         dir: 'ltr',
@@ -355,6 +360,10 @@ const LANG = {
         sortPriceAsc: 'Price: Low to High ⬆',
         sortPriceDesc: 'Price: High to Low ⬇',
         sortNewest: 'Newest first ✨',
+        catAll: 'All',
+        catAllTitle: 'All Products',
+        loadMore: 'Load more products',
+        allLoaded: 'All products displayed ✓',
     }
 };
 let currentLang = localStorage.getItem('shopLang') || 'ku';
@@ -394,7 +403,12 @@ function setLang(l, options = {}) {
     // Category names
     document.querySelectorAll('.category-card').forEach(card => {
         const categoryKey = card.dataset.category;
-        if (categoryKey && t.cats[categoryKey]) {
+        if (categoryKey === 'all') {
+            const nm = card.querySelector('.category-name');
+            if (nm) nm.textContent = t.catAll || 'هەموو';
+            const cc = card.querySelector('.category-count');
+            if (cc) cc.textContent = formatItemCount(products.length || 0);
+        } else if (categoryKey && t.cats[categoryKey]) {
             const nm = card.querySelector('.category-name');
             if (nm) nm.textContent = t.cats[categoryKey];
             const cc = card.querySelector('.category-count');
@@ -1520,6 +1534,15 @@ function getCurrentViewState() {
         };
     }
 
+    if (currentCategory === 'all') {
+        const titleText = LANG[currentLang]?.catAllTitle || 'هەموو بەشەکان';
+        return {
+            mode: 'all',
+            title: `<i class="fas fa-boxes-stacked"></i> ${escapeHtml(titleText)}`,
+            items: applySorting(products)
+        };
+    }
+
     const category = categories[currentCategory] || { name: currentCategory, icon: 'fa-box' };
     return {
         mode: 'category',
@@ -1750,7 +1773,10 @@ function updateCategoryCounts() {
     Object.keys(categories).forEach(cat => { categories[cat].count = countMap[cat] || 0; });
     document.querySelectorAll('.category-card').forEach(card => {
         const categoryKey = card.dataset.category;
-        if (categoryKey && categories[categoryKey]) {
+        if (categoryKey === 'all') {
+            const el = card.querySelector('.category-count');
+            if (el) el.textContent = formatItemCount(products.length || 0);
+        } else if (categoryKey && categories[categoryKey]) {
             const el = card.querySelector('.category-count');
             if (el) el.textContent = formatItemCount(categories[categoryKey].count || 0);
         }
@@ -1812,6 +1838,7 @@ function loadTheme() {
 async function showCategory(category, element) {
     currentCategory = category;
     currentPage = 1;
+    visibleBatchSize = BATCH_SIZE;
     currentSearchQuery = '';
     isGlobalSearch = false;
     searchCatalogLoadState = 'idle';
@@ -1820,17 +1847,26 @@ async function showCategory(category, element) {
     document.getElementById('searchInput') && (document.getElementById('searchInput').value = '');
     document.getElementById('searchInputMobile') && (document.getElementById('searchInputMobile').value = '');
     document.querySelectorAll('.category-card').forEach(c => c.classList.remove('active'));
-    const targetCard = element || getCategoryCard(category);
+    const targetCard = element || document.querySelector(`.category-card[data-category="${category}"]`) || getCategoryCard(category);
     if (targetCard) targetCard.classList.add('active');
-    // Lazy-load the category file on first visit, then reuse the cached results.
-    if (!loadedCategories.has(category)) {
+
+    if (category === 'all') {
+        if (hasUnloadedCategories()) {
+            showProductSkeletons();
+            await ensureAllProductsLoaded({ showSkeleton: false });
+            updateCategoryCounts();
+            updateHeroStats();
+        }
+    } else if (!loadedCategories.has(category)) {
         showProductSkeletons();
         await ensureCategoryLoaded(category, { showSkeleton: false });
         updateCategoryCounts();
         updateHeroStats();
     }
     renderCurrentView({ resetPage: true });
-    preloadRemainingCategories();
+    if (category !== 'all') {
+        preloadRemainingCategories();
+    }
 }
  
 function buildProductBadgeMarkup(product) {
@@ -2079,15 +2115,23 @@ function buildSearchResultsMarkup(productsPage) {
     return html;
 }
 
+const BATCH_SIZE = 24;
+let visibleBatchSize = BATCH_SIZE;
+
 function renderCurrentView({ resetPage = false } = {}) {
     const grid = document.getElementById('productsGrid');
     const emptyState = document.getElementById('emptyState');
     const countEl = document.getElementById('productsCount');
     const titleEl = document.getElementById('categoryTitle');
+    const loadMoreWrap = document.getElementById('loadMoreWrap');
     if (!grid) return;
-    if (resetPage) currentPage = 1;
+    if (resetPage) {
+        currentPage = 1;
+        visibleBatchSize = BATCH_SIZE;
+    }
 
     if (isLoadingProducts && products.length === 0) {
+        if (loadMoreWrap) loadMoreWrap.style.display = 'none';
         showProductSkeletons();
         return;
     }
@@ -2102,6 +2146,7 @@ function renderCurrentView({ resetPage = false } = {}) {
 
     if (filtered.length === 0 && viewState.mode === 'search' && shouldShowSearchLoadNotice()) {
         if (emptyState) emptyState.style.display = 'none';
+        if (loadMoreWrap) loadMoreWrap.style.display = 'none';
         grid.innerHTML = buildSearchLoadNoticeMarkup();
         hydrateIcons(titleEl || document);
         hydrateIcons(grid);
@@ -2110,6 +2155,7 @@ function renderCurrentView({ resetPage = false } = {}) {
     }
 
     if (filtered.length === 0) {
+        if (loadMoreWrap) loadMoreWrap.style.display = 'none';
         hydrateIcons(titleEl || document);
         renderEmptyState(viewState);
         return;
@@ -2117,7 +2163,12 @@ function renderCurrentView({ resetPage = false } = {}) {
 
     if (emptyState) emptyState.style.display = 'none';
 
-    const visible = paginate(filtered);
+    // Thermal-Safe Progressive Rendering:
+    // If viewing 'all' or filtered list > 36 items, chunk into batches of 24
+    const isBatched = (currentCategory === 'all' || filtered.length > 36) && viewState.mode !== 'search';
+    const limit = isBatched ? Math.min(visibleBatchSize, filtered.length) : filtered.length;
+    const visible = filtered.slice(0, limit);
+
     grid.innerHTML = viewState.mode === 'search'
         ? buildSearchResultsMarkup(visible)
         : visible.map((p, i) => buildProductCard(p, i)).join('');
@@ -2126,6 +2177,51 @@ function renderCurrentView({ resetPage = false } = {}) {
     hydrateIcons(grid);
     observeNewImages(grid);
     renderPagination(filtered.length);
+    renderBatchControls(filtered.length, isBatched);
+}
+
+function renderBatchControls(totalCount, isBatched) {
+    const wrap = document.getElementById('loadMoreWrap');
+    if (!wrap) return;
+    if (!isBatched || totalCount <= BATCH_SIZE) {
+        wrap.style.display = 'none';
+        wrap.innerHTML = '';
+        return;
+    }
+    const t = LANG[currentLang];
+    const currentlyShowing = Math.min(visibleBatchSize, totalCount);
+    if (currentlyShowing < totalCount) {
+        wrap.style.display = 'flex';
+        wrap.innerHTML = `
+            <button type="button" class="load-more-btn" onclick="loadNextBatch()">
+                <i class="fas fa-boxes-stacked"></i>
+                <span>${escapeHtml(t?.loadMore || 'کاڵای زیاتر ببینە')} (${currentlyShowing} لە ${totalCount})</span>
+            </button>
+        `;
+        hydrateIcons(wrap);
+    } else {
+        wrap.style.display = 'flex';
+        wrap.innerHTML = `<span class="all-loaded-text">${escapeHtml(t?.allLoaded || 'هەموو کاڵاکان نیشان دراون ✓')}</span>`;
+    }
+}
+
+function loadNextBatch() {
+    const viewState = getCurrentViewState();
+    const filtered = viewState.items;
+    const start = visibleBatchSize;
+    visibleBatchSize += BATCH_SIZE;
+    const nextItems = filtered.slice(start, visibleBatchSize);
+    const grid = document.getElementById('productsGrid');
+    if (grid && nextItems.length > 0) {
+        const temp = document.createElement('div');
+        temp.innerHTML = nextItems.map((p, i) => buildProductCard(p, start + i)).join('');
+        while (temp.firstChild) {
+            grid.appendChild(temp.firstChild);
+        }
+        hydrateIcons(grid);
+        observeNewImages(grid);
+    }
+    renderBatchControls(filtered.length, true);
 }
 
 function loadMoreProducts() {
