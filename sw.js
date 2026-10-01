@@ -2,8 +2,8 @@
 // کۆگای ڕاستی - Offline Storefront Cache
 // ==========================================
 
-const CACHE_VERSION = 'v34';
-const ASSET_VERSION = 'mobile-cool-v32';
+const CACHE_VERSION = 'v35';
+const ASSET_VERSION = 'mobile-cool-v35';
 const APP_CACHE = `kogay-rasti-app-${CACHE_VERSION}`;
 const DATA_CACHE = `kogay-rasti-data-${CACHE_VERSION}`;
 const IMAGE_CACHE = `kogay-rasti-images-${CACHE_VERSION}`;
