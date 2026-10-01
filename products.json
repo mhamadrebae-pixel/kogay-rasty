@@ -778,14 +778,14 @@
     "createdAt": "2026-09-30T22:56:43.315Z",
     "description": "36 عەدەد",
     "description_en": "",
-    "hidden": true,
+    "hidden": false,
     "id": "chips-039",
     "image": "jbs/photo_27_2026-02-20_22-38-05.webp",
     "image_webp": "jbs/photo_27_2026-02-20_22-38-05.webp",
     "name": "نینی لیمۆ",
     "name_en": "",
     "price": 7250,
-    "updatedAt": "2026-09-30T22:56:45.532Z"
+    "updatedAt": "2026-10-01T10:42:29.260Z"
   },
   {
     "category": "chips",
