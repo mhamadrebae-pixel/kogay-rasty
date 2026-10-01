@@ -1,7 +1,18 @@
 [
   {
     "category": "cake",
-    "createdAt": "2026-09-30T22:40:55.563Z",
+    "description": "24 عەدەد",
+    "description_en": "",
+    "hidden": false,
+    "id": "cake-001",
+    "image": "kek/IMG_0214.webp",
+    "image_webp": "kek/IMG_0214.webp",
+    "name": "نەزەری دووقول",
+    "name_en": "",
+    "price": 5250
+  },
+  {
+    "category": "cake",
     "description": "60 عەدەد",
     "description_en": "",
     "hidden": false,
@@ -10,12 +21,10 @@
     "image_webp": "kek/IMG_0211.webp",
     "name": "کولیچەی دوانی",
     "name_en": "",
-    "price": 6250,
-    "updatedAt": "2026-09-30T22:40:55.563Z"
+    "price": 5750
   },
   {
     "category": "cake",
-    "createdAt": "2026-09-30T22:42:42.965Z",
     "description": "24 عەدەد",
     "description_en": "",
     "hidden": false,
@@ -24,26 +33,34 @@
     "image_webp": "kek/IMG_0212.webp",
     "name": "کێکی ئادرین",
     "name_en": "",
-    "price": 5250,
-    "updatedAt": "2026-09-30T22:42:42.965Z"
+    "price": 5000
   },
   {
     "category": "cake",
-    "createdAt": "2026-09-30T22:44:07.648Z",
+    "description": "24 عەدەد",
+    "description_en": "",
+    "hidden": false,
+    "id": "cake-004",
+    "image": "kek/IMG_0213.webp",
+    "image_webp": "kek/IMG_0213.webp",
+    "name": "لۆپۆچۆکۆ",
+    "name_en": "",
+    "price": 5250
+  },
+  {
+    "category": "cake",
     "description": "24 عەدەد",
     "description_en": "",
     "hidden": false,
     "id": "cake-005",
     "image": "kek/photo_1_2026-02-20_22-41-44.webp",
     "image_webp": "kek/photo_1_2026-02-20_22-41-44.webp",
-    "name": "کێکی تورتە",
+    "name": "کێکی دوانی قاوە",
     "name_en": "",
-    "price": 3500,
-    "updatedAt": "2026-09-30T22:44:07.648Z"
+    "price": 2500
   },
   {
     "category": "cake",
-    "createdAt": "2026-09-30T22:45:12.605Z",
     "description": "24 عەدەد",
     "description_en": "",
     "hidden": false,
@@ -52,12 +69,10 @@
     "image_webp": "kek/photo_2_2026-02-20_22-41-44.webp",
     "name": "موفید شلیک",
     "name_en": "",
-    "price": 5000,
-    "updatedAt": "2026-09-30T22:45:12.605Z"
+    "price": 4750
   },
   {
     "category": "cake",
-    "createdAt": "2026-09-30T22:45:43.632Z",
     "description": "24 عەدەد",
     "description_en": "",
     "hidden": false,
@@ -66,8 +81,79 @@
     "image_webp": "kek/photo_3_2026-02-20_22-41-44.webp",
     "name": "موفید پرتەقاڵ",
     "name_en": "",
-    "price": 5000,
-    "updatedAt": "2026-09-30T22:45:43.632Z"
+    "price": 4750
+  },
+  {
+    "category": "cake",
+    "description": "24 عەدەد",
+    "description_en": "",
+    "hidden": false,
+    "id": "cake-008",
+    "image": "kek/photo_7_2026-02-20_22-41-44.webp",
+    "image_webp": "kek/photo_7_2026-02-20_22-41-44.webp",
+    "name": "موفید پەنیر",
+    "name_en": "",
+    "price": 4750
+  },
+  {
+    "category": "cake",
+    "description": "24 عەدەد",
+    "description_en": "",
+    "hidden": false,
+    "id": "cake-009",
+    "image": "kek/photo_5_2026-02-20_22-41-44.webp",
+    "image_webp": "kek/photo_5_2026-02-20_22-41-44.webp",
+    "name": "موفید پڵەس کەرەمێڵ",
+    "name_en": "",
+    "price": 4750
+  },
+  {
+    "category": "cake",
+    "description": "24 عەدەد",
+    "description_en": "",
+    "hidden": false,
+    "id": "cake-010",
+    "image": "kek/photo_4_2026-02-20_22-41-44.webp",
+    "image_webp": "kek/photo_4_2026-02-20_22-41-44.webp",
+    "name": "کێکی جەلی",
+    "name_en": "",
+    "price": 5000
+  },
+  {
+    "category": "cake",
+    "description": "24 عەدەد",
+    "description_en": "",
+    "hidden": false,
+    "id": "cake-011",
+    "image": "kek/photo_6_2026-02-20_22-41-44.webp",
+    "image_webp": "kek/photo_6_2026-02-20_22-41-44.webp",
+    "name": "دوو قول",
+    "name_en": "",
+    "price": 5000
+  },
+  {
+    "category": "cake",
+    "description": "24 عەدەد",
+    "description_en": "",
+    "hidden": false,
+    "id": "cake-012",
+    "image": "kek/photo_8_2026-02-20_22-41-44.webp",
+    "image_webp": "kek/photo_8_2026-02-20_22-41-44.webp",
+    "name": "فۆڕچن تەخت سور",
+    "name_en": "",
+    "price": 5000
+  },
+  {
+    "category": "cake",
+    "description": "24 عەدەد",
+    "description_en": "",
+    "hidden": false,
+    "id": "cake-013",
+    "image": "kek/photo_9_2026-02-20_22-41-44.webp",
+    "image_webp": "kek/photo_9_2026-02-20_22-41-44.webp",
+    "name": "فۆڕچت دوبەی",
+    "name_en": "",
+    "price": 5000
   },
   {
     "category": "cake",
@@ -83,7 +169,6 @@
   },
   {
     "category": "cake",
-    "createdAt": "2026-09-30T22:46:53.126Z",
     "description": "24 عەدەد",
     "description_en": "",
     "hidden": false,
@@ -92,12 +177,10 @@
     "image_webp": "kek/photo_11_2026-02-20_22-41-44.webp",
     "name": "دیل کێک سور",
     "name_en": "",
-    "price": 5250,
-    "updatedAt": "2026-09-30T22:46:53.126Z"
+    "price": 5000
   },
   {
     "category": "cake",
-    "createdAt": "2026-09-30T22:47:09.646Z",
     "description": "24 عەدەد",
     "description_en": "",
     "hidden": false,
@@ -106,12 +189,34 @@
     "image_webp": "kek/photo_12_2026-02-20_22-41-44.webp",
     "name": "دیل کێک ڕەش",
     "name_en": "",
-    "price": 5250,
-    "updatedAt": "2026-09-30T22:47:09.646Z"
+    "price": 5000
   },
   {
     "category": "cake",
-    "createdAt": "2026-09-30T22:47:31.792Z",
+    "description": "24 عەدەد",
+    "description_en": "",
+    "hidden": false,
+    "id": "cake-017",
+    "image": "kek/photo_14_2026-02-20_22-41-44.webp",
+    "image_webp": "kek/photo_14_2026-02-20_22-41-44.webp",
+    "name": "دیل کێک گۆڵد",
+    "name_en": "",
+    "price": 5000
+  },
+  {
+    "category": "cake",
+    "description": "24 عەدەد",
+    "description_en": "",
+    "hidden": false,
+    "id": "cake-018",
+    "image": "kek/photo_13_2026-02-20_22-41-44.webp",
+    "image_webp": "kek/photo_13_2026-02-20_22-41-44.webp",
+    "name": "رۆزینا گوێزی",
+    "name_en": "",
+    "price": 4750
+  },
+  {
+    "category": "cake",
     "description": "24 عەدەد",
     "description_en": "",
     "hidden": false,
@@ -120,12 +225,10 @@
     "image_webp": "kek/photo_15_2026-02-20_22-41-44.webp",
     "name": "فۆڕچن فستق خڕ",
     "name_en": "",
-    "price": 5250,
-    "updatedAt": "2026-09-30T22:47:31.792Z"
+    "price": 5000
   },
   {
     "category": "cake",
-    "createdAt": "2026-09-30T22:47:50.734Z",
     "description": "24 عەدەد",
     "description_en": "",
     "hidden": false,
@@ -134,12 +237,10 @@
     "image_webp": "kek/photo_16_2026-02-20_22-41-44.webp",
     "name": "فۆڕچن بسکیت",
     "name_en": "",
-    "price": 5250,
-    "updatedAt": "2026-09-30T22:47:50.734Z"
+    "price": 5000
   },
   {
     "category": "cake",
-    "createdAt": "2026-09-30T22:48:05.641Z",
     "description": "24 عەدەد",
     "description_en": "",
     "hidden": false,
@@ -148,8 +249,19 @@
     "image_webp": "kek/photo_18_2026-02-20_22-41-44.webp",
     "name": "فۆڕچن شلک",
     "name_en": "",
-    "price": 5250,
-    "updatedAt": "2026-09-30T22:48:05.641Z"
+    "price": 5000
+  },
+  {
+    "category": "cake",
+    "description": "24 عەدەد",
+    "description_en": "",
+    "hidden": false,
+    "id": "cake-022",
+    "image": "kek/photo_19_2026-02-20_22-41-44.webp",
+    "image_webp": "kek/photo_19_2026-02-20_22-41-44.webp",
+    "name": "فۆڕچن پەنیر",
+    "name_en": "",
+    "price": 5000
   },
   {
     "category": "cake",
@@ -162,6 +274,18 @@
     "name": "کێکی مۆتۆ ٥٠٠",
     "name_en": "",
     "price": 10000
+  },
+  {
+    "category": "cake",
+    "description": "24 عەدەد",
+    "description_en": "",
+    "hidden": false,
+    "id": "cake-024",
+    "image": "kek/photo_20_2026-02-20_22-41-44.webp",
+    "image_webp": "kek/photo_20_2026-02-20_22-41-44.webp",
+    "name": "دۆناتی ئەڵقە",
+    "name_en": "",
+    "price": 4250
   },
   {
     "category": "cake",
@@ -192,6 +316,18 @@
     "description": "24 عەدەد",
     "description_en": "",
     "hidden": false,
+    "id": "cake-027",
+    "image": "kek/photo_24_2026-02-20_22-41-44.webp",
+    "image_webp": "kek/photo_24_2026-02-20_22-41-44.webp",
+    "name": "پاوەن کێک",
+    "name_en": "",
+    "price": 5000
+  },
+  {
+    "category": "cake",
+    "description": "24 عەدەد",
+    "description_en": "",
+    "hidden": false,
     "id": "cake-028",
     "image": "kek/photo_25_2026-02-20_22-41-44.webp",
     "image_webp": "kek/photo_25_2026-02-20_22-41-44.webp",
@@ -201,7 +337,6 @@
   },
   {
     "category": "cake",
-    "createdAt": "2026-09-30T22:48:47.406Z",
     "description": "24 عەدەد",
     "description_en": "",
     "hidden": false,
@@ -210,8 +345,7 @@
     "image_webp": "kek/photo_27_2026-02-20_22-41-44.webp",
     "name": "کێکی مهیار",
     "name_en": "",
-    "price": 5250,
-    "updatedAt": "2026-09-30T22:48:47.406Z"
+    "price": 5000
   },
   {
     "category": "cake",
@@ -227,7 +361,18 @@
   },
   {
     "category": "cake",
-    "createdAt": "2026-09-30T22:49:09.863Z",
+    "description": "24 عەدەد",
+    "description_en": "",
+    "hidden": false,
+    "id": "cake-031",
+    "image": "kek/photo_29_2026-02-20_22-41-44.webp",
+    "image_webp": "kek/photo_29_2026-02-20_22-41-44.webp",
+    "name": "کێک رۆز جەلی",
+    "name_en": "",
+    "price": 4750
+  },
+  {
+    "category": "cake",
     "description": "24 عەدەد",
     "description_en": "",
     "hidden": false,
@@ -236,12 +381,58 @@
     "image_webp": "kek/photo_30_2026-02-20_22-41-44.webp",
     "name": "تۆپ کێک",
     "name_en": "",
-    "price": 5000,
-    "updatedAt": "2026-09-30T22:49:09.863Z"
+    "price": 4750
   },
   {
     "category": "cake",
-    "createdAt": "2026-09-30T22:49:54.292Z",
+    "description": "12 عەدەد",
+    "description_en": "",
+    "hidden": false,
+    "id": "cake-033",
+    "image": "kek/IMG_6343.webp",
+    "image_webp": "kek/IMG_6343.webp",
+    "name": "میکس ڕوڵی پرتەقاڵ",
+    "name_en": "",
+    "price": 2500
+  },
+  {
+    "category": "cake",
+    "description": "12 عەدەد",
+    "description_en": "",
+    "hidden": false,
+    "id": "cake-034",
+    "image": "kek/IMG_6344.webp",
+    "image_webp": "kek/IMG_6344.webp",
+    "name": "میکس ڕوڵی مۆر",
+    "name_en": "",
+    "price": 2500
+  },
+  {
+    "category": "cake",
+    "description": "12 عەدەد",
+    "description_en": "",
+    "hidden": false,
+    "id": "cake-035",
+    "image": "kek/IMG_6345.webp",
+    "image_webp": "kek/IMG_6345.webp",
+    "name": "میکس ڕوڵ قاوە",
+    "name_en": "",
+    "price": 2500
+  },
+  {
+    "category": "cake",
+    "description": "12 عەدەد",
+    "description_en": "",
+    "hidden": false,
+    "id": "cake-036",
+    "image": "kek/IMG_6347.webp",
+    "image_webp": "kek/IMG_6347.webp",
+    "name": "میکس ڕوڵ ئەنەناس",
+    "name_en": "",
+    "price": 2500
+  },
+  {
+    "category": "cake",
     "description": "24 عەدەد",
     "description_en": "",
     "hidden": false,
@@ -250,12 +441,10 @@
     "image_webp": "kek/IMG_6353.webp",
     "name": "کێک ڕۆکی",
     "name_en": "",
-    "price": 4750,
-    "updatedAt": "2026-09-30T22:49:54.292Z"
+    "price": 4500
   },
   {
     "category": "cake",
-    "createdAt": "2026-09-30T22:50:11.261Z",
     "description": "24 عەدەد",
     "description_en": "",
     "hidden": false,
@@ -264,12 +453,10 @@
     "image_webp": "kek/IMG_6357.webp",
     "name": "کێکی دوبەی شعری",
     "name_en": "",
-    "price": 5250,
-    "updatedAt": "2026-09-30T22:50:11.261Z"
+    "price": 5000
   },
   {
     "category": "cake",
-    "createdAt": "2026-09-30T22:50:23.045Z",
     "description": "24 عەدەد",
     "description_en": "",
     "hidden": false,
@@ -278,12 +465,10 @@
     "image_webp": "kek/IMG_6388.webp",
     "name": "نەزەری کشمیش",
     "name_en": "",
-    "price": 5500,
-    "updatedAt": "2026-09-30T22:50:23.045Z"
+    "price": 5250
   },
   {
     "category": "cake",
-    "createdAt": "2026-09-30T22:50:35.850Z",
     "description": "24 عەدەد",
     "description_en": "",
     "hidden": false,
@@ -292,12 +477,10 @@
     "image_webp": "kek/IMG_6389.webp",
     "name": "نەزەری بریک فاست",
     "name_en": "",
-    "price": 5500,
-    "updatedAt": "2026-09-30T22:50:35.850Z"
+    "price": 5250
   },
   {
     "category": "cake",
-    "createdAt": "2026-09-30T22:50:46.488Z",
     "description": "24 عەدەد",
     "description_en": "",
     "hidden": false,
@@ -306,8 +489,55 @@
     "image_webp": "kek/IMG_6391.webp",
     "name": "بۆبۆتۆی سور",
     "name_en": "",
-    "price": 5250,
-    "updatedAt": "2026-09-30T22:50:46.488Z"
+    "price": 5000
+  },
+  {
+    "category": "cake",
+    "description": "24 عەدەد",
+    "description_en": "",
+    "hidden": false,
+    "id": "cake-042",
+    "image": "kek/IMG_6392.webp",
+    "image_webp": "kek/IMG_6392.webp",
+    "name": "کیک دوبەی",
+    "name_en": "",
+    "price": 5000
+  },
+  {
+    "category": "cake",
+    "description": "24 عەدەد",
+    "description_en": "",
+    "hidden": false,
+    "id": "cake-044",
+    "image": "kek/IMG_6395.webp",
+    "image_webp": "kek/IMG_6395.webp",
+    "name": "نەزەری خر شلک",
+    "name_en": "",
+    "price": 5250
+  },
+  {
+    "category": "cake",
+    "description": "24 عەدەد",
+    "description_en": "",
+    "hidden": false,
+    "id": "cake-045",
+    "image": "kek/IMG_6396.webp",
+    "image_webp": "kek/IMG_6396.webp",
+    "name": "نەزەری خر قاوە",
+    "name_en": "",
+    "price": 5250
+  },
+  {
+    "category": "cake",
+    "description": "24 عەدەد",
+    "description_en": "",
+    "hidden": false,
+    "id": "cake-046",
+    "image": "kek/IMG_6397.webp",
+    "image_webp": "kek/IMG_6397.webp",
+    "name": "نەزەری خر شیر",
+    "name_en": "",
+    "price": 5250
   },
   {
     "category": "cake",
@@ -332,5 +562,19 @@
     "name": "پۆپ کیک مۆز",
     "name_en": "",
     "price": 5250
+  },
+  {
+    "category": "cake",
+    "createdAt": "2026-09-29T00:51:06.228Z",
+    "description": "24",
+    "description_en": "",
+    "hidden": false,
+    "id": "cake-049",
+    "image": "kek/cake-1790643064240-41qv3k.webp",
+    "image_webp": "kek/cake-1790643064240-41qv3k.webp",
+    "name": "Ssss",
+    "name_en": "",
+    "price": 68000,
+    "updatedAt": "2026-09-29T00:51:06.228Z"
   }
 ]

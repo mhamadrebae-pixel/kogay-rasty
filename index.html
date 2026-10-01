@@ -34,10 +34,10 @@
         })();
     </script>
     <!-- جیاتی v=1, v=2 -->
-    <link rel="stylesheet" href="style.css?v=mobile-cool-v29">
-    <link rel="icon" type="image/png" sizes="192x192" href="./icon-192.png?v=mobile-cool-v29">
-    <link rel="apple-touch-icon" href="./icon-192.png?v=mobile-cool-v29">
-    <link rel="manifest" href="manifest.json?v=mobile-cool-v29">
+    <link rel="stylesheet" href="style.css?v=mobile-cool-v30">
+    <link rel="icon" type="image/png" sizes="192x192" href="./icon-192.png?v=mobile-cool-v30">
+    <link rel="apple-touch-icon" href="./icon-192.png?v=mobile-cool-v30">
+    <link rel="manifest" href="manifest.json?v=mobile-cool-v30">
     <meta name="description" content="کۆگای ڕاستی — باشترین کاڵاکان بەنرخی گونجاو">
     <!-- Open Graph / Social Share -->
     <meta property="og:title" content="کۆگای ڕاستی">
@@ -49,8 +49,8 @@
     <meta name="twitter:title" content="کۆگای ڕاستی">
     <meta name="twitter:image" content="./icon-512.png">
     <meta name="theme-color" content="#f97316">
-    <script src="analytics.js?v=mobile-cool-v29" defer></script>
-    <script src="script.js?v=mobile-cool-v29" defer></script>
+    <script src="analytics.js?v=mobile-cool-v30" defer></script>
+    <script src="script.js?v=mobile-cool-v30" defer></script>
 </head>
  
 <body>
@@ -214,8 +214,19 @@
     <!-- Products -->
     <section class="products-section">
         <div class="section-header">
-            <h2 class="section-title" id="categoryTitle"><i class="fas fa-cake-candles"></i> کێک</h2>
-            <span class="products-count" id="productsCount">0 کاڵا</span>
+            <div class="section-header-main">
+                <h2 class="section-title" id="categoryTitle"><i class="fas fa-cake-candles"></i> کێک</h2>
+                <span class="products-count" id="productsCount">0 کاڵا</span>
+            </div>
+            <div class="sort-control-wrap">
+                <i class="fas fa-sort sort-icon"></i>
+                <select id="productSortSelect" class="product-sort-select" onchange="changeProductSort(this.value)" aria-label="Sort products">
+                    <option value="default" id="optSortDefault">ڕێکخستن: بنەڕەتی</option>
+                    <option value="price-asc" id="optSortPriceAsc">نرخ: کەم بۆ زۆر ⬆</option>
+                    <option value="price-desc" id="optSortPriceDesc">نرخ: زۆر بۆ کەم ⬇</option>
+                    <option value="newest" id="optSortNewest">نوێترین کاڵاکان ✨</option>
+                </select>
+            </div>
         </div>
         <div class="products-grid" id="productsGrid"></div>
         <div class="pagination-wrap" id="paginationWrap" style="display:none;"></div>
@@ -336,6 +347,50 @@
         </div>
     </div>
 
+    <!-- Sticky Mobile Checkout Bar -->
+    <div class="mobile-sticky-checkout" id="mobileStickyCheckout" onclick="openCart()" role="button" tabindex="0" aria-label="سەبەتەی کڕین">
+        <div class="sticky-checkout-info">
+            <div class="sticky-checkout-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="sticky-checkout-badge" id="stickyCheckoutCount">0</span>
+            </div>
+            <div class="sticky-checkout-details">
+                <span class="sticky-checkout-label" id="stickyCheckoutLabel">سەبەتەی کڕین</span>
+                <span class="sticky-checkout-total" id="stickyCheckoutTotal">0 IQD</span>
+            </div>
+        </div>
+        <div class="sticky-checkout-action">
+            <span id="stickyCheckoutActionText">تەواوکردنی داواکاری</span>
+            <i class="fas fa-arrow-left"></i>
+        </div>
+    </div>
+
+    <!-- Mobile Bottom App Navigation Bar -->
+    <nav class="mobile-bottom-nav" id="mobileBottomNav" aria-label="Mobile Navigation">
+        <button type="button" class="bottom-nav-item active" id="bottomNavHome" onclick="bottomNavAction('home')">
+            <i class="fas fa-store"></i>
+            <span id="navHomeLabel">سەرەتا</span>
+        </button>
+        <button type="button" class="bottom-nav-item" id="bottomNavSearch" onclick="bottomNavAction('search')">
+            <i class="fas fa-search"></i>
+            <span id="navSearchLabel">گەڕان</span>
+        </button>
+        <button type="button" class="bottom-nav-item" id="bottomNavWishlist" onclick="bottomNavAction('wishlist')">
+            <div class="nav-icon-wrap">
+                <i class="fas fa-heart"></i>
+                <span class="nav-badge" id="bottomNavWishlistBadge" style="display:none;">0</span>
+            </div>
+            <span id="navWishlistLabel">دڵخواز</span>
+        </button>
+        <button type="button" class="bottom-nav-item" id="bottomNavCart" onclick="bottomNavAction('cart')">
+            <div class="nav-icon-wrap">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="nav-badge" id="bottomNavCartBadge" style="display:none;">0</span>
+            </div>
+            <span id="navCartLabel">سەبەتە</span>
+        </button>
+    </nav>
+
     <!-- Toast -->
     <div class="toast-container" id="toastContainer"></div>
  
@@ -391,7 +446,7 @@
                         });
                     }
 
-                    navigator.serviceWorker.register('./sw.js?v=realtime-sync-v28')
+                    navigator.serviceWorker.register('./sw.js?v=realtime-sync-v30')
                         .then(reg => {
                             console.log('[SW] Registered:', reg.scope);
                             reg.update().catch(() => { });

@@ -1,21 +1,30 @@
 [
   {
     "category": "gaz",
-    "createdAt": "2026-09-30T23:13:20.667Z",
     "description": "24 عەدەد",
     "description_en": "",
-    "hidden": true,
+    "hidden": false,
+    "id": "gaz-001",
+    "image": "gaz/IMG_0215.webp",
+    "image_webp": "gaz/IMG_0215.webp",
+    "name": "ویتان",
+    "name_en": "",
+    "price": 5250
+  },
+  {
+    "category": "gaz",
+    "description": "24 عەدەد",
+    "description_en": "",
+    "hidden": false,
     "id": "gaz-002",
     "image": "gaz/IMG_0216.webp",
     "image_webp": "gaz/IMG_0216.webp",
     "name": "تایکۆی شەشی",
     "name_en": "",
-    "price": 4500,
-    "updatedAt": "2026-09-30T23:13:22.551Z"
+    "price": 4500
   },
   {
     "category": "gaz",
-    "createdAt": "2026-09-30T23:13:33.303Z",
     "description": "24 عەدەد",
     "description_en": "",
     "hidden": false,
@@ -24,8 +33,31 @@
     "image_webp": "gaz/IMG_0217.webp",
     "name": "دایجستۆ",
     "name_en": "",
-    "price": 5250,
-    "updatedAt": "2026-09-30T23:13:33.303Z"
+    "price": 5000
+  },
+  {
+    "category": "gaz",
+    "description": "40 عەدەد",
+    "description_en": "",
+    "hidden": false,
+    "id": "gaz-004",
+    "image": "gaz/IMG_0218.webp",
+    "image_webp": "gaz/IMG_0218.webp",
+    "name": "پاپڵی گەورە",
+    "name_en": "",
+    "price": 9000
+  },
+  {
+    "category": "gaz",
+    "description": "24 عەدەد",
+    "description_en": "",
+    "hidden": false,
+    "id": "gaz-006",
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (1).webp",
+    "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (1).webp",
+    "name": "کەزی لامیا",
+    "name_en": "",
+    "price": 5000
   },
   {
     "category": "gaz",
@@ -50,6 +82,18 @@
     "name": "پاڵشتی",
     "name_en": "",
     "price": 7500
+  },
+  {
+    "category": "gaz",
+    "description": "24 عەدەد",
+    "description_en": "",
+    "hidden": false,
+    "id": "gaz-009",
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (5).webp",
+    "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (5).webp",
+    "name": "ناستەلەی نانی",
+    "name_en": "",
+    "price": 2500
   },
   {
     "category": "gaz",
@@ -89,7 +133,6 @@
   },
   {
     "category": "gaz",
-    "createdAt": "2026-09-30T23:14:14.882Z",
     "description": "40 عەدەد",
     "description_en": "",
     "hidden": false,
@@ -98,8 +141,7 @@
     "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.05 PM (9).webp",
     "name": "بسکیتی ترد",
     "name_en": "",
-    "price": 8000,
-    "updatedAt": "2026-09-30T23:14:14.882Z"
+    "price": 7500
   },
   {
     "category": "gaz",
@@ -115,7 +157,42 @@
   },
   {
     "category": "gaz",
-    "createdAt": "2026-09-30T23:14:50.507Z",
+    "description": "24 عەدەد",
+    "description_en": "",
+    "hidden": false,
+    "id": "gaz-015",
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (1).webp",
+    "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (1).webp",
+    "name": "وایفەر ئەزرا شلیک",
+    "name_en": "",
+    "price": 5000
+  },
+  {
+    "category": "gaz",
+    "description": "24 عەدەد",
+    "description_en": "",
+    "hidden": false,
+    "id": "gaz-016",
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (2).webp",
+    "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (2).webp",
+    "name": "وایفەر ئەزرا مۆز",
+    "name_en": "",
+    "price": 5000
+  },
+  {
+    "category": "gaz",
+    "description": "24 عەدەد",
+    "description_en": "",
+    "hidden": false,
+    "id": "gaz-017",
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM.webp",
+    "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM.webp",
+    "name": "وایفەر ئەزرا پرتەقاڵ",
+    "name_en": "",
+    "price": 5000
+  },
+  {
+    "category": "gaz",
     "description": "40 عەدەد",
     "description_en": "",
     "hidden": false,
@@ -124,12 +201,10 @@
     "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (3).webp",
     "name": "شیرین عەسەل مۆز",
     "name_en": "",
-    "price": 5000,
-    "updatedAt": "2026-09-30T23:14:50.507Z"
+    "price": 8000
   },
   {
     "category": "gaz",
-    "createdAt": "2026-09-30T23:15:04.099Z",
     "description": "24 عەدەد",
     "description_en": "",
     "hidden": false,
@@ -138,12 +213,10 @@
     "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (4).webp",
     "name": "بسکت پیتی پور وار",
     "name_en": "",
-    "price": 8000,
-    "updatedAt": "2026-09-30T23:15:04.099Z"
+    "price": 5000
   },
   {
     "category": "gaz",
-    "createdAt": "2026-09-30T23:15:11.728Z",
     "description": "48 عەدەد",
     "description_en": "",
     "hidden": false,
@@ -152,12 +225,34 @@
     "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (5).webp",
     "name": "تایستێلی قاوە",
     "name_en": "",
-    "price": 5000,
-    "updatedAt": "2026-09-30T23:15:11.728Z"
+    "price": 5000
   },
   {
     "category": "gaz",
-    "createdAt": "2026-09-30T23:15:30.023Z",
+    "description": "60 عەدەد",
+    "description_en": "",
+    "hidden": false,
+    "id": "gaz-021",
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (6).webp",
+    "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (6).webp",
+    "name": "چلکەی دوانی",
+    "name_en": "",
+    "price": 6500
+  },
+  {
+    "category": "gaz",
+    "description": "60 عەدەد",
+    "description_en": "",
+    "hidden": false,
+    "id": "gaz-022",
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (7).webp",
+    "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (7).webp",
+    "name": "ویکی دوانی",
+    "name_en": "",
+    "price": 6500
+  },
+  {
+    "category": "gaz",
     "description": "60 عەدەد",
     "description_en": "",
     "hidden": false,
@@ -166,12 +261,10 @@
     "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (8).webp",
     "name": "ویکی گەورە",
     "name_en": "",
-    "price": 13500,
-    "updatedAt": "2026-09-30T23:15:30.023Z"
+    "price": 11500
   },
   {
     "category": "gaz",
-    "createdAt": "2026-09-30T23:15:41.808Z",
     "description": "12 عەدەد",
     "description_en": "",
     "hidden": false,
@@ -180,12 +273,10 @@
     "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (9).webp",
     "name": "شەمائیڵ",
     "name_en": "",
-    "price": 6500,
-    "updatedAt": "2026-09-30T23:15:41.808Z"
+    "price": 2500
   },
   {
     "category": "gaz",
-    "createdAt": "2026-09-30T23:15:54.776Z",
     "description": "24 عەدەد",
     "description_en": "",
     "hidden": false,
@@ -194,12 +285,10 @@
     "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (10).webp",
     "name": "بسکیتی دەموو چاو",
     "name_en": "",
-    "price": 2500,
-    "updatedAt": "2026-09-30T23:15:54.776Z"
+    "price": 5250
   },
   {
     "category": "gaz",
-    "createdAt": "2026-09-30T23:16:06.119Z",
     "description": "24 عەدەد",
     "description_en": "",
     "hidden": false,
@@ -208,12 +297,10 @@
     "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (11).webp",
     "name": "بسکیتی کالیتی",
     "name_en": "",
-    "price": 5250,
-    "updatedAt": "2026-09-30T23:16:06.119Z"
+    "price": 4750
   },
   {
     "category": "gaz",
-    "createdAt": "2026-09-30T23:16:25.989Z",
     "description": "32 عەدەد",
     "description_en": "",
     "hidden": false,
@@ -222,8 +309,19 @@
     "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (12).webp",
     "name": "بورادا",
     "name_en": "",
-    "price": 5000,
-    "updatedAt": "2026-09-30T23:16:25.989Z"
+    "price": 6250
+  },
+  {
+    "category": "gaz",
+    "description": "60 عەدەد",
+    "description_en": "",
+    "hidden": false,
+    "id": "gaz-028",
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (15).webp",
+    "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (15).webp",
+    "name": "شەوائیل",
+    "name_en": "",
+    "price": 6500
   },
   {
     "category": "gaz",
@@ -239,7 +337,18 @@
   },
   {
     "category": "gaz",
-    "createdAt": "2026-09-30T23:16:46.698Z",
+    "description": "24 عەدەد",
+    "description_en": "",
+    "hidden": false,
+    "id": "gaz-030",
+    "image": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (17).webp",
+    "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (17).webp",
+    "name": "هەپی عادی",
+    "name_en": "",
+    "price": 4500
+  },
+  {
+    "category": "gaz",
     "description": "40 عەدەد",
     "description_en": "",
     "hidden": false,
@@ -248,12 +357,10 @@
     "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.02.06 PM (18).webp",
     "name": "ستاکی شەفاف 500",
     "name_en": "",
-    "price": 9500,
-    "updatedAt": "2026-09-30T23:16:46.698Z"
+    "price": 10000
   },
   {
     "category": "gaz",
-    "createdAt": "2026-09-30T23:16:59.977Z",
     "description": "24 عەدەد",
     "description_en": "",
     "hidden": false,
@@ -262,8 +369,7 @@
     "image_webp": "gaz/WhatsApp Image 2026-02-20 at 10.03.27 PM.webp",
     "name": "مەڕەکان",
     "name_en": "",
-    "price": 5000,
-    "updatedAt": "2026-09-30T23:16:59.977Z"
+    "price": 4750
   },
   {
     "category": "gaz",
@@ -279,7 +385,6 @@
   },
   {
     "category": "gaz",
-    "createdAt": "2026-09-30T23:17:13.978Z",
     "description": "24 عەدەد",
     "description_en": "",
     "hidden": false,
@@ -288,12 +393,10 @@
     "image_webp": "gaz/IMG_6355.webp",
     "name": "جین",
     "name_en": "",
-    "price": 5500,
-    "updatedAt": "2026-09-30T23:17:13.978Z"
+    "price": 5250
   },
   {
     "category": "gaz",
-    "createdAt": "2026-09-30T23:17:24.108Z",
     "description": "40 عەدەد",
     "description_en": "",
     "hidden": false,
@@ -302,12 +405,10 @@
     "image_webp": "gaz/IMG_6356.webp",
     "name": "ئەندۆمی",
     "name_en": "",
-    "price": 9000,
-    "updatedAt": "2026-09-30T23:17:24.108Z"
+    "price": 9250
   },
   {
     "category": "gaz",
-    "createdAt": "2026-09-30T23:17:50.532Z",
     "description": "24 عەدەد",
     "description_en": "",
     "hidden": false,
@@ -316,12 +417,10 @@
     "image_webp": "gaz/IMG_6364.webp",
     "name": "مستەر بایت ڕەش",
     "name_en": "",
-    "price": 5500,
-    "updatedAt": "2026-09-30T23:17:50.532Z"
+    "price": 5250
   },
   {
     "category": "gaz",
-    "createdAt": "2026-09-30T23:17:59.475Z",
     "description": "24 عەدەد",
     "description_en": "",
     "hidden": false,
@@ -330,13 +429,23 @@
     "image_webp": "gaz/IMG_6366.webp",
     "name": "مستەربایت شیر",
     "name_en": "",
-    "price": 5500,
-    "updatedAt": "2026-09-30T23:17:59.475Z"
+    "price": 5250
   },
   {
     "category": "gaz",
-    "createdAt": "2026-09-30T23:18:27.528Z",
-    "description": "60 عەدەد",
+    "description": "40 عەدەد",
+    "description_en": "",
+    "hidden": false,
+    "id": "gaz-039",
+    "image": "gaz/IMG_6385.webp",
+    "image_webp": "gaz/IMG_6385.webp",
+    "name": "بسکیتی تونس",
+    "name_en": "",
+    "price": 8000
+  },
+  {
+    "category": "gaz",
+    "description": "32 عەدەد",
     "description_en": "",
     "hidden": false,
     "id": "gaz-040",
@@ -344,12 +453,22 @@
     "image_webp": "gaz/IMG_6386.webp",
     "name": "مادر",
     "name_en": "",
-    "price": 13000,
-    "updatedAt": "2026-09-30T23:18:37.370Z"
+    "price": 6250
   },
   {
     "category": "gaz",
-    "createdAt": "2026-09-30T23:18:55.698Z",
+    "description": "24 عەدەد",
+    "description_en": "",
+    "hidden": false,
+    "id": "gaz-041",
+    "image": "gaz/IMG_6387.webp",
+    "image_webp": "gaz/IMG_6387.webp",
+    "name": "کولیچەی فەل",
+    "name_en": "",
+    "price": 5250
+  },
+  {
+    "category": "gaz",
     "description": "24 عەدەد",
     "description_en": "",
     "hidden": false,
@@ -358,12 +477,10 @@
     "image_webp": "gaz/IMG_6390.webp",
     "name": "بورمەی وایفەر",
     "name_en": "",
-    "price": 5250,
-    "updatedAt": "2026-09-30T23:18:55.698Z"
+    "price": 5000
   },
   {
     "category": "gaz",
-    "createdAt": "2026-09-30T23:19:07.863Z",
     "description": "24 عەدەد",
     "description_en": "",
     "hidden": false,
@@ -372,12 +489,10 @@
     "image_webp": "gaz/IMG_6394.webp",
     "name": "الیوەم خورما",
     "name_en": "",
-    "price": 5250,
-    "updatedAt": "2026-09-30T23:19:07.863Z"
+    "price": 5000
   },
   {
     "category": "gaz",
-    "createdAt": "2026-09-30T23:19:17.198Z",
     "description": "24 عەدەد",
     "description_en": "",
     "hidden": false,
@@ -386,26 +501,22 @@
     "image_webp": "gaz/IMG_6400.webp",
     "name": "وایف ئەپ شین",
     "name_en": "",
-    "price": 5500,
-    "updatedAt": "2026-09-30T23:19:17.198Z"
+    "price": 5250
   },
   {
     "category": "gaz",
-    "createdAt": "2026-09-30T23:19:39.186Z",
     "description": "24 عەدەد",
     "description_en": "",
     "hidden": false,
     "id": "gaz-045",
     "image": "gaz/IMG_6401.webp",
     "image_webp": "gaz/IMG_6401.webp",
-    "name": "وایف ئەپ قاوە",
+    "name": "وقیف ئەپ قاوە",
     "name_en": "",
-    "price": 5500,
-    "updatedAt": "2026-09-30T23:19:39.186Z"
+    "price": 5250
   },
   {
     "category": "gaz",
-    "createdAt": "2026-09-30T23:19:49.211Z",
     "description": "24 عەدەد",
     "description_en": "",
     "hidden": false,
@@ -414,12 +525,10 @@
     "image_webp": "gaz/IMG_6402.webp",
     "name": "وایف ئەپ بندوق",
     "name_en": "",
-    "price": 5500,
-    "updatedAt": "2026-09-30T23:19:49.211Z"
+    "price": 5250
   },
   {
     "category": "gaz",
-    "createdAt": "2026-09-30T23:20:05.243Z",
     "description": "24 عەدەد",
     "description_en": "",
     "hidden": false,
@@ -428,12 +537,10 @@
     "image_webp": "gaz/IMG_6403.webp",
     "name": "وایف ئەپ شیر",
     "name_en": "",
-    "price": 5500,
-    "updatedAt": "2026-09-30T23:20:05.243Z"
+    "price": 5250
   },
   {
     "category": "gaz",
-    "createdAt": "2026-09-30T23:20:16.034Z",
     "description": "24 عەدەد",
     "description_en": "",
     "hidden": false,
@@ -442,8 +549,7 @@
     "image_webp": "gaz/IMG_6404.webp",
     "name": "وایف ئەپ شلک",
     "name_en": "",
-    "price": 5500,
-    "updatedAt": "2026-09-30T23:20:16.034Z"
+    "price": 5250
   },
   {
     "category": "gaz",
@@ -459,7 +565,30 @@
   },
   {
     "category": "gaz",
-    "createdAt": "2026-09-30T23:20:38.425Z",
+    "description": "24 عەدەد",
+    "description_en": "",
+    "hidden": false,
+    "id": "gaz-050",
+    "image": "gaz/IMG_6426.webp",
+    "image_webp": "gaz/IMG_6426.webp",
+    "name": "بسکیتی ئۆریۆ عادی",
+    "name_en": "",
+    "price": 5000
+  },
+  {
+    "category": "gaz",
+    "description": "24 عەدەد",
+    "description_en": "",
+    "hidden": false,
+    "id": "gaz-051",
+    "image": "gaz/IMG_6427.webp",
+    "image_webp": "gaz/IMG_6427.webp",
+    "name": "براوستاری زەرد",
+    "name_en": "",
+    "price": 5000
+  },
+  {
+    "category": "gaz",
     "description": "24 عەدەد",
     "description_en": "",
     "hidden": false,
@@ -468,12 +597,10 @@
     "image_webp": "gaz/IMG_6431.webp",
     "name": "فول تۆپ شین",
     "name_en": "",
-    "price": 5250,
-    "updatedAt": "2026-09-30T23:20:38.425Z"
+    "price": 5000
   },
   {
     "category": "gaz",
-    "createdAt": "2026-09-30T23:20:47.362Z",
     "description": "24 عەدەد",
     "description_en": "",
     "hidden": false,
@@ -482,12 +609,10 @@
     "image_webp": "gaz/IMG_6432.webp",
     "name": "فول تۆپ شین قاوە",
     "name_en": "",
-    "price": 5250,
-    "updatedAt": "2026-09-30T23:20:47.362Z"
+    "price": 5000
   },
   {
     "category": "gaz",
-    "createdAt": "2026-09-30T23:20:59.874Z",
     "description": "24 عەدەد",
     "description_en": "",
     "hidden": false,
@@ -496,12 +621,10 @@
     "image_webp": "gaz/IMG_6433.webp",
     "name": "فول تۆپ پەمەی",
     "name_en": "",
-    "price": 5250,
-    "updatedAt": "2026-09-30T23:20:59.874Z"
+    "price": 5000
   },
   {
     "category": "gaz",
-    "createdAt": "2026-09-30T23:21:17.728Z",
     "description": "24 عەدەد",
     "description_en": "",
     "hidden": false,
@@ -510,22 +633,31 @@
     "image_webp": "gaz/IMG_6434.webp",
     "name": "فول تۆپ سور",
     "name_en": "",
-    "price": 5250,
-    "updatedAt": "2026-09-30T23:21:17.728Z"
+    "price": 5000
   },
   {
     "category": "gaz",
-    "createdAt": "2026-09-30T23:21:35.719Z",
     "description": "24 عەدەد",
     "description_en": "",
     "hidden": false,
     "id": "gaz-056",
     "image": "gaz/IMG_6435.webp",
     "image_webp": "gaz/IMG_6435.webp",
-    "name": "وایفەر توران قاوە گەورە",
+    "name": "وایفەر توران قاوە",
     "name_en": "",
-    "price": 5500,
-    "updatedAt": "2026-09-30T23:21:35.719Z"
+    "price": 5250
+  },
+  {
+    "category": "gaz",
+    "description": "24 عەدەد",
+    "description_en": "",
+    "hidden": false,
+    "id": "gaz-057",
+    "image": "gaz/IMG_6436.webp",
+    "image_webp": "gaz/IMG_6436.webp",
+    "name": "وایفەر توران بندوق",
+    "name_en": "",
+    "price": 5250
   },
   {
     "category": "gaz",
@@ -553,21 +685,114 @@
   },
   {
     "category": "gaz",
-    "createdAt": "2026-09-30T23:22:05.044Z",
     "description": "24 عەدەد",
     "description_en": "",
     "hidden": false,
     "id": "gaz-060",
     "image": "gaz/IMG_6440.webp",
     "image_webp": "gaz/IMG_6440.webp",
-    "name": "وایفەر توران شیر گەورە",
+    "name": "وایفەر توران شیر",
     "name_en": "",
-    "price": 5500,
-    "updatedAt": "2026-09-30T23:22:28.804Z"
+    "price": 5250
   },
   {
     "category": "gaz",
-    "createdAt": "2026-09-30T23:23:05.374Z",
+    "description": "24 عەدەد",
+    "description_en": "",
+    "hidden": false,
+    "id": "gaz-061",
+    "image": "gaz/IMG_6441.webp",
+    "image_webp": "gaz/IMG_6441.webp",
+    "name": "وایفەر ئەزرا لیمۆ",
+    "name_en": "",
+    "price": 5000
+  },
+  {
+    "category": "gaz",
+    "description": "24 عەدەد",
+    "description_en": "",
+    "hidden": false,
+    "id": "gaz-062",
+    "image": "gaz/IMG_6442.webp",
+    "image_webp": "gaz/IMG_6442.webp",
+    "name": "وایفەر ئەزرا شلک",
+    "name_en": "",
+    "price": 5000
+  },
+  {
+    "category": "gaz",
+    "description": "24 عەدەد",
+    "description_en": "",
+    "hidden": false,
+    "id": "gaz-063",
+    "image": "gaz/IMG_6443.webp",
+    "image_webp": "gaz/IMG_6443.webp",
+    "name": "وایفەر ئەزرا گویزهیند",
+    "name_en": "",
+    "price": 5000
+  },
+  {
+    "category": "gaz",
+    "description": "24 عەدەد",
+    "description_en": "",
+    "hidden": false,
+    "id": "gaz-064",
+    "image": "gaz/IMG_6444.webp",
+    "image_webp": "gaz/IMG_6444.webp",
+    "name": "وایفەر ئەزرا بندوق",
+    "name_en": "",
+    "price": 5000
+  },
+  {
+    "category": "gaz",
+    "description": "24 عەدەد",
+    "description_en": "",
+    "hidden": false,
+    "id": "gaz-065",
+    "image": "gaz/IMG_6445.webp",
+    "image_webp": "gaz/IMG_6445.webp",
+    "name": "وایفەر ئەزرا قاوە",
+    "name_en": "",
+    "price": 5000
+  },
+  {
+    "category": "gaz",
+    "description": "24 عەدەد",
+    "description_en": "",
+    "hidden": false,
+    "id": "gaz-066",
+    "image": "gaz/IMG_6446.webp",
+    "image_webp": "gaz/IMG_6446.webp",
+    "name": "وایفەر ئەزرا مۆتە",
+    "name_en": "",
+    "price": 5000
+  },
+  {
+    "category": "gaz",
+    "description": "24 عەدەد",
+    "description_en": "",
+    "hidden": false,
+    "id": "gaz-067",
+    "image": "gaz/IMG_6447.webp",
+    "image_webp": "gaz/IMG_6447.webp",
+    "name": "وایفەر ئەزرا گیلاس",
+    "name_en": "",
+    "price": 5000
+  },
+  {
+    "category": "gaz",
+    "description": "24 عەدەد",
+    "description_en": "",
+    "hidden": false,
+    "id": "gaz-068",
+    "image": "gaz/IMG_6471.webp",
+    "image_webp": "gaz/IMG_6471.webp",
+    "name": "مستەر بایت قاوە",
+    "name_en": "",
+    "price": 5250
+  },
+  {
+    "category": "gaz",
     "description": "24 عەدەد",
     "description_en": "",
     "hidden": false,
@@ -576,12 +801,10 @@
     "image_webp": "gaz/IMG_6472.webp",
     "name": "مستەر بایت بندوق زەرد",
     "name_en": "",
-    "price": 5500,
-    "updatedAt": "2026-09-30T23:23:05.374Z"
+    "price": 5250
   },
   {
     "category": "gaz",
-    "createdAt": "2026-09-30T23:23:16.427Z",
     "description": "24 عەدەد",
     "description_en": "",
     "hidden": false,
@@ -590,12 +813,22 @@
     "image_webp": "gaz/IMG_6473.webp",
     "name": "مستەر بایت گویزهیند",
     "name_en": "",
-    "price": 5500,
-    "updatedAt": "2026-09-30T23:23:16.427Z"
+    "price": 5250
   },
   {
     "category": "gaz",
-    "createdAt": "2026-09-30T23:23:29.109Z",
+    "description": "24 عەدەد",
+    "description_en": "",
+    "hidden": false,
+    "id": "gaz-071",
+    "image": "gaz/IMG_6474.webp",
+    "image_webp": "gaz/IMG_6474.webp",
+    "name": "مستەر بایت بندوق",
+    "name_en": "",
+    "price": 5250
+  },
+  {
+    "category": "gaz",
     "description": "24 عەدەد",
     "description_en": "",
     "hidden": false,
@@ -604,7 +837,6 @@
     "image_webp": "gaz/IMG_6475.webp",
     "name": "مستەر بایت فستەق",
     "name_en": "",
-    "price": 5500,
-    "updatedAt": "2026-09-30T23:23:29.109Z"
+    "price": 5250
   }
 ]

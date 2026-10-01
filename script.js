@@ -54,7 +54,14 @@ const ICON_SVG_MAP = {
     'fa-trash': '<path d="M4 7h16"/><path d="M9 7V5h6v2"/><path d="M7 7l1 12h8l1-12"/><path d="M10 11v5M14 11v5"/>',
     'fa-check': '<path d="m5 12 4 4 10-10"/>',
     'fa-info': '<circle cx="12" cy="12" r="9"/><path d="M12 10v6"/><circle cx="12" cy="7" r="1" fill="currentColor" stroke="none"/>',
-    'fa-cloud-bolt': '<path d="M7 18h10a4 4 0 1 0-.9-7.9A5.5 5.5 0 0 0 5.2 12.2 3.3 3.3 0 0 0 7 18Z"/><path d="m12.5 10-2 4h2l-1 4 4-6h-2l1-2Z" fill="currentColor" stroke="none"/>'
+    'fa-cloud-bolt': '<path d="M7 18h10a4 4 0 1 0-.9-7.9A5.5 5.5 0 0 0 5.2 12.2 3.3 3.3 0 0 0 7 18Z"/><path d="m12.5 10-2 4h2l-1 4 4-6h-2l1-2Z" fill="currentColor" stroke="none"/>',
+    'fa-minus': '<path d="M5 12h14"/>',
+    'fa-plus': '<path d="M12 5v14M5 12h14"/>',
+    'fa-share-nodes': '<circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 13.5 6.8 4M15.4 6.5l-6.8 4"/>',
+    'fa-fire': '<path fill="currentColor" stroke="none" d="M12 2c.5 2.5-.5 4.5-2 6 2.5.5 5 2.5 5 6a6 6 0 1 1-12 0c0-3.5 2.5-6.5 4-8 .5 1.5 1.5 2.5 2.5 3 0-2.5 1-5.5 2.5-7Z"/>',
+    'fa-sparkles': '<path fill="currentColor" stroke="none" d="m12 2 1.8 4.2L18 8l-4.2 1.8L12 14l-1.8-4.2L6 8l4.2-1.8L12 2Z"/>',
+    'fa-sort': '<path d="M7 4v16M7 4l-4 4M7 4l4 4M13 6h8M13 11h6M13 16h4M13 21h2"/>',
+    'fa-arrow-left': '<path d="M19 12H5M12 19l-7-7 7-7"/>'
 };
 
 function shouldUseLiteMode() {
@@ -247,6 +254,21 @@ const LANG = {
         waItems: 'کاڵاکان',
         waTotal: 'کۆی گشتی',
         cats: { cake:'کێک', gaz:'گەز و بسکیت', drink:'خواردنەوە', chips:'چیپس', baby:'مناڵان', family:'عایلەی' },
+        shareProduct: 'هاوبەشکردن',
+        shareCopied: 'لینکی کاڵا کۆپیکرا',
+        badgeDiscount: 'داشکاندن',
+        badgeNew: 'نوێ',
+        badgePopular: 'تایبەت',
+        navHome: 'سەرەتا',
+        navSearch: 'گەڕان',
+        navWishlist: 'دڵخواز',
+        navCart: 'سەبەتە',
+        stickyCartTitle: 'سەبەتەی کڕین',
+        stickyCheckout: 'تەواوکردنی داواکاری',
+        sortDefault: 'ڕێکخستن: بنەڕەتی',
+        sortPriceAsc: 'نرخ: کەم بۆ زۆر ⬆',
+        sortPriceDesc: 'نرخ: زۆر بۆ کەم ⬇',
+        sortNewest: 'نوێترین کاڵاکان ✨',
     },
     en: {
         dir: 'ltr',
@@ -318,6 +340,21 @@ const LANG = {
         waItems: 'Items',
         waTotal: 'Grand Total',
         cats: { cake:'Cake', gaz:'Biscuits', drink:'Drinks', chips:'Chips', baby:'Kids', family:'Family' },
+        shareProduct: 'Share',
+        shareCopied: 'Product link copied',
+        badgeDiscount: 'Sale',
+        badgeNew: 'New',
+        badgePopular: 'Hot',
+        navHome: 'Home',
+        navSearch: 'Search',
+        navWishlist: 'Saved',
+        navCart: 'Cart',
+        stickyCartTitle: 'Shopping Cart',
+        stickyCheckout: 'Checkout',
+        sortDefault: 'Sort: Default',
+        sortPriceAsc: 'Price: Low to High ⬆',
+        sortPriceDesc: 'Price: High to Low ⬇',
+        sortNewest: 'Newest first ✨',
     }
 };
 let currentLang = localStorage.getItem('shopLang') || 'ku';
@@ -386,6 +423,17 @@ function setLang(l, options = {}) {
     if (offlineBannerText) offlineBannerText.textContent = t.offlineBanner || offlineBannerText.textContent;
     const retryBtn = document.querySelector('.offline-retry-btn');
     if (retryBtn) retryBtn.textContent = t.retry || retryBtn.textContent;
+    // Bottom Nav & Sticky Checkout & Sort labels
+    const nh = $('navHomeLabel'); if (nh) nh.textContent = t.navHome;
+    const ns = $('navSearchLabel'); if (ns) ns.textContent = t.navSearch;
+    const nw = $('navWishlistLabel'); if (nw) nw.textContent = t.navWishlist;
+    const nc = $('navCartLabel'); if (nc) nc.textContent = t.navCart;
+    const scl = $('stickyCheckoutLabel'); if (scl) scl.textContent = t.stickyCartTitle;
+    const scat = $('stickyCheckoutActionText'); if (scat) scat.textContent = t.stickyCheckout;
+    const osd = $('optSortDefault'); if (osd) osd.textContent = t.sortDefault;
+    const ospa = $('optSortPriceAsc'); if (ospa) ospa.textContent = t.sortPriceAsc;
+    const ospd = $('optSortPriceDesc'); if (ospd) ospd.textContent = t.sortPriceDesc;
+    const osn = $('optSortNewest'); if (osn) osn.textContent = t.sortNewest;
     updateInstallBannerCopy();
     updateSuccessModalCopy();
     prepareOrderInputs();
@@ -1417,13 +1465,50 @@ function updateOfflineBanner() {
     banner.setAttribute('aria-hidden', String(!isOffline));
 }
 
+let currentSort = 'default';
+
+function changeProductSort(val) {
+    currentSort = val || 'default';
+    const select = document.getElementById('productSortSelect');
+    if (select && select.value !== currentSort) select.value = currentSort;
+    renderCurrentView({ resetPage: true });
+}
+
+function applySorting(items) {
+    if (!items || items.length <= 1 || currentSort === 'default') return items;
+    const sorted = [...items];
+    if (currentSort === 'price-asc') {
+        sorted.sort((a, b) => {
+            const pA = Number(a.price) || 0;
+            const pB = Number(b.price) || 0;
+            if (pA === 0 && pB > 0) return 1;
+            if (pB === 0 && pA > 0) return -1;
+            return pA - pB;
+        });
+    } else if (currentSort === 'price-desc') {
+        sorted.sort((a, b) => {
+            const pA = Number(a.price) || 0;
+            const pB = Number(b.price) || 0;
+            return pB - pA;
+        });
+    } else if (currentSort === 'newest') {
+        sorted.sort((a, b) => {
+            if (a.createdAt && b.createdAt) {
+                return new Date(b.createdAt) - new Date(a.createdAt);
+            }
+            return String(b.id || '').localeCompare(String(a.id || ''), undefined, { numeric: true });
+        });
+    }
+    return sorted;
+}
+
 function getCurrentViewState() {
     const query = currentSearchQuery.trim();
     if (isGlobalSearch && query) {
         return {
             mode: 'search',
             title: `<i class="fas fa-search"></i> ${escapeHtml(LANG[currentLang]?.searchResults || 'ئەنجامی گەڕان')}: "${escapeHtml(query)}"`,
-            items: findProductsByQuery(query)
+            items: applySorting(findProductsByQuery(query))
         };
     }
 
@@ -1431,7 +1516,7 @@ function getCurrentViewState() {
         return {
             mode: 'wishlist',
             title: `<i class="fas fa-heart" style="color:#f43f5e"></i> ${escapeHtml(LANG[currentLang]?.wishlistTitle || 'دڵخوازەکان')}`,
-            items: products.filter(product => wishlist.includes(product.id))
+            items: applySorting(products.filter(product => wishlist.includes(product.id)))
         };
     }
 
@@ -1439,7 +1524,7 @@ function getCurrentViewState() {
     return {
         mode: 'category',
         title: `<i class="fas ${category.icon}"></i> ${escapeHtml(LANG[currentLang]?.cats?.[currentCategory] || category.name)}`,
-        items: products.filter(product => product.category === currentCategory)
+        items: applySorting(products.filter(product => product.category === currentCategory))
     };
 }
 
@@ -1748,6 +1833,175 @@ async function showCategory(category, element) {
     preloadRemainingCategories();
 }
  
+function buildProductBadgeMarkup(product) {
+    const badge = String(product.badge || '').trim().toLowerCase();
+    const hasDiscount = (product.oldPrice && Number(product.oldPrice) > Number(product.price)) || (product.discount && Number(product.discount) > 0);
+    
+    if (badge === 'discount' || hasDiscount) {
+        let discountText = LANG[currentLang]?.badgeDiscount || 'داشکاندن';
+        if (product.oldPrice && Number(product.oldPrice) > Number(product.price)) {
+            const pct = Math.round(((Number(product.oldPrice) - Number(product.price)) / Number(product.oldPrice)) * 100);
+            discountText = `🔥 ${pct}%`;
+        }
+        return `<span class="product-badge badge-discount"><i class="fas fa-fire"></i> ${escapeHtml(discountText)}</span>`;
+    }
+    if (badge === 'new' || product.isNew) {
+        return `<span class="product-badge badge-new"><i class="fas fa-sparkles"></i> ${escapeHtml(LANG[currentLang]?.badgeNew || 'نوێ')}</span>`;
+    }
+    if (badge === 'popular' || badge === 'hot' || product.isPopular) {
+        return `<span class="product-badge badge-popular"><i class="fas fa-star"></i> ${escapeHtml(LANG[currentLang]?.badgePopular || 'تایبەت')}</span>`;
+    }
+    if (product.badge) {
+        return `<span class="product-badge badge-custom">${escapeHtml(product.badge)}</span>`;
+    }
+    return '';
+}
+
+function buildCardActionMarkup(productId, qty) {
+    const encodedId = encodeInlineArg(productId);
+    if (qty > 0) {
+        return `
+            <div class="card-qty-control" onclick="event.stopPropagation()">
+                <button type="button" class="card-qty-btn minus" onclick="event.stopPropagation();decreaseCardQty(decodeURIComponent('${encodedId}'))" aria-label="کەمکردنەوە">
+                    <i class="fas fa-minus"></i>
+                </button>
+                <span class="card-qty-val">${qty}</span>
+                <button type="button" class="card-qty-btn plus" onclick="event.stopPropagation();increaseCardQty(decodeURIComponent('${encodedId}'))" aria-label="زیادکردن">
+                    <i class="fas fa-plus"></i>
+                </button>
+            </div>
+        `;
+    }
+    return `
+        <button type="button" class="add-btn" onclick="event.stopPropagation();addToCart(decodeURIComponent('${encodedId}'))" aria-label="زیادکردن بۆ سەبەتە">
+            <i class="fas fa-cart-plus"></i>
+        </button>
+    `;
+}
+
+function increaseCardQty(productId) {
+    const item = cart.find(i => i.id === productId);
+    if (item) {
+        item.quantity++;
+        saveCart();
+        updateCartUI();
+    } else {
+        addToCart(productId);
+    }
+}
+
+function decreaseCardQty(productId) {
+    const idx = cart.findIndex(i => i.id === productId);
+    if (idx !== -1) {
+        if (cart[idx].quantity > 1) {
+            cart[idx].quantity--;
+        } else {
+            cart.splice(idx, 1);
+            showToast(LANG[currentLang]?.removed || 'کاڵا لابرا', 'info');
+        }
+        saveCart();
+        updateCartUI();
+    }
+}
+
+function updateAllCardControls() {
+    const wrappers = document.querySelectorAll('.card-action-wrap[data-product-id]');
+    wrappers.forEach(wrap => {
+        const id = wrap.dataset.productId;
+        const item = cart.find(c => c.id === id);
+        const qty = item ? item.quantity : 0;
+        wrap.innerHTML = buildCardActionMarkup(id, qty);
+        hydrateIcons(wrap);
+    });
+}
+
+function shareProduct(productId) {
+    const product = products.find(p => p.id === productId);
+    if (!product) return;
+    const name = getProductName(product);
+    const price = getProductPriceText(product);
+    const shareUrl = `${window.location.origin}${window.location.pathname}?cat=${encodeURIComponent(product.category)}#${encodeURIComponent(product.id)}`;
+    const shareText = `${LANG[currentLang]?.brandName || 'کۆگای ڕاستی'}: ${name} (${price})\n${shareUrl}`;
+
+    if (navigator.share) {
+        navigator.share({
+            title: `${name} | ${LANG[currentLang]?.brandName || 'کۆگای ڕاستی'}`,
+            text: shareText,
+            url: shareUrl
+        }).catch(err => {
+            if (err && err.name !== 'AbortError') {
+                copyShareFallback(shareText);
+            }
+        });
+    } else {
+        copyShareFallback(shareText);
+    }
+}
+
+function copyShareFallback(text) {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(() => {
+            showToast(LANG[currentLang]?.shareCopied || 'لینکی کاڵا کۆپیکرا', 'success');
+        }).catch(() => {
+            openWhatsAppShare(text);
+        });
+    } else {
+        openWhatsAppShare(text);
+    }
+}
+
+function openWhatsAppShare(text) {
+    const waUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`;
+    window.open(waUrl, '_blank', 'noopener,noreferrer');
+}
+
+function bottomNavAction(action) {
+    if (action === 'home') {
+        if (showingWishlist || isGlobalSearch) {
+            showingWishlist = false;
+            currentSearchQuery = '';
+            isGlobalSearch = false;
+            const si = document.getElementById('searchInput');
+            if (si) si.value = '';
+            const sm = document.getElementById('searchInputMobile');
+            if (sm) sm.value = '';
+            updateWishlistFilterBtn();
+            renderCurrentView({ resetPage: true });
+        }
+        window.scrollTo({ top: 0, behavior: getPreferredScrollBehavior() });
+        updateBottomNavActive('home');
+    } else if (action === 'search') {
+        const sm = document.getElementById('searchInputMobile');
+        if (sm) {
+            sm.focus();
+            sm.scrollIntoView({ behavior: getPreferredScrollBehavior(), block: 'center' });
+        }
+        updateBottomNavActive('search');
+    } else if (action === 'wishlist') {
+        toggleWishlistFilter();
+        updateBottomNavActive(showingWishlist ? 'wishlist' : 'home');
+    } else if (action === 'cart') {
+        openCart();
+    }
+}
+
+function updateBottomNavActive(tabName) {
+    document.querySelectorAll('.bottom-nav-item').forEach(btn => btn.classList.remove('active'));
+    if (tabName === 'home') {
+        const b = document.getElementById('bottomNavHome');
+        if (b) b.classList.add('active');
+    } else if (tabName === 'search') {
+        const b = document.getElementById('bottomNavSearch');
+        if (b) b.classList.add('active');
+    } else if (tabName === 'wishlist') {
+        const b = document.getElementById('bottomNavWishlist');
+        if (b) b.classList.add('active');
+    } else if (tabName === 'cart') {
+        const b = document.getElementById('bottomNavCart');
+        if (b) b.classList.add('active');
+    }
+}
+
 // ==========================================
 // ★ کارتی کاڵا — با data-lazy-src ★
 // ==========================================
@@ -1760,15 +2014,26 @@ function buildProductCard(product, index) {
     const imagePriority = index < getPriorityImageCount() ? 'high' : 'low';
     const showImageOverlay = shouldAnimateUI();
     const entryDelay = shouldAnimateUI() ? ` style="animation-delay:${Math.min(index, 15) * 0.04}s"` : '';
+    const inCartItem = cart.find(i => i.id === product.id);
+    const inCartQty = inCartItem ? inCartItem.quantity : 0;
+    const badgeMarkup = buildProductBadgeMarkup(product);
+    const hasDiscount = (product.oldPrice && Number(product.oldPrice) > Number(product.price));
+
     return `<div class="product-card"${entryDelay}>
         <div class="product-image" onclick="openImageModal(decodeURIComponent('${productIdArg}'))">
             ${buildProductPicture(product, productName, imagePriority)}
+            ${badgeMarkup}
             ${showImageOverlay ? `<div class="product-overlay">
                 <div style="color:white;font-size:28px;"><i class="fas fa-magnifying-glass-plus"></i></div>
             </div>` : ''}
-            <button class="wishlist-btn${isWishlisted ? ' active' : ''}" onclick="event.stopPropagation();toggleWishlist(decodeURIComponent('${productIdArg}'),this)" title="${escapeHtml(LANG[currentLang]?.wishlistTitle || 'دڵخواز')}">
-                <i class="fa${isWishlisted ? 's' : 'r'} fa-heart"></i>
-            </button>
+            <div class="product-card-actions">
+                <button type="button" class="card-action-btn wishlist-btn${isWishlisted ? ' active' : ''}" onclick="event.stopPropagation();toggleWishlist(decodeURIComponent('${productIdArg}'),this)" title="${escapeHtml(LANG[currentLang]?.wishlistTitle || 'دڵخواز')}">
+                    <i class="fa${isWishlisted ? 's' : 'r'} fa-heart"></i>
+                </button>
+                <button type="button" class="card-action-btn share-btn" onclick="event.stopPropagation();shareProduct(decodeURIComponent('${productIdArg}'))" title="${escapeHtml(LANG[currentLang]?.shareProduct || 'هاوبەشکردن')}">
+                    <i class="fas fa-share-nodes"></i>
+                </button>
+            </div>
         </div>
         <div class="product-content">
             <h3 class="product-name">${escapeHtml(productName)}</h3>
@@ -1777,10 +2042,11 @@ function buildProductCard(product, index) {
                 <div class="product-price">
                     <span class="price-label">${escapeHtml(LANG[currentLang]?.priceLabel || 'نرخ')}</span>
                     <span class="price-value">${escapeHtml(priceText)}</span>
+                    ${hasDiscount ? `<span class="price-old">${Number(product.oldPrice).toLocaleString()} IQD</span>` : ''}
                 </div>
-                <button class="add-btn" onclick="addToCart(decodeURIComponent('${productIdArg}'))">
-                    <i class="fas fa-cart-plus"></i>
-                </button>
+                <div class="card-action-wrap" data-product-id="${escapeHtml(product.id)}">
+                    ${buildCardActionMarkup(product.id, inCartQty)}
+                </div>
             </div>
         </div>
     </div>`;
@@ -1892,7 +2158,7 @@ function showCartReminder() {
     if (ex) ex.remove();
     const rem = document.createElement('div');
     rem.id = 'cartReminder';
-    rem.style.cssText = 'position:fixed;bottom:80px;left:16px;right:16px;z-index:2500;background:linear-gradient(135deg,rgba(249,115,22,0.95),rgba(244,63,94,0.95));backdrop-filter:blur(20px);border-radius:20px;padding:16px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px;box-shadow:0 8px 32px rgba(249,115,22,0.4);animation:reminderSlideUp 0.4s ease forwards;border:1px solid rgba(255,255,255,0.2);';
+    rem.style.cssText = 'position:fixed;bottom:80px;left:16px;right:16px;z-index:2500;background:#ea580c;border-radius:20px;padding:16px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px;box-shadow:0 8px 24px rgba(234,88,12,0.35);animation:reminderSlideUp 0.4s ease forwards;border:1px solid rgba(255,255,255,0.2);';
     const t = LANG[currentLang];
     const style = document.createElement('style');
     style.textContent = '@keyframes reminderSlideUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}';
@@ -1976,6 +2242,35 @@ function updateCartUI() {
     if (g('cartItemsCount')) g('cartItemsCount').textContent = formatItemCount(totalItems);
     if (g('totalItems')) g('totalItems').textContent = totalItems;
     if (g('totalPrice')) g('totalPrice').textContent = totalPrice.toLocaleString() + ' IQD';
+
+    // Update sticky mobile checkout bar
+    const stickyBar = g('mobileStickyCheckout');
+    const stickyCount = g('stickyCheckoutCount');
+    const stickyTotal = g('stickyCheckoutTotal');
+    if (stickyBar && stickyCount && stickyTotal) {
+        if (totalItems > 0) {
+            stickyCount.textContent = totalItems;
+            stickyTotal.textContent = totalPrice > 0 ? totalPrice.toLocaleString() + ' IQD' : (LANG[currentLang]?.priceAsk || 'پرسیار بکە');
+            stickyBar.classList.add('visible');
+        } else {
+            stickyBar.classList.remove('visible');
+        }
+    }
+    document.body.classList.toggle('has-sticky-checkout', totalItems > 0);
+
+    // Update bottom nav cart badge
+    const bNavCartBadge = g('bottomNavCartBadge');
+    if (bNavCartBadge) {
+        if (totalItems > 0) {
+            bNavCartBadge.textContent = totalItems;
+            bNavCartBadge.style.display = 'flex';
+        } else {
+            bNavCartBadge.style.display = 'none';
+        }
+    }
+
+    // Synchronize inline product card quantity controls
+    updateAllCardControls();
     const cartItemsEl = g('cartItems');
     if (!cartItemsEl) return;
     if (cart.length === 0) { 
@@ -2160,6 +2455,17 @@ function updateWishlistFilterBtn() {
         ? `<i class="fas fa-heart"></i><span class="wishlist-filter-count">${count}</span>`
         : `<i class="fa${showingWishlist?'s':'r'} fa-heart"></i>`;
     hydrateIcons(btn);
+
+    const bNavWishlistBadge = document.getElementById('bottomNavWishlistBadge');
+    if (bNavWishlistBadge) {
+        if (count > 0) {
+            bNavWishlistBadge.textContent = count;
+            bNavWishlistBadge.style.display = 'flex';
+        } else {
+            bNavWishlistBadge.style.display = 'none';
+        }
+    }
+    updateBottomNavActive(showingWishlist ? 'wishlist' : 'home');
 }
 
 // ==========================================
