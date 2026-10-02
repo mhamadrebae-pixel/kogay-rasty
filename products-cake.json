@@ -562,19 +562,5 @@
     "name": "پۆپ کیک مۆز",
     "name_en": "",
     "price": 5250
-  },
-  {
-    "category": "cake",
-    "createdAt": "2026-09-29T00:51:06.228Z",
-    "description": "24",
-    "description_en": "",
-    "hidden": false,
-    "id": "cake-049",
-    "image": "kek/cake-1790643064240-41qv3k.webp",
-    "image_webp": "kek/cake-1790643064240-41qv3k.webp",
-    "name": "Ssss",
-    "name_en": "",
-    "price": 68000,
-    "updatedAt": "2026-09-29T00:51:06.228Z"
   }
 ]
